@@ -1,8 +1,11 @@
 from __future__ import annotations
 from datetime import datetime, date
 from enum import Enum
+
+from decimal import Decimal
 from typing import List, Dict, Optional, Any, Union
-from pydantic import BaseModel as BaseModel, ConfigDict, Field
+from pydantic import BaseModel as BaseModel, Field, validator
+import re
 import sys
 if sys.version_info >= (3, 8):
     from typing import Literal
@@ -23,8 +26,10 @@ class ConfiguredBaseModel(WeakRefShimBaseModel,
                 extra = 'forbid',
                 arbitrary_types_allowed = True,
                 use_enum_values = True):
+
     pass
 
+        
 
 class InformationResourceStatusEnum(str, Enum):
     """
@@ -79,6 +84,7 @@ class InformationResourceContainer(ConfiguredBaseModel):
     """
     information_resources: Optional[List[InformationResource]] = Field(default_factory=list, description="""a collection of information resources""")
     
+    
 
 class InformationResource(ConfiguredBaseModel):
     """
@@ -92,6 +98,7 @@ class InformationResource(ConfiguredBaseModel):
     description: Optional[str] = Field(None, description="""A free-text description of an entity or attribute.""")
     knowledge_level: Optional[KnowledgeLevelEnum] = Field(None, description="""The level of knowledge that supports an edge or node.  This is a general categorization of the type of evidence that supports a statement, and is not intended to be a comprehensive description of the evidence.  For example, a statement may be supported by a single publication, but that publication may contain multiple types of evidence, such as a computational prediction and a manual curation.  In this case, the knowledge level would be \"curated\", and the evidence would be described in more detail in the evidence graph.""")
     agent_type: Optional[AgentTypeEnum] = Field(None, description="""The type of agent that supports an edge or node.  This is a general categorization of the type of agent that supports a statement, and is not intended to be a comprehensive description of the agent.  For example, a statement may be supported by a single publication, but that publication may contain multiple types of evidence, such as a computational prediction and a manual curation.  In this case, the agent type would be \"publication\", and the evidence would be described in more detail in the evidence graph.""")
+    
     
 
 
