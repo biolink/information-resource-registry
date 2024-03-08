@@ -1,10 +1,11 @@
 ---
-site_name: "information-resource-registry"
+site_name: "Information Resource Registry Model Documentation"
 theme:
   name: material
-  # palette:
-  #  scheme: slate
-  #  primary: cyan
+  palette:
+    scheme: black
+    primary: black
+  logo: images/biolink-logo.png
   features:
     - content.tabs.link
 plugins:
@@ -12,14 +13,14 @@ plugins:
   - mermaid2
 nav:
   # - Home: home.md
-  - Index: index.md
-  - About: about.md
+  - Overview: index.md
+  - Infores Identifier Registry: information-resource-registry.md
 site_url: https://biolink.github.io/information-resource-registry
 repo_url: https://github.com/biolink/information-resource-registry
+extra_css:
+  - style.css
+extra:
+  analytics:
+    provider: google
+    property: G-J23SCD6JB8
 
-# Uncomment this block to enable use of Google Analytics.
-# Replace the property value with your own ID.
-# extra:
-#   analytics:
-#     provider: google
-#     property: G-XXXXXXXXXX

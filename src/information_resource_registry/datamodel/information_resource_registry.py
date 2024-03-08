@@ -141,25 +141,6 @@ class InformationResourceContainerCollection(YAMLRoot):
         super().__post_init__(**kwargs)
 
 
-# Enumerations
-class PersonStatus(EnumDefinitionImpl):
-
-    ALIVE = PermissibleValue(
-        text="ALIVE",
-        description="the person is living",
-        meaning=PATO["0001421"])
-    DEAD = PermissibleValue(
-        text="DEAD",
-        description="the person is deceased",
-        meaning=PATO["0001422"])
-    UNKNOWN = PermissibleValue(
-        text="UNKNOWN",
-        description="the vital status is not known")
-
-    _defn = EnumDefinition(
-        name="PersonStatus",
-    )
-
 # Slots
 class slots:
     pass
