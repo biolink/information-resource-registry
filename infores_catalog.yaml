@@ -1960,7 +1960,7 @@ information_resources:
     status: released
     name: KinAce
     xref:
-      - https://kinace.kinametrix.com/#section-about
+      - https://github.com/NCATSTranslator/Translator-All/wiki/KinAce
     knowledge level: curated
     agent type: not_provided
     description: >-
