@@ -44,14 +44,24 @@ linkml:Jsonpath xsd:string
 linkml:Sparqlpath xsd:string
 
 <InformationResource> CLOSED {
-    (  $<InformationResource_tes> (  <status> @<InformationResourceStatusEnum> ? ;
+    (  $<InformationResource_tes> (  <status> [ <https://w3id.org/biolink/infores/InformationResourceStatusEnum#released>
+             <https://w3id.org/biolink/infores/InformationResourceStatusEnum#deprecated>
+             <https://w3id.org/biolink/infores/InformationResourceStatusEnum#draft>
+             <https://w3id.org/biolink/infores/InformationResourceStatusEnum#modified> ] ? ;
           rdfs:label @linkml:String ? ;
           <id> @linkml:String ;
           <xref> @linkml:String * ;
           <synonym> @linkml:String * ;
           rdfs:comment @linkml:String ? ;
-          <knowledge_level> @<KnowledgeLevelEnum> ? ;
-          <agent_type> @<AgentTypeEnum> ?
+          <knowledge_level> [ <https://w3id.org/biolink/infores/KnowledgeLevelEnum#curated>
+             <https://w3id.org/biolink/infores/KnowledgeLevelEnum#predicted>
+             <https://w3id.org/biolink/infores/KnowledgeLevelEnum#text_mined>
+             <https://w3id.org/biolink/infores/KnowledgeLevelEnum#correlation>
+             <https://w3id.org/biolink/infores/KnowledgeLevelEnum#observed>
+             <https://w3id.org/biolink/infores/KnowledgeLevelEnum#other>
+             <https://w3id.org/biolink/infores/KnowledgeLevelEnum#mixed> ] ? ;
+          <agent_type> [ <https://w3id.org/biolink/infores/AgentTypeEnum#not_provided>
+             <https://w3id.org/biolink/infores/AgentTypeEnum#computational_model> ] ?
        ) ;
        rdf:type [ <InformationResource> ] ?
     )

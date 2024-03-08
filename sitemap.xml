@@ -141,6 +141,16 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://biolink.github.io/information-resource-registry/appendices/</loc>
+         <lastmod>2024-03-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://biolink.github.io/information-resource-registry/biolink-infores-parameters/</loc>
+         <lastmod>2024-03-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://biolink.github.io/information-resource-registry/description/</loc>
          <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
@@ -151,7 +161,7 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://biolink.github.io/information-resource-registry/information-resource-registry/</loc>
+         <loc>https://biolink.github.io/information-resource-registry/implementation-guidance/</loc>
          <lastmod>2024-03-08</lastmod>
          <changefreq>daily</changefreq>
     </url>

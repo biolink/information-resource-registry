@@ -8,9 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://biolink.github.io/information-resource-registry/Jsonpointer/">
+        <link rel="canonical" href="https://biolink.github.io/information-resource-registry/biolink-infores-parameters/">
       
       
+        <link rel="prev" href="../implementation-guidance/">
+      
+      
+        <link rel="next" href="../appendices/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -18,7 +22,7 @@
     
     
       
-        <title>Type: Jsonpointer - Information Resource Registry Model Documentation</title>
+        <title>Catalog Metamodel Details - Information Resource Registry Model Documentation</title>
       
     
     
@@ -80,7 +84,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#type-jsonpointer" class="md-skip">
+        <a href="#biolink-edge-properties-for-source-retrieval-provenance" class="md-skip">
           Skip to content
         </a>
       
@@ -115,7 +119,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              <strong> Type: </strong> Jsonpointer
+              Catalog Metamodel Details
             
           </span>
         </div>
@@ -308,10 +312,28 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../biolink-infores-parameters/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Catalog Metamodel Details
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -320,6 +342,42 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#biolink-edge-properties-for-source-retrieval-provenance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Biolink Edge Properties for Source Retrieval Provenance
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-information-resource-registry-infores-data-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Information Resource Registry (infores) data model
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -361,8 +419,32 @@
   
   
   
-    
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#biolink-edge-properties-for-source-retrieval-provenance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Biolink Edge Properties for Source Retrieval Provenance
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-information-resource-registry-infores-data-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Information Resource Registry (infores) data model
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -380,18 +462,40 @@
   
 
 
-<h1 id="type-jsonpointer"><strong> Type: </strong> Jsonpointer</h1>
-<p><em>A string encoding a JSON Pointer. The value of the string MUST conform to JSON Point syntax and SHOULD dereference to a valid object within the current instance document when encoded in tree form.</em></p>
+  <h1>Catalog Metamodel Details</h1>
+
+<h2 id="biolink-edge-properties-for-source-retrieval-provenance">Biolink Edge Properties for Source Retrieval Provenance</h2>
+<p>We define the following hierarchy of edge properties in Biolink for capturing Information Resources through which 
+knowledge expressed in a given edge was retrieved on its way to its presently serialized form (e.g. a TRAPI message 
+sent to an ARA). Full definitions and metadata for each can be found in the Biolink Model.</p>
 <ul>
-<li>
-<p><a href="https://w3id.org/linkml/base">base</a>: str</p>
-</li>
-<li>
-<p><a href="https://w3id.org/linkml/uri">uri</a>: xsd:string</p>
-</li>
-<li>
-<p><a href="https://w3id.org/linkml/repr">repr</a>: str</p>
-</li>
+<li><strong>biolink:knowledge_source</strong>: </li>
+<li>An Information Resource from which the knowledge expressed in an Association was retrieved, 
+  directly or indirectly</li>
+<li><strong>biolink:primary_knowledge_source</strong>: </li>
+<li>The most upstream source of the knowledge expressed in an Association that a 
+  knowledge provider can identify. </li>
+<li><strong>biolink:aggregator_knowledge_source</strong>:  </li>
+<li>An intermediate aggregator resource from which knowledge expressed in an 
+  Association was retrieved downstream of the original source, on its path to its current serialized form.  </li>
+<li><strong><code>biolink:supporting_data_source</code></strong>: </li>
+<li>An Information Resource from which data was retrieved and subsequently used as
+  evidence to generate the knowledge expressed in an Association (e.g. through computation on, reasoning or inference 
+  over the retrieved data).</li>
+</ul>
+<h2 id="the-information-resource-registry-infores-data-model">The Information Resource Registry (infores) data model</h2>
+<p>An information resource is defined as a web-accessible resource that provides data. An InformationResource 
+(designated by its identifier in curie form, e.g. 'infores:monarchintiative') is a Biolink Model class that provides 
+a standard way to identify and describe information resources. The InformationResource class details can be found here:
+<a href="../information_resource_registry.yaml">information_resource_registry.yaml</a> and contains the following properties:</p>
+<ul>
+<li><strong>id</strong>: the identifier of the information resource (e.g. 'infores:monarchintiative')</li>
+<li><strong>name</strong>: the name of the information resource (e.g. 'Monarch Initiative')</li>
+<li><strong>description</strong>: a description of the information resource (e.g. 'Monarch is a platform for biomedical data discovery 
+and integration')</li>
+<li><strong>url</strong>: the url of the information resource (e.g. 'https://monarchinitiative.org/')</li>
+<li><strong>status</strong>: the status of the information resource (e.g. 'released', 'deprecated', etc.  Please see the enumeration 
+listed in the model yaml for more information)</li>
 </ul>
 
 

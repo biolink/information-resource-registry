@@ -8,8 +8,10 @@
       
       
       
-        <link rel="canonical" href="https://biolink.github.io/information-resource-registry/Jsonpointer/">
+        <link rel="canonical" href="https://biolink.github.io/information-resource-registry/appendices/">
       
+      
+        <link rel="prev" href="../biolink-infores-parameters/">
       
       
       
@@ -18,7 +20,7 @@
     
     
       
-        <title>Type: Jsonpointer - Information Resource Registry Model Documentation</title>
+        <title>Addition information - Information Resource Registry Model Documentation</title>
       
     
     
@@ -80,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#type-jsonpointer" class="md-skip">
+        <a href="#infores-catalog-metadata-dictionary" class="md-skip">
           Skip to content
         </a>
       
@@ -115,7 +117,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              <strong> Type: </strong> Jsonpointer
+              Addition information
             
           </span>
         </div>
@@ -328,10 +330,28 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../appendices/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Addition information
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -340,6 +360,51 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#infores-catalog-metadata-dictionary" class="md-nav__link">
+    <span class="md-ellipsis">
+      InfoRes Catalog Metadata Dictionary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rules-for-minting-infores-names-and-identifiers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rules for Minting InfoRes Names and Identifiers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conventions-for-crafting-identifiers-for-translator-registry-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conventions for Crafting Identifiers for Translator Registry Resources
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -361,8 +426,41 @@
   
   
   
-    
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#infores-catalog-metadata-dictionary" class="md-nav__link">
+    <span class="md-ellipsis">
+      InfoRes Catalog Metadata Dictionary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rules-for-minting-infores-names-and-identifiers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rules for Minting InfoRes Names and Identifiers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conventions-for-crafting-identifiers-for-translator-registry-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conventions for Crafting Identifiers for Translator Registry Resources
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -380,19 +478,46 @@
   
 
 
-<h1 id="type-jsonpointer"><strong> Type: </strong> Jsonpointer</h1>
-<p><em>A string encoding a JSON Pointer. The value of the string MUST conform to JSON Point syntax and SHOULD dereference to a valid object within the current instance document when encoded in tree form.</em></p>
+  <h1>Addition information</h1>
+
+<h2 id="infores-catalog-metadata-dictionary">InfoRes Catalog Metadata Dictionary</h2>
+<p>At present, a minimal set of metadata is being collected in the InfoRes Registry using the following Biolink node 
+properties, which will be expanded in future iterations.</p>
+<p>name:  a fully informative name for the resource (we recommend a name that is as informative and unambiguous as 
+possible - spelling out all acronyms that are not common knowledge, and including the name of the owning organization 
+when the name alone may be ambiguous).</p>
+<p>id: the CURIE form of the InfoRes identifier, wherein a short form name of the resources serves as a human readable 
+identifier component (e.g. ‘infores:dgidb’)</p>
 <ul>
-<li>
-<p><a href="https://w3id.org/linkml/base">base</a>: str</p>
-</li>
-<li>
-<p><a href="https://w3id.org/linkml/uri">uri</a>: xsd:string</p>
-</li>
-<li>
-<p><a href="https://w3id.org/linkml/repr">repr</a>: str</p>
-</li>
+<li><strong>synonym</strong>:</li>
+<li>other names for the resource (will facilitate search/discovery)</li>
+<li><strong>url</strong>: </li>
+<li>a url describing the resource - preferably its primary home page for the resource (if one exists)</li>
+<li><strong>description</strong>: </li>
+<li>a free text description of the resource</li>
 </ul>
+<h2 id="rules-for-minting-infores-names-and-identifiers">Rules for Minting InfoRes Names and Identifiers</h2>
+<p>A short form human understandable name or abbreviation is used as the identifier component of an InfoRes IRI, 
+and should follow these conventions:</p>
+<ul>
+<li>Use lowercase characters only.</li>
+<li>Keep as short as possible while remaining understandable and unambiguous. </li>
+<li>Acronyms are good where they are well-established and used in practice in our domain (e.g. infores:omim, not infores:online-mendelian-inheritance-in-man). Otherwise, spell out the name to the extent needed to be understood by the user (e.g. infores:drug-repurposing-hub, not infores:drh).  </li>
+<li>Where it makes sense to do so, adopt the base url of the resources home web address, or its registered prefix in an authority like identifiers.org.</li>
+<li>Use a hyphen (-) to separate words where needed (e.g. infores:drug-repurposing-hub), unless the words are not separated in common practice or the website url (e.g. we use infores:monarchinitiative, not infores:monarch-initiative, because their website is https://monarchinitiative.org/).</li>
+<li>All other non-alphanumeric characters are not allowed as delimiters.</li>
+<li>If we begin creating version-specific identifiers, a dot (.) will be reserved as a separator between the base resource name and its version. And versions will be specified using either dot-separated numerals (e.g. '1.1.2'), or release dates in ISO8601 format (e.g. '2021-04-18').</li>
+</ul>
+<h2 id="conventions-for-crafting-identifiers-for-translator-registry-resources">Conventions for Crafting Identifiers for Translator Registry Resources</h2>
+<p>Translator applies many services that wrap or annotate existing resources in APIs to serve content that is better 
+aligned with Translator standards. This practice can lead to confusion around what represents a separate Information 
+Resource, and how resources may be related to each other. Below we describe conventions we apply for InfoRes creation 
+for different scenarios / use cases we encounter in the registry.</p>
+<p>Aggregator Scenario: KPs/ARAs that aggregate content from one or more existing resource and transform the semantics 
+and or structure of the data to be better aligned with Translator standards</p>
+<p>Resource Examples:
+Molecular Data Provider, Biolink, ROBOKOP, SRI Reference KG, RTX KG2  (these aggregate content from multiple sources into a single KG / API)
+Automat APIs (stands up a separate API per source - each of which gets its own InfoRes)</p>
 
 
 

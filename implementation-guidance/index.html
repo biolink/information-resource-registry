@@ -8,9 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://biolink.github.io/information-resource-registry/Jsonpointer/">
+        <link rel="canonical" href="https://biolink.github.io/information-resource-registry/implementation-guidance/">
       
       
+        <link rel="prev" href="../infores_catalog.yaml">
+      
+      
+        <link rel="next" href="../biolink-infores-parameters/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -18,7 +22,7 @@
     
     
       
-        <title>Type: Jsonpointer - Information Resource Registry Model Documentation</title>
+        <title>Implementation Guidance - Information Resource Registry Model Documentation</title>
       
     
     
@@ -80,7 +84,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#type-jsonpointer" class="md-skip">
+        <a href="#adding-a-new-information-resource-entry" class="md-skip">
           Skip to content
         </a>
       
@@ -115,7 +119,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              <strong> Type: </strong> Jsonpointer
+              Implementation Guidance
             
           </span>
         </div>
@@ -288,10 +292,28 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../implementation-guidance/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Implementation Guidance
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -300,6 +322,78 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#adding-a-new-information-resource-entry" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding a new Information Resource entry:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#editing-metadata-for-an-existing-entry" class="md-nav__link">
+    <span class="md-ellipsis">
+      Editing metadata for an existing entry:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modifying-an-existing-information-resource-entry-in-the-registry" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modifying an existing Information Resource entry in the registry:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-a-new-information-resource-entry-to-the-registry" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding a new Information Resource entry to the registry:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#minting-new-information-resource-identifiers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Minting new Information Resource identifiers:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#removing-an-infores-stanza-from-the-registry" class="md-nav__link">
+    <span class="md-ellipsis">
+      Removing an infores stanza from the registry:
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -361,8 +455,68 @@
   
   
   
-    
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#adding-a-new-information-resource-entry" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding a new Information Resource entry:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#editing-metadata-for-an-existing-entry" class="md-nav__link">
+    <span class="md-ellipsis">
+      Editing metadata for an existing entry:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modifying-an-existing-information-resource-entry-in-the-registry" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modifying an existing Information Resource entry in the registry:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-a-new-information-resource-entry-to-the-registry" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding a new Information Resource entry to the registry:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#minting-new-information-resource-identifiers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Minting new Information Resource identifiers:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#removing-an-infores-stanza-from-the-registry" class="md-nav__link">
+    <span class="md-ellipsis">
+      Removing an infores stanza from the registry:
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -380,19 +534,54 @@
   
 
 
-<h1 id="type-jsonpointer"><strong> Type: </strong> Jsonpointer</h1>
-<p><em>A string encoding a JSON Pointer. The value of the string MUST conform to JSON Point syntax and SHOULD dereference to a valid object within the current instance document when encoded in tree form.</em></p>
+  <h1>Implementation Guidance</h1>
+
+<p>We have created a InfoRes Catalog here, to store these identifiers along with metadata about the Information Resource 
+they specify. Data creators should consult the ‘id’ column of the InfoRes Catalog to find CURIEs for specific 
+Information Resources. Use these CURIEs to populate the ‘value’ field in an Attribute object that uses one of the 
+source retrieval provenance edge properties described above as its key. </p>
+<h2 id="adding-a-new-information-resource-entry">Adding a new Information Resource entry:</h2>
+<p>If there is no record in the catalog for a given resource, users should make a pull request that adds a row for the 
+missing resource directly to the google sheet. Minimally, add the ‘name’ and ‘url’ for the resource (if one exists). 
+You may also suggest an infores CURIE in the ‘id’ column, and populate any of the other metadata columns as desired 
+(see Appendices 1 and 2 for more guidance)  Tag an SRI curator (@sierra-moxon or @mbrush) as a reviewer, who 
+will review and finalize the request. </p>
+<h2 id="editing-metadata-for-an-existing-entry">Editing metadata for an existing entry:</h2>
+<p>KP / ARA representatives can create a pull request to add or edit the metadata provided for an existing resource in 
+much the same manner as adding a new resource.  Tag an SRI curator (@sierra-moxon or @mbrush) as a reviewer, who will 
+review and finalize the request.</p>
+<h2 id="modifying-an-existing-information-resource-entry-in-the-registry">Modifying an existing Information Resource entry in the registry:</h2>
+<p>Making changes to the registry MUST be done via pull requests to the biolink-model github repository.  Any of the 
+fields in an Information Resource entry can be modified, but the id field MUST not be changed.  If the id field is
+changed, it MUST be treated as a new entry and the old entry MUST be deprecated. </p>
+<h2 id="adding-a-new-information-resource-entry-to-the-registry">Adding a new Information Resource entry to the registry:</h2>
+<p>Adding a new entry to the registry is as easy as adding a stanza to the information_resource_registry.yaml file in the biolink-model
+repository and submitting the change via pull request in the repository.  Alternatively, making a ticket for a new
+resource in the biolink-model GitHub repository will also work.  </p>
+<h2 id="minting-new-information-resource-identifiers">Minting new Information Resource identifiers:</h2>
 <ul>
-<li>
-<p><a href="https://w3id.org/linkml/base">base</a>: str</p>
-</li>
-<li>
-<p><a href="https://w3id.org/linkml/uri">uri</a>: xsd:string</p>
-</li>
-<li>
-<p><a href="https://w3id.org/linkml/repr">repr</a>: str</p>
-</li>
+<li>Each smartAPI-registered Translator API gets its own InfoRes, as will each upstream source from which it aggregates knowledge.</li>
+<li>Each upstream source from which a Translator API retrieves data computed on to generate knowledge will also get its own InfoRes.</li>
+<li>Create an InfoRes IRI for each registered Biothings-generated API, that includes a 'biothings-' prefix in the identifier component. 
+If the resource whose content was wrapped in a Biothigns API is a pre-existing resource with established use and identity, an 
+InfoRes is created for it as well.</li>
+<li>Identifiers should be short, readable, strings deliminated with a dash ('-').  These identifiers will be used 
+in user-facing applications and should be as readable as possible.</li>
+<li>In general, the 'status' field of an Information Resource stanza should be one of two values: 'released' or 'deprecated'.</li>
 </ul>
+<p>The following is an example of a new entry in the
+information_resource_registry.yaml file:</p>
+<pre><code>- id: infores:my-new-resource
+  name: My New Resource
+  description: This is a new resource
+  url: https://my-new-resource.org/
+  status: released
+</code></pre>
+<h2 id="removing-an-infores-stanza-from-the-registry">Removing an infores stanza from the registry:</h2>
+<p>In an effort to maintain the integrity of the applications that use the Information Resource Registry identifiers downstream, 
+we will not be removing entries from the registry.  But, if an information resource is no longer available, we will
+mark it as deprecated in the registry and downstream applications (like the Biolink Model Toolkit) will no longer
+serve deprecated Information Resources from their methods.  </p>
 
 
 
