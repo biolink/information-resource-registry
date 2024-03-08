@@ -18,5 +18,5 @@ jobs:
       - name: Codespell
         uses: codespell-project/actions-codespell@v1
         with:
-          skip: '.idea,.git,SEMMEDDB*,semmed*,*.svg,docs'
-          ignore-words-list: 'amination,ehr,mor,brite,nin,mirgate,MiRgate,EHR,nin,miR,miRNA,miRBase'
+          ignore_words_list: amination,ehr,mor,nin,brite,mirgate,BRITE
+          skip: SEMMEDDB*,semmed*,.idea,.venv,.git,*.pdf,*.svg,context.*
