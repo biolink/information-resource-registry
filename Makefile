@@ -102,7 +102,7 @@ spell:
 # generates all project files
 
 gen-project: $(PYMODEL)
-	cp biolink-model.yaml src/biolink_model/schema/biolink_model.yaml
+	cp information_resource_registry.yaml src/biolink_model/schema/biolink_model.yaml
 	# keep these in sync between PROJECT_FOLDERS and the includes/excludes for gen-project and test-schema
 	$(RUN) gen-project \
 		--exclude excel \
@@ -180,25 +180,25 @@ gen-viz:
 
 gendoc: $(DOCDIR)
 	# put the model where it needs to go in order to generate the doc correctly
-	cp biolink-model.yaml src/information_resource_registry/schema/information_resource_registry.yaml ; \
+	cp information_resource_registry.yaml src/information_resource_registry/schema/information_resource_registry.yaml ; \
 	# this generates the data structure required for the d3 visualizations
 	$(RUN) generate_viz_json ; \
 	# DO NOT REMOVE: these cp statements are crucial to maintain the w3 ids for the model artifacts
-	cp $(DEST)/owl/information_resource_registry.owl.ttl $(DOCDIR)/biolink-model.owl.ttl ; \
-	cp $(DEST)/jsonld/information_resource_registry.context.jsonld $(DOCDIR)/biolink-model.context.jsonld ; \
+	cp $(DEST)/owl/information_resource_registry.owl.ttl $(DOCDIR)/information_resource_registry.owl.ttl ; \
+	cp $(DEST)/jsonld/information_resource_registry.context.jsonld $(DOCDIR)/information_resource_registry.context.jsonld ; \
 	cp $(DEST)/jsonld/information_resource_registry.context.jsonld $(DOCDIR)/context.jsonld ; \
-	cp $(DEST)/jsonld/information_resource_registry.jsonld $(DOCDIR)/biolink-model.jsonld ; \
-	cp $(DEST)/jsonschema/information_resource_registry.schema.json $(DOCDIR)/biolink-model.json ; \
-	cp $(DEST)/graphql/information_resource_registry.graphql $(DOCDIR)/biolink-model.graphql ; \
-	cp $(DEST)/shex/information_resource_registry.shex $(DOCDIR)/biolink-modeln.shex ; \
-	cp $(DEST)/shacl/information_resource_registry.shacl.ttl $(DOCDIR)/biolink-model.shacl.ttl ; \
+	cp $(DEST)/jsonld/information_resource_registry.jsonld $(DOCDIR)/information_resource_registry.jsonld ; \
+	cp $(DEST)/jsonschema/information_resource_registry.schema.json $(DOCDIR)/information_resource_registry.json ; \
+	cp $(DEST)/graphql/information_resource_registry.graphql $(DOCDIR)/information_resource_registry.graphql ; \
+	cp $(DEST)/shex/information_resource_registry.shex $(DOCDIR)/information_resource_registryn.shex ; \
+	cp $(DEST)/shacl/information_resource_registry.shacl.ttl $(DOCDIR)/information_resource_registry.shacl.ttl ; \
 	cp $(DEST)/prefixmap/* $(DOCDIR) ; \
 	cp infores_catalog.yaml $(DOCDIR) ; \
 	cp information-resource.yaml $(DOCDIR) ; \
 	cp semmed-exclude-list.yaml $(DOCDIR) ; \
 	cp semmed-exclude-list-model.yaml $(DOCDIR) ; \
 	cp predicate_mapping.yaml $(DOCDIR) ; \
-	cp biolink-model.yaml $(DOCDIR) ; \
+	cp information_resource_registry.yaml $(DOCDIR) ; \
 	cp $(SRC)/docs/*md $(DOCDIR) ; \
 	cp -r $(SRC)/docs/images $(DOCDIR)/images ; \
 	# the .json cp here is the data required for the d3 visualizations

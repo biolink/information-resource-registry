@@ -1,0 +1,5 @@
+---
+name: information-resource-registry
+author: Sierra Moxon <smoxon@lbl.gov>
+description: Information Resource Registry Schema
+source_schema_path: src/information_resource_registry/schema/information-resource.yaml
