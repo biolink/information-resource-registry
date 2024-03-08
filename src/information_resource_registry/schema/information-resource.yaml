@@ -91,12 +91,6 @@ slots:
     description: >-
       A human-readable name for an attribute or entity.
     slot_uri: rdfs:label
-    exact_mappings:
-      - gff3:Name
-      - gpi:DB_Object_Name
-    narrow_mappings:
-      - dct:title
-      - WIKIDATA_PROPERTY:P1476
 
   id:
     identifier: true
@@ -104,10 +98,6 @@ slots:
       A unique identifier for an entity.
       Must be either a CURIE shorthand for a URI or a complete URI
     required: true
-    exact_mappings:
-      - AGRKB:primaryId
-      - gff3:ID
-      - gpi:DB_Object_ID
 
   xref:
     aliases: [ 'dbxref', 'Dbxref', 'DbXref', 'record_url', 'source_record_urls' ]
@@ -117,24 +107,12 @@ slots:
       gives more detail about the edge. This property can be used on a node or edge to provide multiple
       URIs or CURIE cross references.
     multivalued: true
-    narrow_mappings:
-      - gff3:Dbxref
-      - gpi:DB_Xrefs
 
   synonym:
     aliases: [ 'alias' ]
     description: >-
       Alternate human-readable names for a thing
     multivalued: true
-    narrow_mappings:
-      - skos:altLabel
-      - gff3:Alias
-      - AGRKB:synonyms
-      - gpi:DB_Object_Synonyms
-      # TODO: RTX contributed terms mapped here... May need review?
-      - HANCESTRO:0330
-      - IAO:0000136
-      - RXNORM:has_tradename
 
   description:
   knowledge level:

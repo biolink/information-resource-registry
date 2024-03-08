@@ -13,7 +13,7 @@ SOURCE_SCHEMA_PATH = $(shell ${SHELL} ./utils/get-value.sh source_schema_path)
 SOURCE_SCHEMA_DIR = $(dir $(SOURCE_SCHEMA_PATH))
 SRC = src
 DEST = project
-PYMODEL = $(SRC)/information-resource-registry/datamodel
+PYMODEL = $(SRC)/information_resource_registry/datamodel
 DOCDIR = docs
 EXAMPLEDIR = examples
 TEMPLATEDIR = doc-templates
@@ -91,7 +91,7 @@ gen-examples:
 	cp src/data/examples/* $(EXAMPLEDIR)
 
 infores:
-	$(RUN) gen-python information-resource.yaml > information_resource.py
+	$(RUN) gen-python src/information_resource_registry/schema/information-resource.yaml > information_resource.py
 
 validate_infores:
 	$(RUN) python src/information_resource_registry/scripts/verify_infores.py
@@ -102,7 +102,6 @@ spell:
 # generates all project files
 
 gen-project: $(PYMODEL)
-	cp information_resource_registry.yaml src/biolink_model/schema/biolink_model.yaml
 	# keep these in sync between PROJECT_FOLDERS and the includes/excludes for gen-project and test-schema
 	$(RUN) gen-project \
 		--exclude excel \
@@ -119,10 +118,10 @@ gen-project: $(PYMODEL)
 		--exclude owl \
 		--include python \
 		--include rdf \
-		-d $(DEST) $(SOURCE_SCHEMA_PATH) && mv $(DEST)/*.py $(PYMODEL)
-	$(RUN) gen-pydantic --pydantic-version 1 src/information-resource-registry/schema/information-resource.yaml > $(PYMODEL)/pydanticmodel.py
-	$(RUN) gen-pydantic --pydantic-version 2 src/information-resource-registry/schema/information-resource.yaml > $(PYMODEL)/pydanticmodel_v2.py
-	$(RUN) gen-owl --mergeimports --no-metaclasses --no-type-objects --add-root-classes --mixins-as-expressions src/information-resource-registry/information-resource.yaml > $(DEST)/owl/information_resource.owl.ttl
+		-d $(DEST) $(SOURCE_SCHEMA_PATH)
+	$(RUN) gen-pydantic --pydantic-version 1 src/information_resource_registry/schema/information-resource.yaml > $(PYMODEL)/pydanticmodel.py
+	$(RUN) gen-pydantic --pydantic-version 2 src/information_resource_registry/schema/information-resource.yaml > $(PYMODEL)/pydanticmodel_v2.py
+	$(RUN) gen-owl --mergeimports --no-metaclasses --no-type-objects --add-root-classes --mixins-as-expressions src/information_resource_registry/schema/information-resource.yaml > $(DEST)/owl/information_resource.owl.ttl
 	$(MAKE) infores
 
 tests:
