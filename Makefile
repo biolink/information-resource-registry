@@ -188,7 +188,7 @@ gendoc: $(DOCDIR)
 	cp $(DEST)/shex/information_resource_registry.shex $(DOCDIR)/information_resource_registryn.shex ; \
 	cp $(DEST)/shacl/information_resource_registry.shacl.ttl $(DOCDIR)/information_resource_registry.shacl.ttl ; \
 	cp infores_catalog.yaml $(DOCDIR) ; \
-	cp $(SRC)/schema/information_resource_registry/information_resource_registry.yaml $(DOCDIR) ; \
+	cp $(SRC)/information_resource_registry/schema/information_resource_registry.yaml $(DOCDIR) ; \
 	cp $(SRC)/docs/*md $(DOCDIR) ; \
 	cp -r $(SRC)/docs/images $(DOCDIR)/images ; \
 	# the .json cp here is the data required for the d3 visualizations
