@@ -42,4 +42,4 @@ docs = ["mkdocs-material"]
 
 [tool.codespell]
 skip = '.idea,.git,SEMMEDDB*,semmed*,*.svg,docs'
-ignore-words-list = 'amination,ehr,mor,brite,nin,mirgate'
+ignore-words-list = 'amination,ehr,mor,brite,nin,mirgate,MiRgate,EHR,nin,miR,miRNA,miRBase'
