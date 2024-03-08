@@ -10,7 +10,7 @@ else:
     from typing_extensions import Literal
 
 
-metamodel_version = "1.7.0"
+metamodel_version = "None"
 version = "1.0.0"
 
 class WeakRefShimBaseModel(BaseModel):
@@ -27,7 +27,9 @@ class ConfiguredBaseModel(WeakRefShimBaseModel,
 
 
 class InformationResourceStatusEnum(str, Enum):
-    
+    """
+    The status of the infores identifier
+    """
     
     released = "released"
     
@@ -40,7 +42,9 @@ class InformationResourceStatusEnum(str, Enum):
     
 
 class KnowledgeLevelEnum(str, Enum):
-    
+    """
+    The level of knowledge that supports an edge or node.  This is a general categorization of the type of evidence that supports a statement, and is not intended to be a comprehensive description of the evidence.  For example, a statement may be supported by a single publication, but that publication may contain multiple types of evidence, such as a computational prediction and a manual curation.  In this case, the knowledge level would be "curated", and the evidence would be described in more detail in the evidence graph.
+    """
     # knowledge generated through manual curation  or interpretation of data or published study results
     curated = "curated"
     # predictions generated computationally through inference over less direct forms of evidence (without human  intervention or review)
@@ -59,7 +63,9 @@ class KnowledgeLevelEnum(str, Enum):
     
 
 class AgentTypeEnum(str, Enum):
-    
+    """
+    The type of agent that supports an edge or node.  This is a general categorization of the type of agent that supports a statement, and is not intended to be a comprehensive description of the agent.  For example, a statement may be supported by a single publication, but that publication may contain multiple types of evidence, such as a computational prediction and a manual curation.  In this case, the agent type would be "publication", and the evidence would be described in more detail in the evidence graph.
+    """
     # agent type is not provided or known
     not_provided = "not_provided"
     # a computational model, such as a machine learning model
@@ -83,7 +89,7 @@ class InformationResource(ConfiguredBaseModel):
     id: str = Field(..., description="""A unique identifier for an entity. Must be either a CURIE shorthand for a URI or a complete URI""")
     xref: Optional[List[str]] = Field(default_factory=list, description="""A database cross reference or alternative identifier for a NamedThing or edge between two  NamedThings.  This property should point to a database record or webpage that supports the existence of the edge, or  gives more detail about the edge. This property can be used on a node or edge to provide multiple URIs or CURIE cross references.""")
     synonym: Optional[List[str]] = Field(default_factory=list, description="""Alternate human-readable names for a thing""")
-    description: Optional[str] = Field(None)
+    description: Optional[str] = Field(None, description="""A free-text description of an entity or attribute.""")
     knowledge_level: Optional[KnowledgeLevelEnum] = Field(None, description="""The level of knowledge that supports an edge or node.  This is a general categorization of the type of evidence that supports a statement, and is not intended to be a comprehensive description of the evidence.  For example, a statement may be supported by a single publication, but that publication may contain multiple types of evidence, such as a computational prediction and a manual curation.  In this case, the knowledge level would be \"curated\", and the evidence would be described in more detail in the evidence graph.""")
     agent_type: Optional[AgentTypeEnum] = Field(None, description="""The type of agent that supports an edge or node.  This is a general categorization of the type of agent that supports a statement, and is not intended to be a comprehensive description of the agent.  For example, a statement may be supported by a single publication, but that publication may contain multiple types of evidence, such as a computational prediction and a manual curation.  In this case, the agent type would be \"publication\", and the evidence would be described in more detail in the evidence graph.""")
     

@@ -9,7 +9,7 @@
   "prefixes": [
     {
       "prefix_prefix": "biolink",
-      "prefix_reference": "https://w3id.org/biolink/vocab/"
+      "prefix_reference": "https://w3id.org/biolink/"
     },
     {
       "prefix_prefix": "linkml",
@@ -17,7 +17,7 @@
     },
     {
       "prefix_prefix": "infores",
-      "prefix_reference": "https://w3id.org/biolink/vocab/"
+      "prefix_reference": "https://w3id.org/biolink/infores/"
     }
   ],
   "emit_prefixes": [
@@ -350,7 +350,8 @@
   "enums": [
     {
       "name": "InformationResourceStatusEnum",
-      "definition_uri": "https://w3id.org/biolink/vocab/InformationResourceStatusEnum",
+      "definition_uri": "https://w3id.org/biolink/infores/InformationResourceStatusEnum",
+      "description": "The status of the infores identifier",
       "from_schema": "https://w3id.org/biolink/information_resource_registry.yaml",
       "permissible_values": [
         {
@@ -369,7 +370,8 @@
     },
     {
       "name": "KnowledgeLevelEnum",
-      "definition_uri": "https://w3id.org/biolink/vocab/KnowledgeLevelEnum",
+      "definition_uri": "https://w3id.org/biolink/infores/KnowledgeLevelEnum",
+      "description": "The level of knowledge that supports an edge or node.  This is a general categorization of the type of evidence that supports a statement, and is not intended to be a comprehensive description of the evidence.  For example, a statement may be supported by a single publication, but that publication may contain multiple types of evidence, such as a computational prediction and a manual curation.  In this case, the knowledge level would be \"curated\", and the evidence would be described in more detail in the evidence graph.",
       "from_schema": "https://w3id.org/biolink/information_resource_registry.yaml",
       "permissible_values": [
         {
@@ -404,7 +406,8 @@
     },
     {
       "name": "AgentTypeEnum",
-      "definition_uri": "https://w3id.org/biolink/vocab/AgentTypeEnum",
+      "definition_uri": "https://w3id.org/biolink/infores/AgentTypeEnum",
+      "description": "The type of agent that supports an edge or node.  This is a general categorization of the type of agent that supports a statement, and is not intended to be a comprehensive description of the agent.  For example, a statement may be supported by a single publication, but that publication may contain multiple types of evidence, such as a computational prediction and a manual curation.  In this case, the agent type would be \"publication\", and the evidence would be described in more detail in the evidence graph.",
       "from_schema": "https://w3id.org/biolink/information_resource_registry.yaml",
       "permissible_values": [
         {
@@ -421,10 +424,10 @@
   "slots": [
     {
       "name": "status",
-      "definition_uri": "https://w3id.org/biolink/vocab/status",
+      "definition_uri": "https://w3id.org/biolink/infores/status",
       "description": "the status of the infores identifier, the default is \"released\"",
       "from_schema": "https://w3id.org/biolink/information_resource_registry.yaml",
-      "slot_uri": "https://w3id.org/biolink/vocab/status",
+      "slot_uri": "https://w3id.org/biolink/infores/status",
       "owner": "InformationResource",
       "domain_of": [
         "InformationResource"
@@ -434,10 +437,10 @@
     },
     {
       "name": "information_resources",
-      "definition_uri": "https://w3id.org/biolink/vocab/information_resources",
+      "definition_uri": "https://w3id.org/biolink/infores/information_resources",
       "description": "a collection of information resources",
       "from_schema": "https://w3id.org/biolink/information_resource_registry.yaml",
-      "slot_uri": "https://w3id.org/biolink/vocab/information_resources",
+      "slot_uri": "https://w3id.org/biolink/infores/information_resources",
       "multivalued": true,
       "owner": "InformationResourceContainer",
       "domain_of": [
@@ -450,7 +453,7 @@
     },
     {
       "name": "name",
-      "definition_uri": "https://w3id.org/biolink/vocab/name",
+      "definition_uri": "https://w3id.org/biolink/infores/name",
       "description": "A human-readable name for an attribute or entity.",
       "from_schema": "https://w3id.org/biolink/information_resource_registry.yaml",
       "aliases": [
@@ -471,10 +474,10 @@
     },
     {
       "name": "id",
-      "definition_uri": "https://w3id.org/biolink/vocab/id",
+      "definition_uri": "https://w3id.org/biolink/infores/id",
       "description": "A unique identifier for an entity. Must be either a CURIE shorthand for a URI or a complete URI",
       "from_schema": "https://w3id.org/biolink/information_resource_registry.yaml",
-      "slot_uri": "https://w3id.org/biolink/vocab/id",
+      "slot_uri": "https://w3id.org/biolink/infores/id",
       "owner": "InformationResource",
       "domain_of": [
         "InformationResource"
@@ -485,7 +488,7 @@
     },
     {
       "name": "xref",
-      "definition_uri": "https://w3id.org/biolink/vocab/xref",
+      "definition_uri": "https://w3id.org/biolink/infores/xref",
       "description": "A database cross reference or alternative identifier for a NamedThing or edge between two  NamedThings.  This property should point to a database record or webpage that supports the existence of the edge, or  gives more detail about the edge. This property can be used on a node or edge to provide multiple URIs or CURIE cross references.",
       "from_schema": "https://w3id.org/biolink/information_resource_registry.yaml",
       "aliases": [
@@ -495,7 +498,7 @@
         "record_url",
         "source_record_urls"
       ],
-      "slot_uri": "https://w3id.org/biolink/vocab/xref",
+      "slot_uri": "https://w3id.org/biolink/infores/xref",
       "multivalued": true,
       "owner": "InformationResource",
       "domain_of": [
@@ -506,13 +509,13 @@
     },
     {
       "name": "synonym",
-      "definition_uri": "https://w3id.org/biolink/vocab/synonym",
+      "definition_uri": "https://w3id.org/biolink/infores/synonym",
       "description": "Alternate human-readable names for a thing",
       "from_schema": "https://w3id.org/biolink/information_resource_registry.yaml",
       "aliases": [
         "alias"
       ],
-      "slot_uri": "https://w3id.org/biolink/vocab/synonym",
+      "slot_uri": "https://w3id.org/biolink/infores/synonym",
       "multivalued": true,
       "owner": "InformationResource",
       "domain_of": [
@@ -523,9 +526,19 @@
     },
     {
       "name": "description",
-      "definition_uri": "https://w3id.org/biolink/vocab/description",
+      "definition_uri": "https://w3id.org/biolink/infores/description",
+      "description": "A free-text description of an entity or attribute.",
       "from_schema": "https://w3id.org/biolink/information_resource_registry.yaml",
-      "slot_uri": "https://w3id.org/biolink/vocab/description",
+      "aliases": [
+        "comment",
+        "note",
+        "definition",
+        "description"
+      ],
+      "mappings": [
+        "http://www.w3.org/2000/01/rdf-schema#comment"
+      ],
+      "slot_uri": "http://www.w3.org/2000/01/rdf-schema#comment",
       "owner": "InformationResource",
       "domain_of": [
         "InformationResource"
@@ -535,10 +548,10 @@
     },
     {
       "name": "knowledge_level",
-      "definition_uri": "https://w3id.org/biolink/vocab/knowledge_level",
+      "definition_uri": "https://w3id.org/biolink/infores/knowledge_level",
       "description": "The level of knowledge that supports an edge or node.  This is a general categorization of the type of evidence that supports a statement, and is not intended to be a comprehensive description of the evidence.  For example, a statement may be supported by a single publication, but that publication may contain multiple types of evidence, such as a computational prediction and a manual curation.  In this case, the knowledge level would be \"curated\", and the evidence would be described in more detail in the evidence graph.",
       "from_schema": "https://w3id.org/biolink/information_resource_registry.yaml",
-      "slot_uri": "https://w3id.org/biolink/vocab/knowledge_level",
+      "slot_uri": "https://w3id.org/biolink/infores/knowledge_level",
       "owner": "InformationResource",
       "domain_of": [
         "InformationResource"
@@ -548,10 +561,10 @@
     },
     {
       "name": "agent_type",
-      "definition_uri": "https://w3id.org/biolink/vocab/agent_type",
+      "definition_uri": "https://w3id.org/biolink/infores/agent_type",
       "description": "The type of agent that supports an edge or node.  This is a general categorization of the type of agent that supports a statement, and is not intended to be a comprehensive description of the agent.  For example, a statement may be supported by a single publication, but that publication may contain multiple types of evidence, such as a computational prediction and a manual curation.  In this case, the agent type would be \"publication\", and the evidence would be described in more detail in the evidence graph.",
       "from_schema": "https://w3id.org/biolink/information_resource_registry.yaml",
-      "slot_uri": "https://w3id.org/biolink/vocab/agent_type",
+      "slot_uri": "https://w3id.org/biolink/infores/agent_type",
       "owner": "InformationResource",
       "domain_of": [
         "InformationResource"
@@ -563,20 +576,20 @@
   "classes": [
     {
       "name": "InformationResourceContainer",
-      "definition_uri": "https://w3id.org/biolink/vocab/InformationResourceContainer",
+      "definition_uri": "https://w3id.org/biolink/infores/InformationResourceContainer",
       "description": "A collection of information resources",
       "from_schema": "https://w3id.org/biolink/information_resource_registry.yaml",
       "slots": [
         "information_resources"
       ],
       "slot_usage": {},
-      "class_uri": "https://w3id.org/biolink/vocab/InformationResourceContainer",
+      "class_uri": "https://w3id.org/biolink/infores/InformationResourceContainer",
       "tree_root": true,
       "@type": "ClassDefinition"
     },
     {
       "name": "InformationResource",
-      "definition_uri": "https://w3id.org/biolink/vocab/InformationResource",
+      "definition_uri": "https://w3id.org/biolink/infores/InformationResource",
       "description": "A database or knowledgebase and its supporting ecosystem of interfaces  and services that deliver content to consumers (e.g. web portals, APIs,  query endpoints, streaming services, data downloads, etc.). A single Information Resource by this definition may span many different datasets or databases, and include many access endpoints and user interfaces. Information Resources include project-specific resources such as a Translator Knowledge Provider, and community knowledgebases like ChemBL, OMIM, or DGIdb.",
       "from_schema": "https://w3id.org/biolink/information_resource_registry.yaml",
       "aliases": [
@@ -593,21 +606,21 @@
         "agent_type"
       ],
       "slot_usage": {},
-      "class_uri": "https://w3id.org/biolink/vocab/InformationResource",
+      "class_uri": "https://w3id.org/biolink/infores/InformationResource",
       "@type": "ClassDefinition"
     }
   ],
   "metamodel_version": "1.7.0",
   "source_file": "information_resource_registry.yaml",
-  "source_file_date": "2024-03-08T10:09:04",
-  "source_file_size": 6453,
-  "generation_date": "2024-03-08T10:40:56",
+  "source_file_date": "2024-03-08T10:47:50",
+  "source_file_size": 7890,
+  "generation_date": "2024-03-08T11:03:16",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/information_resource_registry.context.jsonld",
     "https://w3id.org/linkml/types.context.jsonld",
     {
-      "@base": "https://w3id.org/biolink/vocab/"
+      "@base": "https://w3id.org/biolink/infores/"
     }
   ]
 }

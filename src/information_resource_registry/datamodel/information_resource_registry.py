@@ -1,5 +1,5 @@
 # Auto generated from information_resource_registry.yaml by pythongen.py version: 0.0.1
-# Generation date: 2024-03-08T10:41:08
+# Generation date: 2024-03-08T11:03:28
 # Schema: Information-Resource-Registry-Schema
 #
 # id: https://w3id.org/biolink/information_resource_registry.yaml
@@ -32,8 +32,8 @@ dataclasses._init_fn = dataclasses_init_fn_with_kwargs
 # Namespaces
 BIOGRID = CurieNamespace('BIOGRID', 'http://identifiers.org/biogrid/')
 SO = CurieNamespace('SO', 'http://purl.obolibrary.org/obo/SO_')
-BIOLINK = CurieNamespace('biolink', 'https://w3id.org/biolink/vocab/')
-INFORES = CurieNamespace('infores', 'https://w3id.org/biolink/vocab/')
+BIOLINK = CurieNamespace('biolink', 'https://w3id.org/biolink/')
+INFORES = CurieNamespace('infores', 'https://w3id.org/biolink/infores/')
 LINKML = CurieNamespace('linkml', 'https://w3id.org/linkml/')
 OBOINOWL = CurieNamespace('oboInOwl', 'http://www.geneontology.org/formats/oboInOwl#')
 RDF = CurieNamespace('rdf', 'http://www.w3.org/1999/02/22-rdf-syntax-ns#')
@@ -56,8 +56,8 @@ class InformationResourceContainer(YAMLRoot):
     """
     _inherited_slots: ClassVar[List[str]] = []
 
-    class_class_uri: ClassVar[URIRef] = BIOLINK["InformationResourceContainer"]
-    class_class_curie: ClassVar[str] = "biolink:InformationResourceContainer"
+    class_class_uri: ClassVar[URIRef] = INFORES["InformationResourceContainer"]
+    class_class_curie: ClassVar[str] = "infores:InformationResourceContainer"
     class_name: ClassVar[str] = "InformationResourceContainer"
     class_model_uri: ClassVar[URIRef] = INFORES.InformationResourceContainer
 
@@ -82,8 +82,8 @@ class InformationResource(YAMLRoot):
     """
     _inherited_slots: ClassVar[List[str]] = []
 
-    class_class_uri: ClassVar[URIRef] = BIOLINK["InformationResource"]
-    class_class_curie: ClassVar[str] = "biolink:InformationResource"
+    class_class_uri: ClassVar[URIRef] = INFORES["InformationResource"]
+    class_class_curie: ClassVar[str] = "infores:InformationResource"
     class_name: ClassVar[str] = "InformationResource"
     class_model_uri: ClassVar[URIRef] = INFORES.InformationResource
 
@@ -130,7 +130,9 @@ class InformationResource(YAMLRoot):
 
 # Enumerations
 class InformationResourceStatusEnum(EnumDefinitionImpl):
-
+    """
+    The status of the infores identifier
+    """
     released = PermissibleValue(text="released")
     deprecated = PermissibleValue(text="deprecated")
     draft = PermissibleValue(text="draft")
@@ -138,10 +140,17 @@ class InformationResourceStatusEnum(EnumDefinitionImpl):
 
     _defn = EnumDefinition(
         name="InformationResourceStatusEnum",
+        description="The status of the infores identifier",
     )
 
 class KnowledgeLevelEnum(EnumDefinitionImpl):
-
+    """
+    The level of knowledge that supports an edge or node. This is a general categorization of the type of evidence
+    that supports a statement, and is not intended to be a comprehensive description of the evidence. For example, a
+    statement may be supported by a single publication, but that publication may contain multiple types of evidence,
+    such as a computational prediction and a manual curation. In this case, the knowledge level would be "curated",
+    and the evidence would be described in more detail in the evidence graph.
+    """
     curated = PermissibleValue(
         text="curated",
         description="""knowledge generated through manual curation  or interpretation of data or published study results""")
@@ -166,10 +175,17 @@ class KnowledgeLevelEnum(EnumDefinitionImpl):
 
     _defn = EnumDefinition(
         name="KnowledgeLevelEnum",
+        description="""The level of knowledge that supports an edge or node.  This is a general categorization of the type of evidence that supports a statement, and is not intended to be a comprehensive description of the evidence.  For example, a statement may be supported by a single publication, but that publication may contain multiple types of evidence, such as a computational prediction and a manual curation.  In this case, the knowledge level would be \"curated\", and the evidence would be described in more detail in the evidence graph.""",
     )
 
 class AgentTypeEnum(EnumDefinitionImpl):
-
+    """
+    The type of agent that supports an edge or node. This is a general categorization of the type of agent that
+    supports a statement, and is not intended to be a comprehensive description of the agent. For example, a statement
+    may be supported by a single publication, but that publication may contain multiple types of evidence, such as a
+    computational prediction and a manual curation. In this case, the agent type would be "publication", and the
+    evidence would be described in more detail in the evidence graph.
+    """
     not_provided = PermissibleValue(
         text="not_provided",
         description="agent type is not provided or known")
@@ -179,6 +195,7 @@ class AgentTypeEnum(EnumDefinitionImpl):
 
     _defn = EnumDefinition(
         name="AgentTypeEnum",
+        description="""The type of agent that supports an edge or node.  This is a general categorization of the type of agent that supports a statement, and is not intended to be a comprehensive description of the agent.  For example, a statement may be supported by a single publication, but that publication may contain multiple types of evidence, such as a computational prediction and a manual curation.  In this case, the agent type would be \"publication\", and the evidence would be described in more detail in the evidence graph.""",
     )
 
 # Slots
@@ -203,7 +220,7 @@ slots.xref = Slot(uri=INFORES.xref, name="xref", curie=INFORES.curie('xref'),
 slots.synonym = Slot(uri=INFORES.synonym, name="synonym", curie=INFORES.curie('synonym'),
                    model_uri=INFORES.synonym, domain=None, range=Optional[Union[str, List[str]]])
 
-slots.description = Slot(uri=INFORES.description, name="description", curie=INFORES.curie('description'),
+slots.description = Slot(uri=RDFS.comment, name="description", curie=RDFS.curie('comment'),
                    model_uri=INFORES.description, domain=None, range=Optional[str])
 
 slots.knowledge_level = Slot(uri=INFORES.knowledge_level, name="knowledge level", curie=INFORES.curie('knowledge_level'),
