@@ -6,62 +6,43 @@ SHELL := bash
 .SUFFIXES:
 .SECONDARY:
 
-# environment variables
-.EXPORT_ALL_VARIABLES:
-ifdef LINKML_ENVIRONMENT_FILENAME
-include ${LINKML_ENVIRONMENT_FILENAME}
-else
-include .env.public
-endif
-
 RUN = poetry run
-SCHEMA_NAME = $(LINKML_SCHEMA_NAME)
-SOURCE_SCHEMA_PATH = $(LINKML_SCHEMA_SOURCE_PATH)
+# get values from about.yaml file
+SCHEMA_NAME = $(shell ${SHELL} ./utils/get-value.sh name)
+SOURCE_SCHEMA_PATH = $(shell ${SHELL} ./utils/get-value.sh source_schema_path)
 SOURCE_SCHEMA_DIR = $(dir $(SOURCE_SCHEMA_PATH))
 SRC = src
 DEST = project
-PYMODEL = $(SRC)/$(SCHEMA_NAME)/datamodel
+PYMODEL = $(SRC)/biolink_model/datamodel
 DOCDIR = docs
 EXAMPLEDIR = examples
 SHEET_MODULE = personinfo_enums
-SHEET_ID = $(LINKML_SCHEMA_GOOGLE_SHEET_ID)
-SHEET_TABS = $(LINKML_SCHEMA_GOOGLE_SHEET_TABS)
+SHEET_ID = $(shell ${SHELL} ./utils/get-value.sh google_sheet_id)
+SHEET_TABS = $(shell ${SHELL} ./utils/get-value.sh google_sheet_tabs)
 SHEET_MODULE_PATH = $(SOURCE_SCHEMA_DIR)/$(SHEET_MODULE).yaml
+TEMPLATEDIR = doc-templates
 
-CONFIG_YAML =
-ifdef LINKML_GENERATORS_CONFIG_YAML
-CONFIG_YAML = ${LINKML_GENERATORS_CONFIG_YAML}
+# environment variables
+include config.env
+
+GEN_PARGS =
+ifdef LINKML_GENERATORS_PROJECT_ARGS
+GEN_PARGS = ${LINKML_GENERATORS_PROJECT_ARGS}
 endif
 
-GEN_DOC_ARGS =
-ifdef LINKML_GENERATORS_DOC_ARGS
-GEN_DOC_ARGS = ${LINKML_GENERATORS_DOC_ARGS}
-endif
-
-GEN_OWL_ARGS =
-ifdef LINKML_GENERATORS_OWL_ARGS
-GEN_OWL_ARGS = ${LINKML_GENERATORS_OWL_ARGS}
-endif
-
-GEN_JAVA_ARGS =
-ifdef LINKML_GENERATORS_JAVA_ARGS
-GEN_JAVA_ARGS = ${LINKML_GENERATORS_JAVA_ARGS}
-endif
-
-GEN_TS_ARGS =
-ifdef LINKML_GENERATORS_TYPESCRIPT_ARGS
-GEN_TS_ARGS = ${LINKML_GENERATORS_TYPESCRIPT_ARGS}
+GEN_DARGS =
+ifdef LINKML_GENERATORS_MARKDOWN_ARGS
+GEN_DARGS = ${LINKML_GENERATORS_MARKDOWN_ARGS}
 endif
 
 
 # basename of a YAML file in model/
-.PHONY: all clean setup gen-project gen-examples gendoc git-init-add git-init git-add git-commit git-status
+.PHONY: all clean
 
 # note: "help" MUST be the first target in the file,
 # when the user types "make" they should get help info
 help: status
 	@echo ""
-	@echo "make setup -- initial setup (run this first)"
 	@echo "make site -- makes site locally"
 	@echo "make install -- install dependencies"
 	@echo "make test -- runs tests"
@@ -77,10 +58,11 @@ status: check-config
 	@echo "Source: $(SOURCE_SCHEMA_PATH)"
 
 # generate products and add everything to github
-setup: check-config git-init install gen-project gen-examples gendoc git-add git-commit
+setup: install gen-project gen-examples gendoc git-init-add
 
 # install any dependencies required for building
 install:
+	git init
 	poetry install
 .PHONY: install
 
@@ -103,60 +85,79 @@ update-template:
 update-linkml:
 	poetry add -D linkml@latest
 
-# EXPERIMENTAL
-create-data-harmonizer:
-	npm init data-harmonizer $(SOURCE_SCHEMA_PATH)
-
 all: site
-site: gen-project gendoc
+site: gen-project gendoc infores id-prefixes
 %.yaml: gen-project
 deploy: all mkd-gh-deploy
-
-compile-sheets:
-	$(RUN) sheets2linkml --gsheet-id $(SHEET_ID) $(SHEET_TABS) > $(SHEET_MODULE_PATH).tmp && mv $(SHEET_MODULE_PATH).tmp $(SHEET_MODULE_PATH)
 
 # In future this will be done by conversion
 gen-examples:
 	cp src/data/examples/* $(EXAMPLEDIR)
 
+infores:
+	$(RUN) gen-python information-resource.yaml > information_resource.py
+
+validate_infores:
+	$(RUN) python src/biolink_model/scripts/verify_infores.py
+
+id-prefixes:
+	$(RUN) gen-python class_prefixes.yaml > src/biolink_model/scripts/classprefixes.py
+	cd src/biolink_model/scripts/ && $(RUN) python id_prefixes.py
+
+spell:
+	poetry run codespell
+
 # generates all project files
 
 gen-project: $(PYMODEL)
-	$(RUN) gen-project ${CONFIG_YAML} -d $(DEST) $(SOURCE_SCHEMA_PATH) && mv $(DEST)/*.py $(PYMODEL)
+	cp biolink-model.yaml src/biolink_model/schema/biolink_model.yaml
+	# keep these in sync between PROJECT_FOLDERS and the includes/excludes for gen-project and test-schema
+	$(RUN) gen-project \
+		--exclude excel \
+		--include graphql \
+		--include jsonld \
+		--exclude markdown \
+		--include prefixmap \
+		--include proto \
+		--include shacl \
+		--include shex \
+		--exclude sqlddl \
+		--include jsonldcontext \
+		--include jsonschema \
+		--exclude owl \
+		--include python \
+		--include rdf \
+		-d $(DEST) $(SOURCE_SCHEMA_PATH) && mv $(DEST)/*.py $(PYMODEL)
+	mv $(DEST)/prefixmap/biolink_model.yaml $(DEST)/prefixmap/biolink_model_prefix_map.json
+	mv $(PYMODEL)/biolink*.py $(PYMODEL)/model.py
+	$(RUN) gen-pydantic --pydantic-version 1 src/biolink_model/schema/biolink_model.yaml > $(PYMODEL)/pydanticmodel.py
+	$(RUN) gen-pydantic --pydantic-version 2 src/biolink_model/schema/biolink_model.yaml > $(PYMODEL)/pydanticmodel_v2.py
+	$(RUN) gen-owl --mergeimports --no-metaclasses --no-type-objects --add-root-classes --mixins-as-expressions src/biolink_model/schema/biolink_model.yaml > $(DEST)/owl/biolink_model.owl.ttl
+	cp biolink-model.yaml src/biolink_model/schema/biolink_model.yaml
+	$(MAKE) id-prefixes infores
 
+tests:
+	cp biolink-model.yaml src/biolink_model/schema/biolink_model.yaml
+	$(RUN) python -m unittest discover -p 'test_*.py'
+	$(RUN) codespell
+	$(RUN) yamllint -c .yamllint-config biolink-model.yaml
+	$(RUN) yamllint -c .yamllint-config infores_catalog.yaml
+	$(RUN) python scripts/verify_infores.py
 
-# non-empty arg triggers owl (workaround https://github.com/linkml/linkml/issues/1453)
-ifneq ($(strip ${GEN_OWL_ARGS}),)
-	mkdir -p ${DEST}/owl || true
-	$(RUN) gen-owl ${GEN_OWL_ARGS} $(SOURCE_SCHEMA_PATH) >${DEST}/owl/${SCHEMA_NAME}.owl.ttl
-endif
-# non-empty arg triggers java
-ifneq ($(strip ${GEN_JAVA_ARGS}),)
-	$(RUN) gen-java ${GEN_JAVA_ARGS} --output-directory ${DEST}/java/ $(SOURCE_SCHEMA_PATH)
-endif
-# non-empty arg triggers typescript
-ifneq ($(strip ${GEN_TS_ARGS}),)
-	mkdir -p ${DEST}/typescript || true
-	$(RUN) gen-typescript ${GEN_TS_ARGS} $(SOURCE_SCHEMA_PATH) >${DEST}/typescript/${SCHEMA_NAME}.ts
-endif
+test: test-schema test-python test-examples lint spell
 
-test: test-schema test-python test-examples
-
-test-schema:
-	$(RUN) gen-project ${CONFIG_YAML} -d tmp $(SOURCE_SCHEMA_PATH)
+test-schema: gen-project
 
 test-python:
-	$(RUN) python -m unittest discover
+	cp biolink-model.yaml src/biolink_model/schema/biolink_model.yaml
+	$(RUN) python -m unittest discover -p 'test_*.py'
 
 lint:
+	cp biolink-model.yaml src/biolink_model/schema/biolink_model.yaml
 	$(RUN) linkml-lint $(SOURCE_SCHEMA_PATH)
 
 check-config:
-ifndef LINKML_SCHEMA_NAME
-	$(error **Project not configured**:\n\n - See '.env.public'\n\n)
-else
-	$(info Ok)
-endif
+	@(grep my-datamodel about.yaml > /dev/null && printf "\n**Project not configured**:\n\n  - Remember to edit 'about.yaml'\n\n" || exit 0)
 
 convert-examples-to-%:
 	$(patsubst %, $(RUN) linkml-convert  % -s $(SOURCE_SCHEMA_PATH) -C Person, $(shell ${SHELL} find src/data/examples -name "*.yaml"))
@@ -170,7 +171,7 @@ examples/%.ttl: src/data/examples/%.yaml
 
 test-examples: examples/output
 
-examples/output: src/information_resource_registry/schema/information_resource_registry.yaml
+examples/output: src/biolink_model/schema/biolink_model.yaml
 	mkdir -p $@
 	$(RUN) linkml-run-examples \
 		--output-formats json \
@@ -191,9 +192,40 @@ $(PYMODEL):
 $(DOCDIR):
 	mkdir -p $@
 
+gen-viz:
+	$(RUN) generate_viz_json
+
 gendoc: $(DOCDIR)
-	cp -rf $(SRC)/docs/* $(DOCDIR) ; \
-	$(RUN) gen-doc ${GEN_DOC_ARGS} -d $(DOCDIR) $(SOURCE_SCHEMA_PATH)
+	# put the model where it needs to go in order to generate the doc correctly
+	cp biolink-model.yaml src/biolink_model/schema/biolink_model.yaml ; \
+	# this generates the data structure required for the d3 visualizations
+	$(RUN) generate_viz_json ; \
+	# DO NOT REMOVE: these cp statements are crucial to maintain the w3 ids for the model artifacts
+	cp $(DEST)/owl/biolink_model.owl.ttl $(DOCDIR)/biolink-model.owl.ttl ; \
+	cp $(DEST)/jsonld/biolink_model.context.jsonld $(DOCDIR)/biolink-model.context.jsonld ; \
+	cp $(DEST)/jsonld/biolink_model.context.jsonld $(DOCDIR)/context.jsonld ; \
+	cp $(DEST)/jsonld/biolink_model.jsonld $(DOCDIR)/biolink-model.jsonld ; \
+	cp $(DEST)/jsonschema/biolink_model.schema.json $(DOCDIR)/biolink-model.json ; \
+	cp $(DEST)/graphql/biolink_model.graphql $(DOCDIR)/biolink-model.graphql ; \
+	cp $(DEST)/shex/biolink_model.shex $(DOCDIR)/biolink-modeln.shex ; \
+	cp $(DEST)/shacl/biolink_model.shacl.ttl $(DOCDIR)/biolink-model.shacl.ttl ; \
+	cp $(DEST)/prefixmap/* $(DOCDIR) ; \
+	cp infores_catalog.yaml $(DOCDIR) ; \
+	cp information-resource.yaml $(DOCDIR) ; \
+	cp semmed-exclude-list.yaml $(DOCDIR) ; \
+	cp semmed-exclude-list-model.yaml $(DOCDIR) ; \
+	cp predicate_mapping.yaml $(DOCDIR) ; \
+	cp biolink-model.yaml $(DOCDIR) ; \
+	cp $(SRC)/docs/*md $(DOCDIR) ; \
+	cp -r $(SRC)/docs/images $(DOCDIR)/images ; \
+	# the .json cp here is the data required for the d3 visualizations
+	cp $(SRC)/docs/*.json $(DOCDIR) ; \
+	cp $(SRC)/docs/*.html $(DOCDIR) ; \
+	cp $(SRC)/docs/*.js $(DOCDIR) ; \
+	# this supports the display of our d3 visualizations
+	cp $(SRC)/docs/*.css $(DOCDIR) ; \
+	$(RUN) gen-doc -d $(DOCDIR) --template-directory $(SRC)/$(TEMPLATEDIR) $(SOURCE_SCHEMA_PATH)
+
 
 testdoc: gendoc serve
 
@@ -201,13 +233,15 @@ MKDOCS = $(RUN) mkdocs
 mkd-%:
 	$(MKDOCS) $*
 
+PROJECT_FOLDERS = sqlschema shex shacl protobuf prefixmap owl jsonschema jsonld graphql excel
 git-init-add: git-init git-add git-commit git-status
 git-init:
 	git init
 git-add: .cruft.json
-	git add .
+	git add .gitignore .github .cruft.json Makefile LICENSE *.md examples utils about.yaml mkdocs.yml poetry.lock project.Makefile pyproject.toml src/biolink_model/schema/*yaml src/*/datamodel/*py src/data src/docs tests src/*/_version.py
+	git add $(patsubst %, project/%, $(PROJECT_FOLDERS))
 git-commit:
-	git commit -m 'chore: make setup was run' -a
+	git commit -m 'chore: initial commit' -a
 git-status:
 	git status
 
