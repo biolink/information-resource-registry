@@ -91,7 +91,7 @@ gen-examples:
 	cp src/data/examples/* $(EXAMPLEDIR)
 
 infores:
-	$(RUN) gen-python src/information_resource_registry/schema/information-resource.yaml > information_resource.py
+	$(RUN) gen-python src/information_resource_registry/schema/information_resource_registry.yaml > information_resource_registry.py
 
 validate_infores:
 	$(RUN) python src/information_resource_registry/scripts/verify_infores.py
@@ -119,9 +119,9 @@ gen-project: $(PYMODEL)
 		--include python \
 		--include rdf \
 		-d $(DEST) $(SOURCE_SCHEMA_PATH)
-	$(RUN) gen-pydantic --pydantic-version 1 src/information_resource_registry/schema/information-resource.yaml > $(PYMODEL)/pydanticmodel.py
-	$(RUN) gen-pydantic --pydantic-version 2 src/information_resource_registry/schema/information-resource.yaml > $(PYMODEL)/pydanticmodel_v2.py
-	$(RUN) gen-owl --mergeimports --no-metaclasses --no-type-objects --add-root-classes --mixins-as-expressions src/information_resource_registry/schema/information-resource.yaml > $(DEST)/owl/information_resource.owl.ttl
+	$(RUN) gen-pydantic --pydantic-version 1 src/information_resource_registry/schema/information_resource_registry.yaml > $(PYMODEL)/pydanticmodel.py
+	$(RUN) gen-pydantic --pydantic-version 2 src/information_resource_registry/schema/information_resource_registry.yaml > $(PYMODEL)/pydanticmodel_v2.py
+	$(RUN) gen-owl --mergeimports --no-metaclasses --no-type-objects --add-root-classes --mixins-as-expressions src/information_resource_registry/schema/information_resource_registry.yaml > $(DEST)/owl/information_resource.owl.ttl
 	$(MAKE) infores
 
 tests:
@@ -178,10 +178,6 @@ gen-viz:
 	$(RUN) generate_viz_json
 
 gendoc: $(DOCDIR)
-	# put the model where it needs to go in order to generate the doc correctly
-	cp information_resource_registry.yaml src/information_resource_registry/schema/information_resource_registry.yaml ; \
-	# this generates the data structure required for the d3 visualizations
-	$(RUN) generate_viz_json ; \
 	# DO NOT REMOVE: these cp statements are crucial to maintain the w3 ids for the model artifacts
 	cp $(DEST)/owl/information_resource_registry.owl.ttl $(DOCDIR)/information_resource_registry.owl.ttl ; \
 	cp $(DEST)/jsonld/information_resource_registry.context.jsonld $(DOCDIR)/information_resource_registry.context.jsonld ; \
@@ -191,19 +187,11 @@ gendoc: $(DOCDIR)
 	cp $(DEST)/graphql/information_resource_registry.graphql $(DOCDIR)/information_resource_registry.graphql ; \
 	cp $(DEST)/shex/information_resource_registry.shex $(DOCDIR)/information_resource_registryn.shex ; \
 	cp $(DEST)/shacl/information_resource_registry.shacl.ttl $(DOCDIR)/information_resource_registry.shacl.ttl ; \
-	cp $(DEST)/prefixmap/* $(DOCDIR) ; \
 	cp infores_catalog.yaml $(DOCDIR) ; \
-	cp information-resource.yaml $(DOCDIR) ; \
-	cp semmed-exclude-list.yaml $(DOCDIR) ; \
-	cp semmed-exclude-list-model.yaml $(DOCDIR) ; \
-	cp predicate_mapping.yaml $(DOCDIR) ; \
-	cp information_resource_registry.yaml $(DOCDIR) ; \
+	cp $(SRC)/schema/information_resource_registry/information_resource_registry.yaml $(DOCDIR) ; \
 	cp $(SRC)/docs/*md $(DOCDIR) ; \
 	cp -r $(SRC)/docs/images $(DOCDIR)/images ; \
 	# the .json cp here is the data required for the d3 visualizations
-	cp $(SRC)/docs/*.json $(DOCDIR) ; \
-	cp $(SRC)/docs/*.html $(DOCDIR) ; \
-	cp $(SRC)/docs/*.js $(DOCDIR) ; \
 	# this supports the display of our d3 visualizations
 	cp $(SRC)/docs/*.css $(DOCDIR) ; \
 	$(RUN) gen-doc -d $(DOCDIR) --template-directory $(SRC)/$(TEMPLATEDIR) $(SOURCE_SCHEMA_PATH)

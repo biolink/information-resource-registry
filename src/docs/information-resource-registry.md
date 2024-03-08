@@ -80,7 +80,7 @@ review and finalize the request.
 An information resource is defined as a web-accessible resource that provides data. An InformationResource 
 (designated by its identifier in curie form, e.g. 'infores:monarchintiative') is a Biolink Model class that provides 
 a standard way to identify and describe information resources. The InformationResource class details can be found here:
-[information-resource.yaml](information-resource.yaml) and contains the following properties:
+[information_resource_registry.yaml](information_resource_registry.yaml) and contains the following properties:
 
 - **id**: the identifier of the information resource (e.g. 'infores:monarchintiative')
 - **name**: the name of the information resource (e.g. 'Monarch Initiative')
@@ -97,7 +97,7 @@ fields in an Information Resource entry can be modified, but the id field MUST n
 changed, it MUST be treated as a new entry and the old entry MUST be deprecated. 
 
 ### Adding a new Information Resource entry to the registry: 
-Adding a new entry to the registry is as easy as adding a stanza to the information-resource.yaml file in the biolink-model
+Adding a new entry to the registry is as easy as adding a stanza to the information_resource_registry.yaml file in the biolink-model
 repository and submitting the change via pull request in the repository.  Alternatively, making a ticket for a new
 resource in the biolink-model GitHub repository will also work.  
 
@@ -113,7 +113,7 @@ in user-facing applications and should be as readable as possible.
 - In general, the 'status' field of an Information Resource stanza should be one of two values: 'released' or 'deprecated'.
 
 The following is an example of a new entry in the
-information-resource.yaml file:
+information_resource_registry.yaml file:
 ```
 - id: infores:my-new-resource
   name: My New Resource

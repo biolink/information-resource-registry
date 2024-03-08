@@ -12,4 +12,4 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Validate YAML file
-        run: yamllint -c .yamllint-config src/information_resource_registry/schema/information-resource.yaml
+        run: yamllint -c .yamllint-config src/information_resource_registry/schema/information_resource_registry.yaml

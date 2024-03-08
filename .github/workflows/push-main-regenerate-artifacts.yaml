@@ -1,7 +1,7 @@
 name: Regenerate Information Resource Registry Artifacts
 
 # Controls when the action will run. Triggers the workflow on push
-# event but only for the master branch, and specifically on the information-resource.yaml
+# event but only for the master branch, and specifically on the information_resource_registry.yaml
 on:
   push:
     branches:
@@ -44,7 +44,7 @@ jobs:
             git config --local user.name "GitHub Action"
             git add project/*
             git add src/*
-            git commit -m "Regenerate artifacts from information-resource.yaml"
+            git commit -m "Regenerate artifacts from information_resource_registry.yaml"
             git push
           else
             echo "'make' gen-project failed to finish successfully"

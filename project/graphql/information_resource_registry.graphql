@@ -1,23 +1,17 @@
+type InformationResource
+  {
+    status: InformationResourceStatusEnum
+    name: String
+    id: String!
+    xref: [String]
+    synonym: [String]
+    description: String
+    knowledgeLevel: KnowledgeLevelEnum
+    agentType: AgentTypeEnum
+  }
+
 type InformationResourceContainer
   {
-    id: Uriorcurie!
-    name: String
-    description: String
-    primaryEmail: String
-    birthDate: Date
-    ageInYears: Integer
-    vitalStatus: PersonStatus
-  }
-
-type InformationResourceContainerCollection
-  {
-    entries: [InformationResourceContainer]
-  }
-
-type NamedThing
-  {
-    id: Uriorcurie!
-    name: String
-    description: String
+    informationResources: [InformationResource]
   }
 

@@ -1,25 +1,45 @@
 [tool.poetry]
-name = "information_resource_registry"
+name = "information-resource-registry"
 version = "0.0.0"
-description = "The information resource registry is a listing of data sources present in the NCATS Data Translator system.  Each information resource has an identifier, a short description, and an URL to more information about that resource."
+description = "A registry of information resources used in NCATS Data Translator"
 authors = ["Sierra Moxon <smoxon@lbl.gov>"]
-license = "Apache Software License 2.0"
+license = "MIT"
 readme = "README.md"
-include = ["README.md", "src/information_resource_registry/schema", "project"]
+include = ["README.md", "src/information-resource-registry/schema", "project", "src/information-resource-registry/datamodel", "src/information-resource-registry/scripts"]
+
+[tool.poetry.scripts]
+generate_viz_json = "src.information-resource-registry.scripts.generate_json:generate_viz_json"
+
 
 [tool.poetry.dependencies]
 python = "^3.9"
-linkml-runtime = "^1.1.24"
-linkml = "1.6.5"
+curies = "^0.7.4"
+prefixmaps = "^0.2.0"
+pyyaml = "^6.0.1"
+stringcase = "^1.2.0"
+pytest = "^7.3.1"
+beautifulsoup4 = ">=4.0.0"
 
 [tool.poetry-dynamic-versioning]
 enable = true
 vcs = "git"
 style = "pep440"
 
+[tool.poetry.dev-dependencies]
+linkml = ">=1.6.3"
+mkdocs = "^1.4.2"
+mkdocs-material = "^9.4.8"
+mkdocs-mermaid2-plugin = "^1.1.1"
+schemasheets = "^0.1.14"
+codespell = "^2.2.6"
+
 [build-system]
 requires = ["poetry-core>=1.0.0", "poetry-dynamic-versioning"]
 build-backend = "poetry_dynamic_versioning.backend"
 
 [tool.poetry.extras]
-docs = ["linkml", "mkdocs-material"]
+docs = ["mkdocs-material"]
+
+[tool.codespell]
+skip = '.idea,.git,SEMMEDDB*,semmed*,*.svg,docs'
+ignore-words-list = 'amination,ehr,mor,brite,nin,mirgate'

@@ -1,161 +1,118 @@
 {
     "$defs": {
-        "InformationResourceContainer": {
-            "additionalProperties": false,
-            "description": "Represents a InformationResourceContainer",
-            "properties": {
-                "age_in_years": {
-                    "description": "Number of years since birth",
-                    "type": "integer"
-                },
-                "birth_date": {
-                    "description": "Date on which a person is born",
-                    "format": "date",
-                    "type": "string"
-                },
-                "description": {
-                    "description": "A human-readable description for a thing",
-                    "type": "string"
-                },
-                "id": {
-                    "description": "A unique identifier for a thing",
-                    "type": "string"
-                },
-                "name": {
-                    "description": "A human-readable name for a thing",
-                    "type": "string"
-                },
-                "primary_email": {
-                    "description": "The main email address of a person",
-                    "pattern": "^\\S+@[\\S+\\.]+\\S+",
-                    "type": "string"
-                },
-                "vital_status": {
-                    "$ref": "#/$defs/PersonStatus",
-                    "description": "living or dead status"
-                }
-            },
-            "required": [
-                "id"
-            ],
-            "title": "InformationResourceContainer",
-            "type": "object"
-        },
-        "InformationResourceContainerCollection": {
-            "additionalProperties": false,
-            "description": "A holder for InformationResourceContainer objects",
-            "properties": {
-                "entries": {
-                    "additionalProperties": {
-                        "anyOf": [
-                            {
-                                "$ref": "#/$defs/InformationResourceContainer__identifier_optional"
-                            },
-                            {
-                                "type": "null"
-                            }
-                        ]
-                    },
-                    "type": "object"
-                }
-            },
-            "title": "InformationResourceContainerCollection",
-            "type": "object"
-        },
-        "InformationResourceContainer__identifier_optional": {
-            "additionalProperties": false,
-            "description": "Represents a InformationResourceContainer",
-            "properties": {
-                "age_in_years": {
-                    "description": "Number of years since birth",
-                    "type": "integer"
-                },
-                "birth_date": {
-                    "description": "Date on which a person is born",
-                    "format": "date",
-                    "type": "string"
-                },
-                "description": {
-                    "description": "A human-readable description for a thing",
-                    "type": "string"
-                },
-                "id": {
-                    "description": "A unique identifier for a thing",
-                    "type": "string"
-                },
-                "name": {
-                    "description": "A human-readable name for a thing",
-                    "type": "string"
-                },
-                "primary_email": {
-                    "description": "The main email address of a person",
-                    "pattern": "^\\S+@[\\S+\\.]+\\S+",
-                    "type": "string"
-                },
-                "vital_status": {
-                    "$ref": "#/$defs/PersonStatus",
-                    "description": "living or dead status"
-                }
-            },
-            "required": [],
-            "title": "InformationResourceContainer",
-            "type": "object"
-        },
-        "NamedThing": {
-            "additionalProperties": false,
-            "description": "A generic grouping for any identifiable entity",
-            "properties": {
-                "description": {
-                    "description": "A human-readable description for a thing",
-                    "type": "string"
-                },
-                "id": {
-                    "description": "A unique identifier for a thing",
-                    "type": "string"
-                },
-                "name": {
-                    "description": "A human-readable name for a thing",
-                    "type": "string"
-                }
-            },
-            "required": [
-                "id"
-            ],
-            "title": "NamedThing",
-            "type": "object"
-        },
-        "PersonStatus": {
+        "AgentTypeEnum": {
             "description": "",
             "enum": [
-                "ALIVE",
-                "DEAD",
-                "UNKNOWN"
+                "not_provided",
+                "computational_model"
             ],
-            "title": "PersonStatus",
+            "title": "AgentTypeEnum",
+            "type": "string"
+        },
+        "InformationResource": {
+            "additionalProperties": false,
+            "description": "A database or knowledgebase and its supporting ecosystem of interfaces  and services that deliver content to consumers (e.g. web portals, APIs,  query endpoints, streaming services, data downloads, etc.). A single Information Resource by this definition may span many different datasets or databases, and include many access endpoints and user interfaces. Information Resources include project-specific resources such as a Translator Knowledge Provider, and community knowledgebases like ChemBL, OMIM, or DGIdb.",
+            "properties": {
+                "agent_type": {
+                    "$ref": "#/$defs/AgentTypeEnum",
+                    "description": "The type of agent that supports an edge or node.  This is a general categorization of the type of agent that supports a statement, and is not intended to be a comprehensive description of the agent.  For example, a statement may be supported by a single publication, but that publication may contain multiple types of evidence, such as a computational prediction and a manual curation.  In this case, the agent type would be \"publication\", and the evidence would be described in more detail in the evidence graph."
+                },
+                "description": {
+                    "type": "string"
+                },
+                "id": {
+                    "description": "A unique identifier for an entity. Must be either a CURIE shorthand for a URI or a complete URI",
+                    "type": "string"
+                },
+                "knowledge_level": {
+                    "$ref": "#/$defs/KnowledgeLevelEnum",
+                    "description": "The level of knowledge that supports an edge or node.  This is a general categorization of the type of evidence that supports a statement, and is not intended to be a comprehensive description of the evidence.  For example, a statement may be supported by a single publication, but that publication may contain multiple types of evidence, such as a computational prediction and a manual curation.  In this case, the knowledge level would be \"curated\", and the evidence would be described in more detail in the evidence graph."
+                },
+                "name": {
+                    "description": "A human-readable name for an attribute or entity.",
+                    "type": "string"
+                },
+                "status": {
+                    "$ref": "#/$defs/InformationResourceStatusEnum",
+                    "description": "the status of the infores identifier, the default is \"released\""
+                },
+                "synonym": {
+                    "description": "Alternate human-readable names for a thing",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "xref": {
+                    "description": "A database cross reference or alternative identifier for a NamedThing or edge between two  NamedThings.  This property should point to a database record or webpage that supports the existence of the edge, or  gives more detail about the edge. This property can be used on a node or edge to provide multiple URIs or CURIE cross references.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                }
+            },
+            "required": [
+                "id"
+            ],
+            "title": "InformationResource",
+            "type": "object"
+        },
+        "InformationResourceContainer": {
+            "additionalProperties": false,
+            "description": "A collection of information resources",
+            "properties": {
+                "information_resources": {
+                    "description": "a collection of information resources",
+                    "items": {
+                        "$ref": "#/$defs/InformationResource"
+                    },
+                    "type": "array"
+                }
+            },
+            "title": "InformationResourceContainer",
+            "type": "object"
+        },
+        "InformationResourceStatusEnum": {
+            "description": "",
+            "enum": [
+                "released",
+                "deprecated",
+                "draft",
+                "modified"
+            ],
+            "title": "InformationResourceStatusEnum",
+            "type": "string"
+        },
+        "KnowledgeLevelEnum": {
+            "description": "",
+            "enum": [
+                "curated",
+                "predicted",
+                "text_mined",
+                "correlation",
+                "observed",
+                "other",
+                "mixed"
+            ],
+            "title": "KnowledgeLevelEnum",
             "type": "string"
         }
     },
-    "$id": "https://w3id.org/biolink/information-resource-registry",
-    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "https://w3id.org/biolink/information_resource_registry.yaml",
+    "$schema": "http://json-schema.org/draft-07/schema#",
     "additionalProperties": true,
-    "description": "A holder for InformationResourceContainer objects",
+    "description": "A collection of information resources",
     "metamodel_version": "1.7.0",
     "properties": {
-        "entries": {
-            "additionalProperties": {
-                "anyOf": [
-                    {
-                        "$ref": "#/$defs/InformationResourceContainer__identifier_optional"
-                    },
-                    {
-                        "type": "null"
-                    }
-                ]
+        "information_resources": {
+            "description": "a collection of information resources",
+            "items": {
+                "$ref": "#/$defs/InformationResource"
             },
-            "type": "object"
+            "type": "array"
         }
     },
-    "title": "information-resource-registry",
+    "title": "Information-Resource-Registry-Schema",
     "type": "object",
-    "version": null
+    "version": "1.0.0"
 }

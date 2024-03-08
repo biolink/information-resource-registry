@@ -1,8 +1,8 @@
-BASE <https://w3id.org/biolink/information-resource-registry/>
+BASE <https://w3id.org/biolink/vocab/>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX linkml: <https://w3id.org/linkml/>
-PREFIX schema1: <http://schema.org/>
 
 
 linkml:String xsd:string
@@ -43,33 +43,24 @@ linkml:Jsonpath xsd:string
 
 linkml:Sparqlpath xsd:string
 
-<InformationResourceContainer> CLOSED {
-    (  $<InformationResourceContainer_tes> (  &<NamedThing_tes> ;
-          rdf:type [ schema1:Thing ] ? ;
-          schema1:email @linkml:String ? ;
-          schema1:birthDate @linkml:Date ? ;
-          <age_in_years> @linkml:Integer ? ;
-          <vital_status> [ <http://purl.obolibrary.org/obo/PATO_0001421> <http://purl.obolibrary.org/obo/PATO_0001422>
-             <https://w3id.org/biolink/information-resource-registry/PersonStatus#UNKNOWN> ] ?
+<InformationResource> CLOSED {
+    (  $<InformationResource_tes> (  <status> @<InformationResourceStatusEnum> ? ;
+          rdfs:label @linkml:String ? ;
+          <id> @linkml:String ;
+          <xref> @linkml:String * ;
+          <synonym> @linkml:String * ;
+          <description> @linkml:String ? ;
+          <knowledge_level> @<KnowledgeLevelEnum> ? ;
+          <agent_type> @<AgentTypeEnum> ?
        ) ;
-       rdf:type [ <InformationResourceContainer> ]
+       rdf:type [ <InformationResource> ] ?
     )
 }
 
-<InformationResourceContainerCollection> CLOSED {
-    (  $<InformationResourceContainerCollection_tes> <entries> @<InformationResourceContainer> * ;
-       rdf:type [ <InformationResourceContainerCollection> ] ?
+<InformationResourceContainer> CLOSED {
+    (  $<InformationResourceContainer_tes> <information_resources> @<InformationResource> * ;
+       rdf:type [ <InformationResourceContainer> ] ?
     )
 }
-
-<NamedThing>  (
-    CLOSED {
-       (  $<NamedThing_tes> (  schema1:name @linkml:String ? ;
-             schema1:description @linkml:String ?
-          ) ;
-          rdf:type [ schema1:Thing ]
-       )
-    } OR @<InformationResourceContainer>
-)
 
 

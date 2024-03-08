@@ -1,5 +1,5 @@
 ---
-id: https://w3id.org/biolink/information-resource.yaml
+id: https://w3id.org/biolink/information_resource_registry.yaml
 name: Information-Resource-Registry-Schema
 license: https://creativecommons.org/publicdomain/zero/1.0/
 
@@ -85,6 +85,7 @@ slots:
     multivalued: true
     range: InformationResource
     inlined_as_list: true
+    inlined: true
 
   name:
     aliases: [ 'label', 'display name', 'title' ]
@@ -93,7 +94,6 @@ slots:
     slot_uri: rdfs:label
 
   id:
-    identifier: true
     description: >-
       A unique identifier for an entity.
       Must be either a CURIE shorthand for a URI or a complete URI
