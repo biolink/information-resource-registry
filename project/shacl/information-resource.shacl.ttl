@@ -1,0 +1,61 @@
+@prefix infores: <https://w3id.org/biolink/vocab/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+infores:InformationResourceContainer a sh:NodeShape ;
+    sh:closed true ;
+    sh:description "A collection of information resources" ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:class infores:InformationResource ;
+            sh:description "a collection of information resources" ;
+            sh:nodeKind sh:BlankNode ;
+            sh:order 0 ;
+            sh:path infores:information_resources ] ;
+    sh:targetClass infores:InformationResourceContainer .
+
+infores:InformationResource a sh:NodeShape ;
+    sh:closed true ;
+    sh:description "A database or knowledgebase and its supporting ecosystem of interfaces  and services that deliver content to consumers (e.g. web portals, APIs,  query endpoints, streaming services, data downloads, etc.). A single Information Resource by this definition may span many different datasets or databases, and include many access endpoints and user interfaces. Information Resources include project-specific resources such as a Translator Knowledge Provider, and community knowledgebases like ChemBL, OMIM, or DGIdb." ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:datatype xsd:string ;
+            sh:description "Alternate human-readable names for a thing" ;
+            sh:order 4 ;
+            sh:path infores:synonym ],
+        [ sh:datatype xsd:string ;
+            sh:description "A unique identifier for an entity. Must be either a CURIE shorthand for a URI or a complete URI" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 2 ;
+            sh:path infores:id ],
+        [ sh:description "The level of knowledge that supports an edge or node.  This is a general categorization of the type of evidence that supports a statement, and is not intended to be a comprehensive description of the evidence.  For example, a statement may be supported by a single publication, but that publication may contain multiple types of evidence, such as a computational prediction and a manual curation.  In this case, the knowledge level would be \"curated\", and the evidence would be described in more detail in the evidence graph." ;
+            sh:in ( "curated" "predicted" "text_mined" "correlation" "observed" "other" "mixed" ) ;
+            sh:maxCount 1 ;
+            sh:order 6 ;
+            sh:path infores:knowledge_level ],
+        [ sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:order 5 ;
+            sh:path infores:description ],
+        [ sh:description "The type of agent that supports an edge or node.  This is a general categorization of the type of agent that supports a statement, and is not intended to be a comprehensive description of the agent.  For example, a statement may be supported by a single publication, but that publication may contain multiple types of evidence, such as a computational prediction and a manual curation.  In this case, the agent type would be \"publication\", and the evidence would be described in more detail in the evidence graph." ;
+            sh:in ( "not_provided" "computational_model" ) ;
+            sh:maxCount 1 ;
+            sh:order 7 ;
+            sh:path infores:agent_type ],
+        [ sh:datatype xsd:string ;
+            sh:description "A human-readable name for an attribute or entity." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path rdfs:label ],
+        [ sh:description "the status of the infores identifier, the default is \"released\"" ;
+            sh:in ( "released" "deprecated" "draft" "modified" ) ;
+            sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path infores:status ],
+        [ sh:datatype xsd:string ;
+            sh:description "A database cross reference or alternative identifier for a NamedThing or edge between two  NamedThings.  This property should point to a database record or webpage that supports the existence of the edge, or  gives more detail about the edge. This property can be used on a node or edge to provide multiple URIs or CURIE cross references." ;
+            sh:order 3 ;
+            sh:path infores:xref ] ;
+    sh:targetClass infores:InformationResource .
+

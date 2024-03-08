@@ -1,0 +1,254 @@
+@prefix biolink: <https://w3id.org/biolink/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix infores: <https://w3id.org/biolink/infores/> .
+@prefix linkml: <https://w3id.org/linkml/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+infores:InformationResourceContainer a owl:Class ;
+    rdfs:label "InformationResourceContainer" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom infores:InformationResource ;
+            owl:onProperty infores:information_resources ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty infores:information_resources ],
+        linkml:ClassDefinition ;
+    skos:definition "A collection of information resources" ;
+    skos:inScheme biolink:information_resource_registry.yaml .
+
+biolink:information_resource_registry.yaml.owl.ttl a owl:Ontology ;
+    rdfs:label "Information-Resource-Registry-Schema" ;
+    dcterms:license "https://creativecommons.org/publicdomain/zero/1.0/" ;
+    pav:version "1.0.0" .
+
+<https://w3id.org/biolink/infores/AgentTypeEnum#computational_model> a owl:Class ;
+    rdfs:label "computational_model" ;
+    rdfs:subClassOf infores:AgentTypeEnum,
+        linkml:PermissibleValue .
+
+<https://w3id.org/biolink/infores/AgentTypeEnum#not_provided> a owl:Class ;
+    rdfs:label "not_provided" ;
+    rdfs:subClassOf infores:AgentTypeEnum,
+        linkml:PermissibleValue .
+
+infores:InformationResource a owl:Class ;
+    rdfs:label "InformationResource" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty infores:id ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty infores:status ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty infores:description ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty infores:agent_type ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty infores:knowledge_level ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty infores:id ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty infores:xref ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty infores:description ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom infores:InformationResourceStatusEnum ;
+            owl:onProperty infores:status ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty infores:xref ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom infores:KnowledgeLevelEnum ;
+            owl:onProperty infores:knowledge_level ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty infores:agent_type ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty infores:synonym ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty infores:synonym ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty infores:status ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty infores:knowledge_level ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom infores:AgentTypeEnum ;
+            owl:onProperty infores:agent_type ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty infores:name ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty infores:id ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty infores:description ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty infores:name ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty infores:name ],
+        linkml:ClassDefinition ;
+    skos:altLabel "knowledgebase" ;
+    skos:definition "A database or knowledgebase and its supporting ecosystem of interfaces  and services that deliver content to consumers (e.g. web portals, APIs,  query endpoints, streaming services, data downloads, etc.). A single Information Resource by this definition may span many different datasets or databases, and include many access endpoints and user interfaces. Information Resources include project-specific resources such as a Translator Knowledge Provider, and community knowledgebases like ChemBL, OMIM, or DGIdb." ;
+    skos:inScheme biolink:information_resource_registry.yaml .
+
+<https://w3id.org/biolink/infores/InformationResourceStatusEnum#deprecated> a owl:Class ;
+    rdfs:label "deprecated" ;
+    rdfs:subClassOf infores:InformationResourceStatusEnum,
+        linkml:PermissibleValue .
+
+<https://w3id.org/biolink/infores/InformationResourceStatusEnum#draft> a owl:Class ;
+    rdfs:label "draft" ;
+    rdfs:subClassOf infores:InformationResourceStatusEnum,
+        linkml:PermissibleValue .
+
+<https://w3id.org/biolink/infores/InformationResourceStatusEnum#modified> a owl:Class ;
+    rdfs:label "modified" ;
+    rdfs:subClassOf infores:InformationResourceStatusEnum,
+        linkml:PermissibleValue .
+
+<https://w3id.org/biolink/infores/InformationResourceStatusEnum#released> a owl:Class ;
+    rdfs:label "released" ;
+    rdfs:subClassOf infores:InformationResourceStatusEnum,
+        linkml:PermissibleValue .
+
+<https://w3id.org/biolink/infores/KnowledgeLevelEnum#correlation> a owl:Class ;
+    rdfs:label "correlation" ;
+    rdfs:subClassOf infores:KnowledgeLevelEnum,
+        linkml:PermissibleValue .
+
+<https://w3id.org/biolink/infores/KnowledgeLevelEnum#curated> a owl:Class ;
+    rdfs:label "curated" ;
+    rdfs:subClassOf infores:KnowledgeLevelEnum,
+        linkml:PermissibleValue .
+
+<https://w3id.org/biolink/infores/KnowledgeLevelEnum#mixed> a owl:Class ;
+    rdfs:label "mixed" ;
+    rdfs:subClassOf infores:KnowledgeLevelEnum,
+        linkml:PermissibleValue .
+
+<https://w3id.org/biolink/infores/KnowledgeLevelEnum#observed> a owl:Class ;
+    rdfs:label "observed" ;
+    rdfs:subClassOf infores:KnowledgeLevelEnum,
+        linkml:PermissibleValue .
+
+<https://w3id.org/biolink/infores/KnowledgeLevelEnum#other> a owl:Class ;
+    rdfs:label "other" ;
+    rdfs:subClassOf infores:KnowledgeLevelEnum,
+        linkml:PermissibleValue .
+
+<https://w3id.org/biolink/infores/KnowledgeLevelEnum#predicted> a owl:Class ;
+    rdfs:label "predicted" ;
+    rdfs:subClassOf infores:KnowledgeLevelEnum,
+        linkml:PermissibleValue .
+
+<https://w3id.org/biolink/infores/KnowledgeLevelEnum#text_mined> a owl:Class ;
+    rdfs:label "text_mined" ;
+    rdfs:subClassOf infores:KnowledgeLevelEnum,
+        linkml:PermissibleValue .
+
+infores:information_resources a owl:ObjectProperty ;
+    rdfs:label "information_resources" ;
+    rdfs:range infores:InformationResource ;
+    skos:definition "a collection of information resources" ;
+    skos:inScheme biolink:information_resource_registry.yaml .
+
+infores:synonym a owl:DatatypeProperty ;
+    rdfs:label "synonym" ;
+    skos:altLabel "alias" ;
+    skos:definition "Alternate human-readable names for a thing" ;
+    skos:inScheme biolink:information_resource_registry.yaml .
+
+infores:xref a owl:DatatypeProperty ;
+    rdfs:label "xref" ;
+    skos:altLabel "DbXref",
+        "Dbxref",
+        "dbxref",
+        "record_url",
+        "source_record_urls" ;
+    skos:definition "A database cross reference or alternative identifier for a NamedThing or edge between two  NamedThings.  This property should point to a database record or webpage that supports the existence of the edge, or  gives more detail about the edge. This property can be used on a node or edge to provide multiple URIs or CURIE cross references." ;
+    skos:inScheme biolink:information_resource_registry.yaml .
+
+infores:agent_type a owl:ObjectProperty ;
+    rdfs:label "agent type" ;
+    rdfs:range infores:AgentTypeEnum ;
+    skos:definition "The type of agent that supports an edge or node.  This is a general categorization of the type of agent that supports a statement, and is not intended to be a comprehensive description of the agent.  For example, a statement may be supported by a single publication, but that publication may contain multiple types of evidence, such as a computational prediction and a manual curation.  In this case, the agent type would be \"publication\", and the evidence would be described in more detail in the evidence graph." ;
+    skos:inScheme biolink:information_resource_registry.yaml .
+
+infores:description a owl:DatatypeProperty ;
+    rdfs:label "description" ;
+    skos:altLabel "comment",
+        "definition",
+        "description",
+        "note" ;
+    skos:definition "A free-text description of an entity or attribute." ;
+    skos:inScheme biolink:information_resource_registry.yaml .
+
+infores:id a owl:DatatypeProperty ;
+    rdfs:label "id" ;
+    skos:definition "A unique identifier for an entity. Must be either a CURIE shorthand for a URI or a complete URI" ;
+    skos:inScheme biolink:information_resource_registry.yaml .
+
+infores:knowledge_level a owl:ObjectProperty ;
+    rdfs:label "knowledge level" ;
+    rdfs:range infores:KnowledgeLevelEnum ;
+    skos:definition "The level of knowledge that supports an edge or node.  This is a general categorization of the type of evidence that supports a statement, and is not intended to be a comprehensive description of the evidence.  For example, a statement may be supported by a single publication, but that publication may contain multiple types of evidence, such as a computational prediction and a manual curation.  In this case, the knowledge level would be \"curated\", and the evidence would be described in more detail in the evidence graph." ;
+    skos:inScheme biolink:information_resource_registry.yaml .
+
+infores:name a owl:DatatypeProperty ;
+    rdfs:label "name" ;
+    skos:altLabel "display name",
+        "label",
+        "title" ;
+    skos:definition "A human-readable name for an attribute or entity." ;
+    skos:inScheme biolink:information_resource_registry.yaml .
+
+infores:status a owl:ObjectProperty ;
+    rdfs:label "status" ;
+    rdfs:range infores:InformationResourceStatusEnum ;
+    skos:definition "the status of the infores identifier, the default is \"released\"" ;
+    skos:inScheme biolink:information_resource_registry.yaml .
+
+infores:AgentTypeEnum a owl:Class ;
+    rdfs:subClassOf linkml:EnumDefinition ;
+    owl:unionOf ( <https://w3id.org/biolink/infores/AgentTypeEnum#not_provided> <https://w3id.org/biolink/infores/AgentTypeEnum#computational_model> ) ;
+    linkml:permissible_values <https://w3id.org/biolink/infores/AgentTypeEnum#computational_model>,
+        <https://w3id.org/biolink/infores/AgentTypeEnum#not_provided> .
+
+infores:InformationResourceStatusEnum a owl:Class ;
+    rdfs:subClassOf linkml:EnumDefinition ;
+    owl:unionOf ( <https://w3id.org/biolink/infores/InformationResourceStatusEnum#released> <https://w3id.org/biolink/infores/InformationResourceStatusEnum#deprecated> <https://w3id.org/biolink/infores/InformationResourceStatusEnum#draft> <https://w3id.org/biolink/infores/InformationResourceStatusEnum#modified> ) ;
+    linkml:permissible_values <https://w3id.org/biolink/infores/InformationResourceStatusEnum#deprecated>,
+        <https://w3id.org/biolink/infores/InformationResourceStatusEnum#draft>,
+        <https://w3id.org/biolink/infores/InformationResourceStatusEnum#modified>,
+        <https://w3id.org/biolink/infores/InformationResourceStatusEnum#released> .
+
+infores:KnowledgeLevelEnum a owl:Class ;
+    rdfs:subClassOf linkml:EnumDefinition ;
+    owl:unionOf ( <https://w3id.org/biolink/infores/KnowledgeLevelEnum#curated> <https://w3id.org/biolink/infores/KnowledgeLevelEnum#predicted> <https://w3id.org/biolink/infores/KnowledgeLevelEnum#text_mined> <https://w3id.org/biolink/infores/KnowledgeLevelEnum#correlation> <https://w3id.org/biolink/infores/KnowledgeLevelEnum#observed> <https://w3id.org/biolink/infores/KnowledgeLevelEnum#other> <https://w3id.org/biolink/infores/KnowledgeLevelEnum#mixed> ) ;
+    linkml:permissible_values <https://w3id.org/biolink/infores/KnowledgeLevelEnum#correlation>,
+        <https://w3id.org/biolink/infores/KnowledgeLevelEnum#curated>,
+        <https://w3id.org/biolink/infores/KnowledgeLevelEnum#mixed>,
+        <https://w3id.org/biolink/infores/KnowledgeLevelEnum#observed>,
+        <https://w3id.org/biolink/infores/KnowledgeLevelEnum#other>,
+        <https://w3id.org/biolink/infores/KnowledgeLevelEnum#predicted>,
+        <https://w3id.org/biolink/infores/KnowledgeLevelEnum#text_mined> .
+
+
