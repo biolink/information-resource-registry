@@ -1,0 +1,27 @@
+{
+  "template": "https://github.com/linkml/linkml-project-cookiecutter",
+  "commit": "d9b85bbbdcc49163416a3e3e18e23fe2ecce501b",
+  "checkout": null,
+  "context": {
+    "cookiecutter": {
+      "project_name": "information-resource-registry",
+      "__project_slug": "information_resource_registry",
+      "github_org": "biolink",
+      "__source_path": "src/information_resource_registry/schema/information_resource_registry.yaml",
+      "project_description": "The information resource registry is a listing of data sources present in the NCATS Data Translator system.  Each information resource has an identifier, a short description, and an URL to more information about that resource.",
+      "full_name": "Sierra Moxon",
+      "email": "smoxon@lbl.gov",
+      "__author": "Sierra Moxon <smoxon@lbl.gov>",
+      "license": "Apache Software License 2.0",
+      "main_schema_class": "InformationResourceContainer",
+      "create_python_classes": "No",
+      "use_schemasheets": "No",
+      "google_sheet_id": "1wVoaiFg47aT9YWNeRfTZ8tYHN8s8PAuDx5i2HUcDpvQ",
+      "google_sheet_tabs": "personinfo enums",
+      "__google_sheet_module": "personinfo_enums",
+      "github_token_for_pypi_deployment": "PYPI_PASSWORD",
+      "_template": "https://github.com/linkml/linkml-project-cookiecutter"
+    }
+  },
+  "directory": null
+}
