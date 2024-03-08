@@ -8,8 +8,6 @@ information_resources:
       - https://aact.ctti-clinicaltrials.org/
     synonym:
       - AACT
-    knowledge level: curated
-    agent type: not_provided
     description: https://ctti-clinicaltrials.org/our-work/quality/state-of-clinical-trials/
       Researchers can use CTTI’s Aggregate Analysis of ClinicalTrial.gov (AACT) database
       to easily access and analyze data from the ClinicalTrials.gov registry to evaluate
@@ -19,8 +17,6 @@ information_resources:
     name: Answer coalesce
     xref:
       - https://github.com/ranking-agent/AnswerCoalesce
-    knowledge level: curated
-    agent type: not_provided
     description: >-
       Answer coalesce: This service accepts a TRAPI 1.1 object containing
       answers and returns answers that have been coalesced by property, graph or ontology

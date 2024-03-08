@@ -21,9 +21,9 @@ version: 1.0.0
 # 1. The following 'prefixes:' delimited list has first precedence in resolution.
 #
 prefixes:
-  biolink: 'https://w3id.org/biolink/vocab/'
+  biolink: 'https://w3id.org/biolink/'
   linkml: 'https://w3id.org/linkml/'
-  infores: 'https://w3id.org/biolink/vocab/'
+  infores: 'https://w3id.org/biolink/infores/'
 
 imports:
   - linkml:types
@@ -115,6 +115,11 @@ slots:
     multivalued: true
 
   description:
+    aliases: [ 'comment', 'note', 'definition', 'description' ]
+    description: >-
+      A free-text description of an entity or attribute.
+    slot_uri: rdfs:comment
+
   knowledge level:
     range: KnowledgeLevelEnum
     description: >-
@@ -126,6 +131,7 @@ slots:
         computational prediction and a manual curation.  In this case, the
         knowledge level would be "curated", and the evidence would be described
         in more detail in the evidence graph.
+
   agent type:
     range: AgentTypeEnum
     description: >-
@@ -140,6 +146,8 @@ slots:
 
 enums:
   InformationResourceStatusEnum:
+    description: >-
+        The status of the infores identifier
     permissible_values:
       released:
       deprecated:
@@ -147,6 +155,15 @@ enums:
       modified:
 
   KnowledgeLevelEnum:
+    description: >-
+        The level of knowledge that supports an edge or node.  This is a general
+        categorization of the type of evidence that supports a statement, and is
+        not intended to be a comprehensive description of the evidence.  For
+        example, a statement may be supported by a single publication, but that
+        publication may contain multiple types of evidence, such as a
+        computational prediction and a manual curation.  In this case, the
+        knowledge level would be "curated", and the evidence would be described
+        in more detail in the evidence graph.
     permissible_values:
       curated:
         description: >-
@@ -175,6 +192,15 @@ enums:
           curated Edges - set tag to Curated, unless predicate rules override
 
   AgentTypeEnum:
+    description: >-
+        The type of agent that supports an edge or node.  This is a general
+        categorization of the type of agent that supports a statement, and is
+        not intended to be a comprehensive description of the agent.  For
+        example, a statement may be supported by a single publication, but that
+        publication may contain multiple types of evidence, such as a
+        computational prediction and a manual curation.  In this case, the
+        agent type would be "publication", and the evidence would be described
+        in more detail in the evidence graph.
     permissible_values:
       not_provided:
         description: >-

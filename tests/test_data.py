@@ -4,7 +4,7 @@ import glob
 import unittest
 
 from linkml_runtime.loaders import yaml_loader
-from information_resource_registry.datamodel.information_resource_registry import InformationResourceContainer
+from src.information_resource_registry.datamodel.information_resource_registry import InformationResourceContainer
 
 ROOT = os.path.join(os.path.dirname(__file__), '..')
 DATA_DIR = os.path.join(ROOT, "src", "data", "examples")
