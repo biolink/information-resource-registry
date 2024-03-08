@@ -10,16 +10,16 @@ Each information resource has an identifier, a short description, and an URL to 
 ## Classes
 
 | Class | Description |
-{% for c in schemaview.all_classes(ordered_by="lexical").values()|sort(attribute='name') -%}
 | --- | --- |
+{% for c in schemaview.all_classes(ordered_by="lexical").values()|sort(attribute='name') -%}
 | {{gen.link(c)}} | {{c.description}} |
 {% endfor %}
 
 ## Slots
 
 | Property | Description |
-{% for np in schemaview.all_slots(ordered_by="lexical").values()|sort(attribute='name') -%}
 | --- | --- |
+{% for np in schemaview.all_slots(ordered_by="lexical").values()|sort(attribute='name') -%}
 | {{gen.link(np)}} | {{np.description}} |
 {% endfor %}
 
