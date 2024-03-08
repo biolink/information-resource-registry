@@ -13,13 +13,9 @@ SOURCE_SCHEMA_PATH = $(shell ${SHELL} ./utils/get-value.sh source_schema_path)
 SOURCE_SCHEMA_DIR = $(dir $(SOURCE_SCHEMA_PATH))
 SRC = src
 DEST = project
-PYMODEL = $(SRC)/biolink_model/datamodel
+PYMODEL = $(SRC)/information-resource-registry/datamodel
 DOCDIR = docs
 EXAMPLEDIR = examples
-SHEET_MODULE = personinfo_enums
-SHEET_ID = $(shell ${SHELL} ./utils/get-value.sh google_sheet_id)
-SHEET_TABS = $(shell ${SHELL} ./utils/get-value.sh google_sheet_tabs)
-SHEET_MODULE_PATH = $(SOURCE_SCHEMA_DIR)/$(SHEET_MODULE).yaml
 TEMPLATEDIR = doc-templates
 
 # environment variables
@@ -86,7 +82,7 @@ update-linkml:
 	poetry add -D linkml@latest
 
 all: site
-site: gen-project gendoc infores id-prefixes
+site: gen-project gendoc
 %.yaml: gen-project
 deploy: all mkd-gh-deploy
 
@@ -98,11 +94,7 @@ infores:
 	$(RUN) gen-python information-resource.yaml > information_resource.py
 
 validate_infores:
-	$(RUN) python src/biolink_model/scripts/verify_infores.py
-
-id-prefixes:
-	$(RUN) gen-python class_prefixes.yaml > src/biolink_model/scripts/classprefixes.py
-	cd src/biolink_model/scripts/ && $(RUN) python id_prefixes.py
+	$(RUN) python src/information_resource_registry/scripts/verify_infores.py
 
 spell:
 	poetry run codespell
@@ -128,19 +120,15 @@ gen-project: $(PYMODEL)
 		--include python \
 		--include rdf \
 		-d $(DEST) $(SOURCE_SCHEMA_PATH) && mv $(DEST)/*.py $(PYMODEL)
-	mv $(DEST)/prefixmap/biolink_model.yaml $(DEST)/prefixmap/biolink_model_prefix_map.json
-	mv $(PYMODEL)/biolink*.py $(PYMODEL)/model.py
-	$(RUN) gen-pydantic --pydantic-version 1 src/biolink_model/schema/biolink_model.yaml > $(PYMODEL)/pydanticmodel.py
-	$(RUN) gen-pydantic --pydantic-version 2 src/biolink_model/schema/biolink_model.yaml > $(PYMODEL)/pydanticmodel_v2.py
-	$(RUN) gen-owl --mergeimports --no-metaclasses --no-type-objects --add-root-classes --mixins-as-expressions src/biolink_model/schema/biolink_model.yaml > $(DEST)/owl/biolink_model.owl.ttl
-	cp biolink-model.yaml src/biolink_model/schema/biolink_model.yaml
-	$(MAKE) id-prefixes infores
+	$(RUN) gen-pydantic --pydantic-version 1 src/information-resource-registry/schema/information-resource.yaml > $(PYMODEL)/pydanticmodel.py
+	$(RUN) gen-pydantic --pydantic-version 2 src/information-resource-registry/schema/information-resource.yaml > $(PYMODEL)/pydanticmodel_v2.py
+	$(RUN) gen-owl --mergeimports --no-metaclasses --no-type-objects --add-root-classes --mixins-as-expressions src/information-resource-registry/information-resource.yaml > $(DEST)/owl/information_resource.owl.ttl
+	$(MAKE) infores
 
 tests:
-	cp biolink-model.yaml src/biolink_model/schema/biolink_model.yaml
 	$(RUN) python -m unittest discover -p 'test_*.py'
 	$(RUN) codespell
-	$(RUN) yamllint -c .yamllint-config biolink-model.yaml
+	$(RUN) yamllint -c .yamllint-config src/information_resource_registry.yaml
 	$(RUN) yamllint -c .yamllint-config infores_catalog.yaml
 	$(RUN) python scripts/verify_infores.py
 
@@ -149,15 +137,10 @@ test: test-schema test-python test-examples lint spell
 test-schema: gen-project
 
 test-python:
-	cp biolink-model.yaml src/biolink_model/schema/biolink_model.yaml
 	$(RUN) python -m unittest discover -p 'test_*.py'
 
 lint:
-	cp biolink-model.yaml src/biolink_model/schema/biolink_model.yaml
 	$(RUN) linkml-lint $(SOURCE_SCHEMA_PATH)
-
-check-config:
-	@(grep my-datamodel about.yaml > /dev/null && printf "\n**Project not configured**:\n\n  - Remember to edit 'about.yaml'\n\n" || exit 0)
 
 convert-examples-to-%:
 	$(patsubst %, $(RUN) linkml-convert  % -s $(SOURCE_SCHEMA_PATH) -C Person, $(shell ${SHELL} find src/data/examples -name "*.yaml"))
@@ -171,7 +154,7 @@ examples/%.ttl: src/data/examples/%.yaml
 
 test-examples: examples/output
 
-examples/output: src/biolink_model/schema/biolink_model.yaml
+examples/output: src/information_resource_registry/schema/information_resource_registry.yaml
 	mkdir -p $@
 	$(RUN) linkml-run-examples \
 		--output-formats json \
@@ -197,18 +180,18 @@ gen-viz:
 
 gendoc: $(DOCDIR)
 	# put the model where it needs to go in order to generate the doc correctly
-	cp biolink-model.yaml src/biolink_model/schema/biolink_model.yaml ; \
+	cp biolink-model.yaml src/information_resource_registry/schema/information_resource_registry.yaml ; \
 	# this generates the data structure required for the d3 visualizations
 	$(RUN) generate_viz_json ; \
 	# DO NOT REMOVE: these cp statements are crucial to maintain the w3 ids for the model artifacts
-	cp $(DEST)/owl/biolink_model.owl.ttl $(DOCDIR)/biolink-model.owl.ttl ; \
-	cp $(DEST)/jsonld/biolink_model.context.jsonld $(DOCDIR)/biolink-model.context.jsonld ; \
-	cp $(DEST)/jsonld/biolink_model.context.jsonld $(DOCDIR)/context.jsonld ; \
-	cp $(DEST)/jsonld/biolink_model.jsonld $(DOCDIR)/biolink-model.jsonld ; \
-	cp $(DEST)/jsonschema/biolink_model.schema.json $(DOCDIR)/biolink-model.json ; \
-	cp $(DEST)/graphql/biolink_model.graphql $(DOCDIR)/biolink-model.graphql ; \
-	cp $(DEST)/shex/biolink_model.shex $(DOCDIR)/biolink-modeln.shex ; \
-	cp $(DEST)/shacl/biolink_model.shacl.ttl $(DOCDIR)/biolink-model.shacl.ttl ; \
+	cp $(DEST)/owl/information_resource_registry.owl.ttl $(DOCDIR)/biolink-model.owl.ttl ; \
+	cp $(DEST)/jsonld/information_resource_registry.context.jsonld $(DOCDIR)/biolink-model.context.jsonld ; \
+	cp $(DEST)/jsonld/information_resource_registry.context.jsonld $(DOCDIR)/context.jsonld ; \
+	cp $(DEST)/jsonld/information_resource_registry.jsonld $(DOCDIR)/biolink-model.jsonld ; \
+	cp $(DEST)/jsonschema/information_resource_registry.schema.json $(DOCDIR)/biolink-model.json ; \
+	cp $(DEST)/graphql/information_resource_registry.graphql $(DOCDIR)/biolink-model.graphql ; \
+	cp $(DEST)/shex/information_resource_registry.shex $(DOCDIR)/biolink-modeln.shex ; \
+	cp $(DEST)/shacl/information_resource_registry.shacl.ttl $(DOCDIR)/biolink-model.shacl.ttl ; \
 	cp $(DEST)/prefixmap/* $(DOCDIR) ; \
 	cp infores_catalog.yaml $(DOCDIR) ; \
 	cp information-resource.yaml $(DOCDIR) ; \
@@ -238,7 +221,7 @@ git-init-add: git-init git-add git-commit git-status
 git-init:
 	git init
 git-add: .cruft.json
-	git add .gitignore .github .cruft.json Makefile LICENSE *.md examples utils about.yaml mkdocs.yml poetry.lock project.Makefile pyproject.toml src/biolink_model/schema/*yaml src/*/datamodel/*py src/data src/docs tests src/*/_version.py
+	git add .gitignore .github .cruft.json Makefile LICENSE *.md examples utils about.yaml mkdocs.yml poetry.lock project.Makefile pyproject.toml src/information_resource_registry/schema/*yaml src/*/datamodel/*py src/data src/docs tests src/*/_version.py
 	git add $(patsubst %, project/%, $(PROJECT_FOLDERS))
 git-commit:
 	git commit -m 'chore: initial commit' -a

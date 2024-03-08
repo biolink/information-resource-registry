@@ -4,6 +4,8 @@ name: Publish Python Package
 on:
   release:
     types: [created]
+  workflow_dispatch:
+    types: trigger-pypi-publish
 
 jobs:
   build-n-publish:
@@ -20,11 +22,8 @@ jobs:
 
       - name: Install Poetry
         run: |
-          pipx install poetry
+          pip install poetry
           poetry self add "poetry-dynamic-versioning[plugin]"
-
-      # - name: Install dependencies
-      #   run: poetry install --no-interaction
 
       - name: Build source and wheel archives
         run: poetry build
@@ -33,4 +32,4 @@ jobs:
         uses: pypa/gh-action-pypi-publish@v1.2.2
         with:
           user: __token__
-          password: ${{ secrets.PYPI_PASSWORD }}
+          password: ${{ secrets.PYPI_API_TOKEN }}

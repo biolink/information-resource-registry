@@ -1,7 +1,28 @@
-# Example data object
+# Example information resource registry entry
 ---
-entries:
-  - id: example:InformationResourceContainer001
-    name: foo bar
-    primary_email: foo.bar@example.com
-    age_in_years: 33
+information_resources:
+  - id: infores:aact
+    status: released
+    name: Aggregate Analysis of ClinicalTrial.gov (AACT) database
+    xref:
+      - https://aact.ctti-clinicaltrials.org/
+    synonym:
+      - AACT
+    knowledge level: curated
+    agent type: not_provided
+    description: https://ctti-clinicaltrials.org/our-work/quality/state-of-clinical-trials/
+      Researchers can use CTTI’s Aggregate Analysis of ClinicalTrial.gov (AACT) database
+      to easily access and analyze data from the ClinicalTrials.gov registry to evaluate
+      studies and characterize the current state of clinical trials.
+  - id: infores:answer-coalesce
+    status: deprecated
+    name: Answer coalesce
+    xref:
+      - https://github.com/ranking-agent/AnswerCoalesce
+    knowledge level: curated
+    agent type: not_provided
+    description: >-
+      Answer coalesce: This service accepts a TRAPI 1.1 object containing
+      answers and returns answers that have been coalesced by property, graph or ontology
+      analysis.
+
