@@ -1,10 +1,10 @@
 # Auto generated from information_resource_registry.yaml by pythongen.py version: 0.0.1
-# Generation date: 2024-03-08T07:53:37
-# Schema: information-resource-registry
+# Generation date: 2024-03-08T10:02:09
+# Schema: Information-Resource-Registry-Schema
 #
-# id: https://w3id.org/biolink/information-resource-registry
-# description: The information resource registry is a listing of data sources present in the NCATS Data Translator system.  Each information resource has an identifier, a short description, and an URL to more information about that resource.
-# license: Apache Software License 2.0
+# id: https://w3id.org/biolink/information_resource_registry.yaml
+# description:
+# license: https://creativecommons.org/publicdomain/zero/1.0/
 
 import dataclasses
 import re
@@ -21,154 +21,193 @@ from linkml_runtime.utils.formatutils import camelcase, underscore, sfx
 from linkml_runtime.utils.enumerations import EnumDefinitionImpl
 from rdflib import Namespace, URIRef
 from linkml_runtime.utils.curienamespace import CurieNamespace
-from linkml_runtime.linkml_model.types import Date, Integer, String, Uriorcurie
-from linkml_runtime.utils.metamodelcore import URIorCURIE, XSDDate
+from linkml_runtime.linkml_model.types import String
 
 metamodel_version = "1.7.0"
-version = None
+version = "1.0.0"
 
 # Overwrite dataclasses _init_fn to add **kwargs in __init__
 dataclasses._init_fn = dataclasses_init_fn_with_kwargs
 
 # Namespaces
-PATO = CurieNamespace('PATO', 'http://purl.obolibrary.org/obo/PATO_')
-BIOLINK = CurieNamespace('biolink', 'https://w3id.org/biolink/')
-EXAMPLE = CurieNamespace('example', 'https://example.org/')
-INFORMATION_RESOURCE_REGISTRY = CurieNamespace('information_resource_registry', 'https://w3id.org/biolink/information-resource-registry/')
+BIOGRID = CurieNamespace('BIOGRID', 'http://identifiers.org/biogrid/')
+SO = CurieNamespace('SO', 'http://purl.obolibrary.org/obo/SO_')
+BIOLINK = CurieNamespace('biolink', 'https://w3id.org/biolink/vocab/')
+INFORES = CurieNamespace('infores', 'https://w3id.org/biolink/vocab/')
 LINKML = CurieNamespace('linkml', 'https://w3id.org/linkml/')
-SCHEMA = CurieNamespace('schema', 'http://schema.org/')
-DEFAULT_ = INFORMATION_RESOURCE_REGISTRY
+OBOINOWL = CurieNamespace('oboInOwl', 'http://www.geneontology.org/formats/oboInOwl#')
+RDF = CurieNamespace('rdf', 'http://www.w3.org/1999/02/22-rdf-syntax-ns#')
+RDFS = CurieNamespace('rdfs', 'http://www.w3.org/2000/01/rdf-schema#')
+SKOS = CurieNamespace('skos', 'http://www.w3.org/2004/02/skos/core#')
+XSD = CurieNamespace('xsd', 'http://www.w3.org/2001/XMLSchema#')
+DEFAULT_ = INFORES
 
 
 # Types
 
 # Class references
-class NamedThingId(URIorCURIE):
-    pass
 
-
-class InformationResourceContainerId(NamedThingId):
-    pass
 
 
 @dataclass
-class NamedThing(YAMLRoot):
+class InformationResourceContainer(YAMLRoot):
     """
-    A generic grouping for any identifiable entity
+    A collection of information resources
     """
     _inherited_slots: ClassVar[List[str]] = []
 
-    class_class_uri: ClassVar[URIRef] = SCHEMA["Thing"]
-    class_class_curie: ClassVar[str] = "schema:Thing"
-    class_name: ClassVar[str] = "NamedThing"
-    class_model_uri: ClassVar[URIRef] = INFORMATION_RESOURCE_REGISTRY.NamedThing
+    class_class_uri: ClassVar[URIRef] = BIOLINK["InformationResourceContainer"]
+    class_class_curie: ClassVar[str] = "biolink:InformationResourceContainer"
+    class_name: ClassVar[str] = "InformationResourceContainer"
+    class_model_uri: ClassVar[URIRef] = INFORES.InformationResourceContainer
 
-    id: Union[str, NamedThingId] = None
+    information_resources: Optional[Union[Union[dict, "InformationResource"], List[Union[dict, "InformationResource"]]]] = empty_list()
+
+    def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
+        if not isinstance(self.information_resources, list):
+            self.information_resources = [self.information_resources] if self.information_resources is not None else []
+        self.information_resources = [v if isinstance(v, InformationResource) else InformationResource(**as_dict(v)) for v in self.information_resources]
+
+        super().__post_init__(**kwargs)
+
+
+@dataclass
+class InformationResource(YAMLRoot):
+    """
+    A database or knowledgebase and its supporting ecosystem of interfaces and services that deliver content to
+    consumers (e.g. web portals, APIs, query endpoints, streaming services, data downloads, etc.). A single
+    Information Resource by this definition may span many different datasets or databases, and include many access
+    endpoints and user interfaces. Information Resources include project-specific resources such as a Translator
+    Knowledge Provider, and community knowledgebases like ChemBL, OMIM, or DGIdb.
+    """
+    _inherited_slots: ClassVar[List[str]] = []
+
+    class_class_uri: ClassVar[URIRef] = BIOLINK["InformationResource"]
+    class_class_curie: ClassVar[str] = "biolink:InformationResource"
+    class_name: ClassVar[str] = "InformationResource"
+    class_model_uri: ClassVar[URIRef] = INFORES.InformationResource
+
+    id: str = None
+    status: Optional[Union[str, "InformationResourceStatusEnum"]] = None
     name: Optional[str] = None
+    xref: Optional[Union[str, List[str]]] = empty_list()
+    synonym: Optional[Union[str, List[str]]] = empty_list()
     description: Optional[str] = None
+    knowledge_level: Optional[Union[str, "KnowledgeLevelEnum"]] = None
+    agent_type: Optional[Union[str, "AgentTypeEnum"]] = None
 
     def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
         if self._is_empty(self.id):
             self.MissingRequiredField("id")
-        if not isinstance(self.id, NamedThingId):
-            self.id = NamedThingId(self.id)
+        if not isinstance(self.id, str):
+            self.id = str(self.id)
+
+        if self.status is not None and not isinstance(self.status, InformationResourceStatusEnum):
+            self.status = InformationResourceStatusEnum(self.status)
 
         if self.name is not None and not isinstance(self.name, str):
             self.name = str(self.name)
 
+        if not isinstance(self.xref, list):
+            self.xref = [self.xref] if self.xref is not None else []
+        self.xref = [v if isinstance(v, str) else str(v) for v in self.xref]
+
+        if not isinstance(self.synonym, list):
+            self.synonym = [self.synonym] if self.synonym is not None else []
+        self.synonym = [v if isinstance(v, str) else str(v) for v in self.synonym]
+
         if self.description is not None and not isinstance(self.description, str):
             self.description = str(self.description)
 
-        super().__post_init__(**kwargs)
+        if self.knowledge_level is not None and not isinstance(self.knowledge_level, KnowledgeLevelEnum):
+            self.knowledge_level = KnowledgeLevelEnum(self.knowledge_level)
 
-
-@dataclass
-class InformationResourceContainer(NamedThing):
-    """
-    Represents a InformationResourceContainer
-    """
-    _inherited_slots: ClassVar[List[str]] = []
-
-    class_class_uri: ClassVar[URIRef] = INFORMATION_RESOURCE_REGISTRY["InformationResourceContainer"]
-    class_class_curie: ClassVar[str] = "information_resource_registry:InformationResourceContainer"
-    class_name: ClassVar[str] = "InformationResourceContainer"
-    class_model_uri: ClassVar[URIRef] = INFORMATION_RESOURCE_REGISTRY.InformationResourceContainer
-
-    id: Union[str, InformationResourceContainerId] = None
-    primary_email: Optional[str] = None
-    birth_date: Optional[Union[str, XSDDate]] = None
-    age_in_years: Optional[int] = None
-    vital_status: Optional[Union[str, "PersonStatus"]] = None
-
-    def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
-        if self._is_empty(self.id):
-            self.MissingRequiredField("id")
-        if not isinstance(self.id, InformationResourceContainerId):
-            self.id = InformationResourceContainerId(self.id)
-
-        if self.primary_email is not None and not isinstance(self.primary_email, str):
-            self.primary_email = str(self.primary_email)
-
-        if self.birth_date is not None and not isinstance(self.birth_date, XSDDate):
-            self.birth_date = XSDDate(self.birth_date)
-
-        if self.age_in_years is not None and not isinstance(self.age_in_years, int):
-            self.age_in_years = int(self.age_in_years)
-
-        if self.vital_status is not None and not isinstance(self.vital_status, PersonStatus):
-            self.vital_status = PersonStatus(self.vital_status)
+        if self.agent_type is not None and not isinstance(self.agent_type, AgentTypeEnum):
+            self.agent_type = AgentTypeEnum(self.agent_type)
 
         super().__post_init__(**kwargs)
 
 
-@dataclass
-class InformationResourceContainerCollection(YAMLRoot):
-    """
-    A holder for InformationResourceContainer objects
-    """
-    _inherited_slots: ClassVar[List[str]] = []
+# Enumerations
+class InformationResourceStatusEnum(EnumDefinitionImpl):
 
-    class_class_uri: ClassVar[URIRef] = INFORMATION_RESOURCE_REGISTRY["InformationResourceContainerCollection"]
-    class_class_curie: ClassVar[str] = "information_resource_registry:InformationResourceContainerCollection"
-    class_name: ClassVar[str] = "InformationResourceContainerCollection"
-    class_model_uri: ClassVar[URIRef] = INFORMATION_RESOURCE_REGISTRY.InformationResourceContainerCollection
+    released = PermissibleValue(text="released")
+    deprecated = PermissibleValue(text="deprecated")
+    draft = PermissibleValue(text="draft")
+    modified = PermissibleValue(text="modified")
 
-    entries: Optional[Union[Dict[Union[str, InformationResourceContainerId], Union[dict, InformationResourceContainer]], List[Union[dict, InformationResourceContainer]]]] = empty_dict()
+    _defn = EnumDefinition(
+        name="InformationResourceStatusEnum",
+    )
 
-    def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
-        self._normalize_inlined_as_dict(slot_name="entries", slot_type=InformationResourceContainer, key_name="id", keyed=True)
+class KnowledgeLevelEnum(EnumDefinitionImpl):
 
-        super().__post_init__(**kwargs)
+    curated = PermissibleValue(
+        text="curated",
+        description="""knowledge generated through manual curation  or interpretation of data or published study results""")
+    predicted = PermissibleValue(
+        text="predicted",
+        description="""predictions generated computationally through inference over less direct forms of evidence (without human  intervention or review)""")
+    text_mined = PermissibleValue(
+        text="text_mined",
+        description="knowledge extracted from published text by NLP agents (without human intervention or review)")
+    correlation = PermissibleValue(
+        text="correlation",
+        description="""statistical correlations calculated between variables in a clinical or omics dataset, by an automated  analysis pipeline""")
+    observed = PermissibleValue(
+        text="observed",
+        description="""edge reports a phenomenon that was reported/observed to have occurred (and possibly some quantification,  e.g. how many times, at what frequency)""")
+    other = PermissibleValue(
+        text="other",
+        description="knowledge level may not fit into the categories above, or is not provided/known")
+    mixed = PermissibleValue(
+        text="mixed",
+        description="""used for sources that might provide edges with different knowledge levels, e.g.correlations in addition to  curated Edges - set tag to Curated, unless predicate rules override""")
 
+    _defn = EnumDefinition(
+        name="KnowledgeLevelEnum",
+    )
+
+class AgentTypeEnum(EnumDefinitionImpl):
+
+    not_provided = PermissibleValue(
+        text="not_provided",
+        description="agent type is not provided or known")
+    computational_model = PermissibleValue(
+        text="computational_model",
+        description="a computational model, such as a machine learning model")
+
+    _defn = EnumDefinition(
+        name="AgentTypeEnum",
+    )
 
 # Slots
 class slots:
     pass
 
-slots.id = Slot(uri=SCHEMA.identifier, name="id", curie=SCHEMA.curie('identifier'),
-                   model_uri=INFORMATION_RESOURCE_REGISTRY.id, domain=None, range=URIRef)
+slots.status = Slot(uri=INFORES.status, name="status", curie=INFORES.curie('status'),
+                   model_uri=INFORES.status, domain=None, range=Optional[Union[str, "InformationResourceStatusEnum"]])
 
-slots.name = Slot(uri=SCHEMA.name, name="name", curie=SCHEMA.curie('name'),
-                   model_uri=INFORMATION_RESOURCE_REGISTRY.name, domain=None, range=Optional[str])
+slots.information_resources = Slot(uri=INFORES.information_resources, name="information_resources", curie=INFORES.curie('information_resources'),
+                   model_uri=INFORES.information_resources, domain=None, range=Optional[Union[Union[dict, InformationResource], List[Union[dict, InformationResource]]]])
 
-slots.description = Slot(uri=SCHEMA.description, name="description", curie=SCHEMA.curie('description'),
-                   model_uri=INFORMATION_RESOURCE_REGISTRY.description, domain=None, range=Optional[str])
+slots.name = Slot(uri=RDFS.label, name="name", curie=RDFS.curie('label'),
+                   model_uri=INFORES.name, domain=None, range=Optional[str])
 
-slots.primary_email = Slot(uri=SCHEMA.email, name="primary_email", curie=SCHEMA.curie('email'),
-                   model_uri=INFORMATION_RESOURCE_REGISTRY.primary_email, domain=None, range=Optional[str])
+slots.id = Slot(uri=INFORES.id, name="id", curie=INFORES.curie('id'),
+                   model_uri=INFORES.id, domain=None, range=str)
 
-slots.birth_date = Slot(uri=SCHEMA.birthDate, name="birth_date", curie=SCHEMA.curie('birthDate'),
-                   model_uri=INFORMATION_RESOURCE_REGISTRY.birth_date, domain=None, range=Optional[Union[str, XSDDate]])
+slots.xref = Slot(uri=INFORES.xref, name="xref", curie=INFORES.curie('xref'),
+                   model_uri=INFORES.xref, domain=None, range=Optional[Union[str, List[str]]])
 
-slots.age_in_years = Slot(uri=INFORMATION_RESOURCE_REGISTRY.age_in_years, name="age_in_years", curie=INFORMATION_RESOURCE_REGISTRY.curie('age_in_years'),
-                   model_uri=INFORMATION_RESOURCE_REGISTRY.age_in_years, domain=None, range=Optional[int])
+slots.synonym = Slot(uri=INFORES.synonym, name="synonym", curie=INFORES.curie('synonym'),
+                   model_uri=INFORES.synonym, domain=None, range=Optional[Union[str, List[str]]])
 
-slots.vital_status = Slot(uri=INFORMATION_RESOURCE_REGISTRY.vital_status, name="vital_status", curie=INFORMATION_RESOURCE_REGISTRY.curie('vital_status'),
-                   model_uri=INFORMATION_RESOURCE_REGISTRY.vital_status, domain=None, range=Optional[Union[str, "PersonStatus"]])
+slots.description = Slot(uri=INFORES.description, name="description", curie=INFORES.curie('description'),
+                   model_uri=INFORES.description, domain=None, range=Optional[str])
 
-slots.informationResourceContainerCollection__entries = Slot(uri=INFORMATION_RESOURCE_REGISTRY.entries, name="informationResourceContainerCollection__entries", curie=INFORMATION_RESOURCE_REGISTRY.curie('entries'),
-                   model_uri=INFORMATION_RESOURCE_REGISTRY.informationResourceContainerCollection__entries, domain=None, range=Optional[Union[Dict[Union[str, InformationResourceContainerId], Union[dict, InformationResourceContainer]], List[Union[dict, InformationResourceContainer]]]])
+slots.knowledge_level = Slot(uri=INFORES.knowledge_level, name="knowledge level", curie=INFORES.curie('knowledge_level'),
+                   model_uri=INFORES.knowledge_level, domain=None, range=Optional[Union[str, "KnowledgeLevelEnum"]])
 
-slots.InformationResourceContainer_primary_email = Slot(uri=SCHEMA.email, name="InformationResourceContainer_primary_email", curie=SCHEMA.curie('email'),
-                   model_uri=INFORMATION_RESOURCE_REGISTRY.InformationResourceContainer_primary_email, domain=InformationResourceContainer, range=Optional[str],
-                   pattern=re.compile(r'^\S+@[\S+\.]+\S+'))
+slots.agent_type = Slot(uri=INFORES.agent_type, name="agent type", curie=INFORES.curie('agent_type'),
+                   model_uri=INFORES.agent_type, domain=None, range=Optional[Union[str, "AgentTypeEnum"]])

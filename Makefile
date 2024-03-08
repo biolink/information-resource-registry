@@ -91,7 +91,7 @@ gen-examples:
 	cp src/data/examples/* $(EXAMPLEDIR)
 
 infores:
-	$(RUN) gen-python src/information_resource_registry/schema/information_resource_registry.yaml > information_resource_registry.py
+	$(RUN) gen-python src/information_resource_registry/schema/information_resource_registry.yaml > src/information_resource_registry/datamodel/information_resource_registry.py
 
 validate_infores:
 	$(RUN) python src/information_resource_registry/scripts/verify_infores.py

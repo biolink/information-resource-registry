@@ -601,7 +601,7 @@
   "source_file": "information_resource_registry.yaml",
   "source_file_date": "2024-03-08T09:30:24",
   "source_file_size": 6451,
-  "generation_date": "2024-03-08T09:39:07",
+  "generation_date": "2024-03-08T10:01:57",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/information_resource_registry.context.jsonld",

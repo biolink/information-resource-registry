@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "information-resource-registry"
-version = "0.0.0"
+version = "1.0.0"
 description = "A registry of information resources used in NCATS Data Translator"
 authors = ["Sierra Moxon <smoxon@lbl.gov>"]
 license = "MIT"
