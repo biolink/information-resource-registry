@@ -266,7 +266,7 @@ information_resources:
     status: released
     name: Automat ICEES KG
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/Exposures-Provider-ICEES
+      - https://github.com/NCATSTranslator/Translator-All/wiki/Automat
     knowledge level: correlation
     agent type: not_provided
   - id: infores:automat-intact
@@ -373,7 +373,7 @@ information_resources:
       A graph representation of Ubergraph, an integration of ontologies
       including GO, CHEBI, Uberon, and HPO.
   - id: infores:automat-ubergraph-nonredundant
-    status: released
+    status: deprecated
     name: Automat Ubergraph Nonredundant
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/Automat
@@ -626,7 +626,7 @@ information_resources:
     status: released
     name: Providence St. Joseph EHR Data
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/EHR-Data
+      - https://github.com/NCATSTranslator/Translator-All/wiki/EHR-KP-Providence-Health-Systems-and-Affiliates-Data
     knowledge level: curated
     agent type: not_provided
     description: >-
@@ -734,7 +734,7 @@ information_resources:
     status: deprecated
     name: Multiomics TCGA Mutation Frequency KP API
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/Exposures-Provider-CAM-AOP
+      - https://github.com/NCATSTranslator/Translator-All/wiki/Big-GIM-II:-Tumor-gene-mutation-KP
     knowledge level: correlation
     agent type: not_provided
     description: Documentation of the TCGA Mutation Frequency KP query web services.
@@ -859,10 +859,10 @@ information_resources:
     agent type: not_provided
     description: a freely available dictionary of molecular entities focused on ‘small’ chemical compounds
   - id: infores:chem2bio2rdf
-    status: released
+    status: deprecated
     name: Chem2bio2RDF
     xref:
-      - http://cheminfov.informatics.indiana.edu:8080/c2b2r/
+      - https://github.com/NCATSTranslator/Translator-All/wiki/Chem2bio2RDF
     knowledge level: curated
     agent type: not_provided
   - id: infores:chembank
@@ -890,7 +890,7 @@ information_resources:
     status: deprecated
     name: Chemotext
     xref:
-      - http://chemotext.mml.unc.edu/
+      - https://github.com/NCATSTranslator/Translator-All/wiki/Chemotext
     knowledge level: curated
     agent type: not_provided
   - id: infores:civic
@@ -1581,7 +1581,7 @@ information_resources:
     status: released
     name: GeneProf
     xref:
-      - https://bio.tools/geneprof
+      - https://github.com/NCATSTranslator/Translator-All/wiki/GeneProf
     knowledge level: curated
     agent type: not_provided
     description: underlying resource is throwing 404 error atm
@@ -1709,7 +1709,7 @@ information_resources:
     status: released
     name: Healthcare Common Procedure Coding System (from UMLS)
     xref:
-      - https://www.cms.gov/medicare/coding/medhcpcsgeninfo
+      - https://github.com/NCATSTranslator/Translator-All/wiki/HCPCS-Version-of-Current-Procedural-Terminology
     knowledge level: curated
     agent type: not_provided
   - id: infores:hcpcs-cpt-umls
@@ -1837,7 +1837,7 @@ information_resources:
     status: released
     name: ICEES (Integrated Clinical and Environmental Exposures Service)
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/ICEES
+      - https://github.com/NCATSTranslator/Translator-All/wiki/ICEES-KG
     synonym:
       - KP
     knowledge level: correlation
@@ -1956,6 +1956,17 @@ information_resources:
       - https://archive.translator.ncats.io/
     knowledge level: curated
     agent type: not_provided
+  - id: infores:kinace
+    status: released
+    name: KinAce
+    xref:
+      - https://github.com/NCATSTranslator/Translator-All/wiki/KinAce
+    knowledge level: curated
+    agent type: not_provided
+    description: >-
+      https://kinace.kinametrix.com/#section-about
+      The KinAce web portal aggregates and visualizes the network of interactions between protein-kinases and their substrates in the human genome. 
+      To begin, click on one of the tabs above. Each tab provides a unique way to select a set of proteins and display the known kinase-substrate interactions between them.
   - id: infores:kinomescan
     status: released
     name: KINOMEscan
@@ -2364,10 +2375,10 @@ information_resources:
     status: deprecated
     name: National Drug Data File (NDDF) (from UMLS)
   - id: infores:ndex
-    status: released
+    status: deprecated
     name: NDEx
     xref:
-      - http://www.ndexbio.org
+      - https://github.com/NCATSTranslator/Translator-All/wiki/NDEx
     knowledge level: curated
     agent type: not_provided
   - id: infores:ndfrt
@@ -2378,14 +2389,14 @@ information_resources:
     knowledge level: curated
     agent type: not_provided
   - id: infores:nexo-align
-    status: released
+    status: deprecated
     name: NEXO Align Ontology
     xref:
-      - http://nexo.ucsd.edu/
+      - https://github.com/NCATSTranslator/Translator-All/wiki/NEXO-Align-Ontology
     knowledge level: curated
     agent type: not_provided
   - id: infores:nexo-construct
-    status: released
+    status: deprecated
     name: NEXO Construct Ontology
     xref:
       - http://nexo.ucsd.edu/
@@ -2402,7 +2413,7 @@ information_resources:
     status: released
     name: nSides
     xref:
-      - https://www.nsides.io/
+      - https://github.com/NCATSTranslator/Translator-All/wiki/nSides
     knowledge level: curated
     agent type: not_provided
   - id: infores:ols
@@ -2478,19 +2489,6 @@ information_resources:
       - https://github.com/NCATSTranslator/Translator-All/wiki/OpenPredict-KP
     knowledge level: predicted
     agent type: not_provided
-    description: >-
-      Get predicted targets for a given entity.  The potential drugs treating
-      a given disease, or the potential diseases a given drug could treat. 
-      Use the `/predict` operation to easily retrieve predictions for a given entity
-      (operation annotated for the 
-      [BioThings Explorer](https://x-bte-extension.readthedocs.io/en/latest/x-bte-kgs-operations.html)).
-      Predictions are currently produced using the 
-      [PREDICT method](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3159979/)
-      from the [fair-workflows/openpredict](https://github.com/fair-workflows/openpredict)
-      project.  You can also install the [OpenPredict Python package](https://pypi.org/project/openpredict/)
-      to train and serve a new model yourself. More documentation available at 
-      https://github.com/MaastrichtU-IDS/translator-openpredict/actions/workflows/run-tests-prod.yml. Service
-      supported by the [NCATS Translator project](https://ncats.nih.gov/translator/about)
   - id: infores:ordo
     status: released
     name: Orphanet Rare Disease Ontology
@@ -2801,7 +2799,7 @@ information_resources:
     knowledge level: curated
     agent type: not_provided
   - id: infores:robokp-ranker
-    status: released
+    status: deprecated
     name: ROBOKOP Ranker
     xref:
       - http://robokop.renci.org
@@ -3062,10 +3060,10 @@ information_resources:
       Aggregating and assessing experimental evidence for interpretable,
       explainable, accountable gene-trait associations.
   - id: infores:textmining-kp
-    status: released
+    status: deprecated
     name: Text Mining KP
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/Text-Mining-Provider-KG
+      - https://github.com/NCATSTranslator/Translator-All/wiki/Text%E2%80%90mined-Assertion-KP
     knowledge level: text_mined
     agent type: not_provided
   - id: infores:text-mining-provider-cooccurrence
@@ -3074,7 +3072,7 @@ information_resources:
     knowledge level: text_mined
     agent type: not_provided
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/Text-Mining-Provider
+      - https://github.com/NCATSTranslator/Translator-All/wiki/Literature-Cooccurrence-KP
     description: >-
       API serving a knowledge graph comprised of pairs of concepts that
       have been found to co-occur in the scientific literature. Here, cooccurrence of
@@ -3086,7 +3084,7 @@ information_resources:
     knowledge level: text_mined
     agent type: not_provided
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/Text-Mining-Provider
+      - https://github.com/NCATSTranslator/Translator-All/wiki/Text%E2%80%90mined-Assertion-KP
     description: >-
       API serving explicitly targeted Biolink Associations extracted from
       sentences in the scientific literature. Here, targeted refers to the fact that
@@ -3105,7 +3103,7 @@ information_resources:
     status: released
     name: NHLBI Trans-Omics for Precision Medicine
     xref:
-      - https://www.nhlbi.nih.gov/science/trans-omics-precision-medicine-topmed-program
+      - https://github.com/NCATSTranslator/Translator-All/wiki/NHLBI-Trans-Omics-for-Precision-Medicine
     synonym:
       - TOPMed
     knowledge level: curated
@@ -3379,7 +3377,7 @@ information_resources:
     status: released
     name: Richards Effector Gene List
     xref:
-      - https://www.mcgill.ca/genepi/
+      - https://github.com/NCATSTranslator/Translator-All/wiki/Richards-Effector-Gene-List
     knowledge level: curated
     agent type: not_provided
     description: An effector index to predict target genes at GWAS loci
@@ -3387,7 +3385,7 @@ information_resources:
     status: released
     name: The Human Reference Protein Interactome Mapping Project
     xref:
-      - http://www.interactome-atlas.org/download
+      - https://github.com/NCATSTranslator/Translator-All/wiki/The-Human-Reference-Protein-Interactome
     synonym:
       - HuRI
     knowledge level: curated
