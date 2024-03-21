@@ -1,10 +1,3 @@
----
-title: "Knowledge Source Retrieval Provenance"
-parent: "Biolink Model Guidelines"
-layout: default
-nav_order: 9
----
-
 # Knowledge Source Retrieval Provenance
 
 ### What is Source Retrieval Provenance?

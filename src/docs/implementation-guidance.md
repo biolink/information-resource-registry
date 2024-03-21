@@ -6,29 +6,32 @@ source retrieval provenance edge properties described above as its key.
 ## Adding a new Information Resource entry: 
 
 If there is no record in the catalog for a given resource, users should make a pull request that adds a row for the 
-missing resource directly to the google sheet. Minimally, add the ‘name’ and ‘url’ for the resource (if one exists). 
+missing resource. Minimally, add the ‘name’ and ‘url’ for the resource.  The 'url' field should point to a page in 
+the Translator Resource Wiki: https://github.com/NCATSTranslator/Translator-All/wiki/.  Please at least have a stub wiki
+page filled out for any new information resource added to the catalog via a pull request.  Information about the format
+of the wiki page can be found in the [Translator Resource Wiki](https://github.com/NCATSTranslator/Translator-All/wiki/).
+
 You may also suggest an infores CURIE in the ‘id’ column, and populate any of the other metadata columns as desired 
-(see Appendices 1 and 2 for more guidance)  Tag an SRI curator (@sierra-moxon or @mbrush) as a reviewer, who 
-will review and finalize the request. 
+(see [Appendices 1 and 2](appendices.md) for more guidance).  PRs will require a review by any member of the Infores Catalog team.  
 
 ## Editing metadata for an existing entry: 
 
 KP / ARA representatives can create a pull request to add or edit the metadata provided for an existing resource in 
-much the same manner as adding a new resource.  Tag an SRI curator (@sierra-moxon or @mbrush) as a reviewer, who will 
-review and finalize the request.
-
+much the same manner as adding a new resource.  Please note, that a record that is no longer being used or should 
+otherwise be "deprecated" should set the "status" field in an information resource record to "deprecated" instead
+of being deleted from the registry.  This helps maintain provenance of the ids minted in this registry.
 
 ## Modifying an existing Information Resource entry in the registry:
 
-Making changes to the registry MUST be done via pull requests to the biolink-model github repository.  Any of the 
+Making changes to the registry to the information-resource-registry github repository.  Any of the 
 fields in an Information Resource entry can be modified, but the id field MUST not be changed.  If the id field is
 changed, it MUST be treated as a new entry and the old entry MUST be deprecated. 
 
 ## Adding a new Information Resource entry to the registry: 
 
-Adding a new entry to the registry is as easy as adding a stanza to the information_resource_registry.yaml file in the biolink-model
+Adding a new entry to the registry is as easy as adding a stanza to the information_resource_registry.yaml file in the
 repository and submitting the change via pull request in the repository.  Alternatively, making a ticket for a new
-resource in the biolink-model GitHub repository will also work.  
+resource in the information-resource-registry GitHub repository will also work.  
 
 ## Minting new Information Resource identifiers:
 
@@ -51,10 +54,9 @@ information_resource_registry.yaml file:
   status: released
 ```
 
-
 ## Removing an infores stanza from the registry:
 
 In an effort to maintain the integrity of the applications that use the Information Resource Registry identifiers downstream, 
 we will not be removing entries from the registry.  But, if an information resource is no longer available, we will
-mark it as deprecated in the registry and downstream applications (like the Biolink Model Toolkit) will no longer
+mark it as deprecated in the registry and downstream applications will no longer
 serve deprecated Information Resources from their methods.  

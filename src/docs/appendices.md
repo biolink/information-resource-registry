@@ -13,7 +13,7 @@ identifier component (e.g. ‘infores:dgidb’)
 * **synonym**:
   * other names for the resource (will facilitate search/discovery)
 * **url**: 
-  * a url describing the resource - preferably its primary home page for the resource (if one exists)
+  * a url describing the resource - this should be a Translator Wiki page following the templating guidance in that resource.
 * **description**: 
   * a free text description of the resource
 
