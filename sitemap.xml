@@ -2,202 +2,202 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://biolink.github.io/information-resource-registry/</loc>
-         <lastmod>2024-03-15</lastmod>
+         <lastmod>2024-03-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/AgentTypeEnum/</loc>
-         <lastmod>2024-03-15</lastmod>
+         <lastmod>2024-03-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/Boolean/</loc>
-         <lastmod>2024-03-15</lastmod>
+         <lastmod>2024-03-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/Curie/</loc>
-         <lastmod>2024-03-15</lastmod>
+         <lastmod>2024-03-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/Date/</loc>
-         <lastmod>2024-03-15</lastmod>
+         <lastmod>2024-03-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/DateOrDatetime/</loc>
-         <lastmod>2024-03-15</lastmod>
+         <lastmod>2024-03-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/Datetime/</loc>
-         <lastmod>2024-03-15</lastmod>
+         <lastmod>2024-03-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/Decimal/</loc>
-         <lastmod>2024-03-15</lastmod>
+         <lastmod>2024-03-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/Double/</loc>
-         <lastmod>2024-03-15</lastmod>
+         <lastmod>2024-03-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/Float/</loc>
-         <lastmod>2024-03-15</lastmod>
+         <lastmod>2024-03-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/Information-Resource-Registry-Schema/</loc>
-         <lastmod>2024-03-15</lastmod>
+         <lastmod>2024-03-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/InformationResource/</loc>
-         <lastmod>2024-03-15</lastmod>
+         <lastmod>2024-03-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/InformationResourceContainer/</loc>
-         <lastmod>2024-03-15</lastmod>
+         <lastmod>2024-03-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/InformationResourceStatusEnum/</loc>
-         <lastmod>2024-03-15</lastmod>
+         <lastmod>2024-03-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/Integer/</loc>
-         <lastmod>2024-03-15</lastmod>
+         <lastmod>2024-03-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/Jsonpath/</loc>
-         <lastmod>2024-03-15</lastmod>
+         <lastmod>2024-03-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/Jsonpointer/</loc>
-         <lastmod>2024-03-15</lastmod>
+         <lastmod>2024-03-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/KnowledgeLevelEnum/</loc>
-         <lastmod>2024-03-15</lastmod>
+         <lastmod>2024-03-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/Ncname/</loc>
-         <lastmod>2024-03-15</lastmod>
+         <lastmod>2024-03-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/Nodeidentifier/</loc>
-         <lastmod>2024-03-15</lastmod>
+         <lastmod>2024-03-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/Objectidentifier/</loc>
-         <lastmod>2024-03-15</lastmod>
+         <lastmod>2024-03-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/Sparqlpath/</loc>
-         <lastmod>2024-03-15</lastmod>
+         <lastmod>2024-03-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/String/</loc>
-         <lastmod>2024-03-15</lastmod>
+         <lastmod>2024-03-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/Time/</loc>
-         <lastmod>2024-03-15</lastmod>
+         <lastmod>2024-03-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/Uri/</loc>
-         <lastmod>2024-03-15</lastmod>
+         <lastmod>2024-03-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/Uriorcurie/</loc>
-         <lastmod>2024-03-15</lastmod>
+         <lastmod>2024-03-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/about/</loc>
-         <lastmod>2024-03-15</lastmod>
+         <lastmod>2024-03-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/agent_type/</loc>
-         <lastmod>2024-03-15</lastmod>
+         <lastmod>2024-03-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/appendices/</loc>
-         <lastmod>2024-03-15</lastmod>
+         <lastmod>2024-03-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/biolink-infores-parameters/</loc>
-         <lastmod>2024-03-15</lastmod>
+         <lastmod>2024-03-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/description/</loc>
-         <lastmod>2024-03-15</lastmod>
+         <lastmod>2024-03-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/id/</loc>
-         <lastmod>2024-03-15</lastmod>
+         <lastmod>2024-03-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/implementation-guidance/</loc>
-         <lastmod>2024-03-15</lastmod>
+         <lastmod>2024-03-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/information_resources/</loc>
-         <lastmod>2024-03-15</lastmod>
+         <lastmod>2024-03-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/knowledge-source-retrieval/</loc>
-         <lastmod>2024-03-15</lastmod>
+         <lastmod>2024-03-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/knowledge_level/</loc>
-         <lastmod>2024-03-15</lastmod>
+         <lastmod>2024-03-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/name/</loc>
-         <lastmod>2024-03-15</lastmod>
+         <lastmod>2024-03-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/status/</loc>
-         <lastmod>2024-03-15</lastmod>
+         <lastmod>2024-03-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/synonym/</loc>
-         <lastmod>2024-03-15</lastmod>
+         <lastmod>2024-03-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/xref/</loc>
-         <lastmod>2024-03-15</lastmod>
+         <lastmod>2024-03-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
