@@ -11,8 +11,8 @@ the Translator Resource Wiki: https://github.com/NCATSTranslator/Translator-All/
 page filled out for any new information resource added to the catalog via a pull request.  Information about the format
 of the wiki page can be found in the [Translator Resource Wiki](https://github.com/NCATSTranslator/Translator-All/wiki/).
 
-You may also suggest an infores CURIE in the ‘id’ column, and populate any of the other metadata columns as desired 
-(see [Appendices 1 and 2](appendices.md) for more guidance).  PRs will require a review by any member of the Infores Catalog team.  
+Please also suggest an infores CURIE in the ‘id’ field, (see [Appendices 1 and 2](appendices.md) for more guidance).  
+PRs will require a review.  
 
 ## Editing metadata for an existing entry: 
 
@@ -23,34 +23,32 @@ of being deleted from the registry.  This helps maintain provenance of the ids m
 
 ## Modifying an existing Information Resource entry in the registry:
 
-Making changes to the registry to the information-resource-registry github repository.  Any of the 
-fields in an Information Resource entry can be modified, but the id field MUST not be changed.  If the id field is
-changed, it MUST be treated as a new entry and the old entry MUST be deprecated. 
+Making changes to the registry to the information-resource-registry GitHub repository.  Any of the 
+fields in an Information Resource entry can be modified, but the id field must not be changed.  If the id field is
+changed, it must be treated as a new entry and the old entry must be deprecated. This gives downstream applications
+a chance to update their records to reflect the change and keeps links to the existing resource from breaking.
 
 ## Adding a new Information Resource entry to the registry: 
 
-Adding a new entry to the registry is as easy as adding a stanza to the information_resource_registry.yaml file in the
-repository and submitting the change via pull request in the repository.  Alternatively, making a ticket for a new
+Adding a new entry to the registry is as easy as adding a stanza to the infores_catalog.yaml file in the
+repository and submitting the change via pull request.  Alternatively, making a ticket for a new
 resource in the information-resource-registry GitHub repository will also work.  
 
 ## Minting new Information Resource identifiers:
 
 - Each smartAPI-registered Translator API gets its own InfoRes, as will each upstream source from which it aggregates knowledge.
   - Each upstream source from which a Translator API retrieves data computed on to generate knowledge will also get its own InfoRes.
-- Create an InfoRes IRI for each registered Biothings-generated API, that includes a 'biothings-' prefix in the identifier component. 
-If the resource whose content was wrapped in a Biothigns API is a pre-existing resource with established use and identity, an 
-InfoRes is created for it as well.
-- Identifiers should be short, readable, strings deliminated with a dash ('-').  These identifiers will be used 
+- Identifiers should be short, readable, strings delimited with a dash ('-').  These identifiers will be used 
 in user-facing applications and should be as readable as possible.
 - In general, the 'status' field of an Information Resource stanza should be one of two values: 'released' or 'deprecated'.
 
 The following is an example of a new entry in the
-information_resource_registry.yaml file:
+infores_catalog.yaml file:
 ```
 - id: infores:my-new-resource
   name: My New Resource
   description: This is a new resource
-  url: https://my-new-resource.org/
+  url: https://github.com/NCATSTranslator/Translator-All/wiki/my-new-resource
   status: released
 ```
 

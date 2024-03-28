@@ -13,7 +13,7 @@ identifier component (e.g. ‘infores:dgidb’)
 * **synonym**:
   * other names for the resource (will facilitate search/discovery)
 * **url**: 
-  * a url describing the resource - this should be a Translator Wiki page following the templating guidance in that resource.
+  * a url describing the resource - this should be a Translator Wiki page following the templating guidance in that resource
 * **description**: 
   * a free text description of the resource
 
@@ -40,7 +40,3 @@ for different scenarios / use cases we encounter in the registry.
  
 Aggregator Scenario: KPs/ARAs that aggregate content from one or more existing resource and transform the semantics 
 and or structure of the data to be better aligned with Translator standards
-
-Resource Examples:
-Molecular Data Provider, Biolink, ROBOKOP, SRI Reference KG, RTX KG2  (these aggregate content from multiple sources into a single KG / API)
-Automat APIs (stands up a separate API per source - each of which gets its own InfoRes)
