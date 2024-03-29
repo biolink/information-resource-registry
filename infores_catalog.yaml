@@ -2927,7 +2927,7 @@ information_resources:
     agent type: not_provided
     description: SPOKE KP - an NIH NCATS Knowledge Provider to expose UCSFs SPOKE
     xref:
-      - https://spoke.ucsf.edu/
+      - https://github.com/NCATSTranslator/Translator-All/wiki/SPOKE-KP
   - id: infores:sri-edge-normalization-service
     status: deprecated
     name: Edge Normalization Service
