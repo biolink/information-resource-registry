@@ -1621,6 +1621,7 @@ information_resources:
     status: released
     name: Gene Ontology Causal Activity Model Annotations
     xref:
+      - https://github.com/NCATSTranslator/Translator-All/wiki/GO-CAM
       - https://github.com/NCATSTranslator/Translator-All/wiki/GO%E2%80%90CAM
     synonym:
       - GO-CAM
