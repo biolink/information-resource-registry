@@ -1139,6 +1139,19 @@ information_resources:
     name: Current Procedural Terminology (CPT) Codes (from UMLS)
     knowledge level: curated
     agent type: not_provided
+  - id: infores:cqs
+    status: released
+    name: Translator Curated Query Service
+    xref:
+      - https://github.com/NCATSTranslator/Translator-All/wiki/Translator-Curated-Query-Service
+    synonym:
+      - CQS
+    knowledge level: predicted
+    agent type: not_provided
+    description: >-
+      The Translator Curated Query Service (CQS) is an SRI service that provides ARA-like capabilities. The service generates 
+    ‘predicted’ edges in response to inferred queries, based on customizable inference rules that are captured as CQS templates.
+    The CQS links predictions to their supporting aux graphs and attaches provenance metadata, and then scores the results.
   - id: infores:ctd
     status: released
     name: Comparative Toxicogenomics Database
