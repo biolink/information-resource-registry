@@ -1634,7 +1634,7 @@ information_resources:
     status: released
     name: Gene Ontology Causal Activity Model Annotations
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/GO%E2%80%90CAM
+      - https://github.com/NCATSTranslator/Translator-All/wiki/GO-CAM
     synonym:
       - GO-CAM
     knowledge level: curated
@@ -1656,7 +1656,7 @@ information_resources:
     knowledge level: curated
     agent type: not_provided
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/GO%E2%80%90Plus
+      - https://github.com/NCATSTranslator/Translator-All/wiki/GO-Plus
   - id: infores:human-goa
     status: released
     name: Human Gene Ontology Annotations
@@ -2048,7 +2048,7 @@ information_resources:
     status: released
     name: LOINC (from UMLS)
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/LOINC-%E2%80%90-UMLS
+      - https://github.com/NCATSTranslator/Translator-All/wiki/LOINC-from-UMLS
     knowledge level: curated
     agent type: not_provided
   - id: infores:mp
@@ -2823,7 +2823,7 @@ information_resources:
     status: released
     name: RTX KG2
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/RTX%E2%80%90KG2
+      - https://github.com/NCATSTranslator/Translator-All/wiki/RTX-KG2
     synonym:
       - Rtx-kg2
     knowledge level: curated
