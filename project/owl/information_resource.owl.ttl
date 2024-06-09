@@ -12,10 +12,10 @@
 infores:InformationResourceContainer a owl:Class ;
     rdfs:label "InformationResourceContainer" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:minCardinality 0 ;
+            owl:allValuesFrom infores:InformationResource ;
             owl:onProperty infores:information_resources ],
         [ a owl:Restriction ;
-            owl:allValuesFrom infores:InformationResource ;
+            owl:minCardinality 0 ;
             owl:onProperty infores:information_resources ],
         linkml:ClassDefinition ;
     skos:definition "A collection of information resources" ;
@@ -39,65 +39,65 @@ biolink:information_resource_registry.yaml.owl.ttl a owl:Ontology ;
 infores:InformationResource a owl:Class ;
     rdfs:label "InformationResource" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty infores:knowledge_level ],
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty infores:xref ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom infores:AgentTypeEnum ;
+            owl:onProperty infores:agent_type ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty infores:synonym ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty infores:agent_type ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty infores:name ],
         [ a owl:Restriction ;
             owl:minCardinality 1 ;
             owl:onProperty infores:id ],
         [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty infores:xref ],
+        [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
-            owl:onProperty infores:description ],
+            owl:onProperty infores:name ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty infores:name ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty infores:agent_type ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty infores:id ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty infores:status ],
         [ a owl:Restriction ;
             owl:allValuesFrom infores:KnowledgeLevelEnum ;
             owl:onProperty infores:knowledge_level ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty infores:name ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
             owl:onProperty infores:status ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty infores:description ],
-        [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
-            owl:onProperty infores:xref ],
+            owl:onProperty infores:description ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty infores:description ],
+            owl:onProperty infores:knowledge_level ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty infores:agent_type ],
+            owl:onProperty infores:description ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
             owl:onProperty infores:id ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty infores:xref ],
+            owl:maxCardinality 1 ;
+            owl:onProperty infores:description ],
         [ a owl:Restriction ;
             owl:allValuesFrom infores:InformationResourceStatusEnum ;
             owl:onProperty infores:status ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty infores:synonym ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty infores:agent_type ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty infores:name ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty infores:status ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom infores:AgentTypeEnum ;
-            owl:onProperty infores:agent_type ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty infores:name ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty infores:id ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty infores:knowledge_level ],
