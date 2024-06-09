@@ -2877,6 +2877,13 @@ information_resources:
       - https://github.com/NCATSTranslator/Translator-All/wiki/SIDER
     knowledge level: curated
     agent type: not_provided
+  - id: infores:signor
+    status: released
+    name: SIGNOR 3.0
+    xref:
+      - https://signor.uniroma2.it/
+    knowledge level: curated
+    agent type: not_provided
   - id: infores:smart-api
     status: released
     name: SmartAPI API
