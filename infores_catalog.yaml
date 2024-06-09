@@ -545,7 +545,7 @@ information_resources:
       - https://github.com/NCATSTranslator/Translator-All/wiki/BioThings-Explorer-(BTE)
     synonym:
       - BTE
-    knowledge level: other
+    knowledge level: predicted
     agent type: not_provided
   - id: infores:service-provider-trapi
     status: released
@@ -1139,6 +1139,19 @@ information_resources:
     name: Current Procedural Terminology (CPT) Codes (from UMLS)
     knowledge level: curated
     agent type: not_provided
+  - id: infores:cqs
+    status: released
+    name: Translator Curated Query Service
+    xref:
+      - https://github.com/NCATSTranslator/Translator-All/wiki/Translator-Curated-Query-Service
+    synonym:
+      - CQS
+    knowledge level: predicted
+    agent type: not_provided
+    description: >-
+      The Translator Curated Query Service (CQS) is an SRI service that provides ARA-like capabilities. The service generates 
+      ‘predicted’ edges in response to inferred queries, based on customizable inference rules that are captured as CQS templates.
+      The CQS links predictions to their supporting aux graphs and attaches provenance metadata, and then scores the results.
   - id: infores:ctd
     status: released
     name: Comparative Toxicogenomics Database
@@ -1621,7 +1634,7 @@ information_resources:
     status: released
     name: Gene Ontology Causal Activity Model Annotations
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/GO%E2%80%90CAM
+      - https://github.com/NCATSTranslator/Translator-All/wiki/GO-CAM
     synonym:
       - GO-CAM
     knowledge level: curated
@@ -1643,7 +1656,7 @@ information_resources:
     knowledge level: curated
     agent type: not_provided
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/GO%E2%80%90Plus
+      - https://github.com/NCATSTranslator/Translator-All/wiki/GO-Plus
   - id: infores:human-goa
     status: released
     name: Human Gene Ontology Annotations
@@ -2035,7 +2048,7 @@ information_resources:
     status: released
     name: LOINC (from UMLS)
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/LOINC-%E2%80%90-UMLS
+      - https://github.com/NCATSTranslator/Translator-All/wiki/LOINC-from-UMLS
     knowledge level: curated
     agent type: not_provided
   - id: infores:mp
@@ -2810,7 +2823,7 @@ information_resources:
     status: released
     name: RTX KG2
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/RTX%E2%80%90KG2
+      - https://github.com/NCATSTranslator/Translator-All/wiki/RTX-KG2
     synonym:
       - Rtx-kg2
     knowledge level: curated
@@ -2862,6 +2875,13 @@ information_resources:
     name: SIDER
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/SIDER
+    knowledge level: curated
+    agent type: not_provided
+  - id: infores:signor
+    status: released
+    name: SIGNOR 3.0
+    xref:
+      - https://signor.uniroma2.it/
     knowledge level: curated
     agent type: not_provided
   - id: infores:smart-api
@@ -2927,7 +2947,7 @@ information_resources:
     agent type: not_provided
     description: SPOKE KP - an NIH NCATS Knowledge Provider to expose UCSFs SPOKE
     xref:
-      - https://spoke.ucsf.edu/
+      - https://github.com/NCATSTranslator/Translator-All/wiki/SPOKE-KP
   - id: infores:sri-edge-normalization-service
     status: deprecated
     name: Edge Normalization Service
