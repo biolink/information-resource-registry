@@ -3331,6 +3331,17 @@ information_resources:
       - ZFIN
     knowledge level: curated
     agent type: not_provided
+  - id: infores:dailymed
+    status: released
+    name: DailyMed
+    xref:
+      - https://dailymed.nlm.nih.gov/dailymed/
+    description: >-
+      DailyMed provides high quality information about marketed drugs. This
+      information includes FDA labels (package inserts). This Web site provides health
+      information providers and the public with a standard, comprehensive, up-to-date,
+      look-up and download resource of medication content and labeling as found in medication
+      package inserts.
   - id: infores:ddinter
     status: released
     name: DDinter
