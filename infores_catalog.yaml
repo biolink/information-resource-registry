@@ -1147,7 +1147,7 @@ information_resources:
     synonym:
       - CQS
     knowledge level: predicted
-    agent type: not_provided
+    agent type: computational model
     description: >-
       The Translator Curated Query Service (CQS) is an SRI service that provides ARA-like capabilities. The service generates 
       ‘predicted’ edges in response to inferred queries, based on customizable inference rules that are captured as CQS templates.
