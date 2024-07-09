@@ -1146,7 +1146,7 @@ information_resources:
       - https://github.com/NCATSTranslator/Translator-All/wiki/Translator-Curated-Query-Service
     synonym:
       - CQS
-    knowledge level: predicted
+    knowledge level: prediction
     agent type: computational model
     description: >-
       The Translator Curated Query Service (CQS) is an SRI service that provides ARA-like capabilities. The service generates 
