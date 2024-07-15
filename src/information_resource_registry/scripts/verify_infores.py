@@ -65,13 +65,18 @@ class InformationResource:
                                                           "correlation",
                                                           "observed",
                                                           "other",
-                                                          "mixed"]:
+                                                          "mixed",
+                                                          "statistical_association",
+                                                          "knowledge_assertion"]:
                     print(infores)
                     print("Invalid infores knowledge level:" + infores.get("knowledge level")
                           + " for " + infores.get("name"))
                     raise ValueError("invalid knowledge level for " + infores.get("name") + " for " + infores.get("id"))
 
-                if infores.get("agent type") not in ["not_provided", "computational_model"]:
+                if infores.get("agent type") not in ["not_provided",
+                                                     "computational_model",
+                                                     "data_analysis_pipeline",
+                                                     "manual_agent"]:
                     print(infores)
                     print("Invalid infores agent type:" + infores.get("agent type") + " for " + infores.get("name"))
                     raise ValueError("invalid agent type for " + infores.get("name") + " for " + infores.get("id"))

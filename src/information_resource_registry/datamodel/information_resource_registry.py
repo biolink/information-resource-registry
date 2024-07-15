@@ -1,5 +1,5 @@
 # Auto generated from information_resource_registry.yaml by pythongen.py version: 0.0.1
-# Generation date: 2024-06-09T17:47:33
+# Generation date: 2024-07-15T15:42:45
 # Schema: Information-Resource-Registry-Schema
 #
 # id: https://w3id.org/biolink/information_resource_registry.yaml
@@ -151,9 +151,15 @@ class KnowledgeLevelEnum(EnumDefinitionImpl):
     such as a computational prediction and a manual curation. In this case, the knowledge level would be "curated",
     and the evidence would be described in more detail in the evidence graph.
     """
+    knowledge_assertion = PermissibleValue(
+        text="knowledge_assertion",
+        description="""knowledge asserted by a human expert, based on their interpretation of data or published study results""")
+    statistical_association = PermissibleValue(
+        text="statistical_association",
+        description="""statistical associations calculated between variables in a clinical or omics dataset, by an automated  analysis pipeline""")
     curated = PermissibleValue(
         text="curated",
-        description="""knowledge generated through manual curation  or interpretation of data or published study results""")
+        description="""knowledge generated through manual curation or interpretation of data or published study results""")
     predicted = PermissibleValue(
         text="predicted",
         description="""predictions generated computationally through inference over less direct forms of evidence (without human  intervention or review)""")
@@ -186,12 +192,18 @@ class AgentTypeEnum(EnumDefinitionImpl):
     computational prediction and a manual curation. In this case, the agent type would be "publication", and the
     evidence would be described in more detail in the evidence graph.
     """
+    manual_agent = PermissibleValue(
+        text="manual_agent",
+        description="a human agent, such as a curator or expert")
     not_provided = PermissibleValue(
         text="not_provided",
         description="agent type is not provided or known")
     computational_model = PermissibleValue(
         text="computational_model",
         description="a computational model, such as a machine learning model")
+    data_analysis_pipeline = PermissibleValue(
+        text="data_analysis_pipeline",
+        description="a data analysis pipeline, such as a bioinformatics pipeline")
 
     _defn = EnumDefinition(
         name="AgentTypeEnum",

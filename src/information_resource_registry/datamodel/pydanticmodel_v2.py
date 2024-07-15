@@ -47,7 +47,11 @@ class KnowledgeLevelEnum(str, Enum):
     """
     The level of knowledge that supports an edge or node.  This is a general categorization of the type of evidence that supports a statement, and is not intended to be a comprehensive description of the evidence.  For example, a statement may be supported by a single publication, but that publication may contain multiple types of evidence, such as a computational prediction and a manual curation.  In this case, the knowledge level would be "curated", and the evidence would be described in more detail in the evidence graph.
     """
-    # knowledge generated through manual curation  or interpretation of data or published study results
+    # knowledge asserted by a human expert, based on their interpretation of data or published study results
+    knowledge_assertion = "knowledge_assertion"
+    # statistical associations calculated between variables in a clinical or omics dataset, by an automated  analysis pipeline
+    statistical_association = "statistical_association"
+    # knowledge generated through manual curation or interpretation of data or published study results
     curated = "curated"
     # predictions generated computationally through inference over less direct forms of evidence (without human  intervention or review)
     predicted = "predicted"
@@ -68,10 +72,14 @@ class AgentTypeEnum(str, Enum):
     """
     The type of agent that supports an edge or node.  This is a general categorization of the type of agent that supports a statement, and is not intended to be a comprehensive description of the agent.  For example, a statement may be supported by a single publication, but that publication may contain multiple types of evidence, such as a computational prediction and a manual curation.  In this case, the agent type would be "publication", and the evidence would be described in more detail in the evidence graph.
     """
+    # a human agent, such as a curator or expert
+    manual_agent = "manual_agent"
     # agent type is not provided or known
     not_provided = "not_provided"
     # a computational model, such as a machine learning model
     computational_model = "computational_model"
+    # a data analysis pipeline, such as a bioinformatics pipeline
+    data_analysis_pipeline = "data_analysis_pipeline"
     
     
 
