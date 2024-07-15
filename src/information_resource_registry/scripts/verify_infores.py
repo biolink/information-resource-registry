@@ -65,13 +65,18 @@ class InformationResource:
                                                           "correlation",
                                                           "observed",
                                                           "other",
-                                                          "mixed"]:
+                                                          "mixed",
+                                                          "statistical_association",
+                                                          "knowledge_assertion"]:
                     print(infores)
                     print("Invalid infores knowledge level:" + infores.get("knowledge level")
                           + " for " + infores.get("name"))
                     raise ValueError("invalid knowledge level for " + infores.get("name") + " for " + infores.get("id"))
 
-                if infores.get("agent type") not in ["not_provided", "computational_model"]:
+                if infores.get("agent type") not in ["not_provided",
+                                                     "computational_model",
+                                                     "data_analysis_pipeline",
+                                                     "manual_agent"]:
                     print(infores)
                     print("Invalid infores agent type:" + infores.get("agent type") + " for " + infores.get("name"))
                     raise ValueError("invalid agent type for " + infores.get("name") + " for " + infores.get("id"))
@@ -90,6 +95,7 @@ class InformationResource:
                         or infores.get("id") == "infores:nsides" \
                         or infores.get("id") == "infores:irefindex" \
                         or infores.get("id") == "infores:kinomescan" \
+                        or infores.get("id") == "infores:community-sar" \
                         or infores.get("xref") is None \
                         or infores.get("status") == 'deprecated' \
                         or is_valid_urls(infores.get("xref")):
