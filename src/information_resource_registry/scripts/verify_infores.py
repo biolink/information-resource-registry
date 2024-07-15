@@ -95,6 +95,7 @@ class InformationResource:
                         or infores.get("id") == "infores:nsides" \
                         or infores.get("id") == "infores:irefindex" \
                         or infores.get("id") == "infores:kinomescan" \
+                        or infores.get("id") == "infores:community-sar" \
                         or infores.get("xref") is None \
                         or infores.get("status") == 'deprecated' \
                         or is_valid_urls(infores.get("xref")):
