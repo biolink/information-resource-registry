@@ -53,15 +53,19 @@ linkml:Sparqlpath xsd:string
           <xref> @linkml:String * ;
           <synonym> @linkml:String * ;
           rdfs:comment @linkml:String ? ;
-          <knowledge_level> [ <https://w3id.org/biolink/infores/KnowledgeLevelEnum#curated>
+          <knowledge_level> [ <https://w3id.org/biolink/infores/KnowledgeLevelEnum#knowledge_assertion>
+             <https://w3id.org/biolink/infores/KnowledgeLevelEnum#statistical_association>
+             <https://w3id.org/biolink/infores/KnowledgeLevelEnum#curated>
              <https://w3id.org/biolink/infores/KnowledgeLevelEnum#predicted>
              <https://w3id.org/biolink/infores/KnowledgeLevelEnum#text_mined>
              <https://w3id.org/biolink/infores/KnowledgeLevelEnum#correlation>
              <https://w3id.org/biolink/infores/KnowledgeLevelEnum#observed>
              <https://w3id.org/biolink/infores/KnowledgeLevelEnum#other>
              <https://w3id.org/biolink/infores/KnowledgeLevelEnum#mixed> ] ? ;
-          <agent_type> [ <https://w3id.org/biolink/infores/AgentTypeEnum#not_provided>
-             <https://w3id.org/biolink/infores/AgentTypeEnum#computational_model> ] ?
+          <agent_type> [ <https://w3id.org/biolink/infores/AgentTypeEnum#manual_agent>
+             <https://w3id.org/biolink/infores/AgentTypeEnum#not_provided>
+             <https://w3id.org/biolink/infores/AgentTypeEnum#computational_model>
+             <https://w3id.org/biolink/infores/AgentTypeEnum#data_analysis_pipeline> ] ?
        ) ;
        rdf:type [ <InformationResource> ] ?
     )

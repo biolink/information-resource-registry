@@ -375,8 +375,16 @@
       "from_schema": "https://w3id.org/biolink/information_resource_registry.yaml",
       "permissible_values": [
         {
+          "text": "knowledge_assertion",
+          "description": "knowledge asserted by a human expert, based on their interpretation of data or published study results"
+        },
+        {
+          "text": "statistical_association",
+          "description": "statistical associations calculated between variables in a clinical or omics dataset, by an automated  analysis pipeline"
+        },
+        {
           "text": "curated",
-          "description": "knowledge generated through manual curation  or interpretation of data or published study results"
+          "description": "knowledge generated through manual curation or interpretation of data or published study results"
         },
         {
           "text": "predicted",
@@ -411,12 +419,20 @@
       "from_schema": "https://w3id.org/biolink/information_resource_registry.yaml",
       "permissible_values": [
         {
+          "text": "manual_agent",
+          "description": "a human agent, such as a curator or expert"
+        },
+        {
           "text": "not_provided",
           "description": "agent type is not provided or known"
         },
         {
           "text": "computational_model",
           "description": "a computational model, such as a machine learning model"
+        },
+        {
+          "text": "data_analysis_pipeline",
+          "description": "a data analysis pipeline, such as a bioinformatics pipeline"
         }
       ]
     }
@@ -612,9 +628,9 @@
   ],
   "metamodel_version": "1.7.0",
   "source_file": "information_resource_registry.yaml",
-  "source_file_date": "2024-07-15T22:28:00",
-  "source_file_size": 7882,
-  "generation_date": "2024-07-15T22:28:45",
+  "source_file_date": "2024-07-15T15:47:44",
+  "source_file_size": 8462,
+  "generation_date": "2024-07-15T15:48:19",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/information_resource_registry.context.jsonld",

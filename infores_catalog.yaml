@@ -639,16 +639,23 @@ information_resources:
     name: Multiomics Wellness KP API
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/Wellness-KP
-    knowledge level: correlation
-    agent type: not_provided
+    knowledge level: statistical_association
+    agent type: data_analysis_pipeline
     description: Documentation of the Multiomics Wellness KP query web services.
   - id: infores:biothings-multiomics-clinicaltrials
     status: released
     name: Multiomics ClinicalTrials KP API
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/Clinical-Trials-KP
-    knowledge level: curated
-    agent type: not_provided
+    knowledge level: knowledge_assertion
+    agent type: manual_agent
+  - id: infores:biothings-multiomics-drugapprovals
+    status: released
+    name: Multiomics Drug Approvals KP API
+    xref:
+      - https://github.com/NCATSTranslator/Translator-All/wiki/Multiomics-Drug-Approvals-KP
+    knowledge level: knowledge_assertion
+    agent type: manual_agent
   - id: infores:biothings-pfocr
     status: modified
     name: BioThings PFOCR API
