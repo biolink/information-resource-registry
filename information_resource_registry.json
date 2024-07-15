@@ -3,8 +3,10 @@
         "AgentTypeEnum": {
             "description": "The type of agent that supports an edge or node.  This is a general categorization of the type of agent that supports a statement, and is not intended to be a comprehensive description of the agent.  For example, a statement may be supported by a single publication, but that publication may contain multiple types of evidence, such as a computational prediction and a manual curation.  In this case, the agent type would be \"publication\", and the evidence would be described in more detail in the evidence graph.",
             "enum": [
+                "manual_agent",
                 "not_provided",
-                "computational_model"
+                "computational_model",
+                "data_analysis_pipeline"
             ],
             "title": "AgentTypeEnum",
             "type": "string"
@@ -87,6 +89,8 @@
         "KnowledgeLevelEnum": {
             "description": "The level of knowledge that supports an edge or node.  This is a general categorization of the type of evidence that supports a statement, and is not intended to be a comprehensive description of the evidence.  For example, a statement may be supported by a single publication, but that publication may contain multiple types of evidence, such as a computational prediction and a manual curation.  In this case, the knowledge level would be \"curated\", and the evidence would be described in more detail in the evidence graph.",
             "enum": [
+                "knowledge_assertion",
+                "statistical_association",
                 "curated",
                 "predicted",
                 "text_mined",

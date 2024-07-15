@@ -428,6 +428,11 @@
 </thead>
 <tbody>
 <tr>
+<td>manual_agent</td>
+<td>None</td>
+<td>a human agent, such as a curator or expert</td>
+</tr>
+<tr>
 <td>not_provided</td>
 <td>None</td>
 <td>agent type is not provided or known</td>
@@ -436,6 +441,11 @@
 <td>computational_model</td>
 <td>None</td>
 <td>a computational model, such as a machine learning model</td>
+</tr>
+<tr>
+<td>data_analysis_pipeline</td>
+<td>None</td>
+<td>a data analysis pipeline, such as a bioinformatics pipeline</td>
 </tr>
 </tbody>
 </table>
@@ -465,12 +475,18 @@ description: The type of agent that supports an edge or node.  This is a general
   evidence graph.
 from_schema: https://w3id.org/biolink/information_resource_registry.yaml
 permissible_values:
+  manual_agent:
+    text: manual_agent
+    description: a human agent, such as a curator or expert
   not_provided:
     text: not_provided
     description: agent type is not provided or known
   computational_model:
     text: computational_model
     description: a computational model, such as a machine learning model
+  data_analysis_pipeline:
+    text: data_analysis_pipeline
+    description: a data analysis pipeline, such as a bioinformatics pipeline
 
 </code></pre>
 

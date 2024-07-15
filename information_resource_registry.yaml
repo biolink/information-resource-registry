@@ -165,9 +165,16 @@ enums:
         knowledge level would be "curated", and the evidence would be described
         in more detail in the evidence graph.
     permissible_values:
+      knowledge_assertion:
+        description: >-
+          knowledge asserted by a human expert, based on their interpretation of data or published study results
+      statistical_association:
+        description: >-
+          statistical associations calculated between variables in a clinical or omics dataset, by an automated 
+          analysis pipeline
       curated:
         description: >-
-          knowledge generated through manual curation  or interpretation of data or published study results
+          knowledge generated through manual curation or interpretation of data or published study results
       predicted:
         description: >-
           predictions generated computationally through inference over less direct forms of evidence (without human 
@@ -202,9 +209,15 @@ enums:
         agent type would be "publication", and the evidence would be described
         in more detail in the evidence graph.
     permissible_values:
+      manual_agent:
+        description: >-
+          a human agent, such as a curator or expert
       not_provided:
         description: >-
           agent type is not provided or known
       computational_model:
         description: >-
           a computational model, such as a machine learning model
+      data_analysis_pipeline:
+        description: >-
+          a data analysis pipeline, such as a bioinformatics pipeline

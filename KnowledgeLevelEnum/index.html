@@ -428,9 +428,19 @@
 </thead>
 <tbody>
 <tr>
+<td>knowledge_assertion</td>
+<td>None</td>
+<td>knowledge asserted by a human expert, based on their interpretation of data or published study results</td>
+</tr>
+<tr>
+<td>statistical_association</td>
+<td>None</td>
+<td>statistical associations calculated between variables in a clinical or omics dataset, by an automated  analysis pipeline</td>
+</tr>
+<tr>
 <td>curated</td>
 <td>None</td>
-<td>knowledge generated through manual curation  or interpretation of data or published study results</td>
+<td>knowledge generated through manual curation or interpretation of data or published study results</td>
 </tr>
 <tr>
 <td>predicted</td>
@@ -490,9 +500,17 @@ description: The level of knowledge that supports an edge or node.  This is a ge
   in more detail in the evidence graph.
 from_schema: https://w3id.org/biolink/information_resource_registry.yaml
 permissible_values:
+  knowledge_assertion:
+    text: knowledge_assertion
+    description: knowledge asserted by a human expert, based on their interpretation
+      of data or published study results
+  statistical_association:
+    text: statistical_association
+    description: statistical associations calculated between variables in a clinical
+      or omics dataset, by an automated  analysis pipeline
   curated:
     text: curated
-    description: knowledge generated through manual curation  or interpretation of
+    description: knowledge generated through manual curation or interpretation of
       data or published study results
   predicted:
     text: predicted
