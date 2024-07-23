@@ -3696,4 +3696,12 @@ information_resources:
     agent type: not_provided
     description: >-
       MyGeneset allows scientists to conveniently collect, save, and share sets of genes 
-      from thousands of different species. 
+      from thousands of different species.
+  - id: infores:annotator
+    status: released
+    name: Annotator Service
+    xref:
+      - https://github.com/NCATSTranslator/Translator-All/wiki/Annotator-Service
+    knowledge level: curated
+    agent type: not_provided
+    description: Service to provide detailed annotations for any given biomedical entities.
