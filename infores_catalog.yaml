@@ -627,7 +627,7 @@ information_resources:
     name: Multiomics EHRMLA May Treat API
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/Multiomics-EHRMLA-May-Treat-KP
-    knowledge level: prediction
+    knowledge level: predicted
     agent type: computational_model
     description: >-
       Documentation of the Multiomics Electronic-Health-Record (EHR) Machine Learning Analysis (MLA) May Treat query web services.
