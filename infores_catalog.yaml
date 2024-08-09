@@ -626,7 +626,7 @@ information_resources:
     status: released
     name: Multiomics EHRMLA May Treat API
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/EHRMLA-May-Treat-KP
+      - https://github.com/NCATSTranslator/Translator-All/wiki/Multiomics-EHRMLA-May-Treat-KP
     knowledge level: prediction
     agent type: computational_model
     description: >-
