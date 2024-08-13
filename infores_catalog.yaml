@@ -642,8 +642,15 @@ information_resources:
     knowledge level: statistical_association
     agent type: data_analysis_pipeline
     description: Documentation of the Multiomics Wellness KP query web services.
-  - id: infores:biothings-multiomics-clinicaltrials
+  - id: infores:multiomics-clinicaltrials
     status: released
+    name: Multiomics ClinicalTrials KP API
+    xref:
+      - https://github.com/NCATSTranslator/Translator-All/wiki/Clinical-Trials-KP
+    knowledge level: knowledge_assertion
+    agent type: manual_agent
+  - id: infores:biothings-multiomics-clinicaltrials
+    status: deprecated
     name: Multiomics ClinicalTrials KP API
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/Clinical-Trials-KP
