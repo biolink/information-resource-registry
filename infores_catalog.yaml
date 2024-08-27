@@ -656,7 +656,7 @@ information_resources:
       - https://github.com/NCATSTranslator/Translator-All/wiki/Clinical-Trials-KP
     knowledge level: knowledge_assertion
     agent type: manual_agent
-  - id: infores:biothings-multiomics-drugapprovals
+  - id: infores:multiomics-drugapprovals
     status: released
     name: Multiomics Drug Approvals KP API
     xref:
