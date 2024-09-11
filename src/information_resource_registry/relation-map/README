@@ -1,0 +1,5 @@
+# README
+
+```
+python3 src/rtx-kg2.py > data/rtx-kg2.json
+```
