@@ -37,7 +37,7 @@ information_resources:
     status: released
     name: ARAGORN
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/ARAGORN-and-ROBOKOP
+      - https://github.com/NCATSTranslator/Translator-All/wiki/ARAGORN
     knowledge level: predicted
     agent type: not_provided
     description: >-
