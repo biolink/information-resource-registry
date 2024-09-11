@@ -3199,7 +3199,7 @@ information_resources:
     status: released
     name: UniChem
     xref:
-      - https://www.ebi.ac.uk/unichem/
+      - https://github.com/NCATSTranslator/Translator-All/wiki/UniChem
     synonym:
       - unichem
     knowledge level: curated
