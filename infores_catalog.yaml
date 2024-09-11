@@ -663,6 +663,20 @@ information_resources:
       - https://github.com/NCATSTranslator/Translator-All/wiki/Multiomics-Drug-Approvals-KP
     knowledge level: knowledge_assertion
     agent type: manual_agent
+  - id: infores:multiomics-multiomics
+    status: released
+    name: Multiomics KP API
+    xref:
+      - https://github.com/NCATSTranslator/Translator-All/wiki/Multiomics-KP
+    knowledge level: knowledge_assertion
+    agent type: text_mining_assisted
+  - id: infores:multiomics-microbiome
+    status: released
+    name: Multiomics Microbiome KP API
+    xref:
+      - https://github.com/NCATSTranslator/Translator-All/wiki/Microbiome-KP
+    knowledge level: knowledge_assertion
+    agent type: text_mining_assisted
   - id: infores:biothings-pfocr
     status: modified
     name: BioThings PFOCR API
