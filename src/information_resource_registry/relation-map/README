@@ -13,3 +13,10 @@ python3 src/arax-kps.py
 python3 src/add_consume_info.py ../../../infores_catalog.yaml data/*.json > data/infores_catalog_new.yaml
 mv data/infores_catalog_new.yaml ../../../infores_catalog.yaml
 ```
+
+## Generate a sankey diagram
+
+```
+python3 src/extract_consume_info.py ../../../infores_catalog.yaml data/consume_info.csv
+python3 src/generate_sankey.py data/consume_info.csv
+```
