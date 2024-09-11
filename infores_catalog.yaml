@@ -2632,7 +2632,7 @@ information_resources:
     status: released
     name: Physician Data Query (PDQ) (from UMLS)
     xref:
-      - https://www.nlm.nih.gov/research/umls/sourcereleasedocs/current/PDQ/index.html
+      - https://github.com/NCATSTranslator/Translator-All/wiki/PDQ-from-UMLS
     knowledge level: curated
     agent type: not_provided
   - id: infores:pfam
