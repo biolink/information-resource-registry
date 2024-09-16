@@ -28,7 +28,7 @@ def is_valid_url(urls: str) -> bool:
         try:
             with urllib3.PoolManager(ssl_context=ctx,
                                         retries=retry_strategy,
-                                        timeout=urllib3.util.Timeout(connect=10, read=60)) as http:
+                                        timeout=urllib3.util.Timeout(connect=10, read=30)) as http:
                 response = http.request("GET", url, headers={'User-Agent': 'Mozilla/5.0'})
                 if response.status == 200:
                     return True
