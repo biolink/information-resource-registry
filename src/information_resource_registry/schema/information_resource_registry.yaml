@@ -63,8 +63,8 @@ classes:
       - xref
       - synonym
       - description
-      - knowledge level
-      - agent type
+      - knowledge_level
+      - agent_type
     description: >-
       A database or knowledgebase and its supporting ecosystem of interfaces 
       and services that deliver content to consumers (e.g. web portals, APIs, 
@@ -120,7 +120,7 @@ slots:
       A free-text description of an entity or attribute.
     slot_uri: rdfs:comment
 
-  knowledge level:
+  knowledge_level:
     range: KnowledgeLevelEnum
     description: >-
         The level of knowledge that supports an edge or node.  This is a general
@@ -132,7 +132,7 @@ slots:
         knowledge level would be "curated", and the evidence would be described
         in more detail in the evidence graph.
 
-  agent type:
+  agent_type:
     range: AgentTypeEnum
     description: >-
         The type of agent that supports an edge or node.  This is a general
@@ -167,36 +167,29 @@ enums:
     permissible_values:
       knowledge_assertion:
         description: >-
-          knowledge asserted by a human expert, based on their interpretation of data or published study results
+          Knowledge asserted by a human expert, based on their interpretation of data or published study results
       statistical_association:
         description: >-
-          statistical associations calculated between variables in a clinical or omics dataset, by an automated 
+          Statistical associations calculated between variables in a clinical or omics dataset, by an automated 
           analysis pipeline
-      curated:
+      prediction:
         description: >-
-          knowledge generated through manual curation or interpretation of data or published study results
-      predicted:
-        description: >-
-          predictions generated computationally through inference over less direct forms of evidence (without human 
+          Predictions generated computationally through inference over less direct forms of evidence (without human 
           intervention or review)
-      text_mined:
+      observation:
         description: >-
-          knowledge extracted from published text by NLP agents (without human intervention or review)
-      correlation:
-        description: >-
-          statistical correlations calculated between variables in a clinical or omics dataset, by an automated 
-          analysis pipeline
-      observed:
-        description: >-
-          edge reports a phenomenon that was reported/observed to have occurred (and possibly some quantification, 
+          Edge reports a phenomenon that was reported/observed to have occurred (and possibly some quantification, 
           e.g. how many times, at what frequency)
-      other:
+      not_provided:
         description: >-
-          knowledge level may not fit into the categories above, or is not provided/known
-      mixed:
+          The knowledge level/type fora statement is not provided, typically because it cannot be determined from 
+          available information.
+      logical_entailment:
         description: >-
-          used for sources that might provide edges with different knowledge levels, e.g.correlations in addition to 
-          curated Edges - set tag to Curated, unless predicate rules override
+          a statement reporting a conclusion that follows logically from premises, which are typically well-established 
+          facts or knowledge assertions. (e.g. fingernail part of finger, finger part of hand → fingernail part of
+          hand)). Logical entailments are based on dedictive inference, and generally have a high degree of confidence
+          when based on sound premises and inference logic.
 
   AgentTypeEnum:
     description: >-
