@@ -5,8 +5,12 @@
             "enum": [
                 "manual_agent",
                 "not_provided",
+                "automated_agent",
+                "data_analysis_pipeline",
                 "computational_model",
-                "data_analysis_pipeline"
+                "text_mining_agent",
+                "image_processing_agent",
+                "manual_validation_of_automated_agent"
             ],
             "title": "AgentTypeEnum",
             "type": "string"

@@ -669,14 +669,14 @@ information_resources:
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/Multiomics-KP
     knowledge level: knowledge_assertion
-    agent type: text_mining_assisted
+    agent type: manual_validation_of_automated_agent
   - id: infores:multiomics-microbiome
     status: released
     name: Multiomics Microbiome KP API
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/Microbiome-KP
     knowledge level: knowledge_assertion
-    agent type: text_mining_assisted
+    agent type: manual_validation_of_automated_agent
   - id: infores:biothings-pfocr
     status: modified
     name: BioThings PFOCR API
