@@ -100,6 +100,7 @@ class InformationResource:
                         or infores.get("id") == "infores:kinomescan" \
                         or infores.get("id") == "infores:community-sar" \
                         or infores.get("id") == "infores:omicsdi" \
+                        or infores.get("id") == "infores:atc-codes-umls" \
                         or infores.get("xref") is None \
                         or infores.get("status") == 'deprecated' \
                         or is_valid_url(infores.get("xref")):
