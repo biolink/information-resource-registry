@@ -94,7 +94,7 @@ infores:
 	$(RUN) gen-python src/information_resource_registry/schema/information_resource_registry.yaml > src/information_resource_registry/datamodel/information_resource_registry.py
 
 validate_infores:
-	$(RUN) python src/information_resource_registry/scripts/verify_infores.py
+	$(RUN) python src/information_resource_registry/validation/verify_infores.py
 
 spell:
 	poetry run codespell
@@ -128,7 +128,7 @@ tests:
 	$(RUN) codespell
 	$(RUN) yamllint -c .yamllint-config src/information_resource_registry.yaml
 	$(RUN) yamllint -c .yamllint-config infores_catalog.yaml
-	$(RUN) python scripts/verify_infores.py
+	$(RUN) python validation/verify_infores.py
 
 test: test-schema test-python test-examples lint spell tests validate_infores
 
