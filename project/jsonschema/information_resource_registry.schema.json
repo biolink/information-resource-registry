@@ -95,13 +95,10 @@
             "enum": [
                 "knowledge_assertion",
                 "statistical_association",
-                "curated",
-                "predicted",
-                "text_mined",
-                "correlation",
-                "observed",
-                "other",
-                "mixed"
+                "prediction",
+                "observation",
+                "not_provided",
+                "logical_entailment"
             ],
             "title": "KnowledgeLevelEnum",
             "type": "string"

@@ -1,5 +1,5 @@
 # Auto generated from information_resource_registry.yaml by pythongen.py version: 0.0.1
-# Generation date: 2024-09-16T13:36:04
+# Generation date: 2024-09-16T13:43:21
 # Schema: Information-Resource-Registry-Schema
 #
 # id: https://w3id.org/biolink/information_resource_registry.yaml
@@ -153,31 +153,22 @@ class KnowledgeLevelEnum(EnumDefinitionImpl):
     """
     knowledge_assertion = PermissibleValue(
         text="knowledge_assertion",
-        description="""knowledge asserted by a human expert, based on their interpretation of data or published study results""")
+        description="""Knowledge asserted by a human expert, based on their interpretation of data or published study results""")
     statistical_association = PermissibleValue(
         text="statistical_association",
-        description="""statistical associations calculated between variables in a clinical or omics dataset, by an automated  analysis pipeline""")
-    curated = PermissibleValue(
-        text="curated",
-        description="""knowledge generated through manual curation or interpretation of data or published study results""")
-    predicted = PermissibleValue(
-        text="predicted",
-        description="""predictions generated computationally through inference over less direct forms of evidence (without human  intervention or review)""")
-    text_mined = PermissibleValue(
-        text="text_mined",
-        description="knowledge extracted from published text by NLP agents (without human intervention or review)")
-    correlation = PermissibleValue(
-        text="correlation",
-        description="""statistical correlations calculated between variables in a clinical or omics dataset, by an automated  analysis pipeline""")
-    observed = PermissibleValue(
-        text="observed",
-        description="""edge reports a phenomenon that was reported/observed to have occurred (and possibly some quantification,  e.g. how many times, at what frequency)""")
-    other = PermissibleValue(
-        text="other",
-        description="knowledge level may not fit into the categories above, or is not provided/known")
-    mixed = PermissibleValue(
-        text="mixed",
-        description="""used for sources that might provide edges with different knowledge levels, e.g.correlations in addition to  curated Edges - set tag to Curated, unless predicate rules override""")
+        description="""Statistical associations calculated between variables in a clinical or omics dataset, by an automated  analysis pipeline""")
+    prediction = PermissibleValue(
+        text="prediction",
+        description="""Predictions generated computationally through inference over less direct forms of evidence (without human  intervention or review)""")
+    observation = PermissibleValue(
+        text="observation",
+        description="""Edge reports a phenomenon that was reported/observed to have occurred (and possibly some quantification,  e.g. how many times, at what frequency)""")
+    not_provided = PermissibleValue(
+        text="not_provided",
+        description="""The knowledge level/type fora statement is not provided, typically because it cannot be determined from  available information.""")
+    logical_entailment = PermissibleValue(
+        text="logical_entailment",
+        description="""a statement reporting a conclusion that follows logically from premises, which are typically well-established  facts or knowledge assertions. (e.g. fingernail part of finger, finger part of hand → fingernail part of hand)). Logical entailments are based on dedictive inference, and generally have a high degree of confidence when based on sound premises and inference logic.""")
 
     _defn = EnumDefinition(
         name="KnowledgeLevelEnum",
@@ -247,8 +238,8 @@ slots.synonym = Slot(uri=INFORES.synonym, name="synonym", curie=INFORES.curie('s
 slots.description = Slot(uri=RDFS.comment, name="description", curie=RDFS.curie('comment'),
                    model_uri=INFORES.description, domain=None, range=Optional[str])
 
-slots.knowledge_level = Slot(uri=INFORES.knowledge_level, name="knowledge level", curie=INFORES.curie('knowledge_level'),
+slots.knowledge_level = Slot(uri=INFORES.knowledge_level, name="knowledge_level", curie=INFORES.curie('knowledge_level'),
                    model_uri=INFORES.knowledge_level, domain=None, range=Optional[Union[str, "KnowledgeLevelEnum"]])
 
-slots.agent_type = Slot(uri=INFORES.agent_type, name="agent type", curie=INFORES.curie('agent_type'),
+slots.agent_type = Slot(uri=INFORES.agent_type, name="agent_type", curie=INFORES.curie('agent_type'),
                    model_uri=INFORES.agent_type, domain=None, range=Optional[Union[str, "AgentTypeEnum"]])

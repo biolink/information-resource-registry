@@ -47,24 +47,18 @@ class KnowledgeLevelEnum(str, Enum):
     """
     The level of knowledge that supports an edge or node.  This is a general categorization of the type of evidence that supports a statement, and is not intended to be a comprehensive description of the evidence.  For example, a statement may be supported by a single publication, but that publication may contain multiple types of evidence, such as a computational prediction and a manual curation.  In this case, the knowledge level would be "curated", and the evidence would be described in more detail in the evidence graph.
     """
-    # knowledge asserted by a human expert, based on their interpretation of data or published study results
+    # Knowledge asserted by a human expert, based on their interpretation of data or published study results
     knowledge_assertion = "knowledge_assertion"
-    # statistical associations calculated between variables in a clinical or omics dataset, by an automated  analysis pipeline
+    # Statistical associations calculated between variables in a clinical or omics dataset, by an automated  analysis pipeline
     statistical_association = "statistical_association"
-    # knowledge generated through manual curation or interpretation of data or published study results
-    curated = "curated"
-    # predictions generated computationally through inference over less direct forms of evidence (without human  intervention or review)
-    predicted = "predicted"
-    # knowledge extracted from published text by NLP agents (without human intervention or review)
-    text_mined = "text_mined"
-    # statistical correlations calculated between variables in a clinical or omics dataset, by an automated  analysis pipeline
-    correlation = "correlation"
-    # edge reports a phenomenon that was reported/observed to have occurred (and possibly some quantification,  e.g. how many times, at what frequency)
-    observed = "observed"
-    # knowledge level may not fit into the categories above, or is not provided/known
-    other = "other"
-    # used for sources that might provide edges with different knowledge levels, e.g.correlations in addition to  curated Edges - set tag to Curated, unless predicate rules override
-    mixed = "mixed"
+    # Predictions generated computationally through inference over less direct forms of evidence (without human  intervention or review)
+    prediction = "prediction"
+    # Edge reports a phenomenon that was reported/observed to have occurred (and possibly some quantification,  e.g. how many times, at what frequency)
+    observation = "observation"
+    # The knowledge level/type fora statement is not provided, typically because it cannot be determined from  available information.
+    not_provided = "not_provided"
+    # a statement reporting a conclusion that follows logically from premises, which are typically well-established  facts or knowledge assertions. (e.g. fingernail part of finger, finger part of hand → fingernail part of hand)). Logical entailments are based on dedictive inference, and generally have a high degree of confidence when based on sound premises and inference logic.
+    logical_entailment = "logical_entailment"
     
     
 

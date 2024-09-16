@@ -59,26 +59,27 @@ class InformationResource:
                     print("Invalid infores status:" + infores.get("status")
                           + " for " + infores.get("name"))
                     raise ValueError("invalid status for " + infores.get("name") + " for " + infores.get("id"))
-                if infores.get("knowledge level") not in ["curated",
-                                                          "predicted",
-                                                          "text_mined",
-                                                          "correlation",
-                                                          "observed",
-                                                          "other",
-                                                          "mixed",
+                if infores.get("knowledge level") not in ["knowledge_assertion",
                                                           "statistical_association",
-                                                          "knowledge_assertion"]:
+                                                          "prediction",
+                                                          "observation",
+                                                          "not_provided",
+                                                          "logical_entailment"]:
                     print(infores)
-                    print("Invalid infores knowledge level:" + infores.get("knowledge level")
+                    print("Invalid infores knowledge level:" + infores.get("knowledge_level")
                           + " for " + infores.get("name"))
                     raise ValueError("invalid knowledge level for " + infores.get("name") + " for " + infores.get("id"))
 
-                if infores.get("agent type") not in ["not_provided",
-                                                     "computational_model",
+                if infores.get("agent_type") not in ["manual_agent",
+                                                     "not_provided",
+                                                     "automated_agent",
                                                      "data_analysis_pipeline",
-                                                     "manual_agent"]:
+                                                     "computational_model",
+                                                     "text_mining_agent",
+                                                     "image_processing_agent",
+                                                     "manual_validation_of_automated_agent"]:
                     print(infores)
-                    print("Invalid infores agent type:" + infores.get("agent type") + " for " + infores.get("name"))
+                    print("Invalid infores agent type:" + infores.get("agent_type") + " for " + infores.get("name"))
                     raise ValueError("invalid agent type for " + infores.get("name") + " for " + infores.get("id"))
 
                 if infores.get("id") == 'infores:athena' \

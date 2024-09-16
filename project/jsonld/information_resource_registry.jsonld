@@ -376,39 +376,27 @@
       "permissible_values": [
         {
           "text": "knowledge_assertion",
-          "description": "knowledge asserted by a human expert, based on their interpretation of data or published study results"
+          "description": "Knowledge asserted by a human expert, based on their interpretation of data or published study results"
         },
         {
           "text": "statistical_association",
-          "description": "statistical associations calculated between variables in a clinical or omics dataset, by an automated  analysis pipeline"
+          "description": "Statistical associations calculated between variables in a clinical or omics dataset, by an automated  analysis pipeline"
         },
         {
-          "text": "curated",
-          "description": "knowledge generated through manual curation or interpretation of data or published study results"
+          "text": "prediction",
+          "description": "Predictions generated computationally through inference over less direct forms of evidence (without human  intervention or review)"
         },
         {
-          "text": "predicted",
-          "description": "predictions generated computationally through inference over less direct forms of evidence (without human  intervention or review)"
+          "text": "observation",
+          "description": "Edge reports a phenomenon that was reported/observed to have occurred (and possibly some quantification,  e.g. how many times, at what frequency)"
         },
         {
-          "text": "text_mined",
-          "description": "knowledge extracted from published text by NLP agents (without human intervention or review)"
+          "text": "not_provided",
+          "description": "The knowledge level/type fora statement is not provided, typically because it cannot be determined from  available information."
         },
         {
-          "text": "correlation",
-          "description": "statistical correlations calculated between variables in a clinical or omics dataset, by an automated  analysis pipeline"
-        },
-        {
-          "text": "observed",
-          "description": "edge reports a phenomenon that was reported/observed to have occurred (and possibly some quantification,  e.g. how many times, at what frequency)"
-        },
-        {
-          "text": "other",
-          "description": "knowledge level may not fit into the categories above, or is not provided/known"
-        },
-        {
-          "text": "mixed",
-          "description": "used for sources that might provide edges with different knowledge levels, e.g.correlations in addition to  curated Edges - set tag to Curated, unless predicate rules override"
+          "text": "logical_entailment",
+          "description": "a statement reporting a conclusion that follows logically from premises, which are typically well-established  facts or knowledge assertions. (e.g. fingernail part of finger, finger part of hand \u2192 fingernail part of hand)). Logical entailments are based on dedictive inference, and generally have a high degree of confidence when based on sound premises and inference logic."
         }
       ]
     },
@@ -651,9 +639,9 @@
   ],
   "metamodel_version": "1.7.0",
   "source_file": "information_resource_registry.yaml",
-  "source_file_date": "2024-09-16T13:32:59",
-  "source_file_size": 10874,
-  "generation_date": "2024-09-16T13:35:54",
+  "source_file_date": "2024-09-16T13:42:27",
+  "source_file_size": 10702,
+  "generation_date": "2024-09-16T13:43:11",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/information_resource_registry.context.jsonld",
