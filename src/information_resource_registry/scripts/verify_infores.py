@@ -4,6 +4,7 @@ import csv
 import time
 import urllib3
 from urllib3.util.ssl_ import create_urllib3_context
+from urllib3.util.retry import Retry
 import yaml
 
 ctx = create_urllib3_context()
@@ -12,30 +13,29 @@ ctx.options |= 0x4  # ssl.OP_LEGACY_SERVER_CONNECT
 
 INFORES_YAML = os.path.join('infores_catalog.yaml')
 
+from urllib3.poolmanager import PoolManager
 
-def is_valid_urls(url: str) -> bool:
-    retries = 3
-    url = url[0]
-    print("Checking URL: " + url)
-    for i in range(retries):
+# Define retry strategy
+retry_strategy = Retry(
+    total=5,  # Number of retries
+    backoff_factor=1,  # Backoff factor for retries
+    status_forcelist=[500, 502, 503, 504],  # Retry on these status codes
+)
+
+
+def is_valid_url(urls: str) -> bool:
+    for url in urls:
         try:
-            with urllib3.PoolManager(ssl_context=ctx) as http:
+            with urllib3.PoolManager(ssl_context=ctx,
+                                        retries=retry_strategy,
+                                        timeout=urllib3.util.Timeout(connect=10, read=60)) as http:
                 response = http.request("GET", url, headers={'User-Agent': 'Mozilla/5.0'})
                 if response.status == 200:
                     return True
                 else:
-                    print(f"Response status code: {response.status}. Retrying...")
-                    time.sleep(1)
+                    return False
         except requests.exceptions.RequestException as e:
             print(url)
-    try:
-        resp = requests.get(url)
-        if resp.status_code == 200:
-            return True
-    except requests.exceptions.RequestException as e:
-        print(f"Exception: {e}")
-        print(f"Response status code: {response.status}.", url)
-    return False
 
 
 class InformationResource:
@@ -59,12 +59,14 @@ class InformationResource:
                     print("Invalid infores status:" + infores.get("status")
                           + " for " + infores.get("name"))
                     raise ValueError("invalid status for " + infores.get("name") + " for " + infores.get("id"))
-                if infores.get("knowledge level") not in ["knowledge_assertion",
+                if infores.get("knowledge_level") not in ["knowledge_assertion",
                                                           "statistical_association",
                                                           "prediction",
                                                           "observation",
                                                           "not_provided",
-                                                          "logical_entailment"]:
+                                                          "logical_entailment",
+                                                          "mixed",
+                                                          "other"]:
                     print(infores)
                     print("Invalid infores knowledge level:" + infores.get("knowledge_level")
                           + " for " + infores.get("name"))
@@ -97,10 +99,11 @@ class InformationResource:
                         or infores.get("id") == "infores:irefindex" \
                         or infores.get("id") == "infores:kinomescan" \
                         or infores.get("id") == "infores:community-sar" \
+                        or infores.get("id") == "infores:omicsdi" \
                         or infores.get("xref") is None \
                         or infores.get("status") == 'deprecated' \
-                        or is_valid_urls(infores.get("xref")):
-                    print(infores.get('id'), "has valid URL (xref)")
+                        or is_valid_url(infores.get("xref")):
+                    print(infores.get('id'), "has valid URL")
                 else:
                     print(infores)
                     print("Invalid infores URL:" + " for " + infores.get("name"))

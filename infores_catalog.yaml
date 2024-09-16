@@ -128,8 +128,8 @@ information_resources:
     name: Automat Cord19
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/Automat
-    knowledge_level: text_mined
-    agent_type: not_provided
+    knowledge_level: not_provided
+    agent_type: text_mining_agent
     description: >-
       A literature co-occurence graph based on parsing the CORD-19 paper set.
   - id: infores:automat-cord19-scibite
@@ -137,8 +137,8 @@ information_resources:
     name: Automat Cord19 Scibite (trapi v-1.1.0)
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/Automat
-    knowledge_level: text_mined
-    agent_type: not_provided
+    knowledge_level: not_provided
+    agent_type: text_mining_agent
     description: >-
       A literature co-occurence graph based on the [scibite parsing (https://github.com/SciBiteLabs/CORD19)](https://github.com/SciBiteLabs/CORD19)
       of the CORD-19 paper set.
@@ -148,8 +148,8 @@ information_resources:
     description: >-
       A literature co-occurence graph based on scigraph parsing of the CORD-19
       paper set. All triples contain covid-19 as either subject or object.
-    knowledge_level: text_mined
-    agent_type: not_provided
+    knowledge_level: not_provided
+    agent_type: text_mining_agent
   - id: infores:automat-covid-phenotypes
     status: deprecated
     name: Automat Covid Phenotypes (trapi v-1.1.0)
@@ -267,7 +267,7 @@ information_resources:
     name: Automat ICEES KG
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/Automat
-    knowledge_level: correlation
+    knowledge_level: statistical_association
     agent_type: not_provided
   - id: infores:automat-intact
     status: released
@@ -419,7 +419,7 @@ information_resources:
       - https://github.com/PriceLab/translator-bigquery-api
     synonym:
       - BigClam
-    knowledge_level: correlation
+    knowledge_level: statistical_association
     agent_type: not_provided
   - id: infores:bigg-models
     status: released
@@ -438,7 +438,7 @@ information_resources:
       - https://github.com/PriceLab/translator-bigquery-api/
     synonym:
       - BigGIM
-    knowledge_level: correlation
+    knowledge_level: statistical_association
     agent_type: not_provided
   - id: infores:bindingdb
     status: released
@@ -447,7 +447,7 @@ information_resources:
       - https://github.com/NCATSTranslator/Translator-All/wiki/bindingdb
     synonym:
       - The Binding Database
-    knowledge_level: mixed
+    knowledge_level: knowledge_assertion
     agent_type: not_provided
     description: >-
       BindingDB is a public, web-accessible database of measured binding
@@ -617,7 +617,7 @@ information_resources:
     name: Multiomics EHR Risk KP API
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/EHR-Risk-KP
-    knowledge_level: correlation
+    knowledge_level: statistical_association
     agent_type: not_provided
     description: >-
       Documentation of the Multiomics Electronic-Health-Record (EHR) Risk
@@ -697,16 +697,16 @@ information_resources:
     name: BioThings SEMMEDDB API
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/BioThings-APIs
-    knowledge_level: text_mined
-    agent_type: not_provided
+    knowledge_level: not_provided
+    agent_type: text_mining_agent
     description: Documentation of the BioThings SEMMEDDB query web services.
   - id: infores:biothings-semmeddb-anatomy
     status: deprecated
     name: SEMMED Anatomy API
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/BioThings-SEMMED-DB-Anatomy
-    knowledge_level: text_mined
-    agent_type: not_provided
+    knowledge_level: not_provided
+    agent_type: text_mining_agent
     description: >-
       Documentation of the SEMMED disease query web services.  Learn more
       about [mydisease.info](http://pending.biothings.io/semmed)
@@ -715,8 +715,8 @@ information_resources:
     name: SEMMED Biological Process API
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/BioThings-SEMMED-DB-Biological-Process
-    knowledge_level: text_mined
-    agent_type: not_provided
+    knowledge_level: not_provided
+    agent_type: text_mining_agent
     description: >-
       Documentation of the SEMMED disease query web services.  Learn more
       about [mydisease.info](http://pending.biothings.io/semmed)
@@ -725,8 +725,8 @@ information_resources:
     name: SEMMED Chemical API
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/BioThings-SEMMED-DB-Chemical
-    knowledge_level: text_mined
-    agent_type: not_provided
+    knowledge_level: not_provided
+    agent_type: text_mining_agent
     description: >-
       Documentation of the SEMMED disease query web services.  Learn more
       about [mydisease.info](http://pending.biothings.io/semmed)
@@ -735,8 +735,8 @@ information_resources:
     name: SEMMED Disease API
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/BioThings-SEMMED-DB-Disease
-    knowledge_level: text_mined
-    agent_type: not_provided
+    knowledge_level: not_provided
+    agent_type: text_mining_agent
     description: >-
       Documentation of the SEMMED disease query web services.  Learn more
       about [semmed disease](http://pending.biothings.io/semmed)
@@ -745,8 +745,8 @@ information_resources:
     name: SEMMED Gene API
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/BioThings-SEMMED-DB-Gene
-    knowledge_level: text_mined
-    agent_type: not_provided
+    knowledge_level: not_provided
+    agent_type: text_mining_agent
     description: Documentation of the SEMMED disease query web services.  Learn more
       about [mydisease.info](http://pending.biothings.io/semmed)
   - id: infores:biothings-semmeddb-phenotype
@@ -754,8 +754,8 @@ information_resources:
     name: SEMMED Phenotype API
     xref:
       - https://github.com/biothings
-    knowledge_level: text_mined
-    agent_type: not_provided
+    knowledge_level: not_provided
+    agent_type: text_mining_agent
     description: Documentation of the SEMMED disease query web services.  Learn more
       about [mydisease.info](http://pending.biothings.io/semmed)
   - id: infores:biothings-tcga-mut-freq
@@ -763,7 +763,7 @@ information_resources:
     name: Multiomics TCGA Mutation Frequency KP API
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/Big-GIM-II:-Tumor-gene-mutation-KP
-    knowledge_level: correlation
+    knowledge_level: statistical_association
     agent_type: not_provided
     description: Documentation of the TCGA Mutation Frequency KP query web services.
   - id: infores:biothings-uberon-ontology
@@ -1000,7 +1000,7 @@ information_resources:
     name: Columbia Open Health Data (COHD)
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/COHD-KP
-    knowledge_level: correlation
+    knowledge_level: statistical_association
     agent_type: not_provided
     description: >-
       The Columbia Open Health Data (COHD) API provides access to counts
@@ -1052,7 +1052,7 @@ information_resources:
     name: Columbia Open Health Data (COHD) for COVID-19 Research
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/COHD-KP
-    knowledge_level: correlation
+    knowledge_level: statistical_association
     agent_type: not_provided
     description: >-
       The Columbia Open Health Data (COHD) for COVID-19 Research API provides
@@ -1199,7 +1199,7 @@ information_resources:
       - https://portals.broadinstitute.org/ctrp.v2.1/
     synonym:
       - CTRP
-    knowledge_level: correlation
+    knowledge_level: statistical_association
     agent_type: not_provided
     description: >-
       links genetic, lineage, and other cellular features of cancer cell
@@ -1246,7 +1246,7 @@ information_resources:
       - https://depmap.org/portal/
     synonym:
       - DepMap
-    knowledge_level: correlation
+    knowledge_level: statistical_association
     agent_type: not_provided
     description: >-
       Cancer Dependency Map to systematically identify genetic and pharmacologic
@@ -1267,14 +1267,14 @@ information_resources:
   - id: infores:dili-network-study-data
     status: deprecated
     name: Drug-Induced Liver Injury Network (DILIN) Participant Data
-    knowledge_level: correlation
+    knowledge_level: statistical_association
     agent_type: not_provided
   - id: infores:faers
     status: released
     name: FDA Adverse Event Reporting System
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/FAERS
-    knowledge_level: observed
+    knowledge_level: knowledge_assertion
     agent_type: not_provided
     description: >-
       The FDA Adverse Event Reporting System (FAERS) is a database that contains information 
@@ -1502,7 +1502,7 @@ information_resources:
     name: Evolutionary Rate Covariation (ERC) Analysis
     synonym:
       - ERC Analysis
-    knowledge_level: correlation
+    knowledge_level: statistical_association
     agent_type: not_provided
   - id: infores:explanatory-agent
     status: deprecated
@@ -1744,7 +1744,7 @@ information_resources:
       - https://github.com/NCATSTranslator/Translator-All/wiki/GWAS-Catalog
     synonym:
       - GWAS
-    knowledge_level: correlation
+    knowledge_level: statistical_association
     agent_type: not_provided
   - id: infores:hcp-codes-umls
     status: released
@@ -1881,7 +1881,7 @@ information_resources:
       - https://github.com/NCATSTranslator/Translator-All/wiki/ICEES-KG
     synonym:
       - KP
-    knowledge_level: correlation
+    knowledge_level: statistical_association
     agent_type: not_provided
     description: Information Resource
   - id: infores:idisk
@@ -1991,7 +1991,7 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - id: infores:kgea
-    status: released
+    status: deprecated
     name: Knowledge Graph Exchange Archive
     xref:
       - https://archive.translator.ncats.io/
@@ -2476,7 +2476,7 @@ information_resources:
     status: released
     name: OmicsDI
     xref:
-      - http://www.omicsdi.org
+      - https://www.omicsdi.org/
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - id: infores:omim
@@ -2728,7 +2728,7 @@ information_resources:
     name: Probe Miner
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/Probe-Miner
-    knowledge_level: correlation
+    knowledge_level: statistical_association
     agent_type: not_provided
   - id: infores:psy-umls
     status: released
@@ -2882,15 +2882,15 @@ information_resources:
     name: Semantic Analytics & Clean Data Intelligence Experts
     xref:
       - https://www.scibite.com/
-    knowledge_level: text_mined
-    agent_type: not_provided
+    knowledge_level: not_provided
+    agent_type: text_mining_agent
   - id: infores:semmeddb
     status: released
     name: Semantic Medline Database
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/SemMedDB
-    knowledge_level: text_mined
-    agent_type: not_provided
+    knowledge_level: not_provided
+    agent_type: text_mining_agent
   - id: infores:sgd
     status: released
     name: Saccharomyces Genome Database
@@ -3112,13 +3112,13 @@ information_resources:
     name: Text Mining KP
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/Text%E2%80%90mined-Assertion-KP
-    knowledge_level: text_mined
-    agent_type: not_provided
+    knowledge_level: not_provided
+    agent_type: text_mining_agent
   - id: infores:text-mining-provider-cooccurrence
     status: released
     name: Text Mining COOCCURRENCE API
-    knowledge_level: text_mined
-    agent_type: not_provided
+    knowledge_level: not_provided
+    agent_type: text_mining_agent
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/Literature-Cooccurrence-KP
     description: >-
@@ -3129,8 +3129,8 @@ information_resources:
   - id: infores:text-mining-provider-targeted
     status: released
     name: Text Mining Targeted Association API
-    knowledge_level: text_mined
-    agent_type: not_provided
+    knowledge_level: not_provided
+    agent_type: text_mining_agent
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/Text%E2%80%90mined-Assertion-KP
     description: >-
@@ -3511,8 +3511,8 @@ information_resources:
     name: BioThings SuppKG API
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/BioThings-APIs
-    knowledge_level: text_mined
-    agent_type: not_provided
+    knowledge_level: not_provided
+    agent_type: text_mining_agent
     description: >-
       Documentation of the BioThings API for
       [SuppKG](https://github.com/zhang-informatics/SemRep_DS/tree/main/SuppKG) data. SuppKG contains relations
@@ -3523,8 +3523,8 @@ information_resources:
     name: SuppKG
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/SuppKG
-    knowledge_level: text_mined
-    agent_type: not_provided
+    knowledge_level: not_provided
+    agent_type: text_mining_agent
     description: >-
       SuppKG contains relations between dietary supplements and other entities, such as diseases. 
       More information can be found in [this paper](https://doi.org/10.1016/j.jbi.2022.104120).

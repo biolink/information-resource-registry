@@ -64,41 +64,11 @@ biolink:information_resource_registry.yaml.owl.ttl a owl:Ontology ;
 infores:InformationResource a owl:Class ;
     rdfs:label "InformationResource" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty infores:knowledge_level ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty infores:name ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty infores:synonym ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty infores:xref ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
+            owl:allValuesFrom infores:InformationResourceStatusEnum ;
             owl:onProperty infores:status ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty infores:agent_type ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty infores:name ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty infores:xref ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty infores:knowledge_level ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty infores:agent_type ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
+            owl:minCardinality 1 ;
             owl:onProperty infores:id ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom infores:KnowledgeLevelEnum ;
-            owl:onProperty infores:knowledge_level ],
         [ a owl:Restriction ;
             owl:allValuesFrom infores:AgentTypeEnum ;
             owl:onProperty infores:agent_type ],
@@ -106,29 +76,59 @@ infores:InformationResource a owl:Class ;
             owl:allValuesFrom xsd:string ;
             owl:onProperty infores:name ],
         [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty infores:name ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty infores:synonym ],
+        [ a owl:Restriction ;
             owl:maxCardinality 1 ;
+            owl:onProperty infores:agent_type ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty infores:xref ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty infores:name ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom infores:KnowledgeLevelEnum ;
+            owl:onProperty infores:knowledge_level ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
             owl:onProperty infores:description ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty infores:xref ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty infores:status ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty infores:agent_type ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty infores:status ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty infores:description ],
+            owl:onProperty infores:knowledge_level ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
+            owl:onProperty infores:id ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty infores:id ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty infores:knowledge_level ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
             owl:onProperty infores:description ],
         [ a owl:Restriction ;
-            owl:minCardinality 1 ;
-            owl:onProperty infores:id ],
+            owl:maxCardinality 1 ;
+            owl:onProperty infores:description ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
             owl:onProperty infores:synonym ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom infores:InformationResourceStatusEnum ;
-            owl:onProperty infores:status ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty infores:id ],
         linkml:ClassDefinition ;
     skos:altLabel "knowledgebase" ;
     skos:definition "A database or knowledgebase and its supporting ecosystem of interfaces  and services that deliver content to consumers (e.g. web portals, APIs,  query endpoints, streaming services, data downloads, etc.). A single Information Resource by this definition may span many different datasets or databases, and include many access endpoints and user interfaces. Information Resources include project-specific resources such as a Translator Knowledge Provider, and community knowledgebases like ChemBL, OMIM, or DGIdb." ;
@@ -164,6 +164,11 @@ infores:InformationResource a owl:Class ;
     rdfs:subClassOf infores:KnowledgeLevelEnum,
         linkml:PermissibleValue .
 
+<https://w3id.org/biolink/infores/KnowledgeLevelEnum#mixed> a owl:Class ;
+    rdfs:label "mixed" ;
+    rdfs:subClassOf infores:KnowledgeLevelEnum,
+        linkml:PermissibleValue .
+
 <https://w3id.org/biolink/infores/KnowledgeLevelEnum#not_provided> a owl:Class ;
     rdfs:label "not_provided" ;
     rdfs:subClassOf infores:KnowledgeLevelEnum,
@@ -171,6 +176,11 @@ infores:InformationResource a owl:Class ;
 
 <https://w3id.org/biolink/infores/KnowledgeLevelEnum#observation> a owl:Class ;
     rdfs:label "observation" ;
+    rdfs:subClassOf infores:KnowledgeLevelEnum,
+        linkml:PermissibleValue .
+
+<https://w3id.org/biolink/infores/KnowledgeLevelEnum#other> a owl:Class ;
+    rdfs:label "other" ;
     rdfs:subClassOf infores:KnowledgeLevelEnum,
         linkml:PermissibleValue .
 
@@ -259,16 +269,6 @@ infores:InformationResourceStatusEnum a owl:Class ;
         <https://w3id.org/biolink/infores/InformationResourceStatusEnum#modified>,
         <https://w3id.org/biolink/infores/InformationResourceStatusEnum#released> .
 
-infores:KnowledgeLevelEnum a owl:Class ;
-    rdfs:subClassOf linkml:EnumDefinition ;
-    owl:unionOf ( <https://w3id.org/biolink/infores/KnowledgeLevelEnum#knowledge_assertion> <https://w3id.org/biolink/infores/KnowledgeLevelEnum#statistical_association> <https://w3id.org/biolink/infores/KnowledgeLevelEnum#prediction> <https://w3id.org/biolink/infores/KnowledgeLevelEnum#observation> <https://w3id.org/biolink/infores/KnowledgeLevelEnum#not_provided> <https://w3id.org/biolink/infores/KnowledgeLevelEnum#logical_entailment> ) ;
-    linkml:permissible_values <https://w3id.org/biolink/infores/KnowledgeLevelEnum#knowledge_assertion>,
-        <https://w3id.org/biolink/infores/KnowledgeLevelEnum#logical_entailment>,
-        <https://w3id.org/biolink/infores/KnowledgeLevelEnum#not_provided>,
-        <https://w3id.org/biolink/infores/KnowledgeLevelEnum#observation>,
-        <https://w3id.org/biolink/infores/KnowledgeLevelEnum#prediction>,
-        <https://w3id.org/biolink/infores/KnowledgeLevelEnum#statistical_association> .
-
 infores:AgentTypeEnum a owl:Class ;
     rdfs:subClassOf linkml:EnumDefinition ;
     owl:unionOf ( <https://w3id.org/biolink/infores/AgentTypeEnum#manual_agent> <https://w3id.org/biolink/infores/AgentTypeEnum#not_provided> <https://w3id.org/biolink/infores/AgentTypeEnum#automated_agent> <https://w3id.org/biolink/infores/AgentTypeEnum#data_analysis_pipeline> <https://w3id.org/biolink/infores/AgentTypeEnum#computational_model> <https://w3id.org/biolink/infores/AgentTypeEnum#text_mining_agent> <https://w3id.org/biolink/infores/AgentTypeEnum#image_processing_agent> <https://w3id.org/biolink/infores/AgentTypeEnum#manual_validation_of_automated_agent> ) ;
@@ -280,5 +280,17 @@ infores:AgentTypeEnum a owl:Class ;
         <https://w3id.org/biolink/infores/AgentTypeEnum#manual_validation_of_automated_agent>,
         <https://w3id.org/biolink/infores/AgentTypeEnum#not_provided>,
         <https://w3id.org/biolink/infores/AgentTypeEnum#text_mining_agent> .
+
+infores:KnowledgeLevelEnum a owl:Class ;
+    rdfs:subClassOf linkml:EnumDefinition ;
+    owl:unionOf ( <https://w3id.org/biolink/infores/KnowledgeLevelEnum#knowledge_assertion> <https://w3id.org/biolink/infores/KnowledgeLevelEnum#statistical_association> <https://w3id.org/biolink/infores/KnowledgeLevelEnum#prediction> <https://w3id.org/biolink/infores/KnowledgeLevelEnum#observation> <https://w3id.org/biolink/infores/KnowledgeLevelEnum#not_provided> <https://w3id.org/biolink/infores/KnowledgeLevelEnum#logical_entailment> <https://w3id.org/biolink/infores/KnowledgeLevelEnum#mixed> <https://w3id.org/biolink/infores/KnowledgeLevelEnum#other> ) ;
+    linkml:permissible_values <https://w3id.org/biolink/infores/KnowledgeLevelEnum#knowledge_assertion>,
+        <https://w3id.org/biolink/infores/KnowledgeLevelEnum#logical_entailment>,
+        <https://w3id.org/biolink/infores/KnowledgeLevelEnum#mixed>,
+        <https://w3id.org/biolink/infores/KnowledgeLevelEnum#not_provided>,
+        <https://w3id.org/biolink/infores/KnowledgeLevelEnum#observation>,
+        <https://w3id.org/biolink/infores/KnowledgeLevelEnum#other>,
+        <https://w3id.org/biolink/infores/KnowledgeLevelEnum#prediction>,
+        <https://w3id.org/biolink/infores/KnowledgeLevelEnum#statistical_association> .
 
 

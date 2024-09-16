@@ -98,7 +98,9 @@
                 "prediction",
                 "observation",
                 "not_provided",
-                "logical_entailment"
+                "logical_entailment",
+                "mixed",
+                "other"
             ],
             "title": "KnowledgeLevelEnum",
             "type": "string"

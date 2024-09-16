@@ -1,5 +1,5 @@
 # Auto generated from information_resource_registry.yaml by pythongen.py version: 0.0.1
-# Generation date: 2024-09-16T13:43:12
+# Generation date: 2024-09-16T16:10:18
 # Schema: Information-Resource-Registry-Schema
 #
 # id: https://w3id.org/biolink/information_resource_registry.yaml
@@ -169,6 +169,12 @@ class KnowledgeLevelEnum(EnumDefinitionImpl):
     logical_entailment = PermissibleValue(
         text="logical_entailment",
         description="""a statement reporting a conclusion that follows logically from premises, which are typically well-established  facts or knowledge assertions. (e.g. fingernail part of finger, finger part of hand → fingernail part of hand)). Logical entailments are based on dedictive inference, and generally have a high degree of confidence when based on sound premises and inference logic.""")
+    mixed = PermissibleValue(
+        text="mixed",
+        description="""A statement that is supported by a mix of different types of evidence, such as a combination of manual  curation and computational prediction. This is a catch-all category for statements that do not fit cleanly  into one of the other categories.""")
+    other = PermissibleValue(
+        text="other",
+        description="""A knowledge level that does not fit into any of the other categories. This is a catch-all category for  knowledge levels that are not covered by the other categories.""")
 
     _defn = EnumDefinition(
         name="KnowledgeLevelEnum",

@@ -59,6 +59,10 @@ class KnowledgeLevelEnum(str, Enum):
     not_provided = "not_provided"
     # a statement reporting a conclusion that follows logically from premises, which are typically well-established  facts or knowledge assertions. (e.g. fingernail part of finger, finger part of hand → fingernail part of hand)). Logical entailments are based on dedictive inference, and generally have a high degree of confidence when based on sound premises and inference logic.
     logical_entailment = "logical_entailment"
+    # A statement that is supported by a mix of different types of evidence, such as a combination of manual  curation and computational prediction. This is a catch-all category for statements that do not fit cleanly  into one of the other categories.
+    mixed = "mixed"
+    # A knowledge level that does not fit into any of the other categories. This is a catch-all category for  knowledge levels that are not covered by the other categories.
+    other = "other"
     
     
 
