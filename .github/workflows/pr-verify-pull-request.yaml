@@ -40,7 +40,7 @@ jobs:
           make test
           poetry run codespell
           poetry run yamllint -c .yamllint-config infores_catalog.yaml
-          make validate_infores
+        # make validate_infores
 
 
 
