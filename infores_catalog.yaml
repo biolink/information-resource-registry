@@ -47,6 +47,8 @@ information_resources:
     description: >-
       ARAGORN: Performs a query operation which compiles data from numerous
       ARAGORN ranking agent services.
+    consumed_by:
+      - infores:ars
   - id: infores:aragorn-ranker
     status: deprecated
     name: ARAGORN Ranker
@@ -71,44 +73,46 @@ information_resources:
     agent type: not_provided
     description: TRAPI 1.1 endpoint for the NCATS Biomedical Translator Reasoner called ARAX
     consumes:
-      - infores:automat-drug-central
-      - infores:automat-gwas-catalog
-      - infores:automat-gtex
-      - infores:text-mining-provider-cooccurrence
-      - infores:gelinea
-      - infores:connections-hypothesis
-      - infores:spoke
-      - infores:automat-intact
-      - infores:automat-gtopdb
-      - infores:automat-cam-kp
-      - infores:cohd
+      - infores:answer-coalesce
       - infores:automat-binding-db
-      - infores:multiomics-microbiome
-      - infores:automat-hmdb
+      - infores:automat-cam-kp
+      - infores:automat-ctd
+      - infores:automat-drug-central
       - infores:automat-genome-alliance
-      - infores:service-provider-trapi
-      - infores:rtx-kg2
-      - infores:molepro
+      - infores:automat-gtex
+      - infores:automat-gtopdb
+      - infores:automat-gwas-catalog
+      - infores:automat-hetionet
+      - infores:automat-hgnc
+      - infores:automat-hmdb
+      - infores:automat-human-goa
+      - infores:automat-icees-kg
+      - infores:automat-intact
+      - infores:automat-monarchinitiative
+      - infores:automat-panther
+      - infores:automat-pharos
+      - infores:automat-reactome
+      - infores:automat-robokop
+      - infores:automat-string-db
       - infores:automat-ubergraph
       - infores:automat-viral-proteome
-      - infores:automat-hgnc
-      - infores:automat-human-goa
-      - infores:automat-monarchinitiative
-      - infores:automat-ctd
-      - infores:automat-reactome
-      - infores:openpredict
-      - infores:automat-hetionet
-      - infores:automat-panther
-      - infores:multiomics-multiomics
+      - infores:cohd
+      - infores:connections-hypothesis
+      - infores:gelinea
       - infores:genetics-data-provider
-      - infores:automat-icees-kg
-      - infores:multiomics-clinicaltrials
-      - infores:automat-pharos
-      - infores:automat-string-db
-      - infores:answer-coalesce
       - infores:knowledge-collaboratory
+      - infores:molepro
+      - infores:multiomics-clinicaltrials
       - infores:multiomics-drugapprovals
-      - infores:automat-robokop
+      - infores:multiomics-microbiome
+      - infores:multiomics-multiomics
+      - infores:openpredict
+      - infores:rtx-kg2
+      - infores:service-provider-trapi
+      - infores:spoke
+      - infores:text-mining-provider-cooccurrence
+    consumed_by:
+      - infores:ars
   - id: infores:atc-codes-umls
     status: released
     name: Anatomical Therapeutic Chemical (ATC) Codes (from UMLS)
@@ -229,9 +233,8 @@ information_resources:
     agent type: not_provided
     description: A graph based on the [Comparative Toxicogenomics Database (ctdbase.org)](ctdbase.org).
     consumed_by:
-      - infores:service-provider-trapi
-      - infores:biothings-explorer
       - infores:arax
+      - infores:service-provider-trapi
   - id: infores:automat-drug-central
     status: released
     name: Automat DrugCentral
@@ -241,9 +244,8 @@ information_resources:
     agent type: not_provided
     description: A graph based on DrugCentral
     consumed_by:
-      - infores:service-provider-trapi
-      - infores:biothings-explorer
       - infores:arax
+      - infores:service-provider-trapi
   - id: infores:automat-foodb
     status: released
     name: Automat Foodb
@@ -263,9 +265,8 @@ information_resources:
       A graph containing eqtl and sqtl information from [GTEx Portal (https://gtexportal.org/home/)](https://gtexportal.org/home/).
       Also includes genes that the variants lie within or near.
     consumed_by:
-      - infores:service-provider-trapi
-      - infores:biothings-explorer
       - infores:arax
+      - infores:service-provider-trapi
   - id: infores:automat-gtopdb
     status: released
     name: Automat GtoPdb
@@ -275,9 +276,8 @@ information_resources:
     agent type: not_provided
     description: A graph based on the [IUPHAR Guide to Pharmacology (https://www.guidetopharmacology.org/)](https://www.guidetopharmacology.org/)
     consumed_by:
-      - infores:service-provider-trapi
-      - infores:biothings-explorer
       - infores:arax
+      - infores:service-provider-trapi
   - id: infores:automat-gwas-catalog
     status: released
     name: Automat GWAS Catalog
@@ -287,9 +287,8 @@ information_resources:
     agent type: not_provided
     description: A graph based on the GWAS Catalog
     consumed_by:
-      - infores:service-provider-trapi
-      - infores:biothings-explorer
       - infores:arax
+      - infores:service-provider-trapi
   - id: infores:automat-hetio
     status: deprecated
     name: Automat Hetio
@@ -307,9 +306,8 @@ information_resources:
     agent type: not_provided
     description: A graph based on [hetionet (het.io)](het.io).
     consumed_by:
-      - infores:service-provider-trapi
-      - infores:biothings-explorer
       - infores:arax
+      - infores:service-provider-trapi
   - id: infores:automat-hgnc
     status: released
     name: Automat HGNC
@@ -319,9 +317,8 @@ information_resources:
     agent type: not_provided
     description: Gene families from [HGNC (genenames.org)](genenames.org).
     consumed_by:
-      - infores:service-provider-trapi
-      - infores:biothings-explorer
       - infores:arax
+      - infores:service-provider-trapi
   - id: infores:automat-hmdb
     status: released
     name: Automat HMDB
@@ -331,9 +328,8 @@ information_resources:
     agent type: not_provided
     description: A graph based on the [Human Metabolome DataBase (hmdb.org)](hmdb.org).
     consumed_by:
-      - infores:service-provider-trapi
-      - infores:biothings-explorer
       - infores:arax
+      - infores:service-provider-trapi
   - id: infores:automat-human-goa
     status: released
     name: Automat Human GOA
@@ -343,9 +339,8 @@ information_resources:
     agent type: not_provided
     description: Human Gene Ontology Annotations from the GO consortium.
     consumed_by:
-      - infores:service-provider-trapi
-      - infores:biothings-explorer
       - infores:arax
+      - infores:service-provider-trapi
   - id: infores:automat-icees-kg
     status: released
     name: Automat ICEES KG
@@ -354,9 +349,8 @@ information_resources:
     knowledge level: correlation
     agent type: not_provided
     consumed_by:
-      - infores:service-provider-trapi
-      - infores:biothings-explorer
       - infores:arax
+      - infores:service-provider-trapi
   - id: infores:automat-intact
     status: released
     name: Automat IntAct
@@ -366,9 +360,8 @@ information_resources:
     agent type: not_provided
     description: Molecular (Gene-Gene) interactions from EBI IntAct (https://www.ebi.ac.uk/intact/)](https://www.ebi.ac.uk/intact/).
     consumed_by:
-      - infores:service-provider-trapi
-      - infores:biothings-explorer
       - infores:arax
+      - infores:service-provider-trapi
   - id: infores:automat-kegg
     status: deprecated
     name: Automat KEGG
@@ -410,9 +403,8 @@ information_resources:
     agent type: not_provided
     description: A graph of gene families and pathways from [Panther (pantherdb.org)](pantherdb.org)
     consumed_by:
-      - infores:service-provider-trapi
-      - infores:biothings-explorer
       - infores:arax
+      - infores:service-provider-trapi
   - id: infores:automat-pharos
     status: released
     name: Automat Pharos
@@ -422,9 +414,8 @@ information_resources:
     agent type: not_provided
     description: A graph based on [Pharos (pharos.nih.gov)](pharos.nih.gov).
     consumed_by:
-      - infores:service-provider-trapi
-      - infores:biothings-explorer
       - infores:arax
+      - infores:service-provider-trapi
   - id: infores:automat-robokop-kg
     status: released
     name: Automat ROBOKOP KG
@@ -501,9 +492,8 @@ information_resources:
       A graph consisting of viral proteins from UniProt, connected by similarity
       edges from UniRef.
     consumed_by:
-      - infores:service-provider-trapi
-      - infores:biothings-explorer
       - infores:arax
+      - infores:service-provider-trapi
   - id: infores:bfo
     status: released
     name: Basic Formal Ontology
@@ -642,7 +632,6 @@ information_resources:
       - infores:dgidb
     consumed_by:
       - infores:service-provider-trapi
-      - infores:biothings-explorer
   - id: infores:biothings-diseases
     status: released
     name: BioThings DISEASES API
@@ -655,7 +644,6 @@ information_resources:
       - infores:diseases
     consumed_by:
       - infores:service-provider-trapi
-      - infores:biothings-explorer
   - id: infores:biothings-ebi-gene2phenotype
     status: released
     name: BioThings EBIgene2phenotype API
@@ -668,7 +656,6 @@ information_resources:
       - infores:ebi-gene2phenotype
     consumed_by:
       - infores:service-provider-trapi
-      - infores:biothings-explorer
   - id: infores:biothings-explorer
     status: released
     name: BioThings Explorer
@@ -679,63 +666,9 @@ information_resources:
     knowledge level: predicted
     agent type: not_provided
     consumes:
-      - infores:biothings-hpo
-      - infores:biothings-semmeddb
-      - infores:automat-drug-central
-      - infores:biothings-ddinter
-      - infores:ols
-      - infores:myvariant-info
-      - infores:automat-gwas-catalog
-      - infores:biothings-go-bp
-      - infores:biothings-agr
-      - infores:biothings-ttd
-      - infores:biothings-innatedb
-      - infores:automat-gtex
-      - infores:biothings-mgi-g2p
-      - infores:biothings-idisk
-      - infores:biothings-rare-source
-      - infores:connections-hypothesis
-      - infores:biothings-bindingdb
-      - infores:biothings-pfocr
-      - infores:automat-gtopdb
-      - infores:automat-intact
-      - infores:biothings-fooddata-central
-      - infores:cohd
-      - infores:biothings-multiomics-wellness
-      - infores:mygene-info
-      - infores:ebi-quick-go
-      - infores:biothings-gtrx
-      - infores:mydisease-info
-      - infores:automat-hmdb
-      - infores:monarchinitiative
-      - infores:biothings-dgidb
-      - infores:biothings-go-mf
-      - infores:litvar
-      - infores:biothings-go-cc
-      - infores:biothings-bioplanet-pathway-disease
-      - infores:ebi-proteins
-      - infores:automat-viral-proteome
-      - infores:automat-hgnc
-      - infores:automat-human-goa
-      - infores:automat-ctd
-      - infores:automat-hetionet
-      - infores:automat-panther
-      - infores:biothings-suppkg
-      - infores:complex-portal
-      - infores:biothings-rhea
-      - infores:biothings-multiomics-biggim-drugresponse
-      - infores:biothings-multiomics-ehr-risk
-      - infores:biothings-bioplanet-pathway-gene
-      - infores:biothings-uberon-ontology
-      - infores:automat-icees-kg
-      - infores:ctd
-      - infores:text-mining-provider-targeted
-      - infores:mychem-info
-      - infores:biothings-repodb
-      - infores:automat-pharos
-      - infores:biothings-ebi-gene2phenotype
-      - infores:biothings-foodb
-      - infores:biothings-diseases
+      - infores:service-provider-trapi
+    consumed_by:
+      - infores:ars
   - id: infores:service-provider-trapi
     status: released
     name: Service Provider TRAPI endpoints
@@ -746,65 +679,66 @@ information_resources:
     knowledge level: other
     agent type: not_provided
     consumes:
-      - infores:biothings-hpo
-      - infores:biothings-semmeddb
-      - infores:automat-drug-central
-      - infores:biothings-ddinter
-      - infores:ols
-      - infores:myvariant-info
-      - infores:automat-gwas-catalog
-      - infores:biothings-go-bp
-      - infores:biothings-agr
-      - infores:biothings-ttd
-      - infores:biothings-innatedb
-      - infores:automat-gtex
-      - infores:biothings-mgi-g2p
-      - infores:biothings-idisk
-      - infores:biothings-rare-source
-      - infores:connections-hypothesis
-      - infores:biothings-bindingdb
-      - infores:biothings-pfocr
-      - infores:automat-gtopdb
-      - infores:automat-intact
-      - infores:biothings-fooddata-central
-      - infores:cohd
-      - infores:biothings-multiomics-wellness
-      - infores:mygene-info
-      - infores:ebi-quick-go
-      - infores:biothings-gtrx
-      - infores:mydisease-info
-      - infores:automat-hmdb
-      - infores:monarchinitiative
-      - infores:biothings-dgidb
-      - infores:biothings-go-mf
-      - infores:litvar
-      - infores:biothings-go-cc
-      - infores:biothings-bioplanet-pathway-disease
-      - infores:ebi-proteins
-      - infores:automat-viral-proteome
-      - infores:automat-hgnc
-      - infores:automat-human-goa
       - infores:automat-ctd
+      - infores:automat-drug-central
+      - infores:automat-gtex
+      - infores:automat-gtopdb
+      - infores:automat-gwas-catalog
       - infores:automat-hetionet
-      - infores:automat-panther
-      - infores:biothings-suppkg
-      - infores:complex-portal
-      - infores:biothings-rhea
-      - infores:biothings-multiomics-biggim-drugresponse
-      - infores:biothings-multiomics-ehr-risk
-      - infores:biothings-bioplanet-pathway-gene
-      - infores:biothings-uberon-ontology
+      - infores:automat-hgnc
+      - infores:automat-hmdb
+      - infores:automat-human-goa
       - infores:automat-icees-kg
-      - infores:ctd
-      - infores:text-mining-provider-targeted
-      - infores:mychem-info
-      - infores:biothings-repodb
+      - infores:automat-intact
+      - infores:automat-panther
       - infores:automat-pharos
+      - infores:automat-viral-proteome
+      - infores:biothings-agr
+      - infores:biothings-bindingdb
+      - infores:biothings-bioplanet-pathway-disease
+      - infores:biothings-bioplanet-pathway-gene
+      - infores:biothings-ddinter
+      - infores:biothings-dgidb
+      - infores:biothings-diseases
       - infores:biothings-ebi-gene2phenotype
       - infores:biothings-foodb
-      - infores:biothings-diseases
+      - infores:biothings-fooddata-central
+      - infores:biothings-go-bp
+      - infores:biothings-go-cc
+      - infores:biothings-go-mf
+      - infores:biothings-gtrx
+      - infores:biothings-hpo
+      - infores:biothings-idisk
+      - infores:biothings-innatedb
+      - infores:biothings-mgi-g2p
+      - infores:biothings-multiomics-biggim-drugresponse
+      - infores:biothings-multiomics-ehr-risk
+      - infores:biothings-multiomics-wellness
+      - infores:biothings-pfocr
+      - infores:biothings-rare-source
+      - infores:biothings-repodb
+      - infores:biothings-rhea
+      - infores:biothings-semmeddb
+      - infores:biothings-suppkg
+      - infores:biothings-ttd
+      - infores:biothings-uberon-ontology
+      - infores:cohd
+      - infores:complex-portal
+      - infores:connections-hypothesis
+      - infores:ctd
+      - infores:ebi-proteins
+      - infores:ebi-quick-go
+      - infores:litvar
+      - infores:monarchinitiative
+      - infores:mychem-info
+      - infores:mydisease-info
+      - infores:mygene-info
+      - infores:myvariant-info
+      - infores:ols
+      - infores:text-mining-provider-targeted
     consumed_by:
       - infores:arax
+      - infores:biothings-explorer
   - id: infores:biothings-go-bp
     status: released
     name: BioThings Gene Ontology Biological Process API
@@ -817,7 +751,6 @@ information_resources:
       - infores:go
     consumed_by:
       - infores:service-provider-trapi
-      - infores:biothings-explorer
   - id: infores:biothings-go-cc
     status: released
     name: BioThings Gene Ontology Cellular Component API
@@ -830,7 +763,6 @@ information_resources:
       - infores:go
     consumed_by:
       - infores:service-provider-trapi
-      - infores:biothings-explorer
   - id: infores:biothings-go-mf
     status: released
     name: BioThings Gene Ontology Molecular Activity API
@@ -843,7 +775,6 @@ information_resources:
       - infores:go
     consumed_by:
       - infores:service-provider-trapi
-      - infores:biothings-explorer
   - id: infores:biothings-hpo
     status: released
     name: BioThings Human Phenotype Ontology API
@@ -853,11 +784,10 @@ information_resources:
     agent type: not_provided
     description: Documentation of the HPO query web services.
     consumes:
-      - infores:hpo-annotations
       - infores:hpo
+      - infores:hpo-annotations
     consumed_by:
       - infores:service-provider-trapi
-      - infores:biothings-explorer
   - id: infores:biothings-idisk
     status: released
     name: BioThings iDISK API
@@ -869,7 +799,6 @@ information_resources:
       - infores:idisk
     consumed_by:
       - infores:service-provider-trapi
-      - infores:biothings-explorer
   - id: infores:biothings-mgi-g2p
     status: released
     name: BioThings MGIgene2phenotype API
@@ -882,7 +811,6 @@ information_resources:
       - infores:mgi
     consumed_by:
       - infores:service-provider-trapi
-      - infores:biothings-explorer
   - id: infores:biothings-multiomics-biggim-drugresponse
     status: released
     name: Multiomics BigGIM-DrugResponse KP API
@@ -894,7 +822,6 @@ information_resources:
     description: Documentation of the Drug Response KP query web services.
     consumed_by:
       - infores:service-provider-trapi
-      - infores:biothings-explorer
   - id: infores:biothings-multiomics-ehr-risk
     status: modified
     name: Multiomics EHR Risk KP API
@@ -907,7 +834,6 @@ information_resources:
       KP query web services.
     consumed_by:
       - infores:service-provider-trapi
-      - infores:biothings-explorer
   - id: infores:providence-st-joseph-ehr
     status: released
     name: Providence St. Joseph EHR Data
@@ -930,7 +856,6 @@ information_resources:
     description: Documentation of the Multiomics Wellness KP query web services.
     consumed_by:
       - infores:service-provider-trapi
-      - infores:biothings-explorer
   - id: infores:multiomics-clinicaltrials
     status: released
     name: Multiomics ClinicalTrials KP API
@@ -988,7 +913,6 @@ information_resources:
       - infores:pfocr
     consumed_by:
       - infores:service-provider-trapi
-      - infores:biothings-explorer
   - id: infores:pfocr
     status: released
     name: PFOCR
@@ -1010,7 +934,6 @@ information_resources:
       - infores:semmeddb
     consumed_by:
       - infores:service-provider-trapi
-      - infores:biothings-explorer
   - id: infores:biothings-semmeddb-anatomy
     status: deprecated
     name: SEMMED Anatomy API
@@ -1087,7 +1010,6 @@ information_resources:
       - infores:uberon
     consumed_by:
       - infores:service-provider-trapi
-      - infores:biothings-explorer
   - id: infores:biothings-rhea
     status: released
     name: BioThings Rhea API
@@ -1100,7 +1022,6 @@ information_resources:
       - infores:rhea
     consumed_by:
       - infores:service-provider-trapi
-      - infores:biothings-explorer
   - id: infores:rhea
     status: released
     name: Rhea
@@ -1125,7 +1046,6 @@ information_resources:
       - infores:bioplanet
     consumed_by:
       - infores:service-provider-trapi
-      - infores:biothings-explorer
   - id: infores:biothings-bioplanet-pathway-gene
     status: released
     name: BioThings BioPlanet Pathway-Gene API
@@ -1140,7 +1060,6 @@ information_resources:
       - infores:bioplanet
     consumed_by:
       - infores:service-provider-trapi
-      - infores:biothings-explorer
   - id: infores:bioplanet
     status: released
     name: BioPlanet
@@ -1166,7 +1085,6 @@ information_resources:
       - infores:bindingdb
     consumed_by:
       - infores:service-provider-trapi
-      - infores:biothings-explorer
   - id: infores:bspo
     status: released
     name: Biological Spatial Ontology
@@ -1404,9 +1322,8 @@ information_resources:
       (OMOP vocabularies, search, concept relationships, concept hierarchy, concept
       sets)
     consumed_by:
-      - infores:service-provider-trapi
-      - infores:biothings-explorer
       - infores:arax
+      - infores:service-provider-trapi
   - id: infores:cohd-covid
     status: released
     name: Columbia Open Health Data (COHD) for COVID-19 Research
@@ -1484,9 +1401,8 @@ information_resources:
     agent type: not_provided
     description: A Translator Reasoner API for the Connections Hypothesis Provider
     consumed_by:
-      - infores:service-provider-trapi
-      - infores:biothings-explorer
       - infores:arax
+      - infores:service-provider-trapi
   - id: infores:cord19
     status: deprecated
     name: COVID-19 Open Research Dataset
@@ -1565,7 +1481,6 @@ information_resources:
     consumed_by:
       - infores:mydisease-info
       - infores:service-provider-trapi
-      - infores:biothings-explorer
   - id: infores:ctrp
     status: released
     name: Cancer Therapeutics Response Portal
@@ -1644,8 +1559,8 @@ information_resources:
       databases, and other web-based sources. Drug, gene, and interaction data are normalized
       and merged into conceptual groups.
     consumed_by:
-      - infores:rtx-kg2
       - infores:biothings-dgidb
+      - infores:rtx-kg2
   - id: infores:dili-network-study-data
     status: deprecated
     name: Drug-Induced Liver Injury Network (DILIN) Participant Data
@@ -1696,8 +1611,8 @@ information_resources:
       association studies. We further unify the evidence by assigning confidence  scores that
       facilitate comparison of the different types and sources of evidence.
     consumed_by:
-      - infores:rtx-kg2
       - infores:biothings-diseases
+      - infores:rtx-kg2
   - id: infores:disgenet
     status: released
     name: DisGeNET
@@ -1823,7 +1738,6 @@ information_resources:
       - infores:uniprot
     consumed_by:
       - infores:service-provider-trapi
-      - infores:biothings-explorer
   - id: infores:ebi-quick-go
     status: released
     name: QuickGO API
@@ -1843,7 +1757,6 @@ information_resources:
       - infores:go
     consumed_by:
       - infores:service-provider-trapi
-      - infores:biothings-explorer
   - id: infores:eco
     status: released
     name: Evidence & Conclusion Ontology
@@ -2086,11 +1999,11 @@ information_resources:
     knowledge level: curated
     agent type: not_provided
     consumed_by:
-      - infores:rtx-kg2
-      - infores:biothings-go-mf
       - infores:biothings-go-bp
       - infores:biothings-go-cc
+      - infores:biothings-go-mf
       - infores:ebi-quick-go
+      - infores:rtx-kg2
   - id: infores:go-cam
     status: released
     name: Gene Ontology Causal Activity Model Annotations
@@ -2369,6 +2282,8 @@ information_resources:
     knowledge level: predicted
     agent type: not_provided
     description: imProving Agent OpenAPI TRAPI Specification
+    consumed_by:
+      - infores:ars
   - id: infores:indigo-reasoner
     status: deprecated
     name: OpenAPI for indigo NCATS Biomedical Translator Reasoner
@@ -2544,7 +2459,6 @@ information_resources:
       - infores:dbsnp
     consumed_by:
       - infores:service-provider-trapi
-      - infores:biothings-explorer
   - id: infores:loinc
     status: released
     name: Logical Observation Identifiers Names and Codes
@@ -2736,7 +2650,6 @@ information_resources:
     agent type: not_provided
     consumed_by:
       - infores:service-provider-trapi
-      - infores:biothings-explorer
   - id: infores:mondo
     status: released
     name: MONDO Disease Ontology
@@ -2789,14 +2702,13 @@ information_resources:
       Documentation of the MyChem.info chem query web services.  Learn more
       about [MyChem.info](http://MyChem.info/)
     consumes:
-      - infores:chembl
-      - infores:chebi
       - infores:aeolus
+      - infores:chebi
+      - infores:chembl
       - infores:drugcentral
       - infores:fda-orphan-drug-db
     consumed_by:
       - infores:service-provider-trapi
-      - infores:biothings-explorer
   - id: infores:mydisease-info
     status: released
     name: MyDisease.info API
@@ -2816,7 +2728,6 @@ information_resources:
       - infores:mondo
     consumed_by:
       - infores:service-provider-trapi
-      - infores:biothings-explorer
   - id: infores:mygene-info
     status: released
     name: MyGene.info API
@@ -2830,14 +2741,13 @@ information_resources:
       Documentation of the MyGene.info Gene Query web services. Learn more
       about [MyGene.info](http://mygene.info/)
     consumes:
-      - infores:reactome
-      - infores:panther
       - infores:clingen
-      - infores:ncbi-gene
       - infores:cpdb
+      - infores:ncbi-gene
+      - infores:panther
+      - infores:reactome
     consumed_by:
       - infores:service-provider-trapi
-      - infores:biothings-explorer
   - id: infores:myvariant-info
     status: released
     name: MyVariant.info API
@@ -2851,12 +2761,11 @@ information_resources:
       Documentation of the MyVariant.info Variant Query web services. Learn
       more about [MyVariant.info](http://myvariant.info/)
     consumes:
-      - infores:dbsnp
-      - infores:clinvar
       - infores:civic
+      - infores:clinvar
+      - infores:dbsnp
     consumed_by:
       - infores:service-provider-trapi
-      - infores:biothings-explorer
   - id: infores:nanopublications
     status: released
     name: Nanopublications Network
@@ -3031,7 +2940,6 @@ information_resources:
       - infores:disease-ontology
     consumed_by:
       - infores:service-provider-trapi
-      - infores:biothings-explorer
   - id: infores:omicsdi
     status: released
     name: OmicsDI
@@ -3443,82 +3351,82 @@ information_resources:
     agent type: not_provided
     description: TRAPI 1.1 endpoint for the NCATS Biomedical Translator KP called RTX KG2
     consumes:
-      - infores:medlineplus
-      - infores:reactome
-      - infores:ehdaa2
-      - infores:icd10ae-umls
-      - infores:rxnorm
+      - infores:atc-codes-umls
+      - infores:bfo
+      - infores:biolink-ontology
       - infores:biothings-multiomics-clinicaltrials
-      - infores:ro
-      - infores:ino
-      - infores:smpdb
-      - infores:hmdb
-      - infores:fma-obo
-      - infores:mesh
-      - infores:loinc-umls
-      - infores:genepio
-      - infores:omim
-      - infores:intact
-      - infores:medrt-umls
-      - infores:goa
-      - infores:ndfrt
-      - infores:mirbase
-      - infores:chebi
       - infores:bspo
+      - infores:chebi
+      - infores:chembl
+      - infores:chv-umls
+      - infores:cl
+      - infores:cpt-codes-umls
+      - infores:dda
+      - infores:dgidb
+      - infores:disease-ontology
+      - infores:diseases
+      - infores:disgenet
+      - infores:drugbank
       - infores:drugcentral
       - infores:efo
-      - infores:disease-ontology
-      - infores:unichem
-      - infores:fma-umls
-      - infores:meddra-umls
-      - infores:pato
-      - infores:pr
-      - infores:kegg
-      - infores:icd9cm-umls
-      - infores:pdq-umls
-      - infores:dda
-      - infores:chembl
-      - infores:snomedct
-      - infores:chv-umls
-      - infores:atc-codes-umls
-      - infores:umls
-      - infores:uniprot
+      - infores:ehdaa2
       - infores:ensembl-gene
-      - infores:mi
-      - infores:drugbank
-      - infores:go
-      - infores:bfo
+      - infores:fma-obo
+      - infores:fma-umls
       - infores:foodon
-      - infores:dgidb
-      - infores:icd10-umls
-      - infores:ncbi-taxonomy
-      - infores:psy-umls
-      - infores:nbo
-      - infores:nddf-umls
-      - infores:cpt-codes-umls
-      - infores:hcp-codes-umls
-      - infores:semmeddb
-      - infores:ncit
-      - infores:vandf-umls
+      - infores:genepio
+      - infores:go
       - infores:go-plus
-      - infores:ttd
-      - infores:umls-metathesaurus
-      - infores:diseases
-      - infores:ncbi-taxon
-      - infores:mondo
-      - infores:hgnc
-      - infores:icd10pcs-umls
-      - infores:hpo
-      - infores:biolink-ontology
-      - infores:uberon
-      - infores:disgenet
-      - infores:ordo
-      - infores:icd10cm-umls
-      - infores:pathwhiz
-      - infores:hl7-umls
+      - infores:goa
+      - infores:hcp-codes-umls
       - infores:hcpcs-cpt-umls
-      - infores:cl
+      - infores:hgnc
+      - infores:hl7-umls
+      - infores:hmdb
+      - infores:hpo
+      - infores:icd10-umls
+      - infores:icd10ae-umls
+      - infores:icd10cm-umls
+      - infores:icd10pcs-umls
+      - infores:icd9cm-umls
+      - infores:ino
+      - infores:intact
+      - infores:kegg
+      - infores:loinc-umls
+      - infores:meddra-umls
+      - infores:medlineplus
+      - infores:medrt-umls
+      - infores:mesh
+      - infores:mi
+      - infores:mirbase
+      - infores:mondo
+      - infores:nbo
       - infores:ncbi-gene
+      - infores:ncbi-taxon
+      - infores:ncbi-taxonomy
+      - infores:ncit
+      - infores:nddf-umls
+      - infores:ndfrt
+      - infores:omim
+      - infores:ordo
+      - infores:pathwhiz
+      - infores:pato
+      - infores:pdq-umls
+      - infores:pr
+      - infores:psy-umls
+      - infores:reactome
+      - infores:ro
+      - infores:rxnorm
+      - infores:semmeddb
+      - infores:smpdb
+      - infores:snomedct
+      - infores:ttd
+      - infores:uberon
+      - infores:umls
+      - infores:umls-metathesaurus
+      - infores:unichem
+      - infores:uniprot
+      - infores:vandf-umls
     consumed_by:
       - infores:arax
   - id: infores:rxnorm
@@ -3816,7 +3724,6 @@ information_resources:
       between concepts, as opposed to concepts cooccurring with each other.
     consumed_by:
       - infores:service-provider-trapi
-      - infores:biothings-explorer
   - id: infores:tissues-expression-db
     status: released
     name: Tissue Expression Database
@@ -3870,8 +3777,8 @@ information_resources:
     knowledge level: curated
     agent type: not_provided
     consumed_by:
-      - infores:rtx-kg2
       - infores:biothings-uberon-ontology
+      - infores:rtx-kg2
   - id: infores:umls
     status: released
     name: Unified Medical Language System
@@ -3939,6 +3846,8 @@ information_resources:
     knowledge level: predicted
     agent type: not_provided
     description: OpenAPI for NCATS Biomedical Translator Reasoners
+    consumed_by:
+      - infores:ars
   - id: infores:us-census-acs-data
     status: deprecated
     name: United States Census Bureau American Community Survey Data
@@ -4196,7 +4105,6 @@ information_resources:
       - infores:rare-source
     consumed_by:
       - infores:service-provider-trapi
-      - infores:biothings-explorer
   - id: infores:rare-source
     status: released
     name: NCATS RARe-SOURCE
@@ -4231,7 +4139,6 @@ information_resources:
       - infores:suppkg
     consumed_by:
       - infores:service-provider-trapi
-      - infores:biothings-explorer
   - id: infores:suppkg
     status: released
     name: SuppKG
@@ -4257,7 +4164,6 @@ information_resources:
       - infores:ddinter
     consumed_by:
       - infores:service-provider-trapi
-      - infores:biothings-explorer
   - id: infores:biothings-gtrx
     status: released
     name: BioThings GTRx API
@@ -4275,7 +4181,6 @@ information_resources:
       - infores:gtrx
     consumed_by:
       - infores:service-provider-trapi
-      - infores:biothings-explorer
   - id: infores:biothings-ttd
     status: released
     name: Biothings Therapeutic Target Database API
@@ -4291,7 +4196,6 @@ information_resources:
       - infores:ttd
     consumed_by:
       - infores:service-provider-trapi
-      - infores:biothings-explorer
   - id: infores:rampdb
     status: released
     name: RaMPDB
@@ -4319,7 +4223,6 @@ information_resources:
       - infores:agrkb
     consumed_by:
       - infores:service-provider-trapi
-      - infores:biothings-explorer
   - id: infores:innatedb
     status: released
     name: InnateDB
@@ -4348,7 +4251,6 @@ information_resources:
       - infores:innatedb
     consumed_by:
       - infores:service-provider-trapi
-      - infores:biothings-explorer
   - id: infores:iptmnet
     status: released
     name: iPTMnet
@@ -4387,7 +4289,6 @@ information_resources:
       download
     consumed_by:
       - infores:service-provider-trapi
-      - infores:biothings-explorer
   - id: infores:biothings-repodb
     status: released
     name: BioThings repoDB API
@@ -4402,7 +4303,6 @@ information_resources:
       - infores:repodb
     consumed_by:
       - infores:service-provider-trapi
-      - infores:biothings-explorer
   - id: infores:biothings-hmdb
     status: released
     name: BioThings HMDB API
@@ -4438,7 +4338,6 @@ information_resources:
       - infores:fooddata-central
     consumed_by:
       - infores:service-provider-trapi
-      - infores:biothings-explorer
   - id: infores:biothings-foodb
     status: released
     name: BioThings FooDB API
@@ -4452,7 +4351,6 @@ information_resources:
       - infores:fooddb
     consumed_by:
       - infores:service-provider-trapi
-      - infores:biothings-explorer
   - id: infores:tissues
     status: released
     name: TISSUES
@@ -4500,6 +4398,12 @@ information_resources:
     consumed_by:
       - infores:arax
   - id: infores:ars
+    consumes:
+      - infores:aragorn
+      - infores:arax
+      - infores:biothings-explorer
+      - infores:improving-agent
+      - infores:unsecret-agent
   - id: infores:chv-umls
     consumed_by:
       - infores:rtx-kg2
