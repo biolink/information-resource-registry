@@ -35,6 +35,7 @@ def is_valid_url(urls: str) -> bool:
                 else:
                     return False
         except requests.exceptions.RequestException as e:
+            print(e)
             print(url)
 
 
@@ -102,8 +103,6 @@ class InformationResource:
                         or infores.get("id") == "infores:omicsdi" \
                         or infores.get("id") == "infores:ndcd" \
                         or infores.get("id") == "infores:atc-codes-umls" \
-                        or "umls" in infores.get("xref") \
-                        or "umls" in infores.get("id") \
                         or infores.get("xref") is None \
                         or infores.get("status") == 'deprecated' \
                         or is_valid_url(infores.get("xref")):
