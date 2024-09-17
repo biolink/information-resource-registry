@@ -1,0 +1,17 @@
+// A database or knowledgebase and its supporting ecosystem of interfaces  and services that deliver content to consumers (e.g. web portals, APIs,  query endpoints, streaming services, data downloads, etc.). A single Information Resource by this definition may span many different datasets or databases, and include many access endpoints and user interfaces. Information Resources include project-specific resources such as a Translator Knowledge Provider, and community knowledgebases like ChemBL, OMIM, or DGIdb.
+message InformationResource
+ {
+  informationResourceStatusEnum status = 0
+  string name = 0
+  string id = 0
+ repeated  string xref = 0
+ repeated  string synonym = 0
+  string description = 0
+  knowledgeLevelEnum knowledgeLevel = 0
+  agentTypeEnum agentType = 0
+ }
+// A collection of information resources
+message InformationResourceContainer
+ {
+ repeated  informationResource informationResources = 0
+ }
