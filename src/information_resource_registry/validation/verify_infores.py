@@ -1,7 +1,6 @@
 import os
-import requests
-import csv
 import time
+import random
 import urllib3
 from urllib3.util.ssl_ import create_urllib3_context
 from urllib3.util.retry import Retry
@@ -17,32 +16,35 @@ from urllib3.poolmanager import PoolManager
 
 # Define retry strategy
 retry_strategy = Retry(
-    total=5,  # Number of retries
+    total=3,  # Reduce the number of retries to avoid hammering sites
     backoff_factor=1,  # Backoff factor for retries
     status_forcelist=[500, 502, 503, 504],  # Retry on these status codes
 )
 
+# Use a global http PoolManager for reuse across requests
+http = urllib3.PoolManager(ssl_context=ctx,
+                           retries=retry_strategy,
+                           timeout=urllib3.util.Timeout(connect=10, read=30))
 
 def is_valid_url(urls: str) -> bool:
     for url in urls:
         try:
-            with urllib3.PoolManager(ssl_context=ctx,
-                                        retries=retry_strategy,
-                                        timeout=urllib3.util.Timeout(connect=10, read=30)) as http:
-                response = http.request("GET", url, headers={'User-Agent': 'Mozilla/5.0'})
-                if response.status == 200:
-                    return True
-                else:
-                    return False
-        except requests.exceptions.RequestException as e:
-            print(e)
-            print(url)
-
+            # Add a randomized sleep to avoid rapid requests
+            time.sleep(random.uniform(1, 3))  # Sleep between 1 to 3 seconds
+            response = http.request("GET", url, headers={'User-Agent': 'Mozilla/5.0'})
+            if response.status == 200:
+                return True
+            else:
+                return False
+        except urllib3.exceptions.RequestError as e:
+            print(f"Request error: {e}")
+            print(f"URL: {url}")
+            return False  # Consider the URL invalid if there's a request error
 
 class InformationResource:
 
     def __init__(self) -> None:
-        infores_map = {}
+        self.infores_map = {}
 
     def dump(self):
         raise NotImplementedError
@@ -51,67 +53,42 @@ class InformationResource:
         with open(INFORES_YAML, 'r') as yaml_file:
             data = yaml.safe_load(yaml_file)
             for infores in data.get('information_resources'):
-                # exceptions for resolvable URLs that don't return 200 response for some reason (e.g. require
-                # user to accept a popup before resolving):
                 if infores.get("status") == "deprecated":
                     continue
+
+                # Validation for status
                 if infores.get("status") not in ["released", "deprecated", "draft", "modified"]:
                     print(infores)
-                    print("Invalid infores status:" + infores.get("status")
-                          + " for " + infores.get("name"))
-                    raise ValueError("invalid status for " + infores.get("name") + " for " + infores.get("id"))
-                if infores.get("knowledge_level") not in ["knowledge_assertion",
-                                                          "statistical_association",
-                                                          "prediction",
-                                                          "observation",
-                                                          "not_provided",
-                                                          "logical_entailment",
-                                                          "mixed",
-                                                          "other"]:
-                    print(infores)
-                    print("Invalid infores knowledge level:" + infores.get("knowledge_level")
-                          + " for " + infores.get("name"))
-                    raise ValueError("invalid knowledge level for " + infores.get("name") + " for " + infores.get("id"))
+                    raise ValueError(f"Invalid infores status: {infores.get('status')} for {infores.get('name')}")
 
-                if infores.get("agent_type") not in ["manual_agent",
-                                                     "not_provided",
-                                                     "automated_agent",
-                                                     "data_analysis_pipeline",
-                                                     "computational_model",
-                                                     "text_mining_agent",
-                                                     "image_processing_agent",
+                # Validation for knowledge level
+                if infores.get("knowledge_level") not in ["knowledge_assertion", "statistical_association",
+                                                          "prediction", "observation", "not_provided",
+                                                          "logical_entailment", "mixed", "other"]:
+                    print(infores)
+                    raise ValueError(f"Invalid knowledge level: {infores.get('knowledge_level')} for {infores.get('name')}")
+
+                # Validation for agent type
+                if infores.get("agent_type") not in ["manual_agent", "not_provided", "automated_agent",
+                                                     "data_analysis_pipeline", "computational_model",
+                                                     "text_mining_agent", "image_processing_agent",
                                                      "manual_validation_of_automated_agent"]:
                     print(infores)
-                    print("Invalid infores agent type:" + infores.get("agent_type") + " for " + infores.get("name"))
-                    raise ValueError("invalid agent type for " + infores.get("name") + " for " + infores.get("id"))
+                    raise ValueError(f"Invalid agent type: {infores.get('agent_type')} for {infores.get('name')}")
 
-                if infores.get("id") == 'infores:athena' \
-                        or infores.get("id") == 'infores:isb-wellness' \
-                        or infores.get("id") == 'infores:isb-incov' \
-                        or infores.get("id") == 'infores:preppi' \
-                        or infores.get("id") == 'infores:ttd' \
-                        or infores.get("id") == 'infores:flybase' \
-                        or infores.get("id") == 'infores:xenbase' \
-                        or infores.get("id") == 'infores:aeolus' \
-                        or infores.get("id") == 'infores:ctrp' \
-                        or infores.get("id") == 'infores:date' \
-                        or infores.get("id") == "infores:mirbase" \
-                        or infores.get("id") == "infores:nsides" \
-                        or infores.get("id") == "infores:irefindex" \
-                        or infores.get("id") == "infores:kinomescan" \
-                        or infores.get("id") == "infores:community-sar" \
-                        or infores.get("id") == "infores:omicsdi" \
-                        or infores.get("id") == "infores:ndcd" \
-                        or infores.get("id") == "infores:atc-codes-umls" \
-                        or infores.get("xref") is None \
-                        or infores.get("status") == 'deprecated' \
-                        or is_valid_url(infores.get("xref")):
-                    print(infores.get('id'), "has valid URL")
+                # Exceptions or URL validation
+                if infores.get("id") in ['infores:athena', 'infores:isb-wellness', 'infores:isb-incov',
+                                         'infores:preppi', 'infores:ttd', 'infores:flybase', 'infores:xenbase',
+                                         'infores:aeolus', 'infores:ctrp', 'infores:date', 'infores:mirbase',
+                                         'infores:nsides', 'infores:irefindex', 'infores:kinomescan',
+                                         'infores:community-sar', 'infores:omicsdi', 'infores:ndcd',
+                                         'infores:atc-codes-umls'] or infores.get("xref") is None \
+                        or infores.get("status") == 'deprecated' or is_valid_url(infores.get("xref")):
+                    print(f"{infores.get('id')} has valid URL")
                 else:
                     print(infores)
-                    print("Invalid infores URL:" + " for " + infores.get("name"))
-                    raise ValueError("invalid URL" + infores.get("name") + " for " + infores.get("id"))
-
+                    raise ValueError(f"Invalid infores URL for {infores.get('name')}")
 
 if __name__ == "__main__":
     InformationResource().validate()
+
