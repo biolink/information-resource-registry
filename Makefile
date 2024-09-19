@@ -130,7 +130,7 @@ tests:
 	$(RUN) yamllint -c .yamllint-config infores_catalog.yaml
 	$(RUN) python validation/verify_infores.py
 
-test: test-schema test-python test-examples lint spell tests validate_infores
+test: test-schema test-python test-examples lint spell tests
 
 test-schema: gen-project
 
