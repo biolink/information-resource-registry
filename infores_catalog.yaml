@@ -37,7 +37,7 @@ information_resources:
     status: released
     name: ARAGORN
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/ARAGORN-and-ROBOKOP
+      - https://github.com/NCATSTranslator/Translator-All/wiki/ARAGORN
     knowledge_level: prediction
     agent_type: not_provided
     description: >-
@@ -2655,9 +2655,9 @@ information_resources:
     status: released
     name: Physician Data Query (PDQ) (from UMLS)
     xref:
-      - https://www.nlm.nih.gov/research/umls/sourcereleasedocs/current/PDQ/index.html
-    knowledge_level: knowledge_assertion
-    agent_type: not_provided
+      - https://github.com/NCATSTranslator/Translator-All/wiki/PDQ-from-UMLS
+    knowledge level: knowledge_assertion
+    agent type: not_provided
   - id: infores:pfam
     status: released
     name: Pfam
@@ -3222,7 +3222,7 @@ information_resources:
     status: released
     name: UniChem
     xref:
-      - https://www.ebi.ac.uk/unichem/
+      - https://github.com/NCATSTranslator/Translator-All/wiki/UniChem
     synonym:
       - unichem
     knowledge_level: knowledge_assertion
