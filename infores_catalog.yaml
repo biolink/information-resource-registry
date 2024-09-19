@@ -291,7 +291,7 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     description: >-
-      The Monarch Knowledge Graph is a reference implementation of the Biolink model specification. 
+      The Monarch Knowledge Graph is a reference implementation of the Biolink model specification.
       It contains data from the Monarch Initiative aggregated database as well as several OBO ontologies.
   - id: infores:automat-mychem-info
     status: deprecated
@@ -622,6 +622,15 @@ information_resources:
     description: >-
       Documentation of the Multiomics Electronic-Health-Record (EHR) Risk
       KP query web services.
+  - id: infores:isb-EHRMLA-data
+    status: released
+    name: Multiomics EHRMLA May Treat API
+    xref:
+      - https://github.com/NCATSTranslator/Translator-All/wiki/Multiomics-EHRMLA-May-Treat-KP
+    knowledge level: predicted
+    agent type: computational_model
+    description: >-
+      Documentation of the Multiomics Electronic-Health-Record (EHR) Machine Learning Analysis (MLA) May Treat query web services.
   - id: infores:providence-st-joseph-ehr
     status: released
     name: Providence St. Joseph EHR Data
@@ -1277,7 +1286,7 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     description: >-
-      The FDA Adverse Event Reporting System (FAERS) is a database that contains information 
+      The FDA Adverse Event Reporting System (FAERS) is a database that contains information
       on adverse event and medication error reports submitted to FDA.
   - id: infores:fbbt
     status: released
@@ -2006,7 +2015,7 @@ information_resources:
     agent_type: not_provided
     description: >-
       https://kinace.kinametrix.com/#section-about
-      The KinAce web portal aggregates and visualizes the network of interactions between protein-kinases and their substrates in the human genome. 
+      The KinAce web portal aggregates and visualizes the network of interactions between protein-kinases and their substrates in the human genome.
       To begin, click on one of the tabs above. Each tab provides a unique way to select a set of proteins and display the known kinase-substrate interactions between them.
   - id: infores:kinomescan
     status: released
@@ -2640,7 +2649,7 @@ information_resources:
     knowledge_level: other
     agent_type: not_provided
     description: >-
-      This service provides screening of novel psychoactive compounds for pharmacological and 
+      This service provides screening of novel psychoactive compounds for pharmacological and
       functional activity at cloned human or rodent CNS receptors, channels, and transporters.
   - id: infores:pdq-umls
     status: released
@@ -2955,7 +2964,7 @@ information_resources:
     knowledge_level: prediction
     agent_type: computational_model
     description: >-
-      Genetic variant annotation and functional effect prediction toolbox. 
+      Genetic variant annotation and functional effect prediction toolbox.
       It annotates and predicts the effects of genetic variants on genes and proteins (such as amino acid changes).
   - id: infores:so
     status: released
@@ -3166,8 +3175,8 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     description: >-
-      TTD is a database providing information about the known and explored therapeutic protein 
-      and nucleic acid targets, the targeted disease, pathway information and the corresponding drugs 
+      TTD is a database providing information about the known and explored therapeutic protein
+      and nucleic acid targets, the targeted disease, pathway information and the corresponding drugs
       directed at each of these targets.
   - id: infores:ubergraph
     status: released
@@ -3311,7 +3320,7 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     description: >-
-      WikiPathways is an open science platform for biological pathways contributed, updated, 
+      WikiPathways is an open science platform for biological pathways contributed, updated,
       and used by the research community.
   - id: infores:xpo
     status: released
@@ -3516,8 +3525,8 @@ information_resources:
     description: >-
       Documentation of the BioThings API for
       [SuppKG](https://github.com/zhang-informatics/SemRep_DS/tree/main/SuppKG) data. SuppKG contains relations
-      between dietary supplements and other entities, such as diseases. More information can be found in [this 
-      paper](https://doi.org/10.1016/j.jbi.2022.104120). 
+      between dietary supplements and other entities, such as diseases. More information can be found in [this
+      paper](https://doi.org/10.1016/j.jbi.2022.104120).
   - id: infores:suppkg
     status: released
     name: SuppKG
@@ -3526,7 +3535,7 @@ information_resources:
     knowledge_level: not_provided
     agent_type: text_mining_agent
     description: >-
-      SuppKG contains relations between dietary supplements and other entities, such as diseases. 
+      SuppKG contains relations between dietary supplements and other entities, such as diseases.
       More information can be found in [this paper](https://doi.org/10.1016/j.jbi.2022.104120).
   - id: infores:biothings-ddinter
     status: released
@@ -3544,10 +3553,10 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     description: >-
-      Documentation of the BioThings API for [Genome-to-Treatment (GTRx™)](https://gtrx.rbsapp.net/about.html). 
-      This API includes the content from the linked website, specifically the recommended acute treatments and 
-      interventions for seriously ill newborns, infants and children with newly diagnosed genetic diseases. 
-      These may include therapeutics, dietary changes, surgery, medical devices or other interventions. 
+      Documentation of the BioThings API for [Genome-to-Treatment (GTRx™)](https://gtrx.rbsapp.net/about.html).
+      This API includes the content from the linked website, specifically the recommended acute treatments and
+      interventions for seriously ill newborns, infants and children with newly diagnosed genetic diseases.
+      These may include therapeutics, dietary changes, surgery, medical devices or other interventions.
       For more info, see the paper (open-access): https://www.nature.com/articles/s41467-022-31446-6.
   - id: infores:biothings-ttd
     status: released
@@ -3567,10 +3576,10 @@ information_resources:
     knowledge_level: mixed
     agent_type: not_provided
     description: >-
-      RaMP-DB (Relational database of Metabolomic Pathways) is a multi-sourced integrated database 
-      with comprehensive annotations on biological pathways, structure/chemistry, disease and ontology 
-      annotations for genes, proteins, and metabolites. RaMP-DB also provides a framework for single 
-      and batch queries of those annotations, and for performing chemical and biological pathway 
+      RaMP-DB (Relational database of Metabolomic Pathways) is a multi-sourced integrated database
+      with comprehensive annotations on biological pathways, structure/chemistry, disease and ontology
+      annotations for genes, proteins, and metabolites. RaMP-DB also provides a framework for single
+      and batch queries of those annotations, and for performing chemical and biological pathway
       enrichment analyses on input multi-omic datasets.
   - id: infores:biothings-agr
     status: released
@@ -3590,10 +3599,10 @@ information_resources:
     knowledge_level: mixed
     agent_type: not_provided
     description: >-
-      InnateDB is a publicly available database of the genes, proteins, experimentally-verified interactions 
-      and signaling pathways involved in the innate immune response of humans, mice and bovines to microbial infection. 
-      The database captures an improved coverage of the innate immunity interactome by integrating known interactions 
-      and pathways from major public databases together with manually-knowledge_assertion data into a centralised resource.
+      InnateDB is a publicly available database of the genes, proteins, experimentally-verified interactions
+      and signaling pathways involved in the innate immune response of humans, mice and bovines to microbial infection.
+      The database captures an improved coverage of the innate immunity interactome by integrating known interactions
+      and pathways from major public databases together with manually-curated data into a centralised resource.
   - id: infores:biothings-innatedb
     status: released
     name: BioThings InnateDB API
@@ -3602,7 +3611,7 @@ information_resources:
     knowledge_level: mixed
     agent_type: not_provided
     description: >-
-      Documentation of the BioThings API for [InnateDB](https://www.innatedb.com/) data. 
+      Documentation of the BioThings API for [InnateDB](https://www.innatedb.com/) data.
   - id: infores:iptmnet
     status: released
     name: iPTMnet
@@ -3611,11 +3620,11 @@ information_resources:
     knowledge_level: mixed
     agent_type: not_provided
     description: >-
-      iPTMnet is a bioinformatics resource for integrated understanding of protein post-translational 
-      modifications (PTMs) in systems biology context. It connects multiple disparate bioinformatics 
-      tools and systems text mining, data mining, analysis and visualization tools, and databases 
-      and ontologies into an integrated cross-cutting research resource to address the knowledge gaps 
-      in exploring and discovering PTM networks. 
+      iPTMnet is a bioinformatics resource for integrated understanding of protein post-translational
+      modifications (PTMs) in systems biology context. It connects multiple disparate bioinformatics
+      tools and systems text mining, data mining, analysis and visualization tools, and databases
+      and ontologies into an integrated cross-cutting research resource to address the knowledge gaps
+      in exploring and discovering PTM networks.
   - id: infores:fda-orphan-drug-db
     status: released
     name: FDA Orphan Drug Project designation database
@@ -3633,10 +3642,10 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     description: >-
-      The Complex Portal is a manually knowledge_assertion, encyclopaedic resource of macromolecular complexes 
-      from a number of key model organisms. The majority of complexes are made up of proteins but 
-      may also include nucleic acids or small molecules. All data is freely available for search 
-      and download
+      The Complex Portal is a manually curated, encyclopaedic resource of macromolecular complexes
+      from a number of key model organisms. The majority of complexes are made up of proteins but
+      may also include nucleic acids or small molecules. All data is freely available for search
+      and download.
   - id: infores:biothings-repodb
     status: released
     name: BioThings repoDB API
@@ -3645,7 +3654,7 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     description: >-
-      Documentation of the BioThings API for [repoDB](https://unmtid-shinyapps.net/shiny/repodb/) data. 
+      Documentation of the BioThings API for [repoDB](https://unmtid-shinyapps.net/shiny/repodb/) data.
       and download
   - id: infores:biothings-hmdb
     status: released
@@ -3655,7 +3664,7 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     description: >-
-      Documentation of the BioThings API for [HMDB](https://hmdb.ca/) data. 
+      Documentation of the BioThings API for [HMDB](https://hmdb.ca/) data.
   - id: infores:fooddata-central
     status: released
     name: FoodData Central
@@ -3664,8 +3673,8 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     description: >-
-      FoodData Central is an integrated data system that provides expanded nutrient profile data 
-      and links to related agricultural and experimental research. 
+      FoodData Central is an integrated data system that provides expanded nutrient profile data
+      and links to related agricultural and experimental research.
   - id: infores:biothings-fooddata-central
     status: released
     name: BioThings FoodData Central API
@@ -3674,8 +3683,8 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     description: >-
-      Documentation of the BioThings API for 
-      [FoodData Central](https://fdc.nal.usda.gov/index.html) data. 
+      Documentation of the BioThings API for
+      [FoodData Central](https://fdc.nal.usda.gov/index.html) data.
   - id: infores:biothings-foodb
     status: released
     name: BioThings FooDB API
@@ -3684,7 +3693,7 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     description: >-
-      Documentation of the BioThings API for [FooDB](https://foodb.ca/) data. 
+      Documentation of the BioThings API for [FooDB](https://foodb.ca/) data.
   - id: infores:tissues
     status: released
     name: TISSUES
@@ -3693,11 +3702,11 @@ information_resources:
     knowledge_level: mixed
     agent_type: not_provided
     description: >-
-      TISSUES is a weekly updated web resource that integrates evidence on tissue expression 
-      from manually knowledge_assertion literature, proteomics and transcriptomics screens, and automatic 
-      text mining. We map all evidence to common protein identifiers and Brenda Tissue Ontology 
-      terms, and further unify it by assigning confidence scores that facilitate comparison of 
-      the different types and sources of evidence. We finally visualize these scores on a 
+      TISSUES is a weekly updated web resource that integrates evidence on tissue expression
+      from manually curated literature, proteomics and transcriptomics screens, and automatic
+      text mining. We map all evidence to common protein identifiers and Brenda Tissue Ontology
+      terms, and further unify it by assigning confidence scores that facilitate comparison of
+      the different types and sources of evidence. We finally visualize these scores on a
       schematic human body to provide a convenient overview.
   - id: infores:biothings-tissues
     status: released
@@ -3707,7 +3716,7 @@ information_resources:
     knowledge_level: mixed
     agent_type: not_provided
     description: >-
-      Documentation of the BioThings API for [TISSUES](https://tissues.jensenlab.org/About) data. 
+      Documentation of the BioThings API for [TISSUES](https://tissues.jensenlab.org/About) data.
   - id: infores:mygeneset-info
     status: released
     name: MyGeneset.info API
@@ -3716,7 +3725,7 @@ information_resources:
     knowledge_level: other
     agent_type: not_provided
     description: >-
-      MyGeneset allows scientists to conveniently collect, save, and share sets of genes 
+      MyGeneset allows scientists to conveniently collect, save, and share sets of genes
       from thousands of different species.
   - id: infores:annotator
     status: released
