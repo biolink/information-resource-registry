@@ -397,8 +397,8 @@ information_resources:
   - id: infores:automat-ehr-may-treat-kp
     status: released
     name: Automat Multiomics EHRMLA May Treat API
-    knowledge level: curated
-    agent type: not_provided
+    knowledge_level: knowledge_assertion
+    agent_type: not_provided
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/Automat
     description: >-
