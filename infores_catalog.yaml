@@ -394,6 +394,16 @@ information_resources:
     description: >-
       A graph consisting of viral proteins from UniProt, connected by similarity
       edges from UniRef.
+  - id: infores:automat-ehr-may-treat-kp
+    status: released
+    name: Automat Multiomics EHRMLA May Treat API
+    knowledge level: curated
+    agent type: not_provided
+    xref:
+      - https://github.com/NCATSTranslator/Translator-All/wiki/Automat
+    description: >-
+      A graph consisting of May Treat associations from Multiomics Electronic-Health-Record (EHR) Machine Learning Analysis (MLA)
+      using the Providence health records
   - id: infores:bfo
     status: released
     name: Basic Formal Ontology
@@ -643,6 +653,15 @@ information_resources:
       for Systems Biology allows analysis of 26 million EHRs from patients in seven
       states in the US, including Alaska, California, Montana, Oregon, Washington, Texas,
       and New Mexico. Please email data-access@isbscience.org for more information.
+  - id: infores:isb-EHRMLA-data
+    status: released
+    name: Multiomics EHRMLA May Treat API
+    xref:
+      - https://github.com/NCATSTranslator/Translator-All/wiki/Multiomics-EHRMLA-May-Treat-KP
+    knowledge level: predicted
+    agent type: computational_model
+    description: >-
+      Documentation of the Multiomics Electronic-Health-Record (EHR) Machine Learning Analysis (MLA) May Treat query web services.
   - id: infores:biothings-multiomics-wellness
     status: released
     name: Multiomics Wellness KP API
@@ -1186,8 +1205,8 @@ information_resources:
     knowledge_level: prediction
     agent_type: computational_model
     description: >-
-      The Translator knowledge_assertion Query Service (CQS) is an SRI service that provides ARA-like capabilities. The service generates 
-      ‘prediction’ edges in response to inferred queries, based on customizable inference rules that are captured as CQS templates.
+      The Translator Curated Query Service (CQS) is an SRI service that provides ARA-like capabilities. The service generates
+      ‘predicted’ edges in response to inferred queries, based on customizable inference rules that are captured as CQS templates.
       The CQS links predictions to their supporting aux graphs and attaches provenance metadata, and then scores the results.
   - id: infores:ctd
     status: released
@@ -1315,9 +1334,9 @@ information_resources:
     knowledge_level: mixed
     agent_type: not_provided
     description: >-
-      DISEASES is a weekly updated web resource that integrates evidence on disease-gene associations 
-      from automatic text mining, manually knowledge_assertion literature, cancer mutation data, and 
-      genome-wide association studies. We further unify the evidence by assigning confidence 
+      DISEASES is a weekly updated web resource that integrates evidence on disease-gene associations
+      from automatic text mining, manually curated literature, cancer mutation data, and
+      genome-wide association studies. We further unify the evidence by assigning confidence
       scores that facilitate comparison of the different types and sources of evidence.
   - id: infores:disgenet
     status: released
