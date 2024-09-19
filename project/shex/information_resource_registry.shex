@@ -55,17 +55,20 @@ linkml:Sparqlpath xsd:string
           rdfs:comment @linkml:String ? ;
           <knowledge_level> [ <https://w3id.org/biolink/infores/KnowledgeLevelEnum#knowledge_assertion>
              <https://w3id.org/biolink/infores/KnowledgeLevelEnum#statistical_association>
-             <https://w3id.org/biolink/infores/KnowledgeLevelEnum#curated>
-             <https://w3id.org/biolink/infores/KnowledgeLevelEnum#predicted>
-             <https://w3id.org/biolink/infores/KnowledgeLevelEnum#text_mined>
-             <https://w3id.org/biolink/infores/KnowledgeLevelEnum#correlation>
-             <https://w3id.org/biolink/infores/KnowledgeLevelEnum#observed>
-             <https://w3id.org/biolink/infores/KnowledgeLevelEnum#other>
-             <https://w3id.org/biolink/infores/KnowledgeLevelEnum#mixed> ] ? ;
+             <https://w3id.org/biolink/infores/KnowledgeLevelEnum#prediction>
+             <https://w3id.org/biolink/infores/KnowledgeLevelEnum#observation>
+             <https://w3id.org/biolink/infores/KnowledgeLevelEnum#not_provided>
+             <https://w3id.org/biolink/infores/KnowledgeLevelEnum#logical_entailment>
+             <https://w3id.org/biolink/infores/KnowledgeLevelEnum#mixed>
+             <https://w3id.org/biolink/infores/KnowledgeLevelEnum#other> ] ? ;
           <agent_type> [ <https://w3id.org/biolink/infores/AgentTypeEnum#manual_agent>
              <https://w3id.org/biolink/infores/AgentTypeEnum#not_provided>
+             <https://w3id.org/biolink/infores/AgentTypeEnum#automated_agent>
+             <https://w3id.org/biolink/infores/AgentTypeEnum#data_analysis_pipeline>
              <https://w3id.org/biolink/infores/AgentTypeEnum#computational_model>
-             <https://w3id.org/biolink/infores/AgentTypeEnum#data_analysis_pipeline> ] ?
+             <https://w3id.org/biolink/infores/AgentTypeEnum#text_mining_agent>
+             <https://w3id.org/biolink/infores/AgentTypeEnum#image_processing_agent>
+             <https://w3id.org/biolink/infores/AgentTypeEnum#manual_validation_of_automated_agent> ] ?
        ) ;
        rdf:type [ <InformationResource> ] ?
     )
