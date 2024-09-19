@@ -632,15 +632,6 @@ information_resources:
     description: >-
       Documentation of the Multiomics Electronic-Health-Record (EHR) Risk
       KP query web services.
-  - id: infores:isb-EHRMLA-data
-    status: released
-    name: Multiomics EHRMLA May Treat API
-    xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/Multiomics-EHRMLA-May-Treat-KP
-    knowledge level: predicted
-    agent type: computational_model
-    description: >-
-      Documentation of the Multiomics Electronic-Health-Record (EHR) Machine Learning Analysis (MLA) May Treat query web services.
   - id: infores:providence-st-joseph-ehr
     status: released
     name: Providence St. Joseph EHR Data
@@ -658,8 +649,8 @@ information_resources:
     name: Multiomics EHRMLA May Treat API
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/Multiomics-EHRMLA-May-Treat-KP
-    knowledge level: predicted
-    agent type: computational_model
+    knowledge_level: prediction
+    agent_type: computational_model
     description: >-
       Documentation of the Multiomics Electronic-Health-Record (EHR) Machine Learning Analysis (MLA) May Treat query web services.
   - id: infores:biothings-multiomics-wellness
@@ -1523,8 +1514,8 @@ information_resources:
       - https://www.ncbi.nlm.nih.gov/Web/Search/entrezfs.html
     synonym:
       - NCBIGene
-    knowledge level: knowledge_assertion
-    agent type: not_provided
+    knowledge_level: knowledge_assertion
+    agent_tupe: not_provided
   - id: infores:epsd
     status: released
     name: EPSD
@@ -1532,8 +1523,8 @@ information_resources:
       - https://epsd.biocuckoo.cn
     synonym:
       - Eukaryotic phosporylation site database
-    knowledge level: not_provided
-    agent type: not_provided
+    knowledge_level: not_provided
+    agent_tupe: not_provided
   - id: infores:erc-analysis
     status: deprecated
     name: Evolutionary Rate Covariation (ERC) Analysis
@@ -1994,14 +1985,14 @@ information_resources:
     xref:
       - http://pir.georgetown.edu/iproclass/
     knowledge_level: knowledge_assertion
-    agent type: not_provided
+    agent_tupe: not_provided
   - id: infores:iptm-net
     status: released
     name: iPTMNet
     xref:
       - https://research.bioinformatics.udel.edu/iptmnet/
-    knowledge level: not_provided
-    agent type: text_mining_agent
+    knowledge_level: not_provided
+    agent_tupe: text_mining_agent
     description: >-
       A bioinformatics resource for integrated understanding of protein post-translational modifications (PTMs) 
       in systems biology context. It connects multiple disparate bioinformatics tools and systems text mining, 
@@ -2698,8 +2689,8 @@ information_resources:
     name: Physician Data Query (PDQ) (from UMLS)
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/PDQ-from-UMLS
-    knowledge level: knowledge_assertion
-    agent type: not_provided
+    knowledge_level: knowledge_assertion
+    agent_tupe: not_provided
   - id: infores:pfam
     status: released
     name: Pfam
@@ -2754,8 +2745,8 @@ information_resources:
     name: PhosphoSitePlus
     xref:
       - /https://www.phosphosite.org/homeAction.action
-    knowledge level: knowledge_assertion
-    agent type: manual_agent
+    knowledge_level: knowledge_assertion
+    agent_tupe: manual_agent
     description: >-
       provides comprehensive information and tools for the study of protein 
       post-translational modifications (PTMs) including phosphorylation, acetylation, and more. 
@@ -3784,6 +3775,6 @@ information_resources:
     name: Annotator Service
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/Annotator-Service
-    knowledge level: curated
-    agent type: not_provided
+    knowledge_level: curated
+    agent_tupe: not_provided
     description: Service to provide detailed annotations for any given biomedical entities.
