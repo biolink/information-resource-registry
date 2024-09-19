@@ -1,5 +1,5 @@
 # Auto generated from information_resource_registry.yaml by pythongen.py version: 0.0.1
-# Generation date: 2024-07-15T22:59:57
+# Generation date: 2024-09-17T23:19:53
 # Schema: Information-Resource-Registry-Schema
 #
 # id: https://w3id.org/biolink/information_resource_registry.yaml
@@ -153,31 +153,28 @@ class KnowledgeLevelEnum(EnumDefinitionImpl):
     """
     knowledge_assertion = PermissibleValue(
         text="knowledge_assertion",
-        description="""knowledge asserted by a human expert, based on their interpretation of data or published study results""")
+        description="""Knowledge asserted by a human expert, based on their interpretation of data or published study results""")
     statistical_association = PermissibleValue(
         text="statistical_association",
-        description="""statistical associations calculated between variables in a clinical or omics dataset, by an automated  analysis pipeline""")
-    curated = PermissibleValue(
-        text="curated",
-        description="""knowledge generated through manual curation or interpretation of data or published study results""")
-    predicted = PermissibleValue(
-        text="predicted",
-        description="""predictions generated computationally through inference over less direct forms of evidence (without human  intervention or review)""")
-    text_mined = PermissibleValue(
-        text="text_mined",
-        description="knowledge extracted from published text by NLP agents (without human intervention or review)")
-    correlation = PermissibleValue(
-        text="correlation",
-        description="""statistical correlations calculated between variables in a clinical or omics dataset, by an automated  analysis pipeline""")
-    observed = PermissibleValue(
-        text="observed",
-        description="""edge reports a phenomenon that was reported/observed to have occurred (and possibly some quantification,  e.g. how many times, at what frequency)""")
-    other = PermissibleValue(
-        text="other",
-        description="knowledge level may not fit into the categories above, or is not provided/known")
+        description="""Statistical associations calculated between variables in a clinical or omics dataset, by an automated  analysis pipeline""")
+    prediction = PermissibleValue(
+        text="prediction",
+        description="""Predictions generated computationally through inference over less direct forms of evidence (without human  intervention or review)""")
+    observation = PermissibleValue(
+        text="observation",
+        description="""Edge reports a phenomenon that was reported/observed to have occurred (and possibly some quantification,  e.g. how many times, at what frequency)""")
+    not_provided = PermissibleValue(
+        text="not_provided",
+        description="""The knowledge level/type fora statement is not provided, typically because it cannot be determined from  available information.""")
+    logical_entailment = PermissibleValue(
+        text="logical_entailment",
+        description="""a statement reporting a conclusion that follows logically from premises, which are typically well-established  facts or knowledge assertions. (e.g. fingernail part of finger, finger part of hand → fingernail part of hand)). Logical entailments are based on dedictive inference, and generally have a high degree of confidence when based on sound premises and inference logic.""")
     mixed = PermissibleValue(
         text="mixed",
-        description="""used for sources that might provide edges with different knowledge levels, e.g.correlations in addition to  curated Edges - set tag to Curated, unless predicate rules override""")
+        description="""A statement that is supported by a mix of different types of evidence, such as a combination of manual  curation and computational prediction. This is a catch-all category for statements that do not fit cleanly  into one of the other categories.""")
+    other = PermissibleValue(
+        text="other",
+        description="""A knowledge level that does not fit into any of the other categories. This is a catch-all category for  knowledge levels that are not covered by the other categories.""")
 
     _defn = EnumDefinition(
         name="KnowledgeLevelEnum",
@@ -198,12 +195,24 @@ class AgentTypeEnum(EnumDefinitionImpl):
     not_provided = PermissibleValue(
         text="not_provided",
         description="agent type is not provided or known")
-    computational_model = PermissibleValue(
-        text="computational_model",
-        description="a computational model, such as a machine learning model")
+    automated_agent = PermissibleValue(
+        text="automated_agent",
+        description="""An automated agent, typically a software program or tool, is responsible for generating the knowledge  expressed in the Edge. Human contribution to the knowledge creation process ends with the definition and  coding of algorithms or analysis pipelines that get executed by the automated agent.""")
     data_analysis_pipeline = PermissibleValue(
         text="data_analysis_pipeline",
-        description="a data analysis pipeline, such as a bioinformatics pipeline")
+        description="""An automated agent that executes an analysis workflow over data and reports results in an Edge. These  typically report statistical associations/correlations between variables in the input data.""")
+    computational_model = PermissibleValue(
+        text="computational_model",
+        description="""An automated agent that generates knowledge (typically predictions) based on rules/logic explicitly  encoded in an algorithm (e.g. heuristic models, supervised classifiers), or learned from patterns  observed in data (e.g. ML models, unsupervised classifiers).""")
+    text_mining_agent = PermissibleValue(
+        text="text_mining_agent",
+        description="""An automated agent that uses Natural Language Processing to recognize concepts and/or relationships in text, and generates Edges relating these concepts with formally encoded semantics.""")
+    image_processing_agent = PermissibleValue(
+        text="image_processing_agent",
+        description="""An automated agent that processes images to recognize features and/or relationships in images, and generates  Edges relating these features with formally encoded semantics.""")
+    manual_validation_of_automated_agent = PermissibleValue(
+        text="manual_validation_of_automated_agent",
+        description="""A human agent reviews and validates/approves the veracity of knowledge that is initially generated by an  automated agent.""")
 
     _defn = EnumDefinition(
         name="AgentTypeEnum",
@@ -235,8 +244,8 @@ slots.synonym = Slot(uri=INFORES.synonym, name="synonym", curie=INFORES.curie('s
 slots.description = Slot(uri=RDFS.comment, name="description", curie=RDFS.curie('comment'),
                    model_uri=INFORES.description, domain=None, range=Optional[str])
 
-slots.knowledge_level = Slot(uri=INFORES.knowledge_level, name="knowledge level", curie=INFORES.curie('knowledge_level'),
+slots.knowledge_level = Slot(uri=INFORES.knowledge_level, name="knowledge_level", curie=INFORES.curie('knowledge_level'),
                    model_uri=INFORES.knowledge_level, domain=None, range=Optional[Union[str, "KnowledgeLevelEnum"]])
 
-slots.agent_type = Slot(uri=INFORES.agent_type, name="agent type", curie=INFORES.curie('agent_type'),
+slots.agent_type = Slot(uri=INFORES.agent_type, name="agent_type", curie=INFORES.curie('agent_type'),
                    model_uri=INFORES.agent_type, domain=None, range=Optional[Union[str, "AgentTypeEnum"]])
