@@ -64,71 +64,71 @@ biolink:information_resource_registry.yaml.owl.ttl a owl:Ontology ;
 infores:InformationResource a owl:Class ;
     rdfs:label "InformationResource" ;
     rdfs:subClassOf [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty infores:status ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty infores:description ],
+        [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty infores:name ],
         [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty infores:name ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom infores:InformationResourceStatusEnum ;
-            owl:onProperty infores:status ],
+            owl:maxCardinality 1 ;
+            owl:onProperty infores:description ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty infores:agent_type ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty infores:status ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty infores:xref ],
-        [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
-            owl:onProperty infores:synonym ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty infores:status ],
+            owl:onProperty infores:xref ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty infores:knowledge_level ],
         [ a owl:Restriction ;
-            owl:allValuesFrom infores:AgentTypeEnum ;
+            owl:minCardinality 0 ;
+            owl:onProperty infores:name ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
             owl:onProperty infores:agent_type ],
         [ a owl:Restriction ;
+            owl:allValuesFrom infores:InformationResourceStatusEnum ;
+            owl:onProperty infores:status ],
+        [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
+            owl:onProperty infores:synonym ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty infores:id ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
             owl:onProperty infores:xref ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty infores:description ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom infores:AgentTypeEnum ;
+            owl:onProperty infores:agent_type ],
         [ a owl:Restriction ;
             owl:minCardinality 1 ;
             owl:onProperty infores:id ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty infores:name ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty infores:description ],
+            owl:onProperty infores:knowledge_level ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
-            owl:onProperty infores:description ],
+            owl:onProperty infores:id ],
         [ a owl:Restriction ;
             owl:allValuesFrom infores:KnowledgeLevelEnum ;
             owl:onProperty infores:knowledge_level ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty infores:synonym ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty infores:knowledge_level ],
-        [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty infores:agent_type ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty infores:id ],
+            owl:onProperty infores:status ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
-            owl:onProperty infores:id ],
+            owl:onProperty infores:name ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty infores:description ],
+            owl:minCardinality 0 ;
+            owl:onProperty infores:synonym ],
         linkml:ClassDefinition ;
     skos:altLabel "knowledgebase" ;
     skos:definition "A database or knowledgebase and its supporting ecosystem of interfaces  and services that deliver content to consumers (e.g. web portals, APIs,  query endpoints, streaming services, data downloads, etc.). A single Information Resource by this definition may span many different datasets or databases, and include many access endpoints and user interfaces. Information Resources include project-specific resources such as a Translator Knowledge Provider, and community knowledgebases like ChemBL, OMIM, or DGIdb." ;

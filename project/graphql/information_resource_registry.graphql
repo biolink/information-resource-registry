@@ -1,0 +1,17 @@
+type InformationResource
+  {
+    status: InformationResourceStatusEnum
+    name: String
+    id: String!
+    xref: [String]
+    synonym: [String]
+    description: String
+    knowledgeLevel: KnowledgeLevelEnum
+    agentType: AgentTypeEnum
+  }
+
+type InformationResourceContainer
+  {
+    informationResources: [InformationResource]
+  }
+
