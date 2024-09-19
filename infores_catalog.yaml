@@ -1523,8 +1523,17 @@ information_resources:
       - https://www.ncbi.nlm.nih.gov/Web/Search/entrezfs.html
     synonym:
       - NCBIGene
-    knowledge_level: knowledge_assertion
-    agent_type: not_provided
+    knowledge level: knowledge_assertion
+    agent type: not_provided
+  - id: infores:epsd
+    status: released
+    name: EPSD
+    xref:
+      - https://epsd.biocuckoo.cn
+    synonym:
+      - Eukaryotic phosporylation site database
+    knowledge level: not_provided
+    agent type: not_provided
   - id: infores:erc-analysis
     status: deprecated
     name: Evolutionary Rate Covariation (ERC) Analysis
@@ -1984,6 +1993,20 @@ information_resources:
     name: iProClass
     xref:
       - http://pir.georgetown.edu/iproclass/
+    knowledge_level: knowledge_assertion
+    agent type: not_provided
+  - id: infores:iptm-net
+    status: released
+    name: iPTMNet
+    xref:
+      - https://research.bioinformatics.udel.edu/iptmnet/
+    knowledge level: not_provided
+    agent type: text_mining_agent
+    description: >-
+      A bioinformatics resource for integrated understanding of protein post-translational modifications (PTMs) 
+      in systems biology context. It connects multiple disparate bioinformatics tools and systems text mining, 
+      data mining, analysis and visualization tools, and databases and ontologies into an integrated 
+      cross-cutting research resource to address the knowledge gaps in exploring and discovering PTM networks.
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - id: infores:irefindex
@@ -2726,6 +2749,16 @@ information_resources:
     description: >-
       focusing on three of the most commonly drug-targeted protein families:
       G-protein-coupled receptors (GPCRs, Ion channels (ICs), Kinases
+  - id: infores:psite-plus
+    status: released
+    name: PhosphoSitePlus
+    xref:
+      - /https://www.phosphosite.org/homeAction.action
+    knowledge level: knowledge_assertion
+    agent type: manual_agent
+    description: >-
+      provides comprehensive information and tools for the study of protein 
+      post-translational modifications (PTMs) including phosphorylation, acetylation, and more. 
   - id: infores:pr
     status: released
     name: Protein Ontology
