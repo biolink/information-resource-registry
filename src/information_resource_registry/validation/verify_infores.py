@@ -28,9 +28,10 @@ http = urllib3.PoolManager(ssl_context=ctx,
 
 def is_valid_url(urls: str) -> bool:
     for url in urls:
+        print(f"Validating URL: {url}")
         try:
             # Add a randomized sleep to avoid rapid requests
-            time.sleep(random.uniform(1, 3))  # Sleep between 1 to 3 seconds
+            time.sleep(random.uniform(1, 3))
             response = http.request("GET", url, headers={'User-Agent': 'Mozilla/5.0'})
             if response.status == 200:
                 return True
