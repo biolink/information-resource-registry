@@ -3773,6 +3773,6 @@ information_resources:
     name: Annotator Service
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/Annotator-Service
-    knowledge_level: curated
+    knowledge_level: knowledge_assertion
     agent_tupe: not_provided
     description: Service to provide detailed annotations for any given biomedical entities.
