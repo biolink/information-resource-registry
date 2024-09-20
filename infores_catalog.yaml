@@ -1515,7 +1515,7 @@ information_resources:
     synonym:
       - NCBIGene
     knowledge_level: knowledge_assertion
-    agent_tupe: not_provided
+    agent_type: not_provided
   - id: infores:epsd
     status: released
     name: EPSD
@@ -1524,7 +1524,7 @@ information_resources:
     synonym:
       - Eukaryotic phosporylation site database
     knowledge_level: not_provided
-    agent_tupe: not_provided
+    agent_type: not_provided
   - id: infores:erc-analysis
     status: deprecated
     name: Evolutionary Rate Covariation (ERC) Analysis
@@ -1985,21 +1985,19 @@ information_resources:
     xref:
       - http://pir.georgetown.edu/iproclass/
     knowledge_level: knowledge_assertion
-    agent_tupe: not_provided
+    agent_type: not_provided
   - id: infores:iptm-net
     status: released
     name: iPTMNet
     xref:
       - https://research.bioinformatics.udel.edu/iptmnet/
     knowledge_level: not_provided
-    agent_tupe: text_mining_agent
+    agent_type: text_mining_agent
     description: >-
       A bioinformatics resource for integrated understanding of protein post-translational modifications (PTMs) 
       in systems biology context. It connects multiple disparate bioinformatics tools and systems text mining, 
       data mining, analysis and visualization tools, and databases and ontologies into an integrated 
       cross-cutting research resource to address the knowledge gaps in exploring and discovering PTM networks.
-    knowledge_level: knowledge_assertion
-    agent_type: not_provided
   - id: infores:irefindex
     status: released
     name: iRefIndex
@@ -2690,7 +2688,7 @@ information_resources:
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/PDQ-from-UMLS
     knowledge_level: knowledge_assertion
-    agent_tupe: not_provided
+    agent_type: not_provided
   - id: infores:pfam
     status: released
     name: Pfam
@@ -2744,9 +2742,9 @@ information_resources:
     status: released
     name: PhosphoSitePlus
     xref:
-      - /https://www.phosphosite.org/homeAction.action
+      - https://www.phosphosite.org/homeAction.action
     knowledge_level: knowledge_assertion
-    agent_tupe: manual_agent
+    agent_type: manual_agent
     description: >-
       provides comprehensive information and tools for the study of protein 
       post-translational modifications (PTMs) including phosphorylation, acetylation, and more. 
