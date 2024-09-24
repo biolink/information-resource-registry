@@ -9,6 +9,8 @@ information_resources:
       - ALLIANCE
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+    consumed_by:
+      - infores:biothings-agr
   - id: infores:aact
     status: released
     name: Aggregate Analysis of ClinicalTrial.gov (AACT) database
@@ -19,9 +21,9 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     description: https://ctti-clinicaltrials.org/our-work/quality/state-of-clinical-trials/
-      Researchers can use CTTI’s Aggregate Analysis of ClinicalTrial.gov (AACT) database
-      to easily access and analyze data from the ClinicalTrials.gov registry to evaluate
-      studies and characterize the current state of clinical trials.
+      Researchers can use CTTI’s Aggregate Analysis of ClinicalTrial.gov (AACT) database to
+      easily access and analyze data from the ClinicalTrials.gov registry to evaluate studies
+      and characterize the current state of clinical trials.
   - id: infores:answer-coalesce
     status: deprecated
     name: Answer coalesce
@@ -33,6 +35,8 @@ information_resources:
       Answer coalesce: This service accepts a TRAPI 1.1 object containing
       answers and returns answers that have been coalesced by property, graph or ontology
       analysis.
+    consumed_by:
+      - infores:arax
   - id: infores:aragorn
     status: released
     name: ARAGORN
@@ -43,6 +47,8 @@ information_resources:
     description: >-
       ARAGORN: Performs a query operation which compiles data from numerous
       ARAGORN ranking agent services.
+    consumed_by:
+      - infores:ars
   - id: infores:aragorn-ranker
     status: deprecated
     name: ARAGORN Ranker
@@ -65,13 +71,55 @@ information_resources:
       - ARAX
     knowledge_level: prediction
     agent_type: not_provided
-    description: TRAPI 1.1 endpoint for the NCATS Biomedical Translator Reasoner called
-      ARAX
+    description: TRAPI 1.1 endpoint for the NCATS Biomedical Translator Reasoner called ARAX
+    consumes:
+      - infores:answer-coalesce
+      - infores:automat-binding-db
+      - infores:automat-cam-kp
+      - infores:automat-ctd
+      - infores:automat-drug-central
+      - infores:automat-genome-alliance
+      - infores:automat-gtex
+      - infores:automat-gtopdb
+      - infores:automat-gwas-catalog
+      - infores:automat-hetionet
+      - infores:automat-hgnc
+      - infores:automat-hmdb
+      - infores:automat-human-goa
+      - infores:automat-icees-kg
+      - infores:automat-intact
+      - infores:automat-monarchinitiative
+      - infores:automat-panther
+      - infores:automat-pharos
+      - infores:automat-reactome
+      - infores:automat-robokop
+      - infores:automat-string-db
+      - infores:automat-ubergraph
+      - infores:automat-viral-proteome
+      - infores:cohd
+      - infores:connections-hypothesis
+      - infores:gelinea
+      - infores:genetics-data-provider
+      - infores:knowledge-collaboratory
+      - infores:molepro
+      - infores:multiomics-clinicaltrials
+      - infores:multiomics-drugapprovals
+      - infores:multiomics-microbiome
+      - infores:multiomics-multiomics
+      - infores:openpredict
+      - infores:rtx-kg2
+      - infores:service-provider-trapi
+      - infores:spoke
+      - infores:text-mining-provider-cooccurrence
+    consumed_by:
+      - infores:ars
   - id: infores:atc-codes-umls
     status: released
     name: Anatomical Therapeutic Chemical (ATC) Codes (from UMLS)
     xref:
       - https://www.nlm.nih.gov/research/umls/sourcereleasedocs/current/ATC/index.html
+    consumed_by:
+      - infores:rtx-kg2
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - id: infores:atgo
@@ -95,6 +143,8 @@ information_resources:
     name: Automat Alliance of Genome Resources
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/Automat
+    consumed_by:
+      - infores:arax
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - id: infores:automat-renci-sri-reference-kg
@@ -172,6 +222,8 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     description: TRAPI interface to database of Causal Activity Models
+    consumed_by:
+      - infores:arax
   - id: infores:automat-ctd
     status: released
     name: Automat CTD
@@ -180,6 +232,9 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     description: A graph based on the [Comparative Toxicogenomics Database (ctdbase.org)](ctdbase.org).
+    consumed_by:
+      - infores:arax
+      - infores:service-provider-trapi
   - id: infores:automat-drug-central
     status: released
     name: Automat DrugCentral
@@ -188,6 +243,9 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     description: A graph based on DrugCentral
+    consumed_by:
+      - infores:arax
+      - infores:service-provider-trapi
   - id: infores:automat-foodb
     status: released
     name: Automat Foodb
@@ -206,6 +264,9 @@ information_resources:
     description: >-
       A graph containing eqtl and sqtl information from [GTEx Portal (https://gtexportal.org/home/)](https://gtexportal.org/home/).
       Also includes genes that the variants lie within or near.
+    consumed_by:
+      - infores:arax
+      - infores:service-provider-trapi
   - id: infores:automat-gtopdb
     status: released
     name: Automat GtoPdb
@@ -214,6 +275,9 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     description: A graph based on the [IUPHAR Guide to Pharmacology (https://www.guidetopharmacology.org/)](https://www.guidetopharmacology.org/)
+    consumed_by:
+      - infores:arax
+      - infores:service-provider-trapi
   - id: infores:automat-gwas-catalog
     status: released
     name: Automat GWAS Catalog
@@ -222,6 +286,9 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     description: A graph based on the GWAS Catalog
+    consumed_by:
+      - infores:arax
+      - infores:service-provider-trapi
   - id: infores:automat-hetio
     status: deprecated
     name: Automat Hetio
@@ -238,6 +305,9 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     description: A graph based on [hetionet (het.io)](het.io).
+    consumed_by:
+      - infores:arax
+      - infores:service-provider-trapi
   - id: infores:automat-hgnc
     status: released
     name: Automat HGNC
@@ -246,6 +316,9 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     description: Gene families from [HGNC (genenames.org)](genenames.org).
+    consumed_by:
+      - infores:arax
+      - infores:service-provider-trapi
   - id: infores:automat-hmdb
     status: released
     name: Automat HMDB
@@ -254,6 +327,9 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     description: A graph based on the [Human Metabolome DataBase (hmdb.org)](hmdb.org).
+    consumed_by:
+      - infores:arax
+      - infores:service-provider-trapi
   - id: infores:automat-human-goa
     status: released
     name: Automat Human GOA
@@ -262,6 +338,9 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     description: Human Gene Ontology Annotations from the GO consortium.
+    consumed_by:
+      - infores:arax
+      - infores:service-provider-trapi
   - id: infores:automat-icees-kg
     status: released
     name: Automat ICEES KG
@@ -269,6 +348,9 @@ information_resources:
       - https://github.com/NCATSTranslator/Translator-All/wiki/Automat
     knowledge_level: statistical_association
     agent_type: not_provided
+    consumed_by:
+      - infores:arax
+      - infores:service-provider-trapi
   - id: infores:automat-intact
     status: released
     name: Automat IntAct
@@ -277,6 +359,9 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     description: Molecular (Gene-Gene) interactions from EBI IntAct (https://www.ebi.ac.uk/intact/)](https://www.ebi.ac.uk/intact/).
+    consumed_by:
+      - infores:arax
+      - infores:service-provider-trapi
   - id: infores:automat-kegg
     status: deprecated
     name: Automat KEGG
@@ -291,8 +376,10 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     description: >-
-      The Monarch Knowledge Graph is a reference implementation of the Biolink model specification.
-      It contains data from the Monarch Initiative aggregated database as well as several OBO ontologies.
+      The Monarch Knowledge Graph is a reference implementation of the Biolink model specification.  It
+      contains data from the Monarch Initiative aggregated database as well as several OBO ontologies.
+    consumed_by:
+      - infores:arax
   - id: infores:automat-mychem-info
     status: deprecated
     name: Automat MyChem (trapi v-1.1.0)
@@ -315,6 +402,9 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     description: A graph of gene families and pathways from [Panther (pantherdb.org)](pantherdb.org)
+    consumed_by:
+      - infores:arax
+      - infores:service-provider-trapi
   - id: infores:automat-pharos
     status: released
     name: Automat Pharos
@@ -323,6 +413,9 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     description: A graph based on [Pharos (pharos.nih.gov)](pharos.nih.gov).
+    consumed_by:
+      - infores:arax
+      - infores:service-provider-trapi
   - id: infores:automat-robokop-kg
     status: released
     name: Automat ROBOKOP KG
@@ -330,8 +423,8 @@ information_resources:
       - https://github.com/NCATSTranslator/Translator-All/wiki/Automat
     knowledge_level: knowledge_assertion
     agent_type: not_provided
-    description: Biomedical Knowledge graph build by constructing relationships from
-      federated data sets.
+    description: Biomedical Knowledge graph build by constructing relationships from federated
+      data sets.
   - id: infores:automat-text-mining-provider
     status: deprecated
     name: Automat Textmining KP
@@ -351,6 +444,8 @@ information_resources:
       (both direct and indirect) derived from genomic context predictions, high-throughput
       laboratory experiments, conserved co-expression, automated text mining, and aggregated
       knowledge from primary data sources.
+    consumed_by:
+      - infores:arax
   - id: infores:automat-sri-reference-kg
     status: deprecated
     name: Automat SRI Reference Knowledge Graph
@@ -372,6 +467,8 @@ information_resources:
     description: >-
       A graph representation of Ubergraph, an integration of ontologies
       including GO, CHEBI, Uberon, and HPO.
+    consumed_by:
+      - infores:arax
   - id: infores:automat-ubergraph-nonredundant
     status: deprecated
     name: Automat Ubergraph Nonredundant
@@ -394,6 +491,9 @@ information_resources:
     description: >-
       A graph consisting of viral proteins from UniProt, connected by similarity
       edges from UniRef.
+    consumed_by:
+      - infores:arax
+      - infores:service-provider-trapi
   - id: infores:automat-ehr-may-treat-kp
     status: released
     name: Automat Multiomics EHRMLA May Treat API
@@ -402,7 +502,8 @@ information_resources:
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/Automat
     description: >-
-      A graph consisting of May Treat associations from Multiomics Electronic-Health-Record (EHR) Machine Learning Analysis (MLA)
+      A graph consisting of May Treat associations from Multiomics Electronic-Health-Record
+      (EHR) Machine Learning Analysis (MLA)
       using the Providence health records
   - id: infores:bfo
     status: released
@@ -411,6 +512,8 @@ information_resources:
       - http://www.obofoundry.org/ontology/bfo.html
     synonym:
       - BFO
+    consumed_by:
+      - infores:rtx-kg2
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - id: infores:bgee
@@ -465,6 +568,8 @@ information_resources:
       with small, drug-like molecules. As of July 31, 2021, BindingDB contains 41,300
       Entries, each with a DOI, containing 2,303,972 binding data for 8,561 protein
       targets and 995,797 small molecules.
+    consumed_by:
+      - infores:biothings-bindingdb
   - id: infores:bio2rdf
     status: released
     name: Bio2RDF
@@ -507,6 +612,8 @@ information_resources:
     name: Biolink ontology
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/BioLink-OWL
+    consumed_by:
+      - infores:rtx-kg2
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - id: infores:bioportal
@@ -532,6 +639,10 @@ information_resources:
     knowledge_level: mixed
     agent_type: not_provided
     description: Documentation of the BioThings DGIdb query web services.
+    consumes:
+      - infores:dgidb
+    consumed_by:
+      - infores:service-provider-trapi
   - id: infores:biothings-diseases
     status: released
     name: BioThings DISEASES API
@@ -540,6 +651,10 @@ information_resources:
     knowledge_level: mixed
     agent_type: not_provided
     description: Documentation of the DISEASES query web services.
+    consumes:
+      - infores:diseases
+    consumed_by:
+      - infores:service-provider-trapi
   - id: infores:biothings-ebi-gene2phenotype
     status: released
     name: BioThings EBIgene2phenotype API
@@ -548,6 +663,10 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     description: Documentation of the EBIgene2phenotype query web services.
+    consumes:
+      - infores:ebi-gene2phenotype
+    consumed_by:
+      - infores:service-provider-trapi
   - id: infores:biothings-explorer
     status: released
     name: BioThings Explorer
@@ -555,6 +674,10 @@ information_resources:
       - https://github.com/NCATSTranslator/Translator-All/wiki/BioThings-Explorer-(BTE)
     synonym:
       - BTE
+    consumes:
+      - infores:service-provider-trapi
+    consumed_by:
+      - infores:ars
     knowledge_level: prediction
     agent_type: not_provided
   - id: infores:service-provider-trapi
@@ -566,6 +689,67 @@ information_resources:
       - service provider
     knowledge_level: other
     agent_type: not_provided
+    consumes:
+      - infores:automat-ctd
+      - infores:automat-drug-central
+      - infores:automat-gtex
+      - infores:automat-gtopdb
+      - infores:automat-gwas-catalog
+      - infores:automat-hetionet
+      - infores:automat-hgnc
+      - infores:automat-hmdb
+      - infores:automat-human-goa
+      - infores:automat-icees-kg
+      - infores:automat-intact
+      - infores:automat-panther
+      - infores:automat-pharos
+      - infores:automat-viral-proteome
+      - infores:biothings-agr
+      - infores:biothings-bindingdb
+      - infores:biothings-bioplanet-pathway-disease
+      - infores:biothings-bioplanet-pathway-gene
+      - infores:biothings-ddinter
+      - infores:biothings-dgidb
+      - infores:biothings-diseases
+      - infores:biothings-ebi-gene2phenotype
+      - infores:biothings-foodb
+      - infores:biothings-fooddata-central
+      - infores:biothings-go-bp
+      - infores:biothings-go-cc
+      - infores:biothings-go-mf
+      - infores:biothings-gtrx
+      - infores:biothings-hpo
+      - infores:biothings-idisk
+      - infores:biothings-innatedb
+      - infores:biothings-mgi-g2p
+      - infores:biothings-multiomics-biggim-drugresponse
+      - infores:biothings-multiomics-ehr-risk
+      - infores:biothings-multiomics-wellness
+      - infores:biothings-pfocr
+      - infores:biothings-rare-source
+      - infores:biothings-repodb
+      - infores:biothings-rhea
+      - infores:biothings-semmeddb
+      - infores:biothings-suppkg
+      - infores:biothings-ttd
+      - infores:biothings-uberon-ontology
+      - infores:cohd
+      - infores:complex-portal
+      - infores:connections-hypothesis
+      - infores:ctd
+      - infores:ebi-proteins
+      - infores:ebi-quick-go
+      - infores:litvar
+      - infores:monarchinitiative
+      - infores:mychem-info
+      - infores:mydisease-info
+      - infores:mygene-info
+      - infores:myvariant-info
+      - infores:ols
+      - infores:text-mining-provider-targeted
+    consumed_by:
+      - infores:arax
+      - infores:biothings-explorer
   - id: infores:biothings-go-bp
     status: released
     name: BioThings Gene Ontology Biological Process API
@@ -574,6 +758,10 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     description: Documentation of the Gene Ontology Biological Process query web services.
+    consumes:
+      - infores:go
+    consumed_by:
+      - infores:service-provider-trapi
   - id: infores:biothings-go-cc
     status: released
     name: BioThings Gene Ontology Cellular Component API
@@ -582,6 +770,10 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     description: Documentation of the Gene Ontology Cellular Component query web services.
+    consumes:
+      - infores:go
+    consumed_by:
+      - infores:service-provider-trapi
   - id: infores:biothings-go-mf
     status: released
     name: BioThings Gene Ontology Molecular Activity API
@@ -590,6 +782,10 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     description: Documentation of the Gene Ontology Molecular Activity query web services.
+    consumes:
+      - infores:go
+    consumed_by:
+      - infores:service-provider-trapi
   - id: infores:biothings-hpo
     status: released
     name: BioThings Human Phenotype Ontology API
@@ -598,6 +794,11 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     description: Documentation of the HPO query web services.
+    consumes:
+      - infores:hpo
+      - infores:hpo-annotations
+    consumed_by:
+      - infores:service-provider-trapi
   - id: infores:biothings-idisk
     status: released
     name: BioThings iDISK API
@@ -605,6 +806,10 @@ information_resources:
       - https://github.com/NCATSTranslator/Translator-All/wiki/BioThings-APIs
     knowledge_level: mixed
     agent_type: not_provided
+    consumes:
+      - infores:idisk
+    consumed_by:
+      - infores:service-provider-trapi
   - id: infores:biothings-mgi-g2p
     status: released
     name: BioThings MGIgene2phenotype API
@@ -613,6 +818,10 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     description: Documentation of the MGIgene2phenotype query web services.
+    consumes:
+      - infores:mgi
+    consumed_by:
+      - infores:service-provider-trapi
   - id: infores:biothings-multiomics-biggim-drugresponse
     status: released
     name: Multiomics BigGIM-DrugResponse KP API
@@ -622,6 +831,8 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     description: Documentation of the Drug Response KP query web services.
+    consumed_by:
+      - infores:service-provider-trapi
   - id: infores:biothings-multiomics-ehr-risk
     status: modified
     name: Multiomics EHR Risk KP API
@@ -632,6 +843,8 @@ information_resources:
     description: >-
       Documentation of the Multiomics Electronic-Health-Record (EHR) Risk
       KP query web services.
+    consumed_by:
+      - infores:service-provider-trapi
   - id: infores:providence-st-joseph-ehr
     status: released
     name: Providence St. Joseph EHR Data
@@ -652,7 +865,8 @@ information_resources:
     knowledge_level: prediction
     agent_type: computational_model
     description: >-
-      Documentation of the Multiomics Electronic-Health-Record (EHR) Machine Learning Analysis (MLA) May Treat query web services.
+      Documentation of the Multiomics Electronic-Health-Record (EHR) Machine Learning Analysis
+      (MLA) May Treat query web services.
   - id: infores:biothings-multiomics-wellness
     status: released
     name: Multiomics Wellness KP API
@@ -661,6 +875,8 @@ information_resources:
     knowledge_level: statistical_association
     agent_type: data_analysis_pipeline
     description: Documentation of the Multiomics Wellness KP query web services.
+    consumed_by:
+      - infores:service-provider-trapi
   - id: infores:multiomics-clinicaltrials
     status: released
     name: Multiomics ClinicalTrials KP API
@@ -668,6 +884,8 @@ information_resources:
       - https://github.com/NCATSTranslator/Translator-All/wiki/Clinical-Trials-KP
     knowledge_level: knowledge_assertion
     agent_type: manual_agent
+    consumed_by:
+      - infores:arax
   - id: infores:biothings-multiomics-clinicaltrials
     status: deprecated
     name: Multiomics ClinicalTrials KP API
@@ -675,6 +893,8 @@ information_resources:
       - https://github.com/NCATSTranslator/Translator-All/wiki/Clinical-Trials-KP
     knowledge_level: knowledge_assertion
     agent_type: manual_agent
+    consumed_by:
+      - infores:rtx-kg2
   - id: infores:multiomics-drugapprovals
     status: released
     name: Multiomics Drug Approvals KP API
@@ -682,6 +902,8 @@ information_resources:
       - https://github.com/NCATSTranslator/Translator-All/wiki/Multiomics-Drug-Approvals-KP
     knowledge_level: knowledge_assertion
     agent_type: manual_agent
+    consumed_by:
+      - infores:arax
   - id: infores:multiomics-multiomics
     status: released
     name: Multiomics KP API
@@ -689,6 +911,8 @@ information_resources:
       - https://github.com/NCATSTranslator/Translator-All/wiki/Multiomics-KP
     knowledge_level: knowledge_assertion
     agent_type: manual_validation_of_automated_agent
+    consumed_by:
+      - infores:arax
   - id: infores:multiomics-microbiome
     status: released
     name: Multiomics Microbiome KP API
@@ -696,6 +920,8 @@ information_resources:
       - https://github.com/NCATSTranslator/Translator-All/wiki/Microbiome-KP
     knowledge_level: knowledge_assertion
     agent_type: manual_validation_of_automated_agent
+    consumed_by:
+      - infores:arax
   - id: infores:biothings-pfocr
     status: modified
     name: BioThings PFOCR API
@@ -704,6 +930,10 @@ information_resources:
     knowledge_level: prediction
     agent_type: not_provided
     description: Documentation of the pfocr query web services.
+    consumes:
+      - infores:pfocr
+    consumed_by:
+      - infores:service-provider-trapi
   - id: infores:pfocr
     status: released
     name: PFOCR
@@ -711,6 +941,8 @@ information_resources:
       - https://github.com/NCATSTranslator/Translator-All/wiki/pfocr
     knowledge_level: prediction
     agent_type: not_provided
+    consumed_by:
+      - infores:biothings-pfocr
   - id: infores:biothings-semmeddb
     status: released
     name: BioThings SEMMEDDB API
@@ -719,6 +951,10 @@ information_resources:
     knowledge_level: not_provided
     agent_type: text_mining_agent
     description: Documentation of the BioThings SEMMEDDB query web services.
+    consumes:
+      - infores:semmeddb
+    consumed_by:
+      - infores:service-provider-trapi
   - id: infores:biothings-semmeddb-anatomy
     status: deprecated
     name: SEMMED Anatomy API
@@ -766,17 +1002,15 @@ information_resources:
       - https://github.com/NCATSTranslator/Translator-All/wiki/BioThings-SEMMED-DB-Gene
     knowledge_level: not_provided
     agent_type: text_mining_agent
-    description: Documentation of the SEMMED disease query web services.  Learn more
-      about [mydisease.info](http://pending.biothings.io/semmed)
+    description: Documentation of the SEMMED disease query web services.  Learn more about [mydisease.info](http://pending.biothings.io/semmed)
   - id: infores:biothings-semmeddb-phenotype
     status: deprecated
     name: SEMMED Phenotype API
     xref:
       - https://github.com/biothings
+    description: Documentation of the SEMMED disease query web services.  Learn more about [mydisease.info](http://pending.biothings.io/semmed)
     knowledge_level: not_provided
     agent_type: text_mining_agent
-    description: Documentation of the SEMMED disease query web services.  Learn more
-      about [mydisease.info](http://pending.biothings.io/semmed)
   - id: infores:biothings-tcga-mut-freq
     status: deprecated
     name: Multiomics TCGA Mutation Frequency KP API
@@ -793,6 +1027,10 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     description: Documentation of the UBERON query web services.
+    consumes:
+      - infores:uberon
+    consumed_by:
+      - infores:service-provider-trapi
   - id: infores:biothings-rhea
     status: released
     name: BioThings Rhea API
@@ -801,6 +1039,10 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     description: Documentation of the BioThings Rhea query web services.
+    consumes:
+      - infores:rhea
+    consumed_by:
+      - infores:service-provider-trapi
   - id: infores:rhea
     status: released
     name: Rhea
@@ -809,6 +1051,8 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     description: https://www.rhea-db.org/
+    consumed_by:
+      - infores:biothings-rhea
   - id: infores:biothings-bioplanet-pathway-disease
     status: released
     name: BioThings BioPlanet Pathway-Disease API
@@ -819,6 +1063,10 @@ information_resources:
     description: >-
       Documentation of the BioThings [BioPlanet](https://tripod.nih.gov/bioplanet/#)
       pathway-disease association query web services.
+    consumes:
+      - infores:bioplanet
+    consumed_by:
+      - infores:service-provider-trapi
   - id: infores:biothings-bioplanet-pathway-gene
     status: released
     name: BioThings BioPlanet Pathway-Gene API
@@ -829,6 +1077,10 @@ information_resources:
     description: >-
       Documentation of the BioThings [BioPlanet](https://tripod.nih.gov/bioplanet/#)
       pathway-gene association query web services.
+    consumes:
+      - infores:bioplanet
+    consumed_by:
+      - infores:service-provider-trapi
   - id: infores:bioplanet
     status: released
     name: BioPlanet
@@ -837,6 +1089,9 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     description: https://tripod.nih.gov/bioplanet/#
+    consumed_by:
+      - infores:biothings-bioplanet-pathway-disease
+      - infores:biothings-bioplanet-pathway-gene
   - id: infores:biothings-bindingdb
     status: released
     name: BioThings BindingDB API
@@ -847,6 +1102,10 @@ information_resources:
     description: >-
       Documentation of the BioThings [BindingDB](https://www.bindingdb.org/rwd/bind/index.jsp)
       query web services.
+    consumes:
+      - infores:bindingdb
+    consumed_by:
+      - infores:service-provider-trapi
   - id: infores:bspo
     status: released
     name: Biological Spatial Ontology
@@ -856,6 +1115,8 @@ information_resources:
       - BSPO
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+    consumed_by:
+      - infores:rtx-kg2
   - id: infores:wbbt
     status: released
     name: C. elegans Gross Anatomy Ontology
@@ -904,7 +1165,11 @@ information_resources:
       - ChEBI
     knowledge_level: knowledge_assertion
     agent_type: not_provided
-    description: a freely available dictionary of molecular entities focused on ‘small’ chemical compounds
+    consumed_by:
+      - infores:mychem-info
+      - infores:rtx-kg2
+    description: a freely available dictionary of molecular entities focused on ‘small’ chemical
+      compounds
   - id: infores:chem2bio2rdf
     status: deprecated
     name: Chem2bio2RDF
@@ -932,7 +1197,11 @@ information_resources:
       - Chembl
     knowledge_level: knowledge_assertion
     agent_type: not_provided
-    description: a manually knowledge_assertion database of bioactive molecules with drug-like properties.
+    consumed_by:
+      - infores:mychem-info
+      - infores:rtx-kg2
+    description: a manually knowledge_assertion database of bioactive molecules with drug-like
+      properties.
   - id: infores:chemotext
     status: deprecated
     name: Chemotext
@@ -949,6 +1218,8 @@ information_resources:
       - CIViC
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+    consumed_by:
+      - infores:myvariant-info
   - id: infores:cl
     status: released
     name: Cell Ontology
@@ -958,6 +1229,8 @@ information_resources:
       - CL
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+    consumed_by:
+      - infores:rtx-kg2
   - id: infores:clingen
     status: released
     name: Clinical Genome Resource (ClinGen)
@@ -969,6 +1242,8 @@ information_resources:
       ClinGen is a NIH-funded resource dedicated to building a central resource
       that defines the clinical relevance of genes and variants for use in precision
       medicine and research
+    consumed_by:
+      - infores:mygene-info
   - id: infores:clinical-profiles
     status: deprecated
     name: Clinical Profiles
@@ -991,6 +1266,8 @@ information_resources:
     description: >-
       ClinVar is a freely accessible, public archive of reports of the
       relationships among human variations and phenotypes, with supporting evidence.
+    consumed_by:
+      - infores:myvariant-info
   - id: infores:cmap
     status: released
     name: Connectivity Map
@@ -1008,10 +1285,10 @@ information_resources:
     name: Columbia Clinical Data Warehouse for Health Patient EHR Data
     xref:
       - https://www.irvinginstitute.columbia.edu/services/clinical-data-warehouse-cdw-navigator-support
-    synonym:
-      - The Columbia Clinical Data Warehouse (CDW) contains clinical information for over
-        4.5 million individuals treated at Columbia University Irving Medical Center (CUIMC)
-        since the 1980s.
+    description: >-
+      The Columbia Clinical Data Warehouse (CDW) contains clinical information for over 4.5
+      million individuals treated at Columbia University Irving Medical Center (CUIMC) since
+      the 1980s.
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - id: infores:cohd
@@ -1066,6 +1343,9 @@ information_resources:
       (OMOP vocabularies, search, concept relationships, concept hierarchy)   [Atlas](http://www.ohdsi.org/web/atlas/)
       (OMOP vocabularies, search, concept relationships, concept hierarchy, concept
       sets)
+    consumed_by:
+      - infores:arax
+      - infores:service-provider-trapi
   - id: infores:cohd-covid
     status: released
     name: Columbia Open Health Data (COHD) for COVID-19 Research
@@ -1142,6 +1422,9 @@ information_resources:
     knowledge_level: prediction
     agent_type: not_provided
     description: A Translator Reasoner API for the Connections Hypothesis Provider
+    consumed_by:
+      - infores:arax
+      - infores:service-provider-trapi
   - id: infores:cord19
     status: deprecated
     name: COVID-19 Open Research Dataset
@@ -1179,6 +1462,13 @@ information_resources:
       - https://github.com/NCATSTranslator/Translator-All/wiki/cpdb
     synonym:
       - CPDB
+    consumed_by:
+      - infores:mygene-info
+  - id: infores:cpt-codes-umls
+    status: deprecated
+    name: Current Procedural Terminology (CPT) Codes (from UMLS)
+    consumed_by:
+      - infores:rtx-kg2
     knowledge_level: other
     agent_type: not_provided
   - id: infores:cpt-codes-umls
@@ -1186,6 +1476,8 @@ information_resources:
     name: Current Procedural Terminology (CPT) Codes (from UMLS)
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+    consumed_by:
+      - infores:rtx-kg2
   - id: infores:cqs
     status: released
     name: Translator knowledge_assertion Query Service
@@ -1196,9 +1488,10 @@ information_resources:
     knowledge_level: prediction
     agent_type: computational_model
     description: >-
-      The Translator Curated Query Service (CQS) is an SRI service that provides ARA-like capabilities. The service generates
-      ‘predicted’ edges in response to inferred queries, based on customizable inference rules that are captured as CQS templates.
-      The CQS links predictions to their supporting aux graphs and attaches provenance metadata, and then scores the results.
+      The Translator Curated Query Service (CQS) is an SRI service that provides ARA-like capabilities.
+      The service generates ‘predicted’ edges in response to inferred queries, based on customizable
+      inference rules that are captured as CQS templates. The CQS links predictions to their
+      supporting aux graphs and attaches provenance metadata, and then scores the results.
   - id: infores:ctd
     status: released
     name: Comparative Toxicogenomics Database
@@ -1211,6 +1504,9 @@ information_resources:
     description: >-
       A robust, publicly available database that aims to advance understanding
       about how environmental exposures affect human health.
+    consumed_by:
+      - infores:mydisease-info
+      - infores:service-provider-trapi
   - id: infores:ctrp
     status: released
     name: Cancer Therapeutics Response Portal
@@ -1242,6 +1538,9 @@ information_resources:
       - dbSNP
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+    consumed_by:
+      - infores:litvar
+      - infores:myvariant-info
   - id: infores:dda
     status: released
     name: Dictyostelium discoideum anatomy
@@ -1249,6 +1548,8 @@ information_resources:
       - http://www.obofoundry.org/ontology/ddanat.html
     synonym:
       - DDA
+    consumed_by:
+      - infores:rtx-kg2
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - id: infores:delta-qt-db
@@ -1283,6 +1584,9 @@ information_resources:
       information on drug-gene interactions and druggable genes from publications,
       databases, and other web-based sources. Drug, gene, and interaction data are normalized
       and merged into conceptual groups.
+    consumed_by:
+      - infores:biothings-dgidb
+      - infores:rtx-kg2
   - id: infores:dili-network-study-data
     status: deprecated
     name: Drug-Induced Liver Injury Network (DILIN) Participant Data
@@ -1315,6 +1619,9 @@ information_resources:
       - https://github.com/NCATSTranslator/Translator-All/wiki/disease-ontology
     synonym:
       - DO
+    consumed_by:
+      - infores:ols
+      - infores:rtx-kg2
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - id: infores:diseases
@@ -1325,15 +1632,21 @@ information_resources:
     knowledge_level: mixed
     agent_type: not_provided
     description: >-
-      DISEASES is a weekly updated web resource that integrates evidence on disease-gene associations
-      from automatic text mining, manually curated literature, cancer mutation data, and
-      genome-wide association studies. We further unify the evidence by assigning confidence
-      scores that facilitate comparison of the different types and sources of evidence.
+      DISEASES is a weekly updated web resource that integrates evidence on disease-gene associations  from
+      automatic text mining, manually curated literature, cancer mutation data, and  genome-wide
+      association studies. We further unify the evidence by assigning confidence  scores that
+      facilitate comparison of the different types and sources of evidence.
+    consumed_by:
+      - infores:biothings-diseases
+      - infores:rtx-kg2
   - id: infores:disgenet
     status: released
     name: DisGeNET
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/DisGeNET
+    consumed_by:
+      - infores:mydisease-info
+      - infores:rtx-kg2
     knowledge_level: mixed
     agent_type: not_provided
   - id: infores:distild
@@ -1383,6 +1696,8 @@ information_resources:
       on drugs and drug targets. As both a bioinformatics and a cheminformatics resource,
       we combine detailed drug (i.e. chemical, pharmacological and pharmaceutical) data
       with comprehensive drug target (i.e. sequence, structure, and pathway) information
+    consumed_by:
+      - infores:rtx-kg2
   - id: infores:drugcentral
     status: released
     name: DrugCentral
@@ -1396,6 +1711,9 @@ information_resources:
       Online drug information resource created and maintained by Division
       of Translational Informatics at University of New Mexico in collaboration with
       the IDG.
+    consumed_by:
+      - infores:mychem-info
+      - infores:rtx-kg2
   - id: infores:drugmechdb
     status: released
     name: DrugMechDB
@@ -1406,7 +1724,8 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     description: >-
-      A database of paths that represent the mechanism of action from a drug to a disease in an indication.
+      A database of paths that represent the mechanism of action from a drug to a disease in
+      an indication.
   - id: infores:ebi
     status: released
     name: European Bioinformatics Institute
@@ -1423,6 +1742,8 @@ information_resources:
       - https://github.com/NCATSTranslator/Translator-All/wiki/ebi-gene2phenotype
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+    consumed_by:
+      - infores:biothings-ebi-gene2phenotype
   - id: infores:ebi-proteins
     status: released
     name: EBI Proteins API
@@ -1439,6 +1760,10 @@ information_resources:
       and ProteomicsDB), antigen sequences mapped from Human Protein Atlas (HPA), proteomes
       and taxonomy search and retrieval, reference genome coordinate mappings and data
       from UniParc. Go to https://www.ebi.ac.uk/proteins/api/doc/ to learn more."'
+    consumes:
+      - infores:uniprot
+    consumed_by:
+      - infores:service-provider-trapi
   - id: infores:ebi-quick-go
     status: released
     name: QuickGO API
@@ -1454,6 +1779,10 @@ information_resources:
       about ontology terms from GO (the Gene Ontology) and ECO (the Evidence & Conclusion
       Ontology), Gene Ontology annotations from the EBI''s GOA database, and gene products
       (proteins from UniProt, RNA from RNAcentral and complexes from ComplexPortal).
+    consumes:
+      - infores:go
+    consumed_by:
+      - infores:service-provider-trapi
   - id: infores:eco
     status: released
     name: Evidence & Conclusion Ontology
@@ -1491,6 +1820,8 @@ information_resources:
       - EFO
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+    consumed_by:
+      - infores:rtx-kg2
   - id: infores:ehdaa2
     status: released
     name: Human Developmental Anatomy Ontology
@@ -1500,6 +1831,8 @@ information_resources:
       - EHDAA2
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+    consumed_by:
+      - infores:rtx-kg2
   - id: infores:ensembl-gene
     status: released
     name: Ensembl gene
@@ -1507,6 +1840,8 @@ information_resources:
       - https://www.ebi.ac.uk/training/online/courses/ensembl-browsing-genomes/exploring-sources-of-biological-data/ensembl-genes/
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+    consumed_by:
+      - infores:rtx-kg2
   - id: infores:entrez
     status: released
     name: Entrez
@@ -1556,6 +1891,8 @@ information_resources:
       - https://www.nlm.nih.gov/research/umls/sourcereleasedocs/current/FMA/index.html
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+    consumed_by:
+      - infores:rtx-kg2
   - id: infores:fma-umls
     status: released
     name: Foundational Model of Anatomy Ontology (FMA -- both from UMLS and from OBO)
@@ -1563,6 +1900,8 @@ information_resources:
       - https://www.nlm.nih.gov/research/umls/sourcereleasedocs/current/FMA/index.html
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+    consumed_by:
+      - infores:rtx-kg2
   - id: infores:fooddb
     status: released
     name: Food Database
@@ -1570,6 +1909,8 @@ information_resources:
       - https://github.com/NCATSTranslator/Translator-All/wiki/FooDB
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+    consumed_by:
+      - infores:biothings-foodb
   - id: infores:foodon
     status: released
     name: Food Ontology
@@ -1579,6 +1920,8 @@ information_resources:
       - FOODON
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+    consumed_by:
+      - infores:rtx-kg2
   - id: infores:gdc
     status: released
     name: National Cancer Institute Genomic Data Commons Data Portal
@@ -1646,6 +1989,8 @@ information_resources:
       - GenEpiO
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+    consumed_by:
+      - infores:rtx-kg2
   - id: infores:geneprof
     status: released
     name: GeneProf
@@ -1663,6 +2008,8 @@ information_resources:
     agent_type: not_provided
     description: >-
       TRAPI 1.1 endpoint for the NCATS Biomedical Translator Genetics Data KP
+    consumed_by:
+      - infores:arax
   - id: infores:ghr
     status: released
     name: Genetics Home Reference
@@ -1686,6 +2033,12 @@ information_resources:
       - https://github.com/NCATSTranslator/Translator-All/wiki/go
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+    consumed_by:
+      - infores:biothings-go-bp
+      - infores:biothings-go-cc
+      - infores:biothings-go-mf
+      - infores:ebi-quick-go
+      - infores:rtx-kg2
   - id: infores:go-cam
     status: released
     name: Gene Ontology Causal Activity Model Annotations
@@ -1713,6 +2066,8 @@ information_resources:
     agent_type: not_provided
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/GO-Plus
+    consumed_by:
+      - infores:rtx-kg2
   - id: infores:human-goa
     status: released
     name: Human Gene Ontology Annotations
@@ -1729,6 +2084,8 @@ information_resources:
       - GOA
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+    consumed_by:
+      - infores:rtx-kg2
   - id: infores:gote
     status: deprecated
     name: GOTE (Gpcrs to dOwnstream cellular pathways byTissue Expression)
@@ -1745,6 +2102,8 @@ information_resources:
       - https://github.com/NCATSTranslator/Translator-All/wiki/gtrx
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+    consumed_by:
+      - infores:biothings-gtrx
   - id: infores:gtex
     status: released
     name: 'Genotype-Tissue Expression '
@@ -1781,6 +2140,8 @@ information_resources:
       - https://github.com/NCATSTranslator/Translator-All/wiki/HCPCS-Version-of-Current-Procedural-Terminology
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+    consumed_by:
+      - infores:rtx-kg2
   - id: infores:hcpcs-cpt-umls
     status: released
     name: HCPCS Version of Current Procedural Terminology (HCPT) (from UMLS)
@@ -1788,6 +2149,8 @@ information_resources:
       - https://www.nlm.nih.gov/research/umls/sourcereleasedocs/current/HCPT/index.html
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+    consumed_by:
+      - infores:rtx-kg2
   - id: infores:hetionet
     status: released
     name: Hetionet
@@ -1804,6 +2167,8 @@ information_resources:
       - HGNC
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+    consumed_by:
+      - infores:rtx-kg2
   - id: infores:hl7-umls
     status: released
     name: Health Level Seven (HL7) (from UMLS)
@@ -1811,6 +2176,8 @@ information_resources:
       - https://www.nlm.nih.gov/research/umls/sourcereleasedocs/current/HL7V3.0/index.html
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+    consumed_by:
+      - infores:rtx-kg2
   - id: infores:hmdb
     status: released
     name: 'Human Metabolome Database '
@@ -1823,6 +2190,8 @@ information_resources:
     description: >-
       A freely available electronic database containing detailed information
       about small molecule metabolites found in the human body
+    consumed_by:
+      - infores:rtx-kg2
   - id: infores:homologene
     status: released
     name: HomoloGene
@@ -1858,6 +2227,9 @@ information_resources:
       - https://github.com/NCATSTranslator/Translator-All/wiki/HPO
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+    consumed_by:
+      - infores:biothings-hpo
+      - infores:rtx-kg2
   - id: infores:hpo-annotations
     status: released
     name: Human Phenotype Ontology
@@ -1867,6 +2239,9 @@ information_resources:
       - HPO Annotations
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+    consumed_by:
+      - infores:biothings-hpo
+      - infores:mydisease-info
   - id: infores:icd10-umls
     status: released
     name: ICD10 (from UMLS)
@@ -1874,6 +2249,8 @@ information_resources:
       - https://www.nlm.nih.gov/research/umls/sourcereleasedocs/current/ICD10/index.html
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+    consumed_by:
+      - infores:rtx-kg2
   - id: infores:icd10ae-umls
     status: released
     name: ICD10AE (from UMLS)
@@ -1881,6 +2258,8 @@ information_resources:
       - https://www.nlm.nih.gov/research/umls/sourcereleasedocs/current/ICD10AE/index.html
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+    consumed_by:
+      - infores:rtx-kg2
   - id: infores:icd10cm-umls
     status: released
     name: ICD10CM (from UMLS)
@@ -1888,6 +2267,8 @@ information_resources:
       - https://www.nlm.nih.gov/research/umls/sourcereleasedocs/current/ICD10CM/index.html
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+    consumed_by:
+      - infores:rtx-kg2
   - id: infores:icd10pcs-umls
     status: released
     name: ICD10PCS (from UMLS)
@@ -1895,6 +2276,8 @@ information_resources:
       - https://www.nlm.nih.gov/research/umls/sourcereleasedocs/current/ICD10PCS/index.html
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+    consumed_by:
+      - infores:rtx-kg2
   - id: infores:icd9cm-umls
     status: released
     name: ICD9CM (from UMLS)
@@ -1902,6 +2285,8 @@ information_resources:
       - https://www.nlm.nih.gov/research/umls/sourcereleasedocs/current/ICD9CM/index.html
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+    consumed_by:
+      - infores:rtx-kg2
   - id: infores:icees-kg
     status: released
     name: ICEES (Integrated Clinical and Environmental Exposures Service)
@@ -1922,6 +2307,8 @@ information_resources:
     knowledge_level: mixed
     agent_type: not_provided
     description: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7075538/
+    consumed_by:
+      - infores:biothings-idisk
   - id: infores:improving-agent
     status: released
     name: imProving Agent
@@ -1930,6 +2317,8 @@ information_resources:
     knowledge_level: prediction
     agent_type: not_provided
     description: imProving Agent OpenAPI TRAPI Specification
+    consumed_by:
+      - infores:ars
   - id: infores:indigo-reasoner
     status: deprecated
     name: OpenAPI for indigo NCATS Biomedical Translator Reasoner
@@ -1945,6 +2334,8 @@ information_resources:
       - http://www.obofoundry.org/ontology/ino.html
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+    consumed_by:
+      - infores:rtx-kg2
   - id: infores:intact
     status: released
     name: IntAct
@@ -1952,6 +2343,8 @@ information_resources:
       - https://github.com/NCATSTranslator/Translator-All/wiki/IntAct
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+    consumed_by:
+      - infores:rtx-kg2
   - id: infores:interactome-ccsb
     status: released
     name: Interactome Projects at CCSB
@@ -1994,10 +2387,11 @@ information_resources:
     knowledge_level: not_provided
     agent_type: text_mining_agent
     description: >-
-      A bioinformatics resource for integrated understanding of protein post-translational modifications (PTMs) 
-      in systems biology context. It connects multiple disparate bioinformatics tools and systems text mining, 
-      data mining, analysis and visualization tools, and databases and ontologies into an integrated 
-      cross-cutting research resource to address the knowledge gaps in exploring and discovering PTM networks.
+      A bioinformatics resource for integrated understanding of protein post-translational modifications
+      (PTMs)  in systems biology context. It connects multiple disparate bioinformatics tools
+      and systems text mining,  data mining, analysis and visualization tools, and databases
+      and ontologies into an integrated  cross-cutting research resource to address the knowledge
+      gaps in exploring and discovering PTM networks.
   - id: infores:irefindex
     status: released
     name: iRefIndex
@@ -2030,6 +2424,8 @@ information_resources:
       - KEGG
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+    consumed_by:
+      - infores:rtx-kg2
   - id: infores:kgea
     status: deprecated
     name: Knowledge Graph Exchange Archive
@@ -2046,8 +2442,10 @@ information_resources:
     agent_type: not_provided
     description: >-
       https://kinace.kinametrix.com/#section-about
-      The KinAce web portal aggregates and visualizes the network of interactions between protein-kinases and their substrates in the human genome.
-      To begin, click on one of the tabs above. Each tab provides a unique way to select a set of proteins and display the known kinase-substrate interactions between them.
+      The KinAce web portal aggregates and visualizes the network of interactions between protein-kinases
+      and their substrates in the human genome.  To begin, click on one of the tabs above. Each
+      tab provides a unique way to select a set of proteins and display the known kinase-substrate
+      interactions between them.
   - id: infores:kinomescan
     status: released
     name: KINOMEscan
@@ -2069,6 +2467,8 @@ information_resources:
       queries and the [`KGX`](https://github.com/biolink/kgx) format   See the API GitHub
       repository: https://github.com/MaastrichtU-IDS/knowledge-collaboratory-api
       This service is supported by the [NCATS Translator project](https://ncats.nih.gov/translator/about)'
+    consumed_by:
+      - infores:arax
   - id: infores:life-science-resource-registry
     status: released
     name: Life Science Resource Registry
@@ -2103,6 +2503,10 @@ information_resources:
       and its close related entities (e.g. genes, diseases, and drugs). The LitVar results
       are automatically extracted (with regular updates) from over 27 million PubMed
       articles as well as applicable full-text articles in PubMed Central.
+    consumes:
+      - infores:dbsnp
+    consumed_by:
+      - infores:service-provider-trapi
   - id: infores:loinc
     status: released
     name: Logical Observation Identifiers Names and Codes
@@ -2119,6 +2523,8 @@ information_resources:
       - https://github.com/NCATSTranslator/Translator-All/wiki/LOINC-from-UMLS
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+    consumed_by:
+      - infores:rtx-kg2
   - id: infores:mp
     status: released
     name: Mammalian Phenotype Ontology
@@ -2146,6 +2552,8 @@ information_resources:
       - MEDRA
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+    consumed_by:
+      - infores:rtx-kg2
   - id: infores:medgen
     status: released
     name: MedGen
@@ -2162,6 +2570,8 @@ information_resources:
       - https://medlineplus.gov/
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+    consumed_by:
+      - infores:rtx-kg2
   - id: infores:medrt-umls
     status: released
     name: Medication Reference Terminology (MED-RT) (from UMLS)
@@ -2169,6 +2579,8 @@ information_resources:
       - https://www.nlm.nih.gov/research/umls/sourcereleasedocs/current/MED-RT/index.html
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+    consumed_by:
+      - infores:rtx-kg2
   - id: infores:mesh
     status: released
     name: Medical Subject Headings Thesaurus
@@ -2178,6 +2590,8 @@ information_resources:
       - MeSH
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+    consumed_by:
+      - infores:rtx-kg2
   - id: infores:metacyc
     status: released
     name: MetaCyc Metabolic Pathway Database
@@ -2208,6 +2622,8 @@ information_resources:
       - MGI
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+    consumed_by:
+      - infores:biothings-mgi-g2p
   - id: infores:mpath
     status: released
     name: Mouse pathology ontology
@@ -2229,6 +2645,8 @@ information_resources:
       - MI
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+    consumed_by:
+      - infores:rtx-kg2
   - id: infores:mirbase
     status: released
     name: The microRNA Database
@@ -2238,6 +2656,8 @@ information_resources:
       - miRBase
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+    consumed_by:
+      - infores:rtx-kg2
   - id: infores:mirgate
     status: released
     name: MiRGate
@@ -2253,6 +2673,8 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     description: Molecular Data Provider for NCATS Biomedical Translator Reasoners
+    consumed_by:
+      - infores:arax
   - id: infores:monarch-data
     status: deprecated
     name: SciGraph-Monarch-Data
@@ -2274,6 +2696,8 @@ information_resources:
       - https://github.com/NCATSTranslator/Translator-All/wiki/Monarch-Initiative
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+    consumed_by:
+      - infores:service-provider-trapi
   - id: infores:mondo
     status: released
     name: MONDO Disease Ontology
@@ -2283,6 +2707,9 @@ information_resources:
       - MONDO
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+    consumed_by:
+      - infores:mydisease-info
+      - infores:rtx-kg2
   - id: infores:mop
     status: released
     name: Molecular Process Ontology
@@ -2322,6 +2749,14 @@ information_resources:
     description: >-
       Documentation of the MyChem.info chem query web services.  Learn more
       about [MyChem.info](http://MyChem.info/)
+    consumes:
+      - infores:aeolus
+      - infores:chebi
+      - infores:chembl
+      - infores:drugcentral
+      - infores:fda-orphan-drug-db
+    consumed_by:
+      - infores:service-provider-trapi
   - id: infores:mydisease-info
     status: released
     name: MyDisease.info API
@@ -2334,6 +2769,13 @@ information_resources:
     description: >-
       Documentation of the MyDisease.info disease query web services.  Learn
       more about [mydisease.info](http://mydisease.info/)
+    consumes:
+      - infores:ctd
+      - infores:disgenet
+      - infores:hpo-annotations
+      - infores:mondo
+    consumed_by:
+      - infores:service-provider-trapi
   - id: infores:mygene-info
     status: released
     name: MyGene.info API
@@ -2346,6 +2788,14 @@ information_resources:
     description: >-
       Documentation of the MyGene.info Gene Query web services. Learn more
       about [MyGene.info](http://mygene.info/)
+    consumes:
+      - infores:clingen
+      - infores:cpdb
+      - infores:ncbi-gene
+      - infores:panther
+      - infores:reactome
+    consumed_by:
+      - infores:service-provider-trapi
   - id: infores:myvariant-info
     status: released
     name: MyVariant.info API
@@ -2358,6 +2808,12 @@ information_resources:
     description: >-
       Documentation of the MyVariant.info Variant Query web services. Learn
       more about [MyVariant.info](http://myvariant.info/)
+    consumes:
+      - infores:civic
+      - infores:clinvar
+      - infores:dbsnp
+    consumed_by:
+      - infores:service-provider-trapi
   - id: infores:nanopublications
     status: released
     name: Nanopublications Network
@@ -2376,10 +2832,12 @@ information_resources:
       - NBO
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+    consumed_by:
+      - infores:rtx-kg2
   - id: infores:ncats-ars
     status: released
-    name: National Center for Advancing Translational Science Biomedical Data Translator
-      Autonomous Relay System
+    name: National Center for Advancing Translational Science Biomedical Data Translator Autonomous
+      Relay System
     synonym:
       - NCATS Translator Autonomous Relay System Translator  Autonomous Relay System
       - NCATS Translator ARS
@@ -2397,6 +2855,9 @@ information_resources:
       - ncbigene
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+    consumed_by:
+      - infores:mygene-info
+      - infores:rtx-kg2
   - id: infores:ncbi-taxon
     status: released
     name: NCBI Taxonomy Ontology
@@ -2404,6 +2865,8 @@ information_resources:
       - http://www.obofoundry.org/ontology/ncbitaxon.html
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+    consumed_by:
+      - infores:rtx-kg2
   - id: infores:ncbi-taxonomy
     status: released
     name: NCBI Taxonomy
@@ -2414,9 +2877,12 @@ information_resources:
       - ncbitaxon
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+    consumed_by:
+      - infores:rtx-kg2
   - id: infores:ncdeq-cafo-exposures-data
     status: deprecated
-    name: North Carolina Department of Environmental Quality Concentrated Animal Feeding Operations Exposures Data
+    name: North Carolina Department of Environmental Quality Concentrated Animal Feeding Operations
+      Exposures Data
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - id: infores:ncdeq-landfill-exposures-data
@@ -2443,6 +2909,8 @@ information_resources:
       - NCIt
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+    consumed_by:
+      - infores:rtx-kg2
   - id: infores:ndcd
     status: released
     name: National Drug Code Directory
@@ -2455,6 +2923,8 @@ information_resources:
   - id: infores:nddf-umls
     status: deprecated
     name: National Drug Data File (NDDF) (from UMLS)
+    consumed_by:
+      - infores:rtx-kg2
   - id: infores:ndex
     status: deprecated
     name: NDEx
@@ -2469,6 +2939,8 @@ information_resources:
       - https://www.nlm.nih.gov/research/umls/rxnorm/sourcereleasedocs/vandf.html
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+    consumed_by:
+      - infores:rtx-kg2
   - id: infores:nexo-align
     status: deprecated
     name: NEXO Align Ontology
@@ -2512,6 +2984,10 @@ information_resources:
       from GO (the Gene Ontology) and ECO (the Evidence & Conclusion Ontology), Gene
       Ontology annotations from the EBI's GOA database, and gene products (proteins
       from UniProt, RNA from RNAcentral and complexes from ComplexPortal).
+    consumes:
+      - infores:disease-ontology
+    consumed_by:
+      - infores:service-provider-trapi
   - id: infores:omicsdi
     status: released
     name: OmicsDI
@@ -2528,6 +3004,8 @@ information_resources:
       - OMIM
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+    consumed_by:
+      - infores:rtx-kg2
   - id: infores:omnicorp
     status: released
     name: OmniCorp
@@ -2548,8 +3026,8 @@ information_resources:
     agent_type: not_provided
   - id: infores:omop-ohdsi-api
     status: released
-    name: Observational Medical Outcomes Partnership Observational Health Data Sciences
-      and Informatics API
+    name: Observational Medical Outcomes Partnership Observational Health Data Sciences and
+      Informatics API
     xref:
       - https://chime.ucsf.edu/observational-medical-outcomes-partnership-omop
     synonym:
@@ -2570,6 +3048,8 @@ information_resources:
       - https://github.com/NCATSTranslator/Translator-All/wiki/OpenPredict-KP
     knowledge_level: prediction
     agent_type: not_provided
+    consumed_by:
+      - infores:arax
   - id: infores:ordo
     status: released
     name: Orphanet Rare Disease Ontology
@@ -2579,6 +3059,8 @@ information_resources:
       - ORDO
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+    consumed_by:
+      - infores:rtx-kg2
   - id: infores:orphanet
     status: released
     name: Orphanet
@@ -2611,6 +3093,8 @@ information_resources:
       - Panther
     knowledge_level: other
     agent_type: not_provided
+    consumed_by:
+      - infores:mygene-info
   - id: infores:path-pheno-db
     status: released
     name: PathoPhenoDB
@@ -2630,6 +3114,8 @@ information_resources:
     name: PathWhiz
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/PathWhiz
+    consumed_by:
+      - infores:rtx-kg2
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - id: infores:pato
@@ -2639,6 +3125,8 @@ information_resources:
       - https://github.com/NCATSTranslator/Translator-All/wiki/PATO
     synonym:
       - PATO
+    consumed_by:
+      - infores:rtx-kg2
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - id: infores:phenio
@@ -2686,7 +3174,9 @@ information_resources:
     status: released
     name: Physician Data Query (PDQ) (from UMLS)
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/PDQ-from-UMLS
+      - https://www.nlm.nih.gov/research/umls/sourcereleasedocs/current/PDQ/index.html
+    consumed_by:
+      - infores:rtx-kg2
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - id: infores:pfam
@@ -2746,8 +3236,8 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: manual_agent
     description: >-
-      provides comprehensive information and tools for the study of protein 
-      post-translational modifications (PTMs) including phosphorylation, acetylation, and more. 
+      provides comprehensive information and tools for the study of protein  post-translational
+      modifications (PTMs) including phosphorylation, acetylation, and more. 
   - id: infores:pr
     status: released
     name: Protein Ontology
@@ -2755,6 +3245,8 @@ information_resources:
       - https://proconsortium.org/
     synonym:
       - PRO
+    consumed_by:
+      - infores:rtx-kg2
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - id: infores:prefixcommons
@@ -2785,6 +3277,8 @@ information_resources:
     name: Psychological Index Terms (PSY) (from UMLS)
     xref:
       - https://www.nlm.nih.gov/research/umls/sourcereleasedocs/current/PSY/index.html#:~:text=PSY%20(Psychological%20Index%20Terms)%20%2D%20Synopsis,-Synopsis%20Metadata%20Statistics&text=The%20Thesaurus%20of%20Psychological%20Index%20Terms%20is%20a%20controlled%20vocabulary,provide%20subject%20searching%20of%20data.
+    consumed_by:
+      - infores:rtx-kg2
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - id: infores:pubchem
@@ -2830,6 +3324,9 @@ information_resources:
       - https://github.com/NCATSTranslator/Translator-All/wiki/reactome
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+    consumed_by:
+      - infores:mygene-info
+      - infores:rtx-kg2
   - id: infores:renci-bionames
     status: released
     name: RENCI BioNames
@@ -2848,6 +3345,8 @@ information_resources:
       - repoDB
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+    consumed_by:
+      - infores:biothings-repodb
   - id: infores:rgd
     status: released
     name: RGD API
@@ -2865,6 +3364,8 @@ information_resources:
       - RO
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+    consumed_by:
+      - infores:rtx-kg2
   - id: infores:robokop
     status: deprecated
     name: ROBOKOP
@@ -2904,10 +3405,88 @@ information_resources:
       - https://github.com/NCATSTranslator/Translator-All/wiki/RTX-KG2
     synonym:
       - Rtx-kg2
+    description: TRAPI 1.1 endpoint for the NCATS Biomedical Translator KP called RTX KG2
+    consumes:
+      - infores:atc-codes-umls
+      - infores:bfo
+      - infores:biolink-ontology
+      - infores:biothings-multiomics-clinicaltrials
+      - infores:bspo
+      - infores:chebi
+      - infores:chembl
+      - infores:chv-umls
+      - infores:cl
+      - infores:cpt-codes-umls
+      - infores:dda
+      - infores:dgidb
+      - infores:disease-ontology
+      - infores:diseases
+      - infores:disgenet
+      - infores:drugbank
+      - infores:drugcentral
+      - infores:efo
+      - infores:ehdaa2
+      - infores:ensembl-gene
+      - infores:fma-obo
+      - infores:fma-umls
+      - infores:foodon
+      - infores:genepio
+      - infores:go
+      - infores:go-plus
+      - infores:goa
+      - infores:hcp-codes-umls
+      - infores:hcpcs-cpt-umls
+      - infores:hgnc
+      - infores:hl7-umls
+      - infores:hmdb
+      - infores:hpo
+      - infores:icd10-umls
+      - infores:icd10ae-umls
+      - infores:icd10cm-umls
+      - infores:icd10pcs-umls
+      - infores:icd9cm-umls
+      - infores:ino
+      - infores:intact
+      - infores:kegg
+      - infores:loinc-umls
+      - infores:meddra-umls
+      - infores:medlineplus
+      - infores:medrt-umls
+      - infores:mesh
+      - infores:mi
+      - infores:mirbase
+      - infores:mondo
+      - infores:nbo
+      - infores:ncbi-gene
+      - infores:ncbi-taxon
+      - infores:ncbi-taxonomy
+      - infores:ncit
+      - infores:nddf-umls
+      - infores:ndfrt
+      - infores:omim
+      - infores:ordo
+      - infores:pathwhiz
+      - infores:pato
+      - infores:pdq-umls
+      - infores:pr
+      - infores:psy-umls
+      - infores:reactome
+      - infores:ro
+      - infores:rxnorm
+      - infores:semmeddb
+      - infores:smpdb
+      - infores:snomedct
+      - infores:ttd
+      - infores:uberon
+      - infores:umls
+      - infores:umls-metathesaurus
+      - infores:unichem
+      - infores:uniprot
+      - infores:vandf-umls
+    consumed_by:
+      - infores:arax
     knowledge_level: knowledge_assertion
     agent_type: not_provided
-    description: TRAPI 1.1 endpoint for the NCATS Biomedical Translator KP called RTX
-      KG2
   - id: infores:rxnorm
     status: released
     name: RxNorm
@@ -2920,6 +3499,8 @@ information_resources:
       the drug vocabularies commonly used in pharmacy management and drug interaction
       software, including those of First Databank, Micromedex, and Gold Standard Drug
       Database
+    consumed_by:
+      - infores:rtx-kg2
   - id: infores:sabio-rk
     status: released
     name: SABIO-RK Biochemical Reaction Kinetics Database
@@ -2939,6 +3520,9 @@ information_resources:
     name: Semantic Medline Database
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/SemMedDB
+    consumed_by:
+      - infores:biothings-semmeddb
+      - infores:rtx-kg2
     knowledge_level: not_provided
     agent_type: text_mining_agent
   - id: infores:sgd
@@ -2986,6 +3570,8 @@ information_resources:
       - https://github.com/NCATSTranslator/Translator-All/wiki/SMPDB
     synonym:
       - SMPDB
+    consumed_by:
+      - infores:rtx-kg2
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - id: infores:snomedct
@@ -2995,6 +3581,8 @@ information_resources:
       - http://www.snomed.org/
     synonym:
       - SNOMED
+    consumed_by:
+      - infores:rtx-kg2
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - id: infores:snpeff
@@ -3005,8 +3593,8 @@ information_resources:
     knowledge_level: prediction
     agent_type: computational_model
     description: >-
-      Genetic variant annotation and functional effect prediction toolbox.
-      It annotates and predicts the effects of genetic variants on genes and proteins (such as amino acid changes).
+      Genetic variant annotation and functional effect prediction toolbox. It annotates and
+      predicts the effects of genetic variants on genes and proteins (such as amino acid changes).
   - id: infores:so
     status: released
     name: Sequence Ontology
@@ -3026,6 +3614,8 @@ information_resources:
     description: SPOKE KP - an NIH NCATS Knowledge Provider to expose UCSFs SPOKE
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/SPOKE-KP
+    consumed_by:
+      - infores:arax
   - id: infores:sri-edge-normalization-service
     status: deprecated
     name: Edge Normalization Service
@@ -3176,6 +3766,8 @@ information_resources:
       have been found to co-occur in the scientific literature. Here, cooccurrence of
       a pair of biomedical concepts within a single document or sentence serves as a
       proxy for a potential relationship between the two concepts.
+    consumed_by:
+      - infores:arax
   - id: infores:text-mining-provider-targeted
     status: released
     name: Text Mining Targeted Association API
@@ -3188,6 +3780,8 @@ information_resources:
       sentences in the scientific literature. Here, targeted refers to the fact that
       this service is based on text-mining models targeted to extract specific associations
       between concepts, as opposed to concepts cooccurring with each other.
+    consumed_by:
+      - infores:service-provider-trapi
   - id: infores:tissues-expression-db
     status: released
     name: Tissue Expression Database
@@ -3216,9 +3810,12 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     description: >-
-      TTD is a database providing information about the known and explored therapeutic protein
-      and nucleic acid targets, the targeted disease, pathway information and the corresponding drugs
-      directed at each of these targets.
+      TTD is a database providing information about the known and explored therapeutic protein  and
+      nucleic acid targets, the targeted disease, pathway information and the corresponding
+      drugs  directed at each of these targets.
+    consumed_by:
+      - infores:biothings-ttd
+      - infores:rtx-kg2
   - id: infores:ubergraph
     status: released
     name: Ubergraph
@@ -3226,7 +3823,9 @@ information_resources:
       - https://github.com/NCATSTranslator/Translator-All/wiki/Ubergraph
     knowledge_level: knowledge_assertion
     agent_type: not_provided
-    description: A graph representation of Ubergraph, an integration of ontologies including GO, CHEBI, Uberon, and HPO.
+    description: >-
+      A graph representation of Ubergraph, an integration of ontologies including GO, CHEBI,
+      Uberon, and HPO.
   - id: infores:uberon
     status: released
     name: Uber Anatomy Ontology
@@ -3234,6 +3833,9 @@ information_resources:
       - https://github.com/NCATSTranslator/Translator-All/wiki/Uberon
     synonym:
       - Uberon
+    consumed_by:
+      - infores:biothings-uberon-ontology
+      - infores:rtx-kg2
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - id: infores:umls
@@ -3243,6 +3845,8 @@ information_resources:
       - https://www.nlm.nih.gov/research/umls/index.html
     synonym:
       - UMLS
+    consumed_by:
+      - infores:rtx-kg2
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - id: infores:umls-metathesaurus
@@ -3252,6 +3856,8 @@ information_resources:
       - https://www.nlm.nih.gov/research/umls/sourcereleasedocs/current/MTH/index.html
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+    consumed_by:
+      - infores:rtx-kg2
   - id: infores:unc-cdwh-ehr-data
     status: deprecated
     name: UNC Carolina Data Warehouse for Health Patient EHR Data
@@ -3266,6 +3872,8 @@ information_resources:
       - https://github.com/NCATSTranslator/Translator-All/wiki/UniChem
     synonym:
       - unichem
+    consumed_by:
+      - infores:rtx-kg2
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - id: infores:uniprot
@@ -3275,6 +3883,9 @@ information_resources:
       - https://github.com/NCATSTranslator/Translator-All/wiki/UniProt
     synonym:
       - UniProt
+    consumed_by:
+      - infores:ebi-proteins
+      - infores:rtx-kg2
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - id: infores:uniref
@@ -3294,6 +3905,8 @@ information_resources:
     knowledge_level: prediction
     agent_type: not_provided
     description: OpenAPI for NCATS Biomedical Translator Reasoners
+    consumed_by:
+      - infores:ars
   - id: infores:us-census-acs-data
     status: deprecated
     name: United States Census Bureau American Community Survey Data
@@ -3337,6 +3950,8 @@ information_resources:
     name: Veterans Association National Drug File (VANDF) (from UMLS)
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/VANDF
+    consumed_by:
+      - infores:rtx-kg2
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - id: infores:wikidata
@@ -3372,7 +3987,8 @@ information_resources:
       - XPO
     knowledge_level: knowledge_assertion
     agent_type: not_provided
-    description: XPO represents anatomical, cellular, and gene function phenotypes
+    description: >-
+      XPO represents anatomical, cellular, and gene function phenotypes
       occurring throughout the development of the African frogs Xenopus laevis and tropicalis.
   - id: infores:workflow-runner
     status: released
@@ -3398,7 +4014,8 @@ information_resources:
       - ZFA
     knowledge_level: knowledge_assertion
     agent_type: not_provided
-    description: A structured controlled vocabulary of the anatomy and development of
+    description: >-
+      A structured controlled vocabulary of the anatomy and development of
       the Zebrafish
   - id: infores:zfin
     status: released
@@ -3421,6 +4038,8 @@ information_resources:
       with annotations including mechanism description, risk levels, management strategies,
       alternative medications, etc. to improve clinical decision-making and patient
       safety.
+    consumed_by:
+      - infores:biothings-ddinter
   - id: infores:ki-database
     status: released
     name: Ki database
@@ -3471,6 +4090,8 @@ information_resources:
       records, applying standardized vocabularies with drug names mapped to RxNorm concepts
       and outcomes mapped to SNOMED-CT concepts, and pre-computed summary statistics
       about drug-outcome relationships for general consumption.
+    consumed_by:
+      - infores:mychem-info
   - id: infores:regl
     status: released
     name: Richards Effector Gene List
@@ -3538,9 +4159,15 @@ information_resources:
     name: BioThings RARe-SOURCE API
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/BioThings-APIs
+    description: >-
+      Documentation of the BioThings API for [NCATS RARe-SOURCE](https://raresource.nih.gov/)
+      data.
+    consumes:
+      - infores:rare-source
+    consumed_by:
+      - infores:service-provider-trapi
     knowledge_level: knowledge_assertion
     agent_type: not_provided
-    description: Documentation of the BioThings API for [NCATS RARe-SOURCE](https://raresource.nih.gov/) data.
   - id: infores:rare-source
     status: released
     name: NCATS RARe-SOURCE
@@ -3549,6 +4176,8 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     description: Integrated Bioinformatics Resource for Rare Diseases
+    consumed_by:
+      - infores:biothings-rare-source
   - id: infores:sri-answer-appraiser
     status: released
     name: SRI Answer Appraiser
@@ -3565,9 +4194,14 @@ information_resources:
     agent_type: text_mining_agent
     description: >-
       Documentation of the BioThings API for
-      [SuppKG](https://github.com/zhang-informatics/SemRep_DS/tree/main/SuppKG) data. SuppKG contains relations
-      between dietary supplements and other entities, such as diseases. More information can be found in [this
-      paper](https://doi.org/10.1016/j.jbi.2022.104120).
+      [SuppKG](https://github.com/zhang-informatics/SemRep_DS/tree/main/SuppKG) data. SuppKG
+      contains relations
+      between dietary supplements and other entities, such as diseases. More information can
+      be found in [this  paper](https://doi.org/10.1016/j.jbi.2022.104120). 
+    consumes:
+      - infores:suppkg
+    consumed_by:
+      - infores:service-provider-trapi
   - id: infores:suppkg
     status: released
     name: SuppKG
@@ -3576,16 +4210,23 @@ information_resources:
     knowledge_level: not_provided
     agent_type: text_mining_agent
     description: >-
-      SuppKG contains relations between dietary supplements and other entities, such as diseases.
-      More information can be found in [this paper](https://doi.org/10.1016/j.jbi.2022.104120).
+      SuppKG contains relations between dietary supplements and other entities, such as diseases.  More
+      information can be found in [this paper](https://doi.org/10.1016/j.jbi.2022.104120).
+    consumed_by:
+      - infores:biothings-suppkg
   - id: infores:biothings-ddinter
     status: released
     name: BioThings DDInter API
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/BioThings-APIs
+    description: Documentation of the BioThings API for [DDInter](http://ddinter.scbdd.com/)
+      data.
+    consumes:
+      - infores:ddinter
+    consumed_by:
+      - infores:service-provider-trapi
     knowledge_level: knowledge_assertion
     agent_type: not_provided
-    description: Documentation of the BioThings API for [DDInter](http://ddinter.scbdd.com/) data.
   - id: infores:biothings-gtrx
     status: released
     name: BioThings GTRx API
@@ -3594,11 +4235,15 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     description: >-
-      Documentation of the BioThings API for [Genome-to-Treatment (GTRx™)](https://gtrx.rbsapp.net/about.html).
-      This API includes the content from the linked website, specifically the recommended acute treatments and
-      interventions for seriously ill newborns, infants and children with newly diagnosed genetic diseases.
-      These may include therapeutics, dietary changes, surgery, medical devices or other interventions.
-      For more info, see the paper (open-access): https://www.nature.com/articles/s41467-022-31446-6.
+      Documentation of the BioThings API for [Genome-to-Treatment (GTRx™)](https://gtrx.rbsapp.net/about.html).  This
+      API includes the content from the linked website, specifically the recommended acute treatments
+      and  interventions for seriously ill newborns, infants and children with newly diagnosed
+      genetic diseases.  These may include therapeutics, dietary changes, surgery, medical devices
+      or other interventions.  For more info, see the paper (open-access): https://www.nature.com/articles/s41467-022-31446-6.
+    consumes:
+      - infores:gtrx
+    consumed_by:
+      - infores:service-provider-trapi
   - id: infores:biothings-ttd
     status: released
     name: Biothings Therapeutic Target Database API
@@ -3608,7 +4253,12 @@ information_resources:
     agent_type: not_provided
     description: >-
       Documentation of the BioThings API for [TherapeuticTargetDatabase](https://db.idrblab.net/ttd/).
-      This KP contains drug-disease, target-disease, drug-protein target, and biomarker-disease associations.
+      This KP contains drug-disease, target-disease, drug-protein target, and biomarker-disease
+      associations.
+    consumes:
+      - infores:ttd
+    consumed_by:
+      - infores:service-provider-trapi
   - id: infores:rampdb
     status: released
     name: RaMPDB
@@ -3618,8 +4268,10 @@ information_resources:
     agent_type: not_provided
     description: >-
       RaMP-DB (Relational database of Metabolomic Pathways) is a multi-sourced integrated database
-      with comprehensive annotations on biological pathways, structure/chemistry, disease and ontology
-      annotations for genes, proteins, and metabolites. RaMP-DB also provides a framework for single
+      with comprehensive annotations on biological pathways, structure/chemistry, disease and
+      ontology
+      annotations for genes, proteins, and metabolites. RaMP-DB also provides a framework for
+      single
       and batch queries of those annotations, and for performing chemical and biological pathway
       enrichment analyses on input multi-omic datasets.
   - id: infores:biothings-agr
@@ -3632,6 +4284,10 @@ information_resources:
     description: >-
       Documentation of the BioThings API for
       [AGR](https://www.alliancegenome.org/downloads) disease associations data.
+    consumes:
+      - infores:agrkb
+    consumed_by:
+      - infores:service-provider-trapi
   - id: infores:innatedb
     status: released
     name: InnateDB
@@ -3640,10 +4296,13 @@ information_resources:
     knowledge_level: mixed
     agent_type: not_provided
     description: >-
-      InnateDB is a publicly available database of the genes, proteins, experimentally-verified interactions
-      and signaling pathways involved in the innate immune response of humans, mice and bovines to microbial infection.
-      The database captures an improved coverage of the innate immunity interactome by integrating known interactions
-      and pathways from major public databases together with manually-curated data into a centralised resource.
+      InnateDB is a publicly available database of the genes, proteins, experimentally-verified
+      interactions  and signaling pathways involved in the innate immune response of humans,
+      mice and bovines to microbial infection.  The database captures an improved coverage of
+      the innate immunity interactome by integrating known interactions  and pathways from major
+      public databases together with manually-curated data into a centralised resource.
+    consumed_by:
+      - infores:biothings-innatedb
   - id: infores:biothings-innatedb
     status: released
     name: BioThings InnateDB API
@@ -3652,7 +4311,11 @@ information_resources:
     knowledge_level: mixed
     agent_type: not_provided
     description: >-
-      Documentation of the BioThings API for [InnateDB](https://www.innatedb.com/) data.
+      Documentation of the BioThings API for [InnateDB](https://www.innatedb.com/) data. 
+    consumes:
+      - infores:innatedb
+    consumed_by:
+      - infores:service-provider-trapi
   - id: infores:iptmnet
     status: released
     name: iPTMnet
@@ -3664,7 +4327,8 @@ information_resources:
       iPTMnet is a bioinformatics resource for integrated understanding of protein post-translational
       modifications (PTMs) in systems biology context. It connects multiple disparate bioinformatics
       tools and systems text mining, data mining, analysis and visualization tools, and databases
-      and ontologies into an integrated cross-cutting research resource to address the knowledge gaps
+      and ontologies into an integrated cross-cutting research resource to address the knowledge
+      gaps
       in exploring and discovering PTM networks.
   - id: infores:fda-orphan-drug-db
     status: released
@@ -3675,6 +4339,8 @@ information_resources:
     agent_type: not_provided
     description: >-
       Resource for searching FDA Orphan Drug Designations and Approvals
+    consumed_by:
+      - infores:mychem-info
   - id: infores:complex-portal
     status: released
     name: Complex Portal
@@ -3683,10 +4349,12 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     description: >-
-      The Complex Portal is a manually curated, encyclopaedic resource of macromolecular complexes
-      from a number of key model organisms. The majority of complexes are made up of proteins but
-      may also include nucleic acids or small molecules. All data is freely available for search
-      and download.
+      The Complex Portal is a manually curated, encyclopaedic resource of macromolecular complexes  from
+      a number of key model organisms. The majority of complexes are made up of proteins but  may
+      also include nucleic acids or small molecules. All data is freely available for search  and
+      download
+    consumed_by:
+      - infores:service-provider-trapi
   - id: infores:biothings-repodb
     status: released
     name: BioThings repoDB API
@@ -3695,8 +4363,12 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     description: >-
-      Documentation of the BioThings API for [repoDB](https://unmtid-shinyapps.net/shiny/repodb/) data.
-      and download
+      Documentation of the BioThings API for [repoDB](https://unmtid-shinyapps.net/shiny/repodb/)
+      data.  and download
+    consumes:
+      - infores:repodb
+    consumed_by:
+      - infores:service-provider-trapi
   - id: infores:biothings-hmdb
     status: released
     name: BioThings HMDB API
@@ -3714,8 +4386,10 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     description: >-
-      FoodData Central is an integrated data system that provides expanded nutrient profile data
-      and links to related agricultural and experimental research.
+      FoodData Central is an integrated data system that provides expanded nutrient profile
+      data  and links to related agricultural and experimental research. 
+    consumed_by:
+      - infores:biothings-fooddata-central
   - id: infores:biothings-fooddata-central
     status: released
     name: BioThings FoodData Central API
@@ -3724,8 +4398,12 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     description: >-
-      Documentation of the BioThings API for
-      [FoodData Central](https://fdc.nal.usda.gov/index.html) data.
+      Documentation of the BioThings API for  [FoodData Central](https://fdc.nal.usda.gov/index.html)
+      data. 
+    consumes:
+      - infores:fooddata-central
+    consumed_by:
+      - infores:service-provider-trapi
   - id: infores:biothings-foodb
     status: released
     name: BioThings FooDB API
@@ -3734,21 +4412,25 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     description: >-
-      Documentation of the BioThings API for [FooDB](https://foodb.ca/) data.
+      Documentation of the BioThings API for [FooDB](https://foodb.ca/) data. 
+    consumes:
+      - infores:fooddb
+    consumed_by:
+      - infores:service-provider-trapi
   - id: infores:tissues
     status: released
     name: TISSUES
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/TISSUES
+    description: >-
+      TISSUES is a weekly updated web resource that integrates evidence on tissue expression  from
+      manually curated literature, proteomics and transcriptomics screens, and automatic  text
+      mining. We map all evidence to common protein identifiers and Brenda Tissue Ontology  terms,
+      and further unify it by assigning confidence scores that facilitate comparison of  the
+      different types and sources of evidence. We finally visualize these scores on a  schematic
+      human body to provide a convenient overview.
     knowledge_level: mixed
     agent_type: not_provided
-    description: >-
-      TISSUES is a weekly updated web resource that integrates evidence on tissue expression
-      from manually curated literature, proteomics and transcriptomics screens, and automatic
-      text mining. We map all evidence to common protein identifiers and Brenda Tissue Ontology
-      terms, and further unify it by assigning confidence scores that facilitate comparison of
-      the different types and sources of evidence. We finally visualize these scores on a
-      schematic human body to provide a convenient overview.
   - id: infores:biothings-tissues
     status: released
     name: BioThings TISSUES API
@@ -3757,7 +4439,8 @@ information_resources:
     knowledge_level: mixed
     agent_type: not_provided
     description: >-
-      Documentation of the BioThings API for [TISSUES](https://tissues.jensenlab.org/About) data.
+      Documentation of the BioThings API for [TISSUES](https://tissues.jensenlab.org/About)
+      data.
   - id: infores:mygeneset-info
     status: released
     name: MyGeneset.info API
@@ -3766,8 +4449,30 @@ information_resources:
     knowledge_level: other
     agent_type: not_provided
     description: >-
-      MyGeneset allows scientists to conveniently collect, save, and share sets of genes
-      from thousands of different species.
+      MyGeneset allows scientists to conveniently collect, save, and share sets of genes  from
+      thousands of different species. 
+  - id: infores:gelinea
+    consumed_by:
+      - infores:arax
+  - id: infores:automat-binding-db
+    consumed_by:
+      - infores:arax
+  - id: infores:automat-reactome
+    consumed_by:
+      - infores:arax
+  - id: infores:automat-robokop
+    consumed_by:
+      - infores:arax
+  - id: infores:ars
+    consumes:
+      - infores:aragorn
+      - infores:arax
+      - infores:biothings-explorer
+      - infores:improving-agent
+      - infores:unsecret-agent
+  - id: infores:chv-umls
+    consumed_by:
+      - infores:rtx-kg2
   - id: infores:annotator
     status: released
     name: Annotator Service
