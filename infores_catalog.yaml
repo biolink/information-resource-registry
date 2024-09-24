@@ -423,8 +423,8 @@ information_resources:
       - https://github.com/NCATSTranslator/Translator-All/wiki/Automat
     knowledge_level: knowledge_assertion
     agent_type: not_provided
-    description: Biomedical Knowledge graph build by constructing relationships from
-      federated data sets.
+    description: Biomedical Knowledge graph build by constructing relationships from federated
+      data sets.
   - id: infores:automat-text-mining-provider
     status: deprecated
     name: Automat Textmining KP
@@ -502,7 +502,8 @@ information_resources:
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/Automat
     description: >-
-      A graph consisting of May Treat associations from Multiomics Electronic-Health-Record (EHR) Machine Learning Analysis (MLA)
+      A graph consisting of May Treat associations from Multiomics Electronic-Health-Record
+      (EHR) Machine Learning Analysis (MLA)
       using the Providence health records
   - id: infores:bfo
     status: released
@@ -864,7 +865,8 @@ information_resources:
     knowledge_level: prediction
     agent_type: computational_model
     description: >-
-      Documentation of the Multiomics Electronic-Health-Record (EHR) Machine Learning Analysis (MLA) May Treat query web services.
+      Documentation of the Multiomics Electronic-Health-Record (EHR) Machine Learning Analysis
+      (MLA) May Treat query web services.
   - id: infores:biothings-multiomics-wellness
     status: released
     name: Multiomics Wellness KP API
@@ -1000,8 +1002,7 @@ information_resources:
       - https://github.com/NCATSTranslator/Translator-All/wiki/BioThings-SEMMED-DB-Gene
     knowledge_level: not_provided
     agent_type: text_mining_agent
-    description: Documentation of the SEMMED disease query web services.  Learn more
-      about [mydisease.info](http://pending.biothings.io/semmed)
+    description: Documentation of the SEMMED disease query web services.  Learn more about [mydisease.info](http://pending.biothings.io/semmed)
   - id: infores:biothings-semmeddb-phenotype
     status: deprecated
     name: SEMMED Phenotype API
@@ -1167,7 +1168,8 @@ information_resources:
     consumed_by:
       - infores:mychem-info
       - infores:rtx-kg2
-    description: a freely available dictionary of molecular entities focused on ‘small’ chemical compounds
+    description: a freely available dictionary of molecular entities focused on ‘small’ chemical
+      compounds
   - id: infores:chem2bio2rdf
     status: deprecated
     name: Chem2bio2RDF
@@ -1198,7 +1200,8 @@ information_resources:
     consumed_by:
       - infores:mychem-info
       - infores:rtx-kg2
-    description: a manually knowledge_assertion database of bioactive molecules with drug-like properties.
+    description: a manually knowledge_assertion database of bioactive molecules with drug-like
+      properties.
   - id: infores:chemotext
     status: deprecated
     name: Chemotext
@@ -1282,7 +1285,7 @@ information_resources:
     name: Columbia Clinical Data Warehouse for Health Patient EHR Data
     xref:
       - https://www.irvinginstitute.columbia.edu/services/clinical-data-warehouse-cdw-navigator-support
-    description: >- 
+    description: >-
       The Columbia Clinical Data Warehouse (CDW) contains clinical information for over 4.5
       million individuals treated at Columbia University Irving Medical Center (CUIMC) since
       the 1980s.
@@ -1473,6 +1476,8 @@ information_resources:
     name: Current Procedural Terminology (CPT) Codes (from UMLS)
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+    consumed_by:
+      - infores:rtx-kg2
   - id: infores:cqs
     status: released
     name: Translator knowledge_assertion Query Service
@@ -1483,9 +1488,10 @@ information_resources:
     knowledge_level: prediction
     agent_type: computational_model
     description: >-
-      The Translator Curated Query Service (CQS) is an SRI service that provides ARA-like capabilities. The service generates
-      ‘predicted’ edges in response to inferred queries, based on customizable inference rules that are captured as CQS templates.
-      The CQS links predictions to their supporting aux graphs and attaches provenance metadata, and then scores the results.
+      The Translator Curated Query Service (CQS) is an SRI service that provides ARA-like capabilities.
+      The service generates ‘predicted’ edges in response to inferred queries, based on customizable
+      inference rules that are captured as CQS templates. The CQS links predictions to their
+      supporting aux graphs and attaches provenance metadata, and then scores the results.
   - id: infores:ctd
     status: released
     name: Comparative Toxicogenomics Database
@@ -2381,10 +2387,11 @@ information_resources:
     knowledge_level: not_provided
     agent_type: text_mining_agent
     description: >-
-      A bioinformatics resource for integrated understanding of protein post-translational modifications (PTMs) 
-      in systems biology context. It connects multiple disparate bioinformatics tools and systems text mining, 
-      data mining, analysis and visualization tools, and databases and ontologies into an integrated 
-      cross-cutting research resource to address the knowledge gaps in exploring and discovering PTM networks.
+      A bioinformatics resource for integrated understanding of protein post-translational modifications
+      (PTMs)  in systems biology context. It connects multiple disparate bioinformatics tools
+      and systems text mining,  data mining, analysis and visualization tools, and databases
+      and ontologies into an integrated  cross-cutting research resource to address the knowledge
+      gaps in exploring and discovering PTM networks.
   - id: infores:irefindex
     status: released
     name: iRefIndex
@@ -2874,7 +2881,8 @@ information_resources:
       - infores:rtx-kg2
   - id: infores:ncdeq-cafo-exposures-data
     status: deprecated
-    name: North Carolina Department of Environmental Quality Concentrated Animal Feeding Operations Exposures Data
+    name: North Carolina Department of Environmental Quality Concentrated Animal Feeding Operations
+      Exposures Data
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - id: infores:ncdeq-landfill-exposures-data
@@ -3228,8 +3236,8 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: manual_agent
     description: >-
-      provides comprehensive information and tools for the study of protein 
-      post-translational modifications (PTMs) including phosphorylation, acetylation, and more. 
+      provides comprehensive information and tools for the study of protein  post-translational
+      modifications (PTMs) including phosphorylation, acetylation, and more. 
   - id: infores:pr
     status: released
     name: Protein Ontology
@@ -3585,8 +3593,8 @@ information_resources:
     knowledge_level: prediction
     agent_type: computational_model
     description: >-
-      Genetic variant annotation and functional effect prediction toolbox.
-      It annotates and predicts the effects of genetic variants on genes and proteins (such as amino acid changes).
+      Genetic variant annotation and functional effect prediction toolbox. It annotates and
+      predicts the effects of genetic variants on genes and proteins (such as amino acid changes).
   - id: infores:so
     status: released
     name: Sequence Ontology
@@ -3816,7 +3824,8 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     description: >-
-      A graph representation of Ubergraph, an integration of ontologies including GO, CHEBI, Uberon, and HPO.
+      A graph representation of Ubergraph, an integration of ontologies including GO, CHEBI,
+      Uberon, and HPO.
   - id: infores:uberon
     status: released
     name: Uber Anatomy Ontology
@@ -4150,7 +4159,7 @@ information_resources:
     name: BioThings RARe-SOURCE API
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/BioThings-APIs
-    description: >- 
+    description: >-
       Documentation of the BioThings API for [NCATS RARe-SOURCE](https://raresource.nih.gov/)
       data.
     consumes:
@@ -4259,8 +4268,10 @@ information_resources:
     agent_type: not_provided
     description: >-
       RaMP-DB (Relational database of Metabolomic Pathways) is a multi-sourced integrated database
-      with comprehensive annotations on biological pathways, structure/chemistry, disease and ontology
-      annotations for genes, proteins, and metabolites. RaMP-DB also provides a framework for single
+      with comprehensive annotations on biological pathways, structure/chemistry, disease and
+      ontology
+      annotations for genes, proteins, and metabolites. RaMP-DB also provides a framework for
+      single
       and batch queries of those annotations, and for performing chemical and biological pathway
       enrichment analyses on input multi-omic datasets.
   - id: infores:biothings-agr
@@ -4316,7 +4327,8 @@ information_resources:
       iPTMnet is a bioinformatics resource for integrated understanding of protein post-translational
       modifications (PTMs) in systems biology context. It connects multiple disparate bioinformatics
       tools and systems text mining, data mining, analysis and visualization tools, and databases
-      and ontologies into an integrated cross-cutting research resource to address the knowledge gaps
+      and ontologies into an integrated cross-cutting research resource to address the knowledge
+      gaps
       in exploring and discovering PTM networks.
   - id: infores:fda-orphan-drug-db
     status: released
@@ -4427,7 +4439,8 @@ information_resources:
     knowledge_level: mixed
     agent_type: not_provided
     description: >-
-      Documentation of the BioThings API for [TISSUES](https://tissues.jensenlab.org/About) data.
+      Documentation of the BioThings API for [TISSUES](https://tissues.jensenlab.org/About)
+      data.
   - id: infores:mygeneset-info
     status: released
     name: MyGeneset.info API
