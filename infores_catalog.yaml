@@ -3479,7 +3479,6 @@ information_resources:
       - infores:arax
     knowledge_level: knowledge_assertion
     agent_type: not_provided
-    description: TRAPI 1.1 endpoint for the NCATS Biomedical Translator KP called RTX KG2
   - id: infores:rxnorm
     status: released
     name: RxNorm
