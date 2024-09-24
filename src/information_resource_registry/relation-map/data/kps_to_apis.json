@@ -134,28 +134,28 @@
   "infores:multiomics-multiomics": [],
   "infores:mychem-info": [
     "infores:aeolus",
-    "infores:fda-orphan-drug-db",
-    "infores:drugcentral",
+    "infores:chebi",
     "infores:chembl",
-    "infores:chebi"
+    "infores:drugcentral",
+    "infores:fda-orphan-drug-db"
   ],
   "infores:mydisease-info": [
-    "infores:mondo",
-    "infores:hpo-annotations",
+    "infores:ctd",
     "infores:disgenet",
-    "infores:ctd"
+    "infores:hpo-annotations",
+    "infores:mondo"
   ],
   "infores:mygene-info": [
-    "infores:cpdb",
     "infores:clingen",
+    "infores:cpdb",
     "infores:ncbi-gene",
     "infores:panther",
     "infores:reactome"
   ],
   "infores:myvariant-info": [
-    "infores:dbsnp",
+    "infores:civic",
     "infores:clinvar",
-    "infores:civic"
+    "infores:dbsnp"
   ],
   "infores:ols": [
     "infores:disease-ontology"
