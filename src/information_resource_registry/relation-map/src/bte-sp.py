@@ -63,8 +63,8 @@ service_provider_kp = {"infores:service-provider-trapi": kp_inforeses}
 
 # Write out files
 with open("data/kps_to_apis.json", "w") as file:
-    json.dump({kp: [*sources] for kp, sources in sources_by_kps.items()}, file)
+    json.dump({kp: [*sources] for kp, sources in sources_by_kps.items()}, file, indent=2, sort_keys=True)
 #with open("data/bte_to_kps.json", "w") as file:
 #    json.dump({"infores:biothings-explorer": kp_inforeses}, file)
 with open("data/sp_to_kps.json", "w") as file:
-    json.dump({"infores:service-provider-trapi": kp_inforeses}, file)
+    json.dump({"infores:service-provider-trapi": kp_inforeses}, file, indent=2, sort_keys=True)
