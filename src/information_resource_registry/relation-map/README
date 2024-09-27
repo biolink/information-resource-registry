@@ -5,6 +5,7 @@
 python3 src/rtx-kg2.py > data/rtx-kg2.json
 python3 src/bte-sp.py
 python3 src/arax-kps.py
+python3 src/aragorn-kps.py
 ```
 
 ## Merge these into the infores catalog
