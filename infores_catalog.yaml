@@ -49,6 +49,43 @@ information_resources:
       ARAGORN ranking agent services.
     consumed_by:
       - infores:ars
+    consumes:
+      - infores:automat-binding-db
+      - infores:automat-cam-kp
+      - infores:automat-ctd
+      - infores:automat-drug-central
+      - infores:automat-genome-alliance
+      - infores:automat-gtex
+      - infores:automat-gtopdb
+      - infores:automat-gwas-catalog
+      - infores:automat-hetionet
+      - infores:automat-hgnc
+      - infores:automat-hmdb
+      - infores:automat-human-goa
+      - infores:automat-icees-kg
+      - infores:automat-intact
+      - infores:automat-monarchinitiative
+      - infores:automat-panther
+      - infores:automat-pharos
+      - infores:automat-reactome
+      - infores:automat-robokop
+      - infores:automat-string-db
+      - infores:automat-ubergraph
+      - infores:automat-viral-proteome
+      - infores:cohd
+      - infores:connections-hypothesis
+      - infores:gelinea
+      - infores:genetics-data-provider
+      - infores:knowledge-collaboratory
+      - infores:molepro
+      - infores:multiomics-clinicaltrials
+      - infores:multiomics-drugapprovals
+      - infores:multiomics-microbiome
+      - infores:multiomics-multiomics
+      - infores:openpredict
+      - infores:rtx-kg2
+      - infores:service-provider-trapi
+      - infores:spoke
   - id: infores:aragorn-ranker
     status: deprecated
     name: ARAGORN Ranker
@@ -144,6 +181,7 @@ information_resources:
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/Automat
     consumed_by:
+      - infores:aragorn
       - infores:arax
     knowledge_level: knowledge_assertion
     agent_type: not_provided
@@ -223,6 +261,7 @@ information_resources:
     agent_type: not_provided
     description: TRAPI interface to database of Causal Activity Models
     consumed_by:
+      - infores:aragorn
       - infores:arax
   - id: infores:automat-ctd
     status: released
@@ -233,6 +272,7 @@ information_resources:
     agent_type: not_provided
     description: A graph based on the [Comparative Toxicogenomics Database (ctdbase.org)](ctdbase.org).
     consumed_by:
+      - infores:aragorn
       - infores:arax
       - infores:service-provider-trapi
   - id: infores:automat-drug-central
@@ -244,6 +284,7 @@ information_resources:
     agent_type: not_provided
     description: A graph based on DrugCentral
     consumed_by:
+      - infores:aragorn
       - infores:arax
       - infores:service-provider-trapi
   - id: infores:automat-foodb
@@ -265,6 +306,7 @@ information_resources:
       A graph containing eqtl and sqtl information from [GTEx Portal (https://gtexportal.org/home/)](https://gtexportal.org/home/).
       Also includes genes that the variants lie within or near.
     consumed_by:
+      - infores:aragorn
       - infores:arax
       - infores:service-provider-trapi
   - id: infores:automat-gtopdb
@@ -276,6 +318,7 @@ information_resources:
     agent_type: not_provided
     description: A graph based on the [IUPHAR Guide to Pharmacology (https://www.guidetopharmacology.org/)](https://www.guidetopharmacology.org/)
     consumed_by:
+      - infores:aragorn
       - infores:arax
       - infores:service-provider-trapi
   - id: infores:automat-gwas-catalog
@@ -287,6 +330,7 @@ information_resources:
     agent_type: not_provided
     description: A graph based on the GWAS Catalog
     consumed_by:
+      - infores:aragorn
       - infores:arax
       - infores:service-provider-trapi
   - id: infores:automat-hetio
@@ -306,6 +350,7 @@ information_resources:
     agent_type: not_provided
     description: A graph based on [hetionet (het.io)](het.io).
     consumed_by:
+      - infores:aragorn
       - infores:arax
       - infores:service-provider-trapi
   - id: infores:automat-hgnc
@@ -317,6 +362,7 @@ information_resources:
     agent_type: not_provided
     description: Gene families from [HGNC (genenames.org)](genenames.org).
     consumed_by:
+      - infores:aragorn
       - infores:arax
       - infores:service-provider-trapi
   - id: infores:automat-hmdb
@@ -328,6 +374,7 @@ information_resources:
     agent_type: not_provided
     description: A graph based on the [Human Metabolome DataBase (hmdb.org)](hmdb.org).
     consumed_by:
+      - infores:aragorn
       - infores:arax
       - infores:service-provider-trapi
   - id: infores:automat-human-goa
@@ -339,6 +386,7 @@ information_resources:
     agent_type: not_provided
     description: Human Gene Ontology Annotations from the GO consortium.
     consumed_by:
+      - infores:aragorn
       - infores:arax
       - infores:service-provider-trapi
   - id: infores:automat-icees-kg
@@ -349,6 +397,7 @@ information_resources:
     knowledge_level: statistical_association
     agent_type: not_provided
     consumed_by:
+      - infores:aragorn
       - infores:arax
       - infores:service-provider-trapi
   - id: infores:automat-intact
@@ -360,6 +409,7 @@ information_resources:
     agent_type: not_provided
     description: Molecular (Gene-Gene) interactions from EBI IntAct (https://www.ebi.ac.uk/intact/)](https://www.ebi.ac.uk/intact/).
     consumed_by:
+      - infores:aragorn
       - infores:arax
       - infores:service-provider-trapi
   - id: infores:automat-kegg
@@ -379,6 +429,7 @@ information_resources:
       The Monarch Knowledge Graph is a reference implementation of the Biolink model specification.  It
       contains data from the Monarch Initiative aggregated database as well as several OBO ontologies.
     consumed_by:
+      - infores:aragorn
       - infores:arax
   - id: infores:automat-mychem-info
     status: deprecated
@@ -403,6 +454,7 @@ information_resources:
     agent_type: not_provided
     description: A graph of gene families and pathways from [Panther (pantherdb.org)](pantherdb.org)
     consumed_by:
+      - infores:aragorn
       - infores:arax
       - infores:service-provider-trapi
   - id: infores:automat-pharos
@@ -414,6 +466,7 @@ information_resources:
     agent_type: not_provided
     description: A graph based on [Pharos (pharos.nih.gov)](pharos.nih.gov).
     consumed_by:
+      - infores:aragorn
       - infores:arax
       - infores:service-provider-trapi
   - id: infores:automat-robokop-kg
@@ -445,6 +498,7 @@ information_resources:
       laboratory experiments, conserved co-expression, automated text mining, and aggregated
       knowledge from primary data sources.
     consumed_by:
+      - infores:aragorn
       - infores:arax
   - id: infores:automat-sri-reference-kg
     status: deprecated
@@ -468,6 +522,7 @@ information_resources:
       A graph representation of Ubergraph, an integration of ontologies
       including GO, CHEBI, Uberon, and HPO.
     consumed_by:
+      - infores:aragorn
       - infores:arax
   - id: infores:automat-ubergraph-nonredundant
     status: deprecated
@@ -492,6 +547,7 @@ information_resources:
       A graph consisting of viral proteins from UniProt, connected by similarity
       edges from UniRef.
     consumed_by:
+      - infores:aragorn
       - infores:arax
       - infores:service-provider-trapi
   - id: infores:automat-ehr-may-treat-kp
@@ -748,6 +804,7 @@ information_resources:
       - infores:ols
       - infores:text-mining-provider-targeted
     consumed_by:
+      - infores:aragorn
       - infores:arax
       - infores:biothings-explorer
   - id: infores:biothings-go-bp
@@ -885,6 +942,7 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: manual_agent
     consumed_by:
+      - infores:aragorn
       - infores:arax
   - id: infores:biothings-multiomics-clinicaltrials
     status: deprecated
@@ -903,6 +961,7 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: manual_agent
     consumed_by:
+      - infores:aragorn
       - infores:arax
   - id: infores:multiomics-multiomics
     status: released
@@ -912,6 +971,7 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: manual_validation_of_automated_agent
     consumed_by:
+      - infores:aragorn
       - infores:arax
   - id: infores:multiomics-microbiome
     status: released
@@ -921,6 +981,7 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: manual_validation_of_automated_agent
     consumed_by:
+      - infores:aragorn
       - infores:arax
   - id: infores:biothings-pfocr
     status: modified
@@ -1344,6 +1405,7 @@ information_resources:
       (OMOP vocabularies, search, concept relationships, concept hierarchy, concept
       sets)
     consumed_by:
+      - infores:aragorn
       - infores:arax
       - infores:service-provider-trapi
   - id: infores:cohd-covid
@@ -1423,6 +1485,7 @@ information_resources:
     agent_type: not_provided
     description: A Translator Reasoner API for the Connections Hypothesis Provider
     consumed_by:
+      - infores:aragorn
       - infores:arax
       - infores:service-provider-trapi
   - id: infores:cord19
@@ -2009,6 +2072,7 @@ information_resources:
     description: >-
       TRAPI 1.1 endpoint for the NCATS Biomedical Translator Genetics Data KP
     consumed_by:
+      - infores:aragorn
       - infores:arax
   - id: infores:ghr
     status: released
@@ -2468,6 +2532,7 @@ information_resources:
       repository: https://github.com/MaastrichtU-IDS/knowledge-collaboratory-api
       This service is supported by the [NCATS Translator project](https://ncats.nih.gov/translator/about)'
     consumed_by:
+      - infores:aragorn
       - infores:arax
   - id: infores:life-science-resource-registry
     status: released
@@ -2674,6 +2739,7 @@ information_resources:
     agent_type: not_provided
     description: Molecular Data Provider for NCATS Biomedical Translator Reasoners
     consumed_by:
+      - infores:aragorn
       - infores:arax
   - id: infores:monarch-data
     status: deprecated
@@ -3049,6 +3115,7 @@ information_resources:
     knowledge_level: prediction
     agent_type: not_provided
     consumed_by:
+      - infores:aragorn
       - infores:arax
   - id: infores:ordo
     status: released
@@ -3484,6 +3551,7 @@ information_resources:
       - infores:uniprot
       - infores:vandf-umls
     consumed_by:
+      - infores:aragorn
       - infores:arax
     knowledge_level: knowledge_assertion
     agent_type: not_provided
@@ -3615,6 +3683,7 @@ information_resources:
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/SPOKE-KP
     consumed_by:
+      - infores:aragorn
       - infores:arax
   - id: infores:sri-edge-normalization-service
     status: deprecated
@@ -4453,15 +4522,19 @@ information_resources:
       thousands of different species. 
   - id: infores:gelinea
     consumed_by:
+      - infores:aragorn
       - infores:arax
   - id: infores:automat-binding-db
     consumed_by:
+      - infores:aragorn
       - infores:arax
   - id: infores:automat-reactome
     consumed_by:
+      - infores:aragorn
       - infores:arax
   - id: infores:automat-robokop
     consumed_by:
+      - infores:aragorn
       - infores:arax
   - id: infores:ars
     consumes:
