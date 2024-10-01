@@ -600,6 +600,8 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     description: a knowledgebase of genome-scale metabolic network reconstructions
+    consumed_by:
+      - infores:molepro
   - id: infores:biggim
     status: deprecated
     name: Big Gene Interaction Miner
@@ -626,6 +628,7 @@ information_resources:
       targets and 995,797 small molecules.
     consumed_by:
       - infores:biothings-bindingdb
+      - infores:molepro
   - id: infores:bio2rdf
     status: released
     name: Bio2RDF
@@ -1227,6 +1230,7 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     consumed_by:
+      - infores:molepro
       - infores:mychem-info
       - infores:rtx-kg2
     description: a freely available dictionary of molecular entities focused on ‘small’ chemical
@@ -1244,6 +1248,8 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     description: Initiative for Chemical Genetics contract from the National Cancer Institute
+    consumed_by:
+      - infores:molepro
   - id: infores:chembio
     status: deprecated
     name: ChemBio
@@ -1259,6 +1265,7 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     consumed_by:
+      - infores:molepro
       - infores:mychem-info
       - infores:rtx-kg2
     description: a manually knowledge_assertion database of bioactive molecules with drug-like
@@ -1341,6 +1348,8 @@ information_resources:
     description: >-
       genome-scale library of cellular signatures that catalogs transcriptional
       responses to chemical, genetic, and disease perturbation"'
+    consumed_by:
+      - infores:molepro
   - id: infores:columbia-cdw-ehr-data
     status: released
     name: Columbia Clinical Data Warehouse for Health Patient EHR Data
@@ -1568,6 +1577,7 @@ information_resources:
       A robust, publicly available database that aims to advance understanding
       about how environmental exposures affect human health.
     consumed_by:
+      - infores:molepro
       - infores:mydisease-info
       - infores:service-provider-trapi
   - id: infores:ctrp
@@ -1583,6 +1593,8 @@ information_resources:
       links genetic, lineage, and other cellular features of cancer cell
       lines to small-molecule sensitivity with the goal of accelerating discovery of
       patient-matched cancer therapeutics.
+    consumed_by:
+      - infores:molepro
   - id: infores:date
     status: released
     name: Drugs to target pAthways by the Tissue Expression
@@ -1634,6 +1646,8 @@ information_resources:
     description: >-
       Cancer Dependency Map to systematically identify genetic and pharmacologic
       dependencies and the biomarkers that predict them.
+    consumed_by:
+      - infores:molepro
   - id: infores:dgidb
     status: released
     name: Drug Gene Interaction Database
@@ -1649,6 +1663,7 @@ information_resources:
       and merged into conceptual groups.
     consumed_by:
       - infores:biothings-dgidb
+      - infores:molepro
       - infores:rtx-kg2
   - id: infores:dili-network-study-data
     status: deprecated
@@ -1745,6 +1760,8 @@ information_resources:
     description: >-
       knowledge_assertion and annotated collection of FDA-approved drugs, clinical
       trial drugs, and pre-clinical tool compounds with a companion information resource
+    consumed_by:
+      - infores:molepro
   - id: infores:drugbank
     status: released
     name: DrugBank
@@ -1760,6 +1777,7 @@ information_resources:
       we combine detailed drug (i.e. chemical, pharmacological and pharmaceutical) data
       with comprehensive drug target (i.e. sequence, structure, and pathway) information
     consumed_by:
+      - infores:molepro
       - infores:rtx-kg2
   - id: infores:drugcentral
     status: released
@@ -1775,6 +1793,7 @@ information_resources:
       of Translational Informatics at University of New Mexico in collaboration with
       the IDG.
     consumed_by:
+      - infores:molepro
       - infores:mychem-info
       - infores:rtx-kg2
   - id: infores:drugmechdb
@@ -2074,6 +2093,7 @@ information_resources:
     consumed_by:
       - infores:aragorn
       - infores:arax
+      - infores:molepro
   - id: infores:ghr
     status: released
     name: Genetics Home Reference
@@ -2188,6 +2208,8 @@ information_resources:
       An expert-knowledge_assertion resource of ligand-activity-target relationships,
       the majority of which come from high-quality pharmacological and medicinal chemistry
       literature
+    consumed_by:
+      - infores:molepro
   - id: infores:gwas-catalog
     status: released
     name: GWAS Catalog
@@ -2232,6 +2254,7 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     consumed_by:
+      - infores:molepro
       - infores:rtx-kg2
   - id: infores:hl7-umls
     status: released
@@ -2255,6 +2278,7 @@ information_resources:
       A freely available electronic database containing detailed information
       about small molecule metabolites found in the human body
     consumed_by:
+      - infores:molepro
       - infores:rtx-kg2
   - id: infores:homologene
     status: released
@@ -2436,6 +2460,8 @@ information_resources:
       Manually knowledge_assertion data supplied by the FDA and private companies, and provides
       marketing and regulatory status, rigorous drug ingredient definitions, biological
       activity, clinical use, and more.
+    consumed_by:
+      - infores:molepro
   - id: infores:iproclass
     status: released
     name: iProClass
@@ -2517,6 +2543,8 @@ information_resources:
       - https://lincs.hms.harvard.edu/kinomescan/
     knowledge_level: other
     agent_type: not_provided
+    consumed_by:
+      - infores:molepro
   - id: infores:knowledge-collaboratory
     status: released
     name: Translator Knowledge Collaboratory API
@@ -2741,6 +2769,42 @@ information_resources:
     consumed_by:
       - infores:aragorn
       - infores:arax
+      - infores:molepro
+    consumes:
+      - infores:bigg-models
+      - infores:bindingdb
+      - infores:chebi
+      - infores:chembank
+      - infores:chembl
+      - infores:cmap
+      - infores:ctd
+      - infores:ctrp
+      - infores:depmap
+      - infores:dgidb
+      - infores:drug-repurposing-hub
+      - infores:drugbank
+      - infores:drugcentral
+      - infores:dsstoxdb
+      - infores:gelinea
+      - infores:genetics-data-provider
+      - infores:gtopdb
+      - infores:hgnc
+      - infores:hmdb
+      - infores:inxight-drugs
+      - infores:kinomescan
+      - infores:molepro
+      - infores:msigdb
+      - infores:pharmgkb
+      - infores:pharos
+      - infores:probe-miner
+      - infores:pubchem
+      - infores:reactome
+      - infores:rxnorm
+      - infores:sider
+      - infores:sri-node-normalizer
+      - infores:stitch
+      - infores:string
+      - infores:uniprot
   - id: infores:monarch-data
     status: deprecated
     name: SciGraph-Monarch-Data
@@ -2803,6 +2867,8 @@ information_resources:
       - MSigDB
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+    consumed_by:
+      - infores:molepro
   - id: infores:mychem-info
     status: released
     name: MyChem.info API
@@ -3285,6 +3351,8 @@ information_resources:
       - PharmGKB
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+    consumed_by:
+      - infores:molepro
   - id: infores:pharos
     status: released
     name: Pharos
@@ -3295,6 +3363,8 @@ information_resources:
     description: >-
       focusing on three of the most commonly drug-targeted protein families:
       G-protein-coupled receptors (GPCRs, Ion channels (ICs), Kinases
+    consumed_by:
+      - infores:molepro
   - id: infores:psite-plus
     status: released
     name: PhosphoSitePlus
@@ -3339,6 +3409,8 @@ information_resources:
       - https://github.com/NCATSTranslator/Translator-All/wiki/Probe-Miner
     knowledge_level: statistical_association
     agent_type: not_provided
+    consumed_by:
+      - infores:molepro
   - id: infores:psy-umls
     status: released
     name: Psychological Index Terms (PSY) (from UMLS)
@@ -3359,6 +3431,8 @@ information_resources:
       an open chemistry database at the National Institutes of Health (NIH),
       mostly contains small molecules, but also larger molecules such as nucleotides,
       carbohydrates, lipids, peptides, and chemically-modified macromolecules
+    consumed_by:
+      - infores:molepro
   - id: infores:pubmed
     status: released
     name: PubMed
@@ -3392,6 +3466,7 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     consumed_by:
+      - infores:molepro
       - infores:mygene-info
       - infores:rtx-kg2
   - id: infores:renci-bionames
@@ -3568,6 +3643,7 @@ information_resources:
       software, including those of First Databank, Micromedex, and Gold Standard Drug
       Database
     consumed_by:
+      - infores:molepro
       - infores:rtx-kg2
   - id: infores:sabio-rk
     status: released
@@ -3607,6 +3683,8 @@ information_resources:
       - https://github.com/NCATSTranslator/Translator-All/wiki/SIDER
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+    consumed_by:
+      - infores:molepro
   - id: infores:signor
     status: released
     name: SIGNOR 3.0
@@ -3711,6 +3789,8 @@ information_resources:
     description: >-
       Node normalization takes a CURIE, and returns resolved alias and
       the canonical identifier of a node.
+    consumed_by:
+      - infores:molepro
   - id: infores:sri-ontology
     status: deprecated
     name: Ontology-KP API
@@ -3762,6 +3842,8 @@ information_resources:
       Database of known and prediction interactions between chemicals and
       proteins. The interactions include direct (physical) and indirect (functional)
       associations
+    consumed_by:
+      - infores:molepro
   - id: infores:strider
     status: deprecated
     name: Strider
@@ -3779,6 +3861,8 @@ information_resources:
       - STRING
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+    consumed_by:
+      - infores:molepro
   - id: infores:symp
     status: released
     name: Symptom Ontology
@@ -3954,6 +4038,7 @@ information_resources:
       - UniProt
     consumed_by:
       - infores:ebi-proteins
+      - infores:molepro
       - infores:rtx-kg2
     knowledge_level: knowledge_assertion
     agent_type: not_provided
@@ -4524,6 +4609,7 @@ information_resources:
     consumed_by:
       - infores:aragorn
       - infores:arax
+      - infores:molepro
   - id: infores:automat-binding-db
     consumed_by:
       - infores:aragorn
@@ -4554,3 +4640,6 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_tupe: not_provided
     description: Service to provide detailed annotations for any given biomedical entities.
+  - id: infores:dsstoxdb
+    consumed_by:
+      - infores:molepro
