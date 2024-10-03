@@ -17,7 +17,7 @@ if response.status_code == 200:
         # Sort the list in alphabetical order
         infores_dict['infores:arax'].sort()
 
-        with open('data/arax_infores_list.json', 'w') as outfile:
+        with open('src/information_resource_registry/relation_map/data/arax_infores_list.json', 'w') as outfile:
             json.dump(infores_dict, outfile, indent=2, sort_keys=True)
         
         print("File successfully saved in alphabetical order.")
