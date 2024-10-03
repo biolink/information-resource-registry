@@ -8,7 +8,14 @@ readme = "README.md"
 include = ["README.md", "src/information-resource-registry/schema", "project", "src/information-resource-registry/datamodel", "src/information-resource-registry/scripts"]
 
 [tool.poetry.scripts]
-generate_viz_json = "src.information-resource-registry.scripts.generate_json:generate_viz_json"
+add_consume_info = "src.information-resource-registry.relation-map.src.add_consume_info:add_consume_info"
+aragorn_kps = "src.information-resource-registry.relation-map.src.aragorn_kps:aragorn_kps"
+arax_kps = "src.information-resource-registry.relation-map.src.arax_kps:arax_kps"
+bte_sp = "src.information-resource-registry.relation-map.src.bte_sp:bte_sp"
+extract_consume_info = "src.information-resource-registry.relation-map.src.extract_consume_info:extract_consume_info"
+generate_sankey = "src.information-resource-registry.relation-map.src.generate_sankey:generate_sankey"
+molepro_consume = "src.information-resource-registry.relation-map.src.molepro_consume:molepro_consume"
+rtx_kg2 = "src.information-resource-registry.relation-map.src.rtx_kg2:rtx_kg2"
 
 
 [tool.poetry-dynamic-versioning]
@@ -17,7 +24,7 @@ vcs = "git"
 style = "pep440"
 
 [tool.poetry.dependencies]
-python = "^3.9"
+python = "^3.10"
 curies = "^0.7.4"
 prefixmaps = "^0.2.0"
 pyyaml = "^6.0.1"
