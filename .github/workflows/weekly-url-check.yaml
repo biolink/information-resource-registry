@@ -1,9 +1,10 @@
-name: Check Infores Catalog Links
+name: Check Infores Catalog Links and Regenerate Artifacts
 on:
   pull_request:
   schedule:
-    - cron: '0 5 * * 1'  # at 05:00 UTC every Monday
+    - cron: '0 7 * * 1'  # at 07:00 UTC every Monday
   workflow_dispatch:
+    types: trigger-url-check
 
 jobs:
   check-external-links:
@@ -28,7 +29,3 @@ jobs:
       - name: Run URL validation
         run: |
           make validate_infores
-
-      - name: Regenerate Sankey
-        run: |
-          make sankey
