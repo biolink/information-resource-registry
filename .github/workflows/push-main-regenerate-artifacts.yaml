@@ -39,6 +39,7 @@ jobs:
           poetry install
           make gen-project
           make test
+          make sankey
           if [ $? -eq 0 ]; then
             git config --local user.email "action@github.com"
             git config --local user.name "GitHub Action"
