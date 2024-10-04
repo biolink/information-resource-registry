@@ -4602,7 +4602,7 @@ information_resources:
     knowledge_level: mixed
     agent_type: not_provided
   - id: infores:biothings-tissues
-    status: releasedConsensusPathDB
+    status: released
     name: BioThings TISSUES API
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/BioThings-APIs
@@ -4622,24 +4622,39 @@ information_resources:
       MyGeneset allows scientists to conveniently collect, save, and share sets of genes  from
       thousands of different species. 
   - id: infores:gelinea
+    knowledge_level: not_provided
+    agent_type: not_provided
+    status: released
     consumed_by:
       - infores:aragorn
       - infores:arax
       - infores:molepro
   - id: infores:automat-binding-db
+    knowledge_level: not_provided
+    agent_type: not_provided
+    status: released
     consumed_by:
       - infores:aragorn
       - infores:arax
   - id: infores:automat-reactome
+    knowledge_level: not_provided
+    agent_type: not_provided
+    status: released
     consumed_by:
       - infores:aragorn
       - infores:arax
   - id: infores:automat-robokop
+    knowledge_level: not_provided
+    agent_type: not_provided
+    status: released
     consumed_by:
       - infores:aragorn
       - infores:arax
       - infores:service-provider-trapi
   - id: infores:ars
+    knowledge_level: not_provided
+    agent_type: not_provided
+    status: released
     consumes:
       - infores:aragorn
       - infores:arax
@@ -4647,6 +4662,9 @@ information_resources:
       - infores:improving-agent
       - infores:unsecret-agent
   - id: infores:chv-umls
+    knowledge_level: not_provided
+    agent_type: not_provided
+    status: released
     consumed_by:
       - infores:rtx-kg2
   - id: infores:annotator
@@ -4655,7 +4673,7 @@ information_resources:
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/Annotator-Service
     knowledge_level: knowledge_assertion
-    agent_tupe: not_provided
+    agent_type: not_provided
     description: Service to provide detailed annotations for any given biomedical entities.
   - id: infores:dsstoxdb
     consumed_by:
