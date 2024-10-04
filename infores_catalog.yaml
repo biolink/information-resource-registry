@@ -1549,6 +1549,8 @@ information_resources:
       - CPDB
     consumed_by:
       - infores:mygene-info
+    knowledge_level: mixed
+    agent_type: not_provided
   - id: infores:cpt-codes-umls
     status: deprecated
     name: Current Procedural Terminology (CPT) Codes (from UMLS)
@@ -4600,7 +4602,7 @@ information_resources:
     knowledge_level: mixed
     agent_type: not_provided
   - id: infores:biothings-tissues
-    status: released
+    status: releasedConsensusPathDB
     name: BioThings TISSUES API
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/BioThings-APIs

@@ -1,3 +1,8 @@
+include relation_map.Makefile
+include validation.Makefile
+include documentation.Makefile
+include linkml.Makefile
+
 MAKEFLAGS += --warn-undefined-variables
 SHELL := bash
 .SHELLFLAGS := -eu -o pipefail -c
@@ -7,15 +12,8 @@ SHELL := bash
 .SECONDARY:
 
 RUN = poetry run
-# get values from about.yaml file
 
-# basename of a YAML file in model/
 .PHONY: all clean
-
-include relation_map.Makefile
-include validation.Makefile
-include documentation.Makefile
-include linkml.Makefile
 
 # note: "help" MUST be the first target in the file,
 # when the user types "make" they should get help info
@@ -40,9 +38,9 @@ site: gen-project gendoc
 test: test-schema lint spell
 	$(RUN) python -m unittest discover -p 'test_*.py'
 	$(RUN) codespell
-	$(RUN) yamllint -c .yamllint-config src/information_resource_registry.yaml
+	$(RUN) yamllint -c .yamllint-config src/information_resource_registry/schema/*.yaml
 	$(RUN) yamllint -c .yamllint-config infores_catalog.yaml
-	$(RUN) python validation/verify_infores.py
+	$(RUN) python src/information_resource_registry/validation/verify_infores.py
 
 clean:
 	rm -rf $(DEST)
