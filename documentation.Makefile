@@ -4,6 +4,7 @@ RUN = poetry run
 serve: mkd-serve
 
 gendoc: $(DOCDIR)
+	cp $(SRC)/information_resource_registry/relation_map/data/sankey_diagram.png $(DOCDIR)/sankey_diagram.png ; \
 	# DO NOT REMOVE: these cp statements are crucial to maintain the w3 ids for the model artifacts
 	cp $(DEST)/owl/information_resource_registry.owl.ttl $(DOCDIR)/information_resource_registry.owl.ttl ; \
 	cp $(DEST)/jsonld/information_resource_registry.context.jsonld $(DOCDIR)/information_resource_registry.context.jsonld ; \
