@@ -19,14 +19,13 @@ generate_consumes_annotations:
 	$(RUN) rtx_kg2
 	$(RUN) bte_sp
 	$(RUN) arax_kps
-	$(RUN) aragorn_kps
+	# $(RUN) aragorn_kps. # currently does not run b/c of pydantic v1 requirement
 	$(RUN) molepro_consume
 
 merge_into_infores_catalog:
-	$(RUN) add_consume_info infores_catalog.yaml ${DATA_DIR}/*.json > data/infores_catalog_new.yaml
+	$(RUN) add_consume_info infores_catalog.yaml ${DATA_DIR}/*.json > ${DATA_DIR}/infores_catalog_new.yaml
 	mv $(DATA_DIR)/infores_catalog_new.yaml infores_catalog.yaml
 
-## Generate a sankey diagram
 
 generate_sankey:
 	$(RUN) extract_consume_info infores_catalog.yaml $(DATA_DIR)/consume_info.csv

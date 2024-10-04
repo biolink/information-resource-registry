@@ -24,10 +24,13 @@ def parse_and_write_csv(yaml_file_path, csv_file_path):
 
     print(f"CSV file created at {csv_file_path}")
 
-if __name__ == "__main__":
+def main():
     if len(sys.argv) != 3:
-        print("Usage: python script.py <input_yaml_file_path> <output_csv_file_path>")
-    else:
-        input_yaml_path = sys.argv[1]
-        output_csv_path = sys.argv[2]
-        parse_and_write_csv(input_yaml_path, output_csv_path)
+        print("Usage: parse_and_write_csv <input_yaml_file_path> <output_csv_file_path>")
+        sys.exit(1)
+    input_yaml_path = sys.argv[1]
+    output_csv_path = sys.argv[2]
+    parse_and_write_csv(input_yaml_path, output_csv_path)
+
+if __name__ == "__main__":
+    main()

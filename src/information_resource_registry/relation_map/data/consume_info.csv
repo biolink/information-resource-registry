@@ -56,6 +56,7 @@ infores:automat-ubergraph,infores:arax,1
 infores:automat-viral-proteome,infores:aragorn,1
 infores:automat-viral-proteome,infores:arax,1
 infores:automat-viral-proteome,infores:service-provider-trapi,1
+infores:automat-ehr-may-treat-kp,infores:arax,1
 infores:bfo,infores:rtx-kg2,1
 infores:bigg-models,infores:molepro,1
 infores:bindingdb,infores:biothings-bindingdb,1
@@ -79,13 +80,17 @@ infores:biothings-multiomics-ehr-risk,infores:service-provider-trapi,1
 infores:biothings-multiomics-wellness,infores:service-provider-trapi,1
 infores:multiomics-clinicaltrials,infores:aragorn,1
 infores:multiomics-clinicaltrials,infores:arax,1
+infores:multiomics-clinicaltrials,infores:service-provider-trapi,1
 infores:biothings-multiomics-clinicaltrials,infores:rtx-kg2,1
 infores:multiomics-drugapprovals,infores:aragorn,1
 infores:multiomics-drugapprovals,infores:arax,1
+infores:multiomics-drugapprovals,infores:service-provider-trapi,1
 infores:multiomics-multiomics,infores:aragorn,1
 infores:multiomics-multiomics,infores:arax,1
+infores:multiomics-multiomics,infores:service-provider-trapi,1
 infores:multiomics-microbiome,infores:aragorn,1
 infores:multiomics-microbiome,infores:arax,1
+infores:multiomics-microbiome,infores:service-provider-trapi,1
 infores:biothings-pfocr,infores:service-provider-trapi,1
 infores:pfocr,infores:biothings-pfocr,1
 infores:biothings-semmeddb,infores:service-provider-trapi,1
@@ -202,6 +207,7 @@ infores:mirbase,infores:rtx-kg2,1
 infores:molepro,infores:aragorn,1
 infores:molepro,infores:arax,1
 infores:molepro,infores:molepro,1
+infores:molepro,infores:service-provider-trapi,1
 infores:monarchinitiative,infores:service-provider-trapi,1
 infores:mondo,infores:mydisease-info,1
 infores:mondo,infores:rtx-kg2,1
@@ -293,5 +299,6 @@ infores:automat-reactome,infores:aragorn,1
 infores:automat-reactome,infores:arax,1
 infores:automat-robokop,infores:aragorn,1
 infores:automat-robokop,infores:arax,1
+infores:automat-robokop,infores:service-provider-trapi,1
 infores:chv-umls,infores:rtx-kg2,1
 infores:dsstoxdb,infores:molepro,1

@@ -115,6 +115,7 @@ information_resources:
       - infores:automat-cam-kp
       - infores:automat-ctd
       - infores:automat-drug-central
+      - infores:automat-ehr-may-treat-kp
       - infores:automat-genome-alliance
       - infores:automat-gtex
       - infores:automat-gtopdb
@@ -561,6 +562,8 @@ information_resources:
       A graph consisting of May Treat associations from Multiomics Electronic-Health-Record
       (EHR) Machine Learning Analysis (MLA)
       using the Providence health records
+    consumed_by:
+      - infores:arax
   - id: infores:bfo
     status: released
     name: Basic Formal Ontology
@@ -762,6 +765,7 @@ information_resources:
       - infores:automat-intact
       - infores:automat-panther
       - infores:automat-pharos
+      - infores:automat-robokop
       - infores:automat-viral-proteome
       - infores:biothings-agr
       - infores:biothings-bindingdb
@@ -799,7 +803,12 @@ information_resources:
       - infores:ebi-proteins
       - infores:ebi-quick-go
       - infores:litvar
+      - infores:molepro
       - infores:monarchinitiative
+      - infores:multiomics-clinicaltrials
+      - infores:multiomics-drugapprovals
+      - infores:multiomics-microbiome
+      - infores:multiomics-multiomics
       - infores:mychem-info
       - infores:mydisease-info
       - infores:mygene-info
@@ -947,6 +956,7 @@ information_resources:
     consumed_by:
       - infores:aragorn
       - infores:arax
+      - infores:service-provider-trapi
   - id: infores:biothings-multiomics-clinicaltrials
     status: deprecated
     name: Multiomics ClinicalTrials KP API
@@ -966,6 +976,7 @@ information_resources:
     consumed_by:
       - infores:aragorn
       - infores:arax
+      - infores:service-provider-trapi
   - id: infores:multiomics-multiomics
     status: released
     name: Multiomics KP API
@@ -976,6 +987,7 @@ information_resources:
     consumed_by:
       - infores:aragorn
       - infores:arax
+      - infores:service-provider-trapi
   - id: infores:multiomics-microbiome
     status: released
     name: Multiomics Microbiome KP API
@@ -986,6 +998,7 @@ information_resources:
     consumed_by:
       - infores:aragorn
       - infores:arax
+      - infores:service-provider-trapi
   - id: infores:biothings-pfocr
     status: modified
     name: BioThings PFOCR API
@@ -2770,6 +2783,7 @@ information_resources:
       - infores:aragorn
       - infores:arax
       - infores:molepro
+      - infores:service-provider-trapi
     consumes:
       - infores:bigg-models
       - infores:bindingdb
@@ -4622,6 +4636,7 @@ information_resources:
     consumed_by:
       - infores:aragorn
       - infores:arax
+      - infores:service-provider-trapi
   - id: infores:ars
     consumes:
       - infores:aragorn
