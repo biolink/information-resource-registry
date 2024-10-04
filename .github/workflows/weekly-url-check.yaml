@@ -28,3 +28,7 @@ jobs:
       - name: Run URL validation
         run: |
           make validate_infores
+
+      - name: Regenerate Sankey
+        run: |
+          make sankey
