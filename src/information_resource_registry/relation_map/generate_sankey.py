@@ -39,7 +39,7 @@ def main():
                       width=1200, height=5000)
 
     # Display the plot
-    fig.show()
+    # fig.show()
 
     # Step 5: Save the plot to a PNG file
     fig.write_image('src/information_resource_registry/relation_map/data/sankey_diagram.png', scale=2)

@@ -1,5 +1,6 @@
 ID,Consumed By,Value
 infores:agrkb,infores:biothings-agr,1
+infores:aact,infores:multiomics-clinicaltrials,1
 infores:answer-coalesce,infores:arax,1
 infores:aragorn,infores:ars,1
 infores:arax,infores:ars,1
@@ -103,6 +104,8 @@ infores:bioplanet,infores:biothings-bioplanet-pathway-disease,1
 infores:bioplanet,infores:biothings-bioplanet-pathway-gene,1
 infores:biothings-bindingdb,infores:service-provider-trapi,1
 infores:bspo,infores:rtx-kg2,1
+infores:dailymed,infores:multiomics-drugapprovals,1
+infores:dailymed,infores:multiomics-clinicaltrials,1
 infores:chebi,infores:molepro,1
 infores:chebi,infores:mychem-info,1
 infores:chebi,infores:rtx-kg2,1
@@ -135,6 +138,7 @@ infores:depmap,infores:molepro,1
 infores:dgidb,infores:biothings-dgidb,1
 infores:dgidb,infores:molepro,1
 infores:dgidb,infores:rtx-kg2,1
+infores:faers,infores:multiomics-drugapprovals,1
 infores:disease-ontology,infores:ols,1
 infores:disease-ontology,infores:rtx-kg2,1
 infores:diseases,infores:biothings-diseases,1
@@ -191,6 +195,7 @@ infores:improving-agent,infores:ars,1
 infores:ino,infores:rtx-kg2,1
 infores:intact,infores:rtx-kg2,1
 infores:inxight-drugs,infores:molepro,1
+infores:isb-wellness,infores:biothings-multiomics-wellness,1
 infores:kegg,infores:rtx-kg2,1
 infores:kinomescan,infores:molepro,1
 infores:knowledge-collaboratory,infores:aragorn,1

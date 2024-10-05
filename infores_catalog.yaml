@@ -1215,7 +1215,8 @@ information_resources:
       - https://dailymed.nlm.nih.gov/dailymed/
     knowledge_level: knowledge_assertion
     agent_type: not_provided
-    description: The DailyMed database contains labeling, submitted by companies to the Food and Drug Administration (FDA).
+    description: The DailyMed database contains labeling, submitted by companies to the Food
+      and Drug Administration (FDA).
     consumed_by:
       - infores:multiomics-drugapprovals
       - infores:multiomics-clinicaltrials
