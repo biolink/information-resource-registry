@@ -41,14 +41,15 @@ jobs:
           poetry install
           make gen-project
           make sankey
-          make test
+          make test_pr
           make gendoc
           if [ $? -eq 0 ]; then
             git config --local user.email "action@github.com"
             git config --local user.name "GitHub Action"
             git add project/*
             git add src/*
-            git commit -m "Regenerate artifacts from information_resource_registry.yaml"
+            git add infores_catalog.yaml
+            git commit -m "Regenerate artifacts from infores_catalog.yaml"
             git push
           else
             echo "'make' gen-project failed to finish successfully"
