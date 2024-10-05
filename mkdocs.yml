@@ -14,6 +14,7 @@ plugins:
 nav:
   # - Home: home.md
   - Overview: index.md
+  - Visualize Translator Data Flow (sankey): sankey_diagram.png
   - View the Infores Catalog: https://biolink.github.io/information-resource-registry/infores_catalog.yaml
   - Download the Infores Catalog: infores_catalog.yaml
   - Implementation Guidance: implementation-guidance.md

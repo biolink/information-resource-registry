@@ -6,6 +6,8 @@ on:
   push:
     branches:
       - main
+  schedule:
+    - cron: '0 5 * * 1'  # at 05:00 UTC every Monday
   workflow_dispatch:
     types: trigger-build-artifacts
 
@@ -26,7 +28,7 @@ jobs:
         uses: actions/setup-python@v2
         with:
           # Version range or exact version of a Python version to use, using SemVer's version range syntax.
-          python-version: 3.9
+          python-version: '3.11'
 
       - name: Setup build environment
         run: |
@@ -38,13 +40,16 @@ jobs:
         run: |
           poetry install
           make gen-project
-          make test
+          make sankey
+          make test_pr
+          make gendoc
           if [ $? -eq 0 ]; then
             git config --local user.email "action@github.com"
             git config --local user.name "GitHub Action"
             git add project/*
             git add src/*
-            git commit -m "Regenerate artifacts from information_resource_registry.yaml"
+            git add infores_catalog.yaml
+            git commit -m "Regenerate artifacts from infores_catalog.yaml"
             git push
           else
             echo "'make' gen-project failed to finish successfully"

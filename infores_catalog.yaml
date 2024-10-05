@@ -117,6 +117,7 @@ information_resources:
       - infores:automat-cam-kp
       - infores:automat-ctd
       - infores:automat-drug-central
+      - infores:automat-ehr-may-treat-kp
       - infores:automat-genome-alliance
       - infores:automat-gtex
       - infores:automat-gtopdb
@@ -563,6 +564,8 @@ information_resources:
       A graph consisting of May Treat associations from Multiomics Electronic-Health-Record
       (EHR) Machine Learning Analysis (MLA)
       using the Providence health records
+    consumed_by:
+      - infores:arax
   - id: infores:bfo
     status: released
     name: Basic Formal Ontology
@@ -764,6 +767,7 @@ information_resources:
       - infores:automat-intact
       - infores:automat-panther
       - infores:automat-pharos
+      - infores:automat-robokop
       - infores:automat-viral-proteome
       - infores:biothings-agr
       - infores:biothings-bindingdb
@@ -801,7 +805,12 @@ information_resources:
       - infores:ebi-proteins
       - infores:ebi-quick-go
       - infores:litvar
+      - infores:molepro
       - infores:monarchinitiative
+      - infores:multiomics-clinicaltrials
+      - infores:multiomics-drugapprovals
+      - infores:multiomics-microbiome
+      - infores:multiomics-multiomics
       - infores:mychem-info
       - infores:mydisease-info
       - infores:mygene-info
@@ -951,6 +960,7 @@ information_resources:
     consumed_by:
       - infores:aragorn
       - infores:arax
+      - infores:service-provider-trapi
     consumes:
       - infores:aact
       - infores:dailymed
@@ -973,6 +983,7 @@ information_resources:
     consumed_by:
       - infores:aragorn
       - infores:arax
+      - infores:service-provider-trapi
     consumes:
       - infores:dailymed
       - infores:faers
@@ -986,6 +997,7 @@ information_resources:
     consumed_by:
       - infores:aragorn
       - infores:arax
+      - infores:service-provider-trapi
     consumes:
       - infores:pubmed-central
   - id: infores:multiomics-microbiome
@@ -998,6 +1010,7 @@ information_resources:
     consumed_by:
       - infores:aragorn
       - infores:arax
+      - infores:service-provider-trapi
     consumes:
       - infores:pubmed-central
   - id: infores:biothings-pfocr
@@ -1202,7 +1215,8 @@ information_resources:
       - https://dailymed.nlm.nih.gov/dailymed/
     knowledge_level: knowledge_assertion
     agent_type: not_provided
-    description: The DailyMed database contains labeling, submitted by companies to the Food and Drug Administration (FDA).
+    description: The DailyMed database contains labeling, submitted by companies to the Food
+      and Drug Administration (FDA).
     consumed_by:
       - infores:multiomics-drugapprovals
       - infores:multiomics-clinicaltrials
@@ -1561,6 +1575,8 @@ information_resources:
       - CPDB
     consumed_by:
       - infores:mygene-info
+    knowledge_level: mixed
+    agent_type: not_provided
   - id: infores:cpt-codes-umls
     status: deprecated
     name: Current Procedural Terminology (CPT) Codes (from UMLS)
@@ -2799,6 +2815,7 @@ information_resources:
       - infores:aragorn
       - infores:arax
       - infores:molepro
+      - infores:service-provider-trapi
     consumes:
       - infores:bigg-models
       - infores:bindingdb
@@ -4635,23 +4652,39 @@ information_resources:
       MyGeneset allows scientists to conveniently collect, save, and share sets of genes  from
       thousands of different species. 
   - id: infores:gelinea
+    knowledge_level: not_provided
+    agent_type: not_provided
+    status: released
     consumed_by:
       - infores:aragorn
       - infores:arax
       - infores:molepro
   - id: infores:automat-binding-db
+    knowledge_level: not_provided
+    agent_type: not_provided
+    status: released
     consumed_by:
       - infores:aragorn
       - infores:arax
   - id: infores:automat-reactome
+    knowledge_level: not_provided
+    agent_type: not_provided
+    status: released
     consumed_by:
       - infores:aragorn
       - infores:arax
   - id: infores:automat-robokop
+    knowledge_level: not_provided
+    agent_type: not_provided
+    status: released
     consumed_by:
       - infores:aragorn
       - infores:arax
+      - infores:service-provider-trapi
   - id: infores:ars
+    knowledge_level: not_provided
+    agent_type: not_provided
+    status: released
     consumes:
       - infores:aragorn
       - infores:arax
@@ -4659,6 +4692,9 @@ information_resources:
       - infores:improving-agent
       - infores:unsecret-agent
   - id: infores:chv-umls
+    knowledge_level: not_provided
+    agent_type: not_provided
+    status: released
     consumed_by:
       - infores:rtx-kg2
   - id: infores:annotator
@@ -4667,8 +4703,11 @@ information_resources:
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/Annotator-Service
     knowledge_level: knowledge_assertion
-    agent_tupe: not_provided
+    agent_type: not_provided
     description: Service to provide detailed annotations for any given biomedical entities.
   - id: infores:dsstoxdb
     consumed_by:
       - infores:molepro
+    knowledge_level: not_provided
+    agent_type: not_provided
+    status: released
