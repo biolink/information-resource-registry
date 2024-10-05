@@ -45,6 +45,6 @@ gen-project: $(PYMODEL)
 		--include python \
 		--include rdf \
 		-d $(DEST) $(SOURCE_SCHEMA_PATH)
-	$(RUN) gen-pydantic --pydantic-version 2 src/information_resource_registry/schema/information_resource_registry.yaml > $(PYMODEL)/pydanticmodel_v2.py
+	$(RUN) gen-pydantic --version 2 src/information_resource_registry/schema/information_resource_registry.yaml > $(PYMODEL)/pydanticmodel_v2.py
 	$(RUN) gen-owl --mergeimports --no-metaclasses --no-type-objects --add-root-classes --mixins-as-expressions src/information_resource_registry/schema/information_resource_registry.yaml > $(DEST)/owl/information_resource.owl.ttl
 	$(MAKE) infores
