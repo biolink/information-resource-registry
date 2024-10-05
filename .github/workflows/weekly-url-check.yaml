@@ -5,6 +5,7 @@ on:
   workflow_dispatch:
     types: trigger-url-check
 
+
 jobs:
   check-external-links:
     runs-on: ubuntu-latest
