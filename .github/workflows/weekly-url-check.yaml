@@ -1,6 +1,5 @@
 name: Check Infores Catalog Links and Regenerate Artifacts
 on:
-  pull_request:
   schedule:
     - cron: '0 7 * * 1'  # at 07:00 UTC every Monday
   workflow_dispatch:

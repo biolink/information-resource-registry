@@ -1,4 +1,4 @@
-name: Validate-Biolink-YAML
+name: Validate Infores Catalog
 
 on:
   pull_request:
