@@ -960,13 +960,10 @@ information_resources:
     consumed_by:
       - infores:aragorn
       - infores:arax
-<<<<<<< HEAD
       - infores:service-provider-trapi
-=======
     consumes:
       - infores:aact
       - infores:dailymed
->>>>>>> main
   - id: infores:biothings-multiomics-clinicaltrials
     status: deprecated
     name: Multiomics ClinicalTrials KP API
@@ -986,13 +983,10 @@ information_resources:
     consumed_by:
       - infores:aragorn
       - infores:arax
-<<<<<<< HEAD
       - infores:service-provider-trapi
-=======
     consumes:
       - infores:dailymed
       - infores:faers
->>>>>>> main
   - id: infores:multiomics-multiomics
     status: released
     name: Multiomics KP API
@@ -1003,12 +997,9 @@ information_resources:
     consumed_by:
       - infores:aragorn
       - infores:arax
-<<<<<<< HEAD
       - infores:service-provider-trapi
-=======
     consumes:
       - infores:pubmed-central
->>>>>>> main
   - id: infores:multiomics-microbiome
     status: released
     name: Multiomics Microbiome KP API
@@ -1019,12 +1010,9 @@ information_resources:
     consumed_by:
       - infores:aragorn
       - infores:arax
-<<<<<<< HEAD
       - infores:service-provider-trapi
-=======
     consumes:
       - infores:pubmed-central
->>>>>>> main
   - id: infores:biothings-pfocr
     status: modified
     name: BioThings PFOCR API
@@ -4719,3 +4707,6 @@ information_resources:
   - id: infores:dsstoxdb
     consumed_by:
       - infores:molepro
+    knowledge_level: not_provided
+    agent_type: not_provided
+    status: released
