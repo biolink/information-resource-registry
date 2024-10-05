@@ -35,6 +35,13 @@ install:
 all: site
 site: gen-project gendoc
 
+test_pr: test-schema lint spell
+	$(RUN) python -m unittest discover -p 'test_*.py'
+	$(RUN) codespell
+	$(RUN) yamllint -c .yamllint-config src/information_resource_registry/schema/*.yaml
+	$(RUN) yamllint -c .yamllint-config infores_catalog.yaml
+
+
 test: test-schema lint spell
 	$(RUN) python -m unittest discover -p 'test_*.py'
 	$(RUN) codespell
