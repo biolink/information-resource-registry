@@ -1,4 +1,8 @@
 RUN = poetry run
+DOCDIR = docs
+
+$(DOCDIR):
+	mkdir -p $@
 
 gendoc: $(DOCDIR)
 	$(RUN) gen-doc -d $(DOCDIR) $(SOURCE_SCHEMA_PATH)
