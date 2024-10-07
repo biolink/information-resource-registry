@@ -1,5 +1,5 @@
 # Auto generated from information_resource_registry.yaml by pythongen.py version: 0.0.1
-# Generation date: 2024-10-04T17:49:33
+# Generation date: 2024-10-07T14:54:48
 # Schema: Information-Resource-Registry-Schema
 #
 # id: https://w3id.org/biolink/information_resource_registry.yaml
@@ -11,6 +11,7 @@ import re
 from jsonasobj2 import JsonObj, as_dict
 from typing import Optional, List, Union, Dict, ClassVar, Any
 from dataclasses import dataclass
+from datetime import date, datetime, time
 from linkml_runtime.linkml_model.meta import EnumDefinition, PermissibleValue, PvFormulaOptions
 
 from linkml_runtime.utils.slot import Slot
@@ -49,7 +50,7 @@ DEFAULT_ = INFORES
 
 
 
-@dataclass
+@dataclass(repr=False)
 class InformationResourceContainer(YAMLRoot):
     """
     A collection of information resources
@@ -71,7 +72,7 @@ class InformationResourceContainer(YAMLRoot):
         super().__post_init__(**kwargs)
 
 
-@dataclass
+@dataclass(repr=False)
 class InformationResource(YAMLRoot):
     """
     A database or knowledgebase and its supporting ecosystem of interfaces and services that deliver content to

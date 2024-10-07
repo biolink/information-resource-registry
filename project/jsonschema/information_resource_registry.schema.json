@@ -25,7 +25,10 @@
                 },
                 "description": {
                     "description": "A free-text description of an entity or attribute.",
-                    "type": "string"
+                    "type": [
+                        "string",
+                        "null"
+                    ]
                 },
                 "id": {
                     "description": "A unique identifier for an entity. Must be either a CURIE shorthand for a URI or a complete URI",
@@ -37,7 +40,10 @@
                 },
                 "name": {
                     "description": "A human-readable name for an attribute or entity.",
-                    "type": "string"
+                    "type": [
+                        "string",
+                        "null"
+                    ]
                 },
                 "status": {
                     "$ref": "#/$defs/InformationResourceStatusEnum",
@@ -48,14 +54,20 @@
                     "items": {
                         "type": "string"
                     },
-                    "type": "array"
+                    "type": [
+                        "array",
+                        "null"
+                    ]
                 },
                 "xref": {
                     "description": "A database cross reference or alternative identifier for a NamedThing or edge between two  NamedThings.  This property should point to a database record or webpage that supports the existence of the edge, or  gives more detail about the edge. This property can be used on a node or edge to provide multiple URIs or CURIE cross references.",
                     "items": {
                         "type": "string"
                     },
-                    "type": "array"
+                    "type": [
+                        "array",
+                        "null"
+                    ]
                 }
             },
             "required": [
@@ -73,7 +85,10 @@
                     "items": {
                         "$ref": "#/$defs/InformationResource"
                     },
-                    "type": "array"
+                    "type": [
+                        "array",
+                        "null"
+                    ]
                 }
             },
             "title": "InformationResourceContainer",
@@ -117,7 +132,10 @@
             "items": {
                 "$ref": "#/$defs/InformationResource"
             },
-            "type": "array"
+            "type": [
+                "array",
+                "null"
+            ]
         }
     },
     "title": "Information-Resource-Registry-Schema",
