@@ -12,6 +12,7 @@ SHELL := bash
 .SECONDARY:
 
 RUN = poetry run
+DOCDIR = docs
 
 .PHONY: all clean
 
