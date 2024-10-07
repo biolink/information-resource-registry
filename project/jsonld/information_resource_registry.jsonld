@@ -649,7 +649,7 @@
   "source_file": "information_resource_registry.yaml",
   "source_file_date": "2024-09-18T16:41:40",
   "source_file_size": 11239,
-  "generation_date": "2024-10-07T15:35:03",
+  "generation_date": "2024-10-07T15:38:27",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/information_resource_registry.context.jsonld",
