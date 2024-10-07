@@ -1,7 +1,5 @@
 RUN = poetry run
 
-DOCDIR = docs
-
 gendoc: $(DOCDIR)
 	$(RUN) gen-doc -d $(DOCDIR) $(SOURCE_SCHEMA_PATH)
 	cp $(SRC)/information_resource_registry/relation_map/data/sankey_diagram.png $(DOCDIR)/sankey_diagram.png ; \
