@@ -476,12 +476,12 @@
       "description": "a collection of information resources",
       "from_schema": "https://w3id.org/biolink/information_resource_registry.yaml",
       "slot_uri": "https://w3id.org/biolink/infores/information_resources",
-      "multivalued": true,
       "owner": "InformationResourceContainer",
       "domain_of": [
         "InformationResourceContainer"
       ],
       "range": "InformationResource",
+      "multivalued": true,
       "inlined": true,
       "inlined_as_list": true,
       "@type": "SlotDefinition"
@@ -534,12 +534,12 @@
         "source_record_urls"
       ],
       "slot_uri": "https://w3id.org/biolink/infores/xref",
-      "multivalued": true,
       "owner": "InformationResource",
       "domain_of": [
         "InformationResource"
       ],
       "range": "string",
+      "multivalued": true,
       "@type": "SlotDefinition"
     },
     {
@@ -551,12 +551,12 @@
         "alias"
       ],
       "slot_uri": "https://w3id.org/biolink/infores/synonym",
-      "multivalued": true,
       "owner": "InformationResource",
       "domain_of": [
         "InformationResource"
       ],
       "range": "string",
+      "multivalued": true,
       "@type": "SlotDefinition"
     },
     {
@@ -647,9 +647,9 @@
   ],
   "metamodel_version": "1.7.0",
   "source_file": "information_resource_registry.yaml",
-  "source_file_date": "2024-09-18T16:41:40",
+  "source_file_date": "2024-10-07T22:16:36",
   "source_file_size": 11239,
-  "generation_date": "2024-10-04T17:49:22",
+  "generation_date": "2024-10-07T22:17:32",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/information_resource_registry.context.jsonld",
