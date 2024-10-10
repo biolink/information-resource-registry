@@ -78,6 +78,7 @@ infores:biothings-idisk,infores:service-provider-trapi,1
 infores:biothings-mgi-g2p,infores:service-provider-trapi,1
 infores:biothings-multiomics-biggim-drugresponse,infores:service-provider-trapi,1
 infores:biothings-multiomics-ehr-risk,infores:service-provider-trapi,1
+infores:providence-st-joseph-ehr,infores:automat-ehr-may-treat-kp,1
 infores:biothings-multiomics-wellness,infores:service-provider-trapi,1
 infores:multiomics-clinicaltrials,infores:aragorn,1
 infores:multiomics-clinicaltrials,infores:arax,1
