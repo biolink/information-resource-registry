@@ -566,6 +566,8 @@ information_resources:
       using the Providence health records
     consumed_by:
       - infores:arax
+    consumes:
+      - infores:providence-st-joseph-ehr
   - id: infores:bfo
     status: released
     name: Basic Formal Ontology
@@ -923,6 +925,8 @@ information_resources:
       - https://github.com/NCATSTranslator/Translator-All/wiki/EHR-KP-Providence-Health-Systems-and-Affiliates-Data
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+    consumed_by:
+      - infores:automat-ehr-may-treat-kp
     description: >-
       A partnership with Providence/Swedish Health Services and Institute
       for Systems Biology allows analysis of 26 million EHRs from patients in seven
