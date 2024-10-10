@@ -6,7 +6,7 @@ $(DOCDIR):
 
 gendoc: $(DOCDIR)
 	$(RUN) gen-doc -d $(DOCDIR) $(SOURCE_SCHEMA_PATH)
-	cp $(SRC)/information_resource_registry/relation_map/data/data_flow_diagram.png $(DOCDIR)/data_flow_diagram.png ; \
+	cp $(SRC)/information_resource_registry/translator_dataflow/data/data_flow_diagram.png $(DOCDIR)/data_flow_diagram.png ; \
 	# DO NOT REMOVE: these cp statements are crucial to maintain the w3 ids for the model artifacts
 	cp $(DEST)/owl/information_resource_registry.owl.ttl $(DOCDIR)/information_resource_registry.owl.ttl ; \
 	cp $(DEST)/jsonld/information_resource_registry.context.jsonld $(DOCDIR)/information_resource_registry.context.jsonld ; \
