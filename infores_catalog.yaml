@@ -3492,6 +3492,9 @@ information_resources:
       - PMC
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+    consumed_by:
+      - infores:multiomics-multiomics
+      - infores:multiomics-microbiome
   - id: infores:quickgo
     status: deprecated
     name: QuickGO
