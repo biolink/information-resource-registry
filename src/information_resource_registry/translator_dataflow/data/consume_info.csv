@@ -78,6 +78,7 @@ infores:biothings-idisk,infores:service-provider-trapi,1
 infores:biothings-mgi-g2p,infores:service-provider-trapi,1
 infores:biothings-multiomics-biggim-drugresponse,infores:service-provider-trapi,1
 infores:biothings-multiomics-ehr-risk,infores:service-provider-trapi,1
+infores:providence-st-joseph-ehr,infores:automat-ehr-may-treat-kp,1
 infores:biothings-multiomics-wellness,infores:service-provider-trapi,1
 infores:multiomics-clinicaltrials,infores:aragorn,1
 infores:multiomics-clinicaltrials,infores:arax,1
@@ -125,7 +126,6 @@ infores:connections-hypothesis,infores:aragorn,1
 infores:connections-hypothesis,infores:arax,1
 infores:connections-hypothesis,infores:service-provider-trapi,1
 infores:cpdb,infores:mygene-info,1
-infores:cpt-codes-umls,infores:rtx-kg2,1
 infores:cpt-codes-umls,infores:rtx-kg2,1
 infores:ctd,infores:molepro,1
 infores:ctd,infores:mydisease-info,1
@@ -244,6 +244,8 @@ infores:pr,infores:rtx-kg2,1
 infores:probe-miner,infores:molepro,1
 infores:psy-umls,infores:rtx-kg2,1
 infores:pubchem,infores:molepro,1
+infores:pubmed-central,infores:multiomics-multiomics,1
+infores:pubmed-central,infores:multiomics-microbiome,1
 infores:reactome,infores:molepro,1
 infores:reactome,infores:mygene-info,1
 infores:reactome,infores:rtx-kg2,1

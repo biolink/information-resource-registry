@@ -566,6 +566,8 @@ information_resources:
       using the Providence health records
     consumed_by:
       - infores:arax
+    consumes:
+      - infores:providence-st-joseph-ehr
   - id: infores:bfo
     status: released
     name: Basic Formal Ontology
@@ -923,6 +925,8 @@ information_resources:
       - https://github.com/NCATSTranslator/Translator-All/wiki/EHR-KP-Providence-Health-Systems-and-Affiliates-Data
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+    consumed_by:
+      - infores:automat-ehr-may-treat-kp
     description: >-
       A partnership with Providence/Swedish Health Services and Institute
       for Systems Biology allows analysis of 26 million EHRs from patients in seven
@@ -1576,13 +1580,6 @@ information_resources:
     consumed_by:
       - infores:mygene-info
     knowledge_level: mixed
-    agent_type: not_provided
-  - id: infores:cpt-codes-umls
-    status: deprecated
-    name: Current Procedural Terminology (CPT) Codes (from UMLS)
-    consumed_by:
-      - infores:rtx-kg2
-    knowledge_level: other
     agent_type: not_provided
   - id: infores:cpt-codes-umls
     status: deprecated
@@ -3495,6 +3492,9 @@ information_resources:
       - PMC
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+    consumed_by:
+      - infores:multiomics-multiomics
+      - infores:multiomics-microbiome
   - id: infores:quickgo
     status: deprecated
     name: QuickGO
