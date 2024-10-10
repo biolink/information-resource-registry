@@ -4028,9 +4028,9 @@ information_resources:
       nucleic acid targets, the targeted disease, pathway information and the corresponding
       drugs  directed at each of these targets.
     consumed_by:
+      - infores:biothings-multiomics-biggim-drugresponse
       - infores:biothings-ttd
       - infores:rtx-kg2
-      - infores:biothings-multiomics-biggim-drugresponse
   - id: infores:ubergraph
     status: released
     name: Ubergraph

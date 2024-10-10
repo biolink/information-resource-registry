@@ -62,6 +62,7 @@ infores:bfo,infores:rtx-kg2,1
 infores:bigg-models,infores:molepro,1
 infores:bindingdb,infores:biothings-bindingdb,1
 infores:bindingdb,infores:molepro,1
+infores:biogrid,infores:biothings-multiomics-biggim-drugresponse,1
 infores:biolink-ontology,infores:rtx-kg2,1
 infores:biothings-dgidb,infores:service-provider-trapi,1
 infores:biothings-diseases,infores:service-provider-trapi,1
@@ -161,6 +162,7 @@ infores:fma-obo,infores:rtx-kg2,1
 infores:fma-umls,infores:rtx-kg2,1
 infores:fooddb,infores:biothings-foodb,1
 infores:foodon,infores:rtx-kg2,1
+infores:gdsc,infores:biothings-multiomics-biggim-drugresponse,1
 infores:genepio,infores:rtx-kg2,1
 infores:genetics-data-provider,infores:aragorn,1
 infores:genetics-data-provider,infores:arax,1
@@ -173,6 +175,7 @@ infores:go,infores:rtx-kg2,1
 infores:go-plus,infores:rtx-kg2,1
 infores:goa,infores:rtx-kg2,1
 infores:gtrx,infores:biothings-gtrx,1
+infores:gtex,infores:biothings-multiomics-biggim-drugresponse,1
 infores:gtopdb,infores:molepro,1
 infores:hcp-codes-umls,infores:rtx-kg2,1
 infores:hcpcs-cpt-umls,infores:rtx-kg2,1
@@ -265,8 +268,10 @@ infores:spoke,infores:arax,1
 infores:sri-node-normalizer,infores:molepro,1
 infores:stitch,infores:molepro,1
 infores:string,infores:molepro,1
+infores:tcga,infores:biothings-multiomics-biggim-drugresponse,1
 infores:text-mining-provider-cooccurrence,infores:arax,1
 infores:text-mining-provider-targeted,infores:service-provider-trapi,1
+infores:ttd,infores:biothings-multiomics-biggim-drugresponse,1
 infores:ttd,infores:biothings-ttd,1
 infores:ttd,infores:rtx-kg2,1
 infores:uberon,infores:biothings-uberon-ontology,1
@@ -281,6 +286,7 @@ infores:unsecret-agent,infores:ars,1
 infores:vandf-umls,infores:rtx-kg2,1
 infores:ddinter,infores:biothings-ddinter,1
 infores:aeolus,infores:mychem-info,1
+infores:huri,infores:biothings-multiomics-biggim-drugresponse,1
 infores:biothings-rare-source,infores:service-provider-trapi,1
 infores:rare-source,infores:biothings-rare-source,1
 infores:biothings-suppkg,infores:service-provider-trapi,1
