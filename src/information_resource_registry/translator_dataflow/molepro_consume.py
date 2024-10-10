@@ -17,7 +17,7 @@ def main():
         infores_dict = {'infores:molepro': resources}
 
         # Save the resources to a JSON file
-        with open('src/information_resource_registry/relation_map/data/molepro_resources.json', 'w') as file:
+        with open('src/information_resource_registry/translator_dataflow/data/molepro_resources.json', 'w') as file:
             json.dump(infores_dict, file, indent=2, sort_keys=True)
 
         print('Fetched and saved', len(resources), 'resources')

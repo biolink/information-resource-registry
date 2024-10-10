@@ -42,7 +42,7 @@ def main():
     # fig.show()
 
     # Step 5: Save the plot to a PNG file
-    fig.write_image('src/information_resource_registry/relation_map/data/sankey_diagram.png', scale=2)
+    fig.write_image('src/information_resource_registry/translator_dataflow/data/data_flow_diagram.png', scale=2)
 
 # Call main() if this script is executed directly
 if __name__ == "__main__":

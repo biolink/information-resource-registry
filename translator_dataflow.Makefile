@@ -10,7 +10,7 @@ SHELL := bash
 
 ## Generate all the JSON files that define "consumes" relationships
 
-DATA_DIR = "src/information_resource_registry/relation_map/data"
+DATA_DIR = "src/information_resource_registry/translator_dataflow/data"
 RUN = poetry run
 
 sankey: generate_consumes_annotations merge_into_infores_catalog generate_sankey
