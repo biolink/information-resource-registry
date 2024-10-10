@@ -5,7 +5,14 @@ description = "A registry of information resources used in NCATS Data Translator
 authors = ["Sierra Moxon <smoxon@lbl.gov>"]
 license = "MIT"
 readme = "README.md"
-include = ["README.md", "src/information-resource-registry/schema", "project", "src/information-resource-registry/datamodel", "src/information-resource-registry/translator_dataflow", "src/information-resource-registry/validation"
+include = [
+    "README.md",
+    "src/information-resource-registry/schema",
+    "project",
+    "src/information-resource-registry/datamodel",
+    "src/information-resource-registry/translator_dataflow",
+    "src/information-resource-registry/validation"
+]
 
 [tool.poetry.scripts]
 add_consume_info = "information_resource_registry.translator_dataflow.add_consume_info:main"
