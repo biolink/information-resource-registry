@@ -1584,13 +1584,6 @@ information_resources:
   - id: infores:cpt-codes-umls
     status: deprecated
     name: Current Procedural Terminology (CPT) Codes (from UMLS)
-    consumed_by:
-      - infores:rtx-kg2
-    knowledge_level: other
-    agent_type: not_provided
-  - id: infores:cpt-codes-umls
-    status: deprecated
-    name: Current Procedural Terminology (CPT) Codes (from UMLS)
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     consumed_by:
