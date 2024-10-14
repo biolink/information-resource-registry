@@ -132,7 +132,7 @@ def main():
     5) Make a dictionary  provenance: primary_knowledge_source
 
     There should be a way to get the meta data directly from the smartAPI endpoint, but that requires getting
-    the smartAPI ID. There was no obious way to do this (to me).
+    the smartAPI ID. There was no obvious way to do this (to me).
     If the smartAPI ID can be obtained, then steps 2-4 are not necessary.
     '''
 
