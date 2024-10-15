@@ -54,10 +54,11 @@ def extract_names(apis):
     return extracted_items
 
 
-def fetch_metadata(source_names):
+def fetch_metadata(apis_infores):
+
     infores_dict = {}
 
-    for source in source_names:
+    for source, infores in apis_infores.items():
         print(source)
 
         # These sources have different names on SmartAPI vs Automat
@@ -76,32 +77,21 @@ def fetch_metadata(source_names):
 
             if response.status_code == 200:
                 data = response.json()
-                infores_dict['infores:automat-robokop-kg'] = data["qc_results"]["primary_knowledge_sources"]
+                infores_dict[infores] = data["qc_results"]["primary_knowledge_sources"]
             else:
                 print(f"Failed to retrieve metadata for source: {source}. Status code: {response.status_code}")
-                infores_dict[source] = ['Failed API call']
+                infores_dict[infores] = ['Failed API call']
 
-        elif source == 'monarch-kg':
+        elif source in ['monarch-kg', 'icees-kg']:
             url = f"https://automat.renci.org/{source}/metadata"
             response = requests.get(url)
 
             if response.status_code == 200:
                 data = response.json()
-                infores_dict['infores:monarchinitiative'] = [data["provenanceTag"]]
+                infores_dict[infores] = [data["provenanceTag"]]
             else:
                 print(f"Failed to retrieve metadata for source: {source}. Status code: {response.status_code}")
-                infores_dict[source] = ['Failed API call']
-
-        elif source == 'icees-kg':
-            url = f"https://automat.renci.org/{source}/metadata"
-            response = requests.get(url)
-
-            if response.status_code == 200:
-                data = response.json()
-                infores_dict["infores:automat-icees-kg"] = [data["provenanceTag"]]
-            else:
-                print(f"Failed to retrieve metadata for source: {source}. Status code: {response.status_code}")
-                infores_dict[source] = ['Failed API call']
+                infores_dict[infores] = ['Failed API call']
 
         else:
             url = f"https://automat.renci.org/{source}/metadata"
@@ -113,11 +103,11 @@ def fetch_metadata(source_names):
                 qc = data["qc_results"]
                 primary_ks = qc["primary_knowledge_sources"]
                 provenance = data["sources"][0]["provenance"]
-                infores_dict[provenance] = primary_ks
+                infores_dict[infores] = primary_ks
 
             else:
                 print(f"Failed to retrieve metadata for source: {source}. Status code: {response.status_code}")
-                infores_dict[source] = ['Failed API call']
+                infores_dict[infores] = ['Failed API call']
 
     return infores_dict
 
@@ -136,13 +126,14 @@ def main():
     If the smartAPI ID can be obtained, then steps 2-4 are not necessary.
     '''
 
-
     all_apis = fetch_automat_apis()
 
-    automat_apis = [api['info']['title'] for api in all_apis]
-    KPs = extract_names(automat_apis)
+    automat_apis = {api['info']['title']: api['info']['x-translator']['infores'] for api in all_apis}
 
-    infores_dict = fetch_metadata(KPs)
+    KPs = extract_names(automat_apis.keys())
+
+    automat_api_infores = {kp: automat_apis[title] for kp, title in zip(KPs, automat_apis.keys())}
+    infores_dict = fetch_metadata(automat_api_infores)
 
     for k, v in infores_dict.items():
         # Sort the list in alphabetical order
