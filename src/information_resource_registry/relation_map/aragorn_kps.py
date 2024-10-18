@@ -5,7 +5,7 @@ infores_dict = {"infores:aragorn": []}
 
 
 def main():
-    url = "https://strider.renci.org/kps"
+    url = "https://strider.ci.transltr.io/kps"
     response = requests.get(url)
 
     if response.status_code == 200:
