@@ -26,6 +26,19 @@ jobs:
           pip install poetry
           poetry install 
 
-      - name: Run URL validation
+      - name: Run URL validation and regenerate sankey diagram
         run: |
-          make validate_infores
+          make sankey
+          make test
+          if [ $? -eq 0 ]; then
+            git config --local user.email "action@github.com"
+            git config --local user.name "GitHub Action"
+            git add project/*
+            git add src/*
+            git add infores_catalog.yaml
+            git commit -m "Regenerate data_flow diagram and validate URLs in infores_catalog.yaml"
+            git push
+          else
+            echo "'make' validation and sankey generation failed to finish successfully"
+          fi
+          

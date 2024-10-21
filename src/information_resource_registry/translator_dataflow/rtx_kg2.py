@@ -18,7 +18,7 @@ def main():
         print(f"Error downloading file: {response.status_code}")
         exit()
 
-    json.dump(infores_dict, open('src/information_resource_registry/relation_map/data/rtx-kg2.json', 'w'), indent=2, sort_keys=True)
+    json.dump(infores_dict, open('src/information_resource_registry/translator_dataflow/data/rtx-kg2.json', 'w'), indent=2, sort_keys=True)
 
 # Call main() if this script is executed directly
 if __name__ == "__main__":

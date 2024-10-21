@@ -1,4 +1,4 @@
-include relation_map.Makefile
+include translator_dataflow.Makefile
 include validation.Makefile
 include documentation.Makefile
 include linkml.Makefile

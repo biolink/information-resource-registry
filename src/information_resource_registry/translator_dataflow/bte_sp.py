@@ -63,10 +63,10 @@ def main():
     service_provider_kp = {"infores:service-provider-trapi": kp_inforeses}
 
     # Write out files
-    with open("src/information_resource_registry/relation_map/data/kps_to_apis.json", "w") as file:
+    with open("src/information_resource_registry/translator_dataflow/data/kps_to_apis.json", "w") as file:
         json.dump({kp: sorted(sources) for kp, sources in sources_by_kps.items()}, file, indent=2, sort_keys=True)
 
-    with open("src/information_resource_registry/relation_map/data/sp_to_kps.json", "w") as file:
+    with open("src/information_resource_registry/translator_dataflow/data/sp_to_kps.json", "w") as file:
         json.dump({"infores:service-provider-trapi": sorted(kp_inforeses)}, file, indent=2, sort_keys=True)
 
 # Call main() if this script is executed directly
