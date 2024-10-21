@@ -657,6 +657,8 @@ information_resources:
       - BioGrid
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+    consumed_by:
+      - infores:biothings-multiomics-biggim-drugresponse
   - id: infores:biolink-api
     status: released
     name: BioLink API
@@ -904,6 +906,13 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     description: Documentation of the Drug Response KP query web services.
+    consumes:
+      - infores:biogrid
+      - infores:huri
+      - infores:gtex
+      - infores:ttd
+      - infores:tcga
+      - infores:gdsc
     consumed_by:
       - infores:service-provider-trapi
   - id: infores:biothings-multiomics-ehr-risk
@@ -964,6 +973,7 @@ information_resources:
     consumed_by:
       - infores:aragorn
       - infores:arax
+      - infores:rtx-kg2
       - infores:service-provider-trapi
     consumes:
       - infores:aact
@@ -2062,6 +2072,8 @@ information_resources:
       - GDSC
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+    consumed_by:
+      - infores:biothings-multiomics-biggim-drugresponse
   - id: infores:genage
     status: released
     name: GenAge Database of Ageing-Related Genes
@@ -2237,6 +2249,8 @@ information_resources:
       - GTEx
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+    consumed_by:
+      - infores:biothings-multiomics-biggim-drugresponse
   - id: infores:gtopdb
     status: released
     name: Guide to Pharmacology
@@ -3644,6 +3658,7 @@ information_resources:
       - infores:mi
       - infores:mirbase
       - infores:mondo
+      - infores:multiomics-clinicaltrials
       - infores:nbo
       - infores:ncbi-gene
       - infores:ncbi-taxon
@@ -3925,6 +3940,8 @@ information_resources:
       - TCGA
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+    consumed_by:
+      - infores:biothings-multiomics-biggim-drugresponse
   - id: infores:tcrd
     status: released
     name: Target Central Resource Database
@@ -4013,6 +4030,7 @@ information_resources:
       nucleic acid targets, the targeted disease, pathway information and the corresponding
       drugs  directed at each of these targets.
     consumed_by:
+      - infores:biothings-multiomics-biggim-drugresponse
       - infores:biothings-ttd
       - infores:rtx-kg2
   - id: infores:ubergraph
@@ -4314,6 +4332,8 @@ information_resources:
       interactions, or ‘HuRI’. With approximately 53,000 protein–protein interactions,
       HuRI has approximately four times as many such interactions as there are high-quality
       knowledge_assertion interactions from small-scale studies
+    consumed_by:
+      - infores:biothings-multiomics-biggim-drugresponse
   - id: infores:zp
     status: released
     name: Zebrafish Phenotype Ontology

@@ -1,6 +1,6 @@
 {
   "infores:rtx-kg2": [
-    "infores:biothings-multiomics-clinicaltrials",
+    "infores:multiomics-clinicaltrials",
     "infores:dgidb",
     "infores:disease-ontology",
     "infores:disgenet",
