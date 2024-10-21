@@ -56,6 +56,7 @@ information_resources:
       - infores:automat-cam-kp
       - infores:automat-ctd
       - infores:automat-drug-central
+      - infores:automat-ehr-may-treat-kp
       - infores:automat-genome-alliance
       - infores:automat-gtex
       - infores:automat-gtopdb
@@ -565,6 +566,7 @@ information_resources:
       (EHR) Machine Learning Analysis (MLA)
       using the Providence health records
     consumed_by:
+      - infores:aragorn
       - infores:arax
     consumes:
       - infores:providence-st-joseph-ehr
