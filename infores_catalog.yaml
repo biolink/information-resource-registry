@@ -973,6 +973,7 @@ information_resources:
     consumed_by:
       - infores:aragorn
       - infores:arax
+      - infores:rtx-kg2
       - infores:service-provider-trapi
     consumes:
       - infores:aact
@@ -3657,6 +3658,7 @@ information_resources:
       - infores:mi
       - infores:mirbase
       - infores:mondo
+      - infores:multiomics-clinicaltrials
       - infores:nbo
       - infores:ncbi-gene
       - infores:ncbi-taxon
