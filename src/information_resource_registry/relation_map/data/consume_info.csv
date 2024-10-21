@@ -57,6 +57,7 @@ infores:automat-ubergraph,infores:arax,1
 infores:automat-viral-proteome,infores:aragorn,1
 infores:automat-viral-proteome,infores:arax,1
 infores:automat-viral-proteome,infores:service-provider-trapi,1
+infores:automat-ehr-may-treat-kp,infores:aragorn,1
 infores:automat-ehr-may-treat-kp,infores:arax,1
 infores:bfo,infores:rtx-kg2,1
 infores:bigg-models,infores:molepro,1
