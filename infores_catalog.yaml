@@ -570,6 +570,16 @@ information_resources:
       - infores:arax
     consumes:
       - infores:providence-st-joseph-ehr
+  - id: infores:automat-ehr-clinical-connections-kp
+    status: released
+    name: Automat Multiomics EHRMLA Clinical Connections API
+    knowledge level: curated
+    agent type: not_provided
+    xref:
+      - https://github.com/NCATSTranslator/Translator-All/wiki/Automat
+    description: >-
+      A graph consisting of clinical connections associations from Multiomics Electronic-Health-Record (EHR) Machine Learning Analysis (MLA)
+      using the Providence health records
   - id: infores:bfo
     status: released
     name: Basic Formal Ontology
@@ -953,6 +963,15 @@ information_resources:
     description: >-
       Documentation of the Multiomics Electronic-Health-Record (EHR) Machine Learning Analysis
       (MLA) May Treat query web services.
+  - id: infores:isb-EHRMLA-clinicalconnections
+    status: released
+    name: Multiomics EHRMLA Clinical Connections API
+    xref:
+      - https://github.com/NCATSTranslator/Translator-All/wiki/Multiomics-EHRMLA-Clinical-Connections-KP
+    knowledge level: predicted
+    agent type: computational_model
+    description: >-
+      Documentation of the Multiomics Electronic-Health-Record (EHR) Machine Learning Analysis (MLA) Clinical Connections query web services.
   - id: infores:biothings-multiomics-wellness
     status: released
     name: Multiomics Wellness KP API
@@ -3433,7 +3452,7 @@ information_resources:
     agent_type: manual_agent
     description: >-
       provides comprehensive information and tools for the study of protein  post-translational
-      modifications (PTMs) including phosphorylation, acetylation, and more. 
+      modifications (PTMs) including phosphorylation, acetylation, and more.
   - id: infores:pr
     status: released
     name: Protein Ontology
@@ -4419,7 +4438,7 @@ information_resources:
       [SuppKG](https://github.com/zhang-informatics/SemRep_DS/tree/main/SuppKG) data. SuppKG
       contains relations
       between dietary supplements and other entities, such as diseases. More information can
-      be found in [this  paper](https://doi.org/10.1016/j.jbi.2022.104120). 
+      be found in [this  paper](https://doi.org/10.1016/j.jbi.2022.104120).
     consumes:
       - infores:suppkg
     consumed_by:
@@ -4533,7 +4552,7 @@ information_resources:
     knowledge_level: mixed
     agent_type: not_provided
     description: >-
-      Documentation of the BioThings API for [InnateDB](https://www.innatedb.com/) data. 
+      Documentation of the BioThings API for [InnateDB](https://www.innatedb.com/) data.
     consumes:
       - infores:innatedb
     consumed_by:
@@ -4609,7 +4628,7 @@ information_resources:
     agent_type: not_provided
     description: >-
       FoodData Central is an integrated data system that provides expanded nutrient profile
-      data  and links to related agricultural and experimental research. 
+      data  and links to related agricultural and experimental research.
     consumed_by:
       - infores:biothings-fooddata-central
   - id: infores:biothings-fooddata-central
@@ -4621,7 +4640,7 @@ information_resources:
     agent_type: not_provided
     description: >-
       Documentation of the BioThings API for  [FoodData Central](https://fdc.nal.usda.gov/index.html)
-      data. 
+      data.
     consumes:
       - infores:fooddata-central
     consumed_by:
@@ -4634,7 +4653,7 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     description: >-
-      Documentation of the BioThings API for [FooDB](https://foodb.ca/) data. 
+      Documentation of the BioThings API for [FooDB](https://foodb.ca/) data.
     consumes:
       - infores:fooddb
     consumed_by:
@@ -4672,7 +4691,7 @@ information_resources:
     agent_type: not_provided
     description: >-
       MyGeneset allows scientists to conveniently collect, save, and share sets of genes  from
-      thousands of different species. 
+      thousands of different species.
   - id: infores:gelinea
     knowledge_level: not_provided
     agent_type: not_provided
