@@ -578,7 +578,8 @@ information_resources:
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/Automat
     description: >-
-      A graph consisting of clinical connections associations from Multiomics Electronic-Health-Record (EHR) Machine Learning Analysis (MLA)
+      A graph consisting of clinical connections associations from Multiomics Electronic-Health-Record
+      (EHR) Machine Learning Analysis (MLA)
       using the Providence health records
   - id: infores:bfo
     status: released
@@ -971,7 +972,8 @@ information_resources:
     knowledge level: predicted
     agent type: computational_model
     description: >-
-      Documentation of the Multiomics Electronic-Health-Record (EHR) Machine Learning Analysis (MLA) Clinical Connections query web services.
+      Documentation of the Multiomics Electronic-Health-Record (EHR) Machine Learning Analysis
+      (MLA) Clinical Connections query web services.
   - id: infores:biothings-multiomics-wellness
     status: released
     name: Multiomics Wellness KP API
