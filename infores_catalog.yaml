@@ -3626,6 +3626,8 @@ information_resources:
       - https://github.com/NCATSTranslator/Translator-All/wiki/ROBOKOP-KG
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+    consumed_by:
+      - infores:unsecret-agent
   - id: infores:robokop-kp
     status: deprecated
     name: ROBOKOP (Reasoning Over Biomedical Objects linked in Knowledge-Oriented Pathway)
@@ -3730,6 +3732,7 @@ information_resources:
     consumed_by:
       - infores:aragorn
       - infores:arax
+      - infores:unsecret-agent
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - id: infores:rxnorm
@@ -4039,6 +4042,7 @@ information_resources:
       between concepts, as opposed to concepts cooccurring with each other.
     consumed_by:
       - infores:service-provider-trapi
+      - infores:unsecret-agent
   - id: infores:tissues-expression-db
     status: released
     name: Tissue Expression Database
@@ -4166,6 +4170,10 @@ information_resources:
     description: OpenAPI for NCATS Biomedical Translator Reasoners
     consumed_by:
       - infores:ars
+    consumes:
+      - infores:robokop-kg
+      - infores:rtx-kg2
+      - infores:text-mining-provider-targeted
   - id: infores:us-census-acs-data
     status: deprecated
     name: United States Census Bureau American Community Survey Data

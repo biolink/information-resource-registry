@@ -262,8 +262,10 @@ infores:reactome,infores:mygene-info,1
 infores:reactome,infores:rtx-kg2,1
 infores:repodb,infores:biothings-repodb,1
 infores:ro,infores:rtx-kg2,1
+infores:robokop-kg,infores:unsecret-agent,1
 infores:rtx-kg2,infores:aragorn,1
 infores:rtx-kg2,infores:arax,1
+infores:rtx-kg2,infores:unsecret-agent,1
 infores:rxnorm,infores:molepro,1
 infores:rxnorm,infores:rtx-kg2,1
 infores:semmeddb,infores:biothings-semmeddb,1
@@ -279,6 +281,7 @@ infores:string,infores:molepro,1
 infores:tcga,infores:biothings-multiomics-biggim-drugresponse,1
 infores:text-mining-provider-cooccurrence,infores:arax,1
 infores:text-mining-provider-targeted,infores:service-provider-trapi,1
+infores:text-mining-provider-targeted,infores:unsecret-agent,1
 infores:ttd,infores:biothings-multiomics-biggim-drugresponse,1
 infores:ttd,infores:biothings-ttd,1
 infores:ttd,infores:rtx-kg2,1
