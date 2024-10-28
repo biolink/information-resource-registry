@@ -19,7 +19,8 @@ generate_consumes_annotations:
 	$(RUN) rtx_kg2
 	$(RUN) bte_sp
 	$(RUN) arax_kps
-	$(RUN) aragorn_kps  # currently does not run b/c of pydantic v1 requirement
+	$(RUN) aragorn_kps
+	$(RUN) unsecret
 	$(RUN) molepro_consume
 
 merge_into_infores_catalog:

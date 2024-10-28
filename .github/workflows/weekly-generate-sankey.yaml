@@ -1,0 +1,42 @@
+name: Check Infores Catalog Links and Regenerate Artifacts
+on:
+  schedule:
+    - cron: '0 8 * * 1'  # at 08:00 UTC every Monday
+  workflow_dispatch:
+    types: trigger-url-check
+
+
+jobs:
+  check-external-links:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3.1.0
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install poetry
+          poetry install 
+
+      - name: Run URL validation and regenerate sankey diagram
+        run: |
+          make sankey
+          if [ $? -eq 0 ]; then
+            git config --local user.email "action@github.com"
+            git config --local user.name "GitHub Action"
+            git add project/*
+            git add src/*
+            git add infores_catalog.yaml
+            git commit -m "Regenerate data_flow diagram and validate URLs in infores_catalog.yaml"
+            git push
+          else
+            echo "'make' validation and sankey generation failed to finish successfully"
+          fi
