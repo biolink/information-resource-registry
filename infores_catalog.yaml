@@ -574,8 +574,8 @@ information_resources:
   - id: infores:automat-ehr-clinical-connections-kp
     status: released
     name: Automat Multiomics EHRMLA Clinical Connections API
-    knowledge level: curated
-    agent type: not_provided
+    knowledge_level: knowledge_assertion
+    agent_type: not_provided
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/Automat
     description: >-
@@ -970,8 +970,8 @@ information_resources:
     name: Multiomics EHRMLA Clinical Connections API
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/Multiomics-EHRMLA-Clinical-Connections-KP
-    knowledge level: predicted
-    agent type: computational_model
+    knowledge_level: prediction
+    agent_type: computational_model
     description: >-
       Documentation of the Multiomics Electronic-Health-Record (EHR) Machine Learning Analysis
       (MLA) Clinical Connections query web services.

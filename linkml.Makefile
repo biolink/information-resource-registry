@@ -21,8 +21,6 @@ ifdef LINKML_GENERATORS_MARKDOWN_ARGS
 GEN_DARGS = ${LINKML_GENERATORS_MARKDOWN_ARGS}
 endif
 
-test-schema: gen-project
-
 infores:
 	$(RUN) gen-python src/information_resource_registry/schema/information_resource_registry.yaml > src/information_resource_registry/datamodel/information_resource_registry.py
 # generates all project files

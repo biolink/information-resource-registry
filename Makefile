@@ -36,15 +36,16 @@ install:
 all: site
 site: gen-project gendoc
 
-test_pr: test-schema lint spell
-	$(RUN) python -m unittest discover -p 'test_*.py'
+test_pr:
+	$(RUN) linkml-validate infores-catalog.yaml -s src/information_resource_registry/schema/infores-catalog-schema.yaml
+	$(RUN) pytest
 	$(RUN) codespell
 	$(RUN) yamllint -c .yamllint-config src/information_resource_registry/schema/*.yaml
 	$(RUN) yamllint -c .yamllint-config infores_catalog.yaml
 
-
-test: test-schema lint spell
-	$(RUN) python -m unittest discover -p 'test_*.py'
+test:
+	$(RUN) linkml-validate infores-catalog.yaml -s src/information_resource_registry/schema/infores-catalog-schema.yaml
+	$(RUN) pytest
 	$(RUN) codespell
 	$(RUN) yamllint -c .yamllint-config src/information_resource_registry/schema/*.yaml
 	$(RUN) yamllint -c .yamllint-config infores_catalog.yaml
