@@ -23,7 +23,7 @@ extract_consume_info = "information_resource_registry.translator_dataflow.extrac
 generate_sankey = "information_resource_registry.translator_dataflow.generate_sankey:main"
 molepro_consume = "information_resource_registry.translator_dataflow.molepro_consume:main"
 rtx_kg2 = "information_resource_registry.translator_dataflow.rtx_kg2:main"
-
+unsecret = "information_resource_registry.translator_dataflow.unsecret:main"
 
 [tool.poetry-dynamic-versioning]
 enable = true
