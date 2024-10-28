@@ -65,6 +65,8 @@ classes:
       - description
       - knowledge_level
       - agent_type
+      - consumes
+      - consumed_by
     description: >-
       A database or knowledgebase and its supporting ecosystem of interfaces 
       and services that deliver content to consumers (e.g. web portals, APIs, 
@@ -75,6 +77,22 @@ classes:
       such as a Translator Knowledge Provider, and community knowledgebases like ChemBL, OMIM, or DGIdb.
 
 slots:
+
+  consumes:
+    description: >-
+      A collection of information resources that are consumed by this information resource
+    multivalued: true
+    range: uriorcurie
+    inlined_as_list: true
+    inlined: true
+
+  consumed_by:
+    description: >-
+      A collection of information resources that consume this information resource
+    multivalued: true
+    range: uriorcurie
+    inlined_as_list: true
+    inlined: true
 
   status:
     description: the status of the infores identifier, the default is "released"

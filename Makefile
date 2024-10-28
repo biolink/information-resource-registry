@@ -37,14 +37,14 @@ all: site
 site: gen-project gendoc
 
 test_pr:
-	$(RUN) linkml-validate infores-catalog.yaml -s src/information_resource_registry/schema/infores-catalog-schema.yaml
+	$(RUN) linkml-validate infores_catalog.yaml -s src/information_resource_registry/schema/information_resource_registry.yaml
 	$(RUN) pytest
 	$(RUN) codespell
 	$(RUN) yamllint -c .yamllint-config src/information_resource_registry/schema/*.yaml
 	$(RUN) yamllint -c .yamllint-config infores_catalog.yaml
 
 test:
-	$(RUN) linkml-validate infores-catalog.yaml -s src/information_resource_registry/schema/infores-catalog-schema.yaml
+	$(RUN) linkml-validate infores_catalog.yaml -s src/information_resource_registry/schema/information_resource_registry.yaml
 	$(RUN) pytest
 	$(RUN) codespell
 	$(RUN) yamllint -c .yamllint-config src/information_resource_registry/schema/*.yaml

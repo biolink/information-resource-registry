@@ -3802,7 +3802,8 @@ information_resources:
     name: SmartAPI API
     knowledge_level: knowledge_assertion
     agent_type: not_provided
-    description: This is the API provided from [SmartAPI](https://smart-api.info) application.
+    description: >-
+      This is the API provided from SmartAPI, https://smart-api.info, application.
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/Smart-API-Registry
   - id: infores:smartapi
@@ -3812,8 +3813,8 @@ information_resources:
       - https://smart-api.info
     knowledge_level: knowledge_assertion
     agent_type: not_provided
-    description:
-      - This is the API provided from [SmartAPI](https://smart-api.info) application.
+    description: >-
+      This is the API provided from SmartAPI, https://smart-api.info, application.
   - id: infores:smpdb
     status: released
     name: Small Molecule Pathway Database (SMPDB)
@@ -4783,3 +4784,6 @@ information_resources:
   - id: infores:omop-ohdsi
     consumed_by:
       - infores:cohd
+    knowledge_level: not_provided
+    agent_type: not_provided
+    status: released
