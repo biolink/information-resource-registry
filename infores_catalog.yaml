@@ -528,6 +528,7 @@ information_resources:
     consumed_by:
       - infores:aragorn
       - infores:arax
+      - infores:cohd
   - id: infores:automat-ubergraph-nonredundant
     status: deprecated
     name: Automat Ubergraph Nonredundant
@@ -1437,6 +1438,8 @@ information_resources:
       the 1980s.
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+    consumed_by:
+      - infores:cohd
   - id: infores:cohd
     status: released
     name: Columbia Open Health Data (COHD)
@@ -1492,7 +1495,12 @@ information_resources:
     consumed_by:
       - infores:aragorn
       - infores:arax
+      - infores:openpredict
       - infores:service-provider-trapi
+    consumes:
+      - infores:automat-ubergraph
+      - infores:columbia-cdw-ehr-data
+      - infores:omop-ohdsi
   - id: infores:cohd-covid
     status: released
     name: Columbia Open Health Data (COHD) for COVID-19 Research
@@ -1851,6 +1859,7 @@ information_resources:
       with comprehensive drug target (i.e. sequence, structure, and pathway) information
     consumed_by:
       - infores:molepro
+      - infores:openpredict
       - infores:rtx-kg2
   - id: infores:drugcentral
     status: released
@@ -2641,6 +2650,8 @@ information_resources:
     consumed_by:
       - infores:aragorn
       - infores:arax
+    consumes:
+      - infores:nanopublications
   - id: infores:life-science-resource-registry
     status: released
     name: Life Science Resource Registry
@@ -3035,6 +3046,8 @@ information_resources:
       - Nanopublications
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+    consumed_by:
+      - infores:knowledge-collaboratory
   - id: infores:nbo
     status: released
     name: Neuro Behavior Ontology
@@ -3217,6 +3230,7 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     consumed_by:
+      - infores:openpredict
       - infores:rtx-kg2
   - id: infores:omnicorp
     status: released
@@ -3263,6 +3277,10 @@ information_resources:
     consumed_by:
       - infores:aragorn
       - infores:arax
+    consumes:
+      - infores:cohd
+      - infores:drugbank
+      - infores:omim
   - id: infores:ordo
     status: released
     name: Orphanet Rare Disease Ontology
@@ -4754,3 +4772,6 @@ information_resources:
     knowledge_level: not_provided
     agent_type: not_provided
     status: released
+  - id: infores:omop-ohdsi
+    consumed_by:
+      - infores:cohd

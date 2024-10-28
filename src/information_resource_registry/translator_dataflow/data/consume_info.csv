@@ -54,6 +54,7 @@ infores:automat-string-db,infores:aragorn,1
 infores:automat-string-db,infores:arax,1
 infores:automat-ubergraph,infores:aragorn,1
 infores:automat-ubergraph,infores:arax,1
+infores:automat-ubergraph,infores:cohd,1
 infores:automat-viral-proteome,infores:aragorn,1
 infores:automat-viral-proteome,infores:arax,1
 infores:automat-viral-proteome,infores:service-provider-trapi,1
@@ -122,8 +123,10 @@ infores:cl,infores:rtx-kg2,1
 infores:clingen,infores:mygene-info,1
 infores:clinvar,infores:myvariant-info,1
 infores:cmap,infores:molepro,1
+infores:columbia-cdw-ehr-data,infores:cohd,1
 infores:cohd,infores:aragorn,1
 infores:cohd,infores:arax,1
+infores:cohd,infores:openpredict,1
 infores:cohd,infores:service-provider-trapi,1
 infores:connections-hypothesis,infores:aragorn,1
 infores:connections-hypothesis,infores:arax,1
@@ -150,6 +153,7 @@ infores:disgenet,infores:mydisease-info,1
 infores:disgenet,infores:rtx-kg2,1
 infores:drug-repurposing-hub,infores:molepro,1
 infores:drugbank,infores:molepro,1
+infores:drugbank,infores:openpredict,1
 infores:drugbank,infores:rtx-kg2,1
 infores:drugcentral,infores:molepro,1
 infores:drugcentral,infores:mychem-info,1
@@ -226,6 +230,7 @@ infores:mychem-info,infores:service-provider-trapi,1
 infores:mydisease-info,infores:service-provider-trapi,1
 infores:mygene-info,infores:service-provider-trapi,1
 infores:myvariant-info,infores:service-provider-trapi,1
+infores:nanopublications,infores:knowledge-collaboratory,1
 infores:nbo,infores:rtx-kg2,1
 infores:ncbi-gene,infores:mygene-info,1
 infores:ncbi-gene,infores:rtx-kg2,1
@@ -235,6 +240,7 @@ infores:ncit,infores:rtx-kg2,1
 infores:nddf-umls,infores:rtx-kg2,1
 infores:ndfrt,infores:rtx-kg2,1
 infores:ols,infores:service-provider-trapi,1
+infores:omim,infores:openpredict,1
 infores:omim,infores:rtx-kg2,1
 infores:openpredict,infores:aragorn,1
 infores:openpredict,infores:arax,1
@@ -317,3 +323,4 @@ infores:automat-robokop,infores:arax,1
 infores:automat-robokop,infores:service-provider-trapi,1
 infores:chv-umls,infores:rtx-kg2,1
 infores:dsstoxdb,infores:molepro,1
+infores:omop-ohdsi,infores:cohd,1
