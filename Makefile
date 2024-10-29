@@ -43,13 +43,13 @@ test_pr:
 	$(RUN) yamllint -c .yamllint-config src/information_resource_registry/schema/*.yaml
 	$(RUN) yamllint -c .yamllint-config infores_catalog.yaml
 
-test:
+test: check_urls
 	$(RUN) linkml-validate infores_catalog.yaml -s src/information_resource_registry/schema/information_resource_registry.yaml
 	$(RUN) pytest
 	$(RUN) codespell
 	$(RUN) yamllint -c .yamllint-config src/information_resource_registry/schema/*.yaml
 	$(RUN) yamllint -c .yamllint-config infores_catalog.yaml
-	check_urls
+
 
 clean:
 	rm -rf $(DEST)
