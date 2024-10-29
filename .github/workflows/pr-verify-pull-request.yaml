@@ -35,12 +35,9 @@ jobs:
           pip install poetry
           poetry install 
 
-      - name: Run tests
+      - name: Run tests, codespell, and yamllint
         run: |
           make test_pr
-          poetry run codespell
-          poetry run yamllint -c .yamllint-config infores_catalog.yaml
-        # make validate_infores
 
 
 
