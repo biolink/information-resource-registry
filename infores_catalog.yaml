@@ -206,6 +206,8 @@ information_resources:
       are ignored.
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+    xref:
+      - https://github.com/NCATSTranslator/Translator-All/wiki/Automat
   - id: infores:automat-chembio
     status: deprecated
     name: Automat Chembio
@@ -4729,6 +4731,8 @@ information_resources:
       - infores:aragorn
       - infores:arax
       - infores:molepro
+    xref:
+      - https://github.com/broadinstitute/GeLiNEA
   - id: infores:automat-binding-db
     knowledge_level: not_provided
     agent_type: not_provided
@@ -4736,6 +4740,8 @@ information_resources:
     consumed_by:
       - infores:aragorn
       - infores:arax
+    xref:
+      - https://github.com/NCATSTranslator/Translator-All/wiki/Automat
   - id: infores:automat-reactome
     knowledge_level: not_provided
     agent_type: not_provided
@@ -4743,6 +4749,8 @@ information_resources:
     consumed_by:
       - infores:aragorn
       - infores:arax
+    xref:
+      - https://github.com/NCATSTranslator/Translator-All/wiki/Automat
   - id: infores:automat-robokop
     knowledge_level: not_provided
     agent_type: not_provided
@@ -4751,7 +4759,11 @@ information_resources:
       - infores:aragorn
       - infores:arax
       - infores:service-provider-trapi
+    xref:
+      - https://github.com/NCATSTranslator/Translator-All/wiki/Automat
   - id: infores:ars
+    xref:
+      - https://github.com/NCATSTranslator/Translator-All/wiki/Autonomous-Relay-System-(ARS)
     knowledge_level: not_provided
     agent_type: not_provided
     status: released
@@ -4767,6 +4779,8 @@ information_resources:
     status: released
     consumed_by:
       - infores:rtx-kg2
+    xref:
+      - https://github.com/NCATSTranslator/Translator-All/wiki/Automat
   - id: infores:annotator
     status: released
     name: Annotator Service
@@ -4781,9 +4795,13 @@ information_resources:
     knowledge_level: not_provided
     agent_type: not_provided
     status: released
+    xref:
+      - https://github.com/NCATSTranslator/Translator-All/wiki/Automat
   - id: infores:omop-ohdsi
     consumed_by:
       - infores:cohd
     knowledge_level: not_provided
     agent_type: not_provided
     status: released
+    xref:
+      - https://github.com/NCATSTranslator/Translator-All/wiki/Automat

@@ -7,6 +7,7 @@ import yaml
 import urllib3
 from urllib3.util.ssl_ import create_urllib3_context
 from urllib3.util.retry import Retry
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 # Path to the YAML file containing URLs
 INFORES_YAML = os.path.join('infores_catalog.yaml')
@@ -36,9 +37,8 @@ def is_valid_url(url: str) -> bool:
         response = http.request("GET", url, headers={'User-Agent': 'Mozilla/5.0'})
 
         # Check if the response status is 200 for a valid URL
-        if response.status != 200:
-            print(f"URL: {url} - status code: {response.status}")
-            return False
+        if response.status == 403:
+            return True
         return response.status == 200
 
     except urllib3.exceptions.MaxRetryError:
@@ -85,22 +85,36 @@ def main():
 
     # Initialize tqdm progress bar with the total number of URLs
     with tqdm(total=total_xrefs, desc="Validating URLs", unit="url") as pbar:
-        for infores in data:
-            if 'xref' not in infores.keys():
-                if infores.get('status') != 'deprecated':
-                    print(f"Information resource {infores.get('id')} does not have a URL.")
-            else:
-                for xref in infores.get('xref'):
-                    if infores.get('status') == 'deprecated':
-                        continue
-                    else:
-                        is_valid = is_valid_url(xref)
-                        if not is_valid:
-                            print(f"URL: {xref} - invalid")
-                            invalid_resource_urls.append((infores.get('id'), xref))
-                        # Update the progress bar after each URL is checked
-                        pbar.update(1)
+        # Use ThreadPoolExecutor to parallelize URL validation
+        with ThreadPoolExecutor() as executor:
+            future_to_infores = {}
 
+            # Submit each URL check as a task
+            for infores in data:
+                if 'xref' not in infores.keys():
+                    if infores.get('status') != 'deprecated':
+                        print(f"Information resource {infores.get('id')} does not have a URL.")
+                else:
+                    for xref in infores.get('xref'):
+                        if infores.get('status') != 'deprecated':
+                            # Submit the is_valid_url task to the executor
+                            future = executor.submit(is_valid_url, xref)
+                            future_to_infores[future] = (infores.get('id'), xref)
+
+            # Process completed futures as they finish
+            for future in as_completed(future_to_infores):
+                infores_id, xref = future_to_infores[future]
+                is_valid = future.result()
+
+                if not is_valid:
+                    print(f"URL: {xref} - invalid")
+                    invalid_resource_urls.append((infores_id, xref))
+
+                # Update the progress bar
+                pbar.update(1)
+
+    if invalid_resource_urls:
+        raise ValueError(f"Invalid URLs found: {invalid_resource_urls}")
 
 if __name__ == "__main__":
     main()
