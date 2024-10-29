@@ -1,7 +1,7 @@
 RUN = poetry run
 
-validate_infores:
-	$(RUN) python src/information_resource_registry/validation/verify_infores.py
+check_urls:
+	poetry run check_urls
 
 spell:
 	poetry run codespell

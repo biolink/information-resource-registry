@@ -49,7 +49,6 @@ test:
 	$(RUN) codespell
 	$(RUN) yamllint -c .yamllint-config src/information_resource_registry/schema/*.yaml
 	$(RUN) yamllint -c .yamllint-config infores_catalog.yaml
-	$(RUN) python src/information_resource_registry/validation/verify_infores.py
 
 clean:
 	rm -rf $(DEST)

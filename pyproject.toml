@@ -24,6 +24,7 @@ generate_sankey = "information_resource_registry.translator_dataflow.generate_sa
 molepro_consume = "information_resource_registry.translator_dataflow.molepro_consume:main"
 rtx_kg2 = "information_resource_registry.translator_dataflow.rtx_kg2:main"
 unsecret = "information_resource_registry.translator_dataflow.unsecret:main"
+check_urls = "information_resource_registry.validation.check_urls:main"
 
 [tool.poetry-dynamic-versioning]
 enable = true
@@ -43,6 +44,7 @@ pandas = "^2.2.3"
 plotly = "^5.24.1"
 yamllint = "^1.35.1"
 linkml = "^1.8.5"
+tqdm = "^4.66.6"
 
 [tool.poetry.dev-dependencies]
 linkml = ">=1.6.3"

@@ -52,6 +52,17 @@ classes:
       databases, and include many access endpoints and user
       interfaces. Information Resources include project-specific resources
       such as a Translator Knowledge Provider, and community knowledgebases like ChemBL, OMIM, or DGIdb.
+    rules:
+      - preconditions:
+          slot_conditions:
+            status:
+              equals_string: "released"
+      - postconditions:
+          slot_conditions:
+            knowledge_level:
+              required: true
+            agent_type:
+              required: true
 
 slots:
 
@@ -123,7 +134,7 @@ slots:
         computational prediction and a manual curation.  In this case, the
         knowledge level would be "curated", and the evidence would be described
         in more detail in the evidence graph.
-    required: true
+
 
   agent_type:
     range: AgentTypeEnum
@@ -136,7 +147,6 @@ slots:
         computational prediction and a manual curation.  In this case, the
         agent type would be "publication", and the evidence would be described
         in more detail in the evidence graph.
-    required: true
 
 enums:
   InformationResourceStatusEnum:
