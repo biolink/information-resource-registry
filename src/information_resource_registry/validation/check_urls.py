@@ -36,6 +36,9 @@ def is_valid_url(url: str) -> bool:
         response = http.request("GET", url, headers={'User-Agent': 'Mozilla/5.0'})
 
         # Check if the response status is 200 for a valid URL
+        if response.status != 200:
+            print(f"URL: {url} - status code: {response.status}")
+            return False
         return response.status == 200
 
     except urllib3.exceptions.MaxRetryError:
