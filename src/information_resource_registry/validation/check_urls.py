@@ -56,6 +56,7 @@ def main():
     """Main function to validate URLs."""
     # Load URLs from the YAML file
     data = load_urls_from_yaml()
+    invalid_resource_urls = []
 
     # Count the total number of xrefs to process for the status bar
     total_xrefs = sum(len(infores.get('xref', [])) for infores in data)
@@ -71,9 +72,12 @@ def main():
                     is_valid = is_valid_url(xref)
                     if not is_valid:
                         print(f"URL: {xref} - invalid")
+                        invalid_resource_urls.append((infores.get('id'), xref))
                     # Update the progress bar after each URL is checked
                     pbar.update(1)
 
+    if invalid_resource_urls:
+        raise ValueError(f"Invalid URLs found: {invalid_resource_urls}")
 
 if __name__ == "__main__":
     main()
