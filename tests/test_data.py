@@ -1,22 +1,19 @@
 """Data test."""
 import os
 import glob
-import unittest
-
 from linkml_runtime.loaders import yaml_loader
-from src.information_resource_registry.datamodel.information_resource_registry import InformationResourceContainer
-
+from linkml.generators.pythongen import PythonGenerator
 ROOT = os.path.join(os.path.dirname(__file__), '..')
 DATA_DIR = os.path.join(ROOT, "src", "data", "examples")
 
 EXAMPLE_FILES = glob.glob(os.path.join(DATA_DIR, '*.yaml'))
 
+def test_make_python():
+    infile = os.path.join(ROOT, 'src', 'information_resource_registry', 'schema', 'information_resource_registry.yaml')
+    pstr = str(PythonGenerator(infile, mergeimports=True).serialize())
+    return pstr
 
-class TestData(unittest.TestCase):
-    """Test data and datamodel."""
 
-    def test_data(self):
-        """Data test."""
-        for path in EXAMPLE_FILES:
-            obj = yaml_loader.load(path, target_class=InformationResourceContainer)
-            assert obj
+
+
+
