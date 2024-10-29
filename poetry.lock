@@ -932,13 +932,13 @@ files = [
 
 [[package]]
 name = "linkml"
-version = "1.8.4"
+version = "1.8.5"
 description = "Linked Open Data Modeling Language"
 optional = false
 python-versions = "<4.0.0,>=3.8.1"
 files = [
-    {file = "linkml-1.8.4-py3-none-any.whl", hash = "sha256:9fa26d7e522dd98568d0313e363abd67c2b17a671f31595c9e53beaec27b7214"},
-    {file = "linkml-1.8.4.tar.gz", hash = "sha256:a1918d226ab5c268e260ddc7cfa6edb53d7faab3fb0144efef5fad572b052c36"},
+    {file = "linkml-1.8.5-py3-none-any.whl", hash = "sha256:5a45577a4bb380f3a128f45764545cb2da92dd3310a110de7dc5355796d5ac43"},
+    {file = "linkml-1.8.5.tar.gz", hash = "sha256:8f31834560ade4b7f1aebc973d22b31951d7061643d32bdcba258a650db9b140"},
 ]
 
 [package.dependencies]
@@ -2744,13 +2744,13 @@ files = [
 
 [[package]]
 name = "tqdm"
-version = "4.66.5"
+version = "4.66.6"
 description = "Fast, Extensible Progress Meter"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "tqdm-4.66.5-py3-none-any.whl", hash = "sha256:90279a3770753eafc9194a0364852159802111925aa30eb3f9d85b0e805ac7cd"},
-    {file = "tqdm-4.66.5.tar.gz", hash = "sha256:e1020aef2e5096702d8a025ac7d16b1577279c9d63f8375b63083e9a5f0fcbad"},
+    {file = "tqdm-4.66.6-py3-none-any.whl", hash = "sha256:223e8b5359c2efc4b30555531f09e9f2f3589bcd7fdd389271191031b49b7a63"},
+    {file = "tqdm-4.66.6.tar.gz", hash = "sha256:4bdd694238bef1485ce839d67967ab50af8f9272aab687c0d7702a01da0be090"},
 ]
 
 [package.dependencies]
@@ -2997,4 +2997,4 @@ docs = []
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "4d86c9df0acd36d85f8c5455b41c46325d83c8f15d2c5f34110e9e1dc49f3fed"
+content-hash = "a23f8e2a0bc1ca96933eeb0a5a017bd267b353affae133f161523af9a71d8501"

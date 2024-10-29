@@ -39,6 +39,12 @@ jobs:
         run: |
           make test_pr
 
+      - name: Validate YAML file
+        run: yamllint -c .yamllint-config src/information_resource_registry/schema/information_resource_registry.yaml
 
-
+      - name: Codespell
+        uses: codespell-project/actions-codespell@v1
+        with:
+          ignore_words_list: amination,ehr,mor,nin,brite,mirgate,BRITE
+          skip: SEMMEDDB*,semmed*,.idea,.venv,.git,*.pdf,*.svg,context.*
 

@@ -7,7 +7,7 @@ on:
     branches:
       - main
   schedule:
-    - cron: '0 5 * * 1'  # at 05:00 UTC every Monday
+    - cron: '0 7 * * 1'  # at 07:00 UTC every Monday
   workflow_dispatch:
     types: trigger-build-artifacts
 
@@ -40,8 +40,8 @@ jobs:
         run: |
           poetry install
           make gen-project
-          make sankey
           make test_pr
+          make sankey
           make gendoc
           if [ $? -eq 0 ]; then
             git config --local user.email "action@github.com"
