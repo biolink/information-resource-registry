@@ -4327,7 +4327,7 @@ information_resources:
     status: released
     name: Community Structure-Activity Resource
     xref:
-      - http://www.csardock.org/
+      - https://github.com/NCATSTranslator/Translator-All/wiki/Community-Structure-Activity-Resource
     synonym:
       - CSAR
     knowledge_level: knowledge_assertion

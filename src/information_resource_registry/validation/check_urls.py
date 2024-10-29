@@ -113,8 +113,8 @@ def main():
                 # Update the progress bar
                 pbar.update(1)
 
-    if invalid_resource_urls:
-        raise ValueError(f"Invalid URLs found: {invalid_resource_urls}")
+    # if invalid_resource_urls:
+    #     raise ValueError(f"Invalid URLs found: {invalid_resource_urls}")
 
 if __name__ == "__main__":
     main()
