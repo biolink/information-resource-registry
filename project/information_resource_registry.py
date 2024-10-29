@@ -1,5 +1,5 @@
 # Auto generated from information_resource_registry.yaml by pythongen.py version: 0.0.1
-# Generation date: 2024-10-28T16:26:09
+# Generation date: 2024-10-29T22:30:06
 # Schema: Information-Resource-Registry-Schema
 #
 # id: https://w3id.org/biolink/information_resource_registry.yaml
@@ -8,21 +8,57 @@
 
 import dataclasses
 import re
-from jsonasobj2 import JsonObj, as_dict
-from typing import Optional, List, Union, Dict, ClassVar, Any
 from dataclasses import dataclass
-from datetime import date, datetime, time
-from linkml_runtime.linkml_model.meta import EnumDefinition, PermissibleValue, PvFormulaOptions
+from datetime import (
+    date,
+    datetime,
+    time
+)
+from typing import (
+    Any,
+    ClassVar,
+    Dict,
+    List,
+    Optional,
+    Union
+)
 
-from linkml_runtime.utils.slot import Slot
-from linkml_runtime.utils.metamodelcore import empty_list, empty_dict, bnode
-from linkml_runtime.utils.yamlutils import YAMLRoot, extended_str, extended_float, extended_int
-from linkml_runtime.utils.dataclass_extensions_376 import dataclasses_init_fn_with_kwargs
-from linkml_runtime.utils.formatutils import camelcase, underscore, sfx
-from linkml_runtime.utils.enumerations import EnumDefinitionImpl
-from rdflib import Namespace, URIRef
+from jsonasobj2 import (
+    JsonObj,
+    as_dict
+)
+from linkml_runtime.linkml_model.meta import (
+    EnumDefinition,
+    PermissibleValue,
+    PvFormulaOptions
+)
 from linkml_runtime.utils.curienamespace import CurieNamespace
-from linkml_runtime.linkml_model.types import String
+from linkml_runtime.utils.dataclass_extensions_376 import dataclasses_init_fn_with_kwargs
+from linkml_runtime.utils.enumerations import EnumDefinitionImpl
+from linkml_runtime.utils.formatutils import (
+    camelcase,
+    sfx,
+    underscore
+)
+from linkml_runtime.utils.metamodelcore import (
+    bnode,
+    empty_dict,
+    empty_list
+)
+from linkml_runtime.utils.slot import Slot
+from linkml_runtime.utils.yamlutils import (
+    YAMLRoot,
+    extended_float,
+    extended_int,
+    extended_str
+)
+from rdflib import (
+    Namespace,
+    URIRef
+)
+
+from linkml_runtime.linkml_model.types import String, Uriorcurie
+from linkml_runtime.utils.metamodelcore import URIorCURIE
 
 metamodel_version = "1.7.0"
 version = "1.0.0"
@@ -31,16 +67,10 @@ version = "1.0.0"
 dataclasses._init_fn = dataclasses_init_fn_with_kwargs
 
 # Namespaces
-BIOGRID = CurieNamespace('BIOGRID', 'http://identifiers.org/biogrid/')
-SO = CurieNamespace('SO', 'http://purl.obolibrary.org/obo/SO_')
 BIOLINK = CurieNamespace('biolink', 'https://w3id.org/biolink/')
 INFORES = CurieNamespace('infores', 'https://w3id.org/biolink/infores/')
 LINKML = CurieNamespace('linkml', 'https://w3id.org/linkml/')
-OBOINOWL = CurieNamespace('oboInOwl', 'http://www.geneontology.org/formats/oboInOwl#')
-RDF = CurieNamespace('rdf', 'http://www.w3.org/1999/02/22-rdf-syntax-ns#')
 RDFS = CurieNamespace('rdfs', 'http://www.w3.org/2000/01/rdf-schema#')
-SKOS = CurieNamespace('skos', 'http://www.w3.org/2004/02/skos/core#')
-XSD = CurieNamespace('xsd', 'http://www.w3.org/2001/XMLSchema#')
 DEFAULT_ = INFORES
 
 
@@ -88,23 +118,27 @@ class InformationResource(YAMLRoot):
     class_name: ClassVar[str] = "InformationResource"
     class_model_uri: ClassVar[URIRef] = INFORES.InformationResource
 
+    status: Union[str, "InformationResourceStatusEnum"] = None
     id: str = None
-    status: Optional[Union[str, "InformationResourceStatusEnum"]] = None
     name: Optional[str] = None
     xref: Optional[Union[str, List[str]]] = empty_list()
     synonym: Optional[Union[str, List[str]]] = empty_list()
     description: Optional[str] = None
     knowledge_level: Optional[Union[str, "KnowledgeLevelEnum"]] = None
     agent_type: Optional[Union[str, "AgentTypeEnum"]] = None
+    consumes: Optional[Union[Union[str, URIorCURIE], List[Union[str, URIorCURIE]]]] = empty_list()
+    consumed_by: Optional[Union[Union[str, URIorCURIE], List[Union[str, URIorCURIE]]]] = empty_list()
 
     def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
+        if self._is_empty(self.status):
+            self.MissingRequiredField("status")
+        if not isinstance(self.status, InformationResourceStatusEnum):
+            self.status = InformationResourceStatusEnum(self.status)
+
         if self._is_empty(self.id):
             self.MissingRequiredField("id")
         if not isinstance(self.id, str):
             self.id = str(self.id)
-
-        if self.status is not None and not isinstance(self.status, InformationResourceStatusEnum):
-            self.status = InformationResourceStatusEnum(self.status)
 
         if self.name is not None and not isinstance(self.name, str):
             self.name = str(self.name)
@@ -125,6 +159,14 @@ class InformationResource(YAMLRoot):
 
         if self.agent_type is not None and not isinstance(self.agent_type, AgentTypeEnum):
             self.agent_type = AgentTypeEnum(self.agent_type)
+
+        if not isinstance(self.consumes, list):
+            self.consumes = [self.consumes] if self.consumes is not None else []
+        self.consumes = [v if isinstance(v, URIorCURIE) else URIorCURIE(v) for v in self.consumes]
+
+        if not isinstance(self.consumed_by, list):
+            self.consumed_by = [self.consumed_by] if self.consumed_by is not None else []
+        self.consumed_by = [v if isinstance(v, URIorCURIE) else URIorCURIE(v) for v in self.consumed_by]
 
         super().__post_init__(**kwargs)
 
@@ -224,8 +266,14 @@ class AgentTypeEnum(EnumDefinitionImpl):
 class slots:
     pass
 
+slots.consumes = Slot(uri=INFORES.consumes, name="consumes", curie=INFORES.curie('consumes'),
+                   model_uri=INFORES.consumes, domain=None, range=Optional[Union[Union[str, URIorCURIE], List[Union[str, URIorCURIE]]]])
+
+slots.consumed_by = Slot(uri=INFORES.consumed_by, name="consumed_by", curie=INFORES.curie('consumed_by'),
+                   model_uri=INFORES.consumed_by, domain=None, range=Optional[Union[Union[str, URIorCURIE], List[Union[str, URIorCURIE]]]])
+
 slots.status = Slot(uri=INFORES.status, name="status", curie=INFORES.curie('status'),
-                   model_uri=INFORES.status, domain=None, range=Optional[Union[str, "InformationResourceStatusEnum"]])
+                   model_uri=INFORES.status, domain=None, range=Union[str, "InformationResourceStatusEnum"])
 
 slots.information_resources = Slot(uri=INFORES.information_resources, name="information_resources", curie=INFORES.curie('information_resources'),
                    model_uri=INFORES.information_resources, domain=None, range=Optional[Union[Union[dict, InformationResource], List[Union[dict, InformationResource]]]])

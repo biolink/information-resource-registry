@@ -13,6 +13,8 @@ message InformationResource
   string description = 0
   knowledgeLevelEnum knowledgeLevel = 0
   agentTypeEnum agentType = 0
+ repeated  uriorcurie consumes = 0
+ repeated  uriorcurie consumedBy = 0
  }
 // A collection of information resources
 message InformationResourceContainer
