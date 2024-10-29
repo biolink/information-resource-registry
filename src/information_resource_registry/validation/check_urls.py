@@ -34,10 +34,29 @@ def is_valid_url(url: str) -> bool:
         # Add a randomized sleep to avoid rapid requests
         time.sleep(random.uniform(1, 3))
         response = http.request("GET", url, headers={'User-Agent': 'Mozilla/5.0'})
+
+        # Check if the response status is 200 for a valid URL
         return response.status == 200
+
+    except urllib3.exceptions.MaxRetryError:
+        print(f"Max retries exceeded for URL: {url}")
+        return False
+
+    except urllib3.exceptions.TimeoutError:
+        print(f"Timeout error for URL: {url}")
+        return False
+
+    except urllib3.exceptions.SSLError as e:
+        print(f"SSL error for URL {url}: {e}")
+        return False
+
+    except urllib3.exceptions.HTTPError as e:
+        print(f"HTTP error for URL {url}: {e}")
+        return False
+
     except urllib3.exceptions.RequestError as e:
-        print(f"Request error: {e}")
-        return False  # Consider the URL invalid if there's a request error
+        print(f"General request error for URL {url}: {e}")
+        return False
 
 
 def load_urls_from_yaml() -> list:
