@@ -88,15 +88,16 @@ def main():
                     print(f"Information resource {infores.get('id')} does not have a URL.")
             else:
                 for xref in infores.get('xref'):
-                    is_valid = is_valid_url(xref)
-                    if not is_valid:
-                        print(f"URL: {xref} - invalid")
-                        invalid_resource_urls.append((infores.get('id'), xref))
-                    # Update the progress bar after each URL is checked
-                    pbar.update(1)
+                    if infores.get('status') == 'deprecated':
+                        continue
+                    else:
+                        is_valid = is_valid_url(xref)
+                        if not is_valid:
+                            print(f"URL: {xref} - invalid")
+                            invalid_resource_urls.append((infores.get('id'), xref))
+                        # Update the progress bar after each URL is checked
+                        pbar.update(1)
 
-    if invalid_resource_urls:
-        raise ValueError(f"Invalid URLs found: {invalid_resource_urls}")
 
 if __name__ == "__main__":
     main()

@@ -1678,7 +1678,7 @@ information_resources:
     status: released
     name: Drugs to target pAthways by the Tissue Expression
     xref:
-      - https://www.tatonettilab.org/date/
+      - https://tatonettilab-resources.s3.amazonaws.com/syspharm/DATE.zip
     synonym:
       - DATE
     knowledge_level: knowledge_assertion
@@ -2258,7 +2258,7 @@ information_resources:
     status: deprecated
     name: GOTE (Gpcrs to dOwnstream cellular pathways byTissue Expression)
     xref:
-      - http://tatonettilab.org/resources/GOTE/source_code/
+      - https://tatonettilab-resources.s3.amazonaws.com/syspharm/GOTE.zip
     synonym:
       - GOTE
     knowledge_level: knowledge_assertion
@@ -3754,7 +3754,7 @@ information_resources:
     status: released
     name: SABIO-RK Biochemical Reaction Kinetics Database
     xref:
-      - http://sabiork.h-its.org/
+      - https://www.h-its.org/projects/sabio-rk-biochemical-reaction-kinetics-database/
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - id: infores:scibite
