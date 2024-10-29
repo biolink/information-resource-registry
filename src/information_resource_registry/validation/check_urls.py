@@ -39,23 +39,23 @@ def is_valid_url(url: str) -> bool:
         return response.status == 200
 
     except urllib3.exceptions.MaxRetryError:
-        print(f"Max retries exceeded for URL: {url}")
+        print(f"Max retries exceeded for URL: {url} - invalid")
         return False
 
     except urllib3.exceptions.TimeoutError:
-        print(f"Timeout error for URL: {url}")
+        print(f"Timeout error for URL: {url} - invalid")
         return False
 
     except urllib3.exceptions.SSLError as e:
-        print(f"SSL error for URL {url}: {e}")
+        print(f"SSL error for URL {url}: {e} - invalid")
         return False
 
     except urllib3.exceptions.HTTPError as e:
-        print(f"HTTP error for URL {url}: {e}")
+        print(f"HTTP error for URL {url}: {e} - invalid")
         return False
 
     except urllib3.exceptions.RequestError as e:
-        print(f"General request error for URL {url}: {e}")
+        print(f"General request error for URL {url}: {e} - invalid")
         return False
 
 
