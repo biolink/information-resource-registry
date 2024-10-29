@@ -49,6 +49,7 @@ test:
 	$(RUN) codespell
 	$(RUN) yamllint -c .yamllint-config src/information_resource_registry/schema/*.yaml
 	$(RUN) yamllint -c .yamllint-config infores_catalog.yaml
+	check_urls
 
 clean:
 	rm -rf $(DEST)
