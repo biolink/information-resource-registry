@@ -40,7 +40,7 @@ jobs:
         run: |
           poetry install
           make gen-project
-          make test_pr
+          make test
           make sankey
           make gendoc
           if [ $? -eq 0 ]; then

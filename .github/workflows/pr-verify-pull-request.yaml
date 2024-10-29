@@ -37,7 +37,7 @@ jobs:
 
       - name: Run tests, codespell, and yamllint
         run: |
-          make test_pr
+          make test
 
       - name: Validate YAML file
         run: yamllint -c .yamllint-config src/information_resource_registry/schema/information_resource_registry.yaml
