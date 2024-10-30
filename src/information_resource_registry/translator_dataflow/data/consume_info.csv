@@ -60,6 +60,7 @@ infores:automat-viral-proteome,infores:arax,1
 infores:automat-viral-proteome,infores:service-provider-trapi,1
 infores:automat-ehr-may-treat-kp,infores:aragorn,1
 infores:automat-ehr-may-treat-kp,infores:arax,1
+infores:automat-ehr-clinical-connections-kp,infores:arax,1
 infores:bfo,infores:rtx-kg2,1
 infores:bigg-models,infores:molepro,1
 infores:bindingdb,infores:biothings-bindingdb,1
@@ -133,6 +134,7 @@ infores:connections-hypothesis,infores:arax,1
 infores:connections-hypothesis,infores:service-provider-trapi,1
 infores:cpdb,infores:mygene-info,1
 infores:cpt-codes-umls,infores:rtx-kg2,1
+infores:cqs,infores:ars,1
 infores:ctd,infores:molepro,1
 infores:ctd,infores:mydisease-info,1
 infores:ctd,infores:service-provider-trapi,1

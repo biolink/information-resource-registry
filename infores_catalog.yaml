@@ -118,6 +118,7 @@ information_resources:
       - infores:automat-cam-kp
       - infores:automat-ctd
       - infores:automat-drug-central
+      - infores:automat-ehr-clinical-connections-kp
       - infores:automat-ehr-may-treat-kp
       - infores:automat-genome-alliance
       - infores:automat-gtex
@@ -584,6 +585,8 @@ information_resources:
       A graph consisting of clinical connections associations from Multiomics Electronic-Health-Record
       (EHR) Machine Learning Analysis (MLA)
       using the Providence health records
+    consumed_by:
+      - infores:arax
   - id: infores:bfo
     status: released
     name: Basic Formal Ontology
