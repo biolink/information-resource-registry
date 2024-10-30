@@ -1640,6 +1640,24 @@ information_resources:
       - CQS
     knowledge_level: prediction
     agent_type: computational_model
+    consumed_by:
+      - infores:ars
+    consumes:
+      - infores:automat-icees-kg
+      - infores:automat-cohd
+      - infores:automat-isb-EHRMLA-data
+      - infores:connections-hypothesis
+      - infores:multiomics-ctkp
+      - infores:text-mining-provider targeted
+      - infores:service-provider-tmkp-targeted
+      - infores:openpredict
+      - infores:service-provider-aeolus
+      - infores:spoke-chembl
+      - infores:molepro-chembl
+      - infores:rtxkg2-semmed
+      - infores:service-provider-semmed
+      - infores:service-provider-chembl
+      - infores:cam-kp
     description: >-
       The Translator Curated Query Service (CQS) is an SRI service that provides ARA-like capabilities.
       The service generates ‘predicted’ edges in response to inferred queries, based on customizable
