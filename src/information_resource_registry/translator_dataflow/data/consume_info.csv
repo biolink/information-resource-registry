@@ -241,6 +241,7 @@ infores:ncbi-taxonomy,infores:rtx-kg2,1
 infores:ncit,infores:rtx-kg2,1
 infores:nddf-umls,infores:rtx-kg2,1
 infores:ndfrt,infores:rtx-kg2,1
+infores:openhealthdata-carolina,infores:automat-openhealthdata-carolina,1
 infores:ols,infores:service-provider-trapi,1
 infores:omim,infores:openpredict,1
 infores:omim,infores:rtx-kg2,1
