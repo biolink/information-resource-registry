@@ -39,6 +39,7 @@
     "infores:rtx-kg2",
     "infores:service-provider-trapi",
     "infores:spoke",
+    "infores:text-mining-provider-cooccurrence",
     "infores:text-mining-provider-cooccurrence"
   ]
 }

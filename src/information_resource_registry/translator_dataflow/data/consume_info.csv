@@ -283,6 +283,7 @@ infores:sri-node-normalizer,infores:molepro,1
 infores:stitch,infores:molepro,1
 infores:string,infores:molepro,1
 infores:tcga,infores:biothings-multiomics-biggim-drugresponse,1
+infores:text-mining-provider-cooccurrence,infores:aragorn,1
 infores:text-mining-provider-cooccurrence,infores:arax,1
 infores:text-mining-provider-targeted,infores:service-provider-trapi,1
 infores:text-mining-provider-targeted,infores:unsecret-agent,1

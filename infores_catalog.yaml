@@ -89,6 +89,7 @@ information_resources:
       - infores:rtx-kg2
       - infores:service-provider-trapi
       - infores:spoke
+      - infores:text-mining-provider-cooccurrence
   - id: infores:aragorn-ranker
     status: deprecated
     name: ARAGORN Ranker
@@ -4088,6 +4089,7 @@ information_resources:
       a pair of biomedical concepts within a single document or sentence serves as a
       proxy for a potential relationship between the two concepts.
     consumed_by:
+      - infores:aragorn
       - infores:arax
   - id: infores:text-mining-provider-targeted
     status: released

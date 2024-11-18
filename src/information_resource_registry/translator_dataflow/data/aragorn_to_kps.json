@@ -35,6 +35,7 @@
     "infores:openpredict",
     "infores:rtx-kg2",
     "infores:service-provider-trapi",
-    "infores:spoke"
+    "infores:spoke",
+    "infores:text-mining-provider-cooccurrence"
   ]
 }
