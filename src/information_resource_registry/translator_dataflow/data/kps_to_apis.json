@@ -135,7 +135,6 @@
   "infores:multiomics-microbiome": [],
   "infores:multiomics-multiomics": [],
   "infores:mychem-info": [
-    "infores:aeolus",
     "infores:chebi",
     "infores:chembl",
     "infores:drugcentral",
