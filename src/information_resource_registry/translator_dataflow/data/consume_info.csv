@@ -259,8 +259,12 @@ infores:pr,infores:rtx-kg2,1
 infores:probe-miner,infores:molepro,1
 infores:psy-umls,infores:rtx-kg2,1
 infores:pubchem,infores:molepro,1
+infores:pubmed,infores:text-mining-provider-cooccurrence,1
+infores:pubmed,infores:text-mining-provider-targeted,1
 infores:pubmed-central,infores:multiomics-multiomics,1
 infores:pubmed-central,infores:multiomics-microbiome,1
+infores:pubmed-central,infores:text-mining-provider-cooccurrence,1
+infores:pubmed-central,infores:text-mining-provider-targeted,1
 infores:reactome,infores:molepro,1
 infores:reactome,infores:mygene-info,1
 infores:reactome,infores:rtx-kg2,1
