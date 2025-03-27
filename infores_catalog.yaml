@@ -3599,6 +3599,9 @@ information_resources:
       - https://pubmed.ncbi.nlm.nih.gov/
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+    consumed_by:
+      - infores:text-mining-provider-cooccurrence
+      - infores:text-mining-provider-targeted
   - id: infores:pubmed-central
     status: released
     name: PubMed Central
@@ -3611,6 +3614,8 @@ information_resources:
     consumed_by:
       - infores:multiomics-multiomics
       - infores:multiomics-microbiome
+      - infores:text-mining-provider-cooccurrence
+      - infores:text-mining-provider-targeted
   - id: infores:quickgo
     status: deprecated
     name: QuickGO
@@ -4088,6 +4093,9 @@ information_resources:
       have been found to co-occur in the scientific literature. Here, cooccurrence of
       a pair of biomedical concepts within a single document or sentence serves as a
       proxy for a potential relationship between the two concepts.
+    consumes:
+      - infores:pubmed
+      - infores:pubmed-central
     consumed_by:
       - infores:aragorn
       - infores:arax
@@ -4103,6 +4111,9 @@ information_resources:
       sentences in the scientific literature. Here, targeted refers to the fact that
       this service is based on text-mining models targeted to extract specific associations
       between concepts, as opposed to concepts cooccurring with each other.
+    consumes:
+      - infores:pubmed
+      - infores:pubmed-central
     consumed_by:
       - infores:service-provider-trapi
       - infores:unsecret-agent
