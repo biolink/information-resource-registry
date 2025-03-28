@@ -139,7 +139,7 @@ def main():
         # Sort the list in alphabetical order
         infores_dict[k].sort()
 
-    with open('src/information_resource_registry/relation_map/data/automat_infores_list.json', 'w') as outfile:
+    with open('src/information_resource_registry/translator_dataflow/data/automat_infores_list.json', 'w') as outfile:
         json.dump(infores_dict, outfile, indent=2, sort_keys=True)
 
     print("File successfully saved in alphabetical order.")
