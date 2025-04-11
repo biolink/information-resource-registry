@@ -4876,3 +4876,15 @@ information_resources:
     status: released
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/Automat
+  - id: infores:phenopacket-store
+    status: released
+    name: PhenoPacket Store
+    knowledge_level: observation
+    agent_type: manual_agent
+    description: >-
+      A repository for storage and retrieval of phenopackets, which are structured data 
+      for representing and exchanging phenotypic information across computational contexts.
+    xref:
+      - https://github.com/monarch-initiative/phenopacket-store
+    synonym:
+      - Phenopacket Store
