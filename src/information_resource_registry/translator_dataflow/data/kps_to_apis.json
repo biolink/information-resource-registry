@@ -80,6 +80,9 @@
   "infores:biothings-innatedb": [
     "infores:innatedb"
   ],
+  "infores:biothings-mabs": [
+    "infores:sepid_mab"
+  ],
   "infores:biothings-mgi-g2p": [
     "infores:mgi"
   ],

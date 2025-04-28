@@ -336,3 +336,5 @@ infores:automat-robokop,infores:service-provider-trapi,1
 infores:chv-umls,infores:rtx-kg2,1
 infores:dsstoxdb,infores:molepro,1
 infores:omop-ohdsi,infores:cohd,1
+infores:biothings-mabs,infores:service-provider-trapi,1
+infores:sepid_mab,infores:biothings-mabs,1
