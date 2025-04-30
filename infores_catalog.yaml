@@ -4876,3 +4876,15 @@ information_resources:
     status: released
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/Automat
+  - id: infores:amyco
+    status: released
+    name: The Amyloidoses Collection (AmyCo) Database 
+    knowledge_level: knowledge_assertion
+    agent_type: manual_agent
+    xref:
+      - https://github.com/NCATSTranslator/Translator-All/wiki/AmyCo
+    description: >-
+      The Amyloidoses Collection (AmyCo) database contains manually curated data from articles on
+      amyloidoses and other diseases related to amyloid deposition. The resource is not directly 
+      accessible at this time, but Jensen Lab's [DISEASES](https://doi.org/10.1093/database/baac019)
+      reports that it ingests this resource.
