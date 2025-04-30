@@ -823,6 +823,7 @@ information_resources:
       - infores:biothings-hpo
       - infores:biothings-idisk
       - infores:biothings-innatedb
+      - infores:biothings-mabs
       - infores:biothings-mgi-g2p
       - infores:biothings-multiomics-biggim-drugresponse
       - infores:biothings-multiomics-ehr-risk
@@ -4876,6 +4877,14 @@ information_resources:
     status: released
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/Automat
+  - id: infores:biothings-mabs
+    consumes:
+      - infores:sepid_mab
+    consumed_by:
+      - infores:service-provider-trapi
+  - id: infores:sepid_mab
+    consumed_by:
+      - infores:biothings-mabs
   - id: infores:amyco
     status: released
     name: The Amyloidoses Collection (AmyCo) Database 
