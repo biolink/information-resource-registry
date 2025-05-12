@@ -823,6 +823,7 @@ information_resources:
       - infores:biothings-hpo
       - infores:biothings-idisk
       - infores:biothings-innatedb
+      - infores:biothings-mabs
       - infores:biothings-mgi-g2p
       - infores:biothings-multiomics-biggim-drugresponse
       - infores:biothings-multiomics-ehr-risk
@@ -4888,3 +4889,11 @@ information_resources:
       - https://github.com/monarch-initiative/phenopacket-store
     synonym:
       - Phenopacket Store
+  - id: infores:biothings-mabs
+    consumes:
+      - infores:sepid_mab
+    consumed_by:
+      - infores:service-provider-trapi
+  - id: infores:sepid_mab
+    consumed_by:
+      - infores:biothings-mabs
