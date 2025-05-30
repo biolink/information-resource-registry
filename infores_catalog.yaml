@@ -961,7 +961,7 @@ information_resources:
       KP query web services.
     consumed_by:
       - infores:service-provider-trapi
-  - id: infores:biothings-multiomics-pharmacogenomics
+  - id: infores:catrax-pharmacogenomics
     status: released
     name: Multiomics Pharmacogenomics KP API
     xref:
@@ -1349,7 +1349,7 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     consumed_by:
-      - infores:biothings-multiomics-pharmacogenomics
+      - infores:catrax-pharmacogenomics
   - id: infores:chebi
     status: released
     name: Chemical Entity of Biological Interest
@@ -1932,7 +1932,7 @@ information_resources:
       - infores:molepro
       - infores:openpredict
       - infores:rtx-kg2
-      - infores:biothings-multiomics-pharmacogenomics
+      - infores:catrax-pharmacogenomics
   - id: infores:drugcentral
     status: released
     name: DrugCentral
@@ -1950,7 +1950,7 @@ information_resources:
       - infores:molepro
       - infores:mychem-info
       - infores:rtx-kg2
-      - infores:biothings-multiomics-pharmacogenomics
+      - infores:catrax-pharmacogenomics
   - id: infores:drugmechdb
     status: released
     name: DrugMechDB
@@ -2477,7 +2477,7 @@ information_resources:
     consumed_by:
       - infores:biothings-hpo
       - infores:rtx-kg2
-      - infores:biothings-multiomics-pharmacogenomics
+      - infores:catrax-pharmacogenomics
   - id: infores:hpo-annotations
     status: released
     name: Human Phenotype Ontology
@@ -2490,7 +2490,7 @@ information_resources:
     consumed_by:
       - infores:biothings-hpo
       - infores:mydisease-info
-      - infores:biothings-multiomics-pharmacogenomics
+      - infores:catrax-pharmacogenomics
   - id: infores:icd10-umls
     status: released
     name: ICD10 (from UMLS)
@@ -3006,7 +3006,7 @@ information_resources:
     consumed_by:
       - infores:mydisease-info
       - infores:rtx-kg2
-      - infores:biothings-multiomics-pharmacogenomics
+      - infores:catrax-pharmacogenomics
   - id: infores:mop
     status: released
     name: Molecular Process Ontology
@@ -3159,7 +3159,7 @@ information_resources:
     consumed_by:
       - infores:mygene-info
       - infores:rtx-kg2
-      - infores:biothings-multiomics-pharmacogenomics
+      - infores:catrax-pharmacogenomics
   - id: infores:ncbi-taxon
     status: released
     name: NCBI Taxonomy Ontology
@@ -3552,7 +3552,7 @@ information_resources:
     agent_type: not_provided
     consumed_by:
       - infores:molepro
-      - infores:biothings-multiomics-pharmacogenomics
+      - infores:catrax-pharmacogenomics
   - id: infores:pharos
     status: released
     name: Pharos
@@ -3612,7 +3612,7 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     consumed_by:
-      - infores:biothings-multiomics-pharmacogenomics
+      - infores:catrax-pharmacogenomics
   - id: infores:probe-miner
     status: released
     name: Probe Miner
@@ -3908,7 +3908,7 @@ information_resources:
     agent_type: not_provided
     consumed_by:
       - infores:molepro
-      - infores:biothings-multiomics-pharmacogenomics
+      - infores:catrax-pharmacogenomics
   - id: infores:signor
     status: released
     name: SIGNOR 3.0
@@ -3917,7 +3917,7 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     consumed_by:
-      - infores:biothings-multiomics-pharmacogenomics
+      - infores:catrax-pharmacogenomics
   - id: infores:smart-api
     status: released
     name: SmartAPI API
