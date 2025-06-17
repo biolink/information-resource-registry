@@ -25,6 +25,8 @@
     "infores:automat-string-db",
     "infores:automat-ubergraph",
     "infores:automat-viral-proteome",
+    "infores:biothings-multiomics-biggim-drugresponse",
+    "infores:catrax-pharmacogenomics",
     "infores:cohd",
     "infores:connections-hypothesis",
     "infores:gelinea",
