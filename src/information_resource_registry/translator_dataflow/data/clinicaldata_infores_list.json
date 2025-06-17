@@ -1,0 +1,15 @@
+{
+	"infores:cohd": [
+		"infores:automat-ubergraph",
+		"infores:columbia-cdw-ehr-data",
+		"infores:omop-ohdsi"
+	],
+	"infores:openpredict": [
+		"infores:cohd",
+		"infores:drugbank",
+		"infores:omim"
+	],
+	"infores:knowledge-collaboratory": [
+		"infores:nanopublications"
+	]
+}
