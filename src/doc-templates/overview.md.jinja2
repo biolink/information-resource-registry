@@ -5,5 +5,5 @@
 | ID | Name | Status | Knowledge Level | Description |
 |----|------|--------|-----------------|-------------|
 {%- for res in resources %}
-| [{{ res.id }}](details/{{ res.id | replace(':','_') }}.md) | {{ res.name }} | {{ res.status }} | {{ res.knowledge_level }} | {{ res.description[:50] ~ ('...' if res.description and res.description|length > 50 else '') if res.description else 'N/A' }} |
+| [{{ res.id }}](resources/{{ res.id | replace(':','_') }}.md) | {{ res.name }} | {{ res.status }} | {{ res.knowledge_level }} | {{ res.description[:50] ~ ('...' if res.description and res.description|length > 50 else '') if res.description else 'N/A' }} |
 {%- endfor %}
