@@ -27,7 +27,7 @@ def generate_docs(yaml_file, output_dir, overview_template, detail_template):
         f.write(overview_content)
 
     # Generate details for each resource
-    detail_dir = Path(output_dir) / 'details'
+    detail_dir = Path(output_dir) / 'resources'
     detail_dir.mkdir(parents=True, exist_ok=True)
 
     for resource in resources:

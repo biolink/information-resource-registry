@@ -2,11 +2,11 @@
 
 ##  (infores:biothings-mabs)
 
-**Status**: 
+**Status**: released
   
-**Knowledge Level**: 
+**Knowledge Level**: not_provided
   
-**Agent Type**: 
+**Agent Type**: not_provided
 
 
 
