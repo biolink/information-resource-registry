@@ -18,12 +18,14 @@ gendoc: $(DOCDIR)
 	cp $(DEST)/shacl/information_resource_registry.shacl.ttl $(DOCDIR)/information_resource_registry.shacl.ttl ; \
 	cp infores_catalog.yaml $(DOCDIR) ; \
 	cp $(SRC)/information_resource_registry/schema/information_resource_registry.yaml $(DOCDIR) ; \
+	$(MAKE) generate-resource-docs ; \
 	cp -r $(SRC)/docs/* $(DOCDIR) ; \
 	cp -r $(SRC)/docs/images $(DOCDIR)/images ; \
 	# the .json cp here is the data required for the d3 visualizations
 	# this supports the display of our d3 visualizations
 	cp $(SRC)/docs/*.css $(DOCDIR) ; \
 	$(RUN) gen-doc -d $(DOCDIR) --template-directory $(SRC)/$(TEMPLATEDIR) $(SOURCE_SCHEMA_PATH)
+
 
 testdoc: gendoc serve
 
@@ -33,3 +35,11 @@ serve: mkd-serve
 MKDOCS = $(RUN) mkdocs
 mkd-%:
 	$(MKDOCS) $*
+
+.PHONY: generate-resource-docs
+generate-resource-docs:
+	$(RUN) python utils/generate-registry.py \
+		--yaml-file infores_catalog.yaml \
+		--overview-template src/doc-templates/overview.md.jinja2 \
+		--detail-template src/doc-templates/resource.md.jinja2 \
+		--output-dir src/docs

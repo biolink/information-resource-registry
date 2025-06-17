@@ -75,6 +75,8 @@ information_resources:
       - infores:automat-string-db
       - infores:automat-ubergraph
       - infores:automat-viral-proteome
+      - infores:biothings-multiomics-biggim-drugresponse
+      - infores:catrax-pharmacogenomics
       - infores:cohd
       - infores:connections-hypothesis
       - infores:gelinea
@@ -139,6 +141,8 @@ information_resources:
       - infores:automat-string-db
       - infores:automat-ubergraph
       - infores:automat-viral-proteome
+      - infores:biothings-multiomics-biggim-drugresponse
+      - infores:catrax-pharmacogenomics
       - infores:cohd
       - infores:connections-hypothesis
       - infores:gelinea
@@ -948,6 +952,8 @@ information_resources:
       - infores:tcga
       - infores:gdsc
     consumed_by:
+      - infores:aragorn
+      - infores:arax
       - infores:service-provider-trapi
   - id: infores:biothings-multiomics-ehr-risk
     status: modified
@@ -1041,6 +1047,7 @@ information_resources:
     consumed_by:
       - infores:aragorn
       - infores:arax
+      - infores:rtx-kg2
       - infores:service-provider-trapi
     consumes:
       - infores:dailymed
@@ -3769,6 +3776,7 @@ information_resources:
       - infores:mirbase
       - infores:mondo
       - infores:multiomics-clinicaltrials
+      - infores:multiomics-drugapprovals
       - infores:nbo
       - infores:ncbi-gene
       - infores:ncbi-taxon
@@ -3794,6 +3802,7 @@ information_resources:
       - infores:umls
       - infores:umls-metathesaurus
       - infores:unichem
+      - infores:unii
       - infores:uniprot
       - infores:vandf-umls
     consumed_by:
@@ -3936,6 +3945,31 @@ information_resources:
     consumed_by:
       - infores:aragorn
       - infores:arax
+    consumes: 
+      - infores:bgee
+      - infores:bindingdb
+      - infores:gdsc
+      - infores:chembl
+      - infores:civic
+      - infores:lincs
+      - infores:disease-ontology
+      - infores:diseases
+      - infores:drugcentr
+      - infores:fooddb
+      - infores:gwas-catalog
+      - infores:hpa
+      - infores:interpro
+      - infores:kegg
+      - infores:go
+      - infores:mesh
+      - infores:ncbi-taxonomy
+      - infores:omim
+      - infores:path-pheno-db
+      - infores:pfam
+      - infores:sider
+      - infores:string
+      - infores:uberon
+      - infores:uniprot
   - id: infores:sri-edge-normalization-service
     status: deprecated
     name: Edge Normalization Service
@@ -4877,11 +4911,26 @@ information_resources:
     status: released
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/Automat
+  - id: infores:phenopacket-store
+    status: released
+    name: PhenoPacket Store
+    knowledge_level: observation
+    agent_type: manual_agent
+    description: >-
+      A repository for storage and retrieval of phenopackets, which are structured data  for
+      representing and exchanging phenotypic information across computational contexts.
+    xref:
+      - https://github.com/monarch-initiative/phenopacket-store
+    synonym:
+      - Phenopacket Store
   - id: infores:biothings-mabs
     consumes:
       - infores:sepid_mab
     consumed_by:
       - infores:service-provider-trapi
+    status: released
+    knowledge_level: not_provided
+    agent_type: not_provided
   - id: infores:sepid_mab
     consumed_by:
       - infores:biothings-mabs
@@ -4897,3 +4946,14 @@ information_resources:
       amyloidoses and other diseases related to amyloid deposition. The resource is not directly 
       accessible at this time, but Jensen Lab's [DISEASES](https://doi.org/10.1093/database/baac019)
       reports that it ingests this resource.
+    status: released
+    knowledge_level: not_provided
+    agent_type: not_provided
+  - id: infores:catrax-pharmacogenomics
+    consumed_by:
+      - infores:aragorn
+      - infores:arax
+  - id: infores:unii
+    consumed_by:
+      - infores:rtx-kg2
+
