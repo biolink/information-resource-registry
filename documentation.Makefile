@@ -37,7 +37,7 @@ mkd-%:
 
 .PHONY: generate-resource-docs
 generate-resource-docs:
-	python utils/generate-registry.py \
+	$(RUN) python utils/generate-registry.py \
 		--yaml-file infores_catalog.yaml \
 		--overview-template src/doc-templates/overview.md.jinja2 \
 		--detail-template src/doc-templates/resource.md.jinja2 \
