@@ -1666,7 +1666,7 @@ information_resources:
       - infores:automat-isb-EHRMLA-data
       - infores:connections-hypothesis
       - infores:multiomics-ctkp
-      - infores:text-mining-provider targeted
+      - infores:text-mining-provider-targeted
       - infores:service-provider-tmkp-targeted
       - infores:openpredict
       - infores:service-provider-aeolus
@@ -4878,10 +4878,12 @@ information_resources:
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/Automat
   - id: infores:biothings-mabs
+    status: released
     consumes:
       - infores:sepid_mab
     consumed_by:
       - infores:service-provider-trapi
   - id: infores:sepid_mab
+    status: released
     consumed_by:
       - infores:biothings-mabs
