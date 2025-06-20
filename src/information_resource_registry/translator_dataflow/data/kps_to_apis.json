@@ -113,6 +113,7 @@
   "infores:biothings-uberon-ontology": [
     "infores:uberon"
   ],
+  "infores:catrax-pharmacogenomics": [],
   "infores:cohd": [],
   "infores:complex-portal": [],
   "infores:connections-hypothesis": [],
