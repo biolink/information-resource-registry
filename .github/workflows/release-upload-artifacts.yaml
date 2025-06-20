@@ -31,7 +31,12 @@ jobs:
       - name: Generate release artifacts
         run: make create_release_extras
 
-      - name: Upload release artifacts
+      - name: Upload to GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: release-output/*
+
+      - name: Upload release artifacts (for debugging)
         uses: actions/upload-artifact@v4
         with:
           name: release-artifacts
