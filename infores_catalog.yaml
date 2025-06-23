@@ -8,8 +8,8 @@ information_resources:
     description: >-
       A comprehensive database of non-coding RNA sequences that provides a single access point
       to RNA sequences from a range of resources.
-    knowledge level: curated
-    agent type: not_provided
+    knowledge_level: knowledge_assertion
+    agent_type: not_provided
   - id: infores:dictybase
     status: released
     name: dictyBase
@@ -18,8 +18,8 @@ information_resources:
     description: >-
       The central resource for Dictyostelid genomics, providing model organism database
       services for the research community.
-    knowledge level: curated
-    agent type: not_provided
+    knowledge_level: knowledge_assertion
+    agent_type: not_provided
   - id: infores:cacao
     status: released
     name: Community Assessment of Community Annotation with Ontologies
@@ -30,8 +30,8 @@ information_resources:
     description: >-
       A collaborative annotation project where undergraduate students use the Gene Ontology
       to annotate proteins based on evidence from scientific papers.
-    knowledge level: curated
-    agent type: not_provided
+    knowledge_level: knowledge_assertion
+    agent_type: not_provided
   - id: infores:go-central
     status: released
     name: GO Central
@@ -40,8 +40,8 @@ information_resources:
     description: >-
       The core GO Consortium annotation team responsible for producing annotations
       for a range of model organisms.
-    knowledge level: curated
-    agent type: not_provided
+    knowledge_level: knowledge_assertion
+    agent_type: not_provided
   - id: infores:goc
     status: released
     name: Gene Ontology Consortium
@@ -52,8 +52,8 @@ information_resources:
     description: >-
       The consortium that develops and maintains the Gene Ontology and produces
       GO annotations based on published experimental results.
-    knowledge level: curated
-    agent type: not_provided
+    knowledge_level: knowledge_assertion
+    agent_type: not_provided
   - id: infores:disprot
     status: released
     name: DisProt
@@ -62,8 +62,8 @@ information_resources:
     description: >-
       A database of intrinsically disordered proteins that provides manually curated
       annotations for regions of disorder in proteins.
-    knowledge level: curated
-    agent type: not_provided
+    knowledge_level: knowledge_assertion
+    agent_type: not_provided
   - id: infores:agrkb
     status: released
     name: Alliance of Genome Resources (AGR Knowledgebase)
