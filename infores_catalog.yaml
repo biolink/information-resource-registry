@@ -4944,15 +4944,9 @@ information_resources:
     consumed_by:
       - infores:aragorn
       - infores:arax
-    status: released
-    knowledge_level: not_provided
-    agent_type: not_provided
   - id: infores:unii
     status: released
     knowledge_level: not_provided
     agent_type: not_provided
     consumed_by:
       - infores:rtx-kg2
-    status: released
-    knowledge_level: not_provided
-    agent_type: not_provided
