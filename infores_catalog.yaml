@@ -1415,6 +1415,7 @@ information_resources:
       that defines the clinical relevance of genes and variants for use in precision
       medicine and research
     consumed_by:
+      - infores:genetics-data-provider
       - infores:mygene-info
   - id: infores:clinical-profiles
     status: deprecated
@@ -1439,6 +1440,7 @@ information_resources:
       ClinVar is a freely accessible, public archive of reports of the
       relationships among human variations and phenotypes, with supporting evidence.
     consumed_by:
+      - infores:genetics-data-provider
       - infores:myvariant-info
   - id: infores:cmap
     status: released
@@ -2170,6 +2172,8 @@ information_resources:
     description: >-
       The GenCC DB provides information pertaining to the validity of gene-disease
       relationships, with a current focus on Mendelian diseases
+    consumed_by:
+      - infores:genetics-data-provider
   - id: infores:gendr
     status: released
     name: GenDR Database of Dietary Restriction-Related Genes
@@ -2191,6 +2195,8 @@ information_resources:
       available to the public. The dataset encompasses 3,817 phenotypes with gene-based
       and single-variant testing across 281,852 individuals with exome sequence data
       from the UK Biobank.
+    consumed_by:
+      - infores:genetics-data-provider
   - id: infores:genepio
     status: released
     name: Genomic Epidemiology Ontology
@@ -2223,6 +2229,11 @@ information_resources:
       - infores:aragorn
       - infores:arax
       - infores:molepro
+    consumes:
+      - infores:clingen
+      - infores:clinvar
+      - infores:gencc
+      - infores:genebass
   - id: infores:ghr
     status: released
     name: Genetics Home Reference
@@ -3945,7 +3956,7 @@ information_resources:
     consumed_by:
       - infores:aragorn
       - infores:arax
-    consumes: 
+    consumes:
       - infores:bgee
       - infores:bindingdb
       - infores:gdsc

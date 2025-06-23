@@ -125,7 +125,9 @@ infores:chembl,infores:mychem-info,1
 infores:chembl,infores:rtx-kg2,1
 infores:civic,infores:myvariant-info,1
 infores:cl,infores:rtx-kg2,1
+infores:clingen,infores:genetics-data-provider,1
 infores:clingen,infores:mygene-info,1
+infores:clinvar,infores:genetics-data-provider,1
 infores:clinvar,infores:myvariant-info,1
 infores:cmap,infores:molepro,1
 infores:columbia-cdw-ehr-data,infores:cohd,1
@@ -175,6 +177,8 @@ infores:fma-umls,infores:rtx-kg2,1
 infores:fooddb,infores:biothings-foodb,1
 infores:foodon,infores:rtx-kg2,1
 infores:gdsc,infores:biothings-multiomics-biggim-drugresponse,1
+infores:gencc,infores:genetics-data-provider,1
+infores:genebass,infores:genetics-data-provider,1
 infores:genepio,infores:rtx-kg2,1
 infores:genetics-data-provider,infores:aragorn,1
 infores:genetics-data-provider,infores:arax,1
