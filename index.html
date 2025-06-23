@@ -12,7 +12,7 @@
       
       
       
-        <link rel="next" href="sankey_diagram.png">
+        <link rel="next" href="data_flow_diagram.png">
       
       
       <link rel="icon" href="assets/images/favicon.png">
@@ -320,7 +320,7 @@
   
   
     <li class="md-nav__item">
-      <a href="sankey_diagram.png" class="md-nav__link">
+      <a href="data_flow_diagram.png" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -433,6 +433,26 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="registry/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Registry
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -507,7 +527,7 @@
 <h1 id="information-resource-registry-schema">Information-Resource-Registry-Schema</h1>
 <p>The information resource registry is a listing of data sources present in the NCATS Data Translator system.
 Each information resource has an identifier, a short description, and an URL to more information about that resource.</p>
-<p>Explore the intricate relationships between data sources and aggregators used in Translator <a href="sankey_diagram.png">this detailed Sankey diagram</a>.
+<p>Explore the intricate relationships between data sources and aggregators used in Translator <a href="data_flow_diagram.png">this detailed diagram</a>.
 The visualization provides a clear representation of how specific datasets are consumed by various data
 integration platforms, illustrating the flow and interdependence of information within the ecosystem.
 By examining these connections, researchers and data professionals can gain insights into the provenance
@@ -545,6 +565,14 @@ and utilization of key resources, enhancing their understanding of data interope
 <tr>
 <td><a href="agent_type/">agent_type</a></td>
 <td>The type of agent that supports an edge or node.  This is a general categorization of the type of agent that supports a statement, and is not intended to be a comprehensive description of the agent.  For example, a statement may be supported by a single publication, but that publication may contain multiple types of evidence, such as a computational prediction and a manual curation.  In this case, the agent type would be "publication", and the evidence would be described in more detail in the evidence graph.</td>
+</tr>
+<tr>
+<td><a href="consumed_by/">consumed_by</a></td>
+<td>A collection of information resources that consume this information resource</td>
+</tr>
+<tr>
+<td><a href="consumes/">consumes</a></td>
+<td>A collection of information resources that are consumed by this information resource</td>
 </tr>
 <tr>
 <td><a href="description/">description</a></td>

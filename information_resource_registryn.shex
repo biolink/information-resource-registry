@@ -49,7 +49,7 @@ linkml:Sparqlpath xsd:string
     (  $<InformationResource_tes> (  <status> [ <https://w3id.org/biolink/infores/InformationResourceStatusEnum#released>
              <https://w3id.org/biolink/infores/InformationResourceStatusEnum#deprecated>
              <https://w3id.org/biolink/infores/InformationResourceStatusEnum#draft>
-             <https://w3id.org/biolink/infores/InformationResourceStatusEnum#modified> ] ? ;
+             <https://w3id.org/biolink/infores/InformationResourceStatusEnum#modified> ] ;
           rdfs:label @linkml:String ? ;
           <id> @linkml:String ;
           <xref> @linkml:String * ;
@@ -70,7 +70,9 @@ linkml:Sparqlpath xsd:string
              <https://w3id.org/biolink/infores/AgentTypeEnum#computational_model>
              <https://w3id.org/biolink/infores/AgentTypeEnum#text_mining_agent>
              <https://w3id.org/biolink/infores/AgentTypeEnum#image_processing_agent>
-             <https://w3id.org/biolink/infores/AgentTypeEnum#manual_validation_of_automated_agent> ] ?
+             <https://w3id.org/biolink/infores/AgentTypeEnum#manual_validation_of_automated_agent> ] ? ;
+          <consumes> @linkml:Uriorcurie * ;
+          <consumed_by> @linkml:Uriorcurie *
        ) ;
        rdf:type [ <InformationResource> ] ?
     )

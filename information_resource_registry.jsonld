@@ -20,15 +20,6 @@
       "prefix_reference": "https://w3id.org/biolink/infores/"
     }
   ],
-  "emit_prefixes": [
-    "rdf",
-    "rdfs",
-    "xsd",
-    "skos",
-    "oboInOwl",
-    "BIOGRID",
-    "SO"
-  ],
   "default_curi_maps": [
     "obo_context",
     "idot_context",
@@ -458,6 +449,34 @@
   ],
   "slots": [
     {
+      "name": "consumes",
+      "definition_uri": "https://w3id.org/biolink/infores/consumes",
+      "description": "A collection of information resources that are consumed by this information resource",
+      "from_schema": "https://w3id.org/biolink/information_resource_registry.yaml",
+      "slot_uri": "https://w3id.org/biolink/infores/consumes",
+      "owner": "InformationResource",
+      "domain_of": [
+        "InformationResource"
+      ],
+      "range": "uriorcurie",
+      "multivalued": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "consumed_by",
+      "definition_uri": "https://w3id.org/biolink/infores/consumed_by",
+      "description": "A collection of information resources that consume this information resource",
+      "from_schema": "https://w3id.org/biolink/information_resource_registry.yaml",
+      "slot_uri": "https://w3id.org/biolink/infores/consumed_by",
+      "owner": "InformationResource",
+      "domain_of": [
+        "InformationResource"
+      ],
+      "range": "uriorcurie",
+      "multivalued": true,
+      "@type": "SlotDefinition"
+    },
+    {
       "name": "status",
       "definition_uri": "https://w3id.org/biolink/infores/status",
       "description": "the status of the infores identifier, the default is \"released\"",
@@ -468,6 +487,7 @@
         "InformationResource"
       ],
       "range": "InformationResourceStatusEnum",
+      "required": true,
       "@type": "SlotDefinition"
     },
     {
@@ -638,18 +658,53 @@
         "synonym",
         "description",
         "knowledge_level",
-        "agent_type"
+        "agent_type",
+        "consumes",
+        "consumed_by"
       ],
       "slot_usage": {},
       "class_uri": "https://w3id.org/biolink/infores/InformationResource",
+      "rules": [
+        {
+          "preconditions": {
+            "slot_conditions": [
+              {
+                "name": "status",
+                "equals_string": "released",
+                "@type": "SlotDefinition"
+              }
+            ],
+            "@type": "AnonymousClassExpression"
+          },
+          "@type": "ClassRule"
+        },
+        {
+          "postconditions": {
+            "slot_conditions": [
+              {
+                "name": "knowledge_level",
+                "required": true,
+                "@type": "SlotDefinition"
+              },
+              {
+                "name": "agent_type",
+                "required": true,
+                "@type": "SlotDefinition"
+              }
+            ],
+            "@type": "AnonymousClassExpression"
+          },
+          "@type": "ClassRule"
+        }
+      ],
       "@type": "ClassDefinition"
     }
   ],
   "metamodel_version": "1.7.0",
   "source_file": "information_resource_registry.yaml",
-  "source_file_date": "2024-10-07T22:38:56",
-  "source_file_size": 11239,
-  "generation_date": "2024-10-07T22:39:51",
+  "source_file_date": "2025-06-23T19:54:35",
+  "source_file_size": 11116,
+  "generation_date": "2025-06-23T19:55:20",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/information_resource_registry.context.jsonld",

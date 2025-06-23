@@ -128,7 +128,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../sankey_diagram.png">
+<a class="md-nav__link" href="../data_flow_diagram.png">
 <span class="md-ellipsis">
     Visualize Translator Data Flow (sankey)
   </span>
@@ -166,6 +166,13 @@
 <a class="md-nav__link" href="../appendices/">
 <span class="md-ellipsis">
     Addition information
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../registry/">
+<span class="md-ellipsis">
+    Registry
   </span>
 </a>
 </li>
@@ -222,6 +229,10 @@
 
           InformationResource --|&gt; AgentTypeEnum : agent_type
 
+      InformationResource : consumed_by
+
+      InformationResource : consumes
+
       InformationResource : description
 
       InformationResource : id
@@ -256,7 +267,7 @@
 <tbody>
 <tr>
 <td><a href="../status/">status</a>: <br> <i> the status of the infores identifier, the default is "released" </i></br></td>
-<td>0..1 <br/> <a href="../InformationResourceStatusEnum/">InformationResourceStatusEnum</a></td>
+<td>1 <br/> <a href="../InformationResourceStatusEnum/">InformationResourceStatusEnum</a></td>
 <td>direct</td>
 <td></td>
 </tr>
@@ -299,6 +310,18 @@
 <tr>
 <td><a href="../agent_type/">agent_type</a>: <br/> <i> The type of agent that supports an edge or node.  This is a general categorization of the type of agent that supports a statement, and is not intended to be a comprehensive description of the agent.  For example, a statement may be supported by a single publication, but that publication may contain multiple types of evidence, such as a computational prediction and a manual curation.  In this case, the agent type would be "publication", and the evidence would be described in more detail in the evidence graph. </i></td>
 <td>0..1 <br/> <a href="../AgentTypeEnum/">AgentTypeEnum</a></td>
+<td>direct</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="../consumes/">consumes</a>: <br/> <i> A collection of information resources that are consumed by this information resource </i></td>
+<td>* <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>direct</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="../consumed_by/">consumed_by</a>: <br/> <i> A collection of information resources that consume this information resource </i></td>
+<td>* <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
 <td>direct</td>
 <td></td>
 </tr>
@@ -345,6 +368,22 @@ slots:
 - description
 - knowledge_level
 - agent_type
+- consumes
+- consumed_by
+rules:
+- preconditions:
+    slot_conditions:
+      status:
+        name: status
+        equals_string: released
+- postconditions:
+    slot_conditions:
+      knowledge_level:
+        name: knowledge_level
+        required: true
+      agent_type:
+        name: agent_type
+        required: true
 
 </code></pre>
 </details>

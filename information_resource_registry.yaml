@@ -3,48 +3,25 @@ id: https://w3id.org/biolink/information_resource_registry.yaml
 name: Information-Resource-Registry-Schema
 license: https://creativecommons.org/publicdomain/zero/1.0/
 
-# Version should be kept in sync with primary Git repository release tag
-
 version: 1.0.0
 
+default_prefix: infores
+default_range: string
 
-## ------------
-##
-## PREFIXES
-## ------------
-# CURIE namespaces (prefixes/base URI's) mappings of prefixes used in the body of the Biolink Model specification
-# are resolved using a specific precedence order, for use in the generation of the Biolink Model context.jsonld
-# mappings to namespaces. Any prefixes encountered in the Biolink Model but not resolved by the following
-# precedence sources, are anonymously declared by linkml as http://example.org/UNKNOWN/ rooted base URI's
-# which should ideally be repaired in one of the precedence lists.
-#
-# 1. The following 'prefixes:' delimited list has first precedence in resolution.
-#
-prefixes:
-  biolink: 'https://w3id.org/biolink/'
-  linkml: 'https://w3id.org/linkml/'
-  infores: 'https://w3id.org/biolink/infores/'
 
 imports:
   - linkml:types
 
-default_prefix: infores
-default_range: string
+prefixes:
+  biolink: 'https://w3id.org/biolink/'
+  linkml: 'https://w3id.org/linkml/'
+  infores: 'https://w3id.org/biolink/infores/'
 
 default_curi_maps:
   - obo_context
   - idot_context
   - monarch_context
   - semweb_context
-
-emit_prefixes:
-  - rdf
-  - rdfs
-  - xsd
-  - skos
-  - oboInOwl
-  - BIOGRID
-  - SO
 
 classes:
   InformationResourceContainer:
@@ -65,6 +42,8 @@ classes:
       - description
       - knowledge_level
       - agent_type
+      - consumes
+      - consumed_by
     description: >-
       A database or knowledgebase and its supporting ecosystem of interfaces 
       and services that deliver content to consumers (e.g. web portals, APIs, 
@@ -73,12 +52,36 @@ classes:
       databases, and include many access endpoints and user
       interfaces. Information Resources include project-specific resources
       such as a Translator Knowledge Provider, and community knowledgebases like ChemBL, OMIM, or DGIdb.
+    rules:
+      - preconditions:
+          slot_conditions:
+            status:
+              equals_string: "released"
+      - postconditions:
+          slot_conditions:
+            knowledge_level:
+              required: true
+            agent_type:
+              required: true
 
 slots:
+
+  consumes:
+    description: >-
+      A collection of information resources that are consumed by this information resource
+    multivalued: true
+    range: uriorcurie
+
+  consumed_by:
+    description: >-
+      A collection of information resources that consume this information resource
+    multivalued: true
+    range: uriorcurie
 
   status:
     description: the status of the infores identifier, the default is "released"
     range: InformationResourceStatusEnum
+    required: true
 
   information_resources:
     description: a collection of information resources
@@ -131,6 +134,7 @@ slots:
         computational prediction and a manual curation.  In this case, the
         knowledge level would be "curated", and the evidence would be described
         in more detail in the evidence graph.
+
 
   agent_type:
     range: AgentTypeEnum
