@@ -4940,11 +4940,13 @@ information_resources:
   - id: infores:catrax-pharmacogenomics
     status: released
     knowledge_level: not_provided
+    agent_type: not_provided
     consumed_by:
       - infores:aragorn
       - infores:arax
   - id: infores:unii
     status: released
     knowledge_level: not_provided
+    agent_type: not_provided
     consumed_by:
       - infores:rtx-kg2
