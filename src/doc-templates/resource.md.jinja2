@@ -1,0 +1,34 @@
+[//]: # (DO NOT MANUALLY EDIT THIS FILE. IT IS GENERATED FROM A TEMPLATE.)
+
+## {{ resource.name }} ({{ resource.id }})
+
+**Status**: {{ resource.status }}
+  
+**Knowledge Level**: {{ resource.knowledge_level }}
+  
+**Agent Type**: {{ resource.agent_type }}
+
+{% if resource.description -%}
+**Description**: {{ resource.description }}
+{%- endif %}
+
+{%- if resource.synonym -%}
+**Synonyms**:
+{% for syn in resource.synonym %}
+- {{ syn }}
+{%- endfor %}
+{%- endif %}
+
+{% if resource.xref -%}
+**Cross References**:
+{% for x in resource.xref %}
+- [{{ x }}]({{ x }})
+{%- endfor %}
+{%- endif %}
+
+{% if resource.consumed_by %}
+**Consumed by**:
+{% for consumer in resource.consumed_by %}
+- {{ consumer }}
+{%- endfor %}
+{%- endif %}

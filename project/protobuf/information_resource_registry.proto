@@ -1,3 +1,7 @@
+ syntax="proto3";
+ package
+// metamodel_version: 1.7.0
+// version: 1.0.0
 // A database or knowledgebase and its supporting ecosystem of interfaces  and services that deliver content to consumers (e.g. web portals, APIs,  query endpoints, streaming services, data downloads, etc.). A single Information Resource by this definition may span many different datasets or databases, and include many access endpoints and user interfaces. Information Resources include project-specific resources such as a Translator Knowledge Provider, and community knowledgebases like ChemBL, OMIM, or DGIdb.
 message InformationResource
  {
@@ -9,6 +13,8 @@ message InformationResource
   string description = 0
   knowledgeLevelEnum knowledgeLevel = 0
   agentTypeEnum agentType = 0
+ repeated  uriorcurie consumes = 0
+ repeated  uriorcurie consumedBy = 0
  }
 // A collection of information resources
 message InformationResourceContainer

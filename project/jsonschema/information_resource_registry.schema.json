@@ -3,23 +3,78 @@
         "AgentTypeEnum": {
             "description": "The type of agent that supports an edge or node.  This is a general categorization of the type of agent that supports a statement, and is not intended to be a comprehensive description of the agent.  For example, a statement may be supported by a single publication, but that publication may contain multiple types of evidence, such as a computational prediction and a manual curation.  In this case, the agent type would be \"publication\", and the evidence would be described in more detail in the evidence graph.",
             "enum": [
+                "manual_agent",
                 "not_provided",
-                "computational_model"
+                "automated_agent",
+                "data_analysis_pipeline",
+                "computational_model",
+                "text_mining_agent",
+                "image_processing_agent",
+                "manual_validation_of_automated_agent"
             ],
             "title": "AgentTypeEnum",
             "type": "string"
         },
         "InformationResource": {
             "additionalProperties": false,
+            "allOf": [
+                {
+                    "if": {
+                        "properties": {
+                            "status": {
+                                "const": "released"
+                            }
+                        },
+                        "required": [
+                            "status"
+                        ]
+                    }
+                },
+                {
+                    "then": {
+                        "properties": {
+                            "agent_type": {},
+                            "knowledge_level": {}
+                        },
+                        "required": [
+                            "knowledge_level",
+                            "agent_type"
+                        ]
+                    }
+                }
+            ],
             "description": "A database or knowledgebase and its supporting ecosystem of interfaces  and services that deliver content to consumers (e.g. web portals, APIs,  query endpoints, streaming services, data downloads, etc.). A single Information Resource by this definition may span many different datasets or databases, and include many access endpoints and user interfaces. Information Resources include project-specific resources such as a Translator Knowledge Provider, and community knowledgebases like ChemBL, OMIM, or DGIdb.",
             "properties": {
                 "agent_type": {
                     "$ref": "#/$defs/AgentTypeEnum",
                     "description": "The type of agent that supports an edge or node.  This is a general categorization of the type of agent that supports a statement, and is not intended to be a comprehensive description of the agent.  For example, a statement may be supported by a single publication, but that publication may contain multiple types of evidence, such as a computational prediction and a manual curation.  In this case, the agent type would be \"publication\", and the evidence would be described in more detail in the evidence graph."
                 },
+                "consumed_by": {
+                    "description": "A collection of information resources that consume this information resource",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
+                "consumes": {
+                    "description": "A collection of information resources that are consumed by this information resource",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": [
+                        "array",
+                        "null"
+                    ]
+                },
                 "description": {
                     "description": "A free-text description of an entity or attribute.",
-                    "type": "string"
+                    "type": [
+                        "string",
+                        "null"
+                    ]
                 },
                 "id": {
                     "description": "A unique identifier for an entity. Must be either a CURIE shorthand for a URI or a complete URI",
@@ -31,7 +86,10 @@
                 },
                 "name": {
                     "description": "A human-readable name for an attribute or entity.",
-                    "type": "string"
+                    "type": [
+                        "string",
+                        "null"
+                    ]
                 },
                 "status": {
                     "$ref": "#/$defs/InformationResourceStatusEnum",
@@ -42,17 +100,24 @@
                     "items": {
                         "type": "string"
                     },
-                    "type": "array"
+                    "type": [
+                        "array",
+                        "null"
+                    ]
                 },
                 "xref": {
                     "description": "A database cross reference or alternative identifier for a NamedThing or edge between two  NamedThings.  This property should point to a database record or webpage that supports the existence of the edge, or  gives more detail about the edge. This property can be used on a node or edge to provide multiple URIs or CURIE cross references.",
                     "items": {
                         "type": "string"
                     },
-                    "type": "array"
+                    "type": [
+                        "array",
+                        "null"
+                    ]
                 }
             },
             "required": [
+                "status",
                 "id"
             ],
             "title": "InformationResource",
@@ -67,7 +132,10 @@
                     "items": {
                         "$ref": "#/$defs/InformationResource"
                     },
-                    "type": "array"
+                    "type": [
+                        "array",
+                        "null"
+                    ]
                 }
             },
             "title": "InformationResourceContainer",
@@ -87,13 +155,14 @@
         "KnowledgeLevelEnum": {
             "description": "The level of knowledge that supports an edge or node.  This is a general categorization of the type of evidence that supports a statement, and is not intended to be a comprehensive description of the evidence.  For example, a statement may be supported by a single publication, but that publication may contain multiple types of evidence, such as a computational prediction and a manual curation.  In this case, the knowledge level would be \"curated\", and the evidence would be described in more detail in the evidence graph.",
             "enum": [
-                "curated",
-                "predicted",
-                "text_mined",
-                "correlation",
-                "observed",
-                "other",
-                "mixed"
+                "knowledge_assertion",
+                "statistical_association",
+                "prediction",
+                "observation",
+                "not_provided",
+                "logical_entailment",
+                "mixed",
+                "other"
             ],
             "title": "KnowledgeLevelEnum",
             "type": "string"
@@ -110,7 +179,10 @@
             "items": {
                 "$ref": "#/$defs/InformationResource"
             },
-            "type": "array"
+            "type": [
+                "array",
+                "null"
+            ]
         }
     },
     "title": "Information-Resource-Registry-Schema",

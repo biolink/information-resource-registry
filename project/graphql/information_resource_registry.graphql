@@ -1,6 +1,40 @@
+# metamodel_version: 1.7.0
+# version: 1.0.0
+enum AgentTypeEnum
+  {
+    manual_agent
+    not_provided
+    automated_agent
+    data_analysis_pipeline
+    computational_model
+    text_mining_agent
+    image_processing_agent
+    manual_validation_of_automated_agent
+  }
+
+enum InformationResourceStatusEnum
+  {
+    released
+    deprecated
+    draft
+    modified
+  }
+
+enum KnowledgeLevelEnum
+  {
+    knowledge_assertion
+    statistical_association
+    prediction
+    observation
+    not_provided
+    logical_entailment
+    mixed
+    other
+  }
+
 type InformationResource
   {
-    status: InformationResourceStatusEnum
+    status: InformationResourceStatusEnum!
     name: String
     id: String!
     xref: [String]
@@ -8,6 +42,8 @@ type InformationResource
     description: String
     knowledgeLevel: KnowledgeLevelEnum
     agentType: AgentTypeEnum
+    consumes: [Uriorcurie]
+    consumedBy: [Uriorcurie]
   }
 
 type InformationResourceContainer

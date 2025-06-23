@@ -1,0 +1,182 @@
+{
+  "infores:answer-coalesce": [],
+  "infores:aragorn": [],
+  "infores:arax": [],
+  "infores:ars": [],
+  "infores:automat-binding-db": [],
+  "infores:automat-cam-kp": [],
+  "infores:automat-ctd": [],
+  "infores:automat-drug-central": [],
+  "infores:automat-ehr-clinical-connections-kp": [],
+  "infores:automat-ehr-may-treat-kp": [],
+  "infores:automat-genome-alliance": [],
+  "infores:automat-gtex": [],
+  "infores:automat-gtopdb": [],
+  "infores:automat-gwas-catalog": [],
+  "infores:automat-hetionet": [],
+  "infores:automat-hgnc": [],
+  "infores:automat-hmdb": [],
+  "infores:automat-human-goa": [],
+  "infores:automat-icees-kg": [],
+  "infores:automat-intact": [],
+  "infores:automat-monarchinitiative": [],
+  "infores:automat-panther": [],
+  "infores:automat-pharos": [],
+  "infores:automat-reactome": [],
+  "infores:automat-robokop": [],
+  "infores:automat-string-db": [],
+  "infores:automat-ubergraph": [],
+  "infores:automat-viral-proteome": [],
+  "infores:biothings-agr": [
+    "infores:agrkb"
+  ],
+  "infores:biothings-bindingdb": [
+    "infores:bindingdb"
+  ],
+  "infores:biothings-bioplanet-pathway-disease": [
+    "infores:bioplanet"
+  ],
+  "infores:biothings-bioplanet-pathway-gene": [
+    "infores:bioplanet"
+  ],
+  "infores:biothings-ddinter": [
+    "infores:ddinter"
+  ],
+  "infores:biothings-dgidb": [
+    "infores:dgidb"
+  ],
+  "infores:biothings-diseases": [
+    "infores:diseases"
+  ],
+  "infores:biothings-ebi-gene2phenotype": [
+    "infores:ebi-gene2phenotype"
+  ],
+  "infores:biothings-explorer": [],
+  "infores:biothings-foodb": [
+    "infores:fooddb"
+  ],
+  "infores:biothings-fooddata-central": [
+    "infores:fooddata-central"
+  ],
+  "infores:biothings-go-bp": [
+    "infores:go"
+  ],
+  "infores:biothings-go-cc": [
+    "infores:go"
+  ],
+  "infores:biothings-go-mf": [
+    "infores:go"
+  ],
+  "infores:biothings-gtrx": [
+    "infores:gtrx"
+  ],
+  "infores:biothings-hpo": [
+    "infores:hpo",
+    "infores:hpo-annotations"
+  ],
+  "infores:biothings-idisk": [
+    "infores:idisk"
+  ],
+  "infores:biothings-innatedb": [
+    "infores:innatedb"
+  ],
+  "infores:biothings-mabs": [
+    "infores:sepid_mab"
+  ],
+  "infores:biothings-mgi-g2p": [
+    "infores:mgi"
+  ],
+  "infores:biothings-multiomics-biggim-drugresponse": [],
+  "infores:biothings-multiomics-ehr-risk": [],
+  "infores:biothings-multiomics-wellness": [],
+  "infores:biothings-pfocr": [
+    "infores:pfocr"
+  ],
+  "infores:biothings-rare-source": [
+    "infores:rare-source"
+  ],
+  "infores:biothings-repodb": [
+    "infores:repodb"
+  ],
+  "infores:biothings-rhea": [
+    "infores:rhea"
+  ],
+  "infores:biothings-semmeddb": [
+    "infores:semmeddb"
+  ],
+  "infores:biothings-suppkg": [
+    "infores:suppkg"
+  ],
+  "infores:biothings-ttd": [
+    "infores:ttd"
+  ],
+  "infores:biothings-uberon-ontology": [
+    "infores:uberon"
+  ],
+  "infores:catrax-pharmacogenomics": [],
+  "infores:cohd": [],
+  "infores:complex-portal": [],
+  "infores:connections-hypothesis": [],
+  "infores:cqs": [],
+  "infores:ctd": [],
+  "infores:ebi-proteins": [
+    "infores:uniprot"
+  ],
+  "infores:ebi-quick-go": [
+    "infores:go"
+  ],
+  "infores:gelinea": [],
+  "infores:genetics-data-provider": [],
+  "infores:improving-agent": [],
+  "infores:knowledge-collaboratory": [],
+  "infores:litvar": [
+    "infores:dbsnp"
+  ],
+  "infores:molepro": [],
+  "infores:monarchinitiative": [],
+  "infores:multiomics-clinicaltrials": [],
+  "infores:multiomics-drugapprovals": [],
+  "infores:multiomics-microbiome": [],
+  "infores:multiomics-multiomics": [],
+  "infores:mychem-info": [
+    "infores:chebi",
+    "infores:chembl",
+    "infores:drugcentral",
+    "infores:fda-orphan-drug-db"
+  ],
+  "infores:mydisease-info": [
+    "infores:ctd",
+    "infores:disgenet",
+    "infores:hpo-annotations",
+    "infores:mondo"
+  ],
+  "infores:mygene-info": [
+    "infores:clingen",
+    "infores:cpdb",
+    "infores:ncbi-gene",
+    "infores:panther",
+    "infores:reactome"
+  ],
+  "infores:myvariant-info": [
+    "infores:civic",
+    "infores:clinvar",
+    "infores:dbsnp"
+  ],
+  "infores:ols": [
+    "infores:disease-ontology"
+  ],
+  "infores:openpredict": [],
+  "infores:pharmgkb": [],
+  "infores:rampdb": [],
+  "infores:renci-bionames": [],
+  "infores:rtx-kg2": [],
+  "infores:service-provider-trapi": [],
+  "infores:spoke": [],
+  "infores:sri-answer-appraiser": [],
+  "infores:sri-name-resolver": [],
+  "infores:sri-node-normalizer": [],
+  "infores:text-mining-provider-cooccurrence": [],
+  "infores:text-mining-provider-targeted": [],
+  "infores:unsecret-agent": [],
+  "infores:workflow-runner": []
+}
