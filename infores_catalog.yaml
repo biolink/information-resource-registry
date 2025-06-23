@@ -4929,20 +4929,20 @@ information_resources:
       - infores:sepid_mab
     consumed_by:
       - infores:service-provider-trapi
-    status: released
     knowledge_level: not_provided
     agent_type: not_provided
   - id: infores:sepid_mab
     status: released
     consumed_by:
       - infores:biothings-mabs
-    status: released
     knowledge_level: not_provided
     agent_type: not_provided
   - id: infores:catrax-pharmacogenomics
+    status: released
     consumed_by:
       - infores:aragorn
       - infores:arax
   - id: infores:unii
+    status: released
     consumed_by:
       - infores:rtx-kg2
