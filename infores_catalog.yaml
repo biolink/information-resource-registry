@@ -1,5 +1,69 @@
 ---
 information_resources:
+  - id: infores:rnacentral
+    status: released
+    name: RNAcentral
+    xref:
+      - https://rnacentral.org
+    description: >-
+      A comprehensive database of non-coding RNA sequences that provides a single access point
+      to RNA sequences from a range of resources.
+    knowledge_level: knowledge_assertion
+    agent_type: not_provided
+  - id: infores:dictybase
+    status: released
+    name: dictyBase
+    xref:
+      - http://dictybase.org
+    description: >-
+      The central resource for Dictyostelid genomics, providing model organism database
+      services for the research community.
+    knowledge_level: knowledge_assertion
+    agent_type: not_provided
+  - id: infores:cacao
+    status: released
+    name: Community Assessment of Community Annotation with Ontologies
+    xref:
+      - http://gowiki.tamu.edu/wiki/index.php/Category:CACAO
+    synonym:
+      - CACAO
+    description: >-
+      A collaborative annotation project where undergraduate students use the Gene Ontology
+      to annotate proteins based on evidence from scientific papers.
+    knowledge_level: knowledge_assertion
+    agent_type: not_provided
+  - id: infores:go-central
+    status: released
+    name: GO Central
+    xref:
+      - http://www.geneontology.org/
+    description: >-
+      The core GO Consortium annotation team responsible for producing annotations
+      for a range of model organisms.
+    knowledge_level: knowledge_assertion
+    agent_type: not_provided
+  - id: infores:goc
+    status: released
+    name: Gene Ontology Consortium
+    xref:
+      - http://www.geneontology.org/
+    synonym:
+      - GOC
+    description: >-
+      The consortium that develops and maintains the Gene Ontology and produces
+      GO annotations based on published experimental results.
+    knowledge_level: knowledge_assertion
+    agent_type: not_provided
+  - id: infores:disprot
+    status: released
+    name: DisProt
+    xref:
+      - https://www.disprot.org
+    description: >-
+      A database of intrinsically disordered proteins that provides manually curated
+      annotations for regions of disorder in proteins.
+    knowledge_level: knowledge_assertion
+    agent_type: not_provided
   - id: infores:agrkb
     status: released
     name: Alliance of Genome Resources (AGR Knowledgebase)
@@ -1415,6 +1479,7 @@ information_resources:
       that defines the clinical relevance of genes and variants for use in precision
       medicine and research
     consumed_by:
+      - infores:genetics-data-provider
       - infores:mygene-info
   - id: infores:clinical-profiles
     status: deprecated
@@ -1439,6 +1504,7 @@ information_resources:
       ClinVar is a freely accessible, public archive of reports of the
       relationships among human variations and phenotypes, with supporting evidence.
     consumed_by:
+      - infores:genetics-data-provider
       - infores:myvariant-info
   - id: infores:cmap
     status: released
@@ -1673,7 +1739,7 @@ information_resources:
       - infores:automat-isb-EHRMLA-data
       - infores:connections-hypothesis
       - infores:multiomics-ctkp
-      - infores:text-mining-provider targeted
+      - infores:text-mining-provider-targeted
       - infores:service-provider-tmkp-targeted
       - infores:openpredict
       - infores:service-provider-aeolus
@@ -2170,6 +2236,8 @@ information_resources:
     description: >-
       The GenCC DB provides information pertaining to the validity of gene-disease
       relationships, with a current focus on Mendelian diseases
+    consumed_by:
+      - infores:genetics-data-provider
   - id: infores:gendr
     status: released
     name: GenDR Database of Dietary Restriction-Related Genes
@@ -2191,6 +2259,8 @@ information_resources:
       available to the public. The dataset encompasses 3,817 phenotypes with gene-based
       and single-variant testing across 281,852 individuals with exome sequence data
       from the UK Biobank.
+    consumed_by:
+      - infores:genetics-data-provider
   - id: infores:genepio
     status: released
     name: Genomic Epidemiology Ontology
@@ -2223,6 +2293,11 @@ information_resources:
       - infores:aragorn
       - infores:arax
       - infores:molepro
+    consumes:
+      - infores:clingen
+      - infores:clinvar
+      - infores:gencc
+      - infores:genebass
   - id: infores:ghr
     status: released
     name: Genetics Home Reference
@@ -3945,7 +4020,7 @@ information_resources:
     consumed_by:
       - infores:aragorn
       - infores:arax
-    consumes: 
+    consumes:
       - infores:bgee
       - infores:bindingdb
       - infores:gdsc
@@ -4924,14 +4999,15 @@ information_resources:
     synonym:
       - Phenopacket Store
   - id: infores:biothings-mabs
+    status: released
     consumes:
       - infores:sepid_mab
     consumed_by:
       - infores:service-provider-trapi
-    status: released
     knowledge_level: not_provided
     agent_type: not_provided
   - id: infores:sepid_mab
+    status: released
     consumed_by:
       - infores:biothings-mabs
   - id: infores:amyco
@@ -4950,10 +5026,16 @@ information_resources:
     knowledge_level: not_provided
     agent_type: not_provided
   - id: infores:catrax-pharmacogenomics
+    status: released
+    knowledge_level: not_provided
+    agent_type: not_provided
     consumed_by:
       - infores:aragorn
       - infores:arax
   - id: infores:unii
+    status: released
+    knowledge_level: not_provided
+    agent_type: not_provided
     consumed_by:
       - infores:rtx-kg2
 

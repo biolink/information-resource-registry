@@ -702,9 +702,9 @@
   ],
   "metamodel_version": "1.7.0",
   "source_file": "information_resource_registry.yaml",
-  "source_file_date": "2025-06-17T15:30:47",
+  "source_file_date": "2025-06-23T19:02:44",
   "source_file_size": 11116,
-  "generation_date": "2025-06-17T15:31:29",
+  "generation_date": "2025-06-23T19:03:21",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/information_resource_registry.context.jsonld",
