@@ -2572,6 +2572,21 @@ information_resources:
     consumed_by:
       - infores:biothings-hpo
       - infores:mydisease-info
+  - id: infores:icd10cm
+    status: released
+    name: ICD10 Clinical Modification
+    xref:
+      - https://icd10cmtool.cdc.gov/
+    knowledge_level: knowledge_assertion
+    agent_type: not_provided
+  - id: infores:icd11-foundation
+    status: released
+    name: ICD11 Foundation
+    xref:
+      - https://icd.who.int/dev11/f/en
+    knowledge_level: knowledge_assertion
+    agent_type: not_provided
+    consumed_by:
       - infores:catrax-pharmacogenomics
   - id: infores:icd10-umls
     status: released
