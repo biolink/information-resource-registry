@@ -5079,6 +5079,8 @@ information_resources:
     status: released
     consumed_by:
       - infores:biothings-mabs
+    knowledge_level: not_provided
+    agent_type: not_provided
   - id: infores:amyco
     status: released
     name: The Amyloidoses Collection (AmyCo) Database 
