@@ -1,0 +1,8 @@
+{
+  "infores:genetics-data-provider": [
+    "infores:clinvar",
+    "infores:clingen",
+    "infores:gencc",
+    "infores:genebass"
+  ]
+}

@@ -81,6 +81,8 @@ infores:biothings-go-mf,infores:service-provider-trapi,1
 infores:biothings-hpo,infores:service-provider-trapi,1
 infores:biothings-idisk,infores:service-provider-trapi,1
 infores:biothings-mgi-g2p,infores:service-provider-trapi,1
+infores:biothings-multiomics-biggim-drugresponse,infores:aragorn,1
+infores:biothings-multiomics-biggim-drugresponse,infores:arax,1
 infores:biothings-multiomics-biggim-drugresponse,infores:service-provider-trapi,1
 infores:biothings-multiomics-ehr-risk,infores:service-provider-trapi,1
 infores:providence-st-joseph-ehr,infores:automat-ehr-may-treat-kp,1
@@ -92,6 +94,7 @@ infores:multiomics-clinicaltrials,infores:service-provider-trapi,1
 infores:biothings-multiomics-clinicaltrials,infores:rtx-kg2,1
 infores:multiomics-drugapprovals,infores:aragorn,1
 infores:multiomics-drugapprovals,infores:arax,1
+infores:multiomics-drugapprovals,infores:rtx-kg2,1
 infores:multiomics-drugapprovals,infores:service-provider-trapi,1
 infores:multiomics-multiomics,infores:aragorn,1
 infores:multiomics-multiomics,infores:arax,1
@@ -122,7 +125,9 @@ infores:chembl,infores:mychem-info,1
 infores:chembl,infores:rtx-kg2,1
 infores:civic,infores:myvariant-info,1
 infores:cl,infores:rtx-kg2,1
+infores:clingen,infores:genetics-data-provider,1
 infores:clingen,infores:mygene-info,1
+infores:clinvar,infores:genetics-data-provider,1
 infores:clinvar,infores:myvariant-info,1
 infores:cmap,infores:molepro,1
 infores:columbia-cdw-ehr-data,infores:cohd,1
@@ -172,6 +177,8 @@ infores:fma-umls,infores:rtx-kg2,1
 infores:fooddb,infores:biothings-foodb,1
 infores:foodon,infores:rtx-kg2,1
 infores:gdsc,infores:biothings-multiomics-biggim-drugresponse,1
+infores:gencc,infores:genetics-data-provider,1
+infores:genebass,infores:genetics-data-provider,1
 infores:genepio,infores:rtx-kg2,1
 infores:genetics-data-provider,infores:aragorn,1
 infores:genetics-data-provider,infores:arax,1
@@ -338,3 +345,6 @@ infores:dsstoxdb,infores:molepro,1
 infores:omop-ohdsi,infores:cohd,1
 infores:biothings-mabs,infores:service-provider-trapi,1
 infores:sepid_mab,infores:biothings-mabs,1
+infores:catrax-pharmacogenomics,infores:aragorn,1
+infores:catrax-pharmacogenomics,infores:arax,1
+infores:unii,infores:rtx-kg2,1

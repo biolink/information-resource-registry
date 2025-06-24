@@ -13,6 +13,7 @@ SHELL := bash
 
 RUN = poetry run
 DOCDIR = docs
+RELEASE_TMPDIR = release-output
 
 .PHONY: all clean
 
@@ -35,6 +36,14 @@ install:
 
 all: site
 site: gen-project gendoc
+
+create_release_extras:
+	mkdir -p ${RELEASE_TMPDIR}
+	cp infores_catalog.yaml ${RELEASE_TMPDIR}/infores_catalog.yaml
+	$(RUN) linkml-convert -s src/information_resource_registry/schema/information_resource_registry.yaml -f yaml -t tsv infores_catalog.yaml > ${RELEASE_TMPDIR}/infores_catalog.tsv
+	$(RUN) linkml-convert -s src/information_resource_registry/schema/information_resource_registry.yaml -f yaml -t json infores_catalog.yaml > ${RELEASE_TMPDIR}/infores_catalog.json
+	jq -c '.information_resources[]' ${RELEASE_TMPDIR}/infores_catalog.json > ${RELEASE_TMPDIR}/infores_catalog.jsonl
+
 
 test_pr:
 	$(RUN) linkml-validate infores_catalog.yaml -s src/information_resource_registry/schema/information_resource_registry.yaml
