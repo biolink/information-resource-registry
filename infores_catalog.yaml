@@ -2586,6 +2586,7 @@ information_resources:
       - https://icd.who.int/dev11/f/en
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+    xref:
       - infores:catrax-pharmacogenomics
   - id: infores:icd10-umls
     status: released
