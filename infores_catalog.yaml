@@ -5093,7 +5093,6 @@ information_resources:
       amyloidoses and other diseases related to amyloid deposition. The resource is not directly 
       accessible at this time, but Jensen Lab's [DISEASES](https://doi.org/10.1093/database/baac019)
       reports that it ingests this resource.
-    status: released
   - id: infores:catrax-pharmacogenomics
     status: released
     knowledge_level: not_provided
@@ -5107,4 +5106,3 @@ information_resources:
     agent_type: not_provided
     consumed_by:
       - infores:rtx-kg2
-
