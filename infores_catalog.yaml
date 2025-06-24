@@ -5094,8 +5094,6 @@ information_resources:
       accessible at this time, but Jensen Lab's [DISEASES](https://doi.org/10.1093/database/baac019)
       reports that it ingests this resource.
     status: released
-    knowledge_level: not_provided
-    agent_type: not_provided
   - id: infores:catrax-pharmacogenomics
     status: released
     knowledge_level: not_provided
