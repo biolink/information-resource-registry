@@ -1031,6 +1031,28 @@ information_resources:
       KP query web services.
     consumed_by:
       - infores:service-provider-trapi
+  - id: infores:catrax-pharmacogenomics
+    status: released
+    name: Multiomics Pharmacogenomics KP API
+    xref:
+      - https://github.com/NCATSTranslator/Translator-All/wiki/Pharmacogenomics-KP
+    knowledge_level: knowledge_assertion
+    agent_type: automated_agent
+    description: Documentation of the Pharmacogenomics KP query web services.
+    consumes:
+      - infores:drugbank
+      - infores:ncbi-gene
+      - infores:hpo
+      - infores:hpo-annotations
+      - infores:sider
+      - infores:mondo
+      - infores:drugcentral
+      - infores:pharmgkb
+      - infores:primekg
+      - infores:cellmarker
+      - infores:signor
+    consumed_by:
+      - infores:service-provider-trapi
   - id: infores:providence-st-joseph-ehr
     status: released
     name: Providence St. Joseph EHR Data
@@ -1388,6 +1410,17 @@ information_resources:
       - CAMP FHIR
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+  - id: infores:cellmarker
+    status: released
+    name: CellMarker 2.0
+    xref:
+      - https://github.com/NCATSTranslator/Translator-All/wiki/CellMarker
+    synonym:
+      - CellMarker
+    knowledge_level: knowledge_assertion
+    agent_type: not_provided
+    consumed_by:
+      - infores:catrax-pharmacogenomics
   - id: infores:chebi
     status: released
     name: Chemical Entity of Biological Interest
@@ -1972,6 +2005,7 @@ information_resources:
       - infores:molepro
       - infores:openpredict
       - infores:rtx-kg2
+      - infores:catrax-pharmacogenomics
   - id: infores:drugcentral
     status: released
     name: DrugCentral
@@ -1989,6 +2023,7 @@ information_resources:
       - infores:molepro
       - infores:mychem-info
       - infores:rtx-kg2
+      - infores:catrax-pharmacogenomics
   - id: infores:drugmechdb
     status: released
     name: DrugMechDB
@@ -2524,6 +2559,7 @@ information_resources:
     consumed_by:
       - infores:biothings-hpo
       - infores:rtx-kg2
+      - infores:catrax-pharmacogenomics
   - id: infores:hpo-annotations
     status: released
     name: Human Phenotype Ontology
@@ -2536,6 +2572,22 @@ information_resources:
     consumed_by:
       - infores:biothings-hpo
       - infores:mydisease-info
+  - id: infores:icd10cm
+    status: released
+    name: ICD10 Clinical Modification
+    xref:
+      - https://icd10cmtool.cdc.gov/
+    knowledge_level: knowledge_assertion
+    agent_type: not_provided
+  - id: infores:icd11-foundation
+    status: released
+    name: ICD11 Foundation
+    xref:
+      - https://icd.who.int/dev11/f/en
+    knowledge_level: knowledge_assertion
+    agent_type: not_provided
+    consumed_by:
+      - infores:catrax-pharmacogenomics
   - id: infores:icd10-umls
     status: released
     name: ICD10 (from UMLS)
@@ -3051,6 +3103,7 @@ information_resources:
     consumed_by:
       - infores:mydisease-info
       - infores:rtx-kg2
+      - infores:catrax-pharmacogenomics
   - id: infores:mop
     status: released
     name: Molecular Process Ontology
@@ -3203,6 +3256,7 @@ information_resources:
     consumed_by:
       - infores:mygene-info
       - infores:rtx-kg2
+      - infores:catrax-pharmacogenomics
   - id: infores:ncbi-taxon
     status: released
     name: NCBI Taxonomy Ontology
@@ -3595,6 +3649,7 @@ information_resources:
     agent_type: not_provided
     consumed_by:
       - infores:molepro
+      - infores:catrax-pharmacogenomics
   - id: infores:pharos
     status: released
     name: Pharos
@@ -3644,6 +3699,17 @@ information_resources:
       - PrePPI
     knowledge_level: prediction
     agent_type: not_provided
+  - id: infores:primekg
+    status: released
+    name: PrimeKG, Precision Medicine Knowledge Graph
+    xref:
+      - https://github.com/NCATSTranslator/Translator-All/wiki/PrimeKG
+    synonym:
+      - PrimeKG
+    knowledge_level: knowledge_assertion
+    agent_type: not_provided
+    consumed_by:
+      - infores:catrax-pharmacogenomics
   - id: infores:probe-miner
     status: released
     name: Probe Miner
@@ -3941,6 +4007,7 @@ information_resources:
     agent_type: not_provided
     consumed_by:
       - infores:molepro
+      - infores:catrax-pharmacogenomics
   - id: infores:signor
     status: released
     name: SIGNOR 3.0
@@ -3948,6 +4015,8 @@ information_resources:
       - https://signor.uniroma2.it/
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+    consumed_by:
+      - infores:catrax-pharmacogenomics
   - id: infores:smart-api
     status: released
     name: SmartAPI API
