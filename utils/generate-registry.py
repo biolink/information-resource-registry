@@ -32,7 +32,7 @@ def generate_docs(yaml_file, output_dir, overview_template, detail_template):
 
     for resource in resources:
         detail_content = detail_tmpl.render(resource=resource)
-        filename = resource['id'].replace(':', '_') + '.md'
+        filename = resource['id'].replace('infores:', '') + '.md'
         with open(detail_dir / filename, 'w') as f:
             f.write(detail_content)
 
