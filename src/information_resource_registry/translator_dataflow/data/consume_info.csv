@@ -85,6 +85,9 @@ infores:biothings-multiomics-biggim-drugresponse,infores:aragorn,1
 infores:biothings-multiomics-biggim-drugresponse,infores:arax,1
 infores:biothings-multiomics-biggim-drugresponse,infores:service-provider-trapi,1
 infores:biothings-multiomics-ehr-risk,infores:service-provider-trapi,1
+infores:catrax-pharmacogenomics,infores:aragorn,1
+infores:catrax-pharmacogenomics,infores:arax,1
+infores:catrax-pharmacogenomics,infores:service-provider-trapi,1
 infores:providence-st-joseph-ehr,infores:automat-ehr-may-treat-kp,1
 infores:biothings-multiomics-wellness,infores:service-provider-trapi,1
 infores:multiomics-clinicaltrials,infores:aragorn,1
@@ -116,6 +119,7 @@ infores:biothings-bindingdb,infores:service-provider-trapi,1
 infores:bspo,infores:rtx-kg2,1
 infores:dailymed,infores:multiomics-drugapprovals,1
 infores:dailymed,infores:multiomics-clinicaltrials,1
+infores:cellmarker,infores:catrax-pharmacogenomics,1
 infores:chebi,infores:molepro,1
 infores:chebi,infores:mychem-info,1
 infores:chebi,infores:rtx-kg2,1
@@ -160,9 +164,11 @@ infores:diseases,infores:rtx-kg2,1
 infores:disgenet,infores:mydisease-info,1
 infores:disgenet,infores:rtx-kg2,1
 infores:drug-repurposing-hub,infores:molepro,1
+infores:drugbank,infores:catrax-pharmacogenomics,1
 infores:drugbank,infores:molepro,1
 infores:drugbank,infores:openpredict,1
 infores:drugbank,infores:rtx-kg2,1
+infores:drugcentral,infores:catrax-pharmacogenomics,1
 infores:drugcentral,infores:molepro,1
 infores:drugcentral,infores:mychem-info,1
 infores:drugcentral,infores:rtx-kg2,1
@@ -201,9 +207,11 @@ infores:hl7-umls,infores:rtx-kg2,1
 infores:hmdb,infores:molepro,1
 infores:hmdb,infores:rtx-kg2,1
 infores:hpo,infores:biothings-hpo,1
+infores:hpo,infores:catrax-pharmacogenomics,1
 infores:hpo,infores:rtx-kg2,1
 infores:hpo-annotations,infores:biothings-hpo,1
 infores:hpo-annotations,infores:mydisease-info,1
+infores:icd11-foundation,infores:catrax-pharmacogenomics,1
 infores:icd10-umls,infores:rtx-kg2,1
 infores:icd10ae-umls,infores:rtx-kg2,1
 infores:icd10cm-umls,infores:rtx-kg2,1
@@ -233,6 +241,7 @@ infores:molepro,infores:arax,1
 infores:molepro,infores:molepro,1
 infores:molepro,infores:service-provider-trapi,1
 infores:monarchinitiative,infores:service-provider-trapi,1
+infores:mondo,infores:catrax-pharmacogenomics,1
 infores:mondo,infores:mydisease-info,1
 infores:mondo,infores:rtx-kg2,1
 infores:msigdb,infores:molepro,1
@@ -242,6 +251,7 @@ infores:mygene-info,infores:service-provider-trapi,1
 infores:myvariant-info,infores:service-provider-trapi,1
 infores:nanopublications,infores:knowledge-collaboratory,1
 infores:nbo,infores:rtx-kg2,1
+infores:ncbi-gene,infores:catrax-pharmacogenomics,1
 infores:ncbi-gene,infores:mygene-info,1
 infores:ncbi-gene,infores:rtx-kg2,1
 infores:ncbi-taxon,infores:rtx-kg2,1
@@ -260,9 +270,11 @@ infores:panther,infores:mygene-info,1
 infores:pathwhiz,infores:rtx-kg2,1
 infores:pato,infores:rtx-kg2,1
 infores:pdq-umls,infores:rtx-kg2,1
+infores:pharmgkb,infores:catrax-pharmacogenomics,1
 infores:pharmgkb,infores:molepro,1
 infores:pharos,infores:molepro,1
 infores:pr,infores:rtx-kg2,1
+infores:primekg,infores:catrax-pharmacogenomics,1
 infores:probe-miner,infores:molepro,1
 infores:psy-umls,infores:rtx-kg2,1
 infores:pubchem,infores:molepro,1
@@ -285,7 +297,9 @@ infores:rxnorm,infores:molepro,1
 infores:rxnorm,infores:rtx-kg2,1
 infores:semmeddb,infores:biothings-semmeddb,1
 infores:semmeddb,infores:rtx-kg2,1
+infores:sider,infores:catrax-pharmacogenomics,1
 infores:sider,infores:molepro,1
+infores:signor,infores:catrax-pharmacogenomics,1
 infores:smpdb,infores:rtx-kg2,1
 infores:snomedct,infores:rtx-kg2,1
 infores:spoke,infores:aragorn,1

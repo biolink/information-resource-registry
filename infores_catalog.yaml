@@ -1052,6 +1052,8 @@ information_resources:
       - infores:cellmarker
       - infores:signor
     consumed_by:
+      - infores:aragorn
+      - infores:arax
       - infores:service-provider-trapi
   - id: infores:providence-st-joseph-ehr
     status: released
@@ -2002,10 +2004,10 @@ information_resources:
       we combine detailed drug (i.e. chemical, pharmacological and pharmaceutical) data
       with comprehensive drug target (i.e. sequence, structure, and pathway) information
     consumed_by:
+      - infores:catrax-pharmacogenomics
       - infores:molepro
       - infores:openpredict
       - infores:rtx-kg2
-      - infores:catrax-pharmacogenomics
   - id: infores:drugcentral
     status: released
     name: DrugCentral
@@ -2020,10 +2022,10 @@ information_resources:
       of Translational Informatics at University of New Mexico in collaboration with
       the IDG.
     consumed_by:
+      - infores:catrax-pharmacogenomics
       - infores:molepro
       - infores:mychem-info
       - infores:rtx-kg2
-      - infores:catrax-pharmacogenomics
   - id: infores:drugmechdb
     status: released
     name: DrugMechDB
@@ -2558,8 +2560,8 @@ information_resources:
     agent_type: not_provided
     consumed_by:
       - infores:biothings-hpo
-      - infores:rtx-kg2
       - infores:catrax-pharmacogenomics
+      - infores:rtx-kg2
   - id: infores:hpo-annotations
     status: released
     name: Human Phenotype Ontology
@@ -3101,9 +3103,9 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     consumed_by:
+      - infores:catrax-pharmacogenomics
       - infores:mydisease-info
       - infores:rtx-kg2
-      - infores:catrax-pharmacogenomics
   - id: infores:mop
     status: released
     name: Molecular Process Ontology
@@ -3254,9 +3256,9 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     consumed_by:
+      - infores:catrax-pharmacogenomics
       - infores:mygene-info
       - infores:rtx-kg2
-      - infores:catrax-pharmacogenomics
   - id: infores:ncbi-taxon
     status: released
     name: NCBI Taxonomy Ontology
@@ -3648,8 +3650,8 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     consumed_by:
-      - infores:molepro
       - infores:catrax-pharmacogenomics
+      - infores:molepro
   - id: infores:pharos
     status: released
     name: Pharos
@@ -4006,8 +4008,8 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     consumed_by:
-      - infores:molepro
       - infores:catrax-pharmacogenomics
+      - infores:molepro
   - id: infores:signor
     status: released
     name: SIGNOR 3.0
@@ -5083,15 +5085,16 @@ information_resources:
     agent_type: not_provided
   - id: infores:amyco
     status: released
-    name: The Amyloidoses Collection (AmyCo) Database 
+    name: The Amyloidoses Collection (AmyCo) Database
     knowledge_level: knowledge_assertion
     agent_type: manual_agent
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/AmyCo
     description: >-
-      The Amyloidoses Collection (AmyCo) database contains manually curated data from articles on
-      amyloidoses and other diseases related to amyloid deposition. The resource is not directly 
-      accessible at this time, but Jensen Lab's [DISEASES](https://doi.org/10.1093/database/baac019)
+      The Amyloidoses Collection (AmyCo) database contains manually curated data from articles
+      on
+      amyloidoses and other diseases related to amyloid deposition. The resource is not directly  accessible
+      at this time, but Jensen Lab's [DISEASES](https://doi.org/10.1093/database/baac019)
       reports that it ingests this resource.
   - id: infores:catrax-pharmacogenomics
     status: released
