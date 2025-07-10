@@ -3363,6 +3363,15 @@ information_resources:
       - NIEHS EPR
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+  - id: infores:nord
+    status: released
+    name: National Organization for Rare Disorders (NORD) Database
+    synonym:
+      - NORD
+    xref:
+      - http://rarediseases.org/
+    knowledge_level: knowledge_assertion
+    agent_type: not_provided
   - id: infores:nsides
     status: released
     name: nSides
