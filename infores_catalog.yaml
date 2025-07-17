@@ -2214,7 +2214,7 @@ information_resources:
     agent_type: not_provided
     consumed_by:
       - infores:rtx-kg2
-  - id: infores:fooddb
+  - id: infores:foodb
     status: released
     name: Food Database
     xref:
