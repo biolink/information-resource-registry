@@ -180,7 +180,7 @@ infores:ehdaa2,infores:rtx-kg2,1
 infores:ensembl-gene,infores:rtx-kg2,1
 infores:fma-obo,infores:rtx-kg2,1
 infores:fma-umls,infores:rtx-kg2,1
-infores:fooddb,infores:biothings-foodb,1
+infores:foodb,infores:biothings-foodb,1
 infores:foodon,infores:rtx-kg2,1
 infores:gdsc,infores:biothings-multiomics-biggim-drugresponse,1
 infores:gencc,infores:genetics-data-provider,1
@@ -362,3 +362,4 @@ infores:sepid_mab,infores:biothings-mabs,1
 infores:catrax-pharmacogenomics,infores:aragorn,1
 infores:catrax-pharmacogenomics,infores:arax,1
 infores:unii,infores:rtx-kg2,1
+infores:fooddb,infores:biothings-foodb,1

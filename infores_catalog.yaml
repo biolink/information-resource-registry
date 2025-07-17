@@ -5118,3 +5118,6 @@ information_resources:
     agent_type: not_provided
     consumed_by:
       - infores:rtx-kg2
+  - id: infores:fooddb
+    consumed_by:
+      - infores:biothings-foodb
