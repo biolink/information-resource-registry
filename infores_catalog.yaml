@@ -118,6 +118,7 @@ information_resources:
     consumes:
       - infores:automat-binding-db
       - infores:automat-cam-kp
+      - infores:automat-cebs
       - infores:automat-ctd
       - infores:automat-drug-central
       - infores:automat-ehr-may-treat-kp
@@ -339,6 +340,19 @@ information_resources:
     consumed_by:
       - infores:aragorn
       - infores:arax
+      - infores:service-provider-trapi 
+  - id: infores:automat-cebs
+    status: released
+    name: Automat CEBS
+    xref:
+      - https://github.com/NCATSTranslator/Translator-All/wiki/Automat
+    knowledge_level: knowledge_assertion
+    agent_type: not_provided
+    description: CEBS is a public, web-accessible, manually curated and accessioned repository of individual study data and summarized study data from the National Toxicology Program (NTP) testing program and other toxicology programs and research teams, including studies on carcinogenicity, short-term toxicity, and genetic toxicity.
+    consumed_by:
+      - infores:aragorn
+      - infores:arax
+      - infores:service-provider-trapi
   - id: infores:automat-ctd
     status: released
     name: Automat CTD
@@ -1412,6 +1426,16 @@ information_resources:
       - CAMP FHIR
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+  - id: infores:cebs
+    status: released
+    name: CEBS
+    xref:
+      - https://github.com/NCATSTranslator/Translator-All/wiki/CEBS
+    synonym:
+      - Chemical Effects in Biological Systems
+    knowledge_level: knowledge_assertion
+    agent_type: not_provided
+    description: CEBS is a public, web-accessible, manually curated and accessioned repository of individual study data and summarized study data from the National Toxicology Program (NTP) testing program and other toxicology programs and research teams, including studies on carcinogenicity, short-term toxicity, and genetic toxicity.  
   - id: infores:cellmarker
     status: released
     name: CellMarker 2.0
@@ -2644,7 +2668,7 @@ information_resources:
       - KP
     knowledge_level: statistical_association
     agent_type: not_provided
-    description: Information Resource
+    description: ICEES Knowledge Graph (KG) is an open service that exposes clinical data (i.e., electronic health records, clinical study data) that have been integrated at the patient level with public exposures data (e.g., airborne pollutants, major roadways/highways, concentrated animal feeding operations, landfills), with pairwise positive and negative correlations between feature variables reported on edges.
   - id: infores:idisk
     status: released
     name: integrated Dietary Supplement Knowledge Base
