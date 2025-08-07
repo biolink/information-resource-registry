@@ -5145,3 +5145,6 @@ information_resources:
   - id: infores:fooddb
     consumed_by:
       - infores:biothings-foodb
+    status: released
+    knowledge_level: not_provided
+    agent_type: not_provided
