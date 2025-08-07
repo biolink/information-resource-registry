@@ -9,6 +9,10 @@ infores:automat-genome-alliance,infores:aragorn,1
 infores:automat-genome-alliance,infores:arax,1
 infores:automat-cam-kp,infores:aragorn,1
 infores:automat-cam-kp,infores:arax,1
+infores:automat-cam-kp,infores:service-provider-trapi,1
+infores:automat-cebs,infores:aragorn,1
+infores:automat-cebs,infores:arax,1
+infores:automat-cebs,infores:service-provider-trapi,1
 infores:automat-ctd,infores:aragorn,1
 infores:automat-ctd,infores:arax,1
 infores:automat-ctd,infores:service-provider-trapi,1

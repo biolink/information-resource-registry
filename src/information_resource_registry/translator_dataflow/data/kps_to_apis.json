@@ -146,7 +146,6 @@
   ],
   "infores:mydisease-info": [
     "infores:ctd",
-    "infores:disgenet",
     "infores:hpo-annotations",
     "infores:mondo"
   ],
