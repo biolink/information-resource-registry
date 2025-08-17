@@ -5088,6 +5088,7 @@ information_resources:
     agent_type: not_provided
     description: Service to provide detailed annotations for any given biomedical entities.
   - id: infores:dsstoxdb
+    name: Distributed Structure-Searchable Toxicity (DSSTox) Database
     consumed_by:
       - infores:molepro
     knowledge_level: not_provided
@@ -5150,6 +5151,7 @@ information_resources:
       - infores:aragorn
       - infores:arax
   - id: infores:unii
+    name: Unique Ingredient Identifier
     status: released
     knowledge_level: not_provided
     agent_type: not_provided
