@@ -13,18 +13,6 @@ TOP_LEVEL_ORDER = [
     "information_resources",
 ]
 
-# Desired key order for each item in `information_resources`
-INFORES_ORDER = [
-    "id",
-    "status",
-    "name",
-    "xref",
-    "description",
-    "knowledge_level",
-    "agent_type",
-]
-
-
 def reorder_mapping(m: CommentedMap, priority_order: List[str]) -> CommentedMap:
     """
     Reorder a ruamel CommentedMap: first keys in priority_order (if present),
@@ -63,11 +51,13 @@ def normalize_description_scalar(v):
     return v
 
 
-def process_information_resources(node: CommentedSeq, sort_xrefs: bool, dedupe_xrefs: bool):
+def process_information_resources(node: CommentedSeq, sort_xrefs: bool, dedupe_xrefs: bool, ordered_slots: List[str]):
     """
     Reorder keys for each information resource and optionally sort/dedupe xref lists.
     Preserve sequence-level comments where feasible.
     """
+    print(ordered_slots)
+
     if not isinstance(node, CommentedSeq):
         return
 
@@ -102,8 +92,17 @@ def process_information_resources(node: CommentedSeq, sort_xrefs: bool, dedupe_x
             item["description"] = normalize_description_scalar(item["description"])
 
         # Reorder keys
-        new_item = reorder_mapping(item, INFORES_ORDER)
+        new_item = reorder_mapping(item, ordered_slots)
         node[i] = new_item
+
+def get_all_slots_from_schema(schema_path: Optional[Path]) -> List[str]:
+    """
+    Load the schema and return all slot names.
+    This is a placeholder function; actual implementation would depend on the schema format.
+    """
+    from linkml_runtime.utils.schemaview import SchemaView
+    sv = SchemaView(schema_path)
+    return [slot for slot in sv.all_slots()]
 
 
 @click.command(context_settings=dict(help_option_names=["-h", "--help"]))
@@ -113,6 +112,12 @@ def process_information_resources(node: CommentedSeq, sort_xrefs: bool, dedupe_x
     type=click.Path(path_type=Path, dir_okay=False),
     default=None,
     help="Write to this file. If omitted and not --in-place, prints to stdout.",
+)
+@click.option(
+    "-s", "--schema", "schema_path",
+    type=click.Path(path_type=Path, dir_okay=False),
+    default=None,
+    help="Reference to LinkML schema for the registry.",
 )
 @click.option(
     "-i", "--in-place",
@@ -137,7 +142,7 @@ def process_information_resources(node: CommentedSeq, sort_xrefs: bool, dedupe_x
     show_default=True,
     help="Preferred line width for scalars."
 )
-def main(input_path: Path, output_path: Optional[Path], in_place: bool,
+def main(input_path: Path, output_path: Optional[Path], schema_path: Optional[Path], in_place: bool,
          sort_xrefs: bool, dedupe_xrefs: bool, width: int):
     """
     Read a YAML file and standardize indentation, key ordering, and some scalar styles.
@@ -162,7 +167,7 @@ def main(input_path: Path, output_path: Optional[Path], in_place: bool,
         # Process information_resources list
         ir = data.get("information_resources")
         if isinstance(ir, CommentedSeq):
-            process_information_resources(ir, sort_xrefs=sort_xrefs, dedupe_xrefs=dedupe_xrefs)
+            process_information_resources(ir, sort_xrefs=sort_xrefs, dedupe_xrefs=dedupe_xrefs, ordered_slots=get_all_slots_from_schema(schema_path))
 
     # Decide output target
     if in_place:
