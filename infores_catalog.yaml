@@ -4046,6 +4046,20 @@ information_resources:
       - http://www.yeastgenome.org/
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+  - id: infores:shepherd-aragorn
+    status: released
+    name: Shepherd Aragorn ARA
+    xref:
+      - https://github.com/BioPack-team/shepherd
+    knowledge_level: prediction
+    agent_type: not_provided
+    description: >-
+      Shepherd Aragorn: The Aragorn ARA implementation within the
+      Shepherd platform.
+    consumed_by:
+      - infores:ars
+    consumes:
+      - infores:automat-robokopkg
   - id: infores:sider
     status: released
     name: SIDER
