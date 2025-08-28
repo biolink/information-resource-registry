@@ -1158,6 +1158,7 @@ information_resources:
     consumes:
       - infores:dailymed
       - infores:faers
+      - infores:medi
   - id: infores:multiomics-multiomics
     status: released
     name: Multiomics KP API
@@ -1391,6 +1392,18 @@ information_resources:
     consumed_by:
       - infores:multiomics-drugapprovals
       - infores:multiomics-clinicaltrials
+  - id: infores:medi
+    status: released
+    name: MeDI
+    xref:
+      - https://github.com/everycure-org/matrix-indication-list
+    knowledge_level: knowledge_assertion
+    agent_type: text_mining_assisted
+    description: Indications and contraindications from DailyMed, extracted using LLMs.
+    consumes:
+      - infores:dailymed
+    consumed_by:
+      - infores:multiomics-drugapprovals
   - id: infores:wbbt
     status: released
     name: C. elegans Gross Anatomy Ontology
