@@ -1398,7 +1398,7 @@ information_resources:
     xref:
       - https://github.com/everycure-org/matrix-indication-list
     knowledge_level: knowledge_assertion
-    agent_type: text_mining_assisted
+    agent_type: text_mining_agent
     description: Indications and contraindications from DailyMed, extracted using LLMs.
     consumes:
       - infores:dailymed
