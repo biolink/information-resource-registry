@@ -118,6 +118,7 @@ information_resources:
     consumes:
       - infores:automat-binding-db
       - infores:automat-cam-kp
+      - infores:automat-cebs
       - infores:automat-ctd
       - infores:automat-drug-central
       - infores:automat-ehr-may-treat-kp
@@ -339,6 +340,23 @@ information_resources:
     consumed_by:
       - infores:aragorn
       - infores:arax
+      - infores:service-provider-trapi
+  - id: infores:automat-cebs
+    status: released
+    name: Automat CEBS
+    xref:
+      - https://github.com/NCATSTranslator/Translator-All/wiki/Automat
+    knowledge_level: knowledge_assertion
+    agent_type: not_provided
+    description: >-
+      CEBS is a public, web-accessible, manually curated and accessioned repository of individual
+      study data and  summarized study data from the National Toxicology Program (NTP) testing
+      program and other toxicology programs  and research teams, including studies on carcinogenicity,
+      short-term toxicity, and genetic toxicity.
+    consumed_by:
+      - infores:aragorn
+      - infores:arax
+      - infores:service-provider-trapi
   - id: infores:automat-ctd
     status: released
     name: Automat CTD
@@ -1052,6 +1070,8 @@ information_resources:
       - infores:cellmarker
       - infores:signor
     consumed_by:
+      - infores:aragorn
+      - infores:arax
       - infores:service-provider-trapi
   - id: infores:providence-st-joseph-ehr
     status: released
@@ -1138,6 +1158,7 @@ information_resources:
     consumes:
       - infores:dailymed
       - infores:faers
+      - infores:medi
   - id: infores:multiomics-multiomics
     status: released
     name: Multiomics KP API
@@ -1371,6 +1392,18 @@ information_resources:
     consumed_by:
       - infores:multiomics-drugapprovals
       - infores:multiomics-clinicaltrials
+  - id: infores:medi
+    status: released
+    name: MeDI
+    xref:
+      - https://github.com/everycure-org/matrix-indication-list
+    knowledge_level: knowledge_assertion
+    agent_type: text_mining_agent
+    description: Indications and contraindications from DailyMed, extracted using LLMs.
+    consumes:
+      - infores:dailymed
+    consumed_by:
+      - infores:multiomics-drugapprovals
   - id: infores:wbbt
     status: released
     name: C. elegans Gross Anatomy Ontology
@@ -1410,6 +1443,20 @@ information_resources:
       - CAMP FHIR
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+  - id: infores:cebs
+    status: released
+    name: CEBS
+    xref:
+      - https://github.com/NCATSTranslator/Translator-All/wiki/CEBS
+    synonym:
+      - Chemical Effects in Biological Systems
+    knowledge_level: knowledge_assertion
+    agent_type: not_provided
+    description: >-
+      CEBS is a public, web-accessible, manually curated and accessioned repository of individual
+      study data  and summarized study data from the National Toxicology Program (NTP) testing
+      program and other toxicology  programs and research teams, including studies on carcinogenicity,
+      short-term toxicity, and genetic toxicity.
   - id: infores:cellmarker
     status: released
     name: CellMarker 2.0
@@ -2002,10 +2049,10 @@ information_resources:
       we combine detailed drug (i.e. chemical, pharmacological and pharmaceutical) data
       with comprehensive drug target (i.e. sequence, structure, and pathway) information
     consumed_by:
+      - infores:catrax-pharmacogenomics
       - infores:molepro
       - infores:openpredict
       - infores:rtx-kg2
-      - infores:catrax-pharmacogenomics
   - id: infores:drugcentral
     status: released
     name: DrugCentral
@@ -2020,10 +2067,10 @@ information_resources:
       of Translational Informatics at University of New Mexico in collaboration with
       the IDG.
     consumed_by:
+      - infores:catrax-pharmacogenomics
       - infores:molepro
       - infores:mychem-info
       - infores:rtx-kg2
-      - infores:catrax-pharmacogenomics
   - id: infores:drugmechdb
     status: released
     name: DrugMechDB
@@ -2212,7 +2259,7 @@ information_resources:
     agent_type: not_provided
     consumed_by:
       - infores:rtx-kg2
-  - id: infores:fooddb
+  - id: infores:foodb
     status: released
     name: Food Database
     xref:
@@ -2558,8 +2605,8 @@ information_resources:
     agent_type: not_provided
     consumed_by:
       - infores:biothings-hpo
-      - infores:rtx-kg2
       - infores:catrax-pharmacogenomics
+      - infores:rtx-kg2
   - id: infores:hpo-annotations
     status: released
     name: Human Phenotype Ontology
@@ -2642,7 +2689,12 @@ information_resources:
       - KP
     knowledge_level: statistical_association
     agent_type: not_provided
-    description: Information Resource
+    description: >-
+      ICEES Knowledge Graph (KG) is an open service that exposes clinical data (i.e., electronic
+      health  records, clinical study data) that have been integrated at the patient level with
+      public exposures data  (e.g., airborne pollutants, major roadways/highways, concentrated
+      animal feeding operations, landfills),  with pairwise positive and negative correlations
+      between feature variables reported on edges.
   - id: infores:idisk
     status: released
     name: integrated Dietary Supplement Knowledge Base
@@ -3101,9 +3153,9 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     consumed_by:
+      - infores:catrax-pharmacogenomics
       - infores:mydisease-info
       - infores:rtx-kg2
-      - infores:catrax-pharmacogenomics
   - id: infores:mop
     status: released
     name: Molecular Process Ontology
@@ -3254,9 +3306,9 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     consumed_by:
+      - infores:catrax-pharmacogenomics
       - infores:mygene-info
       - infores:rtx-kg2
-      - infores:catrax-pharmacogenomics
   - id: infores:ncbi-taxon
     status: released
     name: NCBI Taxonomy Ontology
@@ -3359,6 +3411,15 @@ information_resources:
     name: NIEHS Environmental Polymorphisms Registry
     synonym:
       - NIEHS EPR
+    knowledge_level: knowledge_assertion
+    agent_type: not_provided
+  - id: infores:nord
+    status: released
+    name: National Organization for Rare Disorders (NORD) Database
+    synonym:
+      - NORD
+    xref:
+      - http://rarediseases.org/
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - id: infores:nsides
@@ -3648,8 +3709,8 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     consumed_by:
-      - infores:molepro
       - infores:catrax-pharmacogenomics
+      - infores:molepro
   - id: infores:pharos
     status: released
     name: Pharos
@@ -3998,6 +4059,20 @@ information_resources:
       - http://www.yeastgenome.org/
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+  - id: infores:shepherd-aragorn
+    status: released
+    name: Shepherd Aragorn ARA
+    xref:
+      - https://github.com/BioPack-team/shepherd
+    knowledge_level: prediction
+    agent_type: not_provided
+    description: >-
+      Shepherd Aragorn: The Aragorn ARA implementation within the
+      Shepherd platform.
+    consumed_by:
+      - infores:ars
+    consumes:
+      - infores:automat-robokopkg
   - id: infores:sider
     status: released
     name: SIDER
@@ -4006,8 +4081,8 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     consumed_by:
-      - infores:molepro
       - infores:catrax-pharmacogenomics
+      - infores:molepro
   - id: infores:signor
     status: released
     name: SIGNOR 3.0
@@ -5040,6 +5115,7 @@ information_resources:
     agent_type: not_provided
     description: Service to provide detailed annotations for any given biomedical entities.
   - id: infores:dsstoxdb
+    name: Distributed Structure-Searchable Toxicity (DSSTox) Database
     consumed_by:
       - infores:molepro
     knowledge_level: not_provided
@@ -5083,15 +5159,16 @@ information_resources:
     agent_type: not_provided
   - id: infores:amyco
     status: released
-    name: The Amyloidoses Collection (AmyCo) Database 
+    name: The Amyloidoses Collection (AmyCo) Database
     knowledge_level: knowledge_assertion
     agent_type: manual_agent
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/AmyCo
     description: >-
-      The Amyloidoses Collection (AmyCo) database contains manually curated data from articles on
-      amyloidoses and other diseases related to amyloid deposition. The resource is not directly 
-      accessible at this time, but Jensen Lab's [DISEASES](https://doi.org/10.1093/database/baac019)
+      The Amyloidoses Collection (AmyCo) database contains manually curated data from articles
+      on
+      amyloidoses and other diseases related to amyloid deposition. The resource is not directly  accessible
+      at this time, but Jensen Lab's [DISEASES](https://doi.org/10.1093/database/baac019)
       reports that it ingests this resource.
   - id: infores:catrax-pharmacogenomics
     status: released
@@ -5101,8 +5178,15 @@ information_resources:
       - infores:aragorn
       - infores:arax
   - id: infores:unii
+    name: Unique Ingredient Identifier
     status: released
     knowledge_level: not_provided
     agent_type: not_provided
     consumed_by:
       - infores:rtx-kg2
+  - id: infores:fooddb
+    consumed_by:
+      - infores:biothings-foodb
+    status: released
+    knowledge_level: not_provided
+    agent_type: not_provided
