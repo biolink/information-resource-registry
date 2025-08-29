@@ -4072,6 +4072,19 @@ information_resources:
     consumed_by:
       - infores:ars
     consumes:
+      - infores:retriever
+  - id: infores:retriever
+    status: released
+    name: Retriever
+    xref:
+      - https://github.com/BioPack-team/retriever
+    knowledge_level: mixed
+    agent_type: not_provided
+    description: >-
+      Retriever: The TRAPI access layer to Tier 0/1/2 KGs.
+    consumed_by:
+      - infores:shepherd-aragorn
+    consumes:
       - infores:automat-robokopkg
   - id: infores:sider
     status: released
