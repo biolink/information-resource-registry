@@ -4848,6 +4848,17 @@ information_resources:
       Resource for searching FDA Orphan Drug Designations and Approvals
     consumed_by:
       - infores:mychem-info
+  - id: infores:fda-pharmacogenomics-biomarker
+    status: released
+    name:  FDA Pharmacogenomics Biomarker table
+    xref:
+      - https://www.fda.gov/drugs/science-and-research-drugs/table-pharmacogenomic-biomarkers-drug-labeling
+    knowledge_level: knowledge_assertion
+    agent_type: : not_provided
+    description: : >-
+      Resource lists therapeutic products from Drugs@FDA with pharmacogenomic information found in the drug labeling.
+      Biomarkers in the table include but are not limited to germline or somatic gene variants (polymorphisms, mutations), functional deficiencies with a genetic etiology, gene expression differences, and chromosomal abnormalities; 
+      selected protein biomarkers that are used to select treatments for patients are also included.
   - id: infores:complex-portal
     status: released
     name: Complex Portal
