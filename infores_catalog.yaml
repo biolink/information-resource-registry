@@ -1424,6 +1424,16 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     description: A structured controlled vocabulary of Caenorhabditis elegans phenotypes
+  - id: infores:wbls
+    status: released
+    name: C. elegans development ontology
+    xref:
+      - https://obofoundry.org/ontology/wbls.html
+    synonym:
+      - WBls
+    knowledge_level: knowledge_assertion
+    agent_type: not_provided
+    description: A structured controlled vocabulary of the development of Caenorhabditis elegans.
   - id: infores:cam-kp
     status: released
     name: CAM-KP API
@@ -1897,6 +1907,16 @@ information_resources:
       - infores:rtx-kg2
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+  - id: infores:ddpheno
+    status: released
+    name: Dictyostelium discoideum phenotype ontology
+    xref:
+      - https://obofoundry.org/ontology/ddpheno.html
+    synonym:
+      - ddpheno
+    knowledge_level: knowledge_assertion
+    agent_type: not_provided
+    description: A structured controlled vocabulary of phenotypes of the slime-mould Dictyostelium discoideum.
   - id: infores:delta-qt-db
     status: deprecated
     name: delta QT Database
@@ -1962,6 +1982,26 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     description: An ontology representing the gross anatomy of Drosophila melanogaster.
+  - id: infores:fbcv
+    status: released
+    name: FlyBase Controlled Vocabulary
+    xref:
+      - https://obofoundry.org/ontology/fbcv.html
+    synonym:
+      - FBcv
+    knowledge_level: knowledge_assertion
+    agent_type: not_provided
+    description: A structured controlled vocabulary used for various aspects of annotation by FlyBase.
+  - id: infores:fbdv
+    status: released
+    name: Drosophila Developmental Ontology
+    xref:
+      - https://obofoundry.org/ontology/fbdv.html
+    synonym:
+      - FBdv
+    knowledge_level: knowledge_assertion
+    agent_type: not_provided
+    description: A structured controlled vocabulary of the development of Drosophila melanogaster.
   - id: infores:disease-ontology
     status: released
     name: Disease Ontology
@@ -2190,6 +2230,16 @@ information_resources:
     agent_type: not_provided
     consumed_by:
       - infores:rtx-kg2
+  - id: infores:hsapdv
+    status: released
+    name: Human Developmental Stages Ontology
+    xref:
+      - https://obofoundry.org/ontology/hsapdv.html
+    synonym:
+      - HsapDv
+    knowledge_level: knowledge_assertion
+    agent_type: not_provided
+    description: An ontology that covers life cycle stages for humans, including both embryonic (Carnegie) stages and adult stages.
   - id: infores:ensembl-gene
     status: released
     name: Ensembl gene
@@ -3472,6 +3522,16 @@ information_resources:
       - infores:disease-ontology
     consumed_by:
       - infores:service-provider-trapi
+  - id: infores:oba
+    status: released
+    name: Ontology of Biological Attributes
+    xref:
+      - https://obofoundry.org/ontology/oba.html
+    synonym:
+      - OBA
+    knowledge_level: knowledge_assertion
+    agent_type: not_provided
+    description: A collection of biological attributes (traits) covering all kingdoms of life.
   - id: infores:omicsdi
     status: released
     name: OmicsDI
@@ -4625,6 +4685,16 @@ information_resources:
     description: >-
       A structured controlled vocabulary of the anatomy and development of
       the Zebrafish
+  - id: infores:zfs
+    status: released
+    name: Zebrafish Developmental Stages Ontology
+    xref:
+      - https://obofoundry.org/ontology/zfs.html
+    synonym:
+      - ZFS
+    knowledge_level: knowledge_assertion
+    agent_type: not_provided
+    description: An ontology of developmental stages of the Zebrafish (Danio rerio).
   - id: infores:zfin
     status: released
     name: Zebrafish Information Network
@@ -4746,6 +4816,16 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     description: A Database of Drosophila Genes & Genomes
+  - id: infores:fypo
+    status: released
+    name: Fission Yeast Phenotype Ontology
+    xref:
+      - https://obofoundry.org/ontology/fypo.html
+    synonym:
+      - FYPO
+    knowledge_level: knowledge_assertion
+    agent_type: not_provided
+    description: FYPO is a formal ontology of phenotypes observed in fission yeast.
   - id: infores:xenbase
     status: released
     name: Xenbase
@@ -4764,6 +4844,16 @@ information_resources:
       In addition to our primary goal of supporting Xenopus researchers, Xenbase enhances
       the availability and visibility of Xenopus data to the broader biomedical research
       community.
+  - id: infores:xao
+    status: released
+    name: Xenopus Anatomy Ontology
+    xref:
+      - https://obofoundry.org/ontology/xao.html
+    synonym:
+      - XAO
+    knowledge_level: knowledge_assertion
+    agent_type: not_provided
+    description: Represents the anatomy and development of the African frogs Xenopus laevis and tropicalis.
   - id: infores:biothings-rare-source
     status: released
     name: BioThings RARe-SOURCE API
