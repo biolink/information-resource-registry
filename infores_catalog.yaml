@@ -1916,7 +1916,8 @@ information_resources:
       - ddpheno
     knowledge_level: knowledge_assertion
     agent_type: not_provided
-    description: A structured controlled vocabulary of phenotypes of the slime-mould Dictyostelium discoideum.
+    description: A structured controlled vocabulary of phenotypes of the slime-mould Dictyostelium
+      discoideum.
   - id: infores:delta-qt-db
     status: deprecated
     name: delta QT Database
@@ -1991,7 +1992,8 @@ information_resources:
       - FBcv
     knowledge_level: knowledge_assertion
     agent_type: not_provided
-    description: A structured controlled vocabulary used for various aspects of annotation by FlyBase.
+    description: A structured controlled vocabulary used for various aspects of annotation by
+      FlyBase.
   - id: infores:fbdv
     status: released
     name: Drosophila Developmental Ontology
@@ -2239,7 +2241,8 @@ information_resources:
       - HsapDv
     knowledge_level: knowledge_assertion
     agent_type: not_provided
-    description: An ontology that covers life cycle stages for humans, including both embryonic (Carnegie) stages and adult stages.
+    description: An ontology that covers life cycle stages for humans, including both embryonic
+      (Carnegie) stages and adult stages.
   - id: infores:ensembl-gene
     status: released
     name: Ensembl gene
@@ -4853,7 +4856,8 @@ information_resources:
       - XAO
     knowledge_level: knowledge_assertion
     agent_type: not_provided
-    description: Represents the anatomy and development of the African frogs Xenopus laevis and tropicalis.
+    description: Represents the anatomy and development of the African frogs Xenopus laevis
+      and tropicalis.
   - id: infores:biothings-rare-source
     status: released
     name: BioThings RARe-SOURCE API
