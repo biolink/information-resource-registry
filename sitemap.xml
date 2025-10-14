@@ -2,1966 +2,2002 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://biolink.github.io/information-resource-registry/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/AgentTypeEnum/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/Boolean/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/Curie/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/Date/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/DateOrDatetime/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/Datetime/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/Decimal/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/Double/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/Float/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/Information-Resource-Registry-Schema/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/InformationResource/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/InformationResourceContainer/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/InformationResourceStatusEnum/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/Integer/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/Jsonpath/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/Jsonpointer/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/KnowledgeLevelEnum/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/Ncname/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/Nodeidentifier/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/Objectidentifier/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/Sparqlpath/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/String/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/Time/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/Uri/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/Uriorcurie/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/about/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/agent_type/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/appendices/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/biolink-infores-parameters/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/consumed_by/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/consumes/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/description/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/id/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/implementation-guidance/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/information_resources/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/knowledge-source-retrieval/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/knowledge_level/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/name/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/registry/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/status/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/synonym/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/xref/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/aact/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/aeolus/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/agrkb/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/amyco/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/annotator/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/answer-coalesce/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/aop-cam/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/aragorn-ranker/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/aragorn/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/arax/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/ars/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/atc-codes-umls/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/atgo/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/athena/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/automat-binding-db/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/automat-cam-kp/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/automat-cebs/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/automat-chem-norm/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/automat-chembio/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/automat-cord19-scibite/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/automat-cord19-scigraph/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/automat-cord19/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/automat-covid-phenotypes/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/automat-covidkop/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/automat-ctd/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/automat-drug-central/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/automat-ehr-clinical-connections-kp/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/automat-ehr-may-treat-kp/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/automat-foodb/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/automat-genome-alliance/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/automat-gtex/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/automat-gtopdb/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/automat-gwas-catalog/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/automat-hetio/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/automat-hetionet/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/automat-hgnc/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/automat-hmdb/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/automat-human-goa/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/automat-icees-kg/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/automat-intact/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/automat-kegg/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/automat-monarchinitiative/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/automat-mychem-info/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/automat-ontology-hierarchy/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/automat-openhealthdata-carolina/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/automat-panther/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/automat-pharos/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/automat-reactome/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/automat-renci-sri-reference-kg/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/automat-robokop-kg/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/automat-robokop/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/automat-sri-reference-kg/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/automat-string-db/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/automat-text-mining-provider/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/automat-ubergraph-nonredundant/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/automat-ubergraph/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/automat-viral-proteome/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/bfo/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/bgee/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/bigclam/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/bigg-models/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/biggim/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/bindingdb/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/bio2rdf/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/biocatalogue/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/biogrid/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/biolink-api/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/biolink-model-lookup/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/biolink-ontology/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/bioplanet/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/bioportal/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/biothings-agr/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/biothings-biggim-1/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/biothings-bindingdb/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/biothings-bioplanet-pathway-disease/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/biothings-bioplanet-pathway-gene/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/biothings-ddinter/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/biothings-dgidb/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/biothings-diseases/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/biothings-ebi-gene2phenotype/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/biothings-explorer/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/biothings-foodb/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/biothings-fooddata-central/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/biothings-go-bp/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/biothings-go-cc/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/biothings-go-mf/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/biothings-gtrx/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/biothings-hmdb/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/biothings-hpo/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/biothings-idisk/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/biothings-innatedb/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/biothings-mabs/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/biothings-mgi-g2p/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/biothings-multiomics-biggim-drugresponse/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/biothings-multiomics-clinicaltrials/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/biothings-multiomics-ehr-risk/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/biothings-multiomics-wellness/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/biothings-pfocr/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/biothings-rare-source/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/biothings-repodb/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/biothings-rhea/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/biothings-semmeddb-anatomy/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/biothings-semmeddb-biological-process/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/biothings-semmeddb-chemical/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/biothings-semmeddb-disease/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/biothings-semmeddb-gene/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/biothings-semmeddb-phenotype/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/biothings-semmeddb/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/biothings-suppkg/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/biothings-tcga-mut-freq/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/biothings-tissues/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/biothings-ttd/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/biothings-uberon-ontology/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/bspo/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/cacao/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/cam-kp/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/campfhir/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/catrax-pharmacogenomics/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/cebs/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/cellmarker/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/chebi/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/chem2bio2rdf/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/chembank/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/chembio/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/chembl/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/chemotext/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/chv-umls/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/civic/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/cl/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/clingen/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/clinical-profiles/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/clinicaltrials/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/clinvar/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/cmap/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/cohd-covid/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/cohd-covid19-api/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/cohd/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/columbia-cdw-ehr-data/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/community-sar/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/complex-portal/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/connections-hypothesis/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/cord19-scibite/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/cord19/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/cosmic/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/covid-phenotypes/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/cpdb/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/cpt-codes-umls/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/cqs/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/ctd/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/ctrp/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/dailymed/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/date/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/dbsnp/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/dda/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/ddinter/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
+    </url>
+    <url>
+         <loc>https://biolink.github.io/information-resource-registry/resources/ddpheno/</loc>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/delta-qt-db/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/depmap/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/dgidb/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/dictybase/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/dili-network-study-data/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/disease-ontology/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/diseases/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/disgenet/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/disprot/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/distild/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/doaf/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/docm/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/drug-design/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/drug-repurposing-hub/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/drugbank/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/drugcentral/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/drugmechdb/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/dsstoxdb/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/ebi-gene2phenotype/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/ebi-proteins/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/ebi-quick-go/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/ebi/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/eco/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/ecto/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/efo/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/ehdaa2/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/emapa/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/ensembl-gene/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/entrez/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/epsd/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/eram/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/erc-analysis/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/explanatory-agent/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/faers/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/fbbt/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
+    </url>
+    <url>
+         <loc>https://biolink.github.io/information-resource-registry/resources/fbcv/</loc>
+         <lastmod>2025-10-14</lastmod>
+    </url>
+    <url>
+         <loc>https://biolink.github.io/information-resource-registry/resources/fbdv/</loc>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/fda-orphan-drug-db/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/fhir-pit/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/flybase/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/fma-obo/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/fma-umls/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/foodb/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/fooddata-central/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/fooddb/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/foodon/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
+    </url>
+    <url>
+         <loc>https://biolink.github.io/information-resource-registry/resources/fypo/</loc>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/gdc/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/gdsc/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/gelinea/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/genage/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/gencc/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/gendr/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/genebass/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/genepio/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/geneprof/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/genetics-data-provider/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/ghr/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/gnbr/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/go-cam/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/go-central/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/go-plus/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/go/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/goa/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/goc/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/gote/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/gtex/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/gtopdb/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/gtrx/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/gwas-catalog/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/hcp-codes-umls/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/hcpcs-cpt-umls/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/hetionet/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/hgnc/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/hl7-umls/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/hmdb/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/homologene/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/hopkins-synthetic-patient-data/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/hpa/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/hpo-annotations/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/hpo/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
+    </url>
+    <url>
+         <loc>https://biolink.github.io/information-resource-registry/resources/hsapdv/</loc>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/human-goa/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/huri/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/icd10-umls/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/icd10ae-umls/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/icd10cm-umls/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/icd10cm/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/icd10pcs-umls/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/icd11-foundation/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/icd9cm-umls/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/icees-kg/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/idisk/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/improving-agent/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/indigo-reasoner/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/innatedb/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/ino/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/intact/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/interactome-ccsb/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/interpro/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/inxight-drugs/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/iproclass/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/iptm-net/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/iptmnet/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/irefindex/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/isb-EHRMLA-clinicalconnections/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/isb-EHRMLA-data/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/isb-incov/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/isb-wellness/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/kegg/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/kgea/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/ki-database/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/kinace/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/kinomescan/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/knowledge-collaboratory/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/life-science-resource-registry/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/lincs/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/linkedspl/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/litvar/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/loinc-umls/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/loinc/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/maxo/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/meddra-umls/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/medgen/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/medi/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/medlineplus/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/medrt-umls/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/mesh/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/metacyc/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/mgi/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/mi/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/mirbase/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/mirgate/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/molepro/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/monarch-data/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/monarch-ontology/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/monarchinitiative/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/mondo/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/mop/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/mousemine/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/mp/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/mpath/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/msigdb/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/multiomics-clinicaltrials/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/multiomics-drugapprovals/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/multiomics-microbiome/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/multiomics-multiomics/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/mychem-info/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/mydisease-info/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/mygene-info/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/mygeneset-info/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/myvariant-info/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/nanopublications/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/nbo/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/ncats-ars/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/ncbi-gene/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/ncbi-taxon/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/ncbi-taxonomy/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/ncdeq-cafo-exposures-data/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/ncdeq-landfill-exposures-data/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/nces-schools-exposure-data/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/ncit/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/ndcd/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/nddf-umls/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/ndex/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/ndfrt/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/nexo-align/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/nexo-construct/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/niehs-epr-study-datae/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/nord/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/nsides/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
+    </url>
+    <url>
+         <loc>https://biolink.github.io/information-resource-registry/resources/oba/</loc>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/ols/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/omicsdi/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/omim/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/omnicorp/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/omop-cdm/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/omop-ohdsi-api/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/omop-ohdsi/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/open-targets/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/openhealthdata-carolina/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/openpredict/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/ordo/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/orphanet/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/owlsim/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/oxo/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/panther/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/path-pheno-db/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/pathway-commons/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/pathwhiz/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/pato/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/patric/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/pdq-umls/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/pdsp/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/pfam/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/pfocr/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/pgxmine/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/pharmacotherapydb/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/pharmgkb/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/pharos/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/phenio/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/phenopacket-store/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/pr/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/prefixcommons/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/preppi/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/primekg/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/probe-miner/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/providence-st-joseph-ehr/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/psite-plus/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/psy-umls/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/pubchem/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/pubmed-central/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/pubmed/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/quickgo/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/rampdb/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/rare-source/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/reactome/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/regl/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/renci-bionames/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/repodb/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/retriever/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/rgd/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/rhea/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/rnacentral/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/ro/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/robokop-kg/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/robokop-kp/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/robokop/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/robokp-ranker/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/rtx-kg2/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/rxnorm/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/sabio-rk/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/scibite/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/semmeddb/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/sepid_mab/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/service-provider-trapi/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/sgd/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/shepherd-aragorn/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/sider/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/signor/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/smart-api/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/smartapi/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/smpdb/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/snomedct/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/snpeff/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/so/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/spoke/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/sri-answer-appraiser/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/sri-edge-normalization-service/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/sri-name-resolver/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/sri-node-normalizer/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/sri-ontology/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/sri-reference-kg/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/sri-semmeddb/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/startgeo/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/stitch/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/strider/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/string/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/suppkg/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/symp/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/tcga/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/tcrd/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/text-mining-provider-cooccurrence/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/text-mining-provider-targeted/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/textmining-kp/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/tiga/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/tissues-expression-db/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/tissues/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/topmed/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/ttd/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/ubergraph/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/uberon/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/umls-metathesaurus/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/umls/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/unc-cdwh-ehr-data/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/unichem/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/unii/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/uniprot/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/uniref/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/unsecret-agent/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/upheno/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/us-census-acs-data/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/us-census-tiger-roadway-exposures-data/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/us-dot-roadway-exposures-data/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/us-epa-airborne-pollutant-exposures-data/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/vandf-umls/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/wbbt/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
+    </url>
+    <url>
+         <loc>https://biolink.github.io/information-resource-registry/resources/wbls/</loc>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/wbphenotype/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/wikidata-garbanzo/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/wikidata/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/wikipathways/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/workflow-runner/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/wormbase/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
+    </url>
+    <url>
+         <loc>https://biolink.github.io/information-resource-registry/resources/xao/</loc>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/xenbase/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/xpo/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/zfa/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/zfin/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
+    </url>
+    <url>
+         <loc>https://biolink.github.io/information-resource-registry/resources/zfs/</loc>
+         <lastmod>2025-10-14</lastmod>
     </url>
     <url>
          <loc>https://biolink.github.io/information-resource-registry/resources/zp/</loc>
-         <lastmod>2025-08-29</lastmod>
+         <lastmod>2025-10-14</lastmod>
     </url>
 </urlset>
