@@ -12,34 +12,41 @@ permissions:
 
 jobs:
   standardize:
+    # Skip forks
+    if: ${{ github.event.pull_request.head.repo.full_name == github.repository }}
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout PR branch
         uses: actions/checkout@v4
         with:
-          ref: ${{ github.head_ref }}
-          token: ${{ secrets.GITHUB_TOKEN }}
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
+          ref: ${{ github.event.pull_request.head.ref }}
+          fetch-depth: 0
 
       - name: Setup Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
-      - name: Install dependencies
+      - name: Install dependencies (no separate venv)
         run: |
-          pip install --upgrade pip
+          python -m pip install --upgrade pip
           pip install poetry
-          poetry install
+          poetry config virtualenvs.create false
+          poetry install --no-interaction --no-ansi
 
       - name: Run standardization
-        run: |
-          make standardize-data
+        run: make standardize-data
 
       - name: Check for changes
         id: git-check
         run: |
-          git diff --exit-code infores_catalog.yaml || echo "changed=true" >> $GITHUB_OUTPUT
+          if git diff --quiet -- infores_catalog.yaml; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
 
       - name: Commit and push if changed
         if: steps.git-check.outputs.changed == 'true'
