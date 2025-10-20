@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+
+# WARNING: THIS FILE IS ENTIRELY VIBE CODED AND NOT CREATED FOR MAINTAINABILITY.
+
 import sys
 from pathlib import Path
 from typing import List, Optional
