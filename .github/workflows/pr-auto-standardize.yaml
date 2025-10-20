@@ -1,0 +1,51 @@
+name: Auto-standardize catalog on PR
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    paths:
+      - 'infores_catalog.yaml'
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  standardize:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout PR branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install poetry
+          poetry install
+
+      - name: Run standardization
+        run: |
+          make standardize-data
+
+      - name: Check for changes
+        id: git-check
+        run: |
+          git diff --exit-code infores_catalog.yaml || echo "changed=true" >> $GITHUB_OUTPUT
+
+      - name: Commit and push if changed
+        if: steps.git-check.outputs.changed == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add infores_catalog.yaml
+          git commit -m "Auto-standardize infores_catalog.yaml"
+          git push
