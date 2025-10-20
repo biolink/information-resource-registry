@@ -123,6 +123,7 @@ infores:biothings-bindingdb,infores:service-provider-trapi,1
 infores:bspo,infores:rtx-kg2,1
 infores:dailymed,infores:multiomics-drugapprovals,1
 infores:dailymed,infores:multiomics-clinicaltrials,1
+infores:medi,infores:multiomics-drugapprovals,1
 infores:cellmarker,infores:catrax-pharmacogenomics,1
 infores:chebi,infores:molepro,1
 infores:chebi,infores:mychem-info,1
@@ -301,6 +302,8 @@ infores:rxnorm,infores:molepro,1
 infores:rxnorm,infores:rtx-kg2,1
 infores:semmeddb,infores:biothings-semmeddb,1
 infores:semmeddb,infores:rtx-kg2,1
+infores:shepherd-aragorn,infores:ars,1
+infores:retriever,infores:shepherd-aragorn,1
 infores:sider,infores:catrax-pharmacogenomics,1
 infores:sider,infores:molepro,1
 infores:signor,infores:catrax-pharmacogenomics,1
