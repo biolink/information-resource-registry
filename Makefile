@@ -52,6 +52,9 @@ test_pr:
 	$(RUN) yamllint -c .yamllint-config src/information_resource_registry/schema/*.yaml
 	$(RUN) yamllint -c .yamllint-config infores_catalog.yaml
 
+standardize-data:
+	$(RUN) python src/information_resource_registry/standardization/standardize.py infores_catalog.yaml --in-place --schema src/information_resource_registry/schema/information_resource_registry.yaml
+
 test: check_urls
 	$(RUN) linkml-validate infores_catalog.yaml -s src/information_resource_registry/schema/information_resource_registry.yaml
 	$(RUN) pytest
