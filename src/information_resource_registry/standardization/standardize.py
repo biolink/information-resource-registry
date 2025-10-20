@@ -223,8 +223,8 @@ def main(input_path: Path, output_path: Optional[Path], schema_path: Optional[Pa
     yaml.preserve_quotes = True
     yaml.width = width
     yaml.explicit_start = True  # Add --- at the start of the document
-    # Standardize indentation: 2 spaces for maps, 2 for sequences, 0 offset for sequence dashes
-    yaml.indent(mapping=2, sequence=2, offset=0)
+    # Standardize indentation: 4 spaces for maps, 4 for sequences, 4 offset for sequence dashes
+    yaml.indent(mapping=4, sequence=4, offset=2)
     # Avoid anchors/aliases in output (safer for catalogs)
     yaml.representer.ignore_aliases = lambda *_: True
 
