@@ -14,6 +14,10 @@ infores:automat-cam-kp,infores:service-provider-trapi,1
 infores:automat-cebs,infores:aragorn,1
 infores:automat-cebs,infores:arax,1
 infores:automat-cebs,infores:service-provider-trapi,1
+infores:automat-cohd,infores:aragorn,1
+infores:automat-cohd,infores:arax,1
+infores:automat-cohd,infores:openpredict,1
+infores:automat-cohd,infores:service-provider-trapi,1
 infores:automat-ctd,infores:aragorn,1
 infores:automat-ctd,infores:arax,1
 infores:automat-ctd,infores:service-provider-trapi,1
