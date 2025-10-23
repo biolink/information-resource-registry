@@ -49,9 +49,11 @@ def reorder_mapping(m: CommentedMap, priority_order: List[str]) -> CommentedMap:
 def normalize_description_scalar(v):
     """
     Ensure description is a folded block scalar (>-like), preserving text.
+    Only convert plain strings to FoldedScalarString - leave existing block scalars untouched.
     """
-    if isinstance(v, str) and not isinstance(v, FoldedScalarString):
+    if isinstance(v, str) and not isinstance(v, (FoldedScalarString, ScalarString)):
         return FoldedScalarString(v)
+    # If it's already a ScalarString (includes FoldedScalarString, LiteralScalarString, etc.), preserve it as-is
     return v
 
 
@@ -90,8 +92,12 @@ def process_information_resources(node: CommentedSeq, sort_xrefs: bool, dedupe_x
             item["xref"] = new_seq
 
         # Normalize description to folded block scalar
+        # Skip normalization if it's already a block scalar to preserve formatting
         if "description" in item:
-            item["description"] = normalize_description_scalar(item["description"])
+            desc = item["description"]
+            # Only normalize if it's a plain string (not already a block scalar)
+            if isinstance(desc, str) and not isinstance(desc, ScalarString):
+                item["description"] = normalize_description_scalar(desc)
 
         # Reorder keys according to schema-provided slots, then append any extras alphabetically
         # ordered_slots may miss some ad-hoc keys; reorder_mapping handles that.
@@ -225,6 +231,8 @@ def main(input_path: Path, output_path: Optional[Path], schema_path: Optional[Pa
     yaml.explicit_start = True  # Add --- at the start of the document
     # Standardize indentation: 4 spaces for maps, 4 for sequences, 2 offset for sequence dashes
     yaml.indent(mapping=4, sequence=4, offset=2)
+    # Preserve formatting of block scalars - don't reformat their content
+    yaml.default_flow_style = False  # Force block style for sequences and mappings
     # Avoid anchors/aliases in output (safer for catalogs)
     yaml.representer.ignore_aliases = lambda *_: True
 
@@ -260,8 +268,54 @@ def main(input_path: Path, output_path: Optional[Path], schema_path: Optional[Pa
         target = None
 
     if target:
+        # Dump to a temporary string first so we can fix block scalar indentation
+        from io import StringIO
+        temp_output = StringIO()
+        yaml.dump(data, temp_output)
+        output_str = temp_output.getvalue()
+
+        # Fix indentation: change 8-space indent to 6-space indent
+        # This affects both block scalar content and wrapped plain scalar continuations
+        # We want to reduce from 8 to 6 spaces for content/continuation lines
+        lines = output_str.split('\n')
+        fixed_lines = []
+
+        for line in lines:
+            # Check if line starts with exactly 8 spaces (content/continuation)
+            if line.startswith('        ') and not line.startswith('         '):
+                # This could be:
+                # 1. Block scalar content (lines after >- or |-)
+                # 2. Wrapped plain scalar continuation
+                # 3. Could also be a deeply nested structure (but unlikely with our schema)
+
+                # Check if it looks like a key (contains : near the start)
+                # Keys should not be dedented
+                stripped = line.lstrip()
+                # If it looks like a YAML key (word followed by colon), don't dedent
+                if ':' in stripped[:40] and stripped.split(':')[0].replace('_', '').replace('-', '').isalnum():
+                    # With our schema, 8-space keys are very rare
+                    # To be safe, check if this really looks like a key
+                    key_part = stripped.split(':')[0]
+                    # Known YAML keys in our schema
+                    if key_part in ['status', 'name', 'id', 'xref', 'synonym', 'description',
+                                     'knowledge_level', 'agent_type', 'consumed_by', 'consumes']:
+                        # This is definitely a key, don't dedent
+                        fixed_lines.append(line)
+                    else:
+                        # Probably content/continuation, dedent from 8 to 6
+                        fixed_lines.append('      ' + line[8:])
+                else:
+                    # No colon or doesn't look like a key, treat as content/continuation
+                    # Dedent from 8 to 6 spaces
+                    fixed_lines.append('      ' + line[8:])
+            else:
+                # Not an 8-space line, keep as-is
+                fixed_lines.append(line)
+
+        output_str = '\n'.join(fixed_lines)
+
         with target.open("w", encoding="utf-8") as f:
-            yaml.dump(data, f)
+            f.write(output_str)
     else:
         yaml.dump(data, sys.stdout)
 
