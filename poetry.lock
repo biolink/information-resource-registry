@@ -329,28 +329,29 @@ markers = {main = "platform_system == \"Windows\" or sys_platform == \"win32\""}
 
 [[package]]
 name = "curies"
-version = "0.7.10"
-description = "Idiomatic conversion between URIs and compact URIs (CURIEs)."
+version = "0.12.1"
+description = "Idiomatic conversion between URIs and compact URIs (CURIEs)"
 optional = false
-python-versions = ">=3.8"
+python-versions = ">=3.10"
 groups = ["main", "dev"]
 files = [
-    {file = "curies-0.7.10-py3-none-any.whl", hash = "sha256:ad80f420dd76b6f3e921a245370ff6ab7473c48c29c17254970c03cd2e58af5f"},
-    {file = "curies-0.7.10.tar.gz", hash = "sha256:98a7ceb94710fab3a02727a7f85ba0719dd22be5fc8b5f2ad1d7d4cfc47d64ce"},
+    {file = "curies-0.12.1-py3-none-any.whl", hash = "sha256:fb72295b807bdb782495b4997ad01e509bff2a5acf3c44f2610c2a14aaf53458"},
+    {file = "curies-0.12.1.tar.gz", hash = "sha256:58be363c67dc686766d5630fffdc43d4855bc17aecb7edd282f8bdbc3580133b"},
 ]
 
 [package.dependencies]
-pydantic = "*"
-pytrie = "*"
-requests = "*"
+pydantic = ">=2.0"
+typing-extensions = "*"
 
 [package.extras]
-docs = ["sphinx", "sphinx-automodapi", "sphinx-rtd-theme"]
+docs = ["sphinx (>=8)", "sphinx-automodapi", "sphinx-rtd-theme (>=3.0)"]
 fastapi = ["defusedxml", "fastapi", "httpx", "python-multipart", "uvicorn"]
 flask = ["defusedxml", "flask"]
 pandas = ["pandas"]
 rdflib = ["rdflib"]
-tests = ["coverage", "pytest"]
+sqlalchemy = ["sqlalchemy"]
+sqlmodel = ["sqlmodel"]
+tests = ["coverage[toml]", "pytest", "requests"]
 
 [[package]]
 name = "daff"
@@ -419,6 +420,29 @@ files = [
 
 [package.extras]
 test = ["pytest (>=6)"]
+
+[[package]]
+name = "fairsharing-client"
+version = "0.1.0"
+description = "A client to the FAIRsharing API"
+optional = false
+python-versions = ">=3.7"
+groups = ["main"]
+files = [
+    {file = "fairsharing_client-0.1.0-py3-none-any.whl", hash = "sha256:3ca0ca70f6e1f6f81ebd4e68d1c59691ea272975f19d8929940e5402cfaa3644"},
+    {file = "fairsharing_client-0.1.0.tar.gz", hash = "sha256:8ee8d74d9677a489a9e757edde9447102839f2f60f6373ff3163029812b19b90"},
+]
+
+[package.dependencies]
+more-itertools = "*"
+pystow = "*"
+pyyaml = "*"
+requests = "*"
+tqdm = "*"
+
+[package.extras]
+docs = ["sphinx", "sphinx-autodoc-typehints", "sphinx-automodapi", "sphinx-rtd-theme"]
+tests = ["coverage", "pytest"]
 
 [[package]]
 name = "fqdn"
@@ -1304,6 +1328,18 @@ click = "*"
 tests = ["coverage", "pytest"]
 
 [[package]]
+name = "more-itertools"
+version = "10.8.0"
+description = "More routines for operating on iterables, beyond itertools"
+optional = false
+python-versions = ">=3.9"
+groups = ["main"]
+files = [
+    {file = "more_itertools-10.8.0-py3-none-any.whl", hash = "sha256:52d4362373dcf7c52546bc4af9a86ee7c4579df9a8dc268be0a2f949d376cc9b"},
+    {file = "more_itertools-10.8.0.tar.gz", hash = "sha256:f638ddf8a1a0d134181275fb5d58b086ead7c6a72429ad725c67503f13ba30bd"},
+]
+
+[[package]]
 name = "numpy"
 version = "2.1.2"
 description = "Fundamental package for array computing in Python"
@@ -1721,6 +1757,18 @@ files = [
 pyasn1 = ">=0.4.6,<0.7.0"
 
 [[package]]
+name = "pycountry"
+version = "24.6.1"
+description = "ISO country, subdivision, language, currency and script definitions and their translations"
+optional = false
+python-versions = ">=3.8"
+groups = ["main"]
+files = [
+    {file = "pycountry-24.6.1-py3-none-any.whl", hash = "sha256:f1a4fb391cd7214f8eefd39556d740adcc233c778a27f8942c8dca351d6ce06f"},
+    {file = "pycountry-24.6.1.tar.gz", hash = "sha256:b61b3faccea67f87d10c1f2b0fc0be714409e8fcdcc1315613174f6466c10221"},
+]
+
+[[package]]
 name = "pydantic"
 version = "2.9.2"
 description = "Data validation using Python type hints"
@@ -1847,6 +1895,32 @@ files = [
 typing-extensions = ">=4.6.0,<4.7.0 || >4.7.0"
 
 [[package]]
+name = "pydantic-extra-types"
+version = "2.10.6"
+description = "Extra Pydantic types."
+optional = false
+python-versions = ">=3.8"
+groups = ["main"]
+files = [
+    {file = "pydantic_extra_types-2.10.6-py3-none-any.whl", hash = "sha256:6106c448316d30abf721b5b9fecc65e983ef2614399a24142d689c7546cc246a"},
+    {file = "pydantic_extra_types-2.10.6.tar.gz", hash = "sha256:c63d70bf684366e6bbe1f4ee3957952ebe6973d41e7802aea0b770d06b116aeb"},
+]
+
+[package.dependencies]
+pycountry = {version = ">=23", optional = true, markers = "extra == \"pycountry\""}
+pydantic = ">=2.5.2"
+typing-extensions = "*"
+
+[package.extras]
+all = ["cron-converter (>=1.2.2)", "pendulum (>=3.0.0,<4.0.0)", "phonenumbers (>=8,<10)", "pycountry (>=23)", "pymongo (>=4.0.0,<5.0.0)", "python-ulid (>=1,<2) ; python_version < \"3.9\"", "python-ulid (>=1,<4) ; python_version >= \"3.9\"", "pytz (>=2024.1)", "semver (>=3.0.2)", "semver (>=3.0.2,<3.1.0)", "tzdata (>=2024.1)"]
+cron = ["cron-converter (>=1.2.2)"]
+pendulum = ["pendulum (>=3.0.0,<4.0.0)"]
+phonenumbers = ["phonenumbers (>=8,<10)"]
+pycountry = ["pycountry (>=23)"]
+python-ulid = ["python-ulid (>=1,<2) ; python_version < \"3.9\"", "python-ulid (>=1,<4) ; python_version >= \"3.9\""]
+semver = ["semver (>=3.0.2)"]
+
+[[package]]
 name = "pygments"
 version = "2.18.0"
 description = "Pygments is a syntax highlighting package written in Python."
@@ -1956,27 +2030,30 @@ shexjsg = ">=0.8.1"
 
 [[package]]
 name = "pystow"
-version = "0.5.6"
-description = "Easily pick a place to store data for your python package."
+version = "0.7.11"
+description = "Easily pick a place to store data for your Python code"
 optional = false
-python-versions = ">=3.7"
-groups = ["dev"]
+python-versions = ">=3.9"
+groups = ["main", "dev"]
 files = [
-    {file = "pystow-0.5.6-py3-none-any.whl", hash = "sha256:3a44349dccc1260238e8f4c8f2dec5d72e2952a126fb897df663e94e6a910c86"},
-    {file = "pystow-0.5.6.tar.gz", hash = "sha256:db567e82a5b7aea34cdcf4ae00ba822cd64a51ae2f465b1995599676e4cdbff2"},
+    {file = "pystow-0.7.11-py3-none-any.whl", hash = "sha256:bcafe098310499b2e91fedb8671b13e206058605319ad6987ecc2388ec8b5200"},
+    {file = "pystow-0.7.11.tar.gz", hash = "sha256:2b8b10dbf78b13d36a7fcd71efd47921cea1c5c9f1078b7c3cf49f658278f0e9"},
 ]
 
 [package.dependencies]
 click = "*"
 requests = "*"
 tqdm = "*"
+typing-extensions = "*"
 
 [package.extras]
 aws = ["boto3"]
-docs = ["sphinx (<8.0)", "sphinx-autodoc-typehints", "sphinx-automodapi", "sphinx-click", "sphinx-rtd-theme"]
+bs4 = ["bs4"]
+docs = ["sphinx (>=8)", "sphinx-automodapi", "sphinx-click", "sphinx-rtd-theme (>=3.0)"]
 pandas = ["pandas"]
+ratelimit = ["ratelimit"]
 rdf = ["rdflib"]
-tests = ["coverage", "pytest", "requests-file"]
+tests = ["coverage[toml]", "pytest", "requests-file"]
 xml = ["lxml"]
 
 [[package]]
@@ -2030,21 +2107,6 @@ files = [
 
 [package.dependencies]
 six = ">=1.5"
-
-[[package]]
-name = "pytrie"
-version = "0.4.0"
-description = "A pure Python implementation of the trie data structure."
-optional = false
-python-versions = "*"
-groups = ["main", "dev"]
-files = [
-    {file = "PyTrie-0.4.0-py3-none-any.whl", hash = "sha256:f687c224ee8c66cda8e8628a903011b692635ffbb08d4b39c5f92b18eb78c950"},
-    {file = "PyTrie-0.4.0.tar.gz", hash = "sha256:8f4488f402d3465993fb6b6efa09866849ed8cda7903b50647b7d0342b805379"},
-]
-
-[package.dependencies]
-sortedcontainers = "*"
 
 [[package]]
 name = "pytz"
@@ -2653,18 +2715,6 @@ files = [
 ]
 
 [[package]]
-name = "sortedcontainers"
-version = "2.4.0"
-description = "Sorted Containers -- Sorted List, Sorted Dict, Sorted Set"
-optional = false
-python-versions = "*"
-groups = ["main", "dev"]
-files = [
-    {file = "sortedcontainers-2.4.0-py2.py3-none-any.whl", hash = "sha256:a163dcaede0f1c021485e957a39245190e74249897e2ae4b2aa38595db237ee0"},
-    {file = "sortedcontainers-2.4.0.tar.gz", hash = "sha256:25caa5a06cc30b6b83d11423433f65d1f9d76c4c6a0c90e3379eaa43b9bfdb88"},
-]
-
-[[package]]
 name = "soupsieve"
 version = "2.6"
 description = "A modern CSS selector implementation for Beautiful Soup."
@@ -2801,6 +2851,36 @@ postgresql-psycopg2cffi = ["psycopg2cffi"]
 postgresql-psycopgbinary = ["psycopg[binary] (>=3.0.7)"]
 pymysql = ["pymysql"]
 sqlcipher = ["sqlcipher3_binary"]
+
+[[package]]
+name = "ssslm"
+version = "0.1.2"
+description = "A simple standard for sharing literal mappings"
+optional = false
+python-versions = ">=3.10"
+groups = ["main"]
+files = [
+    {file = "ssslm-0.1.2-py3-none-any.whl", hash = "sha256:8829e3a4450a7d1e5500f4f631dc5d74c787e175887fa3090c030b93d219b003"},
+    {file = "ssslm-0.1.2.tar.gz", hash = "sha256:462304cb9a505e81266cde33a2a1cf3f048c645f62f9ab342b735f2db7b1955c"},
+]
+
+[package.dependencies]
+click = "*"
+curies = "*"
+pydantic = "*"
+pydantic-extra-types = {version = "*", extras = ["pycountry"]}
+pystow = ">=0.7.3"
+tqdm = "*"
+
+[package.extras]
+gilda = ["gilda", "nltk", "pystow"]
+gilda-default = ["boto3"]
+gilda-slim = ["gilda-slim", "nltk", "pystow"]
+gliner = ["gliner"]
+pandas = ["pandas"]
+rdflib = ["rdflib"]
+scispacy = ["numpy (<2.0) ; python_full_version < \"3.11.0\"", "scispacy ; python_full_version < \"3.11.0\"", "spacy ; python_full_version < \"3.11.0\""]
+web = ["fastapi", "uvicorn"]
 
 [[package]]
 name = "stringcase"
@@ -3138,4 +3218,4 @@ docs = []
 [metadata]
 lock-version = "2.1"
 python-versions = "^3.10"
-content-hash = "0f3632d109d0fd527d7d35cf53a99b42ac8616086f677f5f29820845826518b4"
+content-hash = "0433f18456e7b26c2ac5aa9db1933aa8e607d71e55e7e974f3a45233674c4332"
