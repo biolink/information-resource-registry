@@ -17,6 +17,10 @@ TOP_LEVEL_ORDER = [
     "information_resources",
 ]
 
+MAX_KEY_CHECK_LENGTH = 40
+EIGHT_SPACES = '        '
+NINE_SPACES = '         '
+
 def reorder_mapping(m: CommentedMap, priority_order: List[str]) -> CommentedMap:
     """
     Reorder a ruamel CommentedMap: first keys in priority_order (if present),
@@ -51,7 +55,7 @@ def normalize_description_scalar(v):
     Ensure description is a folded block scalar (>-like), preserving text.
     Only convert plain strings to FoldedScalarString - leave existing block scalars untouched.
     """
-    if isinstance(v, str) and not isinstance(v, (FoldedScalarString, ScalarString)):
+    if isinstance(v, str) and not isinstance(v, ScalarString):
         return FoldedScalarString(v)
     # If it's already a ScalarString (includes FoldedScalarString, LiteralScalarString, etc.), preserve it as-is
     return v
@@ -94,10 +98,7 @@ def process_information_resources(node: CommentedSeq, sort_xrefs: bool, dedupe_x
         # Normalize description to folded block scalar
         # Skip normalization if it's already a block scalar to preserve formatting
         if "description" in item:
-            desc = item["description"]
-            # Only normalize if it's a plain string (not already a block scalar)
-            if isinstance(desc, str) and not isinstance(desc, ScalarString):
-                item["description"] = normalize_description_scalar(desc)
+            item["description"] = normalize_description_scalar(item["description"])
 
         # Reorder keys according to schema-provided slots, then append any extras alphabetically
         # ordered_slots may miss some ad-hoc keys; reorder_mapping handles that.
@@ -282,7 +283,7 @@ def main(input_path: Path, output_path: Optional[Path], schema_path: Optional[Pa
 
         for line in lines:
             # Check if line starts with exactly 8 spaces (content/continuation)
-            if line.startswith('        ') and not line.startswith('         '):
+            if line.startswith(EIGHT_SPACES) and not line.startswith(NINE_SPACES):
                 # This could be:
                 # 1. Block scalar content (lines after >- or |-)
                 # 2. Wrapped plain scalar continuation
@@ -292,11 +293,12 @@ def main(input_path: Path, output_path: Optional[Path], schema_path: Optional[Pa
                 # Keys should not be dedented
                 stripped = line.lstrip()
                 # If it looks like a YAML key (word followed by colon), don't dedent
-                if ':' in stripped[:40] and stripped.split(':')[0].replace('_', '').replace('-', '').isalnum():
+                if ':' in stripped[:MAX_KEY_CHECK_LENGTH] and stripped.split(':')[0].replace('_', '').replace('-', '').isalnum():
                     # With our schema, 8-space keys are very rare
                     # To be safe, check if this really looks like a key
                     key_part = stripped.split(':')[0]
                     # Known YAML keys in our schema
+                    
                     if key_part in ['status', 'name', 'id', 'xref', 'synonym', 'description',
                                      'knowledge_level', 'agent_type', 'consumed_by', 'consumes']:
                         # This is definitely a key, don't dedent
