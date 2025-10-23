@@ -146,7 +146,6 @@
   ],
   "infores:mydisease-info": [
     "infores:ctd",
-    "infores:disgenet",
     "infores:hpo-annotations",
     "infores:mondo"
   ],
@@ -171,6 +170,7 @@
   "infores:renci-bionames": [],
   "infores:rtx-kg2": [],
   "infores:service-provider-trapi": [],
+  "infores:shepherd-aragorn": [],
   "infores:spoke": [],
   "infores:sri-answer-appraiser": [],
   "infores:sri-name-resolver": [],
