@@ -19,11 +19,13 @@
     "infores:automat-pharos",
     "infores:automat-reactome",
     "infores:automat-robokop",
+    "infores:automat-string-db",
     "infores:automat-ubergraph",
     "infores:automat-viral-proteome",
     "infores:biothings-multiomics-biggim-drugresponse",
     "infores:catrax-pharmacogenomics",
     "infores:cohd",
+    "infores:connections-hypothesis",
     "infores:gelinea",
     "infores:genetics-data-provider",
     "infores:knowledge-collaboratory",
@@ -34,7 +36,6 @@
     "infores:multiomics-multiomics",
     "infores:rtx-kg2",
     "infores:service-provider-trapi",
-    "infores:spoke",
     "infores:text-mining-provider-cooccurrence"
   ]
 }
