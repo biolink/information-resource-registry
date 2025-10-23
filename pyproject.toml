@@ -48,6 +48,7 @@ linkml = "^1.8.5"
 linkml-runtime = "^1.8.0"
 tqdm = "^4.66.6"
 ruamel-yaml = "^0.18.0"
+packaging = "^24.0"
 
 [tool.poetry.dev-dependencies]
 linkml = ">=1.6.3"
