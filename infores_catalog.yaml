@@ -1629,8 +1629,8 @@ information_resources:
     name: Consumer Health Vocabulary (from UMLS)
     id: infores:chv-umls
     xref:
-      - http://consumerhealthvocab.org/docs/README.pdf
       - http://consumerhealthvocab.org/
+      - http://consumerhealthvocab.org/docs/README.pdf
       - https://www.nlm.nih.gov/research/umls/sourcereleasedocs/
     description: >-
       CHV connects informal, common words and phrases about health to technical terms
