@@ -799,6 +799,7 @@ information_resources:
     id: infores:bfo
     xref:
       - http://www.obofoundry.org/ontology/bfo.html
+      - fairsharing:FAIRsharing.wcpd6f
     synonym:
       - BFO
     knowledge_level: knowledge_assertion
@@ -828,6 +829,7 @@ information_resources:
     id: infores:bigg-models
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/BiGG-Models
+      - fairsharing:FAIRsharing.va62ke
     synonym:
       - BIGG
     description: >-
@@ -868,6 +870,7 @@ information_resources:
     id: infores:bio2rdf
     xref:
       - https://bio2rdf.org
+      - fairsharing:FAIRsharing.6gz84c
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - status: deprecated
@@ -875,6 +878,8 @@ information_resources:
     id: infores:biocatalogue
     knowledge_level: other
     agent_type: not_provided
+    xref:
+      - fairsharing:FAIRsharing.9vT2Wg
   - status: released
     name: 'The Biological General Repository for Interaction Datasets '
     id: infores:biogrid
@@ -1465,6 +1470,7 @@ information_resources:
     id: infores:bspo
     xref:
       - https://obofoundry.org/ontology/bspo.html
+      - fairsharing:FAIRsharing.newa3z
     synonym:
       - BSPO
     knowledge_level: knowledge_assertion
@@ -1601,6 +1607,7 @@ information_resources:
     id: infores:chembl
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/ChEMBL
+      - fairsharing:FAIRsharing.m3jtpg
     synonym:
       - Chembl
     description: >-
@@ -1642,6 +1649,7 @@ information_resources:
     id: infores:cl
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/CL
+      - fairsharing:FAIRsharing.j9y503
     synonym:
       - CL
     knowledge_level: knowledge_assertion
@@ -1672,6 +1680,7 @@ information_resources:
     id: infores:clinicaltrials
     xref:
       - https://clinicaltrials.gov
+      - fairsharing:FAIRsharing.mewhad
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - status: released
@@ -1679,6 +1688,7 @@ information_resources:
     id: infores:clinvar
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/clinvar
+      - fairsharing:FAIRsharing.wx5r6f
     description: >-
       ClinVar is a freely accessible, public archive of reports of the
       relationships among human variations and phenotypes, with supporting evidence.
@@ -1861,6 +1871,7 @@ information_resources:
     id: infores:complex-portal
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/Complex-Portal
+      - fairsharing:FAIRsharing.wP3t2L
     description: >-
       The Complex Portal is a manually curated, encyclopaedic resource of macromolecular
       complexes  from
@@ -1972,6 +1983,7 @@ information_resources:
     id: infores:ctd
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/CTD
+      - fairsharing:FAIRsharing.h3tjtr
     synonym:
       - CTDbase
     description: >-
@@ -2113,6 +2125,7 @@ information_resources:
     id: infores:dictybase
     xref:
       - http://dictybase.org
+      - fairsharing:FAIRsharing.4shj9c
     description: >-
       The central resource for Dictyostelid genomics, providing model organism database
       services for the research community.
@@ -2128,6 +2141,7 @@ information_resources:
     id: infores:disease-ontology
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/disease-ontology
+      - fairsharing:FAIRsharing.8b6wfq
     synonym:
       - DO
     knowledge_level: knowledge_assertion
@@ -2157,6 +2171,7 @@ information_resources:
     id: infores:disgenet
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/DisGeNET
+      - fairsharing:FAIRsharing.fssydn
     knowledge_level: prediction
     agent_type: automated_agent
     consumed_by:
@@ -2167,6 +2182,7 @@ information_resources:
     id: infores:disprot
     xref:
       - https://www.disprot.org
+      - fairsharing:FAIRsharing.dt9z89
     description: >-
       A database of intrinsically disordered proteins that provides manually curated
       annotations for regions of disorder in proteins.
@@ -2225,6 +2241,7 @@ information_resources:
     id: infores:drugbank
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/DrugBank
+      - fairsharing:FAIRsharing.353yat
     synonym:
       - Drugbank
     description: >-
@@ -2244,6 +2261,7 @@ information_resources:
     id: infores:drugcentral
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/DrugCentral
+      - fairsharing:FAIRsharing.3me82d
     synonym:
       - Drugcentral
     description: >-
@@ -2359,6 +2377,7 @@ information_resources:
     id: infores:efo
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/EFO
+      - fairsharing:FAIRsharing.1gr4tz
     synonym:
       - EFO
     knowledge_level: knowledge_assertion
@@ -2381,6 +2400,7 @@ information_resources:
     id: infores:emapa
     xref:
       - https://obofoundry.org/ontology/emapa.html
+      - fairsharing:FAIRsharing.j0fa1d
     synonym:
       - EMAPA
     description: >-
@@ -2470,6 +2490,7 @@ information_resources:
     id: infores:fbcv
     xref:
       - https://obofoundry.org/ontology/fbcv.html
+      - fairsharing:FAIRsharing.6tgyxf
     synonym:
       - FBcv
     description: >-
@@ -2481,6 +2502,7 @@ information_resources:
     id: infores:fbdv
     xref:
       - https://obofoundry.org/ontology/fbdv.html
+      - fairsharing:FAIRsharing.p52pzj
     synonym:
       - FBdv
     description: >-
@@ -2526,6 +2548,7 @@ information_resources:
     id: infores:flybase
     xref:
       - https://flybase.org
+      - fairsharing:FAIRsharing.wrvze3
     synonym:
       - FlyBase
     description: >-
@@ -2582,6 +2605,7 @@ information_resources:
     id: infores:foodon
     xref:
       - http://www.obofoundry.org/ontology/foodon.html
+      - fairsharing:FAIRsharing.dzxae
     synonym:
       - FOODON
     knowledge_level: knowledge_assertion
@@ -2593,6 +2617,7 @@ information_resources:
     id: infores:fypo
     xref:
       - https://obofoundry.org/ontology/fypo.html
+      - fairsharing:FAIRsharing.4vr0ys
     synonym:
       - FYPO
     description: >-
@@ -2678,6 +2703,7 @@ information_resources:
     id: infores:genepio
     xref:
       - https://genepio.org/
+      - fairsharing:FAIRsharing.y1mmbv
     synonym:
       - GenEpiO
     knowledge_level: knowledge_assertion
@@ -2689,6 +2715,7 @@ information_resources:
     id: infores:geneprof
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/GeneProf
+      - fairsharing:FAIRsharing.qmygaa
     description: >-
       underlying resource is throwing 404 error atm
     knowledge_level: knowledge_assertion
@@ -2732,6 +2759,7 @@ information_resources:
     id: infores:go
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/go
+      - fairsharing:FAIRsharing.6xq0ee
     knowledge_level: knowledge_assertion
     agent_type: manual_agent
     consumed_by:
@@ -2874,6 +2902,7 @@ information_resources:
     id: infores:hgnc
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/HGNC
+      - fairsharing:FAIRsharing.29we0s
     synonym:
       - HGNC
     knowledge_level: knowledge_assertion
@@ -2938,6 +2967,7 @@ information_resources:
     id: infores:hpo
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/HPO
+      - fairsharing:FAIRsharing.kbtt7f
     knowledge_level: knowledge_assertion
     agent_type: manual_agent
     consumed_by:
@@ -2949,6 +2979,7 @@ information_resources:
     id: infores:hpo-annotations
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/HPO-Annotations
+      - fairsharing:FAIRsharing.kbtt7f
     synonym:
       - HPO Annotations
     knowledge_level: knowledge_assertion
@@ -2961,6 +2992,7 @@ information_resources:
     id: infores:hsapdv
     xref:
       - https://obofoundry.org/ontology/hsapdv.html
+      - fairsharing:FAIRsharing.c6vhm3
     synonym:
       - HsapDv
     description: >-
@@ -3106,6 +3138,7 @@ information_resources:
     id: infores:innatedb
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/InnateDB
+      - fairsharing:FAIRsharing.rb2drw
     description: >-
       InnateDB is a publicly available database of the genes, proteins, experimentally-verified
       interactions  and signaling pathways involved in the innate immune response of humans,
@@ -3123,6 +3156,7 @@ information_resources:
     id: infores:ino
     xref:
       - http://www.obofoundry.org/ontology/ino.html
+      - fairsharing:FAIRsharing.mm72as
     knowledge_level: knowledge_assertion
     agent_type: manual_agent
     consumed_by:
@@ -3383,6 +3417,7 @@ information_resources:
     id: infores:maxo
     xref:
       - http://www.obofoundry.org/ontology/maxo.html
+      - fairsharing:FAIRsharing.945c78
     synonym:
       - MAXO
     description: >-
@@ -3568,6 +3603,7 @@ information_resources:
     id: infores:monarchinitiative
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/Monarch-Initiative
+      - fairsharing:FAIRsharing.2c5132
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     consumed_by:
@@ -3590,6 +3626,7 @@ information_resources:
     id: infores:mop
     xref:
       - http://www.obofoundry.org/ontology/mop.html
+      - fairsharing:FAIRsharing.mct09a
     synonym:
       - MOP
     knowledge_level: knowledge_assertion
@@ -3608,6 +3645,7 @@ information_resources:
     id: infores:mp
     xref:
       - https://obofoundry.org/ontology/mp.html
+      - fairsharing:FAIRsharing.kg1x4z
     description: >-
       Standard terms for annotating mammalian phenotypic data.
     knowledge_level: knowledge_assertion
@@ -3795,6 +3833,7 @@ information_resources:
     id: infores:nbo
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/NBO
+      - fairsharing:FAIRsharing.pktgc6
     synonym:
       - NBO
     knowledge_level: knowledge_assertion
@@ -3802,8 +3841,8 @@ information_resources:
     consumed_by:
       - infores:rtx-kg2
   - status: released
-    name: National Center for Advancing Translational Science Biomedical Data Translator Autonomous
-      Relay System
+    name: National Center for Advancing Translational Science Biomedical Data Translator 
+      Autonomous Relay System
     id: infores:ncats-ars
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/Autonomous-Relay-System-(ARS)
@@ -3848,8 +3887,8 @@ information_resources:
     consumed_by:
       - infores:rtx-kg2
   - status: deprecated
-    name: North Carolina Department of Environmental Quality Concentrated Animal Feeding Operations
-      Exposures Data
+    name: North Carolina Department of Environmental Quality Concentrated Animal Feeding 
+      Operations Exposures Data
     id: infores:ncdeq-cafo-exposures-data
     knowledge_level: knowledge_assertion
     agent_type: not_provided
@@ -3953,6 +3992,7 @@ information_resources:
     id: infores:oba
     xref:
       - https://obofoundry.org/ontology/oba.html
+      - fairsharing:FAIRsharing.mp0rwf
     synonym:
       - OBA
     description: >-
@@ -4024,7 +4064,7 @@ information_resources:
     consumed_by:
       - infores:cohd
   - status: released
-    name: Observational Medical Outcomes Partnership Observational Health Data Sciences and
+    name: Observational Medical Outcomes Partnership Observational Health Data Sciences and 
       Informatics API
     id: infores:omop-ohdsi-api
     xref:
@@ -4038,6 +4078,7 @@ information_resources:
     id: infores:open-targets
     xref:
       - https://www.opentargets.org/
+      - fairsharing:FAIRsharing.3f9n4y
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - status: released
@@ -4096,6 +4137,7 @@ information_resources:
     id: infores:orphanet
     xref:
       - https://www.orpha.net
+      - fairsharing:FAIRsharing.6bd5k6
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - status: released
@@ -4137,6 +4179,7 @@ information_resources:
     id: infores:pathway-commons
     xref:
       - https://www.pathwaycommons.org/
+      - fairsharing:FAIRsharing.5y3gdd
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - status: released
@@ -4255,6 +4298,7 @@ information_resources:
     id: infores:pharos
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/Pharos
+      - fairsharing:FAIRsharing.52d6ae
     description: >-
       focusing on three of the most commonly drug-targeted protein families:
       G-protein-coupled receptors (GPCRs, Ion channels (ICs), Kinases
@@ -4291,6 +4335,7 @@ information_resources:
     id: infores:pr
     xref:
       - https://proconsortium.org/
+      - fairsharing:FAIRsharing.4ndncv
     synonym:
       - PRO
     knowledge_level: knowledge_assertion
@@ -4371,6 +4416,7 @@ information_resources:
     id: infores:pubchem
     xref:
       - https://pubchem.ncbi.nlm.nih.gov/
+      - fairsharing:FAIRsharing.qt3w7z
     description: >-
       an open chemistry database at the National Institutes of Health (NIH),
       mostly contains small molecules, but also larger molecules such as nucleotides,
@@ -4384,6 +4430,7 @@ information_resources:
     id: infores:pubmed
     xref:
       - https://pubmed.ncbi.nlm.nih.gov/
+      - fairsharing:FAIRsharing.a5sv8m
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     consumed_by:
@@ -4394,6 +4441,7 @@ information_resources:
     id: infores:pubmed-central
     xref:
       - https://www.ncbi.nlm.nih.gov/pmc/tools/openftlist/
+      - fairsharing:FAIRsharing.wpt5mp
     synonym:
       - PMC
     knowledge_level: knowledge_assertion
@@ -4447,6 +4495,7 @@ information_resources:
     id: infores:reactome
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/reactome
+      - fairsharing:FAIRsharing.tf6kj8
     knowledge_level: knowledge_assertion
     agent_type: manual_agent
     consumed_by:
@@ -4509,6 +4558,7 @@ information_resources:
     id: infores:rhea
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/rhea
+      - fairsharing:FAIRsharing.pn1sr5
     description: >-
       https://www.rhea-db.org/
     knowledge_level: knowledge_assertion
@@ -4520,6 +4570,7 @@ information_resources:
     id: infores:rnacentral
     xref:
       - https://rnacentral.org
+      - fairsharing:FAIRsharing.KcCjL7
     description: >-
       A comprehensive database of non-coding RNA sequences that provides a single access
       point
@@ -4673,6 +4724,7 @@ information_resources:
     id: infores:rxnorm
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/RxNORM
+      - fairsharing:FAIRsharing.36pf8q
     description: >-
       normalized names for clinical drugs and links its names to many of
       the drug vocabularies commonly used in pharmacy management and drug interaction
@@ -4688,6 +4740,7 @@ information_resources:
     id: infores:sabio-rk
     xref:
       - https://www.h-its.org/projects/sabio-rk-biochemical-reaction-kinetics-database/
+      - fairsharing:FAIRsharing.cwx04e
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - status: released
@@ -4796,6 +4849,7 @@ information_resources:
     id: infores:sgd
     xref:
       - http://www.yeastgenome.org/
+      - fairsharing:FAIRsharing.pzvw40
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - status: released
@@ -4888,6 +4942,7 @@ information_resources:
     id: infores:so
     xref:
       - http://purl.obolibrary.org/obo/so.owl
+      - fairsharing:FAIRsharing.6bc7h9
     synonym:
       - SO
     knowledge_level: knowledge_assertion
@@ -5060,6 +5115,7 @@ information_resources:
     id: infores:symp
     xref:
       - http://www.obofoundry.org/ontology/symp.html
+      - fairsharing:FAIRsharing.ay74mj
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - status: released
@@ -5078,6 +5134,7 @@ information_resources:
     id: infores:tcrd
     xref:
       - http://juniper.health.unm.edu/tcrd/
+      - fairsharing:FAIRsharing.1gn47b
     synonym:
       - TCRD
     knowledge_level: knowledge_assertion
@@ -5130,6 +5187,7 @@ information_resources:
     id: infores:tiga
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/TIGA
+      - fairsharing:FAIRsharing.beffb7
     synonym:
       - TIGA
     description: >-
@@ -5142,6 +5200,7 @@ information_resources:
     id: infores:tissues
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/TISSUES
+      - fairsharing:FAIRsharing.yXPvpU
     description: >-
       TISSUES is a weekly updated web resource that integrates evidence on tissue expression  from
       manually curated literature, proteomics and transcriptomics screens, and automatic  text
@@ -5201,6 +5260,7 @@ information_resources:
     id: infores:uberon
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/Uberon
+      - fairsharing:FAIRsharing.4c0b6b
     synonym:
       - Uberon
     knowledge_level: knowledge_assertion
@@ -5258,6 +5318,7 @@ information_resources:
     id: infores:uniprot
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/UniProt
+      - fairsharing:FAIRsharing.s1ne3g
     synonym:
       - UniProt
     knowledge_level: knowledge_assertion
@@ -5364,6 +5425,7 @@ information_resources:
     id: infores:wbphenotype
     xref:
       - https://obofoundry.org/ontology/wbphenotype.html
+      - fairsharing:FAIRsharing.agvc7y
     synonym:
       - WBPhenotype
     description: >-
@@ -5375,6 +5437,7 @@ information_resources:
     id: infores:wikidata
     xref:
       - https://wikidata.org
+      - fairsharing:FAIRsharing.6s749p
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - status: released
@@ -5389,6 +5452,7 @@ information_resources:
     id: infores:wikipathways
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/WikiPathways
+      - fairsharing:FAIRsharing.1x53qk
     description: >-
       WikiPathways is an open science platform for biological pathways contributed, updated,
       and used by the research community.
@@ -5408,6 +5472,7 @@ information_resources:
     id: infores:wormbase
     xref:
       - http://www.wormbase.org/
+      - fairsharing:FAIRsharing.zx1td8
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - status: released
@@ -5415,6 +5480,7 @@ information_resources:
     id: infores:xao
     xref:
       - https://obofoundry.org/ontology/xao.html
+      - fairsharing:FAIRsharing.17zapb
     synonym:
       - XAO
     description: >-
