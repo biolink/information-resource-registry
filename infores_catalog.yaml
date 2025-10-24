@@ -2307,11 +2307,13 @@ information_resources:
       - EBI
     knowledge_level: knowledge_assertion
     agent_type: not_provided
-  - status: modified
+  - status: deprecated
     name: European Bioinformatics Institute Gene to Phenotype Resource
     id: infores:ebi-gene2phenotype
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/ebi-gene2phenotype
+    description: >-
+      This entry has been deprecated. Please use infores:gene2phenotype instead.
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     consumed_by:
@@ -2687,6 +2689,25 @@ information_resources:
       - GenDR
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+  - status: released
+    name: Gene2Phenotype
+    id: infores:gene2phenotype
+    xref:
+      - https://github.com/NCATSTranslator/Translator-All/wiki/gene2phenotype
+      - https://www.ebi.ac.uk/gene2phenotype
+      - https://www.ebi.ac.uk/gene2phenotype/about/project
+    synonym:
+      - G2P
+    description: >-
+      G2P is a publicly-accessible online system designed to facilitate development, validation,
+      curation and distribution of large-scale, evidence-based datasets for diagnostic variant
+      filtering. Each entry associates an allelic requirement and mutational consequence
+      at a defined locus with a disease entity, including assigned confidence levels and
+      evidence links.
+    knowledge_level: knowledge_assertion
+    agent_type: manual_agent
+    consumed_by:
+      - infores:biothings-ebi-gene2phenotype
   - status: released
     name: 'Genebass: Gene-based association summary statistics'
     id: infores:genebass
