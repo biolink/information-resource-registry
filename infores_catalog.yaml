@@ -228,7 +228,7 @@ information_resources:
     xref:
       - https://www.nlm.nih.gov/research/umls/sourcereleasedocs/current/ATC/index.html
     knowledge_level: knowledge_assertion
-    agent_type: not_provided
+    agent_type: manual_agent
     consumed_by:
       - infores:rtx-kg2
   - status: released
@@ -802,7 +802,7 @@ information_resources:
     synonym:
       - BFO
     knowledge_level: knowledge_assertion
-    agent_type: not_provided
+    agent_type: manual_agent
     consumed_by:
       - infores:rtx-kg2
   - status: released
@@ -910,7 +910,7 @@ information_resources:
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/BioLink-OWL
     knowledge_level: knowledge_assertion
-    agent_type: not_provided
+    agent_type: manual_agent
     consumed_by:
       - infores:rtx-kg2
   - status: released
@@ -1468,7 +1468,7 @@ information_resources:
     synonym:
       - BSPO
     knowledge_level: knowledge_assertion
-    agent_type: not_provided
+    agent_type: manual_agent
     consumed_by:
       - infores:rtx-kg2
   - status: released
@@ -1570,7 +1570,7 @@ information_resources:
     description: >-
       a freely available dictionary of molecular entities focused on ‘small’ chemical compounds
     knowledge_level: knowledge_assertion
-    agent_type: not_provided
+    agent_type: manual_agent
     consumed_by:
       - infores:molepro
       - infores:mychem-info
@@ -1606,7 +1606,7 @@ information_resources:
     description: >-
       a manually knowledge_assertion database of bioactive molecules with drug-like properties.
     knowledge_level: knowledge_assertion
-    agent_type: not_provided
+    agent_type: manual_agent
     consumed_by:
       - infores:molepro
       - infores:mychem-info
@@ -1622,8 +1622,8 @@ information_resources:
     id: infores:chv-umls
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/Automat
-    knowledge_level: not_provided
-    agent_type: not_provided
+    knowledge_level: knowledge_assertion
+    agent_type: manual_agent
     consumed_by:
       - infores:rtx-kg2
   - status: released
@@ -1645,7 +1645,7 @@ information_resources:
     synonym:
       - CL
     knowledge_level: knowledge_assertion
-    agent_type: not_provided
+    agent_type: manual_agent
     consumed_by:
       - infores:rtx-kg2
   - status: released
@@ -2041,7 +2041,7 @@ information_resources:
     synonym:
       - DDA
     knowledge_level: knowledge_assertion
-    agent_type: not_provided
+    agent_type: manual_agent
     consumed_by:
       - infores:rtx-kg2
   - status: released
@@ -2102,8 +2102,8 @@ information_resources:
       information on drug-gene interactions and druggable genes from publications,
       databases, and other web-based sources. Drug, gene, and interaction data are normalized
       and merged into conceptual groups.
-    knowledge_level: mixed
-    agent_type: not_provided
+    knowledge_level: prediction
+    agent_type: automated_agent
     consumed_by:
       - infores:biothings-dgidb
       - infores:molepro
@@ -2131,7 +2131,7 @@ information_resources:
     synonym:
       - DO
     knowledge_level: knowledge_assertion
-    agent_type: not_provided
+    agent_type: manual_agent
     consumed_by:
       - infores:ols
       - infores:rtx-kg2
@@ -2147,8 +2147,8 @@ information_resources:
       association studies. We further unify the evidence by assigning confidence  scores
       that
       facilitate comparison of the different types and sources of evidence.
-    knowledge_level: mixed
-    agent_type: not_provided
+    knowledge_level: prediction
+    agent_type: text_mining_agent
     consumed_by:
       - infores:biothings-diseases
       - infores:rtx-kg2
@@ -2157,8 +2157,8 @@ information_resources:
     id: infores:disgenet
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/DisGeNET
-    knowledge_level: mixed
-    agent_type: not_provided
+    knowledge_level: prediction
+    agent_type: automated_agent
     consumed_by:
       - infores:mydisease-info
       - infores:rtx-kg2
@@ -2233,7 +2233,7 @@ information_resources:
       we combine detailed drug (i.e. chemical, pharmacological and pharmaceutical) data
       with comprehensive drug target (i.e. sequence, structure, and pathway) information
     knowledge_level: knowledge_assertion
-    agent_type: not_provided
+    agent_type: manual_agent
     consumed_by:
       - infores:catrax-pharmacogenomics
       - infores:molepro
@@ -2251,7 +2251,7 @@ information_resources:
       of Translational Informatics at University of New Mexico in collaboration with
       the IDG.
     knowledge_level: knowledge_assertion
-    agent_type: not_provided
+    agent_type: manual_agent
     consumed_by:
       - infores:catrax-pharmacogenomics
       - infores:molepro
@@ -2362,7 +2362,7 @@ information_resources:
     synonym:
       - EFO
     knowledge_level: knowledge_assertion
-    agent_type: not_provided
+    agent_type: manual_validation_of_automated_agent
     consumed_by:
       - infores:rtx-kg2
   - status: released
@@ -2373,7 +2373,7 @@ information_resources:
     synonym:
       - EHDAA2
     knowledge_level: knowledge_assertion
-    agent_type: not_provided
+    agent_type: manual_agent
     consumed_by:
       - infores:rtx-kg2
   - status: released
@@ -2394,7 +2394,7 @@ information_resources:
     xref:
       - https://www.ebi.ac.uk/training/online/courses/ensembl-browsing-genomes/exploring-sources-of-biological-data/ensembl-genes/
     knowledge_level: knowledge_assertion
-    agent_type: not_provided
+    agent_type: automated_agent
     consumed_by:
       - infores:rtx-kg2
   - status: released
@@ -2538,7 +2538,7 @@ information_resources:
     xref:
       - https://www.nlm.nih.gov/research/umls/sourcereleasedocs/current/FMA/index.html
     knowledge_level: knowledge_assertion
-    agent_type: not_provided
+    agent_type: manual_agent
     consumed_by:
       - infores:rtx-kg2
   - status: released
@@ -2547,7 +2547,7 @@ information_resources:
     xref:
       - https://www.nlm.nih.gov/research/umls/sourcereleasedocs/current/FMA/index.html
     knowledge_level: knowledge_assertion
-    agent_type: not_provided
+    agent_type: manual_agent
     consumed_by:
       - infores:rtx-kg2
   - status: released
@@ -2585,7 +2585,7 @@ information_resources:
     synonym:
       - FOODON
     knowledge_level: knowledge_assertion
-    agent_type: not_provided
+    agent_type: manual_agent
     consumed_by:
       - infores:rtx-kg2
   - status: released
@@ -2681,7 +2681,7 @@ information_resources:
     synonym:
       - GenEpiO
     knowledge_level: knowledge_assertion
-    agent_type: not_provided
+    agent_type: manual_agent
     consumed_by:
       - infores:rtx-kg2
   - status: released
@@ -2733,7 +2733,7 @@ information_resources:
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/go
     knowledge_level: knowledge_assertion
-    agent_type: not_provided
+    agent_type: manual_agent
     consumed_by:
       - infores:biothings-go-bp
       - infores:biothings-go-cc
@@ -2767,7 +2767,7 @@ information_resources:
     synonym:
       - GO-Plus
     knowledge_level: knowledge_assertion
-    agent_type: not_provided
+    agent_type: manual_agent
     consumed_by:
       - infores:rtx-kg2
   - status: released
@@ -2778,7 +2778,7 @@ information_resources:
     synonym:
       - GOA
     knowledge_level: knowledge_assertion
-    agent_type: not_provided
+    agent_type: manual_validation_of_automated_agent
     consumed_by:
       - infores:rtx-kg2
   - status: released
@@ -2850,7 +2850,7 @@ information_resources:
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/HCPCS-Version-of-Current-Procedural-Terminology
     knowledge_level: knowledge_assertion
-    agent_type: not_provided
+    agent_type: manual_agent
     consumed_by:
       - infores:rtx-kg2
   - status: released
@@ -2877,7 +2877,7 @@ information_resources:
     synonym:
       - HGNC
     knowledge_level: knowledge_assertion
-    agent_type: not_provided
+    agent_type: manual_agent
     consumed_by:
       - infores:molepro
       - infores:rtx-kg2
@@ -2887,7 +2887,7 @@ information_resources:
     xref:
       - https://www.nlm.nih.gov/research/umls/sourcereleasedocs/current/HL7V3.0/index.html
     knowledge_level: knowledge_assertion
-    agent_type: not_provided
+    agent_type: manual_agent
     consumed_by:
       - infores:rtx-kg2
   - status: released
@@ -2901,7 +2901,7 @@ information_resources:
       A freely available electronic database containing detailed information
       about small molecule metabolites found in the human body
     knowledge_level: knowledge_assertion
-    agent_type: not_provided
+    agent_type: manual_agent
     consumed_by:
       - infores:molepro
       - infores:rtx-kg2
@@ -2939,7 +2939,7 @@ information_resources:
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/HPO
     knowledge_level: knowledge_assertion
-    agent_type: not_provided
+    agent_type: manual_agent
     consumed_by:
       - infores:biothings-hpo
       - infores:catrax-pharmacogenomics
@@ -3031,7 +3031,7 @@ information_resources:
     xref:
       - https://www.nlm.nih.gov/research/umls/sourcereleasedocs/current/ICD10PCS/index.html
     knowledge_level: knowledge_assertion
-    agent_type: not_provided
+    agent_type: manual_agent
     consumed_by:
       - infores:rtx-kg2
   - status: released
@@ -3049,7 +3049,7 @@ information_resources:
     xref:
       - https://www.nlm.nih.gov/research/umls/sourcereleasedocs/current/ICD9CM/index.html
     knowledge_level: knowledge_assertion
-    agent_type: not_provided
+    agent_type: manual_agent
     consumed_by:
       - infores:rtx-kg2
   - status: released
@@ -3124,7 +3124,7 @@ information_resources:
     xref:
       - http://www.obofoundry.org/ontology/ino.html
     knowledge_level: knowledge_assertion
-    agent_type: not_provided
+    agent_type: manual_agent
     consumed_by:
       - infores:rtx-kg2
   - status: released
@@ -3133,7 +3133,7 @@ information_resources:
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/IntAct
     knowledge_level: knowledge_assertion
-    agent_type: not_provided
+    agent_type: manual_agent
     consumed_by:
       - infores:rtx-kg2
   - status: released
@@ -3256,7 +3256,7 @@ information_resources:
     synonym:
       - KEGG
     knowledge_level: knowledge_assertion
-    agent_type: not_provided
+    agent_type: manual_agent
     consumed_by:
       - infores:rtx-kg2
   - status: deprecated
@@ -3428,7 +3428,7 @@ information_resources:
     xref:
       - https://medlineplus.gov/
     knowledge_level: knowledge_assertion
-    agent_type: not_provided
+    agent_type: manual_agent
     consumed_by:
       - infores:rtx-kg2
   - status: released
@@ -3437,7 +3437,7 @@ information_resources:
     xref:
       - https://www.nlm.nih.gov/research/umls/sourcereleasedocs/current/MED-RT/index.html
     knowledge_level: knowledge_assertion
-    agent_type: not_provided
+    agent_type: manual_agent
     consumed_by:
       - infores:rtx-kg2
   - status: released
@@ -3448,7 +3448,7 @@ information_resources:
     synonym:
       - MeSH
     knowledge_level: knowledge_assertion
-    agent_type: not_provided
+    agent_type: manual_agent
     consumed_by:
       - infores:rtx-kg2
   - status: released
@@ -3479,7 +3479,7 @@ information_resources:
     synonym:
       - MI
     knowledge_level: knowledge_assertion
-    agent_type: not_provided
+    agent_type: manual_agent
     consumed_by:
       - infores:rtx-kg2
   - status: released
@@ -3490,7 +3490,7 @@ information_resources:
     synonym:
       - miRBase
     knowledge_level: knowledge_assertion
-    agent_type: not_provided
+    agent_type: manual_agent
     consumed_by:
       - infores:rtx-kg2
   - status: released
@@ -3580,7 +3580,7 @@ information_resources:
     synonym:
       - MONDO
     knowledge_level: knowledge_assertion
-    agent_type: not_provided
+    agent_type: manual_validation_of_automated_agent
     consumed_by:
       - infores:catrax-pharmacogenomics
       - infores:mydisease-info
@@ -3798,7 +3798,7 @@ information_resources:
     synonym:
       - NBO
     knowledge_level: knowledge_assertion
-    agent_type: not_provided
+    agent_type: manual_agent
     consumed_by:
       - infores:rtx-kg2
   - status: released
@@ -3821,7 +3821,7 @@ information_resources:
       - NGBI Gene
       - ncbigene
     knowledge_level: knowledge_assertion
-    agent_type: not_provided
+    agent_type: automated_agent
     consumed_by:
       - infores:catrax-pharmacogenomics
       - infores:mygene-info
@@ -3832,7 +3832,7 @@ information_resources:
     xref:
       - http://www.obofoundry.org/ontology/ncbitaxon.html
     knowledge_level: knowledge_assertion
-    agent_type: not_provided
+    agent_type: manual_agent
     consumed_by:
       - infores:rtx-kg2
   - status: released
@@ -3844,7 +3844,7 @@ information_resources:
       - ncbitaxonomy
       - ncbitaxon
     knowledge_level: knowledge_assertion
-    agent_type: not_provided
+    agent_type: manual_agent
     consumed_by:
       - infores:rtx-kg2
   - status: deprecated
@@ -3876,7 +3876,7 @@ information_resources:
       - NCT Thesaurus
       - NCIt
     knowledge_level: knowledge_assertion
-    agent_type: not_provided
+    agent_type: manual_agent
     consumed_by:
       - infores:rtx-kg2
   - status: released
@@ -3891,6 +3891,8 @@ information_resources:
   - status: deprecated
     name: National Drug Data File (NDDF) (from UMLS)
     id: infores:nddf-umls
+    knowledge_level: knowledge_assertion
+    agent_type: automated_agent
     consumed_by:
       - infores:rtx-kg2
   - status: deprecated
@@ -3991,7 +3993,7 @@ information_resources:
     synonym:
       - OMIM
     knowledge_level: knowledge_assertion
-    agent_type: not_provided
+    agent_type: manual_agent
     consumed_by:
       - infores:openpredict
       - infores:rtx-kg2
@@ -4086,7 +4088,7 @@ information_resources:
     synonym:
       - ORDO
     knowledge_level: knowledge_assertion
-    agent_type: not_provided
+    agent_type: manual_agent
     consumed_by:
       - infores:rtx-kg2
   - status: released
@@ -4142,8 +4144,8 @@ information_resources:
     id: infores:pathwhiz
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/PathWhiz
-    knowledge_level: knowledge_assertion
-    agent_type: not_provided
+    knowledge_level: prediction
+    agent_type: automated_agent
     consumed_by:
       - infores:rtx-kg2
   - status: released
@@ -4154,7 +4156,7 @@ information_resources:
     synonym:
       - PATO
     knowledge_level: knowledge_assertion
-    agent_type: not_provided
+    agent_type: manual_agent
     consumed_by:
       - infores:rtx-kg2
   - status: released
@@ -4172,7 +4174,7 @@ information_resources:
     xref:
       - https://www.nlm.nih.gov/research/umls/sourcereleasedocs/current/PDQ/index.html
     knowledge_level: knowledge_assertion
-    agent_type: not_provided
+    agent_type: manual_agent
     consumed_by:
       - infores:rtx-kg2
   - status: released
@@ -4292,7 +4294,7 @@ information_resources:
     synonym:
       - PRO
     knowledge_level: knowledge_assertion
-    agent_type: not_provided
+    agent_type: manual_validation_of_automated_agent
     consumed_by:
       - infores:rtx-kg2
   - status: deprecated
@@ -4361,7 +4363,7 @@ information_resources:
     xref:
       - https://www.nlm.nih.gov/research/umls/sourcereleasedocs/current/PSY/index.html#:~:text=PSY%20(Psychological%20Index%20Terms)%20%2D%20Synopsis,-Synopsis%20Metadata%20Statistics&text=The%20Thesaurus%20of%20Psychological%20Index%20Terms%20is%20a%20controlled%20vocabulary,provide%20subject%20searching%20of%20data.
     knowledge_level: knowledge_assertion
-    agent_type: not_provided
+    agent_type: manual_agent
     consumed_by:
       - infores:rtx-kg2
   - status: released
@@ -4446,7 +4448,7 @@ information_resources:
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/reactome
     knowledge_level: knowledge_assertion
-    agent_type: not_provided
+    agent_type: manual_agent
     consumed_by:
       - infores:molepro
       - infores:mygene-info
@@ -4532,7 +4534,7 @@ information_resources:
     synonym:
       - RO
     knowledge_level: knowledge_assertion
-    agent_type: not_provided
+    agent_type: manual_agent
     consumed_by:
       - infores:rtx-kg2
   - status: deprecated
@@ -4677,7 +4679,7 @@ information_resources:
       software, including those of First Databank, Micromedex, and Gold Standard Drug
       Database
     knowledge_level: knowledge_assertion
-    agent_type: not_provided
+    agent_type: automated_agent
     consumed_by:
       - infores:molepro
       - infores:rtx-kg2
@@ -4700,7 +4702,7 @@ information_resources:
     id: infores:semmeddb
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/SemMedDB
-    knowledge_level: not_provided
+    knowledge_level: prediction
     agent_type: text_mining_agent
     consumed_by:
       - infores:biothings-semmeddb
@@ -5202,7 +5204,7 @@ information_resources:
     synonym:
       - Uberon
     knowledge_level: knowledge_assertion
-    agent_type: not_provided
+    agent_type: manual_agent
     consumed_by:
       - infores:biothings-uberon-ontology
       - infores:rtx-kg2
@@ -5223,7 +5225,7 @@ information_resources:
     xref:
       - https://www.nlm.nih.gov/research/umls/sourcereleasedocs/current/MTH/index.html
     knowledge_level: knowledge_assertion
-    agent_type: not_provided
+    agent_type: manual_agent
     consumed_by:
       - infores:rtx-kg2
   - status: deprecated
@@ -5240,8 +5242,8 @@ information_resources:
       - https://github.com/NCATSTranslator/Translator-All/wiki/UniChem
     synonym:
       - unichem
-    knowledge_level: knowledge_assertion
-    agent_type: not_provided
+    knowledge_level: logical_entailment
+    agent_type: automated_agent
     consumed_by:
       - infores:rtx-kg2
   - status: released
@@ -5259,7 +5261,7 @@ information_resources:
     synonym:
       - UniProt
     knowledge_level: knowledge_assertion
-    agent_type: not_provided
+    agent_type: manual_agent
     consumed_by:
       - infores:ebi-proteins
       - infores:molepro
@@ -5332,7 +5334,7 @@ information_resources:
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/VANDF
     knowledge_level: knowledge_assertion
-    agent_type: not_provided
+    agent_type: manual_agent
     consumed_by:
       - infores:rtx-kg2
   - status: released

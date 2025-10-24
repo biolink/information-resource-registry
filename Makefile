@@ -55,6 +55,9 @@ test_pr:
 standardize-data: src/information_resource_registry/standardization/standardize.py infores_catalog.yaml
 	$(RUN) python $^ --in-place --schema src/information_resource_registry/schema/information_resource_registry.yaml
 
+sync-rtx-kg2: src/information_resource_registry/translator_dataflow/sync_rtx_kg2_data.py infores_catalog.yaml
+	$(RUN) python $<
+
 check_standardized:
 	@echo "Checking if infores_catalog.yaml is properly standardized..."
 	@cp infores_catalog.yaml /tmp/infores_catalog_backup.yaml
