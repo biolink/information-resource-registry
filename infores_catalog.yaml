@@ -4059,6 +4059,7 @@ information_resources:
     agent_type: not_provided
   - status: released
     id: infores:omop-ohdsi
+    name: OMOP (OHDSI)
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/Automat
     knowledge_level: not_provided
