@@ -2596,6 +2596,7 @@ information_resources:
     consumed_by:
       - infores:biothings-fooddata-central
   - status: released
+    name: FooDB
     id: infores:fooddb
     knowledge_level: not_provided
     agent_type: not_provided
