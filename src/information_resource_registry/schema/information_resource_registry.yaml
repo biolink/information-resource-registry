@@ -94,6 +94,7 @@ slots:
     aliases: ['label', 'display name', 'title']
     description: >-
       A human-readable name for an attribute or entity.
+    required: true
     slot_uri: rdfs:label
 
   id:
