@@ -4515,6 +4515,20 @@ information_resources:
       - infores:mygene-info
       - infores:rtx-kg2
   - status: released
+    name: RefMet - A Reference list of Metabolite names
+    id: infores:refmet
+    xref:
+      - https://www.metabolomicsworkbench.org/databases/refmet/index.php
+    description: >-
+      RefMet provides a standardized reference nomenclature for both discrete metabolite
+      structures and metabolite species identified by spectroscopic techniques in metabolomics
+      experiments. The resource curates over 700,000 metabolite names from 3,500+ MS and
+      NMR studies into a standardized analytical chemistry-focused nomenclature system,
+      enabling researchers to compare and contrast metabolite data across different experiments
+      and studies.
+    knowledge_level: knowledge_assertion
+    agent_type: manual_agent
+  - status: released
     name: Richards Effector Gene List
     id: infores:regl
     xref:
