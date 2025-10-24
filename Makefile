@@ -31,7 +31,7 @@ help:
 # install any dependencies required for building
 install:
 	git init
-	poetry install
+	uv sync
 .PHONY: install
 
 all: site
