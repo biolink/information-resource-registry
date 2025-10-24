@@ -1629,13 +1629,21 @@ information_resources:
     name: Consumer Health Vocabulary (from UMLS)
     id: infores:chv-umls
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/Automat
+      - http://consumerhealthvocab.org/docs/README.pdf
+      - http://consumerhealthvocab.org/
+      - https://www.nlm.nih.gov/research/umls/sourcereleasedocs/
+    description: >-
+      CHV connects informal, common words and phrases about health to technical terms
+      used by health care professionals. It includes jargon, slang, ambiguous, and misspelled
+      words as used by consumers and health care professionals. OAC CHV is designed to complement
+      the existing framework of the UMLS and to aid the needs of consumer health applications,
+      enabling these applications to translate technical terms to consumer friendly language.
     knowledge_level: knowledge_assertion
     agent_type: manual_agent
     consumed_by:
       - infores:rtx-kg2
   - status: released
-    name: Clinital Interpretation of Variants in Cancer
+    name: Clinical Interpretation of Variants in Cancer
     id: infores:civic
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/civic
