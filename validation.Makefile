@@ -1,10 +1,10 @@
-RUN = poetry run
+RUN = uv run
 
 check_urls:
-	poetry run check_urls
+	$(RUN) check_urls
 
 spell:
-	poetry run codespell
+	$(RUN) codespell
 
 lint:
 	$(RUN) linkml-lint $(SOURCE_SCHEMA_PATH)

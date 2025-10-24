@@ -1,4 +1,4 @@
-RUN = poetry run
+RUN = uv run
 DOCDIR = docs
 
 $(DOCDIR):
