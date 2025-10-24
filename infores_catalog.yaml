@@ -211,6 +211,7 @@ information_resources:
     consumed_by:
       - infores:ars
   - status: released
+    name: Autonomous Relay System
     id: infores:ars
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/Autonomous-Relay-System-(ARS)
@@ -248,6 +249,7 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - status: released
+    name: Automat BindingDB
     id: infores:automat-binding-db
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/Automat
@@ -683,6 +685,7 @@ information_resources:
       - infores:arax
       - infores:service-provider-trapi
   - status: released
+    name: Automat Reactome
     id: infores:automat-reactome
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/Automat
@@ -701,6 +704,7 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - status: released
+    name: Automat ROBOKOP
     id: infores:automat-robokop
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/Automat
@@ -1200,7 +1204,10 @@ information_resources:
     consumed_by:
       - infores:service-provider-trapi
   - status: released
+    name: BioThings Mabs
     id: infores:biothings-mabs
+    xref:
+      - https://biothings.ncats.io/mabs
     knowledge_level: not_provided
     agent_type: not_provided
     consumes:
@@ -1535,13 +1542,6 @@ information_resources:
       - infores:arax
       - infores:service-provider-trapi
   - status: released
-    id: infores:catrax-pharmacogenomics
-    knowledge_level: not_provided
-    agent_type: not_provided
-    consumed_by:
-      - infores:aragorn
-      - infores:arax
-  - status: released
     name: CEBS
     id: infores:cebs
     xref:
@@ -1626,6 +1626,7 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - status: released
+    name: Consumer Health Vocabulary (from UMLS)
     id: infores:chv-umls
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/Automat
@@ -2645,6 +2646,7 @@ information_resources:
     consumed_by:
       - infores:biothings-multiomics-biggim-drugresponse
   - status: released
+    name: GeLiNEA
     id: infores:gelinea
     xref:
       - https://github.com/broadinstitute/GeLiNEA
@@ -4761,6 +4763,7 @@ information_resources:
       - infores:biothings-semmeddb
       - infores:rtx-kg2
   - status: released
+    name: SEPID MAB
     id: infores:sepid_mab
     knowledge_level: not_provided
     agent_type: not_provided
