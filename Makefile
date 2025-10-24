@@ -11,7 +11,7 @@ SHELL := bash
 .SUFFIXES:
 .SECONDARY:
 
-RUN = poetry run
+RUN = uv run
 DOCDIR = docs
 RELEASE_TMPDIR = release-output
 

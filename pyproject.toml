@@ -1,20 +1,46 @@
-[tool.poetry]
+[project]
 name = "information-resource-registry"
 version = "0.0.0"
 description = "A registry of information resources used in NCATS Data Translator"
-authors = ["Sierra Moxon <smoxon@lbl.gov>"]
-license = "MIT"
+authors = [
+    {name = "Sierra Moxon", email = "smoxon@lbl.gov"}
+]
+license = {text = "MIT"}
 readme = "README.md"
-include = [
-    "README.md",
-    "src/information-resource-registry/schema",
-    "project",
-    "src/information-resource-registry/datamodel",
-    "src/information-resource-registry/translator_dataflow",
-    "src/information-resource-registry/validation"
+requires-python = ">=3.10"
+dependencies = [
+    "click>=8.3.0",
+    "curies>=0.12.0",
+    "prefixmaps>=0.2.0",
+    "pyyaml>=6.0.1",
+    "stringcase>=1.2.0",
+    "pytest>=7.3.1",
+    "beautifulsoup4>=4.0.0",
+    "kaleido==0.2.1",
+    "pandas>=2.2.3",
+    "plotly>=5.24.1",
+    "yamllint>=1.35.1",
+    "linkml>=1.8.5",
+    "linkml-runtime>=1.8.0",
+    "tqdm>=4.66.6",
+    "ssslm>=0.1.2",
+    "fairsharing-client>=0.3.0",
+    "ruamel-yaml>=0.18.0",
+    "packaging>=24.0",
+    "requests>=2.31.0",
 ]
 
-[tool.poetry.scripts]
+[project.optional-dependencies]
+dev = [
+    "mkdocs>=1.4.2",
+    "mkdocs-material>=9.4.8",
+    "mkdocs-mermaid2-plugin>=1.1.1",
+    "schemasheets>=0.1.14",
+    "codespell>=2.2.6",
+]
+docs = ["mkdocs-material>=9.4.8"]
+
+[project.scripts]
 add_consume_info = "information_resource_registry.translator_dataflow.add_consume_info:main"
 aragorn_kps = "information_resource_registry.translator_dataflow.aragorn_kps:main"
 arax_kps = "information_resource_registry.translator_dataflow.arax_kps:main"
@@ -26,6 +52,7 @@ rtx_kg2 = "information_resource_registry.translator_dataflow.rtx_kg2:main"
 unsecret = "information_resource_registry.translator_dataflow.unsecret:main"
 check_urls = "information_resource_registry.validation.check_urls:main"
 
+<<<<<<< Updated upstream
 [tool.poetry-dynamic-versioning]
 enable = true
 vcs = "git"
@@ -59,12 +86,17 @@ mkdocs-mermaid2-plugin = "^1.1.1"
 schemasheets = "^0.1.14"
 codespell = "^2.2.6"
 
+=======
+>>>>>>> Stashed changes
 [build-system]
-requires = ["poetry-core>=1.0.0", "poetry-dynamic-versioning"]
-build-backend = "poetry_dynamic_versioning.backend"
+requires = ["hatchling", "hatch-vcs"]
+build-backend = "hatchling.build"
 
-[tool.poetry.extras]
-docs = ["mkdocs-material"]
+[tool.hatch.version]
+source = "vcs"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/information_resource_registry"]
 
 [tool.codespell]
 skip = '.idea,.git,SEMMEDDB*,semmed*,*.svg,docs,registry.md,xrefs.html'
