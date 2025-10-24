@@ -34,7 +34,7 @@ style = "pep440"
 [tool.poetry.dependencies]
 click = "^8.3.0"
 python = "^3.10"
-curies = "^0.7.4"
+curies = "^0.12.0"
 prefixmaps = "^0.2.0"
 pyyaml = "^6.0.1"
 stringcase = "^1.2.0"
@@ -47,9 +47,10 @@ yamllint = "^1.35.1"
 linkml = "^1.8.5"
 linkml-runtime = "^1.8.0"
 tqdm = "^4.66.6"
+ssslm = "^0.1.2"
+fairsharing-client = "*"
 ruamel-yaml = "^0.18.0"
 packaging = {extras = ["licenses"], version = "^24.0"}
-
 
 [tool.poetry.dev-dependencies]
 linkml = ">=1.6.3"
