@@ -28,6 +28,7 @@ dependencies = [
     "ruamel-yaml>=0.18.0",
     "packaging>=24.0",
     "requests>=2.31.0",
+    "gilda>=1.4.1",
 ]
 
 [project.optional-dependencies]
@@ -52,42 +53,6 @@ rtx_kg2 = "information_resource_registry.translator_dataflow.rtx_kg2:main"
 unsecret = "information_resource_registry.translator_dataflow.unsecret:main"
 check_urls = "information_resource_registry.validation.check_urls:main"
 
-<<<<<<< Updated upstream
-[tool.poetry-dynamic-versioning]
-enable = true
-vcs = "git"
-style = "pep440"
-
-[tool.poetry.dependencies]
-click = "^8.3.0"
-python = "^3.10"
-curies = "^0.7.4"
-prefixmaps = "^0.2.0"
-pyyaml = "^6.0.1"
-stringcase = "^1.2.0"
-pytest = "^7.3.1"
-beautifulsoup4 = ">=4.0.0"
-kaleido = "0.2.1"
-pandas = "^2.2.3"
-plotly = "^5.24.1"
-yamllint = "^1.35.1"
-linkml = "^1.8.5"
-linkml-runtime = "^1.8.0"
-tqdm = "^4.66.6"
-ruamel-yaml = "^0.18.0"
-packaging = {extras = ["licenses"], version = "^24.0"}
-
-
-[tool.poetry.dev-dependencies]
-linkml = ">=1.6.3"
-mkdocs = "^1.4.2"
-mkdocs-material = "^9.4.8"
-mkdocs-mermaid2-plugin = "^1.1.1"
-schemasheets = "^0.1.14"
-codespell = "^2.2.6"
-
-=======
->>>>>>> Stashed changes
 [build-system]
 requires = ["hatchling", "hatch-vcs"]
 build-backend = "hatchling.build"
