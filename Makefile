@@ -31,7 +31,7 @@ help:
 # install any dependencies required for building
 install:
 	git init
-	uv init
+	uv sync
 .PHONY: install
 
 all: site
