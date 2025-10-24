@@ -55,6 +55,9 @@ test_pr:
 standardize-data: src/information_resource_registry/standardization/standardize.py infores_catalog.yaml
 	$(RUN) python $^ --in-place --schema src/information_resource_registry/schema/information_resource_registry.yaml
 
+update-fairshare-xrefs: src/information_resource_registry/generate_lexical_mappings.py infores_catalog.yaml
+	$(RUN) python $^
+
 sync-rtx-kg2: src/information_resource_registry/translator_dataflow/sync_rtx_kg2_data.py infores_catalog.yaml
 	$(RUN) python $<
 
