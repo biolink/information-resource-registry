@@ -2366,20 +2366,6 @@ information_resources:
     consumed_by:
       - infores:service-provider-trapi
   - status: released
-    name: Embiology
-    id: infores:embiology
-    xref:
-      - https://www.embiology.com
-    description: >-
-      EmBiology is a web-based knowledge graph developed by Elsevier that integrates biological relationships across 
-      genes, proteins, diseases, pathways, and small molecules. It combines text-mined evidence from scientific 
-      literature with curated database content to capture causal, regulatory, and associative connections among 
-      biological entities. Updated weekly, EmBiology supports interactive exploration and visualization of biological 
-      mechanisms, enabling target discovery, biomarker identification, and hypothesis generation in drug discovery and 
-      translational research.
-    knowledge_level: knowledge_assertion
-    agent_type: manually_curated
-  - status: released
     name: Evidence & Conclusion Ontology
     id: infores:eco
     xref:
@@ -2433,6 +2419,21 @@ information_resources:
       stages.
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+  - status: released
+    name: Embiology
+    id: infores:embiology
+    xref:
+      - https://www.embiology.com
+    description: >-
+      EmBiology is a web-based knowledge graph developed by Elsevier that integrates biological
+      relationships across  genes, proteins, diseases, pathways, and small molecules. It
+      combines text-mined evidence from scientific  literature with curated database content
+      to capture causal, regulatory, and associative connections among  biological entities.
+      Updated weekly, EmBiology supports interactive exploration and visualization of biological  mechanisms,
+      enabling target discovery, biomarker identification, and hypothesis generation in
+      drug discovery and  translational research.
+    knowledge_level: knowledge_assertion
+    agent_type: manually_curated
   - status: released
     name: Ensembl gene
     id: infores:ensembl-gene
