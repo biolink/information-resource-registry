@@ -4916,6 +4916,48 @@ information_resources:
     consumed_by:
       - infores:ars
   - status: released
+    name: Shepherd ARAX ARA
+    id: infores:shepherd-arax
+    xref:
+      - https://github.com/BioPack-team/shepherd
+    description: >-
+      Shepherd ARAX: The ARAX ARA implementation within the
+      Shepherd platform.
+    knowledge_level: prediction
+    agent_type: not_provided
+    consumes:
+      - infores:retriever
+    consumed_by:
+      - infores:ars
+  - status: released
+    name: Shepherd BTE ARA
+    id: infores:shepherd-bte
+    xref:
+      - https://github.com/BioPack-team/shepherd
+    description: >-
+      Shepherd BTE: The BTE ARA implementation within the
+      Shepherd platform.
+    knowledge_level: prediction
+    agent_type: not_provided
+    consumes:
+      - infores:retriever
+    consumed_by:
+      - infores:ars
+  - status: released
+    name: Shepherd SIPR ARA
+    id: infores:shepherd-sipr
+    xref:
+      - https://github.com/BioPack-team/shepherd
+    description: >-
+      Shepherd SIPR: The SIPR ARA implementation within the
+      Shepherd platform. Uses Page Rank algorithm for Set Input Queries.
+    knowledge_level: prediction
+    agent_type: not_provided
+    consumes:
+      - infores:retriever
+    consumed_by:
+      - infores:ars
+  - status: released
     name: SIDER
     id: infores:sider
     xref:
