@@ -822,7 +822,8 @@ information_resources:
   - status: released
     name: BHF-UCL Cardiovascular Gene Ontology Initiative
     id: infores:bhf-ucl
-    xref: https://www.ucl.ac.uk/cardiovascular/
+    xref:
+      - https://www.ucl.ac.uk/cardiovascular/
     description: >-
       Curated dataset of cardiovascular-related protein interactions and gene ontology annotations
       from the
@@ -1527,7 +1528,8 @@ information_resources:
   - status: released
     name: CancerCommons
     id: infores:cancercommons
-    xref: https://cancercommons.org/
+    xref:
+      - https://cancercommons.org/
     description: >-
       Nonprofit resource connecting patients, oncologists, and scientists with up-to-date
       treatment information and molecular data.
@@ -1584,7 +1586,8 @@ information_resources:
   - status: released
     name: Cancer Genome Interpreter (CGI)
     id: infores:cgi
-    xref: https://www.cancergenomeinterpreter.org/home
+    xref:
+      - https://www.cancergenomeinterpreter.org/home
     description: >-
       Resource that interprets the biological and clinical relevance of tumor genomic alterations
       to support precision oncology.
@@ -1678,7 +1681,8 @@ information_resources:
   - status: released
     name: Cancer KnowledgeBase CORE – Genomenon (CKB-CORE)
     id: infores:ckb-core
-    xref: https://ckb.genomenon.com/
+    xref:
+      - https://ckb.genomenon.com/
     description: >-
       Commercially curated database of actionable cancer variants and targeted therapies.
   - status: released
@@ -1696,14 +1700,16 @@ information_resources:
   - status: released
     name: Clearity Foundation Biomarkers
     id: infores:clearity-biomarkers
-    xref: https://ocrahope.org/clearity-has-joined-ocra/
+    xref:
+      - https://ocrahope.org/clearity-has-joined-ocra/
     description: >-
       Dataset of biomarkers and treatment options for ovarian cancer compiled by the Clearity
       Foundation.
   - status: released
     name: Clearity Foundation Clinical Trial
     id: infores:clearity-clinical-trial
-    xref: https://ocrahope.org/clearity-has-joined-ocra/
+    xref:
+      - https://ocrahope.org/clearity-has-joined-ocra/
     description: >-
       Clinical trial information for ovarian cancer from the Clearity Foundation initiative.
   - status: released
@@ -1936,7 +1942,8 @@ information_resources:
   - status: released
     name: EMBL-EBI Complex Portal
     id: infores:complexportal
-    xref: https://www.ebi.ac.uk/complexportal
+    xref:
+      - https://www.ebi.ac.uk/complexportal
     description: >-
       Manually curated definitions of stable macromolecular complexes with composition,
       function, and cross-references; integrated with IntAct. (PSI-MI: MI:0954)
@@ -2196,7 +2203,8 @@ information_resources:
   - status: released
     name: Database of Interacting Proteins (DIP)
     id: infores:dip
-    xref: https://dip.doe-mbi.ucla.edu/
+    xref:
+      - https://dip.doe-mbi.ucla.edu/
     description: >-
       One of the earliest curated repositories of experimentally observed protein–protein
       interactions. (PSI-MI: MI:0465)
@@ -2364,7 +2372,8 @@ information_resources:
   - status: released
     name: Drug Target Commons (DTC)
     id: infores:dtc
-    xref: http://www.drugtargetcommons.org/
+    xref:
+      - http://www.drugtargetcommons.org/
     description: >-
       Community-driven bioactivity database for drug–target interactions supporting quantitative
       pharmacology.
@@ -2611,8 +2620,8 @@ information_resources:
   - status: released
     name: FDA Pharmacogenomic Biomarkers in Drug Labeling
     id: infores:fda-pgx
-    xref: 
-      https://www.fda.gov/drugs/science-and-research-drugs/table-pharmacogenomic-biomarkers-drug-labeling
+    xref:
+      - https://www.fda.gov/drugs/science-and-research-drugs/table-pharmacogenomic-biomarkers-drug-labeling
     description: >-
       FDA resource listing pharmacogenomic biomarkers included in drug labeling.
   - status: released
@@ -3081,7 +3090,8 @@ information_resources:
   - status: released
     name: Host–Pathogen Interaction Database (HPIDB)
     id: infores:hpidb
-    xref: https://hpidb.igbb.msstate.edu/
+    xref:
+      - https://hpidb.igbb.msstate.edu/
     description: >-
       Curated host–pathogen protein interaction resource covering multiple species and pathogens.
       (PSI-MI: MI:1335)
@@ -3149,7 +3159,8 @@ information_resources:
   - status: released
     name: Interologous Interaction Database (I2D)
     id: infores:i2d
-    xref: https://ophid.utoronto.ca/i2d
+    xref:
+      - https://ophid.utoronto.ca/i2d
     description: >-
       Aggregates experimentally validated and orthology-transferred protein–protein interactions
       across species.
