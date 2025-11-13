@@ -2433,7 +2433,7 @@ information_resources:
       enabling target discovery, biomarker identification, and hypothesis generation in
       drug discovery and  translational research.
     knowledge_level: knowledge_assertion
-    agent_type: manually_curated
+    agent_type: manual_agent
   - status: released
     name: Ensembl gene
     id: infores:ensembl-gene
@@ -4112,7 +4112,7 @@ information_resources:
     consumed_by:
       - infores:cohd
   - status: released
-    name: Observational Medical Outcomes Partnership Observational Health Data Sciences 
+    name: Observational Medical Outcomes Partnership Observational Health Data Sciences
       and Informatics API
     id: infores:omop-ohdsi-api
     xref:
@@ -4701,7 +4701,7 @@ information_resources:
     consumed_by:
       - infores:unsecret-agent
   - status: deprecated
-    name: ROBOKOP (Reasoning Over Biomedical Objects linked in Knowledge-Oriented 
+    name: ROBOKOP (Reasoning Over Biomedical Objects linked in Knowledge-Oriented
       Pathway)
     id: infores:robokop-kp
     xref:
@@ -5521,7 +5521,7 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - status: deprecated
-    name: United States Environmental Protection Agency Airborne Pollutant Exposures 
+    name: United States Environmental Protection Agency Airborne Pollutant Exposures
       Data
     id: infores:us-epa-airborne-pollutant-exposures-data
     knowledge_level: knowledge_assertion
