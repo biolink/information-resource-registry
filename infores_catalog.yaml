@@ -2221,6 +2221,32 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - status: released
+    name: Dogpark Tier 0
+    id: infores:dogpark-tier0
+    xref:
+      - https://github.com/NCATSTranslator/DogPark-Ranger
+    description: >-
+      Centralized graph-based knowledge hosting
+    knowledge_level: mixed
+    agent_type: not_provided
+    consumes:
+      - infores:rtx-kg2
+    consumed_by:
+      - infores:retriever
+  - status: released
+    name: Dogpark Tier 1
+    id: infores:dogpark-tier1
+    xref:
+      - https://github.com/NCATSTranslator/DogPark-Ranger
+    description: >-
+      Centralized index-based knowledge hosting
+    knowledge_level: mixed
+    agent_type: not_provided
+    consumes:
+      - infores:rtx-kg2
+    consumed_by:
+      - infores:retriever
+  - status: released
     name: Drug Design Data Resource
     id: infores:drug-design
     xref:
@@ -4112,7 +4138,7 @@ information_resources:
     consumed_by:
       - infores:cohd
   - status: released
-    name: Observational Medical Outcomes Partnership Observational Health Data Sciences
+    name: Observational Medical Outcomes Partnership Observational Health Data Sciences 
       and Informatics API
     id: infores:omop-ohdsi-api
     xref:
@@ -4611,32 +4637,6 @@ information_resources:
       - infores:shepherd-bte
       - infores:shepherd-sipr
   - status: released
-    name: Dogpark Tier 0
-    id: infores:dogpark-tier0
-    xref:
-      - https://github.com/NCATSTranslator/DogPark-Ranger
-    description: >-
-      Centralized graph-based knowledge hosting
-    knowledge_level: mixed
-    agent_type: not_provided
-    consumes:
-      - infores:rtx-kg2
-    consumed_by:
-      - infores:retriever
-  - status: released
-    name: Dogpark Tier 1
-    id: infores:dogpark-tier1
-    xref:
-      - https://github.com/NCATSTranslator/DogPark-Ranger
-    description: >-
-      Centralized index-based knowledge hosting
-    knowledge_level: mixed
-    agent_type: not_provided
-    consumes:
-      - infores:rtx-kg2
-    consumed_by:
-      - infores:retriever
-  - status: released
     name: RGD API
     id: infores:rgd
     xref:
@@ -4701,7 +4701,7 @@ information_resources:
     consumed_by:
       - infores:unsecret-agent
   - status: deprecated
-    name: ROBOKOP (Reasoning Over Biomedical Objects linked in Knowledge-Oriented
+    name: ROBOKOP (Reasoning Over Biomedical Objects linked in Knowledge-Oriented 
       Pathway)
     id: infores:robokop-kp
     xref:
@@ -5521,7 +5521,7 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - status: deprecated
-    name: United States Environmental Protection Agency Airborne Pollutant Exposures
+    name: United States Environmental Protection Agency Airborne Pollutant Exposures 
       Data
     id: infores:us-epa-airborne-pollutant-exposures-data
     knowledge_level: knowledge_assertion
