@@ -819,6 +819,14 @@ information_resources:
       - BGEE
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+  - status: released
+    name: BHF-UCL Cardiovascular Gene Ontology Initiative
+    id: infores:bhf-ucl
+    xref: https://www.ucl.ac.uk/cardiovascular/
+    description: >-
+      Curated dataset of cardiovascular-related protein interactions and gene ontology annotations
+      from the
+      British Heart Foundation and University College London. (PSI-MI: MI:1332)
   - status: deprecated
     name: Big Cell Line Association Miner
     id: infores:bigclam
@@ -1517,6 +1525,13 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - status: released
+    name: CancerCommons
+    id: infores:cancercommons
+    xref: https://cancercommons.org/
+    description: >-
+      Nonprofit resource connecting patients, oncologists, and scientists with up-to-date
+      treatment information and molecular data.
+  - status: released
     name: Multiomics Pharmacogenomics KP API
     id: infores:catrax-pharmacogenomics
     xref:
@@ -1566,6 +1581,13 @@ information_resources:
     agent_type: not_provided
     consumed_by:
       - infores:catrax-pharmacogenomics
+  - status: released
+    name: Cancer Genome Interpreter (CGI)
+    id: infores:cgi
+    xref: https://www.cancergenomeinterpreter.org/home
+    description: >-
+      Resource that interprets the biological and clinical relevance of tumor genomic alterations
+      to support precision oncology.
   - status: released
     name: Chemical Entity of Biological Interest
     id: infores:chebi
@@ -1654,6 +1676,12 @@ information_resources:
     consumed_by:
       - infores:myvariant-info
   - status: released
+    name: Cancer KnowledgeBase CORE – Genomenon (CKB-CORE)
+    id: infores:ckb-core
+    xref: https://ckb.genomenon.com/
+    description: >-
+      Commercially curated database of actionable cancer variants and targeted therapies.
+  - status: released
     name: Cell Ontology
     id: infores:cl
     xref:
@@ -1665,6 +1693,19 @@ information_resources:
     agent_type: manual_agent
     consumed_by:
       - infores:rtx-kg2
+  - status: released
+    name: Clearity Foundation Biomarkers
+    id: infores:clearity-biomarkers
+    xref: https://ocrahope.org/clearity-has-joined-ocra/
+    description: >-
+      Dataset of biomarkers and treatment options for ovarian cancer compiled by the Clearity
+      Foundation.
+  - status: released
+    name: Clearity Foundation Clinical Trial
+    id: infores:clearity-clinical-trial
+    xref: https://ocrahope.org/clearity-has-joined-ocra/
+    description: >-
+      Clinical trial information for ovarian cancer from the Clearity Foundation initiative.
   - status: released
     name: Clinical Genome Resource (ClinGen)
     id: infores:clingen
@@ -1892,6 +1933,13 @@ information_resources:
     agent_type: not_provided
     consumed_by:
       - infores:service-provider-trapi
+  - status: released
+    name: EMBL-EBI Complex Portal
+    id: infores:complexportal
+    xref: https://www.ebi.ac.uk/complexportal
+    description: >-
+      Manually curated definitions of stable macromolecular complexes with composition,
+      function, and cross-references; integrated with IntAct. (PSI-MI: MI:0954)
   - status: released
     name: Connections Hypothesis Provider API
     id: infores:connections-hypothesis
@@ -2146,6 +2194,13 @@ information_resources:
     knowledge_level: statistical_association
     agent_type: not_provided
   - status: released
+    name: Database of Interacting Proteins (DIP)
+    id: infores:dip
+    xref: https://dip.doe-mbi.ucla.edu/
+    description: >-
+      One of the earliest curated repositories of experimentally observed protein–protein
+      interactions. (PSI-MI: MI:0465)
+  - status: released
     name: Disease Ontology
     id: infores:disease-ontology
     xref:
@@ -2306,6 +2361,13 @@ information_resources:
     agent_type: not_provided
     consumed_by:
       - infores:molepro
+  - status: released
+    name: Drug Target Commons (DTC)
+    id: infores:dtc
+    xref: http://www.drugtargetcommons.org/
+    description: >-
+      Community-driven bioactivity database for drug–target interactions supporting quantitative
+      pharmacology.
   - status: released
     name: European Bioinformatics Institute
     id: infores:ebi
@@ -2546,6 +2608,13 @@ information_resources:
     agent_type: not_provided
     consumed_by:
       - infores:mychem-info
+  - status: released
+    name: FDA Pharmacogenomic Biomarkers in Drug Labeling
+    id: infores:fda-pgx
+    xref: 
+      https://www.fda.gov/drugs/science-and-research-drugs/table-pharmacogenomic-biomarkers-drug-labeling
+    description: >-
+      FDA resource listing pharmacogenomic biomarkers included in drug labeling.
   - status: released
     name: FDA Pharmacogenomics Biomarker table
     id: infores:fda-pharmacogenomics-biomarker
@@ -3010,6 +3079,13 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - status: released
+    name: Host–Pathogen Interaction Database (HPIDB)
+    id: infores:hpidb
+    xref: https://hpidb.igbb.msstate.edu/
+    description: >-
+      Curated host–pathogen protein interaction resource covering multiple species and pathogens.
+      (PSI-MI: MI:1335)
+  - status: released
     name: Human Phenotype Ontology
     id: infores:hpo
     xref:
@@ -3070,6 +3146,14 @@ information_resources:
     agent_type: not_provided
     consumed_by:
       - infores:biothings-multiomics-biggim-drugresponse
+  - status: released
+    name: Interologous Interaction Database (I2D)
+    id: infores:i2d
+    xref: https://ophid.utoronto.ca/i2d
+    description: >-
+      Aggregates experimentally validated and orthology-transferred protein–protein interactions
+      across species.
+      (PSI-MI: MI:0911)
   - status: released
     name: ICD10 (from UMLS)
     id: infores:icd10-umls
@@ -3161,6 +3245,13 @@ information_resources:
     consumed_by:
       - infores:biothings-idisk
   - status: released
+    name: International Molecular Exchange Consortium (IMEx)
+    id: infores:imex
+    xref: https://www.imexconsortium.org/
+    description: >-
+      Consortium coordinating standards and shared curation for molecular interaction data
+      integrated by partners including IntAct. (PSI-MI: MI:0959)
+  - status: released
     name: imProving Agent
     id: infores:improving-agent
     xref:
@@ -3211,11 +3302,12 @@ information_resources:
   - status: released
     name: IntAct
     id: infores:intact
-    description: >-
-       EMBL-EBI’s core manually curated molecular interaction knowledgebase using PSI-MI standards;
-       primary IMEx curation and hosting platform. "(PSI-MI: MI:0469)"
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/IntAct
+    description: >-
+      EMBL-EBI’s core manually curated molecular interaction knowledgebase using PSI-MI
+      standards;
+      primary IMEx curation and hosting platform. "(PSI-MI: MI:0469)"
     knowledge_level: knowledge_assertion
     agent_type: manual_agent
     consumed_by:
@@ -3463,6 +3555,13 @@ information_resources:
     consumed_by:
       - infores:rtx-kg2
   - status: released
+    name: MatrixDB
+    id: infores:matrixdb
+    xref: https://matrixdb.univ-lyon1.fr/
+    description: >-
+      Specialized resource for interactions involving extracellular matrix components,
+      glycoproteins, and polysaccharides. (PSI-MI: MI:0950)
+  - status: released
     name: Medical Action Ontology
     id: infores:maxo
     xref:
@@ -3474,6 +3573,14 @@ information_resources:
       see also https://github.com/monarch-initiative/MAxO
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+  - status: released
+    name: Mitochondrial Biology Information System (MBInfo)
+    id: infores:mbinfo
+    xref: https://www.mitobinfo.org/
+    description: >-
+      Specialized database focused on mitochondrial protein interactions, processes, and
+      pathways;
+      provides curated mitochondrial PPIs integrated through MIntAct. (PSI-MI: MI:1222)
   - status: released
     name: MedDRA (from UMLS)
     id: infores:meddra-umls
@@ -3567,6 +3674,14 @@ information_resources:
     agent_type: manual_agent
     consumed_by:
       - infores:rtx-kg2
+  - status: released
+    name: Molecular INTeraction Database (MINT)
+    id: infores:mint
+    xref: https://mint.bio.uniroma2.it/
+    description: >-
+      Literature-curated experimentally verified protein–protein interactions from the University
+      of Rome;
+      now curated within IntAct under the MIntAct model. (PSI-MI: MI:0471)
   - status: released
     name: The microRNA Database
     id: infores:mirbase
@@ -3780,6 +3895,19 @@ information_resources:
       - infores:aragorn
       - infores:arax
       - infores:service-provider-trapi
+  - status: released
+    name: My Cancer Genome
+    id: infores:mycancergenome
+    xref: https://www.mycancergenome.org/
+    description: >-
+      Knowledgebase providing up-to-date information on cancer gene variants and targeted
+      therapies.
+  - status: released
+    name: My Cancer Genome Clinical Trial
+    id: infores:mycancergenome-trials
+    xref: https://www.mycancergenome.org/
+    description: >-
+      Clinical trial data linked to molecular cancer variants curated by My Cancer Genome.
   - status: released
     name: MyChem.info API
     id: infores:mychem-info
@@ -4115,7 +4243,7 @@ information_resources:
     consumed_by:
       - infores:cohd
   - status: released
-    name: Observational Medical Outcomes Partnership Observational Health Data Sciences
+    name: Observational Medical Outcomes Partnership Observational Health Data Sciences 
       and Informatics API
     id: infores:omop-ohdsi-api
     xref:
@@ -4124,6 +4252,13 @@ information_resources:
       - OMOP OHDSI API
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+  - status: released
+    name: OncoKB
+    id: infores:oncokb
+    xref: https://www.oncokb.org/
+    description: >-
+      Precision oncology knowledgebase linking somatic mutations to clinical evidence levels
+      and therapies.
   - status: released
     name: Open Targets
     id: infores:open-targets
@@ -4674,7 +4809,7 @@ information_resources:
     consumed_by:
       - infores:unsecret-agent
   - status: deprecated
-    name: ROBOKOP (Reasoning Over Biomedical Objects linked in Knowledge-Oriented
+    name: ROBOKOP (Reasoning Over Biomedical Objects linked in Knowledge-Oriented 
       Pathway)
     id: infores:robokop-kp
     xref:
@@ -5494,7 +5629,7 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - status: deprecated
-    name: United States Environmental Protection Agency Airborne Pollutant Exposures
+    name: United States Environmental Protection Agency Airborne Pollutant Exposures 
       Data
     id: infores:us-epa-airborne-pollutant-exposures-data
     knowledge_level: knowledge_assertion
@@ -5671,115 +5806,3 @@ information_resources:
       the Zebrafish model organism.
     knowledge_level: knowledge_assertion
     agent_type: not_provided
-  - id: infores:mint
-    name: Molecular INTeraction Database (MINT)
-    description: >-
-      Literature-curated experimentally verified protein–protein interactions from the University of Rome;
-      now curated within IntAct under the MIntAct model. (PSI-MI: MI:0471)
-    xref: https://mint.bio.uniroma2.it/
-    status: released
-  - id: infores:dip
-    name: Database of Interacting Proteins (DIP)
-    description: >-
-      One of the earliest curated repositories of experimentally observed protein–protein
-      interactions. (PSI-MI: MI:0465)
-    xref: https://dip.doe-mbi.ucla.edu/
-    status: released
-  - id: infores:matrixdb
-    name: MatrixDB
-    description: >-
-      Specialized resource for interactions involving extracellular matrix components,
-      glycoproteins, and polysaccharides. (PSI-MI: MI:0950)
-    xref: https://matrixdb.univ-lyon1.fr/
-    status: released
-  - id: infores:hpidb
-    name: Host–Pathogen Interaction Database (HPIDB)
-    description: >-
-      Curated host–pathogen protein interaction resource covering multiple species and pathogens. (PSI-MI: MI:1335)
-    xref: https://hpidb.igbb.msstate.edu/
-    status: released
-  - id: infores:complexportal
-    name: EMBL-EBI Complex Portal
-    description: >-
-      Manually curated definitions of stable macromolecular complexes with composition,
-      function, and cross-references; integrated with IntAct. (PSI-MI: MI:0954)
-    xref: https://www.ebi.ac.uk/complexportal
-    status: released
-  - id: infores:i2d
-    name: Interologous Interaction Database (I2D)
-    description: >-
-      Aggregates experimentally validated and orthology-transferred protein–protein interactions across species.
-      (PSI-MI: MI:0911)
-    xref: https://ophid.utoronto.ca/i2d
-    status: released
-  - id: infores:imex
-    name: International Molecular Exchange Consortium (IMEx)
-    description: >-
-      Consortium coordinating standards and shared curation for molecular interaction data
-      integrated by partners including IntAct. (PSI-MI: MI:0959)
-    xref: https://www.imexconsortium.org/
-    status: released
-  - id: infores:bhf-ucl
-    name: BHF-UCL Cardiovascular Gene Ontology Initiative
-    description: >-
-      Curated dataset of cardiovascular-related protein interactions and gene ontology annotations from the
-      British Heart Foundation and University College London. (PSI-MI: MI:1332)
-    xref: https://www.ucl.ac.uk/cardiovascular/
-    status: released
-  - id: infores:mbinfo
-    name: Mitochondrial Biology Information System (MBInfo)
-    description: >-
-      Specialized database focused on mitochondrial protein interactions, processes, and pathways;
-      provides curated mitochondrial PPIs integrated through MIntAct. (PSI-MI: MI:1222)
-    xref: https://www.mitobinfo.org/
-    status: released
-  - id: infores:cgi
-    name: Cancer Genome Interpreter (CGI)
-    description: Resource that interprets the biological and clinical relevance of tumor genomic alterations to support precision oncology.
-    xref: https://www.cancergenomeinterpreter.org/home
-    status: released
-  - id: infores:ckb-core
-    name: Cancer KnowledgeBase CORE – Genomenon (CKB-CORE)
-    description: Commercially curated database of actionable cancer variants and targeted therapies.
-    xref: https://ckb.genomenon.com/
-    status: released
-  - id: infores:cancercommons
-    name: CancerCommons
-    description: Nonprofit resource connecting patients, oncologists, and scientists with up-to-date treatment information and molecular data.
-    xref: https://cancercommons.org/
-    status: released
-  - id: infores:clearity-biomarkers
-    name: Clearity Foundation Biomarkers
-    description: Dataset of biomarkers and treatment options for ovarian cancer compiled by the Clearity Foundation.
-    xref: https://ocrahope.org/clearity-has-joined-ocra/
-    status: released
-  - id: infores:clearity-clinical-trial
-    name: Clearity Foundation Clinical Trial
-    description: Clinical trial information for ovarian cancer from the Clearity Foundation initiative.
-    xref: https://ocrahope.org/clearity-has-joined-ocra/
-    status: released
-  - id: infores:dtc
-    name: Drug Target Commons (DTC)
-    description: Community-driven bioactivity database for drug–target interactions supporting quantitative pharmacology.
-    xref: http://www.drugtargetcommons.org/
-    status: released
-  - id: infores:fda-pgx
-    name: FDA Pharmacogenomic Biomarkers in Drug Labeling
-    description: FDA resource listing pharmacogenomic biomarkers included in drug labeling.
-    xref: https://www.fda.gov/drugs/science-and-research-drugs/table-pharmacogenomic-biomarkers-drug-labeling
-    status: released
-  - id: infores:mycancergenome
-    name: My Cancer Genome
-    description: Knowledgebase providing up-to-date information on cancer gene variants and targeted therapies.
-    xref: https://www.mycancergenome.org/
-    status: released
-  - id: infores:mycancergenome-trials
-    name: My Cancer Genome Clinical Trial
-    description: Clinical trial data linked to molecular cancer variants curated by My Cancer Genome.
-    xref: https://www.mycancergenome.org/
-    status: released
-  - id: infores:oncokb
-    name: OncoKB
-    description: Precision oncology knowledgebase linking somatic mutations to clinical evidence levels and therapies.
-    xref: https://www.oncokb.org/
-    status: released
