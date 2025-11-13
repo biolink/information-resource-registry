@@ -3258,7 +3258,8 @@ information_resources:
   - status: released
     name: International Molecular Exchange Consortium (IMEx)
     id: infores:imex
-    xref: https://www.imexconsortium.org/
+    xref:
+      - https://www.imexconsortium.org/
     description: >-
       Consortium coordinating standards and shared curation for molecular interaction data
       integrated by partners including IntAct. (PSI-MI: MI:0959)
@@ -3568,7 +3569,8 @@ information_resources:
   - status: released
     name: MatrixDB
     id: infores:matrixdb
-    xref: https://matrixdb.univ-lyon1.fr/
+    xref:
+      - https://matrixdb.univ-lyon1.fr/
     description: >-
       Specialized resource for interactions involving extracellular matrix components,
       glycoproteins, and polysaccharides. (PSI-MI: MI:0950)
@@ -3587,7 +3589,8 @@ information_resources:
   - status: released
     name: Mitochondrial Biology Information System (MBInfo)
     id: infores:mbinfo
-    xref: https://www.mitobinfo.org/
+    xref:
+      - https://www.mitobinfo.org/
     description: >-
       Specialized database focused on mitochondrial protein interactions, processes, and
       pathways;
@@ -3688,7 +3691,8 @@ information_resources:
   - status: released
     name: Molecular INTeraction Database (MINT)
     id: infores:mint
-    xref: https://mint.bio.uniroma2.it/
+    xref:
+      - https://mint.bio.uniroma2.it/
     description: >-
       Literature-curated experimentally verified protein–protein interactions from the University
       of Rome;
@@ -3909,14 +3913,16 @@ information_resources:
   - status: released
     name: My Cancer Genome
     id: infores:mycancergenome
-    xref: https://www.mycancergenome.org/
+    xref:
+      - https://www.mycancergenome.org/
     description: >-
       Knowledgebase providing up-to-date information on cancer gene variants and targeted
       therapies.
   - status: released
     name: My Cancer Genome Clinical Trial
     id: infores:mycancergenome-trials
-    xref: https://www.mycancergenome.org/
+    xref:
+      - https://www.mycancergenome.org/
     description: >-
       Clinical trial data linked to molecular cancer variants curated by My Cancer Genome.
   - status: released
@@ -4266,7 +4272,8 @@ information_resources:
   - status: released
     name: OncoKB
     id: infores:oncokb
-    xref: https://www.oncokb.org/
+    xref:
+      - https://www.oncokb.org/
     description: >-
       Precision oncology knowledgebase linking somatic mutations to clinical evidence levels
       and therapies.
