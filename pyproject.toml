@@ -29,6 +29,7 @@ dependencies = [
     "packaging>=24.0",
     "requests>=2.31.0",
     "gilda>=1.4.1",
+    "codespell>=2.4.1",
 ]
 
 [project.optional-dependencies]
@@ -65,4 +66,4 @@ packages = ["src/information_resource_registry"]
 
 [tool.codespell]
 skip = '.idea,.git,SEMMEDDB*,semmed*,*.svg,docs,registry.md,xrefs.html'
-ignore-words-list = 'amination,ehr,mor,brite,nin,mirgate,MiRgate,EHR,nin,miR,miRNA,miRBase'
+ignore-words-list = 'amination,ehr,mor,brite,nin,mirgate,MiRgate,EHR,nin,miR,miRNA,miRBase,Clearity'
