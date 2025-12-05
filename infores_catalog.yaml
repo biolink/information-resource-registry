@@ -828,6 +828,8 @@ information_resources:
       Curated dataset of cardiovascular-related protein interactions and gene ontology annotations
       from the
       British Heart Foundation and University College London. (PSI-MI: MI:1332)
+    knowledge_level: knowledge_assertion
+    agent_type: manual_agent
   - status: deprecated
     name: Big Cell Line Association Miner
     id: infores:bigclam
@@ -1533,6 +1535,8 @@ information_resources:
     description: >-
       Nonprofit resource connecting patients, oncologists, and scientists with up-to-date
       treatment information and molecular data.
+    knowledge_level: knowledge_assertion
+    agent_type: manual_agent
   - status: released
     name: Multiomics Pharmacogenomics KP API
     id: infores:catrax-pharmacogenomics
@@ -1591,6 +1595,8 @@ information_resources:
     description: >-
       Resource that interprets the biological and clinical relevance of tumor genomic alterations
       to support precision oncology.
+    knowledge_level: knowledge_assertion
+    agent_type: manual_agent
   - status: released
     name: Chemical Entity of Biological Interest
     id: infores:chebi
@@ -1685,6 +1691,8 @@ information_resources:
       - https://ckb.genomenon.com/
     description: >-
       Commercially curated database of actionable cancer variants and targeted therapies.
+    knowledge_level: knowledge_assertion
+    agent_type: manual_agent
   - status: released
     name: Cell Ontology
     id: infores:cl
@@ -1705,6 +1713,8 @@ information_resources:
     description: >-
       Dataset of biomarkers and treatment options for ovarian cancer compiled by the Clearity
       Foundation.
+    knowledge_level: knowledge_assertion
+    agent_type: manual_agent
   - status: released
     name: Clearity Foundation Clinical Trial
     id: infores:clearity-clinical-trial
@@ -1712,6 +1722,8 @@ information_resources:
       - https://ocrahope.org/clearity-has-joined-ocra/
     description: >-
       Clinical trial information for ovarian cancer from the Clearity Foundation initiative.
+    knowledge_level: knowledge_assertion
+    agent_type: manual_agent
   - status: released
     name: Clinical Genome Resource (ClinGen)
     id: infores:clingen
@@ -1947,6 +1959,8 @@ information_resources:
     description: >-
       Manually curated definitions of stable macromolecular complexes with composition,
       function, and cross-references; integrated with IntAct. (PSI-MI: MI:0954)
+    knowledge_level: knowledge_assertion
+    agent_type: manual_agent
   - status: released
     name: Connections Hypothesis Provider API
     id: infores:connections-hypothesis
@@ -2208,6 +2222,8 @@ information_resources:
     description: >-
       One of the earliest curated repositories of experimentally observed protein–protein
       interactions. (PSI-MI: MI:0465)
+    knowledge_level: knowledge_assertion
+    agent_type: manual_agent
   - status: released
     name: Disease Ontology
     id: infores:disease-ontology
@@ -2403,6 +2419,8 @@ information_resources:
     description: >-
       Community-driven bioactivity database for drug–target interactions supporting quantitative
       pharmacology.
+    knowledge_level: knowledge_assertion
+    agent_type: manual_agent
   - status: released
     name: European Bioinformatics Institute
     id: infores:ebi
@@ -2650,6 +2668,8 @@ information_resources:
       - https://www.fda.gov/drugs/science-and-research-drugs/table-pharmacogenomic-biomarkers-drug-labeling
     description: >-
       FDA resource listing pharmacogenomic biomarkers included in drug labeling.
+    knowledge_level: knowledge_assertion
+    agent_type: manual_agent
   - status: released
     name: FDA Pharmacogenomics Biomarker table
     id: infores:fda-pharmacogenomics-biomarker
@@ -3121,6 +3141,8 @@ information_resources:
     description: >-
       Curated host–pathogen protein interaction resource covering multiple species and pathogens.
       (PSI-MI: MI:1335)
+    knowledge_level: knowledge_assertion
+    agent_type: manual_agent
   - status: released
     name: Human Phenotype Ontology
     id: infores:hpo
@@ -3191,6 +3213,8 @@ information_resources:
       Aggregates experimentally validated and orthology-transferred protein–protein interactions
       across species.
       (PSI-MI: MI:0911)
+    knowledge_level: knowledge_assertion
+    agent_type: manual_agent
   - status: released
     name: ICD10 (from UMLS)
     id: infores:icd10-umls
@@ -3289,6 +3313,8 @@ information_resources:
     description: >-
       Consortium coordinating standards and shared curation for molecular interaction data
       integrated by partners including IntAct. (PSI-MI: MI:0959)
+    knowledge_level: knowledge_assertion
+    agent_type: manual_agent
   - status: released
     name: imProving Agent
     id: infores:improving-agent
@@ -3600,6 +3626,8 @@ information_resources:
     description: >-
       Specialized resource for interactions involving extracellular matrix components,
       glycoproteins, and polysaccharides. (PSI-MI: MI:0950)
+    knowledge_level: knowledge_assertion
+    agent_type: manual_agent
   - status: released
     name: Medical Action Ontology
     id: infores:maxo
@@ -3621,6 +3649,8 @@ information_resources:
       Specialized database focused on mitochondrial protein interactions, processes, and
       pathways;
       provides curated mitochondrial PPIs integrated through MIntAct. (PSI-MI: MI:1222)
+    knowledge_level: knowledge_assertion
+    agent_type: manual_agent
   - status: released
     name: MedDRA (from UMLS)
     id: infores:meddra-umls
@@ -3723,6 +3753,8 @@ information_resources:
       Literature-curated experimentally verified protein–protein interactions from the University
       of Rome;
       now curated within IntAct under the MIntAct model. (PSI-MI: MI:0471)
+    knowledge_level: knowledge_assertion
+    agent_type: manual_agent
   - status: released
     name: The microRNA Database
     id: infores:mirbase
@@ -3944,6 +3976,8 @@ information_resources:
     description: >-
       Knowledgebase providing up-to-date information on cancer gene variants and targeted
       therapies.
+    knowledge_level: knowledge_assertion
+    agent_type: manual_agent
   - status: released
     name: My Cancer Genome Clinical Trial
     id: infores:mycancergenome-trials
@@ -3951,6 +3985,8 @@ information_resources:
       - https://www.mycancergenome.org/
     description: >-
       Clinical trial data linked to molecular cancer variants curated by My Cancer Genome.
+    knowledge_level: knowledge_assertion
+    agent_type: manual_agent
   - status: released
     name: MyChem.info API
     id: infores:mychem-info
@@ -4303,6 +4339,8 @@ information_resources:
     description: >-
       Precision oncology knowledgebase linking somatic mutations to clinical evidence levels
       and therapies.
+    knowledge_level: knowledge_assertion
+    agent_type: manual_agent
   - status: released
     name: Open Targets
     id: infores:open-targets

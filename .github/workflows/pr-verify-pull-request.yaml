@@ -45,8 +45,8 @@ jobs:
         run: yamllint -c .yamllint-config src/information_resource_registry/schema/information_resource_registry.yaml
 
       - name: Codespell
-        uses: codespell-project/actions-codespell@v1
+        uses: codespell-project/actions-codespell@v2
         with:
-          ignore_words_list: amination,ehr,mor,nin,brite,mirgate,BRITE
+          ignore_words_list: amination,ehr,mor,nin,brite,mirgate,BRITE,Clearity
           skip: SEMMEDDB*,semmed*,.idea,.venv,.git,*.pdf,*.svg,context.*,registry.md
 
