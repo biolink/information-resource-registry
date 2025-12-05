@@ -57,7 +57,7 @@ classes:
           slot_conditions:
             status:
               equals_string: "released"
-      - postconditions:
+        postconditions:
           slot_conditions:
             knowledge_level:
               required: true
