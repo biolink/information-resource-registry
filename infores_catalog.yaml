@@ -1781,6 +1781,18 @@ information_resources:
     consumed_by:
       - infores:molepro
   - status: released
+    name: CMM AI Automation Pipeline
+    id: infores:cmm-ai-automation
+    xref:
+      - https://github.com/berkeleybop/cmm-ai-automation
+    description: >-
+      AI-assisted automation pipeline for Critical Mineral Metabolism (CMM) data curation.
+      Aggregates and reconciles data from multiple sources (BacDive, MediaDive, TogoMedium,
+      NCBI)
+      to generate knowledge graph edges.
+    knowledge_level: knowledge_assertion
+    agent_type: automated_agent
+  - status: released
     name: Columbia Open Health Data (COHD)
     id: infores:cohd
     xref:
@@ -4099,7 +4111,7 @@ information_resources:
     consumed_by:
       - infores:rtx-kg2
   - status: released
-    name: National Center for Advancing Translational Science Biomedical Data Translator 
+    name: National Center for Advancing Translational Science Biomedical Data Translator
       Autonomous Relay System
     id: infores:ncats-ars
     xref:
@@ -4145,7 +4157,7 @@ information_resources:
     consumed_by:
       - infores:rtx-kg2
   - status: deprecated
-    name: North Carolina Department of Environmental Quality Concentrated Animal Feeding 
+    name: North Carolina Department of Environmental Quality Concentrated Animal Feeding
       Operations Exposures Data
     id: infores:ncdeq-cafo-exposures-data
     knowledge_level: knowledge_assertion
@@ -4897,7 +4909,8 @@ information_resources:
     consumed_by:
       - infores:unsecret-agent
   - status: deprecated
-    name: ROBOKOP (Reasoning Over Biomedical Objects linked in Knowledge-Oriented Pathway)
+    name: ROBOKOP (Reasoning Over Biomedical Objects linked in Knowledge-Oriented 
+      Pathway)
     id: infores:robokop-kp
     xref:
       - http://robokop.renci.org
@@ -5716,7 +5729,8 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - status: deprecated
-    name: United States Environmental Protection Agency Airborne Pollutant Exposures Data
+    name: United States Environmental Protection Agency Airborne Pollutant Exposures 
+      Data
     id: infores:us-epa-airborne-pollutant-exposures-data
     knowledge_level: knowledge_assertion
     agent_type: not_provided
