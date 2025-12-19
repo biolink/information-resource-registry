@@ -2391,6 +2391,15 @@ information_resources:
       - infores:mychem-info
       - infores:rtx-kg2
   - status: released
+    name: DrugMatrix
+    id: infores:drugmatrix
+    xref:
+      - https://github.com/NCATSTranslator/Translator-All/wiki/DrugMatrix
+    description: >-
+      Large-scale rat toxicogenomics database and analysis tool. No longer accessible. 
+    knowledge_level: knowledge_assertion
+    agent_type: not_provided
+  - status: released
     name: DrugMechDB
     id: infores:drugmechdb
     xref:
@@ -5789,6 +5798,15 @@ information_resources:
       and used by the research community.
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+  - status: released
+    name: World of Molecular Bioactivity - Pharmacokinetics (WOMBAT-PK)
+    id: infores:wombat-pk
+    xref:
+      - https://github.com/NCATSTranslator/Translator-All/wiki/WOMBAT-PK
+    description: >-
+      A chemical database for data from clinical pharmacokinetics literature. No longer accessible. 
+    knowledge_level: knowledge_assertion
+    agent_type: manual_agent
   - status: released
     name: Translator Workflow Runner
     id: infores:workflow-runner
