@@ -3520,6 +3520,7 @@ information_resources:
     name: Ki database
     id: infores:ki-database
     xref:
+      - https://github.com/NCATSTranslator/Translator-All/wiki/PDSP-Ki
       - https://pdsp.unc.edu/databases/kidb.php
     synonym:
       - KiDB
