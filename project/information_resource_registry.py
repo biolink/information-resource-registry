@@ -1,5 +1,5 @@
 # Auto generated from information_resource_registry.yaml by pythongen.py version: 0.0.1
-# Generation date: 2025-10-24T11:59:56
+# Generation date: 2025-12-19T19:08:53
 # Schema: Information-Resource-Registry-Schema
 #
 # id: https://w3id.org/biolink/information_resource_registry.yaml
@@ -33,7 +33,6 @@ from linkml_runtime.linkml_model.meta import (
     PvFormulaOptions
 )
 from linkml_runtime.utils.curienamespace import CurieNamespace
-from linkml_runtime.utils.dataclass_extensions_376 import dataclasses_init_fn_with_kwargs
 from linkml_runtime.utils.enumerations import EnumDefinitionImpl
 from linkml_runtime.utils.formatutils import (
     camelcase,
@@ -63,9 +62,6 @@ from linkml_runtime.utils.metamodelcore import URIorCURIE
 metamodel_version = "1.7.0"
 version = "1.0.0"
 
-# Overwrite dataclasses _init_fn to add **kwargs in __init__
-dataclasses._init_fn = dataclasses_init_fn_with_kwargs
-
 # Namespaces
 BIOLINK = CurieNamespace('biolink', 'https://w3id.org/biolink/')
 INFORES = CurieNamespace('infores', 'https://w3id.org/biolink/infores/')
@@ -85,16 +81,16 @@ class InformationResourceContainer(YAMLRoot):
     """
     A collection of information resources
     """
-    _inherited_slots: ClassVar[List[str]] = []
+    _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = INFORES["InformationResourceContainer"]
     class_class_curie: ClassVar[str] = "infores:InformationResourceContainer"
     class_name: ClassVar[str] = "InformationResourceContainer"
     class_model_uri: ClassVar[URIRef] = INFORES.InformationResourceContainer
 
-    information_resources: Optional[Union[Union[dict, "InformationResource"], List[Union[dict, "InformationResource"]]]] = empty_list()
+    information_resources: Optional[Union[Union[dict, "InformationResource"], list[Union[dict, "InformationResource"]]]] = empty_list()
 
-    def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
+    def __post_init__(self, *_: str, **kwargs: Any):
         if not isinstance(self.information_resources, list):
             self.information_resources = [self.information_resources] if self.information_resources is not None else []
         self.information_resources = [v if isinstance(v, InformationResource) else InformationResource(**as_dict(v)) for v in self.information_resources]
@@ -111,7 +107,7 @@ class InformationResource(YAMLRoot):
     endpoints and user interfaces. Information Resources include project-specific resources such as a Translator
     Knowledge Provider, and community knowledgebases like ChemBL, OMIM, or DGIdb.
     """
-    _inherited_slots: ClassVar[List[str]] = []
+    _inherited_slots: ClassVar[list[str]] = []
 
     class_class_uri: ClassVar[URIRef] = INFORES["InformationResource"]
     class_class_curie: ClassVar[str] = "infores:InformationResource"
@@ -119,29 +115,31 @@ class InformationResource(YAMLRoot):
     class_model_uri: ClassVar[URIRef] = INFORES.InformationResource
 
     status: Union[str, "InformationResourceStatusEnum"] = None
+    name: str = None
     id: str = None
-    name: Optional[str] = None
-    xref: Optional[Union[str, List[str]]] = empty_list()
-    synonym: Optional[Union[str, List[str]]] = empty_list()
+    xref: Optional[Union[str, list[str]]] = empty_list()
+    synonym: Optional[Union[str, list[str]]] = empty_list()
     description: Optional[str] = None
     knowledge_level: Optional[Union[str, "KnowledgeLevelEnum"]] = None
     agent_type: Optional[Union[str, "AgentTypeEnum"]] = None
-    consumes: Optional[Union[Union[str, URIorCURIE], List[Union[str, URIorCURIE]]]] = empty_list()
-    consumed_by: Optional[Union[Union[str, URIorCURIE], List[Union[str, URIorCURIE]]]] = empty_list()
+    consumes: Optional[Union[Union[str, URIorCURIE], list[Union[str, URIorCURIE]]]] = empty_list()
+    consumed_by: Optional[Union[Union[str, URIorCURIE], list[Union[str, URIorCURIE]]]] = empty_list()
 
-    def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
+    def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.status):
             self.MissingRequiredField("status")
         if not isinstance(self.status, InformationResourceStatusEnum):
             self.status = InformationResourceStatusEnum(self.status)
 
+        if self._is_empty(self.name):
+            self.MissingRequiredField("name")
+        if not isinstance(self.name, str):
+            self.name = str(self.name)
+
         if self._is_empty(self.id):
             self.MissingRequiredField("id")
         if not isinstance(self.id, str):
             self.id = str(self.id)
-
-        if self.name is not None and not isinstance(self.name, str):
-            self.name = str(self.name)
 
         if not isinstance(self.xref, list):
             self.xref = [self.xref] if self.xref is not None else []
@@ -267,28 +265,28 @@ class slots:
     pass
 
 slots.consumes = Slot(uri=INFORES.consumes, name="consumes", curie=INFORES.curie('consumes'),
-                   model_uri=INFORES.consumes, domain=None, range=Optional[Union[Union[str, URIorCURIE], List[Union[str, URIorCURIE]]]])
+                   model_uri=INFORES.consumes, domain=None, range=Optional[Union[Union[str, URIorCURIE], list[Union[str, URIorCURIE]]]])
 
 slots.consumed_by = Slot(uri=INFORES.consumed_by, name="consumed_by", curie=INFORES.curie('consumed_by'),
-                   model_uri=INFORES.consumed_by, domain=None, range=Optional[Union[Union[str, URIorCURIE], List[Union[str, URIorCURIE]]]])
+                   model_uri=INFORES.consumed_by, domain=None, range=Optional[Union[Union[str, URIorCURIE], list[Union[str, URIorCURIE]]]])
 
 slots.status = Slot(uri=INFORES.status, name="status", curie=INFORES.curie('status'),
                    model_uri=INFORES.status, domain=None, range=Union[str, "InformationResourceStatusEnum"])
 
 slots.information_resources = Slot(uri=INFORES.information_resources, name="information_resources", curie=INFORES.curie('information_resources'),
-                   model_uri=INFORES.information_resources, domain=None, range=Optional[Union[Union[dict, InformationResource], List[Union[dict, InformationResource]]]])
+                   model_uri=INFORES.information_resources, domain=None, range=Optional[Union[Union[dict, InformationResource], list[Union[dict, InformationResource]]]])
 
 slots.name = Slot(uri=RDFS.label, name="name", curie=RDFS.curie('label'),
-                   model_uri=INFORES.name, domain=None, range=Optional[str])
+                   model_uri=INFORES.name, domain=None, range=str)
 
 slots.id = Slot(uri=INFORES.id, name="id", curie=INFORES.curie('id'),
                    model_uri=INFORES.id, domain=None, range=str)
 
 slots.xref = Slot(uri=INFORES.xref, name="xref", curie=INFORES.curie('xref'),
-                   model_uri=INFORES.xref, domain=None, range=Optional[Union[str, List[str]]])
+                   model_uri=INFORES.xref, domain=None, range=Optional[Union[str, list[str]]])
 
 slots.synonym = Slot(uri=INFORES.synonym, name="synonym", curie=INFORES.curie('synonym'),
-                   model_uri=INFORES.synonym, domain=None, range=Optional[Union[str, List[str]]])
+                   model_uri=INFORES.synonym, domain=None, range=Optional[Union[str, list[str]]])
 
 slots.description = Slot(uri=RDFS.comment, name="description", curie=RDFS.curie('comment'),
                    model_uri=INFORES.description, domain=None, range=Optional[str])

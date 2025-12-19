@@ -525,6 +525,7 @@
         "InformationResource"
       ],
       "range": "string",
+      "required": true,
       "@type": "SlotDefinition"
     },
     {
@@ -676,9 +677,6 @@
             ],
             "@type": "AnonymousClassExpression"
           },
-          "@type": "ClassRule"
-        },
-        {
           "postconditions": {
             "slot_conditions": [
               {
@@ -702,9 +700,9 @@
   ],
   "metamodel_version": "1.7.0",
   "source_file": "information_resource_registry.yaml",
-  "source_file_date": "2025-10-24T11:58:54",
-  "source_file_size": 11116,
-  "generation_date": "2025-10-24T11:59:56",
+  "source_file_date": "2025-12-19T19:08:06",
+  "source_file_size": 11135,
+  "generation_date": "2025-12-19T19:08:53",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/information_resource_registry.context.jsonld",

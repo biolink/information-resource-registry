@@ -1,1 +1,1 @@
-gen-pydantic, version 1.8.5
+gen-pydantic, version 1.9.3

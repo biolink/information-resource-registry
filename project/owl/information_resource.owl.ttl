@@ -12,10 +12,10 @@
 infores:InformationResourceContainer a owl:Class ;
     rdfs:label "InformationResourceContainer" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:minCardinality 0 ;
+            owl:allValuesFrom infores:InformationResource ;
             owl:onProperty infores:information_resources ],
         [ a owl:Restriction ;
-            owl:allValuesFrom infores:InformationResource ;
+            owl:minCardinality 0 ;
             owl:onProperty infores:information_resources ],
         linkml:ClassDefinition ;
     skos:definition "A collection of information resources" ;
@@ -158,35 +158,53 @@ infores:xref a owl:DatatypeProperty ;
 infores:InformationResource a owl:Class ;
     rdfs:label "InformationResource" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty infores:description ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
+            owl:minCardinality 1 ;
             owl:onProperty infores:name ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty infores:consumed_by ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty infores:status ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty infores:id ],
         [ a owl:Restriction ;
             owl:allValuesFrom infores:AgentTypeEnum ;
             owl:onProperty infores:agent_type ],
         [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty infores:agent_type ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty infores:xref ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty infores:id ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty infores:synonym ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty infores:status ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty infores:name ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:anyURI ;
+            owl:onProperty infores:consumes ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty infores:id ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty infores:name ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty infores:consumes ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom infores:KnowledgeLevelEnum ;
+            owl:onProperty infores:knowledge_level ],
+        [ a owl:Restriction ;
             owl:allValuesFrom xsd:anyURI ;
             owl:onProperty infores:consumed_by ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty infores:synonym ],
+            owl:maxCardinality 1 ;
+            owl:onProperty infores:id ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty infores:knowledge_level ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty infores:synonym ],
+            owl:onProperty infores:xref ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty infores:description ],
@@ -195,55 +213,31 @@ infores:InformationResource a owl:Class ;
             owl:onProperty infores:status ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
-            owl:onProperty infores:description ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:anyURI ;
-            owl:onProperty infores:consumes ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty infores:name ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty infores:agent_type ],
-        [ a owl:Restriction ;
-            owl:minCardinality 1 ;
-            owl:onProperty infores:status ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom infores:KnowledgeLevelEnum ;
-            owl:onProperty infores:knowledge_level ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty infores:consumes ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty infores:agent_type ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty infores:name ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty infores:knowledge_level ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty infores:xref ],
-        [ a owl:Restriction ;
-            owl:minCardinality 1 ;
-            owl:onProperty infores:id ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty infores:id ],
+            owl:onProperty infores:synonym ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
-            owl:onProperty infores:xref ],
+            owl:onProperty infores:description ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty infores:status ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty infores:description ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty infores:knowledge_level ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty infores:knowledge_level ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty infores:consumed_by ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty infores:agent_type ],
         linkml:ClassDefinition ;
     skos:altLabel "knowledgebase" ;
     skos:definition "A database or knowledgebase and its supporting ecosystem of interfaces  and services that deliver content to consumers (e.g. web portals, APIs,  query endpoints, streaming services, data downloads, etc.). A single Information Resource by this definition may span many different datasets or databases, and include many access endpoints and user interfaces. Information Resources include project-specific resources such as a Translator Knowledge Provider, and community knowledgebases like ChemBL, OMIM, or DGIdb." ;
-    skos:inScheme biolink:information_resource_registry.yaml .
-
-infores:agent_type a owl:ObjectProperty ;
-    rdfs:label "agent_type" ;
-    rdfs:range infores:AgentTypeEnum ;
-    skos:definition "The type of agent that supports an edge or node.  This is a general categorization of the type of agent that supports a statement, and is not intended to be a comprehensive description of the agent.  For example, a statement may be supported by a single publication, but that publication may contain multiple types of evidence, such as a computational prediction and a manual curation.  In this case, the agent type would be \"publication\", and the evidence would be described in more detail in the evidence graph." ;
     skos:inScheme biolink:information_resource_registry.yaml .
 
 infores:description a owl:DatatypeProperty ;
@@ -260,18 +254,24 @@ infores:id a owl:DatatypeProperty ;
     skos:definition "A unique identifier for an entity. Must be either a CURIE shorthand for a URI or a complete URI" ;
     skos:inScheme biolink:information_resource_registry.yaml .
 
-infores:knowledge_level a owl:ObjectProperty ;
-    rdfs:label "knowledge_level" ;
-    rdfs:range infores:KnowledgeLevelEnum ;
-    skos:definition "The level of knowledge that supports an edge or node.  This is a general categorization of the type of evidence that supports a statement, and is not intended to be a comprehensive description of the evidence.  For example, a statement may be supported by a single publication, but that publication may contain multiple types of evidence, such as a computational prediction and a manual curation.  In this case, the knowledge level would be \"curated\", and the evidence would be described in more detail in the evidence graph." ;
-    skos:inScheme biolink:information_resource_registry.yaml .
-
 infores:name a owl:DatatypeProperty ;
     rdfs:label "name" ;
     skos:altLabel "display name",
         "label",
         "title" ;
     skos:definition "A human-readable name for an attribute or entity." ;
+    skos:inScheme biolink:information_resource_registry.yaml .
+
+infores:agent_type a owl:ObjectProperty ;
+    rdfs:label "agent_type" ;
+    rdfs:range infores:AgentTypeEnum ;
+    skos:definition "The type of agent that supports an edge or node.  This is a general categorization of the type of agent that supports a statement, and is not intended to be a comprehensive description of the agent.  For example, a statement may be supported by a single publication, but that publication may contain multiple types of evidence, such as a computational prediction and a manual curation.  In this case, the agent type would be \"publication\", and the evidence would be described in more detail in the evidence graph." ;
+    skos:inScheme biolink:information_resource_registry.yaml .
+
+infores:knowledge_level a owl:ObjectProperty ;
+    rdfs:label "knowledge_level" ;
+    rdfs:range infores:KnowledgeLevelEnum ;
+    skos:definition "The level of knowledge that supports an edge or node.  This is a general categorization of the type of evidence that supports a statement, and is not intended to be a comprehensive description of the evidence.  For example, a statement may be supported by a single publication, but that publication may contain multiple types of evidence, such as a computational prediction and a manual curation.  In this case, the knowledge level would be \"curated\", and the evidence would be described in more detail in the evidence graph." ;
     skos:inScheme biolink:information_resource_registry.yaml .
 
 infores:status a owl:ObjectProperty ;
@@ -317,7 +317,12 @@ infores:KnowledgeLevelEnum a owl:Class ;
         <https://w3id.org/biolink/infores/KnowledgeLevelEnum#prediction>,
         <https://w3id.org/biolink/infores/KnowledgeLevelEnum#statistical_association> .
 
-[] owl:intersectionOf ( [ a owl:Restriction ;
+[] rdfs:subClassOf [ owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:onProperty infores:agent_type ;
+                        owl:someValuesFrom xsd:string ] [ a owl:Restriction ;
+                        owl:onProperty infores:knowledge_level ;
+                        owl:someValuesFrom xsd:string ] ) ] ;
+    owl:intersectionOf ( [ a owl:Restriction ;
                 owl:onProperty infores:status ;
                 owl:someValuesFrom xsd:string ] infores:InformationResource ) .
 

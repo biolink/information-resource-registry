@@ -50,7 +50,7 @@ linkml:Sparqlpath xsd:string
              <https://w3id.org/biolink/infores/InformationResourceStatusEnum#deprecated>
              <https://w3id.org/biolink/infores/InformationResourceStatusEnum#draft>
              <https://w3id.org/biolink/infores/InformationResourceStatusEnum#modified> ] ;
-          rdfs:label @linkml:String ? ;
+          rdfs:label @linkml:String ;
           <id> @linkml:String ;
           <xref> @linkml:String * ;
           <synonym> @linkml:String * ;
@@ -83,4 +83,3 @@ linkml:Sparqlpath xsd:string
        rdf:type [ <InformationResourceContainer> ] ?
     )
 }
-
