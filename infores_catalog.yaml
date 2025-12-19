@@ -821,6 +821,16 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - status: released
+    name: Berkeley CMM Experimental Data
+    id: infores:ber-cmm-data
+    xref:
+      - https://github.com/berkeleybop/cmm-ai-automation
+    description: >-
+      Experimental growth data from the Berkeley Critical Mineral Metabolism (CMM) project,
+      containing strain-medium growth relationships curated by laboratory researchers.
+    knowledge_level: knowledge_assertion
+    agent_type: manual_agent
+  - status: released
     name: BHF-UCL Cardiovascular Gene Ontology Initiative
     id: infores:bhf-ucl
     xref:
