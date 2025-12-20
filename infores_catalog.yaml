@@ -1781,6 +1781,18 @@ information_resources:
     consumed_by:
       - infores:molepro
   - status: released
+    name: CMM AI Automation Pipeline
+    id: infores:cmm-ai-automation
+    xref:
+      - https://github.com/berkeleybop/cmm-ai-automation
+    description: >-
+      AI-assisted automation pipeline for Critical Mineral Metabolism (CMM) data curation.
+      Aggregates and reconciles data from multiple sources (BacDive, MediaDive, TogoMedium,
+      NCBI)
+      to generate knowledge graph edges.
+    knowledge_level: knowledge_assertion
+    agent_type: automated_agent
+  - status: released
     name: Columbia Open Health Data (COHD)
     id: infores:cohd
     xref:
