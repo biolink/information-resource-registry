@@ -3542,8 +3542,8 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - status: released
-    name: Ki database
-    id: infores:ki-database
+    name: PDSP Ki Database
+    id: infores:pdsp-ki
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/PDSP-Ki
       - https://pdsp.unc.edu/kidb2/kidb/web/
