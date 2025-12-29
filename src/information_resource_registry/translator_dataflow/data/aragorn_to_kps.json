@@ -31,7 +31,6 @@
     "infores:multiomics-drugapprovals",
     "infores:multiomics-microbiome",
     "infores:multiomics-multiomics",
-    "infores:rtx-kg2",
     "infores:service-provider-trapi",
     "infores:text-mining-provider-cooccurrence"
   ]
