@@ -25,7 +25,6 @@
     "infores:genetics-data-provider",
     "infores:knowledge-collaboratory",
     "infores:molepro",
-    "infores:rtx-kg2",
     "infores:service-provider-trapi",
     "infores:text-mining-provider-cooccurrence"
   ]
