@@ -2418,7 +2418,10 @@ information_resources:
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/DrugMatrix
     description: >-
-      Large-scale rat toxicogenomics database and analysis tool. No longer accessible. 
+      DrugMatrix was a large-scale toxicogenomics database and analysis tool.
+      The resource does not seem to be directly accessible now, but
+      [DrugCentral](https://pmc.ncbi.nlm.nih.gov/articles/PMC10692006/#Sec10) reports that
+      it uses this resource as a source of bioactivity data.
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - status: released
@@ -3539,20 +3542,6 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - status: released
-    name: Ki database
-    id: infores:ki-database
-    xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/PDSP-Ki
-      - https://pdsp.unc.edu/databases/kidb.php
-    synonym:
-      - KiDB
-    description: >-
-      The Ki database serves as a data warehouse for published and internally-derived
-      Ki, or affinity, values for a large number of drugs and drug candidates at UNC's
-      Psychoactive Drug Screening Program
-    knowledge_level: knowledge_assertion
-    agent_type: not_provided
-  - status: released
     name: KinAce
     id: infores:kinace
     xref:
@@ -4131,7 +4120,7 @@ information_resources:
     consumed_by:
       - infores:rtx-kg2
   - status: released
-    name: National Center for Advancing Translational Science Biomedical Data Translator 
+    name: National Center for Advancing Translational Science Biomedical Data Translator
       Autonomous Relay System
     id: infores:ncats-ars
     xref:
@@ -4177,7 +4166,7 @@ information_resources:
     consumed_by:
       - infores:rtx-kg2
   - status: deprecated
-    name: North Carolina Department of Environmental Quality Concentrated Animal Feeding 
+    name: North Carolina Department of Environmental Quality Concentrated Animal Feeding
       Operations Exposures Data
     id: infores:ncdeq-cafo-exposures-data
     knowledge_level: knowledge_assertion
@@ -4527,10 +4516,25 @@ information_resources:
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/PDSP
     description: >-
-      This service provides screening of novel psychoactive compounds for pharmacological
-      and
-      functional activity at cloned human or rodent CNS receptors, channels, and transporters.
+      PDSP is the NIMH's Psychoactive Drug Screening Program, which provides screening of
+      novel psychoactive compounds for pharmacological and functional activity at cloned
+      human or rodent CNS receptors, channels, and transporters.
+      The website links to several databases.  
     knowledge_level: other
+    agent_type: not_provided
+  - status: released
+    name: PDSP Ki Database
+    id: infores:pdsp-ki
+    xref:
+      - https://github.com/NCATSTranslator/Translator-All/wiki/PDSP-Ki
+      - https://pdsp.unc.edu/kidb2/kidb/web/
+    synonym:
+      - KiDB
+    description: >-
+      The Ki database serves as a data warehouse for published and internally-derived
+      Ki, or affinity, values for a large number of drugs and drug candidates at UNC's
+      Psychoactive Drug Screening Program
+    knowledge_level: knowledge_assertion
     agent_type: not_provided
   - status: released
     name: Pfam
@@ -4929,7 +4933,8 @@ information_resources:
     consumed_by:
       - infores:unsecret-agent
   - status: deprecated
-    name: ROBOKOP (Reasoning Over Biomedical Objects linked in Knowledge-Oriented Pathway)
+    name: ROBOKOP (Reasoning Over Biomedical Objects linked in Knowledge-Oriented 
+      Pathway)
     id: infores:robokop-kp
     xref:
       - http://robokop.renci.org
@@ -5748,7 +5753,8 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - status: deprecated
-    name: United States Environmental Protection Agency Airborne Pollutant Exposures Data
+    name: United States Environmental Protection Agency Airborne Pollutant Exposures 
+      Data
     id: infores:us-epa-airborne-pollutant-exposures-data
     knowledge_level: knowledge_assertion
     agent_type: not_provided
@@ -5827,8 +5833,10 @@ information_resources:
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/WOMBAT-PK
     description: >-
-      A chemical database for data from clinical pharmacokinetics literature. No longer
-      accessible. 
+      The WOrld of Molecular BioAcTivity - PharmacoKinetics (WOMBAT-PK) contained clinical
+      pharmacokinetics data curated from literature. The resource does not seem to be directly
+      accessible now, but [DrugCentral](https://pmc.ncbi.nlm.nih.gov/articles/PMC10692006/#Sec10)
+      reports that it uses this resource as a source of bioactivity data.
     knowledge_level: knowledge_assertion
     agent_type: manual_agent
   - status: released
