@@ -5719,6 +5719,19 @@ information_resources:
     consumed_by:
       - infores:ars
   - status: released
+    name: University of Osnabrueck Molecular Cell Biology Division
+    id: infores:uos-mcb
+    xref:
+      - https://holthuis-lab-uos.de
+    synonym:
+      - UOS-MCB
+    description: >-
+      A Gene Ontology Consortium annotation group at the University of
+      Osnabrueck, Molecular Cell Biology Division, contributing manual GO
+      annotations.
+    knowledge_level: knowledge_assertion
+    agent_type: manual_agent
+  - status: released
     name: Unified phenotype ontology
     id: infores:upheno
     xref:
