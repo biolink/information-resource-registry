@@ -5257,7 +5257,7 @@ information_resources:
     name: Subclass-hierarchy Knowledge Propagation Engine (SKOPE)
     id: infores:skope
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/skope
+      - https://github.com/NCATSTranslator/Translator-All/wiki/SKOPE
     synonym:
       - SKOPE
     description: >-
