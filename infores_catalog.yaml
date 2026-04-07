@@ -4120,7 +4120,7 @@ information_resources:
     consumed_by:
       - infores:rtx-kg2
   - status: released
-    name: National Center for Advancing Translational Science Biomedical Data Translator 
+    name: National Center for Advancing Translational Science Biomedical Data Translator
       Autonomous Relay System
     id: infores:ncats-ars
     xref:
@@ -4166,7 +4166,7 @@ information_resources:
     consumed_by:
       - infores:rtx-kg2
   - status: deprecated
-    name: North Carolina Department of Environmental Quality Concentrated Animal Feeding 
+    name: North Carolina Department of Environmental Quality Concentrated Animal Feeding
       Operations Exposures Data
     id: infores:ncdeq-cafo-exposures-data
     knowledge_level: knowledge_assertion
@@ -4933,7 +4933,8 @@ information_resources:
     consumed_by:
       - infores:unsecret-agent
   - status: deprecated
-    name: ROBOKOP (Reasoning Over Biomedical Objects linked in Knowledge-Oriented Pathway)
+    name: ROBOKOP (Reasoning Over Biomedical Objects linked in Knowledge-Oriented 
+      Pathway)
     id: infores:robokop-kp
     xref:
       - http://robokop.renci.org
@@ -5252,6 +5253,37 @@ information_resources:
     agent_type: not_provided
     consumed_by:
       - infores:catrax-pharmacogenomics
+  - status: released
+    name: Subclass-hierarchy Knowledge Propagation Engine (SKOPE)
+    id: infores:skope
+    xref:
+      - https://github.com/NCATSTranslator/Translator-All/wiki/SKOPE
+    synonym:
+      - SKOPE
+    description: >-
+      SKOPE is a simple reasoning engine that performs a specific type of inference -  the
+      propagation of knowledge annotated to a specific term or class in a hierarchical
+      terminology or ontology to a parent class in the hierarchy. For example, when a source
+      reports that 'Metformin' treats 'Type I Diabetes Mellitus', SKOPE will infer that
+      'Metformin' treats 'Diabetes Mellitus' - the parent class of Type I Diabetes Mellitus
+      in the MONDO ontology that supports the data.  More formally: "Metformin -treats->
+      Type I Diabetes Mellitus" ----> "Metformin -treats-> Diabetes Mellitus".  This is
+      a valid ontological entailment under a 'some-some' interpretation of knowledge assertions
+      -
+      i.e. asserting that Metformin treats a class/category of diseases like 'Diabetes Mellitus'
+      means that there
+      are at least some cases in which this drug can treat some instance or form of the
+      disease (not that the drug
+      treats every form or instance of the disease).  This type of knowledge propagation
+      is important for retrieving
+      relevant results for queries of data where knowledge is annotated to concepts at different
+      levels of an underlying
+      hierarchical terminology or ontology. Without it, queries for drugs that may treat
+      'Diabetes Mellitus' would not
+      return 'Metformin' if this assertion were only explicitly reported at the level of
+      'Type I Diabetes Mellitus'. 
+    knowledge_level: logical_entailment
+    agent_type: automated_agent
   - status: released
     name: SmartAPI API
     id: infores:smart-api
@@ -5765,7 +5797,8 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - status: deprecated
-    name: United States Environmental Protection Agency Airborne Pollutant Exposures Data
+    name: United States Environmental Protection Agency Airborne Pollutant Exposures 
+      Data
     id: infores:us-epa-airborne-pollutant-exposures-data
     knowledge_level: knowledge_assertion
     agent_type: not_provided
