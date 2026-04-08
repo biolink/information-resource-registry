@@ -5953,3 +5953,14 @@ information_resources:
       the Zebrafish model organism.
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+  - status: released
+    name: Pubtator
+    id: infores:pubtator
+    xref: https://www.ncbi.nlm.nih.gov/research/pubtator3/
+    description: >-
+      PubTator is a biomedical literature resource using state-of-the-art AI
+      techniques to offer semantic and relation searches for key concepts like
+      proteins, genetic variants, diseases and chemicals. It covers millions of
+      PubMed abstracts and full-text articles from PMC Open Access Subset (PMC-OA).
+    knowledge_level: not_provided
+    agent_type: text_mining_agent
