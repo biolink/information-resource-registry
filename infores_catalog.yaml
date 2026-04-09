@@ -4761,6 +4761,7 @@ information_resources:
     id: infores:pubtator
     xref: 
       - https://www.ncbi.nlm.nih.gov/research/pubtator3/
+      - https://github.com/NCATSTranslator/Translator-All/wiki/PubTator
     description: >-
       PubTator is a biomedical literature resource using state-of-the-art AI
       techniques to offer semantic and relation searches for key concepts like
