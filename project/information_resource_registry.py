@@ -1,5 +1,5 @@
 # Auto generated from information_resource_registry.yaml by pythongen.py version: 0.0.1
-# Generation date: 2026-04-20T09:11:30
+# Generation date: 2026-04-27T09:25:17
 # Schema: Information-Resource-Registry-Schema
 #
 # id: https://w3id.org/biolink/information_resource_registry.yaml
