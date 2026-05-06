@@ -5254,34 +5254,22 @@ information_resources:
     consumed_by:
       - infores:catrax-pharmacogenomics
   - status: released
-    name: Subclass-hierarchy Knowledge Propagation Engine (SKOPE)
-    id: infores:skope
+    name: Ontology-Based Inference Engine (OBIE)
+    id: infores:obie
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/SKOPE
+      - https://github.com/NCATSTranslator/Translator-All/wiki/OBIE
     synonym:
-      - SKOPE
+      - OBIE
     description: >-
-      SKOPE is a simple reasoning engine that performs a specific type of inference -  the
-      propagation of knowledge annotated to a specific term or class in a hierarchical
-      terminology or ontology to a parent class in the hierarchy. For example, when a source
-      reports that 'Metformin' treats 'Type I Diabetes Mellitus', SKOPE will infer that
-      'Metformin' treats 'Diabetes Mellitus' - the parent class of Type I Diabetes Mellitus
-      in the MONDO ontology that supports the data.  More formally: "Metformin -treats->
-      Type I Diabetes Mellitus" ----> "Metformin -treats-> Diabetes Mellitus".  This is
-      a valid ontological entailment under a 'some-some' interpretation of knowledge assertions
-      -
-      i.e. asserting that Metformin treats a class/category of diseases like 'Diabetes Mellitus'
-      means that there
-      are at least some cases in which this drug can treat some instance or form of the
-      disease (not that the drug
-      treats every form or instance of the disease).  This type of knowledge propagation
-      is important for retrieving
-      relevant results for queries of data where knowledge is annotated to concepts at different
-      levels of an underlying
-      hierarchical terminology or ontology. Without it, queries for drugs that may treat
-      'Diabetes Mellitus' would not
-      return 'Metformin' if this assertion were only explicitly reported at the level of
-      'Type I Diabetes Mellitus'. 
+      The Ontology Based Inference Engine (OBIE) is a simple reasoning engine
+      that performs inference and entailments based on logic encoded in formal
+      ontologies. At present, this is limited to the propagation of knowledge
+      annotated to a specific term or class in a hierarchical ontology to a
+      parent class in the hierarchy. For example, when a source reports that
+      "Metformin treats Type I Diabetes Mellitus", OBIE will logically entail
+      that "Metformin treats Diabetes Mellitus" (the parent class of Type I
+      Diabetes Mellitus in the MONDO disease ontology that supports the data) -
+      and instantiate this inferred statement/edge.
     knowledge_level: logical_entailment
     agent_type: automated_agent
   - status: released
