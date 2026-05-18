@@ -1,24 +1,3 @@
 {
-  "infores:aragorn": [
-    "infores:automat-cam-kp",
-    "infores:automat-hgnc",
-    "infores:automat-icees-kg",
-    "infores:automat-monarchinitiative",
-    "infores:automat-robokop",
-    "infores:biothings-multiomics-biggim-drugresponse",
-    "infores:catrax-pharmacogenomics",
-    "infores:cohd",
-    "infores:connections-hypothesis",
-    "infores:gelinea",
-    "infores:genetics-data-provider",
-    "infores:knowledge-collaboratory",
-    "infores:molepro",
-    "infores:multiomics-clinicaltrials",
-    "infores:multiomics-drugapprovals",
-    "infores:multiomics-microbiome",
-    "infores:multiomics-multiomics",
-    "infores:rtx-kg2",
-    "infores:service-provider-trapi",
-    "infores:text-mining-provider-cooccurrence"
-  ]
+  "infores:aragorn": []
 }
