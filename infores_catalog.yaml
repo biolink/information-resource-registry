@@ -3796,6 +3796,17 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - status: released
+    name: Molecular Connections
+    id: infores:molecular-connections
+    xref:
+      - http://www.molecularconnections.com
+    description: >-
+      In silico discovery-services company specializing in drug discovery informatics that
+      contributes curated molecular interaction data pro bono to the IMEx Consortium.
+      (PSI-MI: MI:1263)
+    knowledge_level: knowledge_assertion
+    agent_type: manual_agent
+  - status: released
     name: Molecular Data Provider for NCATS Biomedical Translator Reasoners
     id: infores:molepro
     xref:
@@ -3922,6 +3933,17 @@ information_resources:
       phenotypes
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+  - status: released
+    name: Microbial Protein Interaction Database (MPIDB)
+    id: infores:mpidb
+    xref:
+      - https://www.ebi.ac.uk/intact/
+    description: >-
+      Collection of physical protein-protein interactions in prokaryotes. As of 2013 the
+      original MPIDB database is no longer active; all IMEx-curated MPIDB content was
+      imported into and is now maintained by IntAct. (PSI-MI: MI:0903)
+    knowledge_level: knowledge_assertion
+    agent_type: manual_agent
   - status: released
     name: Molecular Signatures Database
     id: infores:msigdb
@@ -4266,6 +4288,16 @@ information_resources:
       - https://github.com/NCATSTranslator/Translator-All/wiki/nSides
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+  - status: released
+    name: Norwegian University of Science and Technology (NTNU)
+    id: infores:ntnu
+    xref:
+      - https://www.ntnu.no/
+    description: >-
+      NTNU-affiliated curators contributing molecular interaction annotations to the IMEx
+      Consortium via IntAct. (PSI-MI: MI:1264)
+    knowledge_level: knowledge_assertion
+    agent_type: manual_agent
   - status: released
     name: Ontology of Biological Attributes
     id: infores:oba
