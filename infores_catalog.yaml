@@ -5661,7 +5661,7 @@ information_resources:
     name: Ubergraph
     id: infores:ubergraph
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/Ubergraph
+      - https://incatools.github.io/ubergraph/
     description: >-
       A graph representation of Ubergraph, an integration of ontologies including GO, CHEBI,
       Uberon, and HPO.
