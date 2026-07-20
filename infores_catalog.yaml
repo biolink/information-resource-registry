@@ -3698,6 +3698,7 @@ information_resources:
     id: infores:medi
     xref:
       - https://github.com/marcello-deluca/medic
+      - https://medic.renci.org/
     description: >-
       Indications and contraindications from DailyMed, extracted using LLMs.
     knowledge_level: knowledge_assertion
