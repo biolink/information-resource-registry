@@ -4143,7 +4143,7 @@ information_resources:
     consumed_by:
       - infores:rtx-kg2
   - status: released
-    name: National Center for Advancing Translational Science Biomedical Data Translator 
+    name: National Center for Advancing Translational Science Biomedical Data Translator
       Autonomous Relay System
     id: infores:ncats-ars
     xref:
@@ -4189,7 +4189,7 @@ information_resources:
     consumed_by:
       - infores:rtx-kg2
   - status: deprecated
-    name: North Carolina Department of Environmental Quality Concentrated Animal Feeding 
+    name: North Carolina Department of Environmental Quality Concentrated Animal Feeding
       Operations Exposures Data
     id: infores:ncdeq-cafo-exposures-data
     knowledge_level: knowledge_assertion
@@ -4998,7 +4998,8 @@ information_resources:
     consumed_by:
       - infores:unsecret-agent
   - status: deprecated
-    name: ROBOKOP (Reasoning Over Biomedical Objects linked in Knowledge-Oriented Pathway)
+    name: ROBOKOP (Reasoning Over Biomedical Objects linked in Knowledge-Oriented 
+      Pathway)
     id: infores:robokop-kp
     xref:
       - http://robokop.renci.org
@@ -5830,7 +5831,8 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - status: deprecated
-    name: United States Environmental Protection Agency Airborne Pollutant Exposures Data
+    name: United States Environmental Protection Agency Airborne Pollutant Exposures 
+      Data
     id: infores:us-epa-airborne-pollutant-exposures-data
     knowledge_level: knowledge_assertion
     agent_type: not_provided
@@ -5843,6 +5845,36 @@ information_resources:
     agent_type: manual_agent
     consumed_by:
       - infores:rtx-kg2
+  - status: released
+    name: Equine Problems and Diagnoses Terms
+    id: infores:vts-equine-pdt
+    xref:
+      - https://vtsl.vetmed.vt.edu/aaep/
+    synonym:
+      - Equine-PDT
+    description: >-
+      An AAEP-endorsed subset of SNOMED CT and its Veterinary Extension that provides
+      preferred terms for recording equine problems and diagnoses, developed by the
+      Veterinary Terminology Services (VTS) group at the Virginia-Maryland College of
+      Veterinary Medicine for the American Association of Equine Practitioners.
+    knowledge_level: knowledge_assertion
+    agent_type: manual_agent
+  - status: released
+    name: Small Animal Problems and Diagnoses Terms
+    id: infores:vts-sa-pdt
+    xref:
+      - https://vtsl.vetmed.vt.edu/sa/
+    synonym:
+      - SA-PDT
+    description: >-
+      A subset of SNOMED CT and its Veterinary Extension that provides preferred terms for
+      recording problems and diagnoses in small animal general, specialty and emergency
+      practice, maintained by the Veterinary Terminology Services (VTS) group at the
+      Virginia-Maryland College of Veterinary Medicine. It consolidates the former AAHA
+      Problem and Diagnosis Terms (AAHA PDT) and the small animal specialty subset (SAS
+      PDT).
+    knowledge_level: knowledge_assertion
+    agent_type: manual_agent
   - status: released
     name: C. elegans Gross Anatomy Ontology
     id: infores:wbbt
