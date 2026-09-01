@@ -39,7 +39,11 @@ dev = [
     "mkdocs-mermaid2-plugin>=1.1.1",
     "schemasheets>=0.1.14",
 ]
-docs = ["mkdocs-material>=9.4.8"]
+docs = [
+    "mkdocs>=1.4.2",
+    "mkdocs-material>=9.4.8",
+    "mkdocs-mermaid2-plugin>=1.1.1",
+]
 
 [project.scripts]
 add_consume_info = "information_resource_registry.translator_dataflow.add_consume_info:main"
