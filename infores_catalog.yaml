@@ -1272,8 +1272,6 @@ information_resources:
   - status: deprecated
     name: Multiomics ClinicalTrials KP API
     id: infores:biothings-multiomics-clinicaltrials
-    xref:
-      - https://github.com/multiomicsKP/clinical_trials_kp
     knowledge_level: knowledge_assertion
     agent_type: manual_agent
     consumed_by:
@@ -3957,8 +3955,6 @@ information_resources:
   - status: released
     name: Multiomics ClinicalTrials KP API
     id: infores:multiomics-clinicaltrials
-    xref:
-      - https://github.com/multiomicsKP/clinical_trials_kp
     knowledge_level: knowledge_assertion
     agent_type: manual_agent
     consumes:
@@ -3972,8 +3968,6 @@ information_resources:
   - status: released
     name: Multiomics Drug Approvals KP API
     id: infores:multiomics-drugapprovals
-    xref:
-      - https://github.com/multiomicsKP/drug_approvals_kp
     knowledge_level: knowledge_assertion
     agent_type: manual_agent
     consumes:
