@@ -1254,7 +1254,6 @@ information_resources:
     id: infores:biothings-multiomics-biggim-drugresponse
     xref:
       - https://github.com/NCATS-Tangerine/BigGIM_APIWrapper
-      - https://github.com/NCATS-Tangerine/BigGIM_APIWrapper
     description: >-
       Documentation of the Drug Response KP query web services.
     knowledge_level: knowledge_assertion
@@ -2875,7 +2874,6 @@ information_resources:
     name: Gene2Phenotype
     id: infores:gene2phenotype
     xref:
-      - https://www.ebi.ac.uk/gene2phenotype
       - https://www.ebi.ac.uk/gene2phenotype
       - https://www.ebi.ac.uk/gene2phenotype/about/project
     synonym:
@@ -4579,7 +4577,6 @@ information_resources:
     id: infores:pdsp-ki
     xref:
       - https://pdsp.unc.edu/kidb2/kidb/web/
-      - https://pdsp.unc.edu/kidb2/kidb/web/
     synonym:
       - KiDB
     description: >-
@@ -4812,7 +4809,6 @@ information_resources:
     name: Pubtator
     id: infores:pubtator
     xref:
-      - https://www.ncbi.nlm.nih.gov/research/pubtator3/
       - https://www.ncbi.nlm.nih.gov/research/pubtator3/
     description: >-
       PubTator is a biomedical literature resource using state-of-the-art AI
