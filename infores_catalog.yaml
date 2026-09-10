@@ -20,7 +20,7 @@ information_resources:
     name: Adverse Event Open Learning through Universal Standardization (AEOLUS)
     id: infores:aeolus
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/AEOLUS
+      - https://www.nature.com/articles/sdata201626
     description: >-
       A knowledge_assertion and standardized version of FAERS removing duplicate case
       records, applying standardized vocabularies with drug names mapped to RxNorm concepts
@@ -34,7 +34,7 @@ information_resources:
     name: Alliance of Genome Resources (AGR Knowledgebase)
     id: infores:agrkb
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/Alliance-of-Genome-Resources
+      - https://www.alliancegenome.org/
     synonym:
       - ALLIANCE
     knowledge_level: knowledge_assertion
@@ -45,7 +45,7 @@ information_resources:
     name: The Amyloidoses Collection (AmyCo) Database
     id: infores:amyco
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/AmyCo
+      - http://bioinformatics.biol.uoa.gr/amyco/
     description: >-
       The Amyloidoses Collection (AmyCo) database contains manually curated data from articles
       on
@@ -59,7 +59,7 @@ information_resources:
     name: Annotator Service
     id: infores:annotator
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/Annotator-Service
+      - https://github.com/biothings/biothings_annotator
     description: >-
       Service to provide detailed annotations for any given biomedical entities.
     knowledge_level: knowledge_assertion
@@ -81,7 +81,7 @@ information_resources:
     name: Adverse Outcome Pathways Casual Activity Models
     id: infores:aop-cam
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/AOP-CAM
+      - https://aopwiki.org/
     synonym:
       - AOP-CAM
     knowledge_level: knowledge_assertion
@@ -90,7 +90,7 @@ information_resources:
     name: ARAGORN
     id: infores:aragorn
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/ARAGORN
+      - https://github.com/ranking-agent/aragorn
     description: >-
       ARAGORN: Performs a query operation which compiles data from numerous
       ARAGORN ranking agent services.
@@ -157,7 +157,7 @@ information_resources:
     name: ARAX Translator Reasoner
     id: infores:arax
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/Expander-Agent
+      - https://arax.ncats.io/
     synonym:
       - ARAX
     description: >-
@@ -215,7 +215,7 @@ information_resources:
     name: Autonomous Relay System
     id: infores:ars
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/Autonomous-Relay-System-(ARS)
+      - https://github.com/NCATSTranslator/Relay
     knowledge_level: not_provided
     agent_type: not_provided
     consumes:
@@ -253,7 +253,7 @@ information_resources:
     name: Automat BindingDB
     id: infores:automat-binding-db
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/Automat
+      - https://www.bindingdb.org/
     knowledge_level: not_provided
     agent_type: not_provided
     consumed_by:
@@ -263,7 +263,7 @@ information_resources:
     name: Automat CAM-KP
     id: infores:automat-cam-kp
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/Automat
+      - https://github.com/ExposuresProvider/cam-kp-api
     description: >-
       TRAPI interface to database of Causal Activity Models
     knowledge_level: knowledge_assertion
@@ -276,7 +276,7 @@ information_resources:
     name: Automat CEBS
     id: infores:automat-cebs
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/Automat
+      - https://cebs.niehs.nih.gov/cebs/
     description: >-
       CEBS is a public, web-accessible, manually curated and accessioned repository of individual
       study data and  summarized study data from the National Toxicology Program (NTP) testing
@@ -292,7 +292,7 @@ information_resources:
     name: Automat Chemical normalization (trapi v-1.1.0)
     id: infores:automat-chem-norm
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/Automat
+      - https://automat.renci.org/
     description: >-
       A graph  linking together similar compounds.  Two compounds are linked
       by an edge in the graph if they are equivalent when charge, salts, and stereochemistry
@@ -303,7 +303,7 @@ information_resources:
     name: Automat Chembio
     id: infores:automat-chembio
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/Automat
+      - https://automat.renci.org/
     description: >-
       A graph based on [chem2bio2rdf (http://cheminfov.informatics.indiana.edu:8080/c2b2r/)](http://cheminfov.informatics.indiana.edu:8080/c2b2r/).
     knowledge_level: knowledge_assertion
@@ -312,7 +312,7 @@ information_resources:
     name: Automat Columbia Open Health Data (COHD)
     id: infores:automat-cohd
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/COHD-KP
+      - https://cohd-api.transltr.io/about.html
     description: >-
       The Columbia Open Health Data (COHD) API provides access to counts
       and frequencies (i.e., EHR prevalence) of conditions, procedures, drug exposures,
@@ -373,7 +373,7 @@ information_resources:
     name: Automat Cord19
     id: infores:automat-cord19
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/Automat
+      - https://github.com/allenai/cord19
     description: >-
       A literature co-occurence graph based on parsing the CORD-19 paper set.
     knowledge_level: not_provided
@@ -382,7 +382,7 @@ information_resources:
     name: Automat Cord19 Scibite (trapi v-1.1.0)
     id: infores:automat-cord19-scibite
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/Automat
+      - https://automat.renci.org/
     description: >-
       A literature co-occurence graph based on the [scibite parsing (https://github.com/SciBiteLabs/CORD19)](https://github.com/SciBiteLabs/CORD19)
       of the CORD-19 paper set.
@@ -415,7 +415,7 @@ information_resources:
     name: Automat CTD
     id: infores:automat-ctd
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/Automat
+      - https://ctdbase.org/
     description: >-
       A graph based on the [Comparative Toxicogenomics Database (ctdbase.org)](ctdbase.org).
     knowledge_level: knowledge_assertion
@@ -428,7 +428,7 @@ information_resources:
     name: Automat DrugCentral
     id: infores:automat-drug-central
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/Automat
+      - https://drugcentral.org/
     description: >-
       A graph based on DrugCentral
     knowledge_level: knowledge_assertion
@@ -441,7 +441,7 @@ information_resources:
     name: Automat Multiomics EHRMLA Clinical Connections API
     id: infores:automat-ehr-clinical-connections-kp
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/Automat
+      - https://automat.renci.org/
     description: >-
       A graph consisting of clinical connections associations from Multiomics Electronic-Health-Record
       (EHR) Machine Learning Analysis (MLA)
@@ -454,7 +454,7 @@ information_resources:
     name: Automat Multiomics EHRMLA May Treat API
     id: infores:automat-ehr-may-treat-kp
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/Automat
+      - https://automat.renci.org/
     description: >-
       A graph consisting of May Treat associations from Multiomics Electronic-Health-Record
       (EHR) Machine Learning Analysis (MLA)
@@ -470,7 +470,7 @@ information_resources:
     name: Automat Foodb
     id: infores:automat-foodb
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/Automat
+      - https://foodb.ca/
     description: >-
       A graph of the food/chemical relationships in [foodb.ca](foodb.ca).
     knowledge_level: knowledge_assertion
@@ -479,7 +479,7 @@ information_resources:
     name: Automat Alliance of Genome Resources
     id: infores:automat-genome-alliance
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/Automat
+      - https://www.alliancegenome.org/
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     consumed_by:
@@ -489,7 +489,7 @@ information_resources:
     name: Automat GTEx
     id: infores:automat-gtex
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/Automat
+      - https://gtexportal.org/home/
     description: >-
       A graph containing eqtl and sqtl information from [GTEx Portal (https://gtexportal.org/home/)](https://gtexportal.org/home/).
       Also includes genes that the variants lie within or near.
@@ -503,7 +503,7 @@ information_resources:
     name: Automat GtoPdb
     id: infores:automat-gtopdb
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/Automat
+      - https://www.guidetopharmacology.org/
     description: >-
       A graph based on the [IUPHAR Guide to Pharmacology (https://www.guidetopharmacology.org/)](https://www.guidetopharmacology.org/)
     knowledge_level: knowledge_assertion
@@ -516,7 +516,7 @@ information_resources:
     name: Automat GWAS Catalog
     id: infores:automat-gwas-catalog
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/Automat
+      - https://www.ebi.ac.uk/gwas/
     description: >-
       A graph based on the GWAS Catalog
     knowledge_level: knowledge_assertion
@@ -529,7 +529,7 @@ information_resources:
     name: Automat Hetio
     id: infores:automat-hetio
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/Automat
+      - https://het.io/
     description: >-
       A graph based on [hetionet (het.io)](het.io).
     knowledge_level: knowledge_assertion
@@ -538,7 +538,7 @@ information_resources:
     name: Automat Hetionet
     id: infores:automat-hetionet
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/Automat
+      - https://het.io/
     description: >-
       A graph based on [hetionet (het.io)](het.io).
     knowledge_level: knowledge_assertion
@@ -551,7 +551,7 @@ information_resources:
     name: Automat HGNC
     id: infores:automat-hgnc
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/Automat
+      - https://www.genenames.org/
     description: >-
       Gene families from [HGNC (genenames.org)](genenames.org).
     knowledge_level: knowledge_assertion
@@ -564,7 +564,7 @@ information_resources:
     name: Automat HMDB
     id: infores:automat-hmdb
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/Automat
+      - https://hmdb.ca/
     description: >-
       A graph based on the [Human Metabolome DataBase (hmdb.org)](hmdb.org).
     knowledge_level: knowledge_assertion
@@ -577,7 +577,7 @@ information_resources:
     name: Automat Human GOA
     id: infores:automat-human-goa
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/Automat
+      - https://www.ebi.ac.uk/GOA/
     description: >-
       Human Gene Ontology Annotations from the GO consortium.
     knowledge_level: knowledge_assertion
@@ -590,7 +590,7 @@ information_resources:
     name: Automat ICEES KG
     id: infores:automat-icees-kg
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/Automat
+      - https://automat.renci.org/
     knowledge_level: statistical_association
     agent_type: not_provided
     consumed_by:
@@ -601,7 +601,7 @@ information_resources:
     name: Automat IntAct
     id: infores:automat-intact
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/Automat
+      - https://automat.renci.org/
     description: >-
       Molecular (Gene-Gene) interactions from EBI IntAct (https://www.ebi.ac.uk/intact/)](https://www.ebi.ac.uk/intact/).
     knowledge_level: knowledge_assertion
@@ -621,7 +621,7 @@ information_resources:
     name: Automat Monarch Initiative
     id: infores:automat-monarchinitiative
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/Automat
+      - https://automat.renci.org/
     description: >-
       The Monarch Knowledge Graph is a reference implementation of the Biolink model specification.  It
       contains data from the Monarch Initiative aggregated database as well as several OBO
@@ -650,7 +650,7 @@ information_resources:
     name: Automat Openhealth Data at Carolina
     id: infores:automat-openhealthdata-carolina
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/Automat
+      - https://automat.renci.org/
     description: >-
       A graph based on infores:openhealthdata-carolina, providing access to counts
       and frequencies of conditions, procedures, drug exposures, and patient demographics,
@@ -663,7 +663,7 @@ information_resources:
     name: Automat PANTHER
     id: infores:automat-panther
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/Automat
+      - https://automat.renci.org/
     description: >-
       A graph of gene families and pathways from [Panther (pantherdb.org)](pantherdb.org)
     knowledge_level: knowledge_assertion
@@ -676,7 +676,7 @@ information_resources:
     name: Automat Pharos
     id: infores:automat-pharos
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/Automat
+      - https://automat.renci.org/
     description: >-
       A graph based on [Pharos (pharos.nih.gov)](pharos.nih.gov).
     knowledge_level: knowledge_assertion
@@ -689,7 +689,7 @@ information_resources:
     name: Automat Reactome
     id: infores:automat-reactome
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/Automat
+      - https://automat.renci.org/
     knowledge_level: not_provided
     agent_type: not_provided
     consumed_by:
@@ -699,7 +699,7 @@ information_resources:
     name: Automat RENCI SRI Reference KG
     id: infores:automat-renci-sri-reference-kg
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/Automat
+      - https://automat.renci.org/
     description: >-
       A graph based on the [Monarch API (https://api.monarchinitiative.org/)](https://api.monarchinitiative.org/).
     knowledge_level: knowledge_assertion
@@ -708,7 +708,7 @@ information_resources:
     name: Automat ROBOKOP
     id: infores:automat-robokop
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/Automat
+      - https://automat.renci.org/
     knowledge_level: not_provided
     agent_type: not_provided
     consumed_by:
@@ -719,7 +719,7 @@ information_resources:
     name: Automat ROBOKOP KG
     id: infores:automat-robokop-kg
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/Automat
+      - https://automat.renci.org/
     description: >-
       Biomedical Knowledge graph build by constructing relationships from federated data
       sets.
@@ -729,7 +729,7 @@ information_resources:
     name: Automat SRI Reference Knowledge Graph
     id: infores:automat-sri-reference-kg
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/SRI-Reference-Knowledge-Graph
+      - https://automat.renci.org/
     description: >-
       The SRI reference KG aims to aggregate knowledge sources across translator
       using KGX.  The initial graph contains data files provided by the Monarch Initiative
@@ -740,7 +740,7 @@ information_resources:
     name: Automat STRING
     id: infores:automat-string-db
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/Automat
+      - https://automat.renci.org/
     description: >-
       The Search Tool for the Retrieval of INteracting Genes/proteins (STRING)
       database provides information on known and prediction protein-protein interactions
@@ -763,7 +763,7 @@ information_resources:
     name: Automat Ubergraph
     id: infores:automat-ubergraph
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/Automat
+      - https://automat.renci.org/
     description: >-
       A graph representation of Ubergraph, an integration of ontologies
       including GO, CHEBI, Uberon, and HPO.
@@ -777,7 +777,7 @@ information_resources:
     name: Automat Ubergraph Nonredundant
     id: infores:automat-ubergraph-nonredundant
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/Automat
+      - https://automat.renci.org/
     description: >-
       A graph representation of Ubergraph, an integration of ontologies
       including GO, CHEBI, Uberon, and HPO. The redundant version of Ubergraph contains
@@ -789,7 +789,7 @@ information_resources:
     name: Automat Viral Proteome
     id: infores:automat-viral-proteome
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/Automat
+      - https://automat.renci.org/
     description: >-
       A graph consisting of viral proteins from UniProt, connected by similarity
       edges from UniRef.
@@ -825,7 +825,7 @@ information_resources:
     name: Bgee
     id: infores:bgee
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/Bgee
+      - https://www.bgee.org/
     synonym:
       - BGEE
     knowledge_level: knowledge_assertion
@@ -855,7 +855,7 @@ information_resources:
     id: infores:bigg-models
     xref:
       - fairsharing:FAIRsharing.va62ke
-      - https://github.com/NCATSTranslator/Translator-All/wiki/BiGG-Models
+      - https://bigg.ucsd.edu/
     synonym:
       - BIGG
     description: >-
@@ -877,7 +877,7 @@ information_resources:
     name: BindingDB
     id: infores:bindingdb
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/bindingdb
+      - https://www.bindingdb.org/
     synonym:
       - The Binding Database
     description: >-
@@ -930,7 +930,7 @@ information_resources:
     name: Biolink Model Lookup
     id: infores:biolink-model-lookup
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/Biolink-Lookup-Service
+      - https://bl-lookup-sri.renci.org/docs
     description: >-
       Biolink Model Lookup service.
     knowledge_level: knowledge_assertion
@@ -939,7 +939,7 @@ information_resources:
     name: Biolink ontology
     id: infores:biolink-ontology
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/BioLink-OWL
+      - https://biolink.github.io/biolink-model/
     knowledge_level: knowledge_assertion
     agent_type: manual_agent
     consumed_by:
@@ -969,7 +969,7 @@ information_resources:
     name: BioThings AGR API
     id: infores:biothings-agr
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/BioThings-APIs
+      - https://pending.biothings.io/agr
     description: >-
       Documentation of the BioThings API for
       [AGR](https://www.alliancegenome.org/downloads) disease associations data.
@@ -990,7 +990,7 @@ information_resources:
     name: BioThings BindingDB API
     id: infores:biothings-bindingdb
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/BioThings-APIs
+      - https://pending.biothings.io/bindingdb
     description: >-
       Documentation of the BioThings [BindingDB](https://www.bindingdb.org/rwd/bind/index.jsp)
       query web services.
@@ -1004,7 +1004,7 @@ information_resources:
     name: BioThings BioPlanet Pathway-Disease API
     id: infores:biothings-bioplanet-pathway-disease
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/BioThings-APIs
+      - https://pending.biothings.io/bioplanet_pathway_disease
     description: >-
       Documentation of the BioThings [BioPlanet](https://tripod.nih.gov/bioplanet/#)
       pathway-disease association query web services.
@@ -1018,7 +1018,7 @@ information_resources:
     name: BioThings BioPlanet Pathway-Gene API
     id: infores:biothings-bioplanet-pathway-gene
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/BioThings-APIs
+      - https://pending.biothings.io/bioplanet_pathway_gene
     description: >-
       Documentation of the BioThings [BioPlanet](https://tripod.nih.gov/bioplanet/#)
       pathway-gene association query web services.
@@ -1032,7 +1032,7 @@ information_resources:
     name: BioThings DDInter API
     id: infores:biothings-ddinter
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/BioThings-APIs
+      - https://pending.biothings.io/ddinter
     description: >-
       Documentation of the BioThings API for [DDInter](http://ddinter.scbdd.com/) data.
     knowledge_level: knowledge_assertion
@@ -1045,7 +1045,7 @@ information_resources:
     name: BioThings DGIdb API
     id: infores:biothings-dgidb
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/BioThings-APIs
+      - https://pending.biothings.io/dgidb
     description: >-
       Documentation of the BioThings DGIdb query web services.
     knowledge_level: mixed
@@ -1058,7 +1058,7 @@ information_resources:
     name: BioThings DISEASES API
     id: infores:biothings-diseases
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/BioThings-APIs
+      - https://pending.biothings.io/DISEASES
     description: >-
       Documentation of the DISEASES query web services.
     knowledge_level: mixed
@@ -1071,7 +1071,7 @@ information_resources:
     name: BioThings EBIgene2phenotype API
     id: infores:biothings-ebi-gene2phenotype
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/BioThings-APIs
+      - https://pending.biothings.io/ebigene2phenotype
     description: >-
       Documentation of the EBIgene2phenotype query web services.
     knowledge_level: knowledge_assertion
@@ -1084,7 +1084,7 @@ information_resources:
     name: BioThings Explorer
     id: infores:biothings-explorer
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/BioThings-Explorer-(BTE)
+      - https://explorer.biothings.io/
     synonym:
       - BTE
     knowledge_level: prediction
@@ -1097,7 +1097,7 @@ information_resources:
     name: BioThings FooDB API
     id: infores:biothings-foodb
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/BioThings-APIs
+      - https://foodb.ca/
     description: >-
       Documentation of the BioThings API for [FooDB](https://foodb.ca/) data.
     knowledge_level: knowledge_assertion
@@ -1110,7 +1110,7 @@ information_resources:
     name: BioThings FoodData Central API
     id: infores:biothings-fooddata-central
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/BioThings-APIs
+      - https://fdc.nal.usda.gov/
     description: >-
       Documentation of the BioThings API for  [FoodData Central](https://fdc.nal.usda.gov/index.html)
       data.
@@ -1124,7 +1124,7 @@ information_resources:
     name: BioThings Gene Ontology Biological Process API
     id: infores:biothings-go-bp
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/BioThings-APIs
+      - https://pending.biothings.io/go_bp
     description: >-
       Documentation of the Gene Ontology Biological Process query web services.
     knowledge_level: knowledge_assertion
@@ -1137,7 +1137,7 @@ information_resources:
     name: BioThings Gene Ontology Cellular Component API
     id: infores:biothings-go-cc
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/BioThings-APIs
+      - https://pending.biothings.io/go_cc
     description: >-
       Documentation of the Gene Ontology Cellular Component query web services.
     knowledge_level: knowledge_assertion
@@ -1150,7 +1150,7 @@ information_resources:
     name: BioThings Gene Ontology Molecular Activity API
     id: infores:biothings-go-mf
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/BioThings-APIs
+      - https://pending.biothings.io/go_mf
     description: >-
       Documentation of the Gene Ontology Molecular Activity query web services.
     knowledge_level: knowledge_assertion
@@ -1163,7 +1163,7 @@ information_resources:
     name: BioThings GTRx API
     id: infores:biothings-gtrx
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/BioThings-APIs
+      - https://gtrx.rbsapp.net/
     description: >-
       Documentation of the BioThings API for [Genome-to-Treatment (GTRx™)](https://gtrx.rbsapp.net/about.html).  This
       API includes the content from the linked website, specifically the recommended acute
@@ -1182,7 +1182,7 @@ information_resources:
     name: BioThings HMDB API
     id: infores:biothings-hmdb
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/BioThings-APIs
+      - https://hmdb.ca/
     description: >-
       Documentation of the BioThings API for [HMDB](https://hmdb.ca/) data.
     knowledge_level: knowledge_assertion
@@ -1191,7 +1191,7 @@ information_resources:
     name: BioThings Human Phenotype Ontology API
     id: infores:biothings-hpo
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/BioThings-APIs
+      - https://hpo.jax.org/
     description: >-
       Documentation of the HPO query web services.
     knowledge_level: knowledge_assertion
@@ -1205,7 +1205,7 @@ information_resources:
     name: BioThings iDISK API
     id: infores:biothings-idisk
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/BioThings-APIs
+      - https://pending.biothings.io/idisk
     knowledge_level: mixed
     agent_type: not_provided
     consumes:
@@ -1216,7 +1216,7 @@ information_resources:
     name: BioThings InnateDB API
     id: infores:biothings-innatedb
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/BioThings-APIs
+      - https://www.innatedb.com/
     description: >-
       Documentation of the BioThings API for [InnateDB](https://www.innatedb.com/) data.
     knowledge_level: mixed
@@ -1240,7 +1240,7 @@ information_resources:
     name: BioThings MGIgene2phenotype API
     id: infores:biothings-mgi-g2p
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/BioThings-APIs
+      - https://pending.biothings.io/mgigene2phenotype
     description: >-
       Documentation of the MGIgene2phenotype query web services.
     knowledge_level: knowledge_assertion
@@ -1254,7 +1254,6 @@ information_resources:
     id: infores:biothings-multiomics-biggim-drugresponse
     xref:
       - https://github.com/NCATS-Tangerine/BigGIM_APIWrapper
-      - https://github.com/NCATSTranslator/Translator-All/wiki/Big-GIM-II:-Drug-Response-KP
     description: >-
       Documentation of the Drug Response KP query web services.
     knowledge_level: knowledge_assertion
@@ -1273,8 +1272,6 @@ information_resources:
   - status: deprecated
     name: Multiomics ClinicalTrials KP API
     id: infores:biothings-multiomics-clinicaltrials
-    xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/Clinical-Trials-KP
     knowledge_level: knowledge_assertion
     agent_type: manual_agent
     consumed_by:
@@ -1283,7 +1280,7 @@ information_resources:
     name: Multiomics EHR Risk KP API
     id: infores:biothings-multiomics-ehr-risk
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/EHR-Risk-KP
+      - https://biothings.transltr.io/multiomics_ehr_risk_kp
     description: >-
       Documentation of the Multiomics Electronic-Health-Record (EHR) Risk
       KP query web services.
@@ -1295,7 +1292,7 @@ information_resources:
     name: Multiomics Wellness KP API
     id: infores:biothings-multiomics-wellness
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/Wellness-KP
+      - https://biothings.transltr.io/multiomics_wellness_kp
     description: >-
       Documentation of the Multiomics Wellness KP query web services.
     knowledge_level: statistical_association
@@ -1308,7 +1305,7 @@ information_resources:
     name: BioThings PFOCR API
     id: infores:biothings-pfocr
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/BioThings-APIs
+      - https://pending.biothings.io/pfocr
     description: >-
       Documentation of the pfocr query web services.
     knowledge_level: prediction
@@ -1321,7 +1318,7 @@ information_resources:
     name: BioThings RARe-SOURCE API
     id: infores:biothings-rare-source
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/BioThings-APIs
+      - https://raresource.nih.gov/
     description: >-
       Documentation of the BioThings API for [NCATS RARe-SOURCE](https://raresource.nih.gov/)
       data.
@@ -1335,7 +1332,7 @@ information_resources:
     name: BioThings repoDB API
     id: infores:biothings-repodb
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/BioThings-APIs
+      - https://unmtid-shinyapps.net/shiny/repodb/
     description: >-
       Documentation of the BioThings API for [repoDB](https://unmtid-shinyapps.net/shiny/repodb/)
       data.  and download
@@ -1349,7 +1346,7 @@ information_resources:
     name: BioThings Rhea API
     id: infores:biothings-rhea
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/BioThings-APIs
+      - https://www.rhea-db.org/
     description: >-
       Documentation of the BioThings Rhea query web services.
     knowledge_level: knowledge_assertion
@@ -1362,7 +1359,7 @@ information_resources:
     name: BioThings SEMMEDDB API
     id: infores:biothings-semmeddb
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/BioThings-APIs
+      - https://lhncbc.nlm.nih.gov/ii/tools/SemRep_SemMedDB_SKR.html
     description: >-
       Documentation of the BioThings SEMMEDDB query web services.
     knowledge_level: not_provided
@@ -1375,7 +1372,7 @@ information_resources:
     name: SEMMED Anatomy API
     id: infores:biothings-semmeddb-anatomy
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/BioThings-SEMMED-DB-Anatomy
+      - https://lhncbc.nlm.nih.gov/ii/tools/SemRep_SemMedDB_SKR.html
     description: >-
       Documentation of the SEMMED disease query web services.  Learn more
       about [mydisease.info](http://pending.biothings.io/semmed)
@@ -1385,7 +1382,7 @@ information_resources:
     name: SEMMED Biological Process API
     id: infores:biothings-semmeddb-biological-process
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/BioThings-SEMMED-DB-Biological-Process
+      - https://lhncbc.nlm.nih.gov/ii/tools/SemRep_SemMedDB_SKR.html
     description: >-
       Documentation of the SEMMED disease query web services.  Learn more
       about [mydisease.info](http://pending.biothings.io/semmed)
@@ -1395,7 +1392,7 @@ information_resources:
     name: SEMMED Chemical API
     id: infores:biothings-semmeddb-chemical
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/BioThings-SEMMED-DB-Chemical
+      - https://lhncbc.nlm.nih.gov/ii/tools/SemRep_SemMedDB_SKR.html
     description: >-
       Documentation of the SEMMED disease query web services.  Learn more
       about [mydisease.info](http://pending.biothings.io/semmed)
@@ -1405,7 +1402,7 @@ information_resources:
     name: SEMMED Disease API
     id: infores:biothings-semmeddb-disease
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/BioThings-SEMMED-DB-Disease
+      - https://lhncbc.nlm.nih.gov/ii/tools/SemRep_SemMedDB_SKR.html
     description: >-
       Documentation of the SEMMED disease query web services.  Learn more
       about [semmed disease](http://pending.biothings.io/semmed)
@@ -1415,7 +1412,7 @@ information_resources:
     name: SEMMED Gene API
     id: infores:biothings-semmeddb-gene
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/BioThings-SEMMED-DB-Gene
+      - https://lhncbc.nlm.nih.gov/ii/tools/SemRep_SemMedDB_SKR.html
     description: >-
       Documentation of the SEMMED disease query web services.  Learn more about [mydisease.info](http://pending.biothings.io/semmed)
     knowledge_level: not_provided
@@ -1433,7 +1430,7 @@ information_resources:
     name: BioThings SuppKG API
     id: infores:biothings-suppkg
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/BioThings-APIs
+      - https://github.com/zhang-informatics/SemRep_DS/tree/main/SuppKG
     description: >-
       Documentation of the BioThings API for
       [SuppKG](https://github.com/zhang-informatics/SemRep_DS/tree/main/SuppKG) data. SuppKG
@@ -1451,7 +1448,7 @@ information_resources:
     name: Multiomics TCGA Mutation Frequency KP API
     id: infores:biothings-tcga-mut-freq
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/Big-GIM-II:-Tumor-gene-mutation-KP
+      - https://pending.biothings.io/tcga_mut_freq_kp
     description: >-
       Documentation of the TCGA Mutation Frequency KP query web services.
     knowledge_level: statistical_association
@@ -1460,7 +1457,7 @@ information_resources:
     name: BioThings TISSUES API
     id: infores:biothings-tissues
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/BioThings-APIs
+      - https://tissues.jensenlab.org/About
     description: >-
       Documentation of the BioThings API for [TISSUES](https://tissues.jensenlab.org/About)
       data.
@@ -1470,7 +1467,7 @@ information_resources:
     name: Biothings Therapeutic Target Database API
     id: infores:biothings-ttd
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/BioThings-APIs
+      - https://db.idrblab.net/ttd/
     description: >-
       Documentation of the BioThings API for [TherapeuticTargetDatabase](https://db.idrblab.net/ttd/).
       This KP contains drug-disease, target-disease, drug-protein target, and biomarker-disease
@@ -1485,7 +1482,7 @@ information_resources:
     name: BioThings UBERON Ontology API
     id: infores:biothings-uberon-ontology
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/BioThings-APIs
+      - https://obophenotype.github.io/uberon/
     description: >-
       Documentation of the UBERON query web services.
     knowledge_level: knowledge_assertion
@@ -1522,7 +1519,7 @@ information_resources:
     name: CAM-KP API
     id: infores:cam-kp
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/CAM-Provider-KG
+      - https://github.com/ExposuresProvider/cam-kp-api
     synonym:
       - Causal Activity Model KP
     description: >-
@@ -1552,7 +1549,7 @@ information_resources:
     name: Multiomics Pharmacogenomics KP API
     id: infores:catrax-pharmacogenomics
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/Pharmacogenomics-KP
+      - https://smart-api.info/ui/1aa030d12bd9e2cb3185d97282bee1de
     description: >-
       Documentation of the Pharmacogenomics KP query web services.
     knowledge_level: knowledge_assertion
@@ -1577,7 +1574,7 @@ information_resources:
     name: CEBS
     id: infores:cebs
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/CEBS
+      - https://cebs.niehs.nih.gov/cebs/
     synonym:
       - Chemical Effects in Biological Systems
     description: >-
@@ -1591,7 +1588,7 @@ information_resources:
     name: CellMarker 2.0
     id: infores:cellmarker
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/CellMarker
+      - http://bio-bigdata.hrbmu.edu.cn/CellMarker/
     synonym:
       - CellMarker
     knowledge_level: knowledge_assertion
@@ -1612,7 +1609,7 @@ information_resources:
     name: Chemical Entity of Biological Interest
     id: infores:chebi
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/ChEBI
+      - https://www.ebi.ac.uk/chebi/
     synonym:
       - ChEBI
     description: >-
@@ -1649,7 +1646,7 @@ information_resources:
     id: infores:chembl
     xref:
       - fairsharing:FAIRsharing.m3jtpg
-      - https://github.com/NCATSTranslator/Translator-All/wiki/ChEMBL
+      - https://www.ebi.ac.uk/chembl/
     synonym:
       - Chembl
     description: >-
@@ -1664,7 +1661,7 @@ information_resources:
     name: Chemotext
     id: infores:chemotext
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/Chemotext
+      - http://chemotext.mml.unc.edu
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - status: released
@@ -1688,7 +1685,7 @@ information_resources:
     name: Clinical Interpretation of Variants in Cancer
     id: infores:civic
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/civic
+      - https://civicdb.org/
     synonym:
       - CIViC
     knowledge_level: knowledge_assertion
@@ -1709,7 +1706,7 @@ information_resources:
     id: infores:cl
     xref:
       - fairsharing:FAIRsharing.j9y503
-      - https://github.com/NCATSTranslator/Translator-All/wiki/CL
+      - https://obophenotype.github.io/cell-ontology/
     synonym:
       - CL
     knowledge_level: knowledge_assertion
@@ -1739,7 +1736,7 @@ information_resources:
     name: Clinical Genome Resource (ClinGen)
     id: infores:clingen
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/clingen
+      - https://www.clinicalgenome.org/
     description: >-
       ClinGen is a NIH-funded resource dedicated to building a central resource
       that defines the clinical relevance of genes and variants for use in precision
@@ -1767,7 +1764,7 @@ information_resources:
     id: infores:clinvar
     xref:
       - fairsharing:FAIRsharing.wx5r6f
-      - https://github.com/NCATSTranslator/Translator-All/wiki/clinvar
+      - https://www.ncbi.nlm.nih.gov/clinvar/
     description: >-
       ClinVar is a freely accessible, public archive of reports of the
       relationships among human variations and phenotypes, with supporting evidence.
@@ -1806,7 +1803,7 @@ information_resources:
     name: Columbia Open Health Data (COHD)
     id: infores:cohd
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/COHD-KP
+      - https://github.com/WengLab-InformaticsResearch/cohd_api
     description: >-
       The Columbia Open Health Data (COHD) API provides access to counts
       and frequencies (i.e., EHR prevalence) of conditions, procedures, drug exposures,
@@ -1867,7 +1864,7 @@ information_resources:
     name: Columbia Open Health Data (COHD) for COVID-19 Research
     id: infores:cohd-covid
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/COHD-KP
+      - https://github.com/WengLab-InformaticsResearch/cohd_api
     description: >-
       The Columbia Open Health Data (COHD) for COVID-19 Research API provides
       access to counts and frequencies (i.e., EHR visit prevalence) of conditions, procedures,
@@ -1926,7 +1923,7 @@ information_resources:
     name: Columbia Open Health Data for COVID-19 Research API
     id: infores:cohd-covid19-api
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/COHD-KP
+      - https://github.com/WengLab-InformaticsResearch/cohd_api
     synonym:
       - COHD COVID-19
     knowledge_level: knowledge_assertion
@@ -1962,7 +1959,7 @@ information_resources:
     id: infores:complex-portal
     xref:
       - fairsharing:FAIRsharing.wP3t2L
-      - https://github.com/NCATSTranslator/Translator-All/wiki/Complex-Portal
+      - https://www.ebi.ac.uk/complexportal/
     description: >-
       The Complex Portal is a manually curated, encyclopaedic resource of macromolecular
       complexes  from
@@ -1988,7 +1985,7 @@ information_resources:
     name: Connections Hypothesis Provider API
     id: infores:connections-hypothesis
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/Connections-Hypothesis-Provider
+      - https://github.com/di2ag/chp
     description: >-
       A Translator Reasoner API for the Connections Hypothesis Provider
     knowledge_level: prediction
@@ -2031,7 +2028,7 @@ information_resources:
     name: ConsensusPathDB
     id: infores:cpdb
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/cpdb
+      - http://cpdb.molgen.mpg.de/
     synonym:
       - CPDB
     knowledge_level: mixed
@@ -2049,7 +2046,7 @@ information_resources:
     name: Translator knowledge_assertion Query Service
     id: infores:cqs
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/Translator-Curated-Query-Service
+      - https://github.com/TranslatorSRI/CQS
     synonym:
       - CQS
     description: >-
@@ -2084,7 +2081,7 @@ information_resources:
     id: infores:ctd
     xref:
       - fairsharing:FAIRsharing.h3tjtr
-      - https://github.com/NCATSTranslator/Translator-All/wiki/CTD
+      - https://ctdbase.org/
     synonym:
       - CTDbase
     description: >-
@@ -2138,7 +2135,7 @@ information_resources:
     name: Single Nucleotide Polymorphism Database
     id: infores:dbsnp
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/dbsnp
+      - https://www.ncbi.nlm.nih.gov/snp/
     synonym:
       - dbSNP
     knowledge_level: knowledge_assertion
@@ -2161,7 +2158,7 @@ information_resources:
     name: DDinter
     id: infores:ddinter
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/ddinter
+      - http://ddinter.scbdd.com/
     description: >-
       DDInter is an open-access database specific to drug-drug interactions
       with annotations including mechanism description, risk levels, management strategies,
@@ -2208,7 +2205,7 @@ information_resources:
     name: Drug Gene Interaction Database
     id: infores:dgidb
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/dgidb
+      - https://www.dgidb.org/
     synonym:
       - DGIdb
     description: >-
@@ -2252,7 +2249,7 @@ information_resources:
     id: infores:disease-ontology
     xref:
       - fairsharing:FAIRsharing.8b6wfq
-      - https://github.com/NCATSTranslator/Translator-All/wiki/disease-ontology
+      - https://disease-ontology.org/
     synonym:
       - DO
     knowledge_level: knowledge_assertion
@@ -2264,7 +2261,7 @@ information_resources:
     name: DISEASES
     id: infores:diseases
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/Diseases
+      - https://diseases.jensenlab.org/
     description: >-
       DISEASES is a weekly updated web resource that integrates evidence on disease-gene
       associations  from
@@ -2282,7 +2279,7 @@ information_resources:
     id: infores:disgenet
     xref:
       - fairsharing:FAIRsharing.fssydn
-      - https://github.com/NCATSTranslator/Translator-All/wiki/DisGeNET
+      - https://www.disgenet.org/
     knowledge_level: prediction
     agent_type: automated_agent
     consumed_by:
@@ -2319,7 +2316,7 @@ information_resources:
     name: Database of Cancer Mutations
     id: infores:docm
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/docm
+      - http://www.docm.info/
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - status: released
@@ -2365,7 +2362,7 @@ information_resources:
     name: Drug Repurposing Hub
     id: infores:drug-repurposing-hub
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/Drug-Repurposing-Hub
+      - https://www.broadinstitute.org/drug-repurposing-hub
     description: >-
       knowledge_assertion and annotated collection of FDA-approved drugs, clinical
       trial drugs, and pre-clinical tool compounds with a companion information resource
@@ -2378,7 +2375,7 @@ information_resources:
     id: infores:drugbank
     xref:
       - fairsharing:FAIRsharing.353yat
-      - https://github.com/NCATSTranslator/Translator-All/wiki/DrugBank
+      - https://go.drugbank.com/
     synonym:
       - Drugbank
     description: >-
@@ -2398,7 +2395,7 @@ information_resources:
     id: infores:drugcentral
     xref:
       - fairsharing:FAIRsharing.3me82d
-      - https://github.com/NCATSTranslator/Translator-All/wiki/DrugCentral
+      - https://drugcentral.org
     synonym:
       - Drugcentral
     description: >-
@@ -2416,7 +2413,7 @@ information_resources:
     name: DrugMatrix
     id: infores:drugmatrix
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/DrugMatrix
+      - https://ntp.niehs.nih.gov/data/drugmatrix
     description: >-
       DrugMatrix was a large-scale toxicogenomics database and analysis tool.
       The resource does not seem to be directly accessible now, but
@@ -2441,7 +2438,7 @@ information_resources:
     name: Distributed Structure-Searchable Toxicity (DSSTox) Database
     id: infores:dsstoxdb
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/Automat
+      - https://www.epa.gov/comptox-tools/distributed-structure-searchable-toxicity-dsstox-database
     knowledge_level: not_provided
     agent_type: not_provided
     consumed_by:
@@ -2469,7 +2466,7 @@ information_resources:
     name: European Bioinformatics Institute Gene to Phenotype Resource
     id: infores:ebi-gene2phenotype
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/ebi-gene2phenotype
+      - https://www.ebi.ac.uk/gene2phenotype
     description: >-
       This entry has been deprecated. Please use infores:gene2phenotype instead.
     knowledge_level: knowledge_assertion
@@ -2538,7 +2535,7 @@ information_resources:
     id: infores:efo
     xref:
       - fairsharing:FAIRsharing.1gr4tz
-      - https://github.com/NCATSTranslator/Translator-All/wiki/EFO
+      - https://www.ebi.ac.uk/efo/
     synonym:
       - EFO
     knowledge_level: knowledge_assertion
@@ -2615,7 +2612,7 @@ information_resources:
     name: 'eRAM: encyclopedia of rare disease annotations for precision medicine'
     id: infores:eram
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/eRAM
+      - http://www.unimd.org/eram/
     synonym:
       - eRAM
     description: >-
@@ -2633,7 +2630,7 @@ information_resources:
     name: Explanatory Agent API
     id: infores:explanatory-agent
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/Explanatory-Agent
+      - https://github.com/NCATSTranslator/Explanatory-Agent
     description: >-
       A Translator Reasoner API for the Explanatory Agent
     knowledge_level: prediction
@@ -2642,7 +2639,7 @@ information_resources:
     name: FDA Adverse Event Reporting System
     id: infores:faers
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/FAERS
+      - https://www.fda.gov/drugs/questions-and-answers-fdas-adverse-event-reporting-system-faers/fda-adverse-event-reporting-system-faers-latest-quarterly-data-files
     description: >-
       The FDA Adverse Event Reporting System (FAERS) is a database that contains information
       on adverse event and medication error reports submitted to FDA.
@@ -2689,7 +2686,7 @@ information_resources:
     name: FDA Orphan Drug Project designation database
     id: infores:fda-orphan-drug-db
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/FDA-Orphan-Drug
+      - https://www.accessdata.fda.gov/scripts/opdlisting/oopd/
     description: >-
       Resource for searching FDA Orphan Drug Designations and Approvals
     knowledge_level: knowledge_assertion
@@ -2762,7 +2759,7 @@ information_resources:
     name: Food Database
     id: infores:foodb
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/FooDB
+      - https://foodb.ca
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     consumed_by:
@@ -2771,7 +2768,7 @@ information_resources:
     name: FoodData Central
     id: infores:fooddata-central
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/FoodData-Central
+      - https://fdc.nal.usda.gov
     description: >-
       FoodData Central is an integrated data system that provides expanded nutrient profile
       data  and links to related agricultural and experimental research.
@@ -2875,7 +2872,6 @@ information_resources:
     name: Gene2Phenotype
     id: infores:gene2phenotype
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/gene2phenotype
       - https://www.ebi.ac.uk/gene2phenotype
       - https://www.ebi.ac.uk/gene2phenotype/about/project
     synonym:
@@ -2930,7 +2926,7 @@ information_resources:
     name: Genetics KP
     id: infores:genetics-data-provider
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/Genetics-Knowledge-Provider
+      - https://github.com/broadinstitute/genetics-kp-dev
     description: >-
       TRAPI 1.1 endpoint for the NCATS Biomedical Translator Genetics Data KP
     knowledge_level: knowledge_assertion
@@ -2965,7 +2961,7 @@ information_resources:
     id: infores:go
     xref:
       - fairsharing:FAIRsharing.6xq0ee
-      - https://github.com/NCATSTranslator/Translator-All/wiki/go
+      - https://geneontology.org
     knowledge_level: knowledge_assertion
     agent_type: manual_agent
     consumed_by:
@@ -2978,7 +2974,7 @@ information_resources:
     name: Gene Ontology Causal Activity Model Annotations
     id: infores:go-cam
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/GO-CAM
+      - https://geneontology.org/docs/gocam-overview/
     synonym:
       - GO-CAM
     knowledge_level: knowledge_assertion
@@ -2997,7 +2993,7 @@ information_resources:
     name: Gene Ontology Plus
     id: infores:go-plus
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/GO-Plus
+      - https://geneontology.org/docs/download-ontology/
     synonym:
       - GO-Plus
     knowledge_level: knowledge_assertion
@@ -3040,7 +3036,7 @@ information_resources:
     name: 'Genotype-Tissue Expression '
     id: infores:gtex
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/GTEx
+      - https://gtexportal.org
     synonym:
       - GTEx
     knowledge_level: knowledge_assertion
@@ -3051,7 +3047,7 @@ information_resources:
     name: Guide to Pharmacology Database
     id: infores:gtopdb
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/GtoPdb
+      - https://www.guidetopharmacology.org
     description: >-
       An expert-knowledge_assertion resource of ligand-activity-target relationships,
       the majority of which come from high-quality pharmacological and medicinal chemistry
@@ -3064,7 +3060,7 @@ information_resources:
     name: Genome-to-Treatment
     id: infores:gtrx
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/gtrx
+      - https://gtrx.radygenomiclab.com
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     consumed_by:
@@ -3073,7 +3069,7 @@ information_resources:
     name: GWAS Catalog
     id: infores:gwas-catalog
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/GWAS-Catalog
+      - https://www.ebi.ac.uk/gwas/
     synonym:
       - GWAS
     knowledge_level: statistical_association
@@ -3082,7 +3078,7 @@ information_resources:
     name: Healthcare Common Procedure Coding System (from UMLS)
     id: infores:hcp-codes-umls
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/HCPCS-Version-of-Current-Procedural-Terminology
+      - https://www.cms.gov/medicare/coding-billing/healthcare-common-procedure-system
     knowledge_level: knowledge_assertion
     agent_type: manual_agent
     consumed_by:
@@ -3100,7 +3096,7 @@ information_resources:
     name: Hetionet
     id: infores:hetionet
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/Hetionet
+      - https://het.io
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - status: released
@@ -3108,7 +3104,7 @@ information_resources:
     id: infores:hgnc
     xref:
       - fairsharing:FAIRsharing.29we0s
-      - https://github.com/NCATSTranslator/Translator-All/wiki/HGNC
+      - https://www.genenames.org
     synonym:
       - HGNC
     knowledge_level: knowledge_assertion
@@ -3129,7 +3125,7 @@ information_resources:
     name: 'Human Metabolome Database '
     id: infores:hmdb
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/HMDB
+      - https://hmdb.ca
     synonym:
       - HMDB
     description: >-
@@ -3183,7 +3179,7 @@ information_resources:
     id: infores:hpo
     xref:
       - fairsharing:FAIRsharing.kbtt7f
-      - https://github.com/NCATSTranslator/Translator-All/wiki/HPO
+      - https://hpo.jax.org
     knowledge_level: knowledge_assertion
     agent_type: manual_agent
     consumed_by:
@@ -3195,7 +3191,7 @@ information_resources:
     id: infores:hpo-annotations
     xref:
       - fairsharing:FAIRsharing.kbtt7f
-      - https://github.com/NCATSTranslator/Translator-All/wiki/HPO-Annotations
+      - https://hpo.jax.org
     synonym:
       - HPO Annotations
     knowledge_level: knowledge_assertion
@@ -3220,14 +3216,14 @@ information_resources:
     name: Human Gene Ontology Annotations
     id: infores:human-goa
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/Human-GOA
+      - https://www.ebi.ac.uk/GOA/
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - status: released
     name: The Human Reference Protein Interactome Mapping Project
     id: infores:huri
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/The-Human-Reference-Protein-Interactome
+      - https://interactome-atlas.org/
     synonym:
       - HuRI
     description: >-
@@ -3315,7 +3311,7 @@ information_resources:
     name: ICEES (Integrated Clinical and Environmental Exposures Service)
     id: infores:icees-kg
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/ICEES-KG
+      - https://github.com/NCATS-Tangerine/icees-api
     synonym:
       - KP
     description: >-
@@ -3331,7 +3327,7 @@ information_resources:
     name: integrated Dietary Supplement Knowledge Base
     id: infores:idisk
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/iDISK
+      - https://github.com/jvasilakes/iDISK
     synonym:
       - iDISK
     description: >-
@@ -3354,7 +3350,7 @@ information_resources:
     name: imProving Agent
     id: infores:improving-agent
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/imProving-Agent
+      - https://github.com/suihuanglab/improving-agent
     description: >-
       imProving Agent OpenAPI TRAPI Specification
     knowledge_level: prediction
@@ -3375,7 +3371,7 @@ information_resources:
     id: infores:innatedb
     xref:
       - fairsharing:FAIRsharing.rb2drw
-      - https://github.com/NCATSTranslator/Translator-All/wiki/InnateDB
+      - https://www.innatedb.com/
     description: >-
       InnateDB is a publicly available database of the genes, proteins, experimentally-verified
       interactions  and signaling pathways involved in the innate immune response of humans,
@@ -3402,7 +3398,7 @@ information_resources:
     name: IntAct
     id: infores:intact
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/IntAct
+      - https://www.ebi.ac.uk/intact/
     description: >-
       EMBL-EBI’s core manually curated molecular interaction knowledgebase using PSI-MI
       standards;
@@ -3467,7 +3463,7 @@ information_resources:
     name: iPTMnet
     id: infores:iptmnet
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/iPTMnet
+      - https://research.bioinformatics.udel.edu/iptmnet/
     description: >-
       iPTMnet is a bioinformatics resource for integrated understanding of protein post-translational
       modifications (PTMs) in systems biology context. It connects multiple disparate bioinformatics
@@ -3489,7 +3485,7 @@ information_resources:
     name: Multiomics EHRMLA Clinical Connections API
     id: infores:isb-EHRMLA-clinicalconnections
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/Multiomics-EHRMLA-Clinical-Connections-KP
+      - https://github.com/multiomicsKP
     description: >-
       Documentation of the Multiomics Electronic-Health-Record (EHR) Machine Learning Analysis
       (MLA) Clinical Connections query web services.
@@ -3499,7 +3495,7 @@ information_resources:
     name: Multiomics EHRMLA May Treat API
     id: infores:isb-EHRMLA-data
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/Multiomics-EHRMLA-May-Treat-KP
+      - https://github.com/multiomicsKP
     description: >-
       Documentation of the Multiomics Electronic-Health-Record (EHR) Machine Learning Analysis
       (MLA) May Treat query web services.
@@ -3545,7 +3541,7 @@ information_resources:
     name: KinAce
     id: infores:kinace
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/KinAce
+      - https://kinace.kinametrix.com/
     description: >-
       https://kinace.kinametrix.com/#section-about
       The KinAce web portal aggregates and visualizes the network of interactions between
@@ -3569,7 +3565,7 @@ information_resources:
     name: Translator Knowledge Collaboratory API
     id: infores:knowledge-collaboratory
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/Knowledge-Collaboratory-KP
+      - https://github.com/MaastrichtU-IDS/knowledge-collaboratory
     description: >-
       Translator Reasoner API for the Knowledge Collaboratory,hosted on the [Nanopublications
       network](https://nanopub.net/), for annotated drug  indications or any other BioLink-compliant
@@ -3595,7 +3591,7 @@ information_resources:
     name: Library of Integrated Network-Based Cellular Signatures
     id: infores:lincs
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/LINCS
+      - https://lincsproject.org/
     synonym:
       - LINCS
     knowledge_level: knowledge_assertion
@@ -3635,7 +3631,7 @@ information_resources:
     name: LOINC (from UMLS)
     id: infores:loinc-umls
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/LOINC-from-UMLS
+      - https://loinc.org/
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     consumed_by:
@@ -3729,7 +3725,7 @@ information_resources:
     name: Medical Subject Headings Thesaurus
     id: infores:mesh
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/MeSH
+      - https://www.nlm.nih.gov/mesh/meshhome.html
     synonym:
       - MeSH
     knowledge_level: knowledge_assertion
@@ -3749,7 +3745,7 @@ information_resources:
     name: Mouse Genome Informatics
     id: infores:mgi
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/mgi
+      - https://www.informatics.jax.org/
     synonym:
       - MGI
     knowledge_level: knowledge_assertion
@@ -3811,7 +3807,7 @@ information_resources:
     name: Molecular Data Provider for NCATS Biomedical Translator Reasoners
     id: infores:molepro
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/Molecular-Data-Provider
+      - https://github.com/broadinstitute/molecular-data-provider
     description: >-
       Molecular Data Provider for NCATS Biomedical Translator Reasoners
     knowledge_level: knowledge_assertion
@@ -3875,7 +3871,7 @@ information_resources:
     id: infores:monarchinitiative
     xref:
       - fairsharing:FAIRsharing.2c5132
-      - https://github.com/NCATSTranslator/Translator-All/wiki/Monarch-Initiative
+      - https://monarchinitiative.org/
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     consumed_by:
@@ -3884,7 +3880,7 @@ information_resources:
     name: MONDO Disease Ontology
     id: infores:mondo
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/mondo
+      - https://mondo.monarchinitiative.org/
     synonym:
       - MONDO
     knowledge_level: knowledge_assertion
@@ -3959,8 +3955,6 @@ information_resources:
   - status: released
     name: Multiomics ClinicalTrials KP API
     id: infores:multiomics-clinicaltrials
-    xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/Clinical-Trials-KP
     knowledge_level: knowledge_assertion
     agent_type: manual_agent
     consumes:
@@ -3974,8 +3968,6 @@ information_resources:
   - status: released
     name: Multiomics Drug Approvals KP API
     id: infores:multiomics-drugapprovals
-    xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/Multiomics-Drug-Approvals-KP
     knowledge_level: knowledge_assertion
     agent_type: manual_agent
     consumes:
@@ -3991,7 +3983,7 @@ information_resources:
     name: Multiomics Microbiome KP API
     id: infores:multiomics-microbiome
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/Microbiome-KP
+      - https://github.com/multiomicsKP/microbiome_kp
     knowledge_level: knowledge_assertion
     agent_type: manual_validation_of_automated_agent
     consumes:
@@ -4004,7 +3996,7 @@ information_resources:
     name: Multiomics KP API
     id: infores:multiomics-multiomics
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/Multiomics-KP
+      - https://github.com/multiomicsKP/multiomics_kp
     knowledge_level: knowledge_assertion
     agent_type: manual_validation_of_automated_agent
     consumes:
@@ -4095,7 +4087,7 @@ information_resources:
     name: MyGeneset.info API
     id: infores:mygeneset-info
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/MyGeneset
+      - https://mygeneset.info/
     description: >-
       MyGeneset allows scientists to conveniently collect, save, and share sets of genes  from
       thousands of different species.
@@ -4135,7 +4127,7 @@ information_resources:
     id: infores:nbo
     xref:
       - fairsharing:FAIRsharing.pktgc6
-      - https://github.com/NCATSTranslator/Translator-All/wiki/NBO
+      - https://obofoundry.org/ontology/nbo.html
     synonym:
       - NBO
     knowledge_level: knowledge_assertion
@@ -4143,11 +4135,11 @@ information_resources:
     consumed_by:
       - infores:rtx-kg2
   - status: released
-    name: National Center for Advancing Translational Science Biomedical Data Translator 
+    name: National Center for Advancing Translational Science Biomedical Data Translator
       Autonomous Relay System
     id: infores:ncats-ars
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/Autonomous-Relay-System-(ARS)
+      - https://github.com/NCATSTranslator/Relay
     synonym:
       - NCATS Translator Autonomous Relay System Translator  Autonomous Relay System
       - NCATS Translator ARS
@@ -4157,7 +4149,7 @@ information_resources:
     name: National Center for Biotechnology Information Gene
     id: infores:ncbi-gene
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/ncbi-gene
+      - https://www.ncbi.nlm.nih.gov/gene
     synonym:
       - NGBI Gene
       - ncbigene
@@ -4189,7 +4181,7 @@ information_resources:
     consumed_by:
       - infores:rtx-kg2
   - status: deprecated
-    name: North Carolina Department of Environmental Quality Concentrated Animal Feeding 
+    name: North Carolina Department of Environmental Quality Concentrated Animal Feeding
       Operations Exposures Data
     id: infores:ncdeq-cafo-exposures-data
     knowledge_level: knowledge_assertion
@@ -4212,7 +4204,7 @@ information_resources:
     name: National Cancer Institute Thesaurus
     id: infores:ncit
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/NCIT
+      - https://ncithesaurus.nci.nih.gov/
     synonym:
       - NCT Thesaurus
       - NCIt
@@ -4240,7 +4232,7 @@ information_resources:
     name: NDEx
     id: infores:ndex
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/NDEx
+      - https://www.ndexbio.org/
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - status: released
@@ -4256,7 +4248,7 @@ information_resources:
     name: NEXO Align Ontology
     id: infores:nexo-align
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/NEXO-Align-Ontology
+      - http://nexo.ucsd.edu/
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - status: deprecated
@@ -4286,7 +4278,7 @@ information_resources:
     name: nSides
     id: infores:nsides
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/nSides
+      - https://nsides.io/
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - status: released
@@ -4360,7 +4352,7 @@ information_resources:
     name: Online Mendelian Inheritance in Man (OMIM)
     id: infores:omim
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/OMIM
+      - https://www.omim.org/
     synonym:
       - OMIM
     knowledge_level: knowledge_assertion
@@ -4372,7 +4364,7 @@ information_resources:
     name: OmniCorp
     id: infores:omnicorp
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/OmniCorp
+      - https://github.com/NCATS-Gamma/omnicorp
     synonym:
       - OmniCorp
     knowledge_level: knowledge_assertion
@@ -4390,7 +4382,7 @@ information_resources:
     name: OMOP (OHDSI)
     id: infores:omop-ohdsi
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/Automat
+      - https://www.ohdsi.org/data-standardization/
     knowledge_level: not_provided
     agent_type: not_provided
     consumed_by:
@@ -4427,7 +4419,7 @@ information_resources:
     name: Open Health Data @ Carolina
     id: infores:openhealthdata-carolina
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/Open-Health-Data-at-Carolina
+      - https://github.com/WengLab-InformaticsResearch/cohd_api
     synonym:
       - OHD@Carolina, Open Health Data @ Carolina
     description: >-
@@ -4453,7 +4445,7 @@ information_resources:
     name: OpenPredict API
     id: infores:openpredict
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/OpenPredict-KP
+      - https://github.com/MaastrichtU-IDS/translator-openpredict
     knowledge_level: prediction
     agent_type: not_provided
     consumes:
@@ -4467,7 +4459,7 @@ information_resources:
     name: Orphanet Rare Disease Ontology
     id: infores:ordo
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/Orphanet-Rare-Disease-Ontology
+      - https://www.orphadata.com/ordo/
     synonym:
       - ORDO
     knowledge_level: knowledge_assertion
@@ -4486,7 +4478,7 @@ information_resources:
     name: OWLSim Ontology Based Profile Matching
     id: infores:owlsim
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/OWLSim
+      - https://github.com/monarch-initiative/owlsim-v3
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - status: released
@@ -4502,7 +4494,7 @@ information_resources:
     name: Panther Classification System
     id: infores:panther
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/PANTHER
+      - https://www.pantherdb.org/
     synonym:
       - Panther
     knowledge_level: other
@@ -4528,7 +4520,7 @@ information_resources:
     name: PathWhiz
     id: infores:pathwhiz
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/PathWhiz
+      - https://smpdb.ca/pathwhiz
     knowledge_level: prediction
     agent_type: automated_agent
     consumed_by:
@@ -4537,7 +4529,7 @@ information_resources:
     name: Phenotype and Trait Ontology
     id: infores:pato
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/PATO
+      - https://github.com/pato-ontology/pato
     synonym:
       - PATO
     knowledge_level: knowledge_assertion
@@ -4566,7 +4558,7 @@ information_resources:
     name: Psychoactive Drug Screening Program
     id: infores:pdsp
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/PDSP
+      - https://pdsp.unc.edu/
     description: >-
       PDSP is the NIMH's Psychoactive Drug Screening Program, which provides screening of
       novel psychoactive compounds for pharmacological and functional activity at cloned
@@ -4578,7 +4570,6 @@ information_resources:
     name: PDSP Ki Database
     id: infores:pdsp-ki
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/PDSP-Ki
       - https://pdsp.unc.edu/kidb2/kidb/web/
     synonym:
       - KiDB
@@ -4613,7 +4604,7 @@ information_resources:
     name: PFOCR
     id: infores:pfocr
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/pfocr
+      - https://pfocr.wikipathways.org/
     knowledge_level: prediction
     agent_type: not_provided
     consumed_by:
@@ -4633,7 +4624,7 @@ information_resources:
     name: Pharmacotherapy Database
     id: infores:pharmacotherapydb
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/Pharmacotherapy-Database
+      - https://github.com/dhimmel/indications
     synonym:
       - PharmacotherapyDB
     knowledge_level: knowledge_assertion
@@ -4655,7 +4646,7 @@ information_resources:
     id: infores:pharos
     xref:
       - fairsharing:FAIRsharing.52d6ae
-      - https://github.com/NCATSTranslator/Translator-All/wiki/Pharos
+      - https://pharos.nih.gov/
     description: >-
       focusing on three of the most commonly drug-targeted protein families:
       G-protein-coupled receptors (GPCRs, Ion channels (ICs), Kinases
@@ -4667,7 +4658,7 @@ information_resources:
     name: Phenomics Integrated Ontology
     id: infores:phenio
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/phenio
+      - https://github.com/monarch-initiative/phenio
     synonym:
       - PHENIO
     description: >-
@@ -4719,7 +4710,7 @@ information_resources:
     name: PrimeKG, Precision Medicine Knowledge Graph
     id: infores:primekg
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/PrimeKG
+      - https://github.com/mims-harvard/PrimeKG
     synonym:
       - PrimeKG
     knowledge_level: knowledge_assertion
@@ -4730,7 +4721,7 @@ information_resources:
     name: Probe Miner
     id: infores:probe-miner
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/Probe-Miner
+      - https://probeminer.icr.ac.uk/
     knowledge_level: statistical_association
     agent_type: not_provided
     consumed_by:
@@ -4739,7 +4730,7 @@ information_resources:
     name: Providence St. Joseph EHR Data
     id: infores:providence-st-joseph-ehr
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/EHR-KP-Providence-Health-Systems-and-Affiliates-Data
+      - https://www.providence.org/about/initiatives/institute-for-systems-biology
     description: >-
       A partnership with Providence/Swedish Health Services and Institute
       for Systems Biology allows analysis of 26 million EHRs from patients in seven
@@ -4812,7 +4803,6 @@ information_resources:
     name: Pubtator
     id: infores:pubtator
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/PubTator
       - https://www.ncbi.nlm.nih.gov/research/pubtator3/
     description: >-
       PubTator is a biomedical literature resource using state-of-the-art AI
@@ -4834,7 +4824,7 @@ information_resources:
     name: RaMPDB
     id: infores:rampdb
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/RaMPDB
+      - https://rampdb.nih.gov/
     description: >-
       RaMP-DB (Relational database of Metabolomic Pathways) is a multi-sourced integrated
       database
@@ -4853,7 +4843,7 @@ information_resources:
     name: NCATS RARe-SOURCE
     id: infores:rare-source
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/rare-source
+      - https://raresource.nih.gov/
     description: >-
       Integrated Bioinformatics Resource for Rare Diseases
     knowledge_level: knowledge_assertion
@@ -4865,7 +4855,7 @@ information_resources:
     id: infores:reactome
     xref:
       - fairsharing:FAIRsharing.tf6kj8
-      - https://github.com/NCATSTranslator/Translator-All/wiki/reactome
+      - https://reactome.org/
     knowledge_level: knowledge_assertion
     agent_type: manual_agent
     consumed_by:
@@ -4890,7 +4880,7 @@ information_resources:
     name: Richards Effector Gene List
     id: infores:regl
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/Richards-Effector-Gene-List
+      - https://hugeamp.org/effectorgenes.html
     description: >-
       An effector index to predict target genes at GWAS loci
     knowledge_level: knowledge_assertion
@@ -4908,7 +4898,7 @@ information_resources:
     name: Drug Repositioning Database
     id: infores:repodb
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/repoDB
+      - https://github.com/adam-sam-brown/repoDB
     synonym:
       - repoDB
     knowledge_level: knowledge_assertion
@@ -4947,7 +4937,7 @@ information_resources:
     id: infores:rhea
     xref:
       - fairsharing:FAIRsharing.pn1sr5
-      - https://github.com/NCATSTranslator/Translator-All/wiki/rhea
+      - https://www.rhea-db.org/
     description: >-
       https://www.rhea-db.org/
     knowledge_level: knowledge_assertion
@@ -4981,7 +4971,7 @@ information_resources:
     name: ROBOKOP
     id: infores:robokop
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/ARAGORN#ROBOKOP
+      - https://robokop.renci.org/
     synonym:
       - Robokop
     description: >-
@@ -4992,13 +4982,14 @@ information_resources:
     name: ROBOKOP KG
     id: infores:robokop-kg
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/ROBOKOP-KG
+      - https://robokop.renci.org/
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     consumed_by:
       - infores:unsecret-agent
   - status: deprecated
-    name: ROBOKOP (Reasoning Over Biomedical Objects linked in Knowledge-Oriented Pathway)
+    name: ROBOKOP (Reasoning Over Biomedical Objects linked in Knowledge-Oriented 
+      Pathway)
     id: infores:robokop-kp
     xref:
       - http://robokop.renci.org
@@ -5017,7 +5008,7 @@ information_resources:
     name: RTX KG2
     id: infores:rtx-kg2
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/RTX-KG2
+      - https://github.com/RTXteam/RTX-KG2
     synonym:
       - Rtx-kg2
     description: >-
@@ -5113,7 +5104,7 @@ information_resources:
     id: infores:rxnorm
     xref:
       - fairsharing:FAIRsharing.36pf8q
-      - https://github.com/NCATSTranslator/Translator-All/wiki/RxNORM
+      - https://www.nlm.nih.gov/research/umls/rxnorm/index.html
     description: >-
       normalized names for clinical drugs and links its names to many of
       the drug vocabularies commonly used in pharmacy management and drug interaction
@@ -5143,7 +5134,7 @@ information_resources:
     name: Semantic Medline Database
     id: infores:semmeddb
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/SemMedDB
+      - https://lhncbc.nlm.nih.gov/ii/tools/SemRep_SemMedDB_SKR/SemMed.html
     knowledge_level: prediction
     agent_type: text_mining_agent
     consumed_by:
@@ -5160,7 +5151,7 @@ information_resources:
     name: Service Provider TRAPI endpoints
     id: infores:service-provider-trapi
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/Service-Provider-TRAPI
+      - https://github.com/biothings/biothings_explorer
     synonym:
       - service provider
     knowledge_level: other
@@ -5302,7 +5293,7 @@ information_resources:
     name: SIDER
     id: infores:sider
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/SIDER
+      - https://sideeffects.embl.de/
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     consumed_by:
@@ -5321,7 +5312,7 @@ information_resources:
     name: SmartAPI API
     id: infores:smart-api
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/Smart-API-Registry
+      - https://smart-api.info
     description: >-
       This is the API provided from SmartAPI, https://smart-api.info, application.
     knowledge_level: knowledge_assertion
@@ -5339,7 +5330,7 @@ information_resources:
     name: Small Molecule Pathway Database (SMPDB)
     id: infores:smpdb
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/SMPDB
+      - https://smpdb.ca/
     synonym:
       - SMPDB
     knowledge_level: knowledge_assertion
@@ -5383,7 +5374,7 @@ information_resources:
     name: SPOKE KP
     id: infores:spoke
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/SPOKE-KP
+      - https://spoke.ucsf.edu/
     synonym:
       - Spoke
     description: >-
@@ -5422,7 +5413,7 @@ information_resources:
     name: SRI Answer Appraiser
     id: infores:sri-answer-appraiser
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/SRI-Answer-Appraiser
+      - https://github.com/TranslatorSRI/answer-appraiser
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - status: deprecated
@@ -5438,7 +5429,7 @@ information_resources:
     name: Name Resolver
     id: infores:sri-name-resolver
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/Name-Resolution-Service
+      - https://github.com/TranslatorSRI/NameResolution
     description: >-
       Service to resolve Translator concept names.
     knowledge_level: knowledge_assertion
@@ -5447,7 +5438,7 @@ information_resources:
     name: Node Normalization
     id: infores:sri-node-normalizer
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/Node-Normalizer
+      - https://github.com/TranslatorSRI/NodeNormalization
     description: >-
       Node normalization takes a CURIE, and returns resolved alias and
       the canonical identifier of a node.
@@ -5459,7 +5450,7 @@ information_resources:
     name: Ontology-KP API
     id: infores:sri-ontology
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/SRI-Ontology-Service
+      - https://github.com/TranslatorSRI/Ontology-KP
     description: >-
       TRAPI interface to integrated ontology knowledgebase
     knowledge_level: knowledge_assertion
@@ -5468,7 +5459,7 @@ information_resources:
     name: SRI Reference Knowledge Graph API
     id: infores:sri-reference-kg
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/SRI-Reference-Knowledge-Graph
+      - https://github.com/Knowledge-Graph-Hub/sri-reference-kg
     description: >-
       The SRI reference KG aims to aggregate knowledge sources across translator
       using KGX.  The initial graph contains data files provided by the Monarch Initiative
@@ -5522,7 +5513,7 @@ information_resources:
     name: Search Tool for the Retrieval of Interacting Genes/Proteins
     id: infores:string
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/STRING
+      - https://string-db.org/
     synonym:
       - STRING
     knowledge_level: knowledge_assertion
@@ -5533,7 +5524,7 @@ information_resources:
     name: SuppKG
     id: infores:suppkg
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/SuppKG
+      - https://github.com/zhang-informatics/SemRep_DS
     description: >-
       SuppKG contains relations between dietary supplements and other entities, such as
       diseases.  More
@@ -5575,7 +5566,7 @@ information_resources:
     name: Text Mining COOCCURRENCE API
     id: infores:text-mining-provider-cooccurrence
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/Literature-Cooccurrence-KP
+      - https://github.com/UCDenver-ccp/text-mining-provider-trapi
     description: >-
       API serving a knowledge graph comprised of pairs of concepts that
       have been found to co-occur in the scientific literature. Here, cooccurrence of
@@ -5593,7 +5584,7 @@ information_resources:
     name: Text Mining Targeted Association API
     id: infores:text-mining-provider-targeted
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/Text%E2%80%90mined-Assertion-KP
+      - https://github.com/UCDenver-ccp/text-mining-provider-trapi
     description: >-
       API serving explicitly targeted Biolink Associations extracted from
       sentences in the scientific literature. Here, targeted refers to the fact that
@@ -5611,7 +5602,7 @@ information_resources:
     name: Text Mining KP
     id: infores:textmining-kp
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/Text%E2%80%90mined-Assertion-KP
+      - https://github.com/UCDenver-ccp/text-mining-provider-trapi
     knowledge_level: not_provided
     agent_type: text_mining_agent
   - status: released
@@ -5619,7 +5610,7 @@ information_resources:
     id: infores:tiga
     xref:
       - fairsharing:FAIRsharing.beffb7
-      - https://github.com/NCATSTranslator/Translator-All/wiki/TIGA
+      - https://unmtid-shinyapps.net/shiny/tiga/
     synonym:
       - TIGA
     description: >-
@@ -5632,7 +5623,7 @@ information_resources:
     id: infores:tissues
     xref:
       - fairsharing:FAIRsharing.yXPvpU
-      - https://github.com/NCATSTranslator/Translator-All/wiki/TISSUES
+      - https://tissues.jensenlab.org/
     description: >-
       TISSUES is a weekly updated web resource that integrates evidence on tissue expression  from
       manually curated literature, proteomics and transcriptomics screens, and automatic  text
@@ -5646,7 +5637,7 @@ information_resources:
     name: Tissue Expression Database
     id: infores:tissues-expression-db
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/Tissue-Expression-Database
+      - https://tissues.jensenlab.org/
     synonym:
       - TED
     knowledge_level: knowledge_assertion
@@ -5655,7 +5646,7 @@ information_resources:
     name: NHLBI Trans-Omics for Precision Medicine
     id: infores:topmed
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/NHLBI-Trans-Omics-for-Precision-Medicine
+      - https://topmed.nhlbi.nih.gov/
     synonym:
       - TOPMed
     knowledge_level: knowledge_assertion
@@ -5664,7 +5655,7 @@ information_resources:
     name: Therapeutic Target Database (TTD)
     id: infores:ttd
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/TTD
+      - https://idrblab.net/ttd/
     synonym:
       - TTD
     description: >-
@@ -5692,7 +5683,7 @@ information_resources:
     id: infores:uberon
     xref:
       - fairsharing:FAIRsharing.4c0b6b
-      - https://github.com/NCATSTranslator/Translator-All/wiki/Uberon
+      - https://obophenotype.github.io/uberon/
     synonym:
       - Uberon
     knowledge_level: knowledge_assertion
@@ -5731,7 +5722,7 @@ information_resources:
     name: UniChem
     id: infores:unichem
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/UniChem
+      - https://www.ebi.ac.uk/unichem/
     synonym:
       - unichem
     knowledge_level: logical_entailment
@@ -5750,7 +5741,7 @@ information_resources:
     id: infores:uniprot
     xref:
       - fairsharing:FAIRsharing.s1ne3g
-      - https://github.com/NCATSTranslator/Translator-All/wiki/UniProt
+      - https://www.uniprot.org/
     synonym:
       - UniProt
     knowledge_level: knowledge_assertion
@@ -5772,7 +5763,7 @@ information_resources:
     name: Unsecret Agent OpenAPI for NCATS Biomedical Translator Reasoners
     id: infores:unsecret-agent
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/UnSecret-Agent
+      - https://github.com/webyrd/mediKanren
     description: >-
       OpenAPI for NCATS Biomedical Translator Reasoners
     knowledge_level: prediction
@@ -5830,7 +5821,8 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - status: deprecated
-    name: United States Environmental Protection Agency Airborne Pollutant Exposures Data
+    name: United States Environmental Protection Agency Airborne Pollutant Exposures 
+      Data
     id: infores:us-epa-airborne-pollutant-exposures-data
     knowledge_level: knowledge_assertion
     agent_type: not_provided
@@ -5838,7 +5830,7 @@ information_resources:
     name: Veterans Association National Drug File (VANDF) (from UMLS)
     id: infores:vandf-umls
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/VANDF
+      - https://www.nlm.nih.gov/research/umls/sourcereleasedocs/current/VANDF/
     knowledge_level: knowledge_assertion
     agent_type: manual_agent
     consumed_by:
@@ -5927,7 +5919,7 @@ information_resources:
     id: infores:wikipathways
     xref:
       - fairsharing:FAIRsharing.1x53qk
-      - https://github.com/NCATSTranslator/Translator-All/wiki/WikiPathways
+      - https://www.wikipathways.org/
     description: >-
       WikiPathways is an open science platform for biological pathways contributed, updated,
       and used by the research community.
@@ -5937,7 +5929,7 @@ information_resources:
     name: World of Molecular Bioactivity - Pharmacokinetics (WOMBAT-PK)
     id: infores:wombat-pk
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/WOMBAT-PK
+      - https://drugcentral.org/
     description: >-
       The WOrld of Molecular BioAcTivity - PharmacoKinetics (WOMBAT-PK) contained clinical
       pharmacokinetics data curated from literature. The resource does not seem to be directly
@@ -5949,7 +5941,7 @@ information_resources:
     name: Translator Workflow Runner
     id: infores:workflow-runner
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/SRI-Workflow-Runner
+      - https://github.com/NCATSTranslator/workflow-runner
     description: >-
       Translator general purpose workflow runner
     knowledge_level: knowledge_assertion
