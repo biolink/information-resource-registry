@@ -2366,6 +2366,7 @@ information_resources:
     id: infores:drug-repurposing-hub
     xref:
       - https://github.com/NCATSTranslator/Translator-All/wiki/Drug-Repurposing-Hub
+      - https://repo-hub.broadinstitute.org/repurposing
     description: >-
       knowledge_assertion and annotated collection of FDA-approved drugs, clinical
       trial drugs, and pre-clinical tool compounds with a companion information resource
