@@ -1760,6 +1760,22 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - status: released
+    name: ClinPGx
+    id: infores:clinpgx
+    xref:
+      - https://www.clinpgx.org/
+    description: >-
+      ClinPGx is a comprehensive resource supporting the clinical implementation of pharmacogenomics
+      (PGx), the study of how genetic variation affects medication response. We provide
+      expert curation of PGx genes, variants, drugs, and gene–drug relationships, plus guidelines
+      and tools that make PGx accessible, understandable, and actionable in clinical practice.
+      This resource is formed from the NIH-funded PharmGKB, CPIC and PharmCAT projects,
+      with additional content, features and tools. This infores is preferred when the data
+      was downloaded from ClinPGx, after the migration of the individual projects to this
+      unified resource.
+    knowledge_level: knowledge_assertion
+    agent_type: not_provided
+  - status: released
     name: ClinVar
     id: infores:clinvar
     xref:
@@ -3793,6 +3809,21 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - status: released
+    name: MOAlmanac
+    id: infores:moalmanac
+    xref:
+      - https://dev.moalmanac.org/
+      - https://moalmanac.org/
+    description: >-
+      The Molecular Oncology Almanac (MOAlmanac) is a clinical and biological interpretation
+      algorithm and paired knowledge base for precision oncology. The primary objective
+      of MOAlmanac is to identify and associate molecular alterations with therapeutic sensitivity
+      and resistance as well as disease prognosis. The underlying database of this method
+      is dependent on expert curation of the current body of knowledge on how molecular
+      alterations affect clinical actionability.
+    knowledge_level: knowledge_assertion
+    agent_type: manual_agent
+  - status: released
     name: Molecular Connections
     id: infores:molecular-connections
     xref:
@@ -4135,7 +4166,7 @@ information_resources:
     consumed_by:
       - infores:rtx-kg2
   - status: released
-    name: National Center for Advancing Translational Science Biomedical Data Translator 
+    name: National Center for Advancing Translational Science Biomedical Data Translator
       Autonomous Relay System
     id: infores:ncats-ars
     xref:
@@ -4181,7 +4212,7 @@ information_resources:
     consumed_by:
       - infores:rtx-kg2
   - status: deprecated
-    name: North Carolina Department of Environmental Quality Concentrated Animal Feeding 
+    name: North Carolina Department of Environmental Quality Concentrated Animal Feeding
       Operations Exposures Data
     id: infores:ncdeq-cafo-exposures-data
     knowledge_level: knowledge_assertion
@@ -4988,7 +5019,8 @@ information_resources:
     consumed_by:
       - infores:unsecret-agent
   - status: deprecated
-    name: ROBOKOP (Reasoning Over Biomedical Objects linked in Knowledge-Oriented Pathway)
+    name: ROBOKOP (Reasoning Over Biomedical Objects linked in Knowledge-Oriented 
+      Pathway)
     id: infores:robokop-kp
     xref:
       - http://robokop.renci.org
@@ -5820,7 +5852,8 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - status: deprecated
-    name: United States Environmental Protection Agency Airborne Pollutant Exposures Data
+    name: United States Environmental Protection Agency Airborne Pollutant Exposures 
+      Data
     id: infores:us-epa-airborne-pollutant-exposures-data
     knowledge_level: knowledge_assertion
     agent_type: not_provided
