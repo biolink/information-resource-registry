@@ -34,7 +34,7 @@ information_resources:
     name: Alliance of Genome Resources (AGR Knowledgebase)
     id: infores:agrkb
     xref:
-      - https://www.alliancegenome.org/
+      - https://www.alliancegenome.org/about-us
     synonym:
       - ALLIANCE
     knowledge_level: knowledge_assertion
@@ -825,7 +825,7 @@ information_resources:
     name: Bgee
     id: infores:bgee
     xref:
-      - https://www.bgee.org/
+      - https://www.bgee.org/about/
     synonym:
       - BGEE
     knowledge_level: knowledge_assertion
@@ -930,7 +930,7 @@ information_resources:
     name: Biolink Model Lookup
     id: infores:biolink-model-lookup
     xref:
-      - https://bl-lookup-sri.renci.org/docs
+      - https://biolink.github.io/biolink-model/
     description: >-
       Biolink Model Lookup service.
     knowledge_level: knowledge_assertion
@@ -948,7 +948,7 @@ information_resources:
     name: BioPlanet
     id: infores:bioplanet
     xref:
-      - https://github.com/NCATSTranslator/Translator-All/wiki/bioplanet
+      - https://tripod.nih.gov/bioplanet/
     description: >-
       https://tripod.nih.gov/bioplanet/#
     knowledge_level: knowledge_assertion
@@ -969,7 +969,7 @@ information_resources:
     name: BioThings AGR API
     id: infores:biothings-agr
     xref:
-      - https://pending.biothings.io/agr
+      - https://www.alliancegenome.org/about-us
     description: >-
       Documentation of the BioThings API for
       [AGR](https://www.alliancegenome.org/downloads) disease associations data.
@@ -990,7 +990,7 @@ information_resources:
     name: BioThings BindingDB API
     id: infores:biothings-bindingdb
     xref:
-      - https://pending.biothings.io/bindingdb
+      - https://www.bindingdb.org/rwd/bind/index.jsp
     description: >-
       Documentation of the BioThings [BindingDB](https://www.bindingdb.org/rwd/bind/index.jsp)
       query web services.
@@ -1004,7 +1004,7 @@ information_resources:
     name: BioThings BioPlanet Pathway-Disease API
     id: infores:biothings-bioplanet-pathway-disease
     xref:
-      - https://pending.biothings.io/bioplanet_pathway_disease
+      - https://tripod.nih.gov/bioplanet/
     description: >-
       Documentation of the BioThings [BioPlanet](https://tripod.nih.gov/bioplanet/#)
       pathway-disease association query web services.
@@ -1018,7 +1018,7 @@ information_resources:
     name: BioThings BioPlanet Pathway-Gene API
     id: infores:biothings-bioplanet-pathway-gene
     xref:
-      - https://pending.biothings.io/bioplanet_pathway_gene
+      - https://tripod.nih.gov/bioplanet/
     description: >-
       Documentation of the BioThings [BioPlanet](https://tripod.nih.gov/bioplanet/#)
       pathway-gene association query web services.
@@ -1032,7 +1032,7 @@ information_resources:
     name: BioThings DDInter API
     id: infores:biothings-ddinter
     xref:
-      - https://pending.biothings.io/ddinter
+      - https://ddinter.scbdd.com/
     description: >-
       Documentation of the BioThings API for [DDInter](http://ddinter.scbdd.com/) data.
     knowledge_level: knowledge_assertion
@@ -1045,7 +1045,7 @@ information_resources:
     name: BioThings DGIdb API
     id: infores:biothings-dgidb
     xref:
-      - https://pending.biothings.io/dgidb
+      - https://www.dgidb.org/
     description: >-
       Documentation of the BioThings DGIdb query web services.
     knowledge_level: mixed
@@ -1058,7 +1058,7 @@ information_resources:
     name: BioThings DISEASES API
     id: infores:biothings-diseases
     xref:
-      - https://pending.biothings.io/DISEASES
+      - https://diseases.jensenlab.org/About
     description: >-
       Documentation of the DISEASES query web services.
     knowledge_level: mixed
@@ -1071,7 +1071,7 @@ information_resources:
     name: BioThings EBIgene2phenotype API
     id: infores:biothings-ebi-gene2phenotype
     xref:
-      - https://pending.biothings.io/ebigene2phenotype
+      - https://www.ebi.ac.uk/gene2phenotype
     description: >-
       Documentation of the EBIgene2phenotype query web services.
     knowledge_level: knowledge_assertion
@@ -1124,7 +1124,7 @@ information_resources:
     name: BioThings Gene Ontology Biological Process API
     id: infores:biothings-go-bp
     xref:
-      - https://pending.biothings.io/go_bp
+      - https://www.geneontology.org/
     description: >-
       Documentation of the Gene Ontology Biological Process query web services.
     knowledge_level: knowledge_assertion
@@ -1137,7 +1137,7 @@ information_resources:
     name: BioThings Gene Ontology Cellular Component API
     id: infores:biothings-go-cc
     xref:
-      - https://pending.biothings.io/go_cc
+      - https://www.geneontology.org/
     description: >-
       Documentation of the Gene Ontology Cellular Component query web services.
     knowledge_level: knowledge_assertion
@@ -1150,7 +1150,7 @@ information_resources:
     name: BioThings Gene Ontology Molecular Activity API
     id: infores:biothings-go-mf
     xref:
-      - https://pending.biothings.io/go_mf
+      - https://www.geneontology.org/
     description: >-
       Documentation of the Gene Ontology Molecular Activity query web services.
     knowledge_level: knowledge_assertion
@@ -1205,7 +1205,7 @@ information_resources:
     name: BioThings iDISK API
     id: infores:biothings-idisk
     xref:
-      - https://pending.biothings.io/idisk
+      - https://conservancy.umn.edu/items/7dec9015-c428-44d3-80c7-625e0800d008
     knowledge_level: mixed
     agent_type: not_provided
     consumes:
@@ -1216,7 +1216,7 @@ information_resources:
     name: BioThings InnateDB API
     id: infores:biothings-innatedb
     xref:
-      - https://www.innatedb.com/
+      - https://www.innatedb.com/index.jsp
     description: >-
       Documentation of the BioThings API for [InnateDB](https://www.innatedb.com/) data.
     knowledge_level: mixed
@@ -1240,7 +1240,7 @@ information_resources:
     name: BioThings MGIgene2phenotype API
     id: infores:biothings-mgi-g2p
     xref:
-      - https://pending.biothings.io/mgigene2phenotype
+      - https://www.informatics.jax.org/
     description: >-
       Documentation of the MGIgene2phenotype query web services.
     knowledge_level: knowledge_assertion
@@ -1305,7 +1305,7 @@ information_resources:
     name: BioThings PFOCR API
     id: infores:biothings-pfocr
     xref:
-      - https://pending.biothings.io/pfocr
+      - https://pfocr.wikipathways.org/
     description: >-
       Documentation of the pfocr query web services.
     knowledge_level: prediction
@@ -1430,7 +1430,7 @@ information_resources:
     name: BioThings SuppKG API
     id: infores:biothings-suppkg
     xref:
-      - https://github.com/zhang-informatics/SemRep_DS/tree/main/SuppKG
+      - https://www.sciencedirect.com/science/article/pii/S1532046422001368?via%3Dihub
     description: >-
       Documentation of the BioThings API for
       [SuppKG](https://github.com/zhang-informatics/SemRep_DS/tree/main/SuppKG) data. SuppKG
@@ -1706,7 +1706,7 @@ information_resources:
     id: infores:cl
     xref:
       - fairsharing:FAIRsharing.j9y503
-      - https://obophenotype.github.io/cell-ontology/
+      - https://obofoundry.org/ontology/cl.html
     synonym:
       - CL
     knowledge_level: knowledge_assertion
@@ -1975,7 +1975,7 @@ information_resources:
     id: infores:complex-portal
     xref:
       - fairsharing:FAIRsharing.wP3t2L
-      - https://www.ebi.ac.uk/complexportal/
+      - https://www.ebi.ac.uk/complexportal/home
     description: >-
       The Complex Portal is a manually curated, encyclopaedic resource of macromolecular
       complexes  from
@@ -2044,7 +2044,7 @@ information_resources:
     name: ConsensusPathDB
     id: infores:cpdb
     xref:
-      - http://cpdb.molgen.mpg.de/
+      - http://cpdb.molgen.mpg.de/CPDB
     synonym:
       - CPDB
     knowledge_level: mixed
@@ -2097,7 +2097,7 @@ information_resources:
     id: infores:ctd
     xref:
       - fairsharing:FAIRsharing.h3tjtr
-      - https://ctdbase.org/
+      - https://ctdbase.org/about/
     synonym:
       - CTDbase
     description: >-
@@ -2277,7 +2277,7 @@ information_resources:
     name: DISEASES
     id: infores:diseases
     xref:
-      - https://diseases.jensenlab.org/
+      - https://diseases.jensenlab.org/About
     description: >-
       DISEASES is a weekly updated web resource that integrates evidence on disease-gene
       associations  from
@@ -2295,7 +2295,7 @@ information_resources:
     id: infores:disgenet
     xref:
       - fairsharing:FAIRsharing.fssydn
-      - https://www.disgenet.org/
+      - https://disgenet.com/
     knowledge_level: prediction
     agent_type: automated_agent
     consumed_by:
@@ -2378,7 +2378,7 @@ information_resources:
     name: Drug Repurposing Hub
     id: infores:drug-repurposing-hub
     xref:
-      - https://www.broadinstitute.org/drug-repurposing-hub
+      - https://repo-hub.broadinstitute.org/repurposing
     description: >-
       knowledge_assertion and annotated collection of FDA-approved drugs, clinical
       trial drugs, and pre-clinical tool compounds with a companion information resource
@@ -2411,7 +2411,7 @@ information_resources:
     id: infores:drugcentral
     xref:
       - fairsharing:FAIRsharing.3me82d
-      - https://drugcentral.org
+      - https://drugcentral.org/about
     synonym:
       - Drugcentral
     description: >-
@@ -2628,7 +2628,7 @@ information_resources:
     name: 'eRAM: encyclopedia of rare disease annotations for precision medicine'
     id: infores:eram
     xref:
-      - http://www.unimd.org/eram/
+      - http://119.3.41.228/eram/
     synonym:
       - eRAM
     description: >-
@@ -2655,7 +2655,7 @@ information_resources:
     name: FDA Adverse Event Reporting System
     id: infores:faers
     xref:
-      - https://www.fda.gov/drugs/questions-and-answers-fdas-adverse-event-reporting-system-faers/fda-adverse-event-reporting-system-faers-latest-quarterly-data-files
+      - https://www.fda.gov/drugs/fdas-adverse-event-reporting-system-faers/fda-adverse-event-reporting-system-faers-public-dashboard
     description: >-
       The FDA Adverse Event Reporting System (FAERS) is a database that contains information
       on adverse event and medication error reports submitted to FDA.
@@ -2784,7 +2784,7 @@ information_resources:
     name: FoodData Central
     id: infores:fooddata-central
     xref:
-      - https://fdc.nal.usda.gov
+      - https://fdc.nal.usda.gov/index.html
     description: >-
       FoodData Central is an integrated data system that provides expanded nutrient profile
       data  and links to related agricultural and experimental research.
@@ -2795,6 +2795,8 @@ information_resources:
   - status: released
     name: FooDB
     id: infores:fooddb
+    xref:
+      - https://foodb.ca/
     knowledge_level: not_provided
     agent_type: not_provided
     consumed_by:
@@ -2933,7 +2935,7 @@ information_resources:
     id: infores:geneprof
     xref:
       - fairsharing:FAIRsharing.qmygaa
-      - https://github.com/NCATSTranslator/Translator-All/wiki/GeneProf
+      - https://bio.tools/geneprof
     description: >-
       underlying resource is throwing 404 error atm
     knowledge_level: knowledge_assertion
@@ -3009,7 +3011,7 @@ information_resources:
     name: Gene Ontology Plus
     id: infores:go-plus
     xref:
-      - https://geneontology.org/docs/download-ontology/
+      - https://obofoundry.org/ontology/go.html
     synonym:
       - GO-Plus
     knowledge_level: knowledge_assertion
@@ -3052,7 +3054,7 @@ information_resources:
     name: 'Genotype-Tissue Expression '
     id: infores:gtex
     xref:
-      - https://gtexportal.org
+      - https://gtexportal.org/home/
     synonym:
       - GTEx
     knowledge_level: knowledge_assertion
@@ -3094,7 +3096,7 @@ information_resources:
     name: Healthcare Common Procedure Coding System (from UMLS)
     id: infores:hcp-codes-umls
     xref:
-      - https://www.cms.gov/medicare/coding-billing/healthcare-common-procedure-system
+      - https://www.nlm.nih.gov/research/umls/sourcereleasedocs/current/HCPT
     knowledge_level: knowledge_assertion
     agent_type: manual_agent
     consumed_by:
@@ -3232,14 +3234,14 @@ information_resources:
     name: Human Gene Ontology Annotations
     id: infores:human-goa
     xref:
-      - https://www.ebi.ac.uk/GOA/
+      - https://www.ebi.ac.uk/GOA/index
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - status: released
     name: The Human Reference Protein Interactome Mapping Project
     id: infores:huri
     xref:
-      - https://interactome-atlas.org/
+      - http://www.interactome-atlas.org/download
     synonym:
       - HuRI
     description: >-
@@ -3327,7 +3329,7 @@ information_resources:
     name: ICEES (Integrated Clinical and Environmental Exposures Service)
     id: infores:icees-kg
     xref:
-      - https://github.com/NCATS-Tangerine/icees-api
+      - https://robokop.renci.org/api-docs/docs/automat/icees-kg
     synonym:
       - KP
     description: >-
@@ -3343,7 +3345,7 @@ information_resources:
     name: integrated Dietary Supplement Knowledge Base
     id: infores:idisk
     xref:
-      - https://github.com/jvasilakes/iDISK
+      - https://conservancy.umn.edu/items/7dec9015-c428-44d3-80c7-625e0800d008
     synonym:
       - iDISK
     description: >-
@@ -3387,7 +3389,7 @@ information_resources:
     id: infores:innatedb
     xref:
       - fairsharing:FAIRsharing.rb2drw
-      - https://www.innatedb.com/
+      - https://www.innatedb.com/index.jsp
     description: >-
       InnateDB is a publicly available database of the genes, proteins, experimentally-verified
       interactions  and signaling pathways involved in the innate immune response of humans,
@@ -3414,7 +3416,7 @@ information_resources:
     name: IntAct
     id: infores:intact
     xref:
-      - https://www.ebi.ac.uk/intact/
+      - https://www.ebi.ac.uk/intact/home
     description: >-
       EMBL-EBI’s core manually curated molecular interaction knowledgebase using PSI-MI
       standards;
@@ -3557,7 +3559,7 @@ information_resources:
     name: KinAce
     id: infores:kinace
     xref:
-      - https://kinace.kinametrix.com/
+      - https://kinet.kinametrix.com/#section-about
     description: >-
       https://kinace.kinametrix.com/#section-about
       The KinAce web portal aggregates and visualizes the network of interactions between
@@ -3607,7 +3609,7 @@ information_resources:
     name: Library of Integrated Network-Based Cellular Signatures
     id: infores:lincs
     xref:
-      - https://lincsproject.org/
+      - https://lincsproject.org/LINCS/about
     synonym:
       - LINCS
     knowledge_level: knowledge_assertion
@@ -3647,7 +3649,7 @@ information_resources:
     name: LOINC (from UMLS)
     id: infores:loinc-umls
     xref:
-      - https://loinc.org/
+      - https://www.nlm.nih.gov/research/umls/loinc_main.html
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     consumed_by:
@@ -4235,7 +4237,7 @@ information_resources:
     name: National Cancer Institute Thesaurus
     id: infores:ncit
     xref:
-      - https://ncithesaurus.nci.nih.gov/
+      - https://ncithesaurus.nci.nih.gov/ncitbrowser/
     synonym:
       - NCT Thesaurus
       - NCIt
@@ -4263,7 +4265,7 @@ information_resources:
     name: NDEx
     id: infores:ndex
     xref:
-      - https://www.ndexbio.org/
+      - https://www.ndexbio.org/index.html#/
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - status: released
@@ -4383,7 +4385,7 @@ information_resources:
     name: Online Mendelian Inheritance in Man (OMIM)
     id: infores:omim
     xref:
-      - https://www.omim.org/
+      - https://www.omim.org/about
     synonym:
       - OMIM
     knowledge_level: knowledge_assertion
@@ -4490,7 +4492,7 @@ information_resources:
     name: Orphanet Rare Disease Ontology
     id: infores:ordo
     xref:
-      - https://www.orphadata.com/ordo/
+      - https://bioportal.bioontology.org/ontologies/ORDO
     synonym:
       - ORDO
     knowledge_level: knowledge_assertion
@@ -4509,7 +4511,7 @@ information_resources:
     name: OWLSim Ontology Based Profile Matching
     id: infores:owlsim
     xref:
-      - https://github.com/monarch-initiative/owlsim-v3
+      - https://berkeleybop.github.io/software/owlsim/
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - status: released
@@ -4525,7 +4527,7 @@ information_resources:
     name: Panther Classification System
     id: infores:panther
     xref:
-      - https://www.pantherdb.org/
+      - https://pantherdb.org/about.jsp
     synonym:
       - Panther
     knowledge_level: other
@@ -4560,7 +4562,7 @@ information_resources:
     name: Phenotype and Trait Ontology
     id: infores:pato
     xref:
-      - https://github.com/pato-ontology/pato
+      - https://obofoundry.org/ontology/pato.html
     synonym:
       - PATO
     knowledge_level: knowledge_assertion
@@ -4589,7 +4591,7 @@ information_resources:
     name: Psychoactive Drug Screening Program
     id: infores:pdsp
     xref:
-      - https://pdsp.unc.edu/
+      - https://pdsp.unc.edu/databases/kidb.php
     description: >-
       PDSP is the NIMH's Psychoactive Drug Screening Program, which provides screening of
       novel psychoactive compounds for pharmacological and functional activity at cloned
@@ -4677,7 +4679,7 @@ information_resources:
     id: infores:pharos
     xref:
       - fairsharing:FAIRsharing.52d6ae
-      - https://pharos.nih.gov/
+      - https://pharos.nih.gov/about
     description: >-
       focusing on three of the most commonly drug-targeted protein families:
       G-protein-coupled receptors (GPCRs, Ion channels (ICs), Kinases
@@ -4752,7 +4754,7 @@ information_resources:
     name: Probe Miner
     id: infores:probe-miner
     xref:
-      - https://probeminer.icr.ac.uk/
+      - https://probeminer.icr.ac.uk/#/
     knowledge_level: statistical_association
     agent_type: not_provided
     consumed_by:
@@ -4911,7 +4913,7 @@ information_resources:
     name: Richards Effector Gene List
     id: infores:regl
     xref:
-      - https://hugeamp.org/effectorgenes.html
+      - https://www.mcgill.ca/genepi/
     description: >-
       An effector index to predict target genes at GWAS loci
     knowledge_level: knowledge_assertion
@@ -4929,7 +4931,7 @@ information_resources:
     name: Drug Repositioning Database
     id: infores:repodb
     xref:
-      - https://github.com/adam-sam-brown/repoDB
+      - https://unmtid-shinyapps.net/shiny/repodb/
     synonym:
       - repoDB
     knowledge_level: knowledge_assertion
@@ -5164,7 +5166,7 @@ information_resources:
     name: Semantic Medline Database
     id: infores:semmeddb
     xref:
-      - https://lhncbc.nlm.nih.gov/ii/tools/SemRep_SemMedDB_SKR/SemMed.html
+      - https://lhncbc.nlm.nih.gov/ii/tools/SemRep_SemMedDB_SKR.html
     knowledge_level: prediction
     agent_type: text_mining_agent
     consumed_by:
@@ -5323,7 +5325,7 @@ information_resources:
     name: SIDER
     id: infores:sider
     xref:
-      - https://sideeffects.embl.de/
+      - http://sideeffects.embl.de/about/
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     consumed_by:
@@ -5554,7 +5556,7 @@ information_resources:
     name: SuppKG
     id: infores:suppkg
     xref:
-      - https://github.com/zhang-informatics/SemRep_DS
+      - https://www.sciencedirect.com/science/article/pii/S1532046422001368?via%3Dihub
     description: >-
       SuppKG contains relations between dietary supplements and other entities, such as
       diseases.  More
@@ -5640,7 +5642,7 @@ information_resources:
     id: infores:tiga
     xref:
       - fairsharing:FAIRsharing.beffb7
-      - https://unmtid-shinyapps.net/shiny/tiga/
+      - https://datascience.unm.edu/tiga/
     synonym:
       - TIGA
     description: >-
@@ -5653,7 +5655,7 @@ information_resources:
     id: infores:tissues
     xref:
       - fairsharing:FAIRsharing.yXPvpU
-      - https://tissues.jensenlab.org/
+      - https://tissues.jensenlab.org/About
     description: >-
       TISSUES is a weekly updated web resource that integrates evidence on tissue expression  from
       manually curated literature, proteomics and transcriptomics screens, and automatic  text
@@ -5667,7 +5669,7 @@ information_resources:
     name: Tissue Expression Database
     id: infores:tissues-expression-db
     xref:
-      - https://tissues.jensenlab.org/
+      - https://tissues.jensenlab.org/About
     synonym:
       - TED
     knowledge_level: knowledge_assertion
@@ -5676,7 +5678,7 @@ information_resources:
     name: NHLBI Trans-Omics for Precision Medicine
     id: infores:topmed
     xref:
-      - https://topmed.nhlbi.nih.gov/
+      - https://www.nhlbi.nih.gov/science/trans-omics-precision-medicine-topmed-program
     synonym:
       - TOPMed
     knowledge_level: knowledge_assertion
@@ -5685,7 +5687,7 @@ information_resources:
     name: Therapeutic Target Database (TTD)
     id: infores:ttd
     xref:
-      - https://idrblab.net/ttd/
+      - https://db.idrblab.net/ttd/
     synonym:
       - TTD
     description: >-
@@ -5702,7 +5704,7 @@ information_resources:
     name: Ubergraph
     id: infores:ubergraph
     xref:
-      - https://incatools.github.io/ubergraph/
+      - https://www.ebi.ac.uk/ols4/
     description: >-
       A graph representation of Ubergraph, an integration of ontologies including GO, CHEBI,
       Uberon, and HPO.
@@ -5771,7 +5773,7 @@ information_resources:
     id: infores:uniprot
     xref:
       - fairsharing:FAIRsharing.s1ne3g
-      - https://www.uniprot.org/
+      - https://www.uniprot.org/help/about
     synonym:
       - UniProt
     knowledge_level: knowledge_assertion
@@ -5853,13 +5855,15 @@ information_resources:
   - status: deprecated
     name: United States Environmental Protection Agency Airborne Pollutant Exposures Data
     id: infores:us-epa-airborne-pollutant-exposures-data
+    xref:
+      - https://obofoundry.org/ontology/upheno.html
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - status: released
     name: Veterans Association National Drug File (VANDF) (from UMLS)
     id: infores:vandf-umls
     xref:
-      - https://www.nlm.nih.gov/research/umls/sourcereleasedocs/current/VANDF/
+      - https://www.nlm.nih.gov/research/umls/rxnorm/sourcereleasedocs/vandf.html
     knowledge_level: knowledge_assertion
     agent_type: manual_agent
     consumed_by:
@@ -5958,7 +5962,7 @@ information_resources:
     name: World of Molecular Bioactivity - Pharmacokinetics (WOMBAT-PK)
     id: infores:wombat-pk
     xref:
-      - https://drugcentral.org/
+      - https://onlinelibrary.wiley.com/doi/10.1002/9783527619375.ch13b
     description: >-
       The WOrld of Molecular BioAcTivity - PharmacoKinetics (WOMBAT-PK) contained clinical
       pharmacokinetics data curated from literature. The resource does not seem to be directly
