@@ -813,8 +813,8 @@ information_resources:
     name: Basic Formal Ontology
     id: infores:bfo
     xref:
-      - https://fairsharing.org/FAIRsharing.wcpd6f
       - http://www.obofoundry.org/ontology/bfo.html
+      - https://fairsharing.org/FAIRsharing.wcpd6f
     synonym:
       - BFO
     knowledge_level: knowledge_assertion
@@ -854,8 +854,8 @@ information_resources:
     name: BiGG Models
     id: infores:bigg-models
     xref:
-      - https://fairsharing.org/FAIRsharing.va62ke
       - https://bigg.ucsd.edu/
+      - https://fairsharing.org/FAIRsharing.va62ke
     synonym:
       - BIGG
     description: >-
@@ -895,8 +895,8 @@ information_resources:
     name: Bio2RDF
     id: infores:bio2rdf
     xref:
-      - https://fairsharing.org/FAIRsharing.6gz84c
       - https://bio2rdf.org
+      - https://fairsharing.org/FAIRsharing.6gz84c
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - status: deprecated
@@ -1755,8 +1755,8 @@ information_resources:
     name: ClinicalTrials.gov
     id: infores:clinicaltrials
     xref:
-      - https://fairsharing.org/FAIRsharing.mewhad
       - https://clinicaltrials.gov
+      - https://fairsharing.org/FAIRsharing.mewhad
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - status: released
@@ -2096,8 +2096,8 @@ information_resources:
     name: Comparative Toxicogenomics Database
     id: infores:ctd
     xref:
-      - https://fairsharing.org/FAIRsharing.h3tjtr
       - https://ctdbase.org/about/
+      - https://fairsharing.org/FAIRsharing.h3tjtr
     synonym:
       - CTDbase
     description: >-
@@ -2238,8 +2238,8 @@ information_resources:
     name: dictyBase
     id: infores:dictybase
     xref:
-      - https://fairsharing.org/FAIRsharing.4shj9c
       - http://dictybase.org
+      - https://fairsharing.org/FAIRsharing.4shj9c
     description: >-
       The central resource for Dictyostelid genomics, providing model organism database
       services for the research community.
@@ -2264,8 +2264,8 @@ information_resources:
     name: Disease Ontology
     id: infores:disease-ontology
     xref:
-      - https://fairsharing.org/FAIRsharing.8b6wfq
       - https://disease-ontology.org/
+      - https://fairsharing.org/FAIRsharing.8b6wfq
     synonym:
       - DO
     knowledge_level: knowledge_assertion
@@ -2294,8 +2294,8 @@ information_resources:
     name: DisGeNET
     id: infores:disgenet
     xref:
-      - https://fairsharing.org/FAIRsharing.fssydn
       - https://disgenet.com/
+      - https://fairsharing.org/FAIRsharing.fssydn
     knowledge_level: prediction
     agent_type: automated_agent
     consumed_by:
@@ -2410,8 +2410,8 @@ information_resources:
     name: DrugCentral
     id: infores:drugcentral
     xref:
-      - https://fairsharing.org/FAIRsharing.3me82d
       - https://drugcentral.org/about
+      - https://fairsharing.org/FAIRsharing.3me82d
     synonym:
       - Drugcentral
     description: >-
@@ -2805,8 +2805,8 @@ information_resources:
     name: Food Ontology
     id: infores:foodon
     xref:
-      - https://fairsharing.org/FAIRsharing.dzxae
       - http://www.obofoundry.org/ontology/foodon.html
+      - https://fairsharing.org/FAIRsharing.dzxae
     synonym:
       - FOODON
     knowledge_level: knowledge_assertion
@@ -2934,8 +2934,8 @@ information_resources:
     name: GeneProf
     id: infores:geneprof
     xref:
-      - https://fairsharing.org/FAIRsharing.qmygaa
       - https://bio.tools/geneprof
+      - https://fairsharing.org/FAIRsharing.qmygaa
     description: >-
       underlying resource is throwing 404 error atm
     knowledge_level: knowledge_assertion
@@ -3406,8 +3406,8 @@ information_resources:
     name: Interaction Network Ontology
     id: infores:ino
     xref:
-      - https://fairsharing.org/FAIRsharing.mm72as
       - http://www.obofoundry.org/ontology/ino.html
+      - https://fairsharing.org/FAIRsharing.mm72as
     knowledge_level: knowledge_assertion
     agent_type: manual_agent
     consumed_by:
@@ -3668,8 +3668,8 @@ information_resources:
     name: Medical Action Ontology
     id: infores:maxo
     xref:
-      - https://fairsharing.org/FAIRsharing.945c78
       - http://www.obofoundry.org/ontology/maxo.html
+      - https://fairsharing.org/FAIRsharing.945c78
     synonym:
       - MAXO
     description: >-
@@ -3926,8 +3926,8 @@ information_resources:
     name: Molecular Process Ontology
     id: infores:mop
     xref:
-      - https://fairsharing.org/FAIRsharing.mct09a
       - http://www.obofoundry.org/ontology/mop.html
+      - https://fairsharing.org/FAIRsharing.mct09a
     synonym:
       - MOP
     knowledge_level: knowledge_assertion
@@ -5262,8 +5262,8 @@ information_resources:
     name: Saccharomyces Genome Database
     id: infores:sgd
     xref:
-      - https://fairsharing.org/FAIRsharing.pzvw40
       - http://www.yeastgenome.org/
+      - https://fairsharing.org/FAIRsharing.pzvw40
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - status: released
@@ -5397,8 +5397,8 @@ information_resources:
     name: Sequence Ontology
     id: infores:so
     xref:
-      - https://fairsharing.org/FAIRsharing.6bc7h9
       - http://purl.obolibrary.org/obo/so.owl
+      - https://fairsharing.org/FAIRsharing.6bc7h9
     synonym:
       - SO
     knowledge_level: knowledge_assertion
@@ -5570,8 +5570,8 @@ information_resources:
     name: Symptom Ontology
     id: infores:symp
     xref:
-      - https://fairsharing.org/FAIRsharing.ay74mj
       - http://www.obofoundry.org/ontology/symp.html
+      - https://fairsharing.org/FAIRsharing.ay74mj
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - status: released
@@ -5589,8 +5589,8 @@ information_resources:
     name: Target Central Resource Database
     id: infores:tcrd
     xref:
-      - https://fairsharing.org/FAIRsharing.1gn47b
       - http://juniper.health.unm.edu/tcrd/
+      - https://fairsharing.org/FAIRsharing.1gn47b
     synonym:
       - TCRD
     knowledge_level: knowledge_assertion
@@ -5642,8 +5642,8 @@ information_resources:
     name: Target Illumination GWAS Analytics
     id: infores:tiga
     xref:
-      - https://fairsharing.org/FAIRsharing.beffb7
       - https://datascience.unm.edu/tiga/
+      - https://fairsharing.org/FAIRsharing.beffb7
     synonym:
       - TIGA
     description: >-
@@ -5985,8 +5985,8 @@ information_resources:
     name: WormBase
     id: infores:wormbase
     xref:
-      - https://fairsharing.org/FAIRsharing.zx1td8
       - http://www.wormbase.org/
+      - https://fairsharing.org/FAIRsharing.zx1td8
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - status: released
