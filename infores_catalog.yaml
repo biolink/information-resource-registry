@@ -1751,6 +1751,9 @@ information_resources:
     id: infores:clinical-profiles
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+  - status: deprecated
+    name: ClinicalTrials.gov
+    id: infores:clinicaltrials
   - status: released
     name: ClinicalTrials.gov
     id: infores:clinicaltrials-gov
@@ -1759,9 +1762,6 @@ information_resources:
       - https://fairsharing.org/FAIRsharing.mewhad
     knowledge_level: knowledge_assertion
     agent_type: not_provided
-  - status: deprecated
-    name: ClinicalTrials.gov
-    id: infores:clinicaltrials
   - status: released
     name: Multiomics ClinicalTrials KP API
     id: infores:clinicaltrials-kp
