@@ -1,8 +1,8 @@
 {
   "infores:rtx-kg2": [
     "infores:unii",
-    "infores:multiomics-drugapprovals",
-    "infores:multiomics-clinicaltrials",
+    "infores:drugapprovals-kp",
+    "infores:clinicaltrials-kp",
     "infores:dgidb",
     "infores:disease-ontology",
     "infores:disgenet",
