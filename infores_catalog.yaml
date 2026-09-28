@@ -1760,6 +1760,19 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - status: released
+    name: Multiomics ClinicalTrials KP API
+    id: infores:clinicaltrials-kp
+    knowledge_level: knowledge_assertion
+    agent_type: manual_agent
+    consumes:
+      - infores:aact
+      - infores:dailymed
+    consumed_by:
+      - infores:aragorn
+      - infores:arax
+      - infores:rtx-kg2
+      - infores:service-provider-trapi
+  - status: released
     name: ClinPGx
     id: infores:clinpgx
     xref:
@@ -2386,6 +2399,20 @@ information_resources:
     agent_type: not_provided
     consumed_by:
       - infores:molepro
+  - status: released
+    name: Multiomics Drug Approvals KP API
+    id: infores:drugapprovals-kp
+    knowledge_level: knowledge_assertion
+    agent_type: manual_agent
+    consumes:
+      - infores:dailymed
+      - infores:faers
+      - infores:medi
+    consumed_by:
+      - infores:aragorn
+      - infores:arax
+      - infores:rtx-kg2
+      - infores:service-provider-trapi
   - status: released
     name: DrugBank
     id: infores:drugbank
@@ -3782,6 +3809,19 @@ information_resources:
     consumed_by:
       - infores:rtx-kg2
   - status: released
+    name: Multiomics Microbiome KP API
+    id: infores:microbiome-kp
+    xref:
+      - https://github.com/multiomicsKP/microbiome_kp
+    knowledge_level: knowledge_assertion
+    agent_type: manual_validation_of_automated_agent
+    consumes:
+      - infores:pubmed-central
+    consumed_by:
+      - infores:aragorn
+      - infores:arax
+      - infores:service-provider-trapi
+  - status: released
     name: Molecular INTeraction Database (MINT)
     id: infores:mint
     xref:
@@ -3986,46 +4026,6 @@ information_resources:
     consumed_by:
       - infores:molepro
   - status: released
-    name: Multiomics ClinicalTrials KP API
-    id: infores:clinicaltrials-kp
-    knowledge_level: knowledge_assertion
-    agent_type: manual_agent
-    consumes:
-      - infores:aact
-      - infores:dailymed
-    consumed_by:
-      - infores:aragorn
-      - infores:arax
-      - infores:rtx-kg2
-      - infores:service-provider-trapi
-  - status: released
-    name: Multiomics Drug Approvals KP API
-    id: infores:drugapprovals-kp
-    knowledge_level: knowledge_assertion
-    agent_type: manual_agent
-    consumes:
-      - infores:dailymed
-      - infores:faers
-      - infores:medi
-    consumed_by:
-      - infores:aragorn
-      - infores:arax
-      - infores:rtx-kg2
-      - infores:service-provider-trapi
-  - status: released
-    name: Multiomics Microbiome KP API
-    id: infores:microbiome-kp
-    xref:
-      - https://github.com/multiomicsKP/microbiome_kp
-    knowledge_level: knowledge_assertion
-    agent_type: manual_validation_of_automated_agent
-    consumes:
-      - infores:pubmed-central
-    consumed_by:
-      - infores:aragorn
-      - infores:arax
-      - infores:service-provider-trapi
-  - status: released
     name: Multiomics KP API
     id: infores:multiomics-kp
     xref:
@@ -4168,7 +4168,7 @@ information_resources:
     consumed_by:
       - infores:rtx-kg2
   - status: released
-    name: National Center for Advancing Translational Science Biomedical Data Translator 
+    name: National Center for Advancing Translational Science Biomedical Data Translator
       Autonomous Relay System
     id: infores:ncats-ars
     xref:
@@ -4214,7 +4214,7 @@ information_resources:
     consumed_by:
       - infores:rtx-kg2
   - status: deprecated
-    name: North Carolina Department of Environmental Quality Concentrated Animal Feeding 
+    name: North Carolina Department of Environmental Quality Concentrated Animal Feeding
       Operations Exposures Data
     id: infores:ncdeq-cafo-exposures-data
     knowledge_level: knowledge_assertion
@@ -5021,7 +5021,8 @@ information_resources:
     consumed_by:
       - infores:unsecret-agent
   - status: deprecated
-    name: ROBOKOP (Reasoning Over Biomedical Objects linked in Knowledge-Oriented Pathway)
+    name: ROBOKOP (Reasoning Over Biomedical Objects linked in Knowledge-Oriented 
+      Pathway)
     id: infores:robokop-kp
     xref:
       - http://robokop.renci.org
@@ -5853,7 +5854,8 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - status: deprecated
-    name: United States Environmental Protection Agency Airborne Pollutant Exposures Data
+    name: United States Environmental Protection Agency Airborne Pollutant Exposures 
+      Data
     id: infores:us-epa-airborne-pollutant-exposures-data
     xref:
       - https://obofoundry.org/ontology/upheno.html
