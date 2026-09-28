@@ -10,13 +10,25 @@ def main():
     yaml_file_path = sys.argv[1]
     json_file_paths = []
     overwrite = False
+    renames_file_path = None
 
-    # Check for '--overwrite' flag in arguments
-    for arg in sys.argv[2:]:
+    # Check for '--overwrite' and '--renames <path>' flags in arguments
+    args = iter(sys.argv[2:])
+    for arg in args:
         if arg == '--overwrite':
             overwrite = True
+        elif arg == '--renames':
+            renames_file_path = next(args)
         else:
             json_file_paths.append(arg)
+
+    # Deprecated-id renames: the JSON files come from live APIs that may still
+    # report identifiers this registry has since renamed, so translate them to
+    # their replacements before merging into the catalog.
+    renames = {}
+    if renames_file_path:
+        with open(renames_file_path, 'r') as file:
+            renames = YAML(typ='safe').load(file) or {}
 
     # Process each JSON file and consolidate updates into a single dictionary
     update_data = {}
@@ -24,6 +36,8 @@ def main():
         with open(json_file_path, 'r') as file:
             json_data = json.load(file)
         for key, new_values in json_data.items():
+            key = renames.get(key, key)
+            new_values = [renames.get(value, value) for value in new_values]
             if key not in update_data:
                 update_data[key] = {'consumes': set(), 'consumed_by': set()}
             update_data[key]['consumes'].update(new_values)
@@ -36,6 +50,13 @@ def main():
     with open(yaml_file_path, 'r') as file:
         data = yaml.load(file)
         yaml_data = data['information_resources']
+
+    # Warn about upstream ids that are deprecated in the catalog but missing
+    # from the renames map; these would re-introduce deprecated ids on merge.
+    deprecated_ids = {res['id'] for res in yaml_data if res.get('status') == 'deprecated'}
+    for stale_id in sorted(deprecated_ids.intersection(update_data)):
+        print(f"WARNING: live API data references deprecated id {stale_id}; "
+              f"add its replacement to the --renames file", file=sys.stderr)
 
     # Update the YAML data based on the consolidated JSON data
     for resource in yaml_data:

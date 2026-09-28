@@ -1,0 +1,15 @@
+# Maps deprecated infores identifiers to their replacements.
+#
+# The translator_dataflow scripts pull consume lists from live Translator APIs
+# (ARAX, BTE, Aragorn, etc.), which may still report identifiers that this
+# registry has since renamed. add_consume_info translates any identifier found
+# here to its replacement before merging into infores_catalog.yaml, so that
+# regeneration cannot re-introduce deprecated identifiers into the catalog.
+#
+# An entry can be removed once no upstream API reports the old identifier.
+infores:biothings-multiomics-clinicaltrials: infores:clinicaltrials-kp
+infores:clinicaltrials: infores:clinicaltrials-gov
+infores:multiomics-clinicaltrials: infores:clinicaltrials-kp
+infores:multiomics-drugapprovals: infores:drugapprovals-kp
+infores:multiomics-microbiome: infores:microbiome-kp
+infores:multiomics-multiomics: infores:multiomics-kp
