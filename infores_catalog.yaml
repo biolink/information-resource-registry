@@ -1759,6 +1759,9 @@ information_resources:
       - https://fairsharing.org/FAIRsharing.mewhad
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+  - status: deprecated
+    name: ClinicalTrials.gov
+    id: infores:clinicaltrials
   - status: released
     name: Multiomics ClinicalTrials KP API
     id: infores:clinicaltrials-kp
@@ -4025,6 +4028,12 @@ information_resources:
     agent_type: not_provided
     consumed_by:
       - infores:molepro
+  - status: deprecated
+    name: Multiomics ClinicalTrials KP API
+    id: infores:multiomics-clinicaltrials
+  - status: deprecated
+    name: Multiomics Drug Approvals KP API
+    id: infores:multiomics-drugapprovals
   - status: released
     name: Multiomics KP API
     id: infores:multiomics-kp
@@ -4038,6 +4047,12 @@ information_resources:
       - infores:aragorn
       - infores:arax
       - infores:service-provider-trapi
+  - status: deprecated
+    name: Multiomics Microbiome KP API
+    id: infores:multiomics-microbiome
+  - status: deprecated
+    name: Multiomics KP API
+    id: infores:multiomics-multiomics
   - status: released
     name: My Cancer Genome
     id: infores:mycancergenome

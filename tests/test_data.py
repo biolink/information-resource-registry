@@ -37,7 +37,8 @@ def test_multiomics_renamed_infores_entries():
         data = yaml.safe_load(yaml_file)
 
     resources = data.get("information_resources", [])
-    resource_ids = {infores.get("id") for infores in resources}
+    by_id = {infores.get("id"): infores for infores in resources}
+    resource_ids = set(by_id.keys())
 
     renamed_pairs = {
         "infores:clinicaltrials": "infores:clinicaltrials-gov",
@@ -49,9 +50,9 @@ def test_multiomics_renamed_infores_entries():
 
     for old_id, new_id in renamed_pairs.items():
         assert new_id in resource_ids
-        assert old_id not in resource_ids
+        assert old_id in resource_ids
+        assert by_id[old_id].get("status") == "deprecated"
 
-    by_id = {infores.get("id"): infores for infores in resources}
     cqs_consumes = set(by_id["infores:cqs"].get("consumes", []))
     rtx_kg2_consumes = set(by_id["infores:rtx-kg2"].get("consumes", []))
 
@@ -60,5 +61,9 @@ def test_multiomics_renamed_infores_entries():
     assert "infores:clinicaltrials-kp" in rtx_kg2_consumes
     assert "infores:biothings-multiomics-clinicaltrials" not in rtx_kg2_consumes
 
+    old_ids = set(renamed_pairs.keys())
+    for infores in resources:
+        assert not old_ids.intersection(infores.get("consumes", []))
+        assert not old_ids.intersection(infores.get("consumed_by", []))
 
 
