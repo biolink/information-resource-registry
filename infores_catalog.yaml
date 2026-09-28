@@ -193,16 +193,20 @@ information_resources:
       - infores:automat-viral-proteome
       - infores:biothings-multiomics-biggim-drugresponse
       - infores:catrax-pharmacogenomics
+      - infores:clinicaltrials-kp
       - infores:cohd
       - infores:connections-hypothesis
+      - infores:drugapprovals-kp
       - infores:gelinea
       - infores:genetics-data-provider
       - infores:knowledge-collaboratory
-      - infores:molepro
-      - infores:clinicaltrials-kp
-      - infores:drugapprovals-kp
       - infores:microbiome-kp
+      - infores:molepro
+      - infores:multiomics-clinicaltrials
+      - infores:multiomics-drugapprovals
       - infores:multiomics-kp
+      - infores:multiomics-microbiome
+      - infores:multiomics-multiomics
       - infores:openpredict
       - infores:retriever
       - infores:rtx-kg2
@@ -4040,6 +4044,10 @@ information_resources:
       Deprecated identifier; this resource is now identified as infores:clinicaltrials-kp.
     knowledge_level: knowledge_assertion
     agent_type: manual_agent
+    consumed_by:
+      - infores:arax
+      - infores:rtx-kg2
+      - infores:service-provider-trapi
   - status: deprecated
     name: Multiomics Drug Approvals KP API
     id: infores:multiomics-drugapprovals
@@ -4047,6 +4055,9 @@ information_resources:
       Deprecated identifier; this resource is now identified as infores:drugapprovals-kp.
     knowledge_level: knowledge_assertion
     agent_type: manual_agent
+    consumed_by:
+      - infores:arax
+      - infores:rtx-kg2
   - status: released
     name: Multiomics KP API
     id: infores:multiomics-kp
@@ -4067,6 +4078,9 @@ information_resources:
       Deprecated identifier; this resource is now identified as infores:microbiome-kp.
     knowledge_level: knowledge_assertion
     agent_type: manual_validation_of_automated_agent
+    consumed_by:
+      - infores:arax
+      - infores:service-provider-trapi
   - status: deprecated
     name: Multiomics KP API
     id: infores:multiomics-multiomics
@@ -4074,6 +4088,9 @@ information_resources:
       Deprecated identifier; this resource is now identified as infores:multiomics-kp.
     knowledge_level: knowledge_assertion
     agent_type: manual_validation_of_automated_agent
+    consumed_by:
+      - infores:arax
+      - infores:service-provider-trapi
   - status: released
     name: My Cancer Genome
     id: infores:mycancergenome
@@ -4204,7 +4221,7 @@ information_resources:
     consumed_by:
       - infores:rtx-kg2
   - status: released
-    name: National Center for Advancing Translational Science Biomedical Data Translator
+    name: National Center for Advancing Translational Science Biomedical Data Translator 
       Autonomous Relay System
     id: infores:ncats-ars
     xref:
@@ -4250,7 +4267,7 @@ information_resources:
     consumed_by:
       - infores:rtx-kg2
   - status: deprecated
-    name: North Carolina Department of Environmental Quality Concentrated Animal Feeding
+    name: North Carolina Department of Environmental Quality Concentrated Animal Feeding 
       Operations Exposures Data
     id: infores:ncdeq-cafo-exposures-data
     knowledge_level: knowledge_assertion
@@ -5057,8 +5074,7 @@ information_resources:
     consumed_by:
       - infores:unsecret-agent
   - status: deprecated
-    name: ROBOKOP (Reasoning Over Biomedical Objects linked in Knowledge-Oriented 
-      Pathway)
+    name: ROBOKOP (Reasoning Over Biomedical Objects linked in Knowledge-Oriented Pathway)
     id: infores:robokop-kp
     xref:
       - http://robokop.renci.org
@@ -5093,12 +5109,14 @@ information_resources:
       - infores:chembl
       - infores:chv-umls
       - infores:cl
+      - infores:clinicaltrials-kp
       - infores:cpt-codes-umls
       - infores:dda
       - infores:dgidb
       - infores:disease-ontology
       - infores:diseases
       - infores:disgenet
+      - infores:drugapprovals-kp
       - infores:drugbank
       - infores:drugcentral
       - infores:efo
@@ -5133,8 +5151,8 @@ information_resources:
       - infores:mi
       - infores:mirbase
       - infores:mondo
-      - infores:clinicaltrials-kp
-      - infores:drugapprovals-kp
+      - infores:multiomics-clinicaltrials
+      - infores:multiomics-drugapprovals
       - infores:nbo
       - infores:ncbi-gene
       - infores:ncbi-taxon
@@ -5270,19 +5288,22 @@ information_resources:
       - infores:biothings-suppkg
       - infores:biothings-ttd
       - infores:biothings-uberon-ontology
+      - infores:clinicaltrials-kp
       - infores:cohd
       - infores:complex-portal
       - infores:connections-hypothesis
       - infores:ctd
+      - infores:drugapprovals-kp
       - infores:ebi-proteins
       - infores:ebi-quick-go
       - infores:litvar
+      - infores:microbiome-kp
       - infores:molepro
       - infores:monarchinitiative
-      - infores:clinicaltrials-kp
-      - infores:drugapprovals-kp
-      - infores:microbiome-kp
+      - infores:multiomics-clinicaltrials
       - infores:multiomics-kp
+      - infores:multiomics-microbiome
+      - infores:multiomics-multiomics
       - infores:mychem-info
       - infores:mydisease-info
       - infores:mygene-info
@@ -5889,8 +5910,7 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - status: deprecated
-    name: United States Environmental Protection Agency Airborne Pollutant Exposures 
-      Data
+    name: United States Environmental Protection Agency Airborne Pollutant Exposures Data
     id: infores:us-epa-airborne-pollutant-exposures-data
     xref:
       - https://obofoundry.org/ontology/upheno.html
