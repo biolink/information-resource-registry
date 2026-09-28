@@ -39,6 +39,7 @@
     "infores:multiomics-multiomics",
     "infores:openpredict",
     "infores:retriever",
+    "infores:retriever",
     "infores:rtx-kg2",
     "infores:service-provider-trapi",
     "infores:spoke",
