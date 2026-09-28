@@ -32,6 +32,33 @@ def test_catalog_schema_validation():
                 assert infores.get('agent_type') is not None
 
 
+def test_multiomics_renamed_infores_entries():
+    with open(infores_catalog, 'r') as yaml_file:
+        data = yaml.safe_load(yaml_file)
+
+    resources = data.get("information_resources", [])
+    resource_ids = {infores.get("id") for infores in resources}
+
+    renamed_pairs = {
+        "infores:clinicaltrials": "infores:clinicaltrials-gov",
+        "infores:multiomics-clinicaltrials": "infores:clinicaltrials-kp",
+        "infores:multiomics-drugapprovals": "infores:drugapprovals-kp",
+        "infores:multiomics-microbiome": "infores:microbiome-kp",
+        "infores:multiomics-multiomics": "infores:multiomics-kp",
+    }
+
+    for old_id, new_id in renamed_pairs.items():
+        assert new_id in resource_ids
+        assert old_id not in resource_ids
+
+    by_id = {infores.get("id"): infores for infores in resources}
+    cqs_consumes = set(by_id["infores:cqs"].get("consumes", []))
+    rtx_kg2_consumes = set(by_id["infores:rtx-kg2"].get("consumes", []))
+
+    assert "infores:clinicaltrials-kp" in cqs_consumes
+    assert "infores:multiomics-ctkp" not in cqs_consumes
+    assert "infores:clinicaltrials-kp" in rtx_kg2_consumes
+    assert "infores:biothings-multiomics-clinicaltrials" not in rtx_kg2_consumes
 
 
 

@@ -15,7 +15,7 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     consumed_by:
-      - infores:multiomics-clinicaltrials
+      - infores:clinicaltrials-kp
   - status: released
     name: Adverse Event Open Learning through Universal Standardization (AEOLUS)
     id: infores:aeolus
@@ -129,10 +129,10 @@ information_resources:
       - infores:genetics-data-provider
       - infores:knowledge-collaboratory
       - infores:molepro
-      - infores:multiomics-clinicaltrials
-      - infores:multiomics-drugapprovals
-      - infores:multiomics-microbiome
-      - infores:multiomics-multiomics
+      - infores:clinicaltrials-kp
+      - infores:drugapprovals-kp
+      - infores:microbiome-kp
+      - infores:multiomics-kp
       - infores:openpredict
       - infores:rtx-kg2
       - infores:service-provider-trapi
@@ -199,10 +199,10 @@ information_resources:
       - infores:genetics-data-provider
       - infores:knowledge-collaboratory
       - infores:molepro
-      - infores:multiomics-clinicaltrials
-      - infores:multiomics-drugapprovals
-      - infores:multiomics-microbiome
-      - infores:multiomics-multiomics
+      - infores:clinicaltrials-kp
+      - infores:drugapprovals-kp
+      - infores:microbiome-kp
+      - infores:multiomics-kp
       - infores:openpredict
       - infores:retriever
       - infores:rtx-kg2
@@ -1753,7 +1753,7 @@ information_resources:
     agent_type: not_provided
   - status: released
     name: ClinicalTrials.gov
-    id: infores:clinicaltrials
+    id: infores:clinicaltrials-gov
     xref:
       - https://clinicaltrials.gov
       - https://fairsharing.org/FAIRsharing.mewhad
@@ -2079,7 +2079,7 @@ information_resources:
       - infores:automat-cohd
       - infores:automat-isb-EHRMLA-data
       - infores:connections-hypothesis
-      - infores:multiomics-ctkp
+      - infores:clinicaltrials-kp
       - infores:text-mining-provider-targeted
       - infores:service-provider-tmkp-targeted
       - infores:openpredict
@@ -2136,8 +2136,8 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     consumed_by:
-      - infores:multiomics-drugapprovals
-      - infores:multiomics-clinicaltrials
+      - infores:drugapprovals-kp
+      - infores:clinicaltrials-kp
   - status: released
     name: Drugs to target pAthways by the Tissue Expression
     id: infores:date
@@ -2662,7 +2662,7 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     consumed_by:
-      - infores:multiomics-drugapprovals
+      - infores:drugapprovals-kp
   - status: released
     name: Drosophila gross anatomy
     id: infores:fbbt
@@ -3720,7 +3720,7 @@ information_resources:
     consumes:
       - infores:dailymed
     consumed_by:
-      - infores:multiomics-drugapprovals
+      - infores:drugapprovals-kp
   - status: released
     name: MedlinePlus (from UMLS)
     id: infores:medlineplus
@@ -3987,7 +3987,7 @@ information_resources:
       - infores:molepro
   - status: released
     name: Multiomics ClinicalTrials KP API
-    id: infores:multiomics-clinicaltrials
+    id: infores:clinicaltrials-kp
     knowledge_level: knowledge_assertion
     agent_type: manual_agent
     consumes:
@@ -4000,7 +4000,7 @@ information_resources:
       - infores:service-provider-trapi
   - status: released
     name: Multiomics Drug Approvals KP API
-    id: infores:multiomics-drugapprovals
+    id: infores:drugapprovals-kp
     knowledge_level: knowledge_assertion
     agent_type: manual_agent
     consumes:
@@ -4014,7 +4014,7 @@ information_resources:
       - infores:service-provider-trapi
   - status: released
     name: Multiomics Microbiome KP API
-    id: infores:multiomics-microbiome
+    id: infores:microbiome-kp
     xref:
       - https://github.com/multiomicsKP/microbiome_kp
     knowledge_level: knowledge_assertion
@@ -4027,7 +4027,7 @@ information_resources:
       - infores:service-provider-trapi
   - status: released
     name: Multiomics KP API
-    id: infores:multiomics-multiomics
+    id: infores:multiomics-kp
     xref:
       - https://github.com/multiomicsKP/multiomics_kp
     knowledge_level: knowledge_assertion
@@ -4828,8 +4828,8 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     consumed_by:
-      - infores:multiomics-multiomics
-      - infores:multiomics-microbiome
+      - infores:multiomics-kp
+      - infores:microbiome-kp
       - infores:text-mining-provider-cooccurrence
       - infores:text-mining-provider-targeted
   - status: released
@@ -5051,7 +5051,7 @@ information_resources:
       - infores:atc-codes-umls
       - infores:bfo
       - infores:biolink-ontology
-      - infores:biothings-multiomics-clinicaltrials
+      - infores:clinicaltrials-kp
       - infores:bspo
       - infores:chebi
       - infores:chembl
@@ -5097,8 +5097,8 @@ information_resources:
       - infores:mi
       - infores:mirbase
       - infores:mondo
-      - infores:multiomics-clinicaltrials
-      - infores:multiomics-drugapprovals
+      - infores:clinicaltrials-kp
+      - infores:drugapprovals-kp
       - infores:nbo
       - infores:ncbi-gene
       - infores:ncbi-taxon
@@ -5243,10 +5243,10 @@ information_resources:
       - infores:litvar
       - infores:molepro
       - infores:monarchinitiative
-      - infores:multiomics-clinicaltrials
-      - infores:multiomics-drugapprovals
-      - infores:multiomics-microbiome
-      - infores:multiomics-multiomics
+      - infores:clinicaltrials-kp
+      - infores:drugapprovals-kp
+      - infores:microbiome-kp
+      - infores:multiomics-kp
       - infores:mychem-info
       - infores:mydisease-info
       - infores:mygene-info
