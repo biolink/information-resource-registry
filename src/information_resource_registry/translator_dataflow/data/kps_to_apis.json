@@ -114,11 +114,13 @@
     "infores:uberon"
   ],
   "infores:catrax-pharmacogenomics": [],
+  "infores:clinicaltrials-kp": [],
   "infores:cohd": [],
   "infores:complex-portal": [],
   "infores:connections-hypothesis": [],
   "infores:cqs": [],
   "infores:ctd": [],
+  "infores:drugapprovals-kp": [],
   "infores:ebi-proteins": [
     "infores:uniprot"
   ],
@@ -132,12 +134,10 @@
   "infores:litvar": [
     "infores:dbsnp"
   ],
+  "infores:microbiome-kp": [],
   "infores:molepro": [],
   "infores:monarchinitiative": [],
-  "infores:multiomics-clinicaltrials": [],
-  "infores:multiomics-drugapprovals": [],
-  "infores:multiomics-microbiome": [],
-  "infores:multiomics-multiomics": [],
+  "infores:multiomics-kp": [],
   "infores:mychem-info": [
     "infores:chebi",
     "infores:chembl",

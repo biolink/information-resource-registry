@@ -24,7 +24,7 @@ generate_consumes_annotations:
 	$(RUN) molepro_consume
 
 merge_into_infores_catalog:
-	$(RUN) add_consume_info infores_catalog.yaml ${DATA_DIR}/*.json > ${DATA_DIR}/infores_catalog_new.yaml
+	$(RUN) add_consume_info infores_catalog.yaml --renames ${DATA_DIR}/id_renames.yaml ${DATA_DIR}/*.json > ${DATA_DIR}/infores_catalog_new.yaml
 	mv $(DATA_DIR)/infores_catalog_new.yaml infores_catalog.yaml
 
 

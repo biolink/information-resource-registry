@@ -33,17 +33,15 @@
     "infores:genetics-data-provider",
     "infores:knowledge-collaboratory",
     "infores:molepro",
-    "infores:multiomics-clinicaltrials",
-    "infores:multiomics-drugapprovals",
-    "infores:multiomics-microbiome",
-    "infores:multiomics-multiomics",
+    "infores:clinicaltrials-kp",
+    "infores:drugapprovals-kp",
+    "infores:microbiome-kp",
+    "infores:multiomics-kp",
     "infores:openpredict",
-    "infores:retriever",
     "infores:retriever",
     "infores:rtx-kg2",
     "infores:service-provider-trapi",
     "infores:spoke",
-    "infores:text-mining-provider-cooccurrence",
     "infores:text-mining-provider-cooccurrence"
   ]
 }

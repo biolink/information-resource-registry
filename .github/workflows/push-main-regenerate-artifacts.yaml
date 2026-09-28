@@ -46,9 +46,11 @@ jobs:
       - name: Generate Information Resource Registry Artifacts
         run: |
           make gen-project
-          make test_pr
           make sankey
           make gendoc
+          # test_pr runs last so the regenerated catalog is validated before
+          # it is committed; running it earlier let a failing state reach main
+          make test_pr
           if [ $? -eq 0 ]; then
             git config --local user.email "action@github.com"
             git config --local user.name "GitHub Action"
