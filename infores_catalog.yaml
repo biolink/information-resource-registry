@@ -1272,10 +1272,10 @@ information_resources:
   - status: deprecated
     name: Multiomics ClinicalTrials KP API
     id: infores:biothings-multiomics-clinicaltrials
+    description: >-
+      Deprecated identifier; this resource is now identified as infores:clinicaltrials-kp.
     knowledge_level: knowledge_assertion
     agent_type: manual_agent
-    consumed_by:
-      - infores:rtx-kg2
   - status: modified
     name: Multiomics EHR Risk KP API
     id: infores:biothings-multiomics-ehr-risk
@@ -1754,6 +1754,10 @@ information_resources:
   - status: deprecated
     name: ClinicalTrials.gov
     id: infores:clinicaltrials
+    description: >-
+      Deprecated identifier; this resource is now identified as infores:clinicaltrials-gov.
+    knowledge_level: knowledge_assertion
+    agent_type: not_provided
   - status: released
     name: ClinicalTrials.gov
     id: infores:clinicaltrials-gov
@@ -1773,6 +1777,7 @@ information_resources:
     consumed_by:
       - infores:aragorn
       - infores:arax
+      - infores:cqs
       - infores:rtx-kg2
       - infores:service-provider-trapi
   - status: released
@@ -4031,9 +4036,17 @@ information_resources:
   - status: deprecated
     name: Multiomics ClinicalTrials KP API
     id: infores:multiomics-clinicaltrials
+    description: >-
+      Deprecated identifier; this resource is now identified as infores:clinicaltrials-kp.
+    knowledge_level: knowledge_assertion
+    agent_type: manual_agent
   - status: deprecated
     name: Multiomics Drug Approvals KP API
     id: infores:multiomics-drugapprovals
+    description: >-
+      Deprecated identifier; this resource is now identified as infores:drugapprovals-kp.
+    knowledge_level: knowledge_assertion
+    agent_type: manual_agent
   - status: released
     name: Multiomics KP API
     id: infores:multiomics-kp
@@ -4050,9 +4063,17 @@ information_resources:
   - status: deprecated
     name: Multiomics Microbiome KP API
     id: infores:multiomics-microbiome
+    description: >-
+      Deprecated identifier; this resource is now identified as infores:microbiome-kp.
+    knowledge_level: knowledge_assertion
+    agent_type: manual_validation_of_automated_agent
   - status: deprecated
     name: Multiomics KP API
     id: infores:multiomics-multiomics
+    description: >-
+      Deprecated identifier; this resource is now identified as infores:multiomics-kp.
+    knowledge_level: knowledge_assertion
+    agent_type: manual_validation_of_automated_agent
   - status: released
     name: My Cancer Genome
     id: infores:mycancergenome
@@ -5067,7 +5088,6 @@ information_resources:
       - infores:atc-codes-umls
       - infores:bfo
       - infores:biolink-ontology
-      - infores:clinicaltrials-kp
       - infores:bspo
       - infores:chebi
       - infores:chembl
