@@ -2431,6 +2431,7 @@ information_resources:
     consumes:
       - infores:canada-vigilance
       - infores:dailymed
+      - infores:ema
       - infores:faers
       - infores:medi
     consumed_by:
@@ -2621,6 +2622,22 @@ information_resources:
     agent_type: manual_agent
     consumed_by:
       - infores:rtx-kg2
+  - status: released
+    name: European Medicines Agency medicines registry
+    id: infores:ema
+    xref:
+      - https://www.ema.europa.eu/en/medicines
+    synonym:
+      - EMA
+    description: >-
+      The European Medicines Agency publishes a bulk export of every centrally reviewed
+      medicine
+      in the European Union; its authorised human-medicines rows carry each medicine's therapeutic
+      areas and links to its European Public Assessment Report.
+    knowledge_level: knowledge_assertion
+    agent_type: not_provided
+    consumed_by:
+      - infores:drugapprovals-kp
   - status: released
     name: Mouse Developmental Anatomy Ontology
     id: infores:emapa
