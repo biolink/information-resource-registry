@@ -1536,6 +1536,22 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - status: released
+    name: Canada Vigilance Adverse Reaction Online Database
+    id: infores:canada-vigilance
+    xref:
+      - https://www.canada.ca/en/health-canada/services/drugs-health-products/medeffect-canada/adverse-reaction-database/canada-vigilance-online-database-data-extract.html
+    synonym:
+      - Canada Vigilance
+    description: >-
+      Health Canada's Canada Vigilance program collects adverse reaction reports for drugs
+      and
+      health products marketed in Canada. Its monthly online-database data extract provides
+      suspect drug-indication pairs and case counts comparable to FDA's FAERS.
+    knowledge_level: knowledge_assertion
+    agent_type: not_provided
+    consumed_by:
+      - infores:drugapprovals-kp
+  - status: released
     name: CancerCommons
     id: infores:cancercommons
     xref:
@@ -2413,6 +2429,7 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: manual_agent
     consumes:
+      - infores:canada-vigilance
       - infores:dailymed
       - infores:faers
       - infores:medi
