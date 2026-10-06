@@ -11,6 +11,10 @@ on:
   workflow_dispatch:
     types: trigger-build-artifacts
 
+permissions:
+  contents: write
+  pull-requests: write
+
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
@@ -49,16 +53,20 @@ jobs:
           make sankey
           make gendoc
           # test_pr runs last so the regenerated catalog is validated before
-          # it is committed; running it earlier let a failing state reach main
+          # it is committed; running it earlier let a failing state be committed
           make test_pr
-          if [ $? -eq 0 ]; then
-            git config --local user.email "action@github.com"
-            git config --local user.name "GitHub Action"
-            git add project/*
-            git add src/*
-            git add infores_catalog.yaml
-            git commit -m "Regenerate artifacts from infores_catalog.yaml"
-            git push
-          else
-            echo "'make' gen-project failed to finish successfully"
-          fi
+
+      - name: Create pull request for regenerated artifacts
+        uses: peter-evans/create-pull-request@v7
+        with:
+          add-paths: |
+            project/
+            src/
+            infores_catalog.yaml
+          branch: automation/regenerate-artifacts
+          base: main
+          commit-message: Regenerate artifacts from infores_catalog.yaml
+          title: Regenerate Information Resource Registry artifacts
+          body: |
+            This pull request contains artifacts regenerated from `infores_catalog.yaml`.
+          delete-branch: true
