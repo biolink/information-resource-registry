@@ -2432,6 +2432,7 @@ information_resources:
       - infores:canada-vigilance
       - infores:dailymed
       - infores:ema
+      - infores:epar
       - infores:faers
       - infores:medi
     consumed_by:
@@ -2684,6 +2685,22 @@ information_resources:
       - NCBIGene
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+  - status: released
+    name: European Public Assessment Report (EPAR)
+    id: infores:epar
+    xref:
+      - https://www.ema.europa.eu/en/medicines/download-medicine-data
+    synonym:
+      - EPAR
+    description: >-
+      European Public Assessment Reports are the EMA's scientific documents describing the
+      basis
+      for a medicine's marketing authorisation in the European Union, including therapeutic
+      indication text and the Summary of Product Characteristics.
+    knowledge_level: knowledge_assertion
+    agent_type: not_provided
+    consumed_by:
+      - infores:drugapprovals-kp
   - status: released
     name: EPSD
     id: infores:epsd
