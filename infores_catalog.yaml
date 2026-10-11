@@ -1782,6 +1782,8 @@ information_resources:
       - https://fairsharing.org/FAIRsharing.mewhad
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+    consumed_by:
+      - infores:lunasai-kg
   - status: released
     name: Multiomics ClinicalTrials KP API
     id: infores:clinicaltrials-kp
@@ -1852,6 +1854,131 @@ information_resources:
       to generate knowledge graph edges.
     knowledge_level: knowledge_assertion
     agent_type: automated_agent
+  - status: released
+    name: CMS ASP NDC-HCPCS Crosswalk
+    id: infores:cms-asp-crosswalk
+    xref:
+      - https://www.cms.gov/medicare/payment/part-b-drugs/asp-pricing-files
+    description: >-
+      The quarterly CMS Average Sales Price crosswalk linking National Drug Codes to the
+      HCPCS codes under which Medicare Part B drugs are billed.
+    knowledge_level: knowledge_assertion
+    agent_type: manual_agent
+    consumed_by:
+      - infores:lunasai-kg
+  - status: released
+    name: CMS HCPCS Level II Code Set
+    id: infores:cms-hcpcs
+    xref:
+      - https://www.cms.gov/medicare/coding-billing/healthcare-common-procedure-system
+    synonym:
+      - HCPCS Level II
+    description: >-
+      The Healthcare Common Procedure Coding System Level II codes and descriptors as published
+      by CMS in its quarterly alphanumeric HCPCS files (the direct CMS distribution, as
+      opposed to infores:hcp-codes-umls).
+    knowledge_level: knowledge_assertion
+    agent_type: manual_agent
+    consumed_by:
+      - infores:lunasai-kg
+  - status: released
+    name: CMS ICD-10-PCS Code Set
+    id: infores:cms-icd10pcs
+    xref:
+      - https://www.cms.gov/medicare/coding-billing/icd-10-codes
+    synonym:
+      - ICD-10-PCS
+    description: >-
+      The International Classification of Diseases, Tenth Revision, Procedure Coding System
+      as published by CMS in its annual code files (the direct CMS distribution, as opposed
+      to infores:icd10pcs-umls).
+    knowledge_level: knowledge_assertion
+    agent_type: manual_agent
+    consumed_by:
+      - infores:lunasai-kg
+  - status: released
+    name: CMS Medicare Coverage Database (MCD)
+    id: infores:cms-mcd
+    xref:
+      - https://www.cms.gov/medicare-coverage-database/
+    synonym:
+      - MCD
+    description: >-
+      The Centers for Medicare & Medicaid Services database of National Coverage Determinations
+      (NCDs), Local Coverage Determinations (LCDs) and Medicare Administrative Contractor
+      billing and coding articles, including the CPT/HCPCS and ICD-10-CM codes each document
+      lists as covered or not covered.
+    knowledge_level: knowledge_assertion
+    agent_type: manual_agent
+    consumed_by:
+      - infores:lunasai-kg
+  - status: released
+    name: CMS MS-DRG Classifications and Software
+    id: infores:cms-ms-drg
+    xref:
+      - https://www.cms.gov/medicare/payment/prospective-payment-systems/acute-inpatient-pps/ms-drg-classifications-and-software
+    synonym:
+      - MS-DRG
+    description: >-
+      The Medicare Severity Diagnosis Related Groups definitions published by CMS each fiscal
+      year, comprising the DRGs, their Major Diagnostic Categories, and the grouper tables
+      assigning ICD-10-CM diagnoses and ICD-10-PCS procedures to DRGs.
+    knowledge_level: knowledge_assertion
+    agent_type: manual_agent
+    consumed_by:
+      - infores:lunasai-kg
+  - status: released
+    name: CMS National Correct Coding Initiative (NCCI) Procedure-to-Procedure Edits
+    id: infores:cms-ncci
+    xref:
+      - https://www.cms.gov/medicare/coding-billing/national-correct-coding-initiative-ncci-edits
+    synonym:
+      - NCCI PTP edits
+    description: >-
+      CMS quarterly code-pair edits identifying CPT/HCPCS procedures that should not be
+      billed together for the same beneficiary and date of service (practitioner and outpatient
+      hospital programs).
+    knowledge_level: knowledge_assertion
+    agent_type: manual_agent
+    consumed_by:
+      - infores:lunasai-kg
+  - status: released
+    name: CMS Medicare Part D Prescribers by Provider and Drug
+    id: infores:cms-part-d-prescribers
+    xref:
+      - https://data.cms.gov/provider-summary-by-type-of-service/medicare-part-d-prescribers
+    description: >-
+      Annual CMS public use file of Medicare Part D prescription drug claims aggregated
+      by prescriber (NPI) and drug (brand and generic name), with claim counts, beneficiaries
+      and costs.
+    knowledge_level: observation
+    agent_type: automated_agent
+    consumed_by:
+      - infores:lunasai-kg
+  - status: released
+    name: CMS Medicare Physician and Other Practitioners by Provider and Service
+    id: infores:cms-physician-utilization
+    xref:
+      - https://data.cms.gov/provider-summary-by-type-of-service/medicare-physician-other-practitioners
+    description: >-
+      Annual CMS public use file of Medicare Part B fee-for-service claims aggregated by
+      rendering provider (NPI) and HCPCS/CPT service, with services, beneficiaries and payments.
+    knowledge_level: observation
+    agent_type: automated_agent
+    consumed_by:
+      - infores:lunasai-kg
+  - status: released
+    name: CMS Provider Data Catalog
+    id: infores:cms-provider-data
+    xref:
+      - https://data.cms.gov/provider-data/
+    description: >-
+      CMS datasets on Medicare-enrolled clinicians and facilities, including the facility
+      affiliations of clinicians derived from claims.
+    knowledge_level: knowledge_assertion
+    agent_type: automated_agent
+    consumed_by:
+      - infores:lunasai-kg
   - status: released
     name: Columbia Open Health Data (COHD)
     id: infores:cohd
@@ -2175,6 +2302,7 @@ information_resources:
     consumed_by:
       - infores:clinicaltrials-kp
       - infores:drugapprovals-kp
+      - infores:lunasai-kg
   - status: released
     name: Drugs to target pAthways by the Tissue Expression
     id: infores:date
@@ -2505,6 +2633,21 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - status: released
+    name: Drugs@FDA
+    id: infores:drugs-at-fda
+    xref:
+      - https://www.fda.gov/drugs/drug-approvals-and-databases/drugsfda-data-files
+    synonym:
+      - Drugs@FDA
+    description: >-
+      The FDA database of approved brand-name and generic drug products (NDA, ANDA and BLA
+      applications), with application holders, products and approval documents including
+      labels.
+    knowledge_level: knowledge_assertion
+    agent_type: manual_agent
+    consumed_by:
+      - infores:lunasai-kg
+  - status: released
     name: Distributed Structure-Searchable Toxicity (DSSTox) Database
     id: infores:dsstoxdb
     xref:
@@ -2784,6 +2927,20 @@ information_resources:
       A structured controlled vocabulary of the development of Drosophila melanogaster.
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+  - status: released
+    name: FDA CDRH Medical Device Premarket Databases (510(k), PMA, De Novo)
+    id: infores:fda-devices
+    xref:
+      - https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpma/pma.cfm
+      - https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm
+    description: >-
+      The FDA Center for Devices and Radiological Health records of premarket notifications
+      (510(k)), premarket approvals (PMA) and De Novo classifications, with applicant, device
+      and decision documents.
+    knowledge_level: knowledge_assertion
+    agent_type: manual_agent
+    consumed_by:
+      - infores:lunasai-kg
   - status: released
     name: FDA Orphan Drug Project designation database
     id: infores:fda-orphan-drug-db
@@ -3195,6 +3352,7 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     consumed_by:
+      - infores:lunasai-kg
       - infores:rtx-kg2
   - status: released
     name: Hetionet
@@ -3375,6 +3533,8 @@ information_resources:
       - https://icd10cmtool.cdc.gov/
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+    consumed_by:
+      - infores:lunasai-kg
   - status: released
     name: ICD10CM (from UMLS)
     id: infores:icd10cm-umls
@@ -3731,6 +3891,8 @@ information_resources:
       - LOINC
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+    consumed_by:
+      - infores:lunasai-kg
   - status: released
     name: LOINC (from UMLS)
     id: infores:loinc-umls
@@ -3740,6 +3902,50 @@ information_resources:
     agent_type: not_provided
     consumed_by:
       - infores:rtx-kg2
+  - status: released
+    name: LunasAI Knowledge Graph
+    id: infores:lunasai-kg
+    xref:
+      - https://lunas.health/about
+    synonym:
+      - LunasAI KG
+    description: >-
+      A clinical knowledge graph (Neo4j) that aggregates biomedical literature (PubMed /
+      MEDLINE MeSH indexing, OpenAlex citations), clinical trials, drug and device regulatory
+      records, US medical coding systems (ICD-10-CM, ICD-10-PCS, CPT, HCPCS, MS-DRG, LOINC,
+      RxNorm, RadLex) and CMS coverage, billing and provider data. Edges transcribed from
+      a source carry that source as primary_knowledge_source and LunasAI KG as aggregator;
+      edges LunasAI's own pipelines infer (code-to-MeSH crosswalks, embedding similarity,
+      LLM text mining, chained mappings) carry LunasAI KG as primary source. Every edge
+      records derivation, knowledge_level, agent_type and, for mapping edges, an SSSOM mapping_justification.
+    knowledge_level: mixed
+    agent_type: not_provided
+    consumes:
+      - infores:clinicaltrials-gov
+      - infores:cms-asp-crosswalk
+      - infores:cms-hcpcs
+      - infores:cms-icd10pcs
+      - infores:cms-mcd
+      - infores:cms-ms-drg
+      - infores:cms-ncci
+      - infores:cms-part-d-prescribers
+      - infores:cms-physician-utilization
+      - infores:cms-provider-data
+      - infores:dailymed
+      - infores:drugs-at-fda
+      - infores:fda-devices
+      - infores:hcpcs-cpt-umls
+      - infores:icd10cm
+      - infores:loinc
+      - infores:medlineplus
+      - infores:mesh
+      - infores:nppes
+      - infores:openalex
+      - infores:pubmed
+      - infores:radlex
+      - infores:rxnorm
+      - infores:snomedct
+      - infores:umls
   - status: released
     name: MatrixDB
     id: infores:matrixdb
@@ -3815,6 +4021,7 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: manual_agent
     consumed_by:
+      - infores:lunasai-kg
       - infores:rtx-kg2
   - status: released
     name: Medication Reference Terminology (MED-RT) (from UMLS)
@@ -3835,6 +4042,7 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: manual_agent
     consumed_by:
+      - infores:lunasai-kg
       - infores:rtx-kg2
   - status: released
     name: MetaCyc Metabolic Pathway Database
@@ -4395,6 +4603,23 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - status: released
+    name: National Plan and Provider Enumeration System (NPPES) NPI Registry
+    id: infores:nppes
+    xref:
+      - https://download.cms.gov/nppes/NPI_Files.html
+      - https://npiregistry.cms.hhs.gov/
+    synonym:
+      - NPPES
+      - NPI Registry
+    description: >-
+      The CMS registry of National Provider Identifiers for US health care providers and
+      organizations, with self-reported practice locations and NUCC Health Care Provider
+      Taxonomy codes.
+    knowledge_level: knowledge_assertion
+    agent_type: manual_agent
+    consumed_by:
+      - infores:lunasai-kg
+  - status: released
     name: nSides
     id: infores:nsides
     xref:
@@ -4535,6 +4760,19 @@ information_resources:
       - https://www.opentargets.org/
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+  - status: released
+    name: OpenAlex
+    id: infores:openalex
+    xref:
+      - https://openalex.org/
+    description: >-
+      An open catalog of scholarly works, authors, venues and institutions, including the
+      reference lists (citations) of works, built by OurResearch from Crossref, PubMed,
+      ORCID, publisher and repository metadata.
+    knowledge_level: knowledge_assertion
+    agent_type: automated_agent
+    consumed_by:
+      - infores:lunasai-kg
   - status: released
     name: Open Health Data @ Carolina
     id: infores:openhealthdata-carolina
@@ -4902,6 +5140,7 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     consumed_by:
+      - infores:lunasai-kg
       - infores:text-mining-provider-cooccurrence
       - infores:text-mining-provider-targeted
   - status: released
@@ -4940,6 +5179,20 @@ information_resources:
       - QuickGO
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+  - status: released
+    name: RadLex Radiology Lexicon
+    id: infores:radlex
+    xref:
+      - https://www.rsna.org/practice-tools/data-tools-and-standards/radlex-radiology-lexicon
+    synonym:
+      - RadLex
+    description: >-
+      The Radiological Society of North America's controlled terminology for radiology,
+      covering imaging procedures, anatomy, findings and devices.
+    knowledge_level: knowledge_assertion
+    agent_type: manual_agent
+    consumed_by:
+      - infores:lunasai-kg
   - status: released
     name: RaMPDB
     id: infores:rampdb
@@ -5232,6 +5485,7 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: automated_agent
     consumed_by:
+      - infores:lunasai-kg
       - infores:molepro
       - infores:rtx-kg2
   - status: released
@@ -5466,6 +5720,7 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     consumed_by:
+      - infores:lunasai-kg
       - infores:rtx-kg2
   - status: released
     name: SnpEff
@@ -5820,6 +6075,7 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     consumed_by:
+      - infores:lunasai-kg
       - infores:rtx-kg2
   - status: released
     name: UMLS Metathesaurus (MTH) (from UMLS)
