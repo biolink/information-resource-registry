@@ -5554,10 +5554,10 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - status: released
-    name: Node Normalization
+    name: Node Normalization Redis
     id: infores:sri-node-normalizer
     xref:
-      - https://github.com/TranslatorSRI/NodeNormalization
+      - https://github.com/NCATSTranslator/NodeNormalization
     description: >-
       Node normalization takes a CURIE, and returns resolved alias and
       the canonical identifier of a node.
@@ -5565,6 +5565,18 @@ information_resources:
     agent_type: not_provided
     consumed_by:
       - infores:molepro
+  - status: released
+    name: Node Normalization
+    id: infores:nodenorm
+    xref:
+      - https://github.com/biothings/NodeNormalizationAPI
+    description: >-
+      The Node Normalizer takes a CURIE and returns a canonical
+      identifier, label, Biolink type and equivalent identifiers for
+      the CURIE. This is the ElasticSearch version of NodeNorm that
+      fully replaced infores:sri-node-normalizer in Oct 2026.
+    knowledge_level: knowledge_assertion
+    agent_type: not_provided
   - status: deprecated
     name: Ontology-KP API
     id: infores:sri-ontology
