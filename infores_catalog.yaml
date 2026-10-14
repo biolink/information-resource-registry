@@ -4386,6 +4386,18 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - status: released
+    name: Node Normalization
+    id: infores:nodenorm
+    xref:
+      - https://github.com/biothings/NodeNormalizationAPI
+    description: >-
+      The Node Normalizer takes a CURIE and returns a canonical
+      identifier, label, Biolink type and equivalent identifiers for
+      the CURIE. This is the ElasticSearch version of NodeNorm that
+      fully replaced infores:sri-node-normalizer in Oct 2026.
+    knowledge_level: knowledge_assertion
+    agent_type: not_provided
+  - status: released
     name: National Organization for Rare Disorders (NORD) Database
     id: infores:nord
     xref:
@@ -5565,18 +5577,6 @@ information_resources:
     agent_type: not_provided
     consumed_by:
       - infores:molepro
-  - status: released
-    name: Node Normalization
-    id: infores:nodenorm
-    xref:
-      - https://github.com/biothings/NodeNormalizationAPI
-    description: >-
-      The Node Normalizer takes a CURIE and returns a canonical
-      identifier, label, Biolink type and equivalent identifiers for
-      the CURIE. This is the ElasticSearch version of NodeNorm that
-      fully replaced infores:sri-node-normalizer in Oct 2026.
-    knowledge_level: knowledge_assertion
-    agent_type: not_provided
   - status: deprecated
     name: Ontology-KP API
     id: infores:sri-ontology
