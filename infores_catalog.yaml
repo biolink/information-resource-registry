@@ -5573,7 +5573,10 @@ information_resources:
       - https://github.com/NCATSTranslator/NodeNormalization
     description: >-
       Node normalization takes a CURIE, and returns resolved alias and
-      the canonical identifier of a node.
+      the canonical identifier of a node. This is the Redis version of
+      NodeNorm. It was replaced by NodeNorm ES (infores:nodenorm) in
+      Translator CI, Test and Prod in Oct 2026, but it is still
+      maintained, and is used in Translator Dev and by other projects.
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     consumed_by:
