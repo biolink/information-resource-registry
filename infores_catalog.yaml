@@ -4394,7 +4394,8 @@ information_resources:
       The Node Normalizer takes a CURIE and returns a canonical
       identifier, label, Biolink type and equivalent identifiers for
       the CURIE. This is the ElasticSearch version of NodeNorm that
-      fully replaced infores:sri-node-normalizer in Oct 2026.
+      fully replaced NodeNorm Redis (infores:sri-node-normalizer) on
+      Translator in Oct 2026.
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - status: released
