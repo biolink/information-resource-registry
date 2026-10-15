@@ -4386,6 +4386,19 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - status: released
+    name: Node Normalization
+    id: infores:nodenorm
+    xref:
+      - https://github.com/biothings/NodeNormalizationAPI
+    description: >-
+      The Node Normalizer takes a CURIE and returns a canonical
+      identifier, label, Biolink type and equivalent identifiers for
+      the CURIE. This is the ElasticSearch version of NodeNorm that
+      fully replaced NodeNorm Redis (infores:sri-node-normalizer) on
+      Translator in Oct 2026.
+    knowledge_level: knowledge_assertion
+    agent_type: not_provided
+  - status: released
     name: National Organization for Rare Disorders (NORD) Database
     id: infores:nord
     xref:
@@ -5554,13 +5567,16 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - status: released
-    name: Node Normalization
+    name: Node Normalization Redis
     id: infores:sri-node-normalizer
     xref:
-      - https://github.com/TranslatorSRI/NodeNormalization
+      - https://github.com/NCATSTranslator/NodeNormalization
     description: >-
-      Node normalization takes a CURIE, and returns resolved alias and
-      the canonical identifier of a node.
+      Node Normalization takes a CURIE, and returns resolved alias and
+      the canonical identifier of a node. This is the Redis version of
+      NodeNorm. It was replaced by NodeNorm ES (infores:nodenorm) in
+      Translator CI, Test and Prod in Oct 2026, but it is still
+      maintained, and is used in Translator Dev and by other projects.
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     consumed_by:
