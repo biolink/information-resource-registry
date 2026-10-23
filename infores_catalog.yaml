@@ -2562,6 +2562,7 @@ information_resources:
       - infores:ema
       - infores:epar
       - infores:faers
+      - infores:icd10cm
       - infores:medi
     consumed_by:
       - infores:aragorn
@@ -3531,10 +3532,17 @@ information_resources:
     id: infores:icd10cm
     xref:
       - https://icd10cmtool.cdc.gov/
+    synonym:
+      - ICD-10-CM
+    description: >-
+      The International Classification of Diseases, Tenth Revision, Clinical Modification
+      is the CDC-maintained classification used to code and classify medical diagnoses;
+      each fiscal-year release is published with its tabular list, index, and addenda.
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     consumed_by:
       - infores:lunasai-kg
+      - infores:drugapprovals-kp
   - status: released
     name: ICD10CM (from UMLS)
     id: infores:icd10cm-umls
