@@ -4888,6 +4888,15 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - status: released
+    name: Pathbank
+    id: infores:pathbank
+    xref:
+      - https://pathbank.org/
+    knowledge_level: knowledge_assertion
+    agent_type: manual_agent
+    consumed_by:
+      - infores:rtx-kg2
+  - status: released
     name: Pathway Commons
     id: infores:pathway-commons
     xref:
@@ -6441,12 +6450,3 @@ information_resources:
       the Zebrafish model organism.
     knowledge_level: knowledge_assertion
     agent_type: not_provided
-  - status: released
-    name: Pathbank
-    id: infores:pathbank
-    xref:
-      - https://pathbank.org/
-    knowledge_level: knowledge_assertion
-    agent_type: manual_agent
-    consumed_by:
-      - infores:rtx-kg2
