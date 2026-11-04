@@ -4894,8 +4894,6 @@ information_resources:
       - https://pathbank.org/
     knowledge_level: knowledge_assertion
     agent_type: manual_agent
-    consumed_by:
-      - infores:rtx-kg2
   - status: released
     name: Pathway Commons
     id: infores:pathway-commons
