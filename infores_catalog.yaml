@@ -4888,6 +4888,13 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - status: released
+    name: Pathbank
+    id: infores:pathbank
+    xref:
+      - https://pathbank.org/
+    knowledge_level: knowledge_assertion
+    agent_type: manual_agent
+  - status: released
     name: Pathway Commons
     id: infores:pathway-commons
     xref:
