@@ -114,10 +114,14 @@ If the status is `released`, two more fields are required:
   upstream source it aggregates knowledge from. When in doubt, mint separate identifiers rather
   than overloading one.
 
-A GitHub Action automatically standardizes the formatting and field ordering of
-`infores_catalog.yaml` on every pull request, and the test suite validates the catalog against the
+A GitHub Action automatically standardizes the formatting, field ordering and entry ordering of
+`infores_catalog.yaml` on pull requests from branches in this repository, and the test suite
+validates the catalog against the
 [LinkML schema](src/information_resource_registry/schema/information_resource_registry.yaml) — so
 don't worry about getting the formatting perfect; do make sure the required fields are present.
+On pull requests from forks the Action cannot push fixes, so CI fails instead if the catalog is
+not standardized; run `make standardize-data` and commit the result. See
+[Checking your changes](#checking-your-changes) for how to run the same checks locally.
 
 ## Why identifiers must persist (and the deprecation protocol)
 
@@ -177,14 +181,57 @@ request.
     * [schema](src/information_resource_registry/schema) -- LinkML schema
       (edit this)
 
-## Developer Documentation
+## Checking your changes
 
-<details>
-Use the `make` command to generate project artefacts:
+Before opening a pull request that edits `infores_catalog.yaml`, you can confirm locally that
+downstream tools will still be able to read the catalog after your change.
 
-* `make all`: make everything
-* `make deploy`: deploys site
-</details>
+### How downstream tools get the catalog
+
+Downstream tools read the catalog in one of these forms, so a change has to survive all of them:
+
+- **`infores_catalog.yaml`** — read straight from this repository or from the website at
+  <https://biolink.github.io/information-resource-registry/infores_catalog.yaml>.
+- **GitHub release assets** — every [release](https://github.com/biolink/information-resource-registry/releases)
+  attaches `infores_catalog.yaml`, `infores_catalog.json`, `infores_catalog.tsv` and
+  `infores_catalog.jsonl` (one JSON object per resource). They are generated from the YAML by
+  `make create_release_extras`, which uses `linkml-convert` with the LinkML schema. A stanza that
+  doesn't fit the schema can therefore break the JSON, TSV and JSONL files even when the YAML
+  itself parses.
+
+### Setting up
+
+The checks run through [uv](https://docs.astral.sh/uv/). Install the dependencies with:
+
+```bash
+uv sync
+```
+
+CI tests on Python 3.10, 3.11 and 3.12.
+
+### The checks
+
+| Command | What it checks | Run in CI? |
+| --- | --- | --- |
+| `make test_pr` | The checks CI runs on every pull request: `linkml-validate` against the schema (required fields, allowed enum values such as `status`, `knowledge_level` and `agent_type`), `pytest` (catalog rules not expressible in the schema, including that every `consumes`/`consumed_by` reference resolves to a catalog `id` and that the two directions agree), `codespell`, `yamllint` (YAML syntax, indentation, duplicate keys), and the two rows below. | Yes, on every PR |
+| `make check_standardized` | That the file is already in standard form: entries sorted by `id`, fields in schema order, `xref` lists sorted and de-duplicated, descriptions as folded blocks. It runs the standardizer on a copy and fails if anything would change. Fix it with `make standardize-data`, which rewrites the file in place. | Yes, as part of `make test_pr`; an Action also auto-fixes PRs from branches in this repository |
+| `make create_release_extras` | That the catalog converts cleanly to the JSON, TSV and JSONL release files. It writes them to `release-output/` (git-ignored). | Yes, as part of `make test_pr`; also run when a release is created |
+| `make test` | Everything in `make test_pr`, plus `check_urls`, which requests every `xref` URL with a pause between requests, so it takes a long time; a weekly Action runs it on `main`. | Weekly, for URLs |
+
+For an ordinary catalog edit, this is enough:
+
+```bash
+make test_pr   # if check_standardized fails: make standardize-data, then commit the result
+jq '.information_resources[] | select(.id == "infores:my-new-resource")' release-output/infores_catalog.json
+```
+
+The last command should print your stanza with every field you wrote. If a field is missing or
+mangled, a downstream tool reading the JSON release won't see it either.
+
+### Other make targets
+
+* `make all`: generate the project artefacts (`project/`) and the documentation site
+* `make testdoc`: build the documentation site and serve it locally
 
 ## Credits
 
