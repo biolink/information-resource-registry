@@ -14,6 +14,40 @@ in a Translator knowledge graph can say which resource it came from by pointing 
 
 [https://biolink.github.io/information-resource-registry](https://biolink.github.io/information-resource-registry)
 
+## Using the catalog from Python
+
+The catalog and its schema are published to PyPI as
+[`information-resource-registry`](https://pypi.org/project/information-resource-registry/), so
+downstream tools can depend on a pinned version instead of fetching the YAML from GitHub:
+
+```bash
+pip install information-resource-registry
+```
+
+```python
+from information_resource_registry import (
+    get_information_resource,
+    get_information_resources,
+    load_catalog,
+    load_catalog_dict,
+    get_catalog_path,
+    get_schema_view,
+)
+
+kg2 = get_information_resource("infores:rtx-kg2")
+print(kg2.name, kg2.knowledge_level, kg2.agent_type)
+
+active = [r for r in get_information_resources() if r.status != "deprecated"]
+
+catalog = load_catalog()        # pydantic InformationResourceContainer
+raw = load_catalog_dict()       # the parsed YAML as plain dicts/lists
+path = get_catalog_path()       # Path to the bundled infores_catalog.yaml
+schema_view = get_schema_view() # linkml-runtime SchemaView over the schema
+```
+
+The package depends only on `linkml-runtime` and `pyyaml`. The maintenance scripts (`check_urls`,
+`generate_sankey`, ...) need the `scripts` extra: `pip install "information-resource-registry[scripts]"`.
+
 ## Adding a new information resource
 
 To register a new resource, add a stanza to [`infores_catalog.yaml`](infores_catalog.yaml) and open

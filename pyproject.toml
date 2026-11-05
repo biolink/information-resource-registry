@@ -1,6 +1,9 @@
+[build-system]
+requires = ["hatchling", "uv-dynamic-versioning"]
+build-backend = "hatchling.build"
+
 [project]
 name = "information-resource-registry"
-version = "0.0.0"
 description = "A registry of information resources used in NCATS Data Translator"
 authors = [
     {name = "Sierra Moxon", email = "smoxon@lbl.gov"}
@@ -8,41 +11,52 @@ authors = [
 license = {text = "MIT"}
 readme = "README.md"
 requires-python = ">=3.10"
+dynamic = ["version"]
+
+# Runtime dependencies are intentionally minimal: everything needed to load the
+# packaged catalog and schema. Tooling used to maintain the registry lives in
+# the `scripts` extra and the `dev` dependency group below.
 dependencies = [
-    "click>=8.3.0",
-    "curies>=0.12.0",
-    "prefixmaps>=0.2.0",
+    "linkml-runtime>=1.8.0",
     "pyyaml>=6.0.1",
-    "stringcase>=1.2.0",
-    "pytest>=7.3.1",
-    "beautifulsoup4>=4.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/biolink/information-resource-registry"
+Documentation = "https://biolink.github.io/information-resource-registry/"
+Repository = "https://github.com/biolink/information-resource-registry"
+"Bug Tracker" = "https://github.com/biolink/information-resource-registry/issues"
+
+[project.optional-dependencies]
+# Needed by the console scripts declared in [project.scripts]
+scripts = [
+    "click>=8.3.0",
     "kaleido==0.2.1",
     "pandas>=2.2.3",
     "plotly>=5.24.1",
-    "yamllint>=1.35.1",
-    "linkml>=1.8.5",
-    "linkml-runtime>=1.8.0",
-    "tqdm>=4.66.6",
-    "ssslm>=0.1.2",
-    "fairsharing-client>=0.3.0",
-    "ruamel-yaml>=0.18.0",
-    "packaging>=24.0",
     "requests>=2.31.0",
-    "gilda>=1.4.1",
-    "codespell>=2.4.1",
-]
-
-[project.optional-dependencies]
-dev = [
-    "mkdocs>=1.4.2",
-    "mkdocs-material>=9.4.8",
-    "mkdocs-mermaid2-plugin>=1.1.1",
-    "schemasheets>=0.1.14",
+    "ruamel-yaml>=0.18.0",
+    "tqdm>=4.66.6",
 ]
 docs = [
     "mkdocs>=1.4.2",
     "mkdocs-material>=9.4.8",
     "mkdocs-mermaid2-plugin>=1.1.1",
+]
+
+[dependency-groups]
+dev = [
+    "information-resource-registry[scripts,docs]",
+    "linkml>=1.8.5",
+    "pytest>=7.3.1",
+    "codespell>=2.4.1",
+    "yamllint>=1.35.1",
+    "schemasheets>=0.1.14",
+    # used by generate_lexical_mappings.py
+    "curies>=0.12.0",
+    "fairsharing-client>=0.3.0",
+    "gilda>=1.4.1",
+    "ssslm>=0.1.2",
 ]
 
 [project.scripts]
@@ -57,16 +71,32 @@ rtx_kg2 = "information_resource_registry.translator_dataflow.rtx_kg2:main"
 unsecret = "information_resource_registry.translator_dataflow.unsecret:main"
 check_urls = "information_resource_registry.validation.check_urls:main"
 
-[build-system]
-requires = ["hatchling", "hatch-vcs"]
-build-backend = "hatchling.build"
-
+# The package version is the git tag (e.g. v1.1.14 -> 1.1.14), following the
+# linkml-project-copier template. Builds without tag history get 0.0.0.
 [tool.hatch.version]
-source = "vcs"
+source = "uv-dynamic-versioning"
+
+[tool.uv-dynamic-versioning]
+vcs = "git"
+style = "pep440"
+fallback-version = "0.0.0"
+
+[tool.hatch.build]
+# Large rendered diagrams are build outputs of `make sankey`, not package data
+exclude = ["*.png"]
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/information_resource_registry"]
 
+# The catalog is maintained at the repository root (external tools fetch it
+# from that path on GitHub). At build time it is copied into the package so
+# that `information_resource_registry.catalog` can load it from an install.
+[tool.hatch.build.targets.wheel.force-include]
+"infores_catalog.yaml" = "information_resource_registry/data/infores_catalog.yaml"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
 [tool.codespell]
-skip = '.idea,.git,SEMMEDDB*,semmed*,*.svg,docs,registry.md,xrefs.html'
+skip = '.idea,.git,.venv,uv.lock,SEMMEDDB*,semmed*,*.svg,docs,registry.md,xrefs.html'
 ignore-words-list = 'amination,ehr,mor,brite,nin,mirgate,MiRgate,EHR,nin,miR,miRNA,miRBase,Clearity'
