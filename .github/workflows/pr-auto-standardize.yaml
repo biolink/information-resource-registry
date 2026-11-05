@@ -3,8 +3,6 @@ name: Auto-standardize catalog on PR
 on:
   pull_request:
     types: [opened, synchronize, reopened]
-    paths:
-      - 'infores_catalog.yaml'
 
 permissions:
   contents: write
