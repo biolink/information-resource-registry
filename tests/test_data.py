@@ -67,3 +67,49 @@ def test_multiomics_renamed_infores_entries():
         assert not old_ids.intersection(infores.get("consumed_by", []))
 
 
+def test_data_flow_references_resolve_and_agree():
+    """Every CURIE in consumes/consumed_by must be an id in the catalog, and the
+    two directions must agree: if A consumes B, then B must list consumed_by A."""
+    with open(infores_catalog, 'r') as yaml_file:
+        data = yaml.safe_load(yaml_file)
+
+    resources = data.get("information_resources", [])
+    by_id = {infores["id"]: infores for infores in resources}
+
+    errors = []
+    for infores in resources:
+        for field, mirror in (("consumes", "consumed_by"), ("consumed_by", "consumes")):
+            for ref in infores.get(field) or []:
+                target = by_id.get(ref)
+                if target is None:
+                    errors.append(
+                        f"{infores['id']} lists {ref} in {field}, "
+                        f"but {ref} is not an id in the catalog"
+                    )
+                elif infores["id"] not in (target.get(mirror) or []):
+                    errors.append(
+                        f"{infores['id']} lists {ref} in {field}, "
+                        f"but {ref} does not list {infores['id']} in {mirror}"
+                    )
+    assert not errors, "Dangling or one-directional data-flow references:\n" + "\n".join(errors)
+
+
+def test_no_duplicate_stanzas():
+    """A stanza is a duplicate only if another stanza has the same id and all
+    of the same metadata."""
+    with open(infores_catalog, 'r') as yaml_file:
+        data = yaml.safe_load(yaml_file)
+
+    resources = data.get("information_resources", [])
+    by_id = {}
+    for infores in resources:
+        by_id.setdefault(infores["id"], []).append(infores)
+
+    duplicates = [
+        infores_id
+        for infores_id, stanzas in by_id.items()
+        if len(stanzas) > 1 and any(s == stanzas[0] for s in stanzas[1:])
+    ]
+    assert not duplicates, f"Duplicate stanzas in catalog: {duplicates}"
+
+
