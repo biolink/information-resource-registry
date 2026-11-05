@@ -100,6 +100,7 @@ information_resources:
       - infores:automat-binding-db
       - infores:automat-cam-kp
       - infores:automat-cebs
+      - infores:automat-cohd
       - infores:automat-ctd
       - infores:automat-drug-central
       - infores:automat-ehr-may-treat-kp
@@ -114,6 +115,7 @@ information_resources:
       - infores:automat-icees-kg
       - infores:automat-intact
       - infores:automat-monarchinitiative
+      - infores:automat-openhealthdata-carolina
       - infores:automat-panther
       - infores:automat-pharos
       - infores:automat-reactome
@@ -168,6 +170,7 @@ information_resources:
       - infores:answer-coalesce
       - infores:automat-binding-db
       - infores:automat-cam-kp
+      - infores:automat-cebs
       - infores:automat-cohd
       - infores:automat-ctd
       - infores:automat-drug-central
@@ -222,7 +225,12 @@ information_resources:
       - infores:aragorn
       - infores:arax
       - infores:biothings-explorer
+      - infores:cqs
       - infores:improving-agent
+      - infores:shepherd-aragorn
+      - infores:shepherd-arax
+      - infores:shepherd-bte
+      - infores:shepherd-sipr
       - infores:unsecret-agent
   - status: released
     name: Anatomical Therapeutic Chemical (ATC) Codes (from UMLS)
@@ -367,6 +375,7 @@ information_resources:
     consumed_by:
       - infores:aragorn
       - infores:arax
+      - infores:cqs
       - infores:openpredict
       - infores:service-provider-trapi
   - status: deprecated
@@ -596,6 +605,7 @@ information_resources:
     consumed_by:
       - infores:aragorn
       - infores:arax
+      - infores:cqs
       - infores:service-provider-trapi
   - status: released
     name: Automat IntAct
@@ -657,6 +667,8 @@ information_resources:
       and the co-occurrence frequencies between them.
     knowledge_level: statistical_association
     agent_type: not_provided
+    consumes:
+      - infores:openhealthdata-carolina
     consumed_by:
       - infores:aragorn
   - status: released
@@ -772,6 +784,7 @@ information_resources:
     consumed_by:
       - infores:aragorn
       - infores:arax
+      - infores:automat-cohd
       - infores:cohd
   - status: deprecated
     name: Automat Ubergraph Nonredundant
@@ -830,6 +843,8 @@ information_resources:
       - BGEE
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+    consumed_by:
+      - infores:spoke
   - status: released
     name: BHF-UCL Cardiovascular Gene Ontology Initiative
     id: infores:bhf-ucl
@@ -891,6 +906,7 @@ information_resources:
     consumed_by:
       - infores:biothings-bindingdb
       - infores:molepro
+      - infores:spoke
   - status: released
     name: Bio2RDF
     id: infores:bio2rdf
@@ -1078,6 +1094,7 @@ information_resources:
     agent_type: not_provided
     consumes:
       - infores:ebi-gene2phenotype
+      - infores:gene2phenotype
     consumed_by:
       - infores:service-provider-trapi
   - status: released
@@ -1103,6 +1120,7 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     consumes:
+      - infores:foodb
       - infores:fooddb
     consumed_by:
       - infores:service-provider-trapi
@@ -1270,7 +1288,7 @@ information_resources:
       - infores:arax
       - infores:service-provider-trapi
   - status: deprecated
-    name: Multiomics ClinicalTrials KP API
+    name: Multiomics ClinicalTrials KP API (deprecated BioThings identifier)
     id: infores:biothings-multiomics-clinicaltrials
     description: >-
       Deprecated identifier; this resource is now identified as infores:clinicaltrials-kp.
@@ -1526,6 +1544,8 @@ information_resources:
       TRAPI interface to database of Causal Activity Models
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+    consumed_by:
+      - infores:cqs
   - status: deprecated
     name: Clinical Asset Mapping Program for FHIR
     id: infores:campfhir
@@ -1576,6 +1596,7 @@ information_resources:
       - infores:drugcentral
       - infores:hpo
       - infores:hpo-annotations
+      - infores:icd11-foundation
       - infores:mondo
       - infores:ncbi-gene
       - infores:pharmgkb
@@ -1673,6 +1694,7 @@ information_resources:
       - infores:molepro
       - infores:mychem-info
       - infores:rtx-kg2
+      - infores:spoke
   - status: deprecated
     name: Chemotext
     id: infores:chemotext
@@ -1708,6 +1730,7 @@ information_resources:
     agent_type: not_provided
     consumed_by:
       - infores:myvariant-info
+      - infores:spoke
   - status: released
     name: Cancer KnowledgeBase CORE – Genomenon (CKB-CORE)
     id: infores:ckb-core
@@ -1768,7 +1791,7 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - status: deprecated
-    name: ClinicalTrials.gov
+    name: ClinicalTrials.gov (deprecated)
     id: infores:clinicaltrials
     description: >-
       Deprecated identifier; this resource is now identified as infores:clinicaltrials-gov.
@@ -2121,6 +2144,7 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     consumed_by:
+      - infores:automat-cohd
       - infores:cohd
   - status: released
     name: Community Structure-Activity Resource
@@ -2173,6 +2197,7 @@ information_resources:
     consumed_by:
       - infores:aragorn
       - infores:arax
+      - infores:cqs
       - infores:service-provider-trapi
   - status: deprecated
     name: COVID-19 Open Research Dataset
@@ -2241,18 +2266,15 @@ information_resources:
     consumes:
       - infores:automat-cohd
       - infores:automat-icees-kg
-      - infores:automat-isb-EHRMLA-data
       - infores:cam-kp
       - infores:clinicaltrials-kp
       - infores:connections-hypothesis
-      - infores:molepro-chembl
+      - infores:isb-EHRMLA-data
+      - infores:molepro
       - infores:openpredict
-      - infores:rtxkg2-semmed
-      - infores:service-provider-aeolus
-      - infores:service-provider-chembl
-      - infores:service-provider-semmed
-      - infores:service-provider-tmkp-targeted
-      - infores:spoke-chembl
+      - infores:rtx-kg2
+      - infores:service-provider-trapi
+      - infores:spoke
       - infores:text-mining-provider-targeted
     consumed_by:
       - infores:ars
@@ -2303,6 +2325,7 @@ information_resources:
       - infores:clinicaltrials-kp
       - infores:drugapprovals-kp
       - infores:lunasai-kg
+      - infores:medi
   - status: released
     name: Drugs to target pAthways by the Tissue Expression
     id: infores:date
@@ -2361,6 +2384,28 @@ information_resources:
       discoideum.
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+  - status: released
+    name: DatabasE of genomiC varIation and Phenotype in Humans using Ensembl Resources
+    id: infores:decipher
+    xref:
+      - https://www.deciphergenomics.org/
+    synonym:
+      - DECIPHER
+    description: >-
+      DECIPHER (DatabasE of genomiC varIation and Phenotype in Humans using Ensembl Resources)
+      is an interactive
+      web-based database which incorporates a suite of tools designed to aid the interpretation
+      of genomic variants.
+      DECIPHER enhances clinical diagnosis by retrieving information from a variety of bioinformatics
+      resources
+      relevant to the variant found in the patient. The patient's variant is displayed in
+      the context of both
+      normal variation and pathogenic variation reported at that locus thereby facilitating
+      interpretation.
+    knowledge_level: observation
+    agent_type: manual_agent
+    consumed_by:
+      - infores:hpo-annotations
   - status: deprecated
     name: delta QT Database
     id: infores:delta-qt-db
@@ -2382,23 +2427,6 @@ information_resources:
     agent_type: not_provided
     consumed_by:
       - infores:molepro
-  - status: released
-    name: DatabasE of genomiC varIation and Phenotype in Humans using Ensembl Resources
-    id: infores:decipher
-    xref:
-      - https://www.deciphergenomics.org/
-    synonym:
-      - DECIPHER
-    description: >-
-      DECIPHER (DatabasE of genomiC varIation and Phenotype in Humans using Ensembl Resources) is an interactive
-      web-based database which incorporates a suite of tools designed to aid the interpretation of genomic variants.
-      DECIPHER enhances clinical diagnosis by retrieving information from a variety of bioinformatics resources
-      relevant to the variant found in the patient. The patient's variant is displayed in the context of both
-      normal variation and pathogenic variation reported at that locus thereby facilitating interpretation.
-    knowledge_level: observation
-    agent_type: manual_agent
-    consumed_by:
-      - infores:hpoa
   - status: released
     name: Drug Gene Interaction Database
     id: infores:dgidb
@@ -2455,6 +2483,7 @@ information_resources:
     consumed_by:
       - infores:ols
       - infores:rtx-kg2
+      - infores:spoke
   - status: released
     name: DISEASES
     id: infores:diseases
@@ -2472,6 +2501,7 @@ information_resources:
     consumed_by:
       - infores:biothings-diseases
       - infores:rtx-kg2
+      - infores:spoke
   - status: released
     name: DisGeNET
     id: infores:disgenet
@@ -2625,6 +2655,7 @@ information_resources:
       - infores:molepro
       - infores:mychem-info
       - infores:rtx-kg2
+      - infores:spoke
   - status: released
     name: DrugMatrix
     id: infores:drugmatrix
@@ -3015,7 +3046,7 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - status: released
-    name: Foundational Model of Anatomy Ontology (FMA -- both from UMLS and from OBO)
+    name: Foundational Model of Anatomy Ontology (FMA, from OBO)
     id: infores:fma-obo
     xref:
       - https://www.nlm.nih.gov/research/umls/sourcereleasedocs/current/FMA/index.html
@@ -3024,7 +3055,7 @@ information_resources:
     consumed_by:
       - infores:rtx-kg2
   - status: released
-    name: Foundational Model of Anatomy Ontology (FMA -- both from UMLS and from OBO)
+    name: Foundational Model of Anatomy Ontology (FMA, from UMLS)
     id: infores:fma-umls
     xref:
       - https://www.nlm.nih.gov/research/umls/sourcereleasedocs/current/FMA/index.html
@@ -3062,6 +3093,7 @@ information_resources:
     agent_type: not_provided
     consumed_by:
       - infores:biothings-foodb
+      - infores:spoke
   - status: released
     name: Food Ontology
     id: infores:foodon
@@ -3106,6 +3138,7 @@ information_resources:
     agent_type: not_provided
     consumed_by:
       - infores:biothings-multiomics-biggim-drugresponse
+      - infores:spoke
   - status: released
     name: GeLiNEA
     id: infores:gelinea
@@ -3249,6 +3282,7 @@ information_resources:
       - infores:biothings-go-mf
       - infores:ebi-quick-go
       - infores:rtx-kg2
+      - infores:spoke
   - status: released
     name: Gene Ontology Causal Activity Model Annotations
     id: infores:go-cam
@@ -3353,6 +3387,8 @@ information_resources:
       - GWAS
     knowledge_level: statistical_association
     agent_type: not_provided
+    consumed_by:
+      - infores:spoke
   - status: released
     name: Healthcare Common Procedure Coding System (from UMLS)
     id: infores:hcp-codes-umls
@@ -3444,6 +3480,8 @@ information_resources:
       and industry to freely access the data for exploration of the human proteome.
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+    consumed_by:
+      - infores:spoke
   - status: released
     name: Host–Pathogen Interaction Database (HPIDB)
     id: infores:hpidb
@@ -3467,7 +3505,7 @@ information_resources:
       - infores:catrax-pharmacogenomics
       - infores:rtx-kg2
   - status: released
-    name: Human Phenotype Ontology
+    name: Human Phenotype Ontology Annotations
     id: infores:hpo-annotations
     xref:
       - https://fairsharing.org/FAIRsharing.kbtt7f
@@ -3476,8 +3514,11 @@ information_resources:
       - HPO Annotations
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+    consumes:
+      - infores:decipher
     consumed_by:
       - infores:biothings-hpo
+      - infores:catrax-pharmacogenomics
       - infores:mydisease-info
   - status: released
     name: Human Developmental Stages Ontology
@@ -3558,8 +3599,8 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
     consumed_by:
-      - infores:lunasai-kg
       - infores:drugapprovals-kp
+      - infores:lunasai-kg
   - status: released
     name: ICD10CM (from UMLS)
     id: infores:icd10cm-umls
@@ -3710,6 +3751,8 @@ information_resources:
       - http://www.ebi.ac.uk/interpro
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+    consumed_by:
+      - infores:spoke
   - status: released
     name: 'Inxight: Drugs'
     id: infores:inxight-drugs
@@ -3790,6 +3833,8 @@ information_resources:
       (MLA) May Treat query web services.
     knowledge_level: prediction
     agent_type: computational_model
+    consumed_by:
+      - infores:cqs
   - status: released
     name: Institute for Systems Biology COVID-19 Immune Response Study
     id: infores:isb-incov
@@ -3819,6 +3864,7 @@ information_resources:
     agent_type: manual_agent
     consumed_by:
       - infores:rtx-kg2
+      - infores:spoke
   - status: deprecated
     name: Knowledge Graph Exchange Archive
     id: infores:kgea
@@ -3885,6 +3931,8 @@ information_resources:
       - LINCS
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+    consumed_by:
+      - infores:spoke
   - status: deprecated
     name: Linked Structured Product Labels
     id: infores:linkedspl
@@ -4069,6 +4117,7 @@ information_resources:
     consumed_by:
       - infores:lunasai-kg
       - infores:rtx-kg2
+      - infores:spoke
   - status: released
     name: MetaCyc Metabolic Pathway Database
     id: infores:metacyc
@@ -4215,6 +4264,7 @@ information_resources:
     consumed_by:
       - infores:aragorn
       - infores:arax
+      - infores:cqs
       - infores:molepro
       - infores:service-provider-trapi
   - status: deprecated
@@ -4318,14 +4368,14 @@ information_resources:
     consumed_by:
       - infores:molepro
   - status: deprecated
-    name: Multiomics ClinicalTrials KP API
+    name: Multiomics ClinicalTrials KP API (deprecated)
     id: infores:multiomics-clinicaltrials
     description: >-
       Deprecated identifier; this resource is now identified as infores:clinicaltrials-kp.
     knowledge_level: knowledge_assertion
     agent_type: manual_agent
   - status: deprecated
-    name: Multiomics Drug Approvals KP API
+    name: Multiomics Drug Approvals KP API (deprecated)
     id: infores:multiomics-drugapprovals
     description: >-
       Deprecated identifier; this resource is now identified as infores:drugapprovals-kp.
@@ -4345,14 +4395,14 @@ information_resources:
       - infores:arax
       - infores:service-provider-trapi
   - status: deprecated
-    name: Multiomics Microbiome KP API
+    name: Multiomics Microbiome KP API (deprecated)
     id: infores:multiomics-microbiome
     description: >-
       Deprecated identifier; this resource is now identified as infores:microbiome-kp.
     knowledge_level: knowledge_assertion
     agent_type: manual_validation_of_automated_agent
   - status: deprecated
-    name: Multiomics KP API
+    name: Multiomics KP API (deprecated)
     id: infores:multiomics-multiomics
     description: >-
       Deprecated identifier; this resource is now identified as infores:multiomics-kp.
@@ -4533,6 +4583,7 @@ information_resources:
     agent_type: manual_agent
     consumed_by:
       - infores:rtx-kg2
+      - infores:spoke
   - status: deprecated
     name: North Carolina Department of Environmental Quality Concentrated Animal Feeding
       Operations Exposures Data
@@ -4743,6 +4794,7 @@ information_resources:
     consumed_by:
       - infores:openpredict
       - infores:rtx-kg2
+      - infores:spoke
   - status: released
     name: OmniCorp
     id: infores:omnicorp
@@ -4769,6 +4821,7 @@ information_resources:
     knowledge_level: not_provided
     agent_type: not_provided
     consumed_by:
+      - infores:automat-cohd
       - infores:cohd
   - status: released
     name: Observational Medical Outcomes Partnership Observational Health Data Sciences 
@@ -4845,12 +4898,14 @@ information_resources:
     knowledge_level: prediction
     agent_type: not_provided
     consumes:
+      - infores:automat-cohd
       - infores:cohd
       - infores:drugbank
       - infores:omim
     consumed_by:
       - infores:aragorn
       - infores:arax
+      - infores:cqs
   - status: released
     name: Orphanet Rare Disease Ontology
     id: infores:ordo
@@ -4904,6 +4959,8 @@ information_resources:
       - http://patho.phenomebrowser.net/#/
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+    consumed_by:
+      - infores:spoke
   - status: released
     name: Pathbank
     id: infores:pathbank
@@ -5003,6 +5060,8 @@ information_resources:
       of redundancy.
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+    consumed_by:
+      - infores:spoke
   - status: released
     name: PFOCR
     id: infores:pfocr
@@ -5515,6 +5574,9 @@ information_resources:
     consumed_by:
       - infores:aragorn
       - infores:arax
+      - infores:cqs
+      - infores:dogpark-tier0
+      - infores:dogpark-tier1
       - infores:unsecret-agent
   - status: released
     name: RxNorm
@@ -5575,6 +5637,9 @@ information_resources:
     knowledge_level: other
     agent_type: not_provided
     consumes:
+      - infores:automat-cam-kp
+      - infores:automat-cebs
+      - infores:automat-cohd
       - infores:automat-ctd
       - infores:automat-drug-central
       - infores:automat-gtex
@@ -5620,6 +5685,7 @@ information_resources:
       - infores:biothings-suppkg
       - infores:biothings-ttd
       - infores:biothings-uberon-ontology
+      - infores:catrax-pharmacogenomics
       - infores:clinicaltrials-kp
       - infores:cohd
       - infores:complex-portal
@@ -5643,6 +5709,7 @@ information_resources:
       - infores:aragorn
       - infores:arax
       - infores:biothings-explorer
+      - infores:cqs
   - status: released
     name: Saccharomyces Genome Database
     id: infores:sgd
@@ -5717,6 +5784,7 @@ information_resources:
     consumed_by:
       - infores:catrax-pharmacogenomics
       - infores:molepro
+      - infores:spoke
   - status: released
     name: SIGNOR 3.0
     id: infores:signor
@@ -5736,7 +5804,7 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - status: deprecated
-    name: SmartAPI API
+    name: SmartAPI API (deprecated)
     id: infores:smartapi
     xref:
       - https://smart-api.info
@@ -5807,7 +5875,7 @@ information_resources:
       - infores:civic
       - infores:disease-ontology
       - infores:diseases
-      - infores:drugcentr
+      - infores:drugcentral
       - infores:fooddb
       - infores:gdsc
       - infores:go
@@ -5828,6 +5896,7 @@ information_resources:
     consumed_by:
       - infores:aragorn
       - infores:arax
+      - infores:cqs
   - status: released
     name: SRI Answer Appraiser
     id: infores:sri-answer-appraiser
@@ -5942,6 +6011,7 @@ information_resources:
     agent_type: not_provided
     consumed_by:
       - infores:molepro
+      - infores:spoke
   - status: released
     name: SuppKG
     id: infores:suppkg
@@ -6018,6 +6088,7 @@ information_resources:
       - infores:pubmed
       - infores:pubmed-central
     consumed_by:
+      - infores:cqs
       - infores:service-provider-trapi
       - infores:unsecret-agent
   - status: deprecated
@@ -6113,6 +6184,7 @@ information_resources:
     consumed_by:
       - infores:biothings-uberon-ontology
       - infores:rtx-kg2
+      - infores:spoke
   - status: released
     name: Unified Medical Language System
     id: infores:umls
@@ -6173,6 +6245,7 @@ information_resources:
       - infores:ebi-proteins
       - infores:molepro
       - infores:rtx-kg2
+      - infores:spoke
   - status: released
     name: UniRef
     id: infores:uniref

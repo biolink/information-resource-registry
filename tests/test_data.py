@@ -67,3 +67,45 @@ def test_multiomics_renamed_infores_entries():
         assert not old_ids.intersection(infores.get("consumed_by", []))
 
 
+def test_data_flow_references_resolve_and_agree():
+    """Every CURIE in consumes/consumed_by must be an id in the catalog, and the
+    two directions must agree: if A consumes B, then B must list consumed_by A."""
+    with open(infores_catalog, 'r') as yaml_file:
+        data = yaml.safe_load(yaml_file)
+
+    resources = data.get("information_resources", [])
+    by_id = {infores["id"]: infores for infores in resources}
+
+    errors = []
+    for infores in resources:
+        for field, mirror in (("consumes", "consumed_by"), ("consumed_by", "consumes")):
+            for ref in infores.get(field) or []:
+                target = by_id.get(ref)
+                if target is None:
+                    errors.append(
+                        f"{infores['id']} lists {ref} in {field}, "
+                        f"but {ref} is not an id in the catalog"
+                    )
+                elif infores["id"] not in (target.get(mirror) or []):
+                    errors.append(
+                        f"{infores['id']} lists {ref} in {field}, "
+                        f"but {ref} does not list {infores['id']} in {mirror}"
+                    )
+    assert not errors, "Dangling or one-directional data-flow references:\n" + "\n".join(errors)
+
+
+def test_names_are_unique():
+    """No two stanzas may share a name; duplicate names make resources
+    indistinguishable in user-facing tools."""
+    with open(infores_catalog, 'r') as yaml_file:
+        data = yaml.safe_load(yaml_file)
+
+    resources = data.get("information_resources", [])
+    by_name = {}
+    for infores in resources:
+        by_name.setdefault(infores.get("name"), []).append(infores["id"])
+
+    duplicates = {name: ids for name, ids in by_name.items() if len(ids) > 1}
+    assert not duplicates, f"Duplicate names in catalog: {duplicates}"
+
+
