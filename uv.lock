@@ -752,77 +752,72 @@ wheels = [
 
 [[package]]
 name = "information-resource-registry"
-version = "0.0.0"
 source = { editable = "." }
 dependencies = [
-    { name = "beautifulsoup4" },
-    { name = "click" },
-    { name = "codespell" },
-    { name = "curies" },
-    { name = "fairsharing-client" },
-    { name = "gilda" },
-    { name = "kaleido" },
-    { name = "linkml" },
     { name = "linkml-runtime" },
-    { name = "packaging" },
-    { name = "pandas" },
-    { name = "plotly" },
-    { name = "prefixmaps" },
-    { name = "pytest" },
     { name = "pyyaml" },
-    { name = "requests" },
-    { name = "ruamel-yaml" },
-    { name = "ssslm" },
-    { name = "stringcase" },
-    { name = "tqdm" },
-    { name = "yamllint" },
 ]
 
 [package.optional-dependencies]
-dev = [
-    { name = "mkdocs" },
-    { name = "mkdocs-material" },
-    { name = "mkdocs-mermaid2-plugin" },
-    { name = "schemasheets" },
-]
 docs = [
     { name = "mkdocs" },
     { name = "mkdocs-material" },
     { name = "mkdocs-mermaid2-plugin" },
 ]
+scripts = [
+    { name = "click" },
+    { name = "kaleido" },
+    { name = "pandas" },
+    { name = "plotly" },
+    { name = "requests" },
+    { name = "ruamel-yaml" },
+    { name = "tqdm" },
+]
+
+[package.dev-dependencies]
+dev = [
+    { name = "codespell" },
+    { name = "curies" },
+    { name = "fairsharing-client" },
+    { name = "gilda" },
+    { name = "information-resource-registry", extra = ["docs", "scripts"] },
+    { name = "linkml" },
+    { name = "pytest" },
+    { name = "schemasheets" },
+    { name = "ssslm" },
+    { name = "yamllint" },
+]
 
 [package.metadata]
 requires-dist = [
-    { name = "beautifulsoup4", specifier = ">=4.0.0" },
-    { name = "click", specifier = ">=8.3.0" },
+    { name = "click", marker = "extra == 'scripts'", specifier = ">=8.3.0" },
+    { name = "kaleido", marker = "extra == 'scripts'", specifier = "==0.2.1" },
+    { name = "linkml-runtime", specifier = ">=1.8.0" },
+    { name = "mkdocs", marker = "extra == 'docs'", specifier = ">=1.4.2" },
+    { name = "mkdocs-material", marker = "extra == 'docs'", specifier = ">=9.4.8" },
+    { name = "mkdocs-mermaid2-plugin", marker = "extra == 'docs'", specifier = ">=1.1.1" },
+    { name = "pandas", marker = "extra == 'scripts'", specifier = ">=2.2.3" },
+    { name = "plotly", marker = "extra == 'scripts'", specifier = ">=5.24.1" },
+    { name = "pyyaml", specifier = ">=6.0.1" },
+    { name = "requests", marker = "extra == 'scripts'", specifier = ">=2.31.0" },
+    { name = "ruamel-yaml", marker = "extra == 'scripts'", specifier = ">=0.18.0" },
+    { name = "tqdm", marker = "extra == 'scripts'", specifier = ">=4.66.6" },
+]
+provides-extras = ["docs", "scripts"]
+
+[package.metadata.requires-dev]
+dev = [
     { name = "codespell", specifier = ">=2.4.1" },
     { name = "curies", specifier = ">=0.12.0" },
     { name = "fairsharing-client", specifier = ">=0.3.0" },
     { name = "gilda", specifier = ">=1.4.1" },
-    { name = "kaleido", specifier = "==0.2.1" },
+    { name = "information-resource-registry", extras = ["scripts", "docs"] },
     { name = "linkml", specifier = ">=1.8.5" },
-    { name = "linkml-runtime", specifier = ">=1.8.0" },
-    { name = "mkdocs", marker = "extra == 'dev'", specifier = ">=1.4.2" },
-    { name = "mkdocs", marker = "extra == 'docs'", specifier = ">=1.4.2" },
-    { name = "mkdocs-material", marker = "extra == 'dev'", specifier = ">=9.4.8" },
-    { name = "mkdocs-material", marker = "extra == 'docs'", specifier = ">=9.4.8" },
-    { name = "mkdocs-mermaid2-plugin", marker = "extra == 'dev'", specifier = ">=1.1.1" },
-    { name = "mkdocs-mermaid2-plugin", marker = "extra == 'docs'", specifier = ">=1.1.1" },
-    { name = "packaging", specifier = ">=24.0" },
-    { name = "pandas", specifier = ">=2.2.3" },
-    { name = "plotly", specifier = ">=5.24.1" },
-    { name = "prefixmaps", specifier = ">=0.2.0" },
     { name = "pytest", specifier = ">=7.3.1" },
-    { name = "pyyaml", specifier = ">=6.0.1" },
-    { name = "requests", specifier = ">=2.31.0" },
-    { name = "ruamel-yaml", specifier = ">=0.18.0" },
-    { name = "schemasheets", marker = "extra == 'dev'", specifier = ">=0.1.14" },
+    { name = "schemasheets", specifier = ">=0.1.14" },
     { name = "ssslm", specifier = ">=0.1.2" },
-    { name = "stringcase", specifier = ">=1.2.0" },
-    { name = "tqdm", specifier = ">=4.66.6" },
     { name = "yamllint", specifier = ">=1.35.1" },
 ]
-provides-extras = ["dev", "docs"]
 
 [[package]]
 name = "iniconfig"
@@ -2952,12 +2947,6 @@ sdist = { url = "https://files.pythonhosted.org/packages/67/3b/1e84bf7233a1beadd
 wheels = [
     { url = "https://files.pythonhosted.org/packages/8c/56/8d81bb552d821eab5c420b76dadaef4af60aef6db3609be9485d69e6828e/ssslm-0.1.2-py3-none-any.whl", hash = "sha256:8829e3a4450a7d1e5500f4f631dc5d74c787e175887fa3090c030b93d219b003", size = 28697, upload-time = "2025-08-28T11:25:53.633Z" },
 ]
-
-[[package]]
-name = "stringcase"
-version = "1.2.0"
-source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/f3/1f/1241aa3d66e8dc1612427b17885f5fcd9c9ee3079fc0d28e9a3aeeb36fa3/stringcase-1.2.0.tar.gz", hash = "sha256:48a06980661908efe8d9d34eab2b6c13aefa2163b3ced26972902e3bdfd87008", size = 2958, upload-time = "2017-08-06T01:40:57.021Z" }
 
 [[package]]
 name = "tabulate"

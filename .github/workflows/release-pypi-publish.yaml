@@ -1,11 +1,14 @@
 ---
 name: Publish Python Package
 
+# Publishes to PyPI when a GitHub release is published (drafts do nothing).
+# The package version is taken from the release tag by uv-dynamic-versioning,
+# so the checkout must include tag history.
+
 on:
   release:
-    types: [created]
+    types: [published]
   workflow_dispatch:
-    types: trigger-pypi-publish
 
 jobs:
   build-n-publish:
@@ -13,7 +16,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # uv-dynamic-versioning reads the version from git tags
 
       - name: Set up Python
         uses: actions/setup-python@v5
