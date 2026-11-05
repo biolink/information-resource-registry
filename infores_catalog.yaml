@@ -2361,6 +2361,28 @@ information_resources:
       discoideum.
     knowledge_level: knowledge_assertion
     agent_type: not_provided
+  - status: released
+    name: DatabasE of genomiC varIation and Phenotype in Humans using Ensembl Resources
+    id: infores:decipher
+    xref:
+      - https://www.deciphergenomics.org/
+    synonym:
+      - DECIPHER
+    description: >-
+      DECIPHER (DatabasE of genomiC varIation and Phenotype in Humans using Ensembl Resources)
+      is an interactive
+      web-based database which incorporates a suite of tools designed to aid the interpretation
+      of genomic variants.
+      DECIPHER enhances clinical diagnosis by retrieving information from a variety of bioinformatics
+      resources
+      relevant to the variant found in the patient. The patient's variant is displayed in
+      the context of both
+      normal variation and pathogenic variation reported at that locus thereby facilitating
+      interpretation.
+    knowledge_level: observation
+    agent_type: manual_agent
+    consumed_by:
+      - infores:hpoa
   - status: deprecated
     name: delta QT Database
     id: infores:delta-qt-db
@@ -2382,23 +2404,6 @@ information_resources:
     agent_type: not_provided
     consumed_by:
       - infores:molepro
-  - status: released
-    name: DatabasE of genomiC varIation and Phenotype in Humans using Ensembl Resources
-    id: infores:decipher
-    xref:
-      - https://www.deciphergenomics.org/
-    synonym:
-      - DECIPHER
-    description: >-
-      DECIPHER (DatabasE of genomiC varIation and Phenotype in Humans using Ensembl Resources) is an interactive
-      web-based database which incorporates a suite of tools designed to aid the interpretation of genomic variants.
-      DECIPHER enhances clinical diagnosis by retrieving information from a variety of bioinformatics resources
-      relevant to the variant found in the patient. The patient's variant is displayed in the context of both
-      normal variation and pathogenic variation reported at that locus thereby facilitating interpretation.
-    knowledge_level: observation
-    agent_type: manual_agent
-    consumed_by:
-      - infores:hpoa
   - status: released
     name: Drug Gene Interaction Database
     id: infores:dgidb
