@@ -1,11 +1,5 @@
 name: Auto-standardize catalog on PR
 
-# Runs on every PR (no paths filter): the `standardize` job is a required status
-# check on main, and a path-filtered workflow that never triggers reports no
-# status at all, leaving the required check stuck at "Expected" and blocking
-# merges of PRs that don't touch infores_catalog.yaml. When the catalog is
-# unchanged the job finds no diff and succeeds in ~30s.
-# See https://docs.github.com/en/pull-requests/how-tos/merge-and-close-pull-requests/troubleshooting-required-status-checks#handling-skipped-but-required-checks
 on:
   pull_request:
     types: [opened, synchronize, reopened]
