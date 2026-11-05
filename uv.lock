@@ -779,7 +779,7 @@ dev = [
     { name = "codespell" },
     { name = "curies" },
     { name = "fairsharing-client" },
-    { name = "gilda" },
+    { name = "gilda", marker = "python_full_version < '3.13'" },
     { name = "information-resource-registry", extra = ["docs", "scripts"] },
     { name = "linkml" },
     { name = "pytest" },
@@ -810,7 +810,7 @@ dev = [
     { name = "codespell", specifier = ">=2.4.1" },
     { name = "curies", specifier = ">=0.12.0" },
     { name = "fairsharing-client", specifier = ">=0.3.0" },
-    { name = "gilda", specifier = ">=1.4.1" },
+    { name = "gilda", marker = "python_full_version < '3.13'", specifier = ">=1.4.1" },
     { name = "information-resource-registry", extras = ["scripts", "docs"] },
     { name = "linkml", specifier = ">=1.8.5" },
     { name = "pytest", specifier = ">=7.3.1" },
@@ -2519,10 +2519,10 @@ version = "1.4.2"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "joblib" },
-    { name = "numpy", version = "2.2.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.11'" },
-    { name = "numpy", version = "2.3.4", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.11'" },
-    { name = "scipy", version = "1.15.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.11'" },
-    { name = "scipy", version = "1.16.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.11'" },
+    { name = "numpy", version = "2.2.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.11' or python_full_version >= '3.13'" },
+    { name = "numpy", version = "2.3.4", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.11' and python_full_version < '3.13'" },
+    { name = "scipy", version = "1.15.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.11' or python_full_version >= '3.13'" },
+    { name = "scipy", version = "1.16.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.11' and python_full_version < '3.13'" },
     { name = "threadpoolctl" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/ef/e5/c09d20723bfd91315f6f4ddc77912b0dcc09588b4ca7ad2ffa204607ad7f/scikit-learn-1.4.2.tar.gz", hash = "sha256:daa1c471d95bad080c6e44b4946c9390a4842adc3082572c20e4f8884e39e959", size = 7763055, upload-time = "2024-04-09T19:54:06.726Z" }
@@ -2608,7 +2608,6 @@ name = "scipy"
 version = "1.16.2"
 source = { registry = "https://pypi.org/simple" }
 resolution-markers = [
-    "python_full_version >= '3.13'",
     "python_full_version == '3.12.*'",
     "python_full_version == '3.11.*'",
 ]

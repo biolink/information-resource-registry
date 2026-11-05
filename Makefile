@@ -51,6 +51,8 @@ test_pr:
 	$(RUN) codespell
 	$(RUN) yamllint -c .yamllint-config src/information_resource_registry/schema/*.yaml
 	$(RUN) yamllint -c .yamllint-config infores_catalog.yaml
+	$(MAKE) check_standardized
+	$(MAKE) create_release_extras
 
 standardize-data: src/information_resource_registry/standardization/standardize.py infores_catalog.yaml
 	$(RUN) python $^ --in-place --schema src/information_resource_registry/schema/information_resource_registry.yaml
