@@ -119,8 +119,8 @@ A GitHub Action automatically standardizes the formatting, field ordering and en
 validates the catalog against the
 [LinkML schema](src/information_resource_registry/schema/information_resource_registry.yaml) — so
 don't worry about getting the formatting perfect; do make sure the required fields are present.
-Pull requests from forks are not auto-standardized (the Action cannot push to a fork), so if you
-are working from a fork, run `make standardize-data` yourself before opening the PR. See
+On pull requests from forks the Action cannot push fixes, so CI fails instead if the catalog is
+not standardized; run `make standardize-data` and commit the result. See
 [Checking your changes](#checking-your-changes) for how to run the same checks locally.
 
 ## Why identifiers must persist (and the deprecation protocol)
@@ -204,41 +204,29 @@ Downstream tools read the catalog in one of these forms, so a change has to surv
 The checks run through [uv](https://docs.astral.sh/uv/). Install the dependencies with:
 
 ```bash
-uv sync --python 3.12
+uv sync
 ```
 
-Pass `--python` explicitly: uv otherwise uses the newest Python it can find, and on Python 3.14 the
-install fails because a dependency (`gilda`) pins `scikit-learn==1.4.2`, which cannot be built
-there. CI tests on Python 3.10, 3.11 and 3.12.
+CI tests on Python 3.10, 3.11 and 3.12.
 
 ### The checks
 
 | Command | What it checks | Run in CI? |
 | --- | --- | --- |
-| `make test_pr` | The checks CI runs on every pull request: `linkml-validate` against the schema (required fields, allowed enum values such as `status`, `knowledge_level` and `agent_type`), `pytest` (catalog rules not expressible in the schema), `codespell`, and `yamllint` (YAML syntax, indentation, duplicate keys). | Yes, on every PR |
-| `make check_standardized` | That the file is already in standard form: entries sorted by `id`, fields in schema order, `xref` lists sorted and de-duplicated, descriptions as folded blocks. It runs the standardizer on a copy and fails if anything would change. Fix it with `make standardize-data`, which rewrites the file in place. | Only via the auto-standardize Action, which skips PRs from forks |
-| `make create_release_extras` | That the catalog converts cleanly to the JSON, TSV and JSONL release files. It writes them to `release-output/` (git-ignored). | Only when a release is created |
-| `make test` | Everything in `make test_pr`, plus `check_standardized` and `check_urls`. `check_urls` requests every `xref` URL with a pause between requests, so it takes a long time; a weekly Action runs it on `main`. | Weekly, for URLs |
+| `make test_pr` | The checks CI runs on every pull request: `linkml-validate` against the schema (required fields, allowed enum values such as `status`, `knowledge_level` and `agent_type`), `pytest` (catalog rules not expressible in the schema, including that every `consumes`/`consumed_by` reference resolves to a catalog `id` and that the two directions agree), `codespell`, `yamllint` (YAML syntax, indentation, duplicate keys), and the two rows below. | Yes, on every PR |
+| `make check_standardized` | That the file is already in standard form: entries sorted by `id`, fields in schema order, `xref` lists sorted and de-duplicated, descriptions as folded blocks. It runs the standardizer on a copy and fails if anything would change. Fix it with `make standardize-data`, which rewrites the file in place. | Yes, as part of `make test_pr`; an Action also auto-fixes PRs from branches in this repository |
+| `make create_release_extras` | That the catalog converts cleanly to the JSON, TSV and JSONL release files. It writes them to `release-output/` (git-ignored). | Yes, as part of `make test_pr`; also run when a release is created |
+| `make test` | Everything in `make test_pr`, plus `check_urls`, which requests every `xref` URL with a pause between requests, so it takes a long time; a weekly Action runs it on `main`. | Weekly, for URLs |
 
 For an ordinary catalog edit, this is enough:
 
 ```bash
-make test_pr
-make check_standardized   # if it fails: make standardize-data, then commit the result
-make create_release_extras
+make test_pr   # if check_standardized fails: make standardize-data, then commit the result
 jq '.information_resources[] | select(.id == "infores:my-new-resource")' release-output/infores_catalog.json
 ```
 
 The last command should print your stanza with every field you wrote. If a field is missing or
 mangled, a downstream tool reading the JSON release won't see it either.
-
-### What the checks don't catch
-
-- **Dangling data-flow references.** Nothing checks that every CURIE in `consumes` or
-  `consumed_by` is an `id` in the catalog, or that the two directions agree with each other.
-  Check by hand any reference you add.
-- **Duplicate names.** Two stanzas can share a `name`. That is expected for a deprecated entry
-  and its replacement, but anywhere else it makes resources hard to tell apart in user-facing tools.
 
 ### Other make targets
 
