@@ -1288,7 +1288,7 @@ information_resources:
       - infores:arax
       - infores:service-provider-trapi
   - status: deprecated
-    name: Multiomics ClinicalTrials KP API (deprecated BioThings identifier)
+    name: Multiomics ClinicalTrials KP API
     id: infores:biothings-multiomics-clinicaltrials
     description: >-
       Deprecated identifier; this resource is now identified as infores:clinicaltrials-kp.
@@ -1791,7 +1791,7 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - status: deprecated
-    name: ClinicalTrials.gov (deprecated)
+    name: ClinicalTrials.gov
     id: infores:clinicaltrials
     description: >-
       Deprecated identifier; this resource is now identified as infores:clinicaltrials-gov.
@@ -3046,7 +3046,7 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - status: released
-    name: Foundational Model of Anatomy Ontology (FMA, from OBO)
+    name: Foundational Model of Anatomy Ontology (FMA -- both from UMLS and from OBO)
     id: infores:fma-obo
     xref:
       - https://www.nlm.nih.gov/research/umls/sourcereleasedocs/current/FMA/index.html
@@ -3055,7 +3055,7 @@ information_resources:
     consumed_by:
       - infores:rtx-kg2
   - status: released
-    name: Foundational Model of Anatomy Ontology (FMA, from UMLS)
+    name: Foundational Model of Anatomy Ontology (FMA -- both from UMLS and from OBO)
     id: infores:fma-umls
     xref:
       - https://www.nlm.nih.gov/research/umls/sourcereleasedocs/current/FMA/index.html
@@ -3505,7 +3505,7 @@ information_resources:
       - infores:catrax-pharmacogenomics
       - infores:rtx-kg2
   - status: released
-    name: Human Phenotype Ontology Annotations
+    name: Human Phenotype Ontology
     id: infores:hpo-annotations
     xref:
       - https://fairsharing.org/FAIRsharing.kbtt7f
@@ -4368,14 +4368,14 @@ information_resources:
     consumed_by:
       - infores:molepro
   - status: deprecated
-    name: Multiomics ClinicalTrials KP API (deprecated)
+    name: Multiomics ClinicalTrials KP API
     id: infores:multiomics-clinicaltrials
     description: >-
       Deprecated identifier; this resource is now identified as infores:clinicaltrials-kp.
     knowledge_level: knowledge_assertion
     agent_type: manual_agent
   - status: deprecated
-    name: Multiomics Drug Approvals KP API (deprecated)
+    name: Multiomics Drug Approvals KP API
     id: infores:multiomics-drugapprovals
     description: >-
       Deprecated identifier; this resource is now identified as infores:drugapprovals-kp.
@@ -4395,14 +4395,14 @@ information_resources:
       - infores:arax
       - infores:service-provider-trapi
   - status: deprecated
-    name: Multiomics Microbiome KP API (deprecated)
+    name: Multiomics Microbiome KP API
     id: infores:multiomics-microbiome
     description: >-
       Deprecated identifier; this resource is now identified as infores:microbiome-kp.
     knowledge_level: knowledge_assertion
     agent_type: manual_validation_of_automated_agent
   - status: deprecated
-    name: Multiomics KP API (deprecated)
+    name: Multiomics KP API
     id: infores:multiomics-multiomics
     description: >-
       Deprecated identifier; this resource is now identified as infores:multiomics-kp.
@@ -5804,7 +5804,7 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: not_provided
   - status: deprecated
-    name: SmartAPI API (deprecated)
+    name: SmartAPI API
     id: infores:smartapi
     xref:
       - https://smart-api.info

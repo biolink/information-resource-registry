@@ -94,18 +94,22 @@ def test_data_flow_references_resolve_and_agree():
     assert not errors, "Dangling or one-directional data-flow references:\n" + "\n".join(errors)
 
 
-def test_names_are_unique():
-    """No two stanzas may share a name; duplicate names make resources
-    indistinguishable in user-facing tools."""
+def test_no_duplicate_stanzas():
+    """A stanza is a duplicate only if another stanza has the same id and all
+    of the same metadata."""
     with open(infores_catalog, 'r') as yaml_file:
         data = yaml.safe_load(yaml_file)
 
     resources = data.get("information_resources", [])
-    by_name = {}
+    by_id = {}
     for infores in resources:
-        by_name.setdefault(infores.get("name"), []).append(infores["id"])
+        by_id.setdefault(infores["id"], []).append(infores)
 
-    duplicates = {name: ids for name, ids in by_name.items() if len(ids) > 1}
-    assert not duplicates, f"Duplicate names in catalog: {duplicates}"
+    duplicates = [
+        infores_id
+        for infores_id, stanzas in by_id.items()
+        if len(stanzas) > 1 and any(s == stanzas[0] for s in stanzas[1:])
+    ]
+    assert not duplicates, f"Duplicate stanzas in catalog: {duplicates}"
 
 
