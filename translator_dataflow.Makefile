@@ -26,6 +26,10 @@ generate_consumes_annotations:
 merge_into_infores_catalog:
 	$(RUN) add_consume_info infores_catalog.yaml --renames ${DATA_DIR}/id_renames.yaml ${DATA_DIR}/*.json > ${DATA_DIR}/infores_catalog_new.yaml
 	mv $(DATA_DIR)/infores_catalog_new.yaml infores_catalog.yaml
+	# add_consume_info re-dumps the catalog with its own YAML formatting, which
+	# drifts from the canonical form check_standardized enforces; restandardize
+	# so the regenerated catalog always passes test_pr.
+	$(MAKE) standardize-data
 
 
 generate_sankey:
