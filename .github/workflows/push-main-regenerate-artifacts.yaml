@@ -11,6 +11,10 @@ on:
   workflow_dispatch:
     types: trigger-build-artifacts
 
+permissions:
+  contents: write
+  pull-requests: write
+
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
@@ -49,16 +53,38 @@ jobs:
           make sankey
           make gendoc
           # test_pr runs last so the regenerated catalog is validated before
-          # it is committed; running it earlier let a failing state reach main
+          # it is proposed; a failure here stops the job before any PR is opened
           make test_pr
-          if [ $? -eq 0 ]; then
-            git config --local user.email "action@github.com"
-            git config --local user.name "GitHub Action"
-            git add project/*
-            git add src/*
-            git add infores_catalog.yaml
-            git commit -m "Regenerate artifacts from infores_catalog.yaml"
-            git push
-          else
-            echo "'make' gen-project failed to finish successfully"
-          fi
+
+      # main is a protected branch, so regenerated artifacts must land through
+      # a pull request instead of a direct push. This action commits the
+      # changed files to a dedicated branch and opens (or updates) a PR; when
+      # regeneration produces no changes, it does nothing, which also keeps
+      # the merge of that PR from re-triggering this workflow indefinitely.
+      - name: Open pull request with regenerated artifacts
+        uses: peter-evans/create-pull-request@v7
+        with:
+          # PRs created with the default GITHUB_TOKEN do not trigger the
+          # pull_request workflows that provide the required status checks
+          # (standardize, build). Configure a REGENERATE_ARTIFACTS_TOKEN
+          # secret (a PAT with contents+pull-requests write) for full
+          # automation; without it, close and reopen the PR to run the checks.
+          token: ${{ secrets.REGENERATE_ARTIFACTS_TOKEN || github.token }}
+          add-paths: |
+            project
+            src
+            infores_catalog.yaml
+          commit-message: Regenerate artifacts from infores_catalog.yaml
+          branch: auto/regenerate-artifacts
+          delete-branch: true
+          author: GitHub Action <action@github.com>
+          committer: GitHub Action <action@github.com>
+          title: Regenerate artifacts from infores_catalog.yaml
+          body: |
+            Automated regeneration of registry artifacts by the
+            "Regenerate Information Resource Registry Artifacts" workflow
+            (run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}).
+
+            `make test_pr` passed on the regenerated output before this PR
+            was opened. If the required checks have not started, close and
+            reopen this PR to trigger them.
