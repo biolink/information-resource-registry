@@ -2007,6 +2007,7 @@ information_resources:
     id: infores:cohd
     xref:
       - https://github.com/WengLab-InformaticsResearch/cohd_api
+      - https://github.com/NCATSTranslator/Translator-All/wiki/COHD-KP
     description: >-
       The Columbia Open Health Data (COHD) API provides access to counts
       and frequencies (i.e., EHR prevalence) of conditions, procedures, drug exposures,
@@ -3642,6 +3643,7 @@ information_resources:
     id: infores:icees-kg
     xref:
       - https://robokop.renci.org/api-docs/docs/automat/icees-kg
+      - https://github.com/NCATSTranslator/Translator-All/wiki/ICEES
     synonym:
       - KP
     description: >-
