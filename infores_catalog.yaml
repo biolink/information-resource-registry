@@ -2006,6 +2006,7 @@ information_resources:
     name: Columbia Open Health Data (COHD)
     id: infores:cohd
     xref:
+      - https://github.com/NCATSTranslator/Translator-All/wiki/COHD-KP
       - https://github.com/WengLab-InformaticsResearch/cohd_api
     description: >-
       The Columbia Open Health Data (COHD) API provides access to counts
@@ -3641,6 +3642,7 @@ information_resources:
     name: ICEES (Integrated Clinical and Environmental Exposures Service)
     id: infores:icees-kg
     xref:
+      - https://github.com/NCATSTranslator/Translator-All/wiki/ICEES
       - https://robokop.renci.org/api-docs/docs/automat/icees-kg
     synonym:
       - KP
