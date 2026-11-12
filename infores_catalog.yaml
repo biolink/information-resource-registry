@@ -3679,6 +3679,18 @@ information_resources:
     knowledge_level: knowledge_assertion
     agent_type: manual_agent
   - status: released
+    name: Instruct & Modulate Protein Ensembles for Disease Evasion (IMPEDE)
+    id: infores:impede
+    xref:
+      - https://arpa-h.gov/explore-funding/awards/4763
+    synonym:
+      - ARPA-H BIOGAMI IMPEDE
+    description: >-
+      ARPA-H BIOGAMI IMPEDE project focused on early detection and modulation of conditions
+      related to intrinsically disordered proteins and intrinsically disordered regions.
+    knowledge_level: not_provided
+    agent_type: not_provided
+  - status: released
     name: imProving Agent
     id: infores:improving-agent
     xref:
