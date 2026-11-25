@@ -2241,6 +2241,20 @@ information_resources:
     agent_type: not_provided
     consumed_by:
       - infores:mygene-info
+  - status: released
+    name: Clinical Pharmacogenetics Implementation Consortium (CPIC)
+    id: infores:cpic
+    xref:
+      - https://www.clinpgx.org/page/cpicResources
+    description: >-
+      The Clinical Pharmacogenetics Implementation Consortium (CPIC) develops
+      evidence-based guidelines for using pharmacogenetic test results to guide
+      prescribing. CPIC curates gene–drug pairs and assigns each pair a CPIC
+      level. Use this identifier as the primary knowledge source for assertions
+      curated by CPIC. When ClinPGx distributes those assertions, it can be
+      recorded separately as the aggregator.
+    knowledge_level: knowledge_assertion
+    agent_type: not_provided
   - status: deprecated
     name: Current Procedural Terminology (CPT) Codes (from UMLS)
     id: infores:cpt-codes-umls
